@@ -108,41 +108,42 @@ export const articleContent: Record<string, ArticleContent> = {
 
   "future-homes-standard-2026": {
     id: "future-homes-standard-2026",
-    title: "Future Homes Standard 2026: The Complete Guide",
+    title: "Future Homes Standard: The Complete Guide (Updated March 2026)",
     category: "Regulations",
     readTime: "12 min read",
     author: "Fabrick Sustainability Team",
-    publishDate: "2026-02-15",
+    publishDate: "2026-03-24",
     heroSubtitle:
-      "Taking full legal effect in December 2026, the Future Homes Standard requires 75–80% less carbon in new homes.",
+      "Published 24 March 2026. All new homes must be built with solar panels, heat pumps, and high fabric efficiency — creating at least 75% less carbon emissions than 2013 standards.",
     sections: [
       {
         heading: "What is the Future Homes Standard?",
-        body: "The Future Homes Standard (FHS) is a major update to Part L (conservation of fuel and power) and Part F (ventilation) of the Building Regulations for England. When it takes full legal effect in December 2026, new homes must produce 75–80% less carbon emissions than under 2013 regulations.\n\nThis effectively means the end of fossil fuel heating in new homes — no more gas boilers. New homes will need to be designed around heat pumps, with much higher levels of insulation, airtightness, and energy efficiency.",
+        body: "The Future Homes Standard (FHS) is a landmark update to Parts L (conservation of fuel and power), F (ventilation) and the new Part 6 of the Building Regulations for England. The government published the regulations on 24 March 2026, with full compliance required for all new homes from 2028.\n\nNew homes must produce at least 75% less carbon emissions than those built to 2013 standards. The government estimates this will save families up to £830 per year on energy bills. This is the biggest change to building regulations in a generation — ending fossil fuel heating in new homes and mandating on-site renewable energy generation.",
       },
       {
-        heading: "Key technical requirements",
-        body: "While the full technical specification is still being finalised through the 2025 consultation, the key requirements include:\n\nHeat pumps (or equivalent low-carbon heating) as standard — gas boilers will not meet the new carbon targets.\n\nHigher fabric performance: U-values for walls, floors, and roofs will tighten significantly. Triple glazing may become the norm.\n\nAirtightness: Much tighter air permeability requirements, pushing towards 3–5 m³/h.m² at 50Pa.\n\nOverheating risk: Compliance with Part O (overheating) ensures homes don't sacrifice comfort for energy efficiency.\n\nNo new gas connections: While not an outright ban, the carbon targets make gas heating unviable for compliance.",
+        heading: "Key confirmed requirements",
+        body: "The published standard confirms the following requirements for new homes:\n\nSolar panels: A new functional requirement in the Building Regulations mandates on-site renewable electricity generation on new homes (with some exceptions for high-rise buildings). The government anticipates the majority will be rooftop solar PV.\n\nLow-carbon heating: Heat pumps or connections to heat networks as standard. Gas boilers will not meet the new carbon targets.\n\nHigher fabric performance: Significantly tighter U-values for walls, floors, and roofs, with improved airtightness requirements.\n\nHome Energy Model (HEM): A new, independently quality-assured calculation methodology replacing SAP. HEM supports innovation in new-build products, best-practice heat pump installation, and recognition of smart, zero-bills technologies.\n\nOverheating risk: Continued compliance with Part O ensures homes balance energy efficiency with occupant comfort.",
       },
       {
-        heading: "Transitional arrangements",
-        body: "The transitional provisions are critical for the industry. Plans submitted and approved before the full FHS takes effect can be built out under the current (2021) Part L standards for a defined period. This has triggered a wave of applications as developers rush to lock in existing standards for their pipeline schemes.\n\nHowever, industry leaders argue that building to the old standards now is a false economy — these homes will need costly retrofits within their lifetime to meet future energy performance requirements.",
+        heading: "Timeline and transitional arrangements",
+        body: "The regulations were laid on 24 March 2026, with full compliance required from 2028. During the transition period, plans submitted and approved before the compliance date can be built out under current Part L standards.\n\nHowever, industry leaders strongly argue that building to old standards is a false economy. Over a million homes were built with higher bills after the previous government cancelled the Zero Carbon Homes standard in 2015 — leaving families exposed to the energy price spike after Russia's invasion of Ukraine.\n\nThe Future Homes Hub has launched its 'Future Homes Standard Ready' campaign to help homebuilders, housing associations and developers of all sizes prepare.",
       },
       {
         heading: "Impact on material specification",
-        body: "While the FHS primarily targets operational carbon, the material implications are significant:\n\nInsulation thickness increases, meaning more material per dwelling — making low-carbon insulation choices (cellulose, wood fibre) even more important.\n\nMechanical ventilation with heat recovery (MVHR) becomes standard, adding embodied carbon from ductwork and equipment.\n\nHeat pump systems require different pipework and potentially different radiators or underfloor heating.\n\nHigher-performance windows (triple glazing) have higher embodied carbon than double glazing, creating a tension between operational and embodied carbon that designers must navigate.",
+        body: "While the FHS primarily targets operational carbon, the material implications are significant:\n\nInsulation thickness increases, meaning more material per dwelling — making low-carbon insulation choices (cellulose, wood fibre, hemp) even more important.\n\nMVHR (mechanical ventilation with heat recovery) becomes standard, adding embodied carbon from ductwork and equipment but essential for airtight homes.\n\nHeat pump systems require different pipework and potentially underfloor heating for optimal low-temperature performance.\n\nSolar PV panels add embodied carbon but pay back within 2-4 years of operation.\n\nHigher-performance windows (triple glazing) have higher embodied carbon than double glazing, creating a tension between operational and embodied carbon that designers must navigate.",
       },
       {
         heading: "Preparing your business",
-        body: "Whether you're a developer, architect, contractor, or manufacturer, preparation is essential:\n\nUpskill your team: Ensure your workforce understands heat pump installation, MVHR commissioning, and airtightness testing.\n\nReview your supply chain: Secure relationships with heat pump manufacturers, high-performance window suppliers, and insulation providers.\n\nUpdate your cost models: FHS-compliant homes cost more to build, but the premium is reducing as the supply chain scales up.\n\nCommunicate with buyers: Educate homebuyers about the benefits — lower energy bills, better comfort, future-proofed against rising energy costs.",
+        body: "Whether you're a developer, architect, contractor, or manufacturer, the published standard means preparation is now urgent:\n\nUpskill your team: Ensure your workforce understands heat pump installation, MVHR commissioning, solar PV integration, and airtightness testing.\n\nReview your supply chain: Secure relationships with heat pump manufacturers, solar PV suppliers, high-performance window suppliers, and insulation providers. Over a quarter of new homes built in the UK in 2025 already had heat pumps.\n\nLearn the Home Energy Model: HEM replaces SAP as the compliance methodology. Invest time now in understanding how it works and how it differs from SAP.\n\nUpdate your cost models: FHS-compliant homes cost more to build, but the premium is reducing as the supply chain scales up.\n\nCommunicate with buyers: Educate homebuyers about the benefits — up to £830/year savings on energy bills, better comfort, protection from volatile fossil fuel prices.",
       },
     ],
     keyTakeaways: [
-      "Full legal effect from December 2026 — 75–80% less carbon than 2013 standards",
-      "Gas boilers effectively eliminated from new homes",
-      "Heat pumps, higher insulation, better airtightness become standard",
-      "Transitional arrangements allow current standards for approved plans",
-      "Material specification must balance operational and embodied carbon",
+      "Published 24 March 2026 — full compliance required from 2028",
+      "At least 75% less carbon than 2013 standards — saves families up to £830/year",
+      "Solar panels mandatory on new homes (with limited exceptions)",
+      "Heat pumps or heat networks replace gas boilers as standard",
+      "Home Energy Model (HEM) replaces SAP as the compliance methodology",
+      "Transition period allows current standards for already-approved plans",
     ],
     relatedArticles: ["part-z-explained", "what-is-embodied-carbon", "uknzcbs-guide"],
   },

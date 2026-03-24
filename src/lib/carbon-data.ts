@@ -2072,6 +2072,18 @@ export const regulations: RegulationEvent[] = [
     affectedRoles: ["developer", "architect"],
   },
   {
+    id: "fhs-published",
+    title: "Future Homes & Buildings Standards — Published",
+    date: "2026-03-24",
+    status: "active",
+    category: "energy",
+    description:
+      "Government has laid the regulations for the Future Homes Standard and Future Buildings Standard, publishing updated Approved Documents L and F (2026). New homes must be built with solar panels, low-carbon heating (heat pumps/heat networks), and high fabric efficiency as standard. Creates at least 75% less carbon emissions than 2013 standards. Home Energy Model (HEM) confirmed as new calculation methodology replacing SAP.",
+    impact:
+      "Landmark moment for UK construction. Housebuilders must now prepare supply chains for heat pumps, solar PV, and MVHR. Families could save up to £830/year on energy bills. Industry must upskill for new compliance methodology (HEM).",
+    affectedRoles: ["developer", "architect", "manufacturer", "contractor"],
+  },
+  {
     id: "part-z-consultation",
     title: "Part Z (Whole-Life Carbon) — Government Consultation",
     date: "2025-09-01",
@@ -2120,15 +2132,15 @@ export const regulations: RegulationEvent[] = [
     affectedRoles: ["manufacturer", "developer", "contractor"],
   },
   {
-    id: "fbs-consultation",
-    title: "Future Buildings Standard — Consultation Response Expected",
-    date: "2026-06-01",
-    status: "upcoming",
+    id: "fbs-published",
+    title: "Future Buildings Standard — Published",
+    date: "2026-03-24",
+    status: "active",
     category: "energy",
     description:
-      "Government response to the Future Buildings Standard consultation for non-domestic buildings. Will set energy performance requirements equivalent to FHS for commercial buildings.",
+      "Published alongside the Future Homes Standard. Sets new energy performance requirements for non-domestic buildings including updated Parts L and F. Impact assessment published covering costs, benefits and wider impacts on businesses and the public sector.",
     impact:
-      "Commercial developers should monitor — requirements likely to mirror FHS approach with heat pump mandates and improved fabric standards.",
+      "Commercial developers must now prepare for updated compliance requirements. New non-domestic buildings will need to meet significantly higher energy performance standards.",
     affectedRoles: ["developer", "architect", "contractor"],
   },
   {
@@ -2157,14 +2169,14 @@ export const regulations: RegulationEvent[] = [
   },
   {
     id: "fhs-full",
-    title: "Future Homes Standard — Full Legal Effect",
-    date: "2026-12-01",
+    title: "Future Homes Standard — Full Compliance Required",
+    date: "2028-01-01",
     status: "upcoming",
     category: "energy",
     description:
-      "Full Future Homes Standard takes legal effect. New homes must produce 75-80% less carbon emissions than current Part L. No new gas boilers. Heat pumps or equivalent required. Improved fabric standards, overheating assessment mandatory.",
+      "All new homes must meet the full Future Homes Standard after the transition period. Solar panels, low-carbon heating (heat pumps or heat networks), and high fabric efficiency mandatory. No new gas boilers. At least 75% less carbon emissions than 2013 standards. Compliance demonstrated via the Home Energy Model (HEM).",
     impact:
-      "Fundamental change to UK housebuilding. Supply chain for heat pumps, MVHR, and high-performance glazing must scale up.",
+      "Fundamental change to UK housebuilding. Every new home must have solar, heat pump, and meet stringent fabric standards. Housebuilders who haven't adapted their supply chains and designs will face compliance issues.",
     affectedRoles: ["developer", "architect", "manufacturer", "contractor"],
   },
   {
