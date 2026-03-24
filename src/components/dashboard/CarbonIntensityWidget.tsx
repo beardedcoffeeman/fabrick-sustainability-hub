@@ -157,24 +157,32 @@ export function CarbonIntensityWidget() {
                   Lowest: {lowestVal}g at {lowestTime}
                 </p>
               </div>
-              <div className="flex items-end gap-[2px] h-16">
+              <div className="flex items-end gap-[2px]" style={{ height: "64px" }}>
                 {forecast.map((f, i) => {
                   const val = f.intensity.forecast;
                   const height = maxVal > 0 ? (val / maxVal) * 100 : 0;
                   const time = new Date(f.from).toLocaleTimeString("en-GB", { hour: "2-digit", minute: "2-digit" });
                   const isLowest = i === lowestIdx;
                   return (
-                    <div key={i} className="flex-1 flex flex-col items-center gap-0.5">
-                      <div
-                        className={`w-full rounded-t transition-all relative ${isLowest ? "ring-1 ring-teal" : ""}`}
-                        style={{
-                          height: `${height}%`,
-                          backgroundColor: getIntensityColor(f.intensity.index),
-                          opacity: isLowest ? 1 : 0.6,
-                        }}
-                        title={`${time}: ${val} gCO2/kWh (${f.intensity.index})`}
-                      />
-                      {i % 2 === 0 && (
+                    <div
+                      key={i}
+                      className={`flex-1 rounded-t transition-all ${isLowest ? "ring-1 ring-teal" : ""}`}
+                      style={{
+                        height: `${Math.max(height, 4)}%`,
+                        backgroundColor: getIntensityColor(f.intensity.index),
+                        opacity: isLowest ? 1 : 0.6,
+                      }}
+                      title={`${time}: ${val} gCO2/kWh (${f.intensity.index})`}
+                    />
+                  );
+                })}
+              </div>
+              <div className="flex gap-[2px] mt-1">
+                {forecast.map((f, i) => {
+                  const time = new Date(f.from).toLocaleTimeString("en-GB", { hour: "2-digit", minute: "2-digit" });
+                  return (
+                    <div key={i} className="flex-1 text-center">
+                      {i % 3 === 0 && (
                         <span className="text-[8px] text-gray-500 tabular-nums leading-none">{time}</span>
                       )}
                     </div>
