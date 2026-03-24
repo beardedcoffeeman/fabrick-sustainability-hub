@@ -1,5 +1,5 @@
 import { RegulationTimeline } from "@/components/regulatory/RegulationTimeline";
-import { FabrickMarketingCTA } from "@/components/layout/FabrickCTA";
+import { FabrickMarketingCTA, FabrickPlatformCTA } from "@/components/layout/FabrickCTA";
 import { Building2, HardHat, Warehouse, Landmark } from "lucide-react";
 
 export const metadata = {
@@ -71,7 +71,8 @@ export default function RegulationsPage() {
         <RegulationTimeline />
       </div>
 
-      {/* Fabrick CTA */}
+      {/* Fabrick CTAs */}
+      <FabrickPlatformCTA />
       <FabrickMarketingCTA />
     </div>
   );

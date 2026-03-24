@@ -13,7 +13,7 @@ import {
   Factory,
   Shield,
 } from "lucide-react";
-import { FabrickMarketingCTA, FabrickPlatformCTA } from "@/components/layout/FabrickCTA";
+import { FabrickMarketingCTA } from "@/components/layout/FabrickCTA";
 
 const features = [
   {
@@ -325,9 +325,8 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Fabrick CTAs */}
+      {/* Fabrick CTA */}
       <FabrickMarketingCTA />
-      <FabrickPlatformCTA />
     </div>
   );
 }

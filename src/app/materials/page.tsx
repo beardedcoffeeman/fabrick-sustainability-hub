@@ -1,5 +1,5 @@
 import { MaterialsPageContent } from "@/components/materials/MaterialsPageContent";
-import { FabrickMarketingCTA } from "@/components/layout/FabrickCTA";
+import { FabrickMarketingCTA, FabrickPlatformCTA } from "@/components/layout/FabrickCTA";
 import { Ruler, HardHat, Warehouse, ClipboardCheck } from "lucide-react";
 
 export const metadata = {
@@ -69,7 +69,8 @@ export default function MaterialsPage() {
 
       <MaterialsPageContent />
 
-      {/* Fabrick CTA */}
+      {/* Fabrick CTAs */}
+      <FabrickPlatformCTA />
       <FabrickMarketingCTA />
     </div>
   );
