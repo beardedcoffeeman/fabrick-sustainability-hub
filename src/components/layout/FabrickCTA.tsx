@@ -17,23 +17,24 @@ export function FabrickMarketingCTA() {
               About Fabrick
             </span>
             <h2 className="font-[family-name:var(--font-playfair)] text-3xl font-bold md:text-4xl leading-tight">
-              Award-winning marketing specialists for the built environment
+              Built on insight. Powered by creativity. Driven to make a difference.
             </h2>
             <p className="mt-4 text-gray-400 leading-relaxed max-w-lg">
-              Fabrick is a full-service marketing and PR agency that works
-              exclusively in construction, property and the built environment.
-              For nearly 40 years, our 25+ in-house specialists have delivered
-              outstanding marketing, PR, creative, digital and content campaigns
-              for clients of all sizes across the industry.
+              We&apos;ve been shaping stories and strategies for the built
+              environment for over 40 years — and we&apos;ve picked up a few
+              awards along the way. Our 25+ in-house team of marketing and
+              communications professionals is highly skilled in delivering
+              impactful online and offline content and PR campaigns for clients
+              of all sizes across the world.
             </p>
             <div className="mt-6 grid grid-cols-2 gap-3">
               {[
                 { icon: Sparkles, label: "Strategy & Planning" },
-                { icon: Palette, label: "Design & Creative" },
+                { icon: Palette, label: "Design & Development" },
                 { icon: Users, label: "PR & Media Relations" },
                 { icon: BarChart3, label: "SEO & PPC" },
                 { icon: PenTool, label: "Content Marketing" },
-                { icon: Globe, label: "Social Media" },
+                { icon: Globe, label: "Global Marketing" },
               ].map(({ icon: Icon, label }) => (
                 <div
                   key={label}
@@ -63,19 +64,19 @@ export function FabrickMarketingCTA() {
             <div className="space-y-4">
               {[
                 {
-                  stat: "Construction is all we do",
+                  stat: "Smart Design. Seamless Development.",
                   detail:
-                    "We don\u2019t dabble in construction marketing \u2014 it\u2019s our sole focus. Nearly 40 years of specialist experience means we understand your market, your audience, and your competitors.",
+                    "Our creative and digital teams combine eye-catching design with modern platforms to tell your story and drive engagement.",
                 },
                 {
-                  stat: "Full-service, in-house",
+                  stat: "PR that cuts through the noise",
                   detail:
-                    "Strategy, creative, PR, digital, social, video, web \u2014 our 25+ specialists deliver everything under one roof. No outsourcing, no diluted expertise.",
+                    "Founded as a PR agency, we\u2019re experts at identifying and delivering a good story \u2014 then amplifying it across digital and traditional channels.",
                 },
                 {
-                  stat: "Results that make a difference",
+                  stat: "Drive the conversation",
                   detail:
-                    "We\u2019ve built brands, increased market share, generated leads, launched products and managed crises for clients across the UK and internationally.",
+                    "From social media to content marketing, we help built environment brands interact directly with their customers and build lasting influence.",
                 },
               ].map((item) => (
                 <div
