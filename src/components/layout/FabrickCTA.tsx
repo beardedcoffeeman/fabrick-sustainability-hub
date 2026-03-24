@@ -1,6 +1,6 @@
 "use client";
 
-import { ArrowUpRight, Megaphone, Code2, Sparkles, Users, Palette, BarChart3 } from "lucide-react";
+import { ArrowUpRight, Megaphone, Code2, Sparkles, Users, Palette, BarChart3, PenTool, Globe } from "lucide-react";
 
 /* ────────────────────────────────────────────────────
    Marketing CTA — "We can do your marketing"
@@ -17,20 +17,23 @@ export function FabrickMarketingCTA() {
               About Fabrick
             </span>
             <h2 className="font-[family-name:var(--font-playfair)] text-3xl font-bold md:text-4xl leading-tight">
-              We&apos;re the marketing agency for the built environment
+              Award-winning marketing specialists for the built environment
             </h2>
             <p className="mt-4 text-gray-400 leading-relaxed max-w-lg">
-              Fabrick helps construction, property, and built environment brands
-              communicate sustainability with clarity and confidence. From carbon
-              strategy messaging to regulation-ready content — we turn complex
-              sustainability data into compelling stories that win business.
+              Fabrick is a full-service marketing and PR agency that works
+              exclusively in construction, property and the built environment.
+              For nearly 40 years, our 25+ in-house specialists have delivered
+              outstanding marketing, PR, creative, digital and content campaigns
+              for clients of all sizes across the industry.
             </p>
             <div className="mt-6 grid grid-cols-2 gap-3">
               {[
-                { icon: Palette, label: "Brand & Positioning" },
-                { icon: BarChart3, label: "Data-Led Content" },
-                { icon: Users, label: "Thought Leadership" },
-                { icon: Sparkles, label: "Campaign Strategy" },
+                { icon: Sparkles, label: "Strategy & Planning" },
+                { icon: Palette, label: "Design & Creative" },
+                { icon: Users, label: "PR & Media Relations" },
+                { icon: BarChart3, label: "SEO & PPC" },
+                { icon: PenTool, label: "Content Marketing" },
+                { icon: Globe, label: "Social Media" },
               ].map(({ icon: Icon, label }) => (
                 <div
                   key={label}
@@ -42,7 +45,7 @@ export function FabrickMarketingCTA() {
               ))}
             </div>
             <a
-              href="https://fabrick.co.uk"
+              href="https://www.fabrick.agency"
               target="_blank"
               rel="noopener noreferrer"
               className="mt-8 inline-flex items-center gap-2 rounded-full bg-pink px-6 py-3 text-sm font-semibold text-white transition-all hover:bg-pink-light"
@@ -60,19 +63,19 @@ export function FabrickMarketingCTA() {
             <div className="space-y-4">
               {[
                 {
-                  stat: "Sustainability is complex",
+                  stat: "Construction is all we do",
                   detail:
-                    "Your clients need to understand your carbon credentials — but jargon kills engagement. We translate EPDs, BREEAM scores, and carbon data into marketing that resonates.",
+                    "We don\u2019t dabble in construction marketing \u2014 it\u2019s our sole focus. Nearly 40 years of specialist experience means we understand your market, your audience, and your competitors.",
                 },
                 {
-                  stat: "Regulation is accelerating",
+                  stat: "Full-service, in-house",
                   detail:
-                    "Part Z, FHS 2026, UK CBAM — your marketing needs to keep pace with policy. We help you position as a leader, not a follower.",
+                    "Strategy, creative, PR, digital, social, video, web \u2014 our 25+ specialists deliver everything under one roof. No outsourcing, no diluted expertise.",
                 },
                 {
-                  stat: "Data builds trust",
+                  stat: "Results that make a difference",
                   detail:
-                    "We build data-driven content hubs, carbon calculators, and digital tools that demonstrate expertise and generate leads.",
+                    "We\u2019ve built brands, increased market share, generated leads, launched products and managed crises for clients across the UK and internationally.",
                 },
               ].map((item) => (
                 <div
@@ -116,10 +119,10 @@ export function FabrickPlatformCTA() {
           Want a platform like this for your business?
         </h2>
         <p className="mt-4 mx-auto max-w-2xl text-gray-400 leading-relaxed">
-          This Sustainability Hub is a demonstration of what Fabrick builds for
-          built environment companies. We create bespoke data platforms, carbon
-          calculators, regulatory tools, and content hubs that position your brand
-          as a sustainability leader — and generate qualified leads while you sleep.
+          This Sustainability Hub was built by Fabrick. We create bespoke digital
+          tools, data platforms and content hubs for construction and built
+          environment companies — designed to demonstrate your expertise and
+          generate qualified leads.
         </p>
 
         <div className="mt-8 flex flex-wrap justify-center gap-3">
@@ -142,7 +145,7 @@ export function FabrickPlatformCTA() {
 
         <div className="mt-8 flex flex-wrap justify-center gap-3">
           <a
-            href="https://fabrick.co.uk"
+            href="https://www.fabrick.agency/contact-us"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 rounded-full bg-teal px-6 py-3 text-sm font-semibold text-white transition-all hover:bg-teal-dark"
@@ -151,15 +154,15 @@ export function FabrickPlatformCTA() {
             <ArrowUpRight className="h-4 w-4" />
           </a>
           <a
-            href="mailto:hello@fabrick.co.uk"
+            href="mailto:hello@fabrick.agency"
             className="inline-flex items-center gap-2 rounded-full border border-gray-600 px-6 py-3 text-sm font-semibold text-white transition-all hover:bg-navy-light"
           >
-            hello@fabrick.co.uk
+            hello@fabrick.agency
           </a>
         </div>
 
         <p className="mt-6 text-xs text-gray-500">
-          Fabrick — Marketing specialists for the built environment
+          Fabrick — Award-winning marketing specialists for the built environment
         </p>
       </div>
     </section>
