@@ -17,6 +17,7 @@ const playfair = Playfair_Display({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://sustainability.fabrick.agency"),
   title: "Fabrick Sustainability Hub | UK Construction Carbon Data & Tools",
   description:
     "The UK construction industry's leading sustainability data hub. Live carbon data, material calculators, regulatory intelligence, and practical tools for net-zero construction.",
@@ -29,6 +30,31 @@ export const metadata: Metadata = {
     "low carbon building materials",
     "construction sustainability",
   ],
+  openGraph: {
+    title: "Fabrick Sustainability Hub | Live UK Construction Data",
+    description:
+      "Live carbon intensity, material prices, construction output, and regulatory intelligence for the UK built environment. Driven by data. Powered by creativity.",
+    url: "https://sustainability.fabrick.agency",
+    siteName: "Fabrick Sustainability Hub",
+    type: "website",
+    locale: "en_GB",
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Fabrick Sustainability Hub - Live UK Construction Data Dashboard",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Fabrick Sustainability Hub | Live UK Construction Data",
+    description:
+      "Live carbon intensity, material prices, construction output, and regulatory intelligence. Driven by data. Powered by creativity.",
+    images: ["/og-image.png"],
+    creator: "@FabrickAgency",
+  },
 };
 
 export default function RootLayout({

@@ -1,11 +1,15 @@
 import { CarbonIntensityWidget } from "@/components/dashboard/CarbonIntensityWidget";
+import { MaterialPricesWidget } from "@/components/dashboard/MaterialPricesWidget";
+import { ConstructionOutputWidget } from "@/components/dashboard/ConstructionOutputWidget";
+import { PlanningActivityWidget } from "@/components/dashboard/PlanningActivityWidget";
+import { EPCLookupWidget } from "@/components/dashboard/EPCLookupWidget";
 import { FabrickPlatformCTA } from "@/components/layout/FabrickCTA";
 import { Zap, Building2, Factory, TrendingDown, Users, HardHat, Ruler, Warehouse } from "lucide-react";
 
 export const metadata = {
-  title: "Live Dashboard | Fabrick Sustainability Hub",
+  title: "Live Dashboard | Fabrick Built Environment Data",
   description:
-    "Real-time UK grid carbon intensity, generation mix, and construction emissions data.",
+    "Live UK construction data: carbon intensity, material prices, construction output, planning activity, and EPC ratings.",
 };
 
 const stats = [
@@ -181,6 +185,26 @@ export default function DashboardPage() {
               </p>
             </div>
           </div>
+        </div>
+      </div>
+
+      {/* Construction Data Feeds */}
+      <div className="mx-auto max-w-7xl px-4 pb-8 sm:px-6 lg:px-8 space-y-8">
+        <div>
+          <h2 className="font-[family-name:var(--font-playfair)] text-2xl font-bold text-navy mb-2">
+            Construction Market Data
+          </h2>
+          <p className="text-sm text-warm-gray mb-6">
+            Live and regularly updated data from across the UK construction sector.
+          </p>
+        </div>
+
+        <MaterialPricesWidget />
+        <ConstructionOutputWidget />
+
+        <div className="grid gap-8 lg:grid-cols-2">
+          <PlanningActivityWidget />
+          <EPCLookupWidget />
         </div>
       </div>
 
