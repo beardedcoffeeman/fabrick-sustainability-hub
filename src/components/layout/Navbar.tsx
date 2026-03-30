@@ -2,7 +2,8 @@
 
 import Link from "next/link";
 import { useState } from "react";
-import { Menu, X, ArrowUpRight, Leaf } from "lucide-react";
+import { Menu, X, ArrowUpRight } from "lucide-react";
+import { FabrickLogo } from "./FabrickLogo";
 
 const navLinks = [
   { href: "/dashboard", label: "Live Dashboard" },
@@ -19,13 +20,10 @@ export function Navbar() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex h-16 items-center justify-between">
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-2">
-            <div className="flex items-center gap-1.5">
-              <Leaf className="h-6 w-6 text-teal" />
-              <span className="text-xl font-bold tracking-tight">FABRICK</span>
-            </div>
+          <Link href="/" className="flex items-center gap-3">
+            <FabrickLogo fill="#ffffff" height={22} />
             <span className="hidden text-xs font-medium text-warm-gray sm:block">
-              Sustainability Hub
+              Built Environment Data
             </span>
           </Link>
 

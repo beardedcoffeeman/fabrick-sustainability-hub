@@ -138,7 +138,7 @@ export function ShareDownload({
 
   // Full-size: proper labeled buttons
   const btnClasses =
-    "flex items-center gap-1.5 rounded-lg px-3 py-1.5 text-[11px] font-medium transition-all";
+    "flex items-center gap-1.5 rounded-lg px-3 py-1.5 text-[11px] font-medium transition-all cursor-pointer";
 
   return (
     <div className="flex items-center gap-2 flex-wrap">
@@ -148,7 +148,7 @@ export function ShareDownload({
         className={`${btnClasses} bg-white/10 hover:bg-white/20 text-current`}
       >
         <Download className={`h-3 w-3 ${downloading ? "animate-bounce" : ""}`} />
-        Download
+        Download Snapshot
       </button>
       <button
         onClick={handleLinkedIn}
