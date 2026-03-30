@@ -3,7 +3,7 @@ import { FabrickPlatformCTA } from "@/components/layout/FabrickCTA";
 import { Briefcase, HardHat, Megaphone, GraduationCap } from "lucide-react";
 
 export const metadata = {
-  title: "Knowledge Hub | Fabrick Sustainability Hub",
+  title: "Knowledge Hub | Fabrick Built Environment Data",
   description:
     "Plain-English guides to construction sustainability. Embodied carbon, EPDs, Part Z, Future Homes Standard, and more explained.",
 };

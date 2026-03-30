@@ -3,7 +3,7 @@ import { FabrickMarketingCTA, FabrickPlatformCTA } from "@/components/layout/Fab
 import { Ruler, HardHat, Warehouse, ClipboardCheck } from "lucide-react";
 
 export const metadata = {
-  title: "Material Carbon Calculator | Fabrick Sustainability Hub",
+  title: "Material Carbon Calculator | Fabrick Built Environment Data",
   description:
     "Specify construction materials, calculate embodied carbon impact, and discover lower-carbon alternatives. Powered by the ICE database with LETI and RIBA 2030 benchmarks.",
 };

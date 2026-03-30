@@ -790,8 +790,8 @@ export default function HomePage() {
                   relevant={isRelevant("carbon-intensity")}
                   dimmed={isDimmed("carbon-intensity")}
                   delay={0}
-                  href="/dashboard#carbon"
-                  sharePath="/dashboard#carbon"
+                  href="/dashboard/carbon-intensity"
+                  sharePath="/dashboard/carbon-intensity"
                   className="md:col-span-2 min-h-[320px]"
                 >
                   {carbonData && (
@@ -870,8 +870,8 @@ export default function HomePage() {
                   relevant={isRelevant("material-prices")}
                   dimmed={isDimmed("material-prices")}
                   delay={1}
-                  href="/dashboard#materials"
-                  sharePath="/dashboard#materials"
+                  href="/dashboard/material-prices"
+                  sharePath="/dashboard/material-prices"
                   className="min-h-[320px]"
                 >
                   {materialData && (
@@ -971,8 +971,8 @@ export default function HomePage() {
                   relevant={isRelevant("construction-output")}
                   dimmed={isDimmed("construction-output")}
                   delay={2}
-                  href="/dashboard#output"
-                  sharePath="/dashboard"
+                  href="/dashboard/construction-output"
+                  sharePath="/dashboard/construction-output"
                 >
                   {constructionData && (
                     <div>
@@ -1081,8 +1081,8 @@ export default function HomePage() {
                   relevant={isRelevant("planning")}
                   dimmed={isDimmed("planning")}
                   delay={3}
-                  href="/dashboard#planning"
-                  sharePath="/dashboard"
+                  href="/dashboard/planning"
+                  sharePath="/dashboard/planning"
                 >
                   {planningData && (
                     <div>
@@ -1168,8 +1168,8 @@ export default function HomePage() {
                   relevant={isRelevant("epc")}
                   dimmed={isDimmed("epc")}
                   delay={4}
-                  href="/dashboard#epc"
-                  sharePath="/dashboard#epc"
+                  href="/dashboard/epc"
+                  sharePath="/dashboard/epc"
                 >
                   <div>
                     {epcDemoData ? (() => {
@@ -1259,7 +1259,7 @@ export default function HomePage() {
                     )}
 
                     <Link
-                      href="/dashboard#epc"
+                      href="/dashboard/epc"
                       className="flex items-center gap-2 rounded-xl bg-navy-light border border-gray-700/40 px-4 py-2.5 text-sm text-gray-400 hover:border-teal/50 hover:text-teal transition-all"
                     >
                       <Search className="h-4 w-4" />

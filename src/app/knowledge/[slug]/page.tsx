@@ -16,7 +16,7 @@ export async function generateMetadata({ params }: PageProps) {
   const article = getArticleContent(slug);
   if (!article) return { title: "Article Not Found" };
   return {
-    title: `${article.title} | Fabrick Sustainability Hub`,
+    title: `${article.title} | Fabrick Built Environment Data`,
     description: article.heroSubtitle,
   };
 }

@@ -43,7 +43,7 @@ export const metadata: Metadata = {
         url: "/og-image.png",
         width: 1200,
         height: 630,
-        alt: "Fabrick Sustainability Hub - Live UK Construction Data Dashboard",
+        alt: "Fabrick Built Environment Data - Live UK Construction Data Dashboard",
       },
     ],
   },

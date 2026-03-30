@@ -120,9 +120,9 @@ export function FabrickPlatformCTA() {
           Want a platform like this for your business?
         </h2>
         <p className="mt-4 mx-auto max-w-2xl text-gray-400 leading-relaxed">
-          This Sustainability Hub was built by Fabrick. We create bespoke digital
+          This platform was built by Fabrick. We create bespoke digital
           tools, data platforms and content hubs for construction and built
-          environment companies — designed to demonstrate your expertise and
+          environment companies -- designed to demonstrate your expertise and
           generate qualified leads.
         </p>
 

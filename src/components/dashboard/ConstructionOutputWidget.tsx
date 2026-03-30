@@ -69,7 +69,7 @@ interface ConstructionData {
   };
 }
 
-// Palette colours consistent with the Fabrick Sustainability Hub design
+// Palette colours consistent with the Fabrick Built Environment Data design
 const SECTOR_COLOURS: Record<string, string> = {
   privateNewHousing: "#00BFA5", // teal
   publicNewHousing: "#00A389", // teal-dark

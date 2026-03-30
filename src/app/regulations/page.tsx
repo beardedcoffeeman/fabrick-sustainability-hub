@@ -3,7 +3,7 @@ import { FabrickMarketingCTA, FabrickPlatformCTA } from "@/components/layout/Fab
 import { Building2, HardHat, Warehouse, Landmark } from "lucide-react";
 
 export const metadata = {
-  title: "UK Construction Sustainability Regulations | Fabrick Sustainability Hub",
+  title: "UK Construction Sustainability Regulations | Fabrick Built Environment Data",
   description:
     "Track every upcoming UK construction sustainability regulation. Part Z, Future Homes Standard, UK CBAM, UKNZCBS, EPC requirements and more.",
 };
