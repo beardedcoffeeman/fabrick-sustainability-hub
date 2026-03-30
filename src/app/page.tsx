@@ -626,7 +626,7 @@ export default function HomePage() {
             <span className="relative inline-block">
               Intelligence
               <svg
-                className="absolute -bottom-2 left-0 w-full"
+                className="absolute -bottom-2 left-0 w-full underline-draw"
                 viewBox="0 0 500 10"
                 fill="none"
               >
@@ -635,6 +635,9 @@ export default function HomePage() {
                   stroke="#FF3D7F"
                   strokeWidth="3"
                   strokeLinecap="round"
+                  strokeDasharray="500"
+                  strokeDashoffset="500"
+                  className="animate-draw-line"
                 />
               </svg>
             </span>
