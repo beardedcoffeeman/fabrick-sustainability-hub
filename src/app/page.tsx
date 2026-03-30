@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState, useCallback } from "react";
+import { useEffect, useState, useCallback, useMemo } from "react";
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 import {
@@ -33,6 +33,7 @@ import {
 import { RoleSelector, ROLES, type Role } from "@/components/home/RoleSelector";
 import { AnimatedNumber } from "@/components/home/AnimatedNumber";
 import { DataCard } from "@/components/home/DataCard";
+import type { SnapshotData } from "@/components/home/ShareDownload";
 import { FabrickMarketingCTA } from "@/components/layout/FabrickCTA";
 
 // ============================================================
@@ -575,6 +576,123 @@ export default function HomePage() {
       ? upcomingRegs
       : upcomingRegs.filter((r) => r.roles.includes(activeRole));
 
+  // ============================================================
+  // Snapshot data for each card (Canvas 2D download)
+  // ============================================================
+
+  const carbonSnapshot: SnapshotData | undefined = useMemo(() => {
+    if (!carbonData || !intensity) return undefined;
+    const val = intensity.actual || intensity.forecast;
+    const topFuels = carbonData.generation?.generationmix
+      ?.filter((g) => g.perc > 0)
+      .sort((a, b) => b.perc - a.perc)
+      .slice(0, 4);
+    return {
+      headline: `${val} gCO2/kWh`,
+      headlineColor: getIntensityColor(intensity.index),
+      subtitle: "UK Grid Carbon Intensity",
+      stats: [
+        { label: "Status", value: intensity.index, color: getIntensityColor(intensity.index) },
+        { label: "Renewable", value: `${renewables.toFixed(1)}%`, color: "#00BFA5" },
+        ...(topFuels?.slice(0, 2).map((g) => ({
+          label: g.fuel.charAt(0).toUpperCase() + g.fuel.slice(1),
+          value: `${g.perc.toFixed(1)}%`,
+        })) || []),
+      ],
+      footer: "Source: National Grid ESO / Carbon Intensity API",
+      variant: "dark" as const,
+    };
+  }, [carbonData, intensity, renewables]);
+
+  const materialSnapshot: SnapshotData | undefined = useMemo(() => {
+    if (!materialData) return undefined;
+    const topStats = materialData.materials.slice(0, 4).map((m) => ({
+      label: m.name,
+      value: `${m.momChange > 0 ? "+" : ""}${m.momChange.toFixed(1)}% MoM`,
+      color: m.momChange > 0.5 ? "#FF3D7F" : m.momChange < -0.5 ? "#00BFA5" : "#8A8A9A",
+    }));
+    return {
+      headline: "Material Prices",
+      subtitle: "UK Construction Materials Index",
+      stats: topStats,
+      footer: `Index (2015=100) / ${materialData.source.dataPeriod} / Source: ONS`,
+      variant: "light" as const,
+    };
+  }, [materialData]);
+
+  const constructionSnapshot: SnapshotData | undefined = useMemo(() => {
+    if (!constructionData) return undefined;
+    const momStr = constructionData.totalOutput.momChange != null
+      ? `${constructionData.totalOutput.momChange > 0 ? "+" : ""}${constructionData.totalOutput.momChange.toFixed(1)}%`
+      : "--";
+    return {
+      headline: formatGBP(constructionData.totalOutput.value),
+      subtitle: "UK Construction Output",
+      stats: [
+        { label: "Month-on-month", value: momStr },
+        { label: "New work", value: formatGBP(constructionData.newWork.value) },
+        { label: "Repair & maintenance", value: formatGBP(constructionData.repairMaintenance.value) },
+      ],
+      footer: `${constructionData.period} / Source: ONS`,
+      variant: "teal" as const,
+    };
+  }, [constructionData]);
+
+  const planningSnapshot: SnapshotData | undefined = useMemo(() => {
+    if (!planningData) return undefined;
+    return {
+      headline: `${planningData.summary.total.toLocaleString()} Decisions`,
+      subtitle: "UK Planning Activity",
+      stats: [
+        { label: "Approved", value: String(planningData.summary.approved), color: "#10b981" },
+        { label: "Refused", value: String(planningData.summary.refused), color: "#ef4444" },
+        { label: "Pending", value: String(planningData.summary.pending), color: "#f59e0b" },
+        { label: "Approval rate", value: `${planningData.summary.approvalRate}%`, color: "#10b981" },
+      ],
+      footer: `From ${planningData.summary.totalInDataset.toLocaleString()} total tracked / Source: Planning Portal`,
+      variant: "light" as const,
+    };
+  }, [planningData]);
+
+  const epcSnapshot: SnapshotData | undefined = useMemo(() => {
+    if (!epcDemoData) return undefined;
+    const certs = epcDemoData.certificates;
+    const avgSap = certs.reduce((sum, c) => sum + c.sapScore, 0) / certs.length;
+    const avgBand = sapToBand(avgSap);
+    return {
+      headline: `Band ${avgBand} / ${avgSap.toFixed(0)} SAP`,
+      headlineColor: EPC_COLOURS[avgBand],
+      subtitle: `EPC Ratings - ${epcDemoData.postcode}`,
+      stats: [
+        { label: "Certificates", value: String(epcDemoData.totalResults) },
+        { label: "Average band", value: avgBand, color: EPC_COLOURS[avgBand] },
+        { label: "Average SAP", value: avgSap.toFixed(0) },
+      ],
+      footer: "Source: DLUHC Energy Performance of Buildings Register",
+      variant: "dark" as const,
+    };
+  }, [epcDemoData]);
+
+  const regulationsSnapshot: SnapshotData | undefined = useMemo(() => {
+    const regs = filteredRegs.slice(0, 4);
+    if (regs.length === 0) return undefined;
+    return {
+      headline: "Upcoming Regulations",
+      subtitle: "UK Built Environment Regulatory Timeline",
+      stats: regs.map((r) => {
+        const days = getDaysUntil(r.isoDate);
+        const daysStr = days != null ? (days > 0 ? `${days}d` : "Now") : "TBC";
+        return {
+          label: r.title,
+          value: `${r.date} (${daysStr})`,
+          color: days != null && days <= 365 ? "#FF3D7F" : undefined,
+        };
+      }),
+      footer: "Tracking Future Homes Standard, UK CBAM, EPC C Minimum, Part Z",
+      variant: "dark" as const,
+    };
+  }, [filteredRegs]);
+
   return (
     <div className="min-h-screen overflow-x-hidden">
       {/* ============================================================
@@ -796,6 +914,7 @@ export default function HomePage() {
                   href="/dashboard/carbon-intensity"
                   sharePath="/dashboard/carbon-intensity"
                   className="md:col-span-2 min-h-[320px]"
+                  snapshotData={carbonSnapshot}
                 >
                   {carbonData && (
                     <div>
@@ -876,6 +995,7 @@ export default function HomePage() {
                   href="/dashboard/material-prices"
                   sharePath="/dashboard/material-prices"
                   className="min-h-[320px]"
+                  snapshotData={materialSnapshot}
                 >
                   {materialData && (
                     <div>
@@ -976,6 +1096,7 @@ export default function HomePage() {
                   delay={2}
                   href="/dashboard/construction-output"
                   sharePath="/dashboard/construction-output"
+                  snapshotData={constructionSnapshot}
                 >
                   {constructionData && (
                     <div>
@@ -1086,6 +1207,7 @@ export default function HomePage() {
                   delay={3}
                   href="/dashboard/planning"
                   sharePath="/dashboard/planning"
+                  snapshotData={planningSnapshot}
                 >
                   {planningData && (
                     <div>
@@ -1173,6 +1295,7 @@ export default function HomePage() {
                   delay={4}
                   href="/dashboard/epc"
                   sharePath="/dashboard/epc"
+                  snapshotData={epcSnapshot}
                 >
                   <div>
                     {epcDemoData ? (() => {
@@ -1297,6 +1420,7 @@ export default function HomePage() {
                   href="/regulations"
                   sharePath="/regulations"
                   className="md:col-span-2"
+                  snapshotData={regulationsSnapshot}
                 >
                   <div>
                     <h3 className="font-[family-name:var(--font-playfair)] text-xl font-bold mb-4 text-white">

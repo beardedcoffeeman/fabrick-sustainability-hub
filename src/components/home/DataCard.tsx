@@ -3,7 +3,7 @@
 import { useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
-import { ShareDownload } from "./ShareDownload";
+import { ShareDownload, type SnapshotData } from "./ShareDownload";
 import { SkeletonCard } from "./SkeletonCard";
 
 export type CardVariant = "charcoal" | "white" | "teal" | "navy" | "pink";
@@ -20,6 +20,7 @@ interface DataCardProps {
   href?: string;
   sharePath?: string;
   className?: string;
+  snapshotData?: SnapshotData;
   children: React.ReactNode;
 }
 
@@ -76,6 +77,7 @@ export function DataCard({
   href,
   sharePath = "/",
   className = "",
+  snapshotData,
   children,
 }: DataCardProps) {
   const captureRef = useRef<HTMLDivElement>(null);
@@ -159,6 +161,7 @@ export function DataCard({
           title={title}
           sharePath={sharePath}
           compact={false}
+          snapshotData={snapshotData}
         />
       </div>
     </motion.div>
