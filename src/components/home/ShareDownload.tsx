@@ -20,7 +20,7 @@ export function ShareDownload({
   compact = false,
 }: ShareDownloadProps) {
   const [copied, setCopied] = useState(false);
-  const [downloading, setDownloading] = useState(false);
+  // downloading state removed - using clipboard-based copy instead
   const timeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   const getShareUrl = useCallback(() => {
@@ -28,68 +28,24 @@ export function ShareDownload({
     return `${window.location.origin}${sharePath}`;
   }, [sharePath]);
 
-  const handleDownload = useCallback(async () => {
-    if (!captureRef.current || downloading) return;
-    setDownloading(true);
+  const handleCopyData = useCallback(() => {
+    if (!captureRef.current) return;
 
-    try {
-      const html2canvas = (await import("html2canvas")).default;
+    // Extract text content from the card for a clean data copy
+    const el = captureRef.current;
+    const textContent = el.innerText
+      .split("\n")
+      .filter((line: string) => line.trim())
+      .join("\n");
 
-      const wrapper = document.createElement("div");
-      wrapper.style.cssText = `
-        padding: 24px;
-        background: #F0EBE3;
-        border-radius: 16px;
-        position: fixed;
-        left: -9999px;
-        top: 0;
-        z-index: -1;
-        width: ${captureRef.current.offsetWidth + 48}px;
-      `;
+    const formatted = `${title} - Fabrick Built Environment Data\n${"=".repeat(40)}\n${textContent}\n\nSource: ${typeof window !== "undefined" ? window.location.origin : ""}${sharePath}\nDriven by data. Powered by creativity.`;
 
-      const clone = captureRef.current.cloneNode(true) as HTMLElement;
-      wrapper.appendChild(clone);
-
-      const footer = document.createElement("div");
-      footer.style.cssText = `
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        padding: 12px 0 0;
-        margin-top: 16px;
-        border-top: 1px solid #E5DFD5;
-        font-family: Inter, sans-serif;
-      `;
-      footer.innerHTML = `
-        <div style="display:flex;align-items:center;gap:8px;">
-          <div style="background:#2D2D3F;color:white;padding:4px 10px;border-radius:6px;font-size:11px;font-weight:700;letter-spacing:0.5px;">FABRICK</div>
-          <span style="font-size:10px;color:#8A8A9A;">Built Environment Platform</span>
-        </div>
-        <span style="font-size:9px;color:#8A8A9A;">Driven by data. Powered by creativity.</span>
-      `;
-      wrapper.appendChild(footer);
-
-      document.body.appendChild(wrapper);
-
-      const canvas = await html2canvas(wrapper, {
-        backgroundColor: "#F0EBE3",
-        scale: 2,
-        useCORS: true,
-        logging: false,
-      });
-
-      document.body.removeChild(wrapper);
-
-      const link = document.createElement("a");
-      link.download = `fabrick-${title.toLowerCase().replace(/\s+/g, "-")}-${new Date().toISOString().split("T")[0]}.png`;
-      link.href = canvas.toDataURL("image/png");
-      link.click();
-    } catch (err) {
-      console.error("Download failed:", err);
-    } finally {
-      setDownloading(false);
-    }
-  }, [captureRef, title, downloading]);
+    navigator.clipboard.writeText(formatted).then(() => {
+      setCopied(true);
+      if (timeoutRef.current) clearTimeout(timeoutRef.current);
+      timeoutRef.current = setTimeout(() => setCopied(false), 2000);
+    });
+  }, [captureRef, title, sharePath]);
 
   const handleCopyLink = useCallback(() => {
     const url = getShareUrl();
@@ -126,8 +82,8 @@ export function ShareDownload({
     const iconSize = "h-3 w-3";
     return (
       <div className="flex items-center gap-0.5">
-        <button onClick={handleDownload} disabled={downloading} className={`${btnBase} flex items-center justify-center transition-colors`} title="Download as image">
-          <Download className={`${iconSize} ${downloading ? "animate-bounce" : ""}`} />
+        <button onClick={handleCopyData} className={`${btnBase} flex items-center justify-center transition-colors`} title="Copy data">
+          <Download className={iconSize} />
         </button>
         <button onClick={handleCopyLink} className={`${btnBase} flex items-center justify-center transition-colors`} title="Copy link">
           {copied ? <Check className={`${iconSize} text-teal`} /> : <Link2 className={iconSize} />}
@@ -143,12 +99,20 @@ export function ShareDownload({
   return (
     <div className="flex items-center gap-2 flex-wrap">
       <button
-        onClick={handleDownload}
-        disabled={downloading}
+        onClick={handleCopyData}
         className={`${btnClasses} bg-white/10 hover:bg-white/20 text-current`}
       >
-        <Download className={`h-3 w-3 ${downloading ? "animate-bounce" : ""}`} />
-        Download Snapshot
+        {copied ? (
+          <>
+            <Check className="h-3 w-3 text-teal" />
+            Copied!
+          </>
+        ) : (
+          <>
+            <Download className="h-3 w-3" />
+            Copy Data
+          </>
+        )}
       </button>
       <button
         onClick={handleLinkedIn}

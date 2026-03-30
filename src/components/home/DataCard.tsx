@@ -78,12 +78,11 @@ export function DataCard({
   className = "",
   children,
 }: DataCardProps) {
-  const cardRef = useRef<HTMLDivElement>(null);
+  const captureRef = useRef<HTMLDivElement>(null);
   const styles = variantStyles[variant];
 
   return (
     <motion.div
-      ref={cardRef}
       initial={{ opacity: 0, y: 24, scale: 0.97 }}
       animate={{
         opacity: dimmed ? 0.45 : 1,
@@ -96,13 +95,14 @@ export function DataCard({
         ease: [0.25, 0.46, 0.45, 0.94],
       }}
       className={`
-        group relative rounded-3xl p-6 transition-all duration-300 overflow-hidden
+        group relative rounded-3xl transition-all duration-300 overflow-hidden
         ${styles.bg} ${styles.text}
         ${relevant && !dimmed ? "ring-2 ring-teal/40 card-relevant" : ""}
         ${dimmed ? "pointer-events-none" : "hover:shadow-2xl hover:-translate-y-1"}
         ${className}
       `}
     >
+      <div ref={captureRef} className="p-6">
       {/* Skeleton overlay - fades out when data loads */}
       <AnimatePresence>
         {loading && (
@@ -148,12 +148,14 @@ export function DataCard({
       {/* Content */}
       {children}
 
-      {/* Share/Download - appears on hover */}
-      <div className="mt-4 pt-3 border-t opacity-50 group-hover:opacity-100 transition-opacity duration-200"
+      </div>{/* end captureRef div */}
+
+      {/* Share/Download - outside capture area */}
+      <div data-share-bar className="mx-6 mb-6 pt-3 border-t opacity-50 group-hover:opacity-100 transition-opacity duration-200"
         style={{ borderColor: variant === "white" ? "var(--color-cream-dark)" : "rgba(255,255,255,0.1)" }}
       >
         <ShareDownload
-          captureRef={cardRef}
+          captureRef={captureRef}
           title={title}
           sharePath={sharePath}
           compact={false}
