@@ -344,8 +344,6 @@ function wrapText(
 // ============================================================
 
 interface ShareDownloadProps {
-  /** A ref to the DOM element to capture for download (kept for backward compat) */
-  captureRef: React.RefObject<HTMLElement | null>;
   /** Title used in social share text and file name */
   title: string;
   /** The URL path for sharing (e.g. /dashboard) */
@@ -356,7 +354,6 @@ interface ShareDownloadProps {
 }
 
 export function ShareDownload({
-  captureRef,
   title,
   sharePath = "/",
   compact = false,
@@ -398,10 +395,7 @@ export function ShareDownload({
 
   // ---- Fallback: copy text data ----
   const handleCopyData = useCallback(() => {
-    if (!captureRef.current) return;
-
-    const el = captureRef.current;
-    const textContent = el.innerText
+    const textContent = (title || "")
       .split("\n")
       .filter((line: string) => line.trim())
       .join("\n");
@@ -413,7 +407,7 @@ export function ShareDownload({
       if (timeoutRef.current) clearTimeout(timeoutRef.current);
       timeoutRef.current = setTimeout(() => setCopied(false), 2000);
     });
-  }, [captureRef, title, sharePath]);
+  }, [title, sharePath]);
 
   const handleCopyLink = useCallback(() => {
     const url = getShareUrl();
