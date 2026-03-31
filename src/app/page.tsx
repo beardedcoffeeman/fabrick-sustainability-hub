@@ -1531,26 +1531,23 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Curved arc: cream-dark into research section */}
-      <CurveArc from="var(--color-cream-dark)" to="var(--color-charcoal)" flip />
-
       {/* ============================================================
           RESEARCH PREVIEW
           ============================================================ */}
-      <section className="bg-charcoal py-16 md:py-20 text-white">
+      <section className="bg-cream-dark py-16 md:py-20">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="mb-10">
             <span className="text-xs font-semibold uppercase tracking-wider text-pink">
               Research
             </span>
-            <h2 className="mt-3 font-[family-name:var(--font-playfair)] text-3xl font-bold md:text-4xl">
+            <h2 className="mt-3 font-[family-name:var(--font-playfair)] text-3xl font-bold text-navy md:text-4xl">
               Original Research
             </h2>
           </div>
 
           <Link
             href="/research/ai-construction-search"
-            className="group block rounded-3xl bg-navy p-6 md:p-8 border border-white/10 transition-all hover:border-white/20 hover:shadow-2xl"
+            className="group block rounded-3xl bg-charcoal p-8 md:p-10 transition-all hover:shadow-2xl hover:-translate-y-1"
           >
             <div className="flex flex-col md:flex-row md:items-start md:gap-8">
               <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-pink/20 shrink-0 mb-4 md:mb-0">
@@ -1570,7 +1567,12 @@ export default function HomePage() {
                   ChatGPT, Claude, and Google AI Overviews to find and evaluate suppliers,
                   products, and services.
                 </p>
-                <div className="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-teal transition-colors group-hover:text-white">
+                <div className="mt-4 flex flex-wrap items-center gap-4">
+                  <span className="text-xs text-gray-500">400+ survey respondents</span>
+                  <span className="text-xs text-gray-500">20 expert interviews</span>
+                  <span className="text-xs text-gray-500">6 sectors</span>
+                </div>
+                <div className="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-teal transition-colors group-hover:gap-3">
                   Learn more
                   <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
                 </div>
@@ -1580,8 +1582,8 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Curved arc: charcoal to navy */}
-      <CurveArc from="var(--color-charcoal)" to="var(--color-navy)" flip />
+      {/* Curved arc: cream-dark to navy */}
+      <CurveArc from="var(--color-cream-dark)" to="var(--color-navy)" flip />
 
       {/* ============================================================
           INDUSTRY CONTEXT STRIP
