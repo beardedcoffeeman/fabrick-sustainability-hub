@@ -19,6 +19,7 @@ import {
   Landmark,
   Building,
   ArrowUpRight,
+  ArrowRight,
   TrendingUp,
   TrendingDown,
   Minus,
@@ -29,6 +30,7 @@ import {
   Calculator,
   BookOpen,
   ExternalLink,
+  Brain,
 } from "lucide-react";
 import { RoleSelector, ROLES, type Role } from "@/components/home/RoleSelector";
 import { AnimatedNumber } from "@/components/home/AnimatedNumber";
@@ -1529,8 +1531,57 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Curved arc: cream-dark to navy */}
-      <CurveArc from="var(--color-cream-dark)" to="var(--color-navy)" flip />
+      {/* Curved arc: cream-dark into research section */}
+      <CurveArc from="var(--color-cream-dark)" to="var(--color-charcoal)" flip />
+
+      {/* ============================================================
+          RESEARCH PREVIEW
+          ============================================================ */}
+      <section className="bg-charcoal py-16 md:py-20 text-white">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="mb-10">
+            <span className="text-xs font-semibold uppercase tracking-wider text-pink">
+              Research
+            </span>
+            <h2 className="mt-3 font-[family-name:var(--font-playfair)] text-3xl font-bold md:text-4xl">
+              Original Research
+            </h2>
+          </div>
+
+          <Link
+            href="/research/ai-construction-search"
+            className="group block rounded-3xl bg-navy p-6 md:p-8 border border-white/10 transition-all hover:border-white/20 hover:shadow-2xl"
+          >
+            <div className="flex flex-col md:flex-row md:items-start md:gap-8">
+              <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-pink/20 shrink-0 mb-4 md:mb-0">
+                <Brain className="h-7 w-7 text-pink" />
+              </div>
+              <div className="flex-1">
+                <div className="flex flex-wrap items-center gap-3 mb-3">
+                  <span className="inline-flex items-center rounded-full bg-pink px-3 py-1 text-[10px] font-bold uppercase tracking-wider text-white">
+                    Coming Soon - Q2 2026
+                  </span>
+                </div>
+                <h3 className="font-[family-name:var(--font-playfair)] text-xl md:text-2xl font-bold text-white leading-snug">
+                  AI in Construction: How the Industry Searches, Discovers & Decides
+                </h3>
+                <p className="mt-3 text-sm text-gray-400 leading-relaxed max-w-2xl">
+                  The UK&apos;s first study into how construction professionals use AI tools like
+                  ChatGPT, Claude, and Google AI Overviews to find and evaluate suppliers,
+                  products, and services.
+                </p>
+                <div className="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-teal transition-colors group-hover:text-white">
+                  Learn more
+                  <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
+                </div>
+              </div>
+            </div>
+          </Link>
+        </div>
+      </section>
+
+      {/* Curved arc: charcoal to navy */}
+      <CurveArc from="var(--color-charcoal)" to="var(--color-navy)" flip />
 
       {/* ============================================================
           INDUSTRY CONTEXT STRIP
