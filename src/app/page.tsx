@@ -333,7 +333,7 @@ export default function HomePage() {
               <span className="text-[11px] font-semibold uppercase tracking-[0.18em] text-pink">
                 Why this matters
               </span>
-              <p className="mt-5 font-[family-name:var(--font-playfair)] text-[6rem] md:text-[9rem] font-bold text-teal leading-[0.85] tabular-nums">
+              <p className="mt-5 font-[family-name:var(--font-playfair)] text-[4.5rem] sm:text-[5.5rem] md:text-[6.5rem] lg:text-[7rem] font-bold text-teal leading-[0.95] tabular-nums break-words">
                 £170bn
               </p>
               <p className="mt-5 text-sm text-gray-400 max-w-sm leading-relaxed">
