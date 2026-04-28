@@ -226,23 +226,6 @@ function SummaryStats({ certificates }: { certificates: EPCCertificate[] }) {
   const total = certificates.length;
   if (total === 0) return null;
 
-  // Average SAP score
-  const avgSap =
-    certificates.reduce((sum, c) => sum + c.sapScore, 0) / total;
-
-  // Average band (compute from avgSap)
-  function sapToBand(sap: number): string {
-    if (sap >= 92) return "A";
-    if (sap >= 81) return "B";
-    if (sap >= 69) return "C";
-    if (sap >= 55) return "D";
-    if (sap >= 39) return "E";
-    if (sap >= 21) return "F";
-    return "G";
-  }
-
-  const avgBand = sapToBand(avgSap);
-
   // Band percentages
   const bandCounts = ALL_BANDS.map((band) => {
     const count = certificates.filter(
@@ -251,15 +234,22 @@ function SummaryStats({ certificates }: { certificates: EPCCertificate[] }) {
     return { band, count, pct: ((count / total) * 100).toFixed(0) };
   });
 
-  // Most common property type
+  // Most common band - drives "Average Rating" panel since SAP is no longer
+  // returned by the MHCLG search endpoint
+  const mostCommonBand =
+    [...bandCounts].sort((a, b) => b.count - a.count)[0]?.band || "D";
+
+  // Most common property type - only meaningful if we have type data
   const typeCounts: Record<string, number> = {};
   certificates.forEach((c) => {
-    const t = c.propertyType || "Unknown";
-    typeCounts[t] = (typeCounts[t] || 0) + 1;
+    if (c.propertyType) {
+      typeCounts[c.propertyType] = (typeCounts[c.propertyType] || 0) + 1;
+    }
   });
   const mostCommonType = Object.entries(typeCounts).sort(
     (a, b) => b[1] - a[1]
   )[0];
+  const hasTypeData = !!mostCommonType;
 
   return (
     <motion.div
@@ -268,41 +258,60 @@ function SummaryStats({ certificates }: { certificates: EPCCertificate[] }) {
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay: 0.2 }}
     >
-      {/* Average rating */}
+      {/* Most common rating */}
       <div className="rounded-xl bg-cream p-4">
         <p className="text-[10px] font-semibold uppercase tracking-wider text-warm-gray mb-1">
-          Average Rating
+          Most Common Rating
         </p>
         <div className="flex items-center gap-2">
-          <RatingBadge rating={avgBand} size="lg" />
+          <RatingBadge rating={mostCommonBand} size="lg" />
           <div>
-            <p className="text-lg font-bold text-navy tabular-nums">
-              {avgSap.toFixed(0)} SAP
+            <p className="text-sm font-bold text-navy">
+              Band {mostCommonBand}
             </p>
             <p className="text-[10px] text-warm-gray">
-              {RATING_LABELS[avgBand]}
+              {RATING_LABELS[mostCommonBand]}
             </p>
           </div>
         </div>
       </div>
 
-      {/* Most common type */}
-      <div className="rounded-xl bg-cream p-4">
-        <p className="text-[10px] font-semibold uppercase tracking-wider text-warm-gray mb-1">
-          Most Common Type
-        </p>
-        <div className="flex items-center gap-2">
-          <Home className="h-8 w-8 text-teal opacity-60" />
-          <div>
-            <p className="text-sm font-bold text-navy">
-              {mostCommonType?.[0] || "N/A"}
-            </p>
-            <p className="text-[10px] text-warm-gray">
-              {mostCommonType?.[1] || 0} of {total} properties
-            </p>
+      {/* Most common type - only if we actually have type data */}
+      {hasTypeData ? (
+        <div className="rounded-xl bg-cream p-4">
+          <p className="text-[10px] font-semibold uppercase tracking-wider text-warm-gray mb-1">
+            Most Common Type
+          </p>
+          <div className="flex items-center gap-2">
+            <Home className="h-8 w-8 text-teal opacity-60" />
+            <div>
+              <p className="text-sm font-bold text-navy">
+                {mostCommonType[0]}
+              </p>
+              <p className="text-[10px] text-warm-gray">
+                {mostCommonType[1]} of {total} properties
+              </p>
+            </div>
           </div>
         </div>
-      </div>
+      ) : (
+        <div className="rounded-xl bg-cream p-4">
+          <p className="text-[10px] font-semibold uppercase tracking-wider text-warm-gray mb-1">
+            Total Certificates
+          </p>
+          <div className="flex items-center gap-2">
+            <Home className="h-8 w-8 text-teal opacity-60" />
+            <div>
+              <p className="text-sm font-bold text-navy">
+                {total} on this postcode
+              </p>
+              <p className="text-[10px] text-warm-gray">
+                Source: MHCLG EPC register
+              </p>
+            </div>
+          </div>
+        </div>
+      )}
 
       {/* Band breakdown */}
       <div className="col-span-2 rounded-xl bg-cream p-4">
@@ -343,8 +352,60 @@ function CertificateCard({
   cert: EPCCertificate;
   index: number;
 }) {
+  // The MHCLG search endpoint returns band + address + registration only.
+  // Full per-property data lives on find-energy-certificate.service.gov.uk.
+  const hasRichData =
+    cert.sapScore > 0 || cert.floorArea > 0 || !!cert.propertyType;
   const [expanded, setExpanded] = useState(false);
 
+  const formattedDate = cert.certificateDate
+    ? new Date(cert.certificateDate).toLocaleDateString("en-GB", {
+        day: "numeric",
+        month: "short",
+        year: "numeric",
+      })
+    : "";
+
+  const subline = hasRichData
+    ? [cert.propertyType, cert.floorArea ? `${cert.floorArea} m²` : null, formattedDate]
+        .filter(Boolean)
+        .join(" · ")
+    : formattedDate
+      ? `Registered ${formattedDate}`
+      : "MHCLG EPC register";
+
+  // No-rich-data branch: render a compact, non-expandable card. The user
+  // can click through to find-energy-certificate.service.gov.uk for full
+  // property detail.
+  if (!hasRichData) {
+    return (
+      <motion.div
+        className="rounded-xl bg-white border border-cream-dark px-4 py-3 flex items-center gap-3"
+        initial={{ opacity: 0, y: 8 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: index * 0.04 }}
+      >
+        <RatingBadge rating={cert.currentRating} />
+        <div className="flex-1 min-w-0">
+          <p className="text-xs font-semibold text-navy truncate">
+            {cert.address}
+          </p>
+          <p className="text-[10px] text-warm-gray">{subline}</p>
+        </div>
+        <a
+          href={`https://find-energy-certificate.service.gov.uk/find-a-certificate/search-by-postcode?postcode=${encodeURIComponent(cert.address)}`}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="shrink-0 text-[10px] font-semibold uppercase tracking-wider text-teal hover:text-teal-dark inline-flex items-center gap-1"
+        >
+          Full cert
+          <ExternalLink className="h-3 w-3" />
+        </a>
+      </motion.div>
+    );
+  }
+
+  // Rich-data branch (kept for backwards-compat when richer feeds are added)
   return (
     <motion.div
       className="rounded-xl bg-white border border-cream-dark overflow-hidden"
@@ -361,15 +422,16 @@ function CertificateCard({
           <p className="text-xs font-semibold text-navy truncate">
             {cert.address}
           </p>
-          <p className="text-[10px] text-warm-gray">
-            {cert.propertyType} &middot; {cert.floorArea}m&sup2; &middot;{" "}
-            {cert.certificateDate}
-          </p>
+          <p className="text-[10px] text-warm-gray">{subline}</p>
         </div>
         <div className="flex items-center gap-1 shrink-0">
           <RatingBadge rating={cert.currentRating} size="sm" />
-          <ArrowRight className="h-3 w-3 text-warm-gray" />
-          <RatingBadge rating={cert.potentialRating} size="sm" />
+          {cert.potentialRating && (
+            <>
+              <ArrowRight className="h-3 w-3 text-warm-gray" />
+              <RatingBadge rating={cert.potentialRating} size="sm" />
+            </>
+          )}
         </div>
       </button>
 
@@ -384,7 +446,6 @@ function CertificateCard({
           >
             <div className="px-4 pb-4 pt-1 border-t border-cream-dark">
               <div className="grid grid-cols-2 gap-3 mb-3">
-                {/* Current vs potential scale */}
                 <div>
                   <p className="text-[10px] font-semibold uppercase tracking-wider text-warm-gray mb-1">
                     Energy Rating
@@ -395,51 +456,59 @@ function CertificateCard({
                   />
                 </div>
                 <div className="space-y-2">
-                  <div>
-                    <p className="text-[10px] font-semibold uppercase tracking-wider text-warm-gray mb-0.5">
-                      SAP Score
-                    </p>
-                    <p className="text-lg font-bold text-navy tabular-nums">
-                      {cert.sapScore}
-                      <span className="text-xs text-warm-gray font-normal ml-1">
-                        / 100
-                      </span>
-                    </p>
-                  </div>
-                  <div>
-                    <p className="text-[10px] font-semibold uppercase tracking-wider text-warm-gray mb-0.5">
-                      Floor Area
-                    </p>
-                    <p className="text-sm font-semibold text-navy">
-                      {cert.floorArea} m&sup2;
-                    </p>
-                  </div>
+                  {cert.sapScore > 0 && (
+                    <div>
+                      <p className="text-[10px] font-semibold uppercase tracking-wider text-warm-gray mb-0.5">
+                        SAP Score
+                      </p>
+                      <p className="text-lg font-bold text-navy tabular-nums">
+                        {cert.sapScore}
+                        <span className="text-xs text-warm-gray font-normal ml-1">
+                          / 100
+                        </span>
+                      </p>
+                    </div>
+                  )}
+                  {cert.floorArea > 0 && (
+                    <div>
+                      <p className="text-[10px] font-semibold uppercase tracking-wider text-warm-gray mb-0.5">
+                        Floor Area
+                      </p>
+                      <p className="text-sm font-semibold text-navy">
+                        {cert.floorArea} m&sup2;
+                      </p>
+                    </div>
+                  )}
                 </div>
               </div>
 
               <div className="grid grid-cols-2 gap-2">
-                <div className="rounded-lg bg-cream p-2.5">
-                  <div className="flex items-center gap-1 mb-1">
-                    <Flame className="h-3 w-3 text-pink" />
-                    <span className="text-[9px] font-semibold uppercase tracking-wider text-warm-gray">
-                      Heating
-                    </span>
+                {cert.heatingType && (
+                  <div className="rounded-lg bg-cream p-2.5">
+                    <div className="flex items-center gap-1 mb-1">
+                      <Flame className="h-3 w-3 text-pink" />
+                      <span className="text-[9px] font-semibold uppercase tracking-wider text-warm-gray">
+                        Heating
+                      </span>
+                    </div>
+                    <p className="text-[11px] text-navy leading-snug">
+                      {cert.heatingType}
+                    </p>
                   </div>
-                  <p className="text-[11px] text-navy leading-snug">
-                    {cert.heatingType}
-                  </p>
-                </div>
-                <div className="rounded-lg bg-cream p-2.5">
-                  <div className="flex items-center gap-1 mb-1">
-                    <BrickWall className="h-3 w-3 text-teal" />
-                    <span className="text-[9px] font-semibold uppercase tracking-wider text-warm-gray">
-                      Walls
-                    </span>
+                )}
+                {cert.wallConstruction && (
+                  <div className="rounded-lg bg-cream p-2.5">
+                    <div className="flex items-center gap-1 mb-1">
+                      <BrickWall className="h-3 w-3 text-teal" />
+                      <span className="text-[9px] font-semibold uppercase tracking-wider text-warm-gray">
+                        Walls
+                      </span>
+                    </div>
+                    <p className="text-[11px] text-navy leading-snug">
+                      {cert.wallConstruction}
+                    </p>
                   </div>
-                  <p className="text-[11px] text-navy leading-snug">
-                    {cert.wallConstruction}
-                  </p>
-                </div>
+                )}
               </div>
             </div>
           </motion.div>

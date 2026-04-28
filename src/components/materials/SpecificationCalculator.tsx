@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useMemo } from "react";
+import { useState, useMemo, useRef, useEffect } from "react";
 import {
   Plus,
   Trash2,
@@ -15,7 +15,7 @@ import {
   TreePine,
   Lock,
   Sparkles,
-  CheckCircle,
+  Check,
   ArrowRight,
   Info,
   ExternalLink,
@@ -106,6 +106,25 @@ export function SpecificationCalculator() {
   // Source panel toggle
   const [showSources, setShowSources] = useState(false);
 
+  // UX feedback for Add: button flash + auto-scroll to new item + highlight
+  const [justAddedId, setJustAddedId] = useState<string | null>(null);
+  const [addedFlash, setAddedFlash] = useState(false);
+  const itemRefs = useRef<Record<string, HTMLDivElement | null>>({});
+
+  useEffect(() => {
+    if (!justAddedId) return;
+    const el = itemRefs.current[justAddedId];
+    if (el) {
+      el.scrollIntoView({ behavior: "smooth", block: "center" });
+    }
+    const flashTimer = setTimeout(() => setAddedFlash(false), 1200);
+    const highlightTimer = setTimeout(() => setJustAddedId(null), 2000);
+    return () => {
+      clearTimeout(flashTimer);
+      clearTimeout(highlightTimer);
+    };
+  }, [justAddedId]);
+
   const materialsByCategory = useMemo(() => {
     if (!selectedCategory) return [];
     return iceDatabase.filter((m) => m.category === selectedCategory);
@@ -123,6 +142,53 @@ export function SpecificationCalculator() {
   const areaM2 = parseFloat(buildingArea) || 0;
   const carbonPerM2 = areaM2 > 0 ? totalCarbon / areaM2 : 0;
 
+  // Fabrick Analysis: top contributor, top suggested swap, benchmark commentary.
+  const fabrickAnalysis = useMemo(() => {
+    if (lineItems.length === 0) return null;
+
+    // Top carbon contributor
+    const itemBreakdown = lineItems
+      .map((item) => {
+        const material = iceDatabase.find((m) => m.id === item.materialId);
+        if (!material) return null;
+        const kgs = convertToKg(item.quantity, item.unit, material.density);
+        const carbon = kgs * material.embodiedCarbon;
+        return { item, material, carbon };
+      })
+      .filter((x): x is NonNullable<typeof x> => x !== null)
+      .sort((a, b) => b.carbon - a.carbon);
+
+    const top = itemBreakdown[0];
+    const topPct = top ? (top.carbon / totalCarbon) * 100 : 0;
+
+    // Best alternative for the top contributor
+    const altIds = top?.material.alternatives ?? [];
+    const alts = altIds
+      .map((id) => iceDatabase.find((m) => m.id === id))
+      .filter((m): m is NonNullable<typeof m> => !!m)
+      .sort((a, b) => a.embodiedCarbon - b.embodiedCarbon);
+    const bestAlt = alts[0];
+    const swapSavingPct = bestAlt && top
+      ? ((top.material.embodiedCarbon - bestAlt.embodiedCarbon) /
+          top.material.embodiedCarbon) *
+        100
+      : 0;
+
+    // Benchmark verdict
+    const letiTarget = carbonBenchmarks.leti[buildingType];
+    const ribaTarget = carbonBenchmarks.riba2030[buildingType];
+    const benchmarkVerdict =
+      carbonPerM2 === 0
+        ? null
+        : carbonPerM2 <= letiTarget
+          ? `inside the LETI 2020 target (${letiTarget} kgCO₂e/m²) - ahead of best-practice peers.`
+          : carbonPerM2 <= ribaTarget
+            ? `between the LETI 2020 and RIBA 2030 targets - competitive, with room to push lower.`
+            : `above the RIBA 2030 target (${ribaTarget} kgCO₂e/m²) - the structural materials below are doing most of the carbon.`;
+
+    return { top, topPct, bestAlt, swapSavingPct, benchmarkVerdict };
+  }, [lineItems, totalCarbon, carbonPerM2, buildingType]);
+
   const addLineItem = () => {
     if (!selectedMaterialId || !quantity || parseFloat(quantity) <= 0) return;
     const newItem: LineItem = {
@@ -134,6 +200,8 @@ export function SpecificationCalculator() {
     setLineItems((prev) => [...prev, newItem]);
     setSelectedMaterialId("");
     setQuantity("");
+    setJustAddedId(newItem.id);
+    setAddedFlash(true);
   };
 
   const removeLineItem = (id: string) => {
@@ -206,7 +274,7 @@ export function SpecificationCalculator() {
           </div>
           <div>
             <label className="text-xs font-medium text-warm-gray mb-1 block">
-              Gross Internal Area (m²) — <span className="text-warm-gray/70">for benchmarking</span>
+              Gross Internal Area (m²) - <span className="text-warm-gray/70">for benchmarking</span>
             </label>
             <input
               type="number"
@@ -286,9 +354,20 @@ export function SpecificationCalculator() {
             <button
               onClick={addLineItem}
               disabled={!selectedMaterialId || !quantity}
-              className="w-full rounded-lg bg-teal px-4 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-teal-dark disabled:opacity-40 disabled:cursor-not-allowed"
+              className={`w-full rounded-lg px-4 py-2.5 text-sm font-semibold text-white transition-all flex items-center justify-center gap-1.5 disabled:opacity-40 disabled:cursor-not-allowed ${
+                addedFlash
+                  ? "bg-green-600 scale-[0.98]"
+                  : "bg-teal hover:bg-teal-dark"
+              }`}
             >
-              Add
+              {addedFlash ? (
+                <>
+                  <Check className="h-4 w-4" />
+                  Added
+                </>
+              ) : (
+                "Add"
+              )}
             </button>
           </div>
         </div>
@@ -327,7 +406,17 @@ export function SpecificationCalculator() {
             const isExpanded = expandedAlternatives === item.id;
 
             return (
-              <div key={item.id} className="rounded-xl bg-white shadow-sm overflow-hidden">
+              <div
+                key={item.id}
+                ref={(el) => {
+                  itemRefs.current[item.id] = el;
+                }}
+                className={`rounded-xl bg-white shadow-sm overflow-hidden transition-all duration-500 ${
+                  justAddedId === item.id
+                    ? "ring-2 ring-teal ring-offset-2 ring-offset-cream shadow-md"
+                    : ""
+                }`}
+              >
                 <div className="p-4 flex items-center gap-4">
                   {/* Carbon proportion bar */}
                   <div className="hidden sm:block w-1.5 h-14 rounded-full bg-gray-100 overflow-hidden">
@@ -460,6 +549,61 @@ export function SpecificationCalculator() {
               </div>
             );
           })}
+        </div>
+      )}
+
+      {/* ────────── Fabrick Analysis ────────── */}
+      {fabrickAnalysis && (
+        <div className="rounded-2xl bg-charcoal p-6 md:p-8 text-white">
+          <div className="flex items-center gap-2 mb-3">
+            <Sparkles className="h-4 w-4 text-pink" />
+            <span className="text-[10px] font-semibold uppercase tracking-[0.18em] text-pink">
+              Fabrick Analysis
+            </span>
+          </div>
+          <h3 className="font-[family-name:var(--font-playfair)] text-xl md:text-2xl font-bold leading-tight">
+            What this spec is telling you
+          </h3>
+          <div className="mt-4 space-y-3 text-sm leading-relaxed text-gray-300 max-w-3xl">
+            {fabrickAnalysis.top && (
+              <p>
+                <strong className="text-white">
+                  {fabrickAnalysis.top.material.name}
+                </strong>{" "}
+                is doing {fabrickAnalysis.topPct.toFixed(0)}% of the carbon work
+                in this spec. If you only have time for one swap, this is the
+                one that moves the number.
+              </p>
+            )}
+            {fabrickAnalysis.bestAlt && fabrickAnalysis.swapSavingPct > 5 && (
+              <p>
+                Switching to{" "}
+                <strong className="text-teal">
+                  {fabrickAnalysis.bestAlt.name}
+                </strong>{" "}
+                cuts that material&rsquo;s embodied carbon by roughly{" "}
+                <strong className="text-teal">
+                  {fabrickAnalysis.swapSavingPct.toFixed(0)}%
+                </strong>{" "}
+                on a like-for-like basis - open the alternatives panel on the
+                line item to apply it.
+              </p>
+            )}
+            {fabrickAnalysis.benchmarkVerdict && (
+              <p>
+                At{" "}
+                <strong className="text-white">
+                  {Math.round(carbonPerM2)} kgCO₂e/m²
+                </strong>
+                , this spec sits {fabrickAnalysis.benchmarkVerdict}
+              </p>
+            )}
+          </div>
+          <p className="mt-5 text-[11px] text-gray-500">
+            Fabrick analysis based on ICE Database v4.1 typical values, LETI 2020 and
+            RIBA 2030 benchmarks. Real-project numbers vary by mix design and supplier
+            - we run project-level analysis with our clients.
+          </p>
         </div>
       )}
 
@@ -757,7 +901,7 @@ export function SpecificationCalculator() {
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="mt-1.5 h-1 w-1 rounded-full bg-teal shrink-0" />
-                  <span><strong className="text-navy">BSRIA</strong> BG 76/2014: Embodied Carbon — The Inventory of Carbon and Energy</span>
+                  <span><strong className="text-navy">BSRIA</strong> BG 76/2014: Embodied Carbon - The Inventory of Carbon and Energy</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="mt-1.5 h-1 w-1 rounded-full bg-teal shrink-0" />
@@ -765,11 +909,11 @@ export function SpecificationCalculator() {
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="mt-1.5 h-1 w-1 rounded-full bg-teal shrink-0" />
-                  <span><strong className="text-navy">LETI</strong> Climate Emergency Design Guide (2020) — benchmarks</span>
+                  <span><strong className="text-navy">LETI</strong> Climate Emergency Design Guide (2020) - benchmarks</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="mt-1.5 h-1 w-1 rounded-full bg-teal shrink-0" />
-                  <span><strong className="text-navy">RIBA</strong> 2030 Climate Challenge — targets</span>
+                  <span><strong className="text-navy">RIBA</strong> 2030 Climate Challenge - targets</span>
                 </li>
               </ul>
             </div>

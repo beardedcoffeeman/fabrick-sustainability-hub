@@ -533,7 +533,7 @@ export function ConstructionOutputWidget() {
                 {source.name}
                 <ExternalLink className="h-2.5 w-2.5" />
               </a>
-              {" "}&mdash; Office for National Statistics. Released {data.releaseDate}.
+              {" "}- Office for National Statistics. Released {data.releaseDate}.
             </p>
             <p className="text-[10px] text-warm-gray/60 mt-1">
               {source.notes} Data shown for {data.period}. Dashboard caches for 24 hours.

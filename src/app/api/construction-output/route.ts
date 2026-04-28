@@ -1,6 +1,6 @@
 import { NextResponse } from "next/server";
 
-// ONS Beta API — Output in the Construction Industry dataset
+// ONS Beta API - Output in the Construction Industry dataset
 // Free, no key required. Monthly data on UK construction sector activity.
 // Docs: https://api.beta.ons.gov.uk/v1/datasets/output-in-the-construction-industry
 

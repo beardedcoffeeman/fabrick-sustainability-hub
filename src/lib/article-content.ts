@@ -32,15 +32,15 @@ export const articleContent: Record<string, ArticleContent> = {
     sections: [
       {
         heading: "The basics: operational vs embodied carbon",
-        body: "When we talk about a building's carbon footprint, there are two distinct components. Operational carbon is the energy used to heat, cool, light, and power the building throughout its life. Embodied carbon is everything else — the emissions from extracting raw materials, manufacturing products, transporting them to site, constructing the building, maintaining it, and eventually demolishing and disposing of it.\n\nFor decades, the industry focused almost exclusively on operational carbon. Building regulations like Part L targeted energy efficiency with better insulation and airtightness. But as buildings become more energy-efficient and the electricity grid decarbonises, embodied carbon now represents an increasingly dominant share — often 50% or more of total lifecycle emissions for new buildings.",
+        body: "When we talk about a building's carbon footprint, there are two distinct components. Operational carbon is the energy used to heat, cool, light, and power the building throughout its life. Embodied carbon is everything else - the emissions from extracting raw materials, manufacturing products, transporting them to site, constructing the building, maintaining it, and eventually demolishing and disposing of it.\n\nFor decades, the industry focused almost exclusively on operational carbon. Building regulations like Part L targeted energy efficiency with better insulation and airtightness. But as buildings become more energy-efficient and the electricity grid decarbonises, embodied carbon now represents an increasingly dominant share - often 50% or more of total lifecycle emissions for new buildings.",
       },
       {
         heading: "Why it matters now",
-        body: "The urgency is simple: embodied carbon is locked in at the point of construction. Unlike operational carbon, which can be reduced over time by switching to renewable energy, the carbon emitted to produce and install your materials cannot be recovered. Every tonne of concrete poured, every steel beam erected — that carbon is spent.\n\nWith the UK committed to net zero by 2050 and construction responsible for approximately 40 MtCO₂e annually, the industry must act on embodied carbon now. Upcoming regulations like Part Z will make whole-life carbon reporting mandatory for large projects.",
+        body: "The urgency is simple: embodied carbon is locked in at the point of construction. Unlike operational carbon, which can be reduced over time by switching to renewable energy, the carbon emitted to produce and install your materials cannot be recovered. Every tonne of concrete poured, every steel beam erected - that carbon is spent.\n\nWith the UK committed to net zero by 2050 and construction responsible for approximately 40 MtCO₂e annually, the industry must act on embodied carbon now. Upcoming regulations like Part Z will make whole-life carbon reporting mandatory for large projects.",
       },
       {
         heading: "The lifecycle stages (Modules A to D)",
-        body: "The EN 15978 framework breaks a building's lifecycle into modules:\n\nModules A1–A3 (Product Stage): Raw material extraction, transport to factory, manufacturing. This is where most embodied carbon sits — typically 60–80% of total embodied emissions.\n\nModule A4 (Transport): Moving products from factory to construction site.\n\nModule A5 (Construction): On-site energy use, waste, and temporary works.\n\nModules B1–B5 (Use Stage): Maintenance, repair, replacement of materials over the building's life.\n\nModules C1–C4 (End of Life): Demolition, transport, waste processing, disposal.\n\nModule D (Beyond Lifecycle): Credits for recycling potential, energy recovery, and reuse. This is where materials like steel and timber can claim benefits.",
+        body: "The EN 15978 framework breaks a building's lifecycle into modules:\n\nModules A1–A3 (Product Stage): Raw material extraction, transport to factory, manufacturing. This is where most embodied carbon sits - typically 60–80% of total embodied emissions.\n\nModule A4 (Transport): Moving products from factory to construction site.\n\nModule A5 (Construction): On-site energy use, waste, and temporary works.\n\nModules B1–B5 (Use Stage): Maintenance, repair, replacement of materials over the building's life.\n\nModules C1–C4 (End of Life): Demolition, transport, waste processing, disposal.\n\nModule D (Beyond Lifecycle): Credits for recycling potential, energy recovery, and reuse. This is where materials like steel and timber can claim benefits.",
       },
       {
         heading: "How to measure it",
@@ -52,11 +52,11 @@ export const articleContent: Record<string, ArticleContent> = {
       },
     ],
     keyTakeaways: [
-      "Embodied carbon is locked in at construction — it can't be reduced later",
+      "Embodied carbon is locked in at construction - it can't be reduced later",
       "It now represents 50%+ of a new building's total carbon footprint",
       "The EN 15978 framework (Modules A–D) is the standard measurement approach",
       "EPDs and the ICE Database are the primary data sources",
-      "Part Z will make reporting mandatory — start measuring now",
+      "Part Z will make reporting mandatory - start measuring now",
     ],
     relatedArticles: ["what-is-epd", "whole-life-carbon-assessment", "low-carbon-concrete"],
   },
@@ -73,7 +73,7 @@ export const articleContent: Record<string, ArticleContent> = {
     sections: [
       {
         heading: "What is Part Z?",
-        body: "Part Z is a proposed amendment to UK Building Regulations that would require measurement and reporting of whole-life carbon emissions for new buildings above a certain size threshold. Unlike existing regulations that focus on operational energy (Part L), Part Z addresses the embodied carbon of construction materials — the emissions from extraction, manufacturing, transport, and construction.\n\nThe proposal, championed by the Part Z campaign group and supported by organisations including LETI, RIBA, and the UKGBC, has gained significant cross-party parliamentary support.",
+        body: "Part Z is a proposed amendment to UK Building Regulations that would require measurement and reporting of whole-life carbon emissions for new buildings above a certain size threshold. Unlike existing regulations that focus on operational energy (Part L), Part Z addresses the embodied carbon of construction materials - the emissions from extraction, manufacturing, transport, and construction.\n\nThe proposal, championed by the Part Z campaign group and supported by organisations including LETI, RIBA, and the UKGBC, has gained significant cross-party parliamentary support.",
       },
       {
         heading: "What would it require?",
@@ -89,7 +89,7 @@ export const articleContent: Record<string, ArticleContent> = {
       },
       {
         heading: "What it means for architects and engineers",
-        body: "Design teams will need competency in whole-life carbon assessment. The RIBA Plan of Work already includes sustainability checkpoints, but Part Z makes these legally binding for qualifying projects. Architects and structural engineers should be able to demonstrate how design decisions — material selection, structural system, building form — influence embodied carbon. Tools like OneClick LCA and our Carbon Calculator can help quantify these trade-offs early in the design process.",
+        body: "Design teams will need competency in whole-life carbon assessment. The RIBA Plan of Work already includes sustainability checkpoints, but Part Z makes these legally binding for qualifying projects. Architects and structural engineers should be able to demonstrate how design decisions - material selection, structural system, building form - influence embodied carbon. Tools like OneClick LCA and our Carbon Calculator can help quantify these trade-offs early in the design process.",
       },
       {
         heading: "What it means for contractors",
@@ -114,11 +114,11 @@ export const articleContent: Record<string, ArticleContent> = {
     author: "Fabrick Sustainability Team",
     publishDate: "2026-03-24",
     heroSubtitle:
-      "Published 24 March 2026. All new homes must be built with solar panels, heat pumps, and high fabric efficiency — creating at least 75% less carbon emissions than 2013 standards.",
+      "Published 24 March 2026. All new homes must be built with solar panels, heat pumps, and high fabric efficiency - creating at least 75% less carbon emissions than 2013 standards.",
     sections: [
       {
         heading: "What is the Future Homes Standard?",
-        body: "The Future Homes Standard (FHS) is a landmark update to Parts L (conservation of fuel and power), F (ventilation) and the new Part 6 of the Building Regulations for England. The government published the regulations on 24 March 2026, with full compliance required for all new homes from 2028.\n\nNew homes must produce at least 75% less carbon emissions than those built to 2013 standards. The government estimates this will save families up to £830 per year on energy bills. This is the biggest change to building regulations in a generation — ending fossil fuel heating in new homes and mandating on-site renewable energy generation.",
+        body: "The Future Homes Standard (FHS) is a landmark update to Parts L (conservation of fuel and power), F (ventilation) and the new Part 6 of the Building Regulations for England. The government published the regulations on 24 March 2026, with full compliance required for all new homes from 2028.\n\nNew homes must produce at least 75% less carbon emissions than those built to 2013 standards. The government estimates this will save families up to £830 per year on energy bills. This is the biggest change to building regulations in a generation - ending fossil fuel heating in new homes and mandating on-site renewable energy generation.",
       },
       {
         heading: "Key confirmed requirements",
@@ -126,20 +126,20 @@ export const articleContent: Record<string, ArticleContent> = {
       },
       {
         heading: "Timeline and transitional arrangements",
-        body: "The regulations were laid on 24 March 2026, with full compliance required from 2028. During the transition period, plans submitted and approved before the compliance date can be built out under current Part L standards.\n\nHowever, industry leaders strongly argue that building to old standards is a false economy. Over a million homes were built with higher bills after the previous government cancelled the Zero Carbon Homes standard in 2015 — leaving families exposed to the energy price spike after Russia's invasion of Ukraine.\n\nThe Future Homes Hub has launched its 'Future Homes Standard Ready' campaign to help homebuilders, housing associations and developers of all sizes prepare.",
+        body: "The regulations were laid on 24 March 2026, with full compliance required from 2028. During the transition period, plans submitted and approved before the compliance date can be built out under current Part L standards.\n\nHowever, industry leaders strongly argue that building to old standards is a false economy. Over a million homes were built with higher bills after the previous government cancelled the Zero Carbon Homes standard in 2015 - leaving families exposed to the energy price spike after Russia's invasion of Ukraine.\n\nThe Future Homes Hub has launched its 'Future Homes Standard Ready' campaign to help homebuilders, housing associations and developers of all sizes prepare.",
       },
       {
         heading: "Impact on material specification",
-        body: "While the FHS primarily targets operational carbon, the material implications are significant:\n\nInsulation thickness increases, meaning more material per dwelling — making low-carbon insulation choices (cellulose, wood fibre, hemp) even more important.\n\nMVHR (mechanical ventilation with heat recovery) becomes standard, adding embodied carbon from ductwork and equipment but essential for airtight homes.\n\nHeat pump systems require different pipework and potentially underfloor heating for optimal low-temperature performance.\n\nSolar PV panels add embodied carbon but pay back within 2-4 years of operation.\n\nHigher-performance windows (triple glazing) have higher embodied carbon than double glazing, creating a tension between operational and embodied carbon that designers must navigate.",
+        body: "While the FHS primarily targets operational carbon, the material implications are significant:\n\nInsulation thickness increases, meaning more material per dwelling - making low-carbon insulation choices (cellulose, wood fibre, hemp) even more important.\n\nMVHR (mechanical ventilation with heat recovery) becomes standard, adding embodied carbon from ductwork and equipment but essential for airtight homes.\n\nHeat pump systems require different pipework and potentially underfloor heating for optimal low-temperature performance.\n\nSolar PV panels add embodied carbon but pay back within 2-4 years of operation.\n\nHigher-performance windows (triple glazing) have higher embodied carbon than double glazing, creating a tension between operational and embodied carbon that designers must navigate.",
       },
       {
         heading: "Preparing your business",
-        body: "Whether you're a developer, architect, contractor, or manufacturer, the published standard means preparation is now urgent:\n\nUpskill your team: Ensure your workforce understands heat pump installation, MVHR commissioning, solar PV integration, and airtightness testing.\n\nReview your supply chain: Secure relationships with heat pump manufacturers, solar PV suppliers, high-performance window suppliers, and insulation providers. Over a quarter of new homes built in the UK in 2025 already had heat pumps.\n\nLearn the Home Energy Model: HEM replaces SAP as the compliance methodology. Invest time now in understanding how it works and how it differs from SAP.\n\nUpdate your cost models: FHS-compliant homes cost more to build, but the premium is reducing as the supply chain scales up.\n\nCommunicate with buyers: Educate homebuyers about the benefits — up to £830/year savings on energy bills, better comfort, protection from volatile fossil fuel prices.",
+        body: "Whether you're a developer, architect, contractor, or manufacturer, the published standard means preparation is now urgent:\n\nUpskill your team: Ensure your workforce understands heat pump installation, MVHR commissioning, solar PV integration, and airtightness testing.\n\nReview your supply chain: Secure relationships with heat pump manufacturers, solar PV suppliers, high-performance window suppliers, and insulation providers. Over a quarter of new homes built in the UK in 2025 already had heat pumps.\n\nLearn the Home Energy Model: HEM replaces SAP as the compliance methodology. Invest time now in understanding how it works and how it differs from SAP.\n\nUpdate your cost models: FHS-compliant homes cost more to build, but the premium is reducing as the supply chain scales up.\n\nCommunicate with buyers: Educate homebuyers about the benefits - up to £830/year savings on energy bills, better comfort, protection from volatile fossil fuel prices.",
       },
     ],
     keyTakeaways: [
-      "Published 24 March 2026 — full compliance required from 2028",
-      "At least 75% less carbon than 2013 standards — saves families up to £830/year",
+      "Published 24 March 2026 - full compliance required from 2028",
+      "At least 75% less carbon than 2013 standards - saves families up to £830/year",
       "Solar panels mandatory on new homes (with limited exceptions)",
       "Heat pumps or heat networks replace gas boilers as standard",
       "Home Energy Model (HEM) replaces SAP as the compliance methodology",
@@ -160,15 +160,15 @@ export const articleContent: Record<string, ArticleContent> = {
     sections: [
       {
         heading: "EPDs explained",
-        body: "An Environmental Product Declaration (EPD) is a standardised, third-party verified document that transparently communicates the environmental performance of a product over its lifecycle. Think of it as a nutrition label, but for building materials — instead of calories and fat content, it declares carbon emissions, resource depletion, and other environmental impacts.\n\nEPDs follow international standards (EN 15804 for construction products in Europe) and are produced using Life Cycle Assessment (LCA) methodology. They cover the product from cradle to gate (Modules A1–A3) at minimum, with many now extending to cover the full lifecycle.",
+        body: "An Environmental Product Declaration (EPD) is a standardised, third-party verified document that transparently communicates the environmental performance of a product over its lifecycle. Think of it as a nutrition label, but for building materials - instead of calories and fat content, it declares carbon emissions, resource depletion, and other environmental impacts.\n\nEPDs follow international standards (EN 15804 for construction products in Europe) and are produced using Life Cycle Assessment (LCA) methodology. They cover the product from cradle to gate (Modules A1–A3) at minimum, with many now extending to cover the full lifecycle.",
       },
       {
         heading: "Why they matter for construction",
-        body: "As embodied carbon regulation tightens, EPDs become the primary evidence base for carbon claims. Generic database values (like ICE) provide useful defaults, but project-specific EPDs offer much more accurate data — and regulators increasingly prefer them.\n\nSpecifying products with EPDs demonstrates due diligence and enables accurate whole-life carbon assessments. Many green building standards (BREEAM, LEED) now award credits for EPD use.",
+        body: "As embodied carbon regulation tightens, EPDs become the primary evidence base for carbon claims. Generic database values (like ICE) provide useful defaults, but project-specific EPDs offer much more accurate data - and regulators increasingly prefer them.\n\nSpecifying products with EPDs demonstrates due diligence and enables accurate whole-life carbon assessments. Many green building standards (BREEAM, LEED) now award credits for EPD use.",
       },
       {
         heading: "How to read one",
-        body: "The key metric in an EPD for embodied carbon is the Global Warming Potential (GWP), measured in kgCO₂e per declared unit. The declared unit varies — it might be per kg, per m², per m³, or per unit (e.g., per brick).\n\nLook for the A1–A3 figure first (product stage), as this represents the manufacturing emissions and is the most commonly reported and compared. If available, review A4–A5 (transport and construction) and the full lifecycle (B and C modules) for a complete picture.\n\nAlways check the declared unit carefully when comparing EPDs — a lower GWP number might simply reflect a different functional unit rather than genuinely lower carbon.",
+        body: "The key metric in an EPD for embodied carbon is the Global Warming Potential (GWP), measured in kgCO₂e per declared unit. The declared unit varies - it might be per kg, per m², per m³, or per unit (e.g., per brick).\n\nLook for the A1–A3 figure first (product stage), as this represents the manufacturing emissions and is the most commonly reported and compared. If available, review A4–A5 (transport and construction) and the full lifecycle (B and C modules) for a complete picture.\n\nAlways check the declared unit carefully when comparing EPDs - a lower GWP number might simply reflect a different functional unit rather than genuinely lower carbon.",
       },
     ],
     keyTakeaways: [
@@ -193,23 +193,23 @@ export const articleContent: Record<string, ArticleContent> = {
     sections: [
       {
         heading: "What is a WLCA?",
-        body: "A Whole-Life Carbon Assessment (WLCA) quantifies the total greenhouse gas emissions associated with a building across its entire lifecycle — from raw material extraction through construction, operation, maintenance, and end of life. It follows the EN 15978 standard and the RICS Professional Statement on Whole Life Carbon Assessment.\n\nThe WLCA combines embodied carbon (Modules A, B4–B5, C) with operational carbon (Module B6 for energy, B7 for water) to give a complete picture of the building's climate impact.",
+        body: "A Whole-Life Carbon Assessment (WLCA) quantifies the total greenhouse gas emissions associated with a building across its entire lifecycle - from raw material extraction through construction, operation, maintenance, and end of life. It follows the EN 15978 standard and the RICS Professional Statement on Whole Life Carbon Assessment.\n\nThe WLCA combines embodied carbon (Modules A, B4–B5, C) with operational carbon (Module B6 for energy, B7 for water) to give a complete picture of the building's climate impact.",
       },
       {
         heading: "Step 1: Define scope and building model",
-        body: "Start with a clear scope definition. Which lifecycle modules are you assessing? What is the reference study period (typically 60 years for UK buildings)? What is the functional equivalent — the building's size, function, and performance requirements?\n\nYou'll need a building information model or bill of quantities that identifies all significant materials and their quantities. At RIBA Stage 2, this can be based on elemental cost plan data. By Stage 4, it should reflect detailed design quantities.",
+        body: "Start with a clear scope definition. Which lifecycle modules are you assessing? What is the reference study period (typically 60 years for UK buildings)? What is the functional equivalent - the building's size, function, and performance requirements?\n\nYou'll need a building information model or bill of quantities that identifies all significant materials and their quantities. At RIBA Stage 2, this can be based on elemental cost plan data. By Stage 4, it should reflect detailed design quantities.",
       },
       {
         heading: "Step 2: Assign carbon data",
-        body: "For each material, assign embodied carbon data. The hierarchy of data quality is:\n\n1. Product-specific EPDs — most accurate\n2. Industry-average EPDs — good where product hasn't been specified\n3. Generic database values (ICE, KBOB) — acceptable as defaults\n\nFor operational energy, use Part L compliance modelling or dynamic energy simulation results. Apply carbon emission factors from the government's SAP methodology or the grid decarbonisation projections.",
+        body: "For each material, assign embodied carbon data. The hierarchy of data quality is:\n\n1. Product-specific EPDs - most accurate\n2. Industry-average EPDs - good where product hasn't been specified\n3. Generic database values (ICE, KBOB) - acceptable as defaults\n\nFor operational energy, use Part L compliance modelling or dynamic energy simulation results. Apply carbon emission factors from the government's SAP methodology or the grid decarbonisation projections.",
       },
       {
         heading: "Step 3: Calculate and benchmark",
-        body: "Sum the emissions across all modules and lifecycle stages. Express results as kgCO₂e per m² of gross internal area (GIA) to enable benchmarking.\n\nCompare against established benchmarks: LETI targets (500 kgCO₂e/m² for residential upfront carbon), RIBA 2030 Challenge targets, and emerging Part Z limits. Identify which materials and building elements contribute the most — typically structure and substructure dominate, followed by external envelope.",
+        body: "Sum the emissions across all modules and lifecycle stages. Express results as kgCO₂e per m² of gross internal area (GIA) to enable benchmarking.\n\nCompare against established benchmarks: LETI targets (500 kgCO₂e/m² for residential upfront carbon), RIBA 2030 Challenge targets, and emerging Part Z limits. Identify which materials and building elements contribute the most - typically structure and substructure dominate, followed by external envelope.",
       },
       {
         heading: "Step 4: Identify reduction opportunities",
-        body: "Use the assessment results to inform design decisions. Where are the carbon hotspots? Can you substitute high-carbon materials for lower-carbon alternatives without compromising performance? Can you reduce quantities through structural optimisation?\n\nOur Carbon Calculator helps with this step — input your specification, see the total impact, and discover alternatives that could reduce your project's embodied carbon by 20–40%.",
+        body: "Use the assessment results to inform design decisions. Where are the carbon hotspots? Can you substitute high-carbon materials for lower-carbon alternatives without compromising performance? Can you reduce quantities through structural optimisation?\n\nOur Carbon Calculator helps with this step - input your specification, see the total impact, and discover alternatives that could reduce your project's embodied carbon by 20–40%.",
       },
     ],
     keyTakeaways: [
@@ -217,7 +217,7 @@ export const articleContent: Record<string, ArticleContent> = {
       "Follow EN 15978 and RICS Professional Statement methodology",
       "Product-specific EPDs give the most accurate data",
       "Benchmark against LETI (500 kgCO₂e/m²) and RIBA 2030 targets",
-      "Structure and substructure typically dominate embodied carbon — focus there first",
+      "Structure and substructure typically dominate embodied carbon - focus there first",
     ],
     relatedArticles: ["what-is-embodied-carbon", "what-is-epd", "carbon-reduction-case-studies"],
   },
@@ -234,7 +234,7 @@ export const articleContent: Record<string, ArticleContent> = {
     sections: [
       {
         heading: "Why concrete matters",
-        body: "Concrete is the most widely used construction material on Earth. The UK construction industry uses approximately 100 million tonnes of it annually. The carbon problem lies primarily in the cement — specifically Portland cement (CEM I) — which requires heating limestone to 1,450°C. This process releases CO₂ both from the energy used and from the chemical reaction (calcination) itself.\n\nA typical CEM I Portland cement has an embodied carbon of 0.912 kgCO₂e/kg. For a standard RC 32/40 concrete mix, this translates to approximately 0.132 kgCO₂e/kg — which sounds small until you consider the volumes used in construction.",
+        body: "Concrete is the most widely used construction material on Earth. The UK construction industry uses approximately 100 million tonnes of it annually. The carbon problem lies primarily in the cement - specifically Portland cement (CEM I) - which requires heating limestone to 1,450°C. This process releases CO₂ both from the energy used and from the chemical reaction (calcination) itself.\n\nA typical CEM I Portland cement has an embodied carbon of 0.912 kgCO₂e/kg. For a standard RC 32/40 concrete mix, this translates to approximately 0.132 kgCO₂e/kg - which sounds small until you consider the volumes used in construction.",
       },
       {
         heading: "Cement replacements: GGBS and PFA",
@@ -250,9 +250,9 @@ export const articleContent: Record<string, ArticleContent> = {
       },
     ],
     keyTakeaways: [
-      "Cement is the carbon culprit — focus on cement replacement strategies",
+      "Cement is the carbon culprit - focus on cement replacement strategies",
       "50% GGBS replacement gives ~33% carbon reduction with performance benefits",
-      "PFA availability is declining as coal plants close — plan alternatives",
+      "PFA availability is declining as coal plants close - plan alternatives",
       "Design optimisation (voided slabs, post-tensioning) can reduce volume by 20–30%",
       "Emerging tech like LC3 and carbon capture could transform the industry",
     ],
@@ -271,11 +271,11 @@ export const articleContent: Record<string, ArticleContent> = {
     sections: [
       {
         heading: "The carbon case for timber",
-        body: "Timber is fundamentally different from other structural materials because trees absorb CO₂ as they grow. A cubic metre of softwood stores approximately 250 kgCO₂e of biogenic carbon. When that timber is used in construction, this carbon remains sequestered for the life of the building.\n\nCross-Laminated Timber (CLT) has an embodied carbon of approximately 0.437 kgCO₂e/kg (A1–A3), while glulam sits at around 0.512 kgCO₂e/kg. When biogenic carbon sequestration is credited (Module D), both can achieve net-negative embodied carbon at the product stage — a claim no steel or concrete product can make.",
+        body: "Timber is fundamentally different from other structural materials because trees absorb CO₂ as they grow. A cubic metre of softwood stores approximately 250 kgCO₂e of biogenic carbon. When that timber is used in construction, this carbon remains sequestered for the life of the building.\n\nCross-Laminated Timber (CLT) has an embodied carbon of approximately 0.437 kgCO₂e/kg (A1–A3), while glulam sits at around 0.512 kgCO₂e/kg. When biogenic carbon sequestration is credited (Module D), both can achieve net-negative embodied carbon at the product stage - a claim no steel or concrete product can make.",
       },
       {
         heading: "Steel's strengths and carbon challenges",
-        body: "Structural steel has an embodied carbon of approximately 1.55 kgCO₂e/kg for virgin material. However, recycled steel dramatically improves this to around 0.44 kgCO₂e/kg — making steel specification heavily dependent on the recycled content percentage.\n\nSteel offers clear advantages in long spans, high-rise structures, and speed of erection. Hot-rolled steel sections are readily available and the industry has deep expertise. The recyclability of steel is also excellent — virtually 100% of structural steel is recycled at end of life, which provides significant Module D credits.",
+        body: "Structural steel has an embodied carbon of approximately 1.55 kgCO₂e/kg for virgin material. However, recycled steel dramatically improves this to around 0.44 kgCO₂e/kg - making steel specification heavily dependent on the recycled content percentage.\n\nSteel offers clear advantages in long spans, high-rise structures, and speed of erection. Hot-rolled steel sections are readily available and the industry has deep expertise. The recyclability of steel is also excellent - virtually 100% of structural steel is recycled at end of life, which provides significant Module D credits.",
       },
       {
         heading: "Comparing real-world performance",
@@ -283,7 +283,7 @@ export const articleContent: Record<string, ArticleContent> = {
       },
       {
         heading: "Hybrid approaches",
-        body: "Increasingly, the most carbon-efficient approach combines materials where each performs best. A concrete or steel core for stability, CLT floor plates for carbon reduction, and steel connections for robustness creates a system that optimises structural performance and carbon simultaneously.\n\nThis hybrid approach also manages supply chain risk — CLT availability in the UK is growing but still limited compared to steel and concrete. Projects specifying 100% timber structures may face lead time challenges.",
+        body: "Increasingly, the most carbon-efficient approach combines materials where each performs best. A concrete or steel core for stability, CLT floor plates for carbon reduction, and steel connections for robustness creates a system that optimises structural performance and carbon simultaneously.\n\nThis hybrid approach also manages supply chain risk - CLT availability in the UK is growing but still limited compared to steel and concrete. Projects specifying 100% timber structures may face lead time challenges.",
       },
       {
         heading: "Future Homes Standard implications",
@@ -295,7 +295,7 @@ export const articleContent: Record<string, ArticleContent> = {
       "Recycled steel (0.44 kgCO₂e/kg) dramatically outperforms virgin steel (1.55 kgCO₂e/kg)",
       "Hybrid timber-steel-concrete structures often give the best carbon outcome",
       "Fire strategy and insurance are key non-carbon factors for timber above 18m",
-      "Lighter timber structures reduce foundation requirements — consider the whole building",
+      "Lighter timber structures reduce foundation requirements - consider the whole building",
     ],
     relatedArticles: ["what-is-embodied-carbon", "low-carbon-concrete", "carbon-reduction-case-studies"],
   },
@@ -312,7 +312,7 @@ export const articleContent: Record<string, ArticleContent> = {
     sections: [
       {
         heading: "What is the UK CBAM?",
-        body: "The UK Carbon Border Adjustment Mechanism (CBAM) is a policy tool designed to prevent 'carbon leakage' — where companies shift production to countries with weaker climate policies to avoid carbon costs. It does this by applying a carbon price to certain imported goods, ensuring they face similar carbon costs to domestically produced equivalents.\n\nThe UK CBAM was confirmed in the Autumn Budget and will apply from January 2027. It covers steel, aluminium, cement, ceramics, glass, and fertiliser — materials that are energy-intensive to produce and heavily traded internationally.",
+        body: "The UK Carbon Border Adjustment Mechanism (CBAM) is a policy tool designed to prevent 'carbon leakage' - where companies shift production to countries with weaker climate policies to avoid carbon costs. It does this by applying a carbon price to certain imported goods, ensuring they face similar carbon costs to domestically produced equivalents.\n\nThe UK CBAM was confirmed in the Autumn Budget and will apply from January 2027. It covers steel, aluminium, cement, ceramics, glass, and fertiliser - materials that are energy-intensive to produce and heavily traded internationally.",
       },
       {
         heading: "Impact on construction material costs",
@@ -320,7 +320,7 @@ export const articleContent: Record<string, ArticleContent> = {
       },
       {
         heading: "Transitional arrangements",
-        body: "The CBAM will operate in phases:\n\n2027: Reporting requirements begin. Importers must declare the embedded emissions in covered goods but won't yet pay a carbon price.\n\n2027–2028: The carbon price will be phased in, initially at a reduced rate, increasing to the full rate over 2–3 years.\n\nThe transitional period gives importers time to build reporting systems and for supply chains to adapt. However, the reporting requirements themselves will be significant — importers will need verified emissions data from overseas producers.",
+        body: "The CBAM will operate in phases:\n\n2027: Reporting requirements begin. Importers must declare the embedded emissions in covered goods but won't yet pay a carbon price.\n\n2027–2028: The carbon price will be phased in, initially at a reduced rate, increasing to the full rate over 2–3 years.\n\nThe transitional period gives importers time to build reporting systems and for supply chains to adapt. However, the reporting requirements themselves will be significant - importers will need verified emissions data from overseas producers.",
       },
       {
         heading: "What specifiers should do now",
@@ -328,10 +328,10 @@ export const articleContent: Record<string, ArticleContent> = {
       },
     ],
     keyTakeaways: [
-      "UK CBAM starts January 2027 — covering steel, aluminium, cement, and more",
+      "UK CBAM starts January 2027 - covering steel, aluminium, cement, and more",
       "Imported steel could see 5–15% cost increases depending on source country",
       "Low-carbon and recycled materials become more cost-competitive under CBAM",
-      "Reporting requirements begin immediately — get your supply chain data ready",
+      "Reporting requirements begin immediately - get your supply chain data ready",
       "Domestic UK production becomes more competitive as import carbon costs rise",
     ],
     relatedArticles: ["part-z-explained", "what-is-embodied-carbon", "future-homes-standard-2026"],
@@ -349,11 +349,11 @@ export const articleContent: Record<string, ArticleContent> = {
     sections: [
       {
         heading: "Why a standard was needed",
-        body: "Until the launch of the UK Net Zero Carbon Building Standard (UKNZCBS), there was no agreed definition of what 'net zero carbon' meant for buildings in the UK. This created confusion — developers could claim 'net zero' based on operational energy alone, ignoring embodied carbon, or rely on offsetting without meaningful on-site reductions.\n\nThe UKNZCBS, developed by a cross-industry coalition including LETI, RIBA, CIBSE, the UKGBC, and others, provides a clear, science-based framework that covers both operational and embodied carbon, with strict limits on offsetting.",
+        body: "Until the launch of the UK Net Zero Carbon Building Standard (UKNZCBS), there was no agreed definition of what 'net zero carbon' meant for buildings in the UK. This created confusion - developers could claim 'net zero' based on operational energy alone, ignoring embodied carbon, or rely on offsetting without meaningful on-site reductions.\n\nThe UKNZCBS, developed by a cross-industry coalition including LETI, RIBA, CIBSE, the UKGBC, and others, provides a clear, science-based framework that covers both operational and embodied carbon, with strict limits on offsetting.",
       },
       {
         heading: "The two pillars: operational and embodied",
-        body: "The UKNZCBS sets requirements across two pillars:\n\nOperational carbon: Buildings must demonstrate ultra-low energy demand through excellent fabric performance and efficient systems. Energy use must be met as far as possible by on-site or local renewable generation. Any remaining operational emissions must be offset through approved mechanisms.\n\nEmbodied carbon: Buildings must report and limit their upfront embodied carbon (Modules A1–A5) against benchmarks. The standard sets different limits for different building types, broadly aligned with LETI targets. Residual embodied carbon cannot currently be offset — the emphasis is on reduction.",
+        body: "The UKNZCBS sets requirements across two pillars:\n\nOperational carbon: Buildings must demonstrate ultra-low energy demand through excellent fabric performance and efficient systems. Energy use must be met as far as possible by on-site or local renewable generation. Any remaining operational emissions must be offset through approved mechanisms.\n\nEmbodied carbon: Buildings must report and limit their upfront embodied carbon (Modules A1–A5) against benchmarks. The standard sets different limits for different building types, broadly aligned with LETI targets. Residual embodied carbon cannot currently be offset - the emphasis is on reduction.",
       },
       {
         heading: "Embodied carbon limits",
@@ -365,7 +365,7 @@ export const articleContent: Record<string, ArticleContent> = {
       },
       {
         heading: "Getting started",
-        body: "To work towards UKNZCBS compliance:\n\nEstablish a carbon budget at project inception — use the target limits as a design driver, not just a compliance check.\n\nTrack carbon through design stages — our Carbon Calculator can help you understand material-level impacts and identify reduction opportunities.\n\nSpecify materials with EPDs — product-specific data is preferred over generic database values.\n\nDesign for disassembly — the standard values circular economy principles and end-of-life material recovery.",
+        body: "To work towards UKNZCBS compliance:\n\nEstablish a carbon budget at project inception - use the target limits as a design driver, not just a compliance check.\n\nTrack carbon through design stages - our Carbon Calculator can help you understand material-level impacts and identify reduction opportunities.\n\nSpecify materials with EPDs - product-specific data is preferred over generic database values.\n\nDesign for disassembly - the standard values circular economy principles and end-of-life material recovery.",
       },
     ],
     keyTakeaways: [
@@ -394,19 +394,19 @@ export const articleContent: Record<string, ArticleContent> = {
       },
       {
         heading: "Residential: low-rise timber frame housing",
-        body: "A 45-unit affordable housing scheme in the Midlands achieved a 42% reduction in embodied carbon compared to the RIBA 2030 baseline. The key strategies were: closed-panel timber frame construction replacing traditional masonry, cellulose insulation from recycled newspaper replacing mineral wool, GGBS concrete in foundations (50% cement replacement), and locally sourced materials reducing transport emissions.\n\nThe upfront cost premium was 3.2%, offset by faster construction time and reduced preliminaries. The project achieved 385 kgCO₂e/m² GIA — well inside the LETI residential target of 500.",
+        body: "A 45-unit affordable housing scheme in the Midlands achieved a 42% reduction in embodied carbon compared to the RIBA 2030 baseline. The key strategies were: closed-panel timber frame construction replacing traditional masonry, cellulose insulation from recycled newspaper replacing mineral wool, GGBS concrete in foundations (50% cement replacement), and locally sourced materials reducing transport emissions.\n\nThe upfront cost premium was 3.2%, offset by faster construction time and reduced preliminaries. The project achieved 385 kgCO₂e/m² GIA - well inside the LETI residential target of 500.",
       },
       {
         heading: "Commercial: office retrofit vs new build",
-        body: "A developer in Manchester compared the carbon impact of demolishing a 1960s office building and constructing new versus a deep retrofit. The assessment showed the retrofit option saved 65% of the embodied carbon that a new build would have required — approximately 480 kgCO₂e/m² of avoided emissions.\n\nThe retrofit stripped the building back to its concrete frame, upgraded the facade to meet current Part L standards, and installed new building services. While the operational energy performance doesn't quite match a new build, the whole-life carbon assessment showed the retrofit was decisively better.",
+        body: "A developer in Manchester compared the carbon impact of demolishing a 1960s office building and constructing new versus a deep retrofit. The assessment showed the retrofit option saved 65% of the embodied carbon that a new build would have required - approximately 480 kgCO₂e/m² of avoided emissions.\n\nThe retrofit stripped the building back to its concrete frame, upgraded the facade to meet current Part L standards, and installed new building services. While the operational energy performance doesn't quite match a new build, the whole-life carbon assessment showed the retrofit was decisively better.",
       },
       {
         heading: "Education: a net-zero-carbon school",
-        body: "A new secondary school in East London targeted UKNZCBS compliance from inception. The structural engineer used parametric design tools to optimise the concrete frame, reducing structural material quantities by 18%. All concrete specified 50% GGBS replacement, and the roof structure used glulam beams instead of steel.\n\nThe school achieved 510 kgCO₂e/m² GIA — close to the UKNZCBS school target of 550. The design team reported that early-stage carbon analysis at RIBA Stage 2 was critical, as 80% of the carbon reduction opportunities would have been locked out by Stage 3.",
+        body: "A new secondary school in East London targeted UKNZCBS compliance from inception. The structural engineer used parametric design tools to optimise the concrete frame, reducing structural material quantities by 18%. All concrete specified 50% GGBS replacement, and the roof structure used glulam beams instead of steel.\n\nThe school achieved 510 kgCO₂e/m² GIA - close to the UKNZCBS school target of 550. The design team reported that early-stage carbon analysis at RIBA Stage 2 was critical, as 80% of the carbon reduction opportunities would have been locked out by Stage 3.",
       },
       {
         heading: "Mixed-use: hybrid structure in a city centre",
-        body: "A 12-storey mixed-use development in Bristol used a hybrid structure: reinforced concrete core and transfer structures, CLT floor plates from RIBA Stage 4 upwards, and steel connections. This approach reduced the structural carbon by 35% compared to a full RC frame option.\n\nThe CLT floor plates also enabled a lighter overall structure, reducing foundation loads and allowing smaller piles — an additional 12% carbon saving in the substructure. The project achieved 620 kgCO₂e/m² GIA for the commercial floors, meeting the RIBA 2030 office target.",
+        body: "A 12-storey mixed-use development in Bristol used a hybrid structure: reinforced concrete core and transfer structures, CLT floor plates from RIBA Stage 4 upwards, and steel connections. This approach reduced the structural carbon by 35% compared to a full RC frame option.\n\nThe CLT floor plates also enabled a lighter overall structure, reducing foundation loads and allowing smaller piles - an additional 12% carbon saving in the substructure. The project achieved 620 kgCO₂e/m² GIA for the commercial floors, meeting the RIBA 2030 office target.",
       },
       {
         heading: "Infrastructure: low-carbon concrete in foundations",
@@ -415,7 +415,7 @@ export const articleContent: Record<string, ArticleContent> = {
     ],
     keyTakeaways: [
       "30–60% carbon reductions are achievable across all building types",
-      "Early-stage carbon analysis (RIBA Stage 2) is critical — most opportunities are locked out by Stage 3",
+      "Early-stage carbon analysis (RIBA Stage 2) is critical - most opportunities are locked out by Stage 3",
       "Retrofit consistently outperforms new build on whole-life carbon",
       "Hybrid structures optimise carbon by using each material where it performs best",
       "Cost premiums of 2–5% are typical, often offset by programme and operational savings",

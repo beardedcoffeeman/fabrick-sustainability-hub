@@ -30,7 +30,6 @@ const articles: Article[] = [
       "Part Z is an industry-backed proposal to regulate whole-life carbon in buildings. With growing Parliamentary support, it could require large projects to report whole-life carbon. We break down what this means for developers, architects, and contractors.",
     category: "Regulations",
     readTime: "10 min read",
-    featured: true,
   },
   {
     id: "future-homes-standard-2026",
@@ -39,7 +38,6 @@ const articles: Article[] = [
       "Taking full legal effect in December 2026, the Future Homes Standard requires 75-80% less carbon in new homes. Here's how to prepare.",
     category: "Regulations",
     readTime: "12 min read",
-    featured: true,
   },
   {
     id: "what-is-epd",

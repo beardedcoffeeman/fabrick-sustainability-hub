@@ -3,14 +3,14 @@
 import { ArrowUpRight, Megaphone, Code2, Sparkles, Users, Palette, BarChart3, PenTool, Globe } from "lucide-react";
 
 /* ────────────────────────────────────────────────────
-   Marketing CTA — "We can do your marketing"
+   Marketing CTA - "We can do your marketing"
    ──────────────────────────────────────────────────── */
 export function FabrickMarketingCTA() {
   return (
     <section className="bg-navy py-16 text-white">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="grid gap-10 lg:grid-cols-2 lg:items-center">
-          {/* Left — message */}
+          {/* Left - message */}
           <div>
             <span className="inline-flex items-center gap-1.5 rounded-full bg-pink/20 px-3 py-1 text-xs font-semibold text-pink mb-4">
               <Megaphone className="h-3.5 w-3.5" />
@@ -21,7 +21,7 @@ export function FabrickMarketingCTA() {
             </h2>
             <p className="mt-4 text-gray-400 leading-relaxed max-w-lg">
               We&apos;ve been shaping stories and strategies for the built
-              environment for over 40 years — and we&apos;ve picked up a few
+              environment for over 40 years - and we&apos;ve picked up a few
               awards along the way. Our 25+ in-house team of marketing and
               communications professionals is highly skilled in delivering
               impactful online and offline content and PR campaigns for clients
@@ -56,7 +56,7 @@ export function FabrickMarketingCTA() {
             </a>
           </div>
 
-          {/* Right — visual proof */}
+          {/* Right - visual proof */}
           <div className="rounded-2xl bg-charcoal p-8 border border-gray-700/50">
             <p className="text-xs font-semibold uppercase tracking-wider text-teal mb-4">
               Why built environment brands choose Fabrick
@@ -100,7 +100,7 @@ export function FabrickMarketingCTA() {
 }
 
 /* ────────────────────────────────────────────────────
-   Platform CTA — "We can build this for you"
+   Platform CTA - "We can build this for you"
    ──────────────────────────────────────────────────── */
 export function FabrickPlatformCTA() {
   return (
@@ -163,7 +163,7 @@ export function FabrickPlatformCTA() {
         </div>
 
         <p className="mt-6 text-xs text-gray-500">
-          Fabrick — Award-winning marketing specialists for the built environment
+          Fabrick - Award-winning marketing specialists for the built environment
         </p>
       </div>
     </section>

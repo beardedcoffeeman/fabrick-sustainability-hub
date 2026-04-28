@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import {
   TrendingUp,
   TrendingDown,
@@ -9,6 +9,7 @@ import {
   Info,
   ExternalLink,
   Package,
+  ArrowUpDown,
 } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import {
@@ -89,22 +90,25 @@ function getSparklineColor(trend: string): string {
   }
 }
 
-function getCategoryEmoji(category: string): string {
+function getCategoryLabel(category: string): string {
+  // Short pill label per category. Kept lowercase to match the existing visual.
   switch (category) {
     case "Metals":
-      return "metal";
+      return "metals";
     case "Timber":
       return "timber";
-    case "Concrete":
-      return "concrete";
+    case "Cement & Concrete":
+      return "cement";
     case "Aggregates":
-      return "aggregate";
+      return "aggregates";
     case "Masonry":
       return "masonry";
-    case "Insulation":
-      return "insulation";
+    case "Plastics":
+      return "plastics";
+    case "Other":
+      return "other";
     default:
-      return "material";
+      return category.toLowerCase();
   }
 }
 
@@ -189,7 +193,7 @@ function MaterialRow({
                   {material.name}
                 </span>
                 <span className="text-[10px] text-warm-gray/70 bg-cream rounded-full px-2 py-0.5 shrink-0">
-                  {getCategoryEmoji(material.category)}
+                  {getCategoryLabel(material.category)}
                 </span>
               </div>
               <p className="text-[10px] text-warm-gray mt-0.5">
@@ -349,10 +353,14 @@ function SummaryCards({ materials }: { materials: MaterialPriceEntry[] }) {
 // Main Widget
 // ──────────────────────────────────────────────────
 
+type SortKey = "category" | "name" | "mom" | "yoy";
+
 export function MaterialPricesWidget() {
   const [data, setData] = useState<MaterialPricesData | null>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
+  const [activeCategory, setActiveCategory] = useState<string>("All");
+  const [sortKey, setSortKey] = useState<SortKey>("category");
 
   const fetchData = async () => {
     setLoading(true);
@@ -375,6 +383,37 @@ export function MaterialPricesWidget() {
     const interval = setInterval(fetchData, 6 * 60 * 60 * 1000);
     return () => clearInterval(interval);
   }, []);
+
+  // Hooks must run on every render in the same order — keep them above
+  // any conditional returns.
+  const categories = useMemo(() => {
+    if (!data) return [] as string[];
+    return Array.from(new Set(data.materials.map((m) => m.category)));
+  }, [data]);
+
+  const visibleMaterials = useMemo(() => {
+    if (!data) return [] as MaterialPriceEntry[];
+    const filtered =
+      activeCategory === "All"
+        ? data.materials
+        : data.materials.filter((m) => m.category === activeCategory);
+    const sorted = [...filtered];
+    sorted.sort((a, b) => {
+      switch (sortKey) {
+        case "name":
+          return a.name.localeCompare(b.name);
+        case "mom":
+          return b.momChange - a.momChange;
+        case "yoy":
+          return b.yoyChange - a.yoyChange;
+        case "category":
+        default:
+          if (a.category === b.category) return a.name.localeCompare(b.name);
+          return a.category.localeCompare(b.category);
+      }
+    });
+    return sorted;
+  }, [data, activeCategory, sortKey]);
 
   // Loading skeleton
   if (loading && !data) {
@@ -468,11 +507,59 @@ export function MaterialPricesWidget() {
       {/* Summary Cards */}
       <SummaryCards materials={materials} />
 
+      {/* Filter + sort controls */}
+      <div className="rounded-xl bg-white p-3 shadow-sm flex flex-wrap items-center gap-3 justify-between">
+        <div className="flex flex-wrap gap-1.5">
+          {(["All", ...categories] as string[]).map((cat) => {
+            const active = activeCategory === cat;
+            const count =
+              cat === "All"
+                ? materials.length
+                : materials.filter((m) => m.category === cat).length;
+            return (
+              <button
+                key={cat}
+                onClick={() => setActiveCategory(cat)}
+                className={`rounded-full px-3 py-1 text-[11px] font-medium transition-colors ${
+                  active
+                    ? "bg-charcoal text-white"
+                    : "bg-cream text-warm-gray hover:bg-cream-dark"
+                }`}
+              >
+                {cat}
+                <span className="ml-1.5 text-[10px] opacity-70">{count}</span>
+              </button>
+            );
+          })}
+        </div>
+
+        <label className="flex items-center gap-2 text-[11px] text-warm-gray">
+          <ArrowUpDown className="h-3 w-3" />
+          <span>Sort by</span>
+          <select
+            value={sortKey}
+            onChange={(e) => setSortKey(e.target.value as SortKey)}
+            className="rounded-md border border-cream-dark bg-white px-2 py-1 text-[11px] text-navy focus:outline-none focus:ring-1 focus:ring-teal/30"
+          >
+            <option value="category">Category</option>
+            <option value="name">Name</option>
+            <option value="mom">Month-on-month</option>
+            <option value="yoy">Year-on-year</option>
+          </select>
+        </label>
+      </div>
+
       {/* Material List */}
       <div className="space-y-2">
-        {materials.map((material, index) => (
-          <MaterialRow key={material.id} material={material} index={index} />
-        ))}
+        {visibleMaterials.length === 0 ? (
+          <div className="rounded-xl bg-white p-6 text-center text-sm text-warm-gray">
+            No materials match this filter.
+          </div>
+        ) : (
+          visibleMaterials.map((material, index) => (
+            <MaterialRow key={material.id} material={material} index={index} />
+          ))
+        )}
       </div>
 
       {/* Legend */}

@@ -1,5 +1,6 @@
 import { FabrickPlatformCTA } from "@/components/layout/FabrickCTA";
 import { Breadcrumb } from "@/components/layout/Breadcrumb";
+import { RoleFilter } from "@/components/dashboard/RoleFilter";
 import {
   Zap,
   Package,
@@ -153,6 +154,13 @@ export default function DashboardPage() {
               </Link>
             );
           })}
+        </div>
+      </section>
+
+      {/* Filter by role - curated dashboard picks */}
+      <section className="mx-auto max-w-7xl px-4 pt-6 pb-16 sm:px-6 lg:px-8">
+        <div className="rounded-3xl bg-cream-dark p-8 md:p-12">
+          <RoleFilter />
         </div>
       </section>
 

@@ -12,7 +12,7 @@ const painPoints = [
   {
     icon: Briefcase,
     audience: "Business Leaders",
-    point: "Understand sustainability without the jargon — make confident strategic decisions",
+    point: "Understand sustainability without the jargon - make confident strategic decisions",
   },
   {
     icon: HardHat,

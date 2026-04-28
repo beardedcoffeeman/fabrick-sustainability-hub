@@ -1,29 +1,28 @@
 import { Metadata } from "next";
-import { PlanningActivityWidget } from "@/components/dashboard/PlanningActivityWidget";
+import { PlanningActivitySection } from "@/components/dashboard/PlanningActivitySection";
 import { FabrickPlatformCTA } from "@/components/layout/FabrickCTA";
 import { Breadcrumb } from "@/components/layout/Breadcrumb";
 import { Zap, Package, Building2, Home, ArrowRight } from "lucide-react";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "UK Planning Applications - Live Decision Tracker | Fabrick",
+  title: "What commercial work is getting built across the UK? | Fabrick",
   description:
-    "Recent planning application decisions from local authorities across England. Track approvals, refusals, and the development pipeline with live data from Planning Data England.",
+    "Live tracker for UK commercial planning applications. See which commercial schemes are being approved, refused or are still in the pipeline - switch tabs for residential, mixed-use or all classified work.",
   keywords: [
-    "UK planning applications",
+    "UK commercial planning applications",
+    "commercial development UK",
     "planning decisions England",
     "planning application tracker",
-    "planning approval rate",
-    "local authority planning",
-    "planning data England",
+    "commercial approval rate",
     "development pipeline UK",
     "planning permission tracker",
     "construction planning applications",
   ],
   openGraph: {
-    title: "UK Planning Applications - Live Decision Tracker | Fabrick",
+    title: "What commercial work is getting built across the UK? | Fabrick",
     description:
-      "Recent planning application decisions from local authorities across England.",
+      "Live tracker for UK commercial planning applications, with tabs for residential, mixed-use and all classified work.",
     url: "https://sustainability.fabrick.agency/dashboard/planning",
   },
 };
@@ -79,19 +78,20 @@ export default function PlanningPage() {
             </span>
           </div>
           <h1 className="font-[family-name:var(--font-playfair)] text-4xl font-bold md:text-5xl lg:text-6xl">
-            Planning Activity
+            What commercial work is getting built across the UK?
           </h1>
           <p className="mt-3 max-w-3xl text-lg text-gray-400">
-            Recent planning application decisions from local authorities across
-            England via planning.data.gov.uk. Track approvals, refusals, and the
-            development pipeline.
+            Live planning decisions from English local authorities, filtered to
+            commercial schemes by default using the MHCLG development
+            classification. Use the tabs to switch to residential, mixed-use or
+            every classified application.
           </p>
         </div>
       </section>
 
       {/* Main Content */}
       <section className="mx-auto max-w-7xl px-4 py-10 sm:px-6 lg:px-8">
-        <PlanningActivityWidget />
+        <PlanningActivitySection />
       </section>
 
       {/* Explore More Data */}

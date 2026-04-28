@@ -1,6 +1,6 @@
 import { RegulationTimeline } from "@/components/regulatory/RegulationTimeline";
 import { FabrickMarketingCTA, FabrickPlatformCTA } from "@/components/layout/FabrickCTA";
-import { Building2, HardHat, Warehouse, Landmark } from "lucide-react";
+import { Building2, HardHat, Warehouse, Landmark, Sparkles, AlertTriangle, Clock, FileText } from "lucide-react";
 
 export const metadata = {
   title: "UK Construction Sustainability Regulations | Fabrick Built Environment Data",
@@ -27,7 +27,7 @@ const painPoints = [
   {
     icon: Landmark,
     audience: "Policy & Compliance",
-    point: "Track every regulation in one place — no more scattered government consultations",
+    point: "Track every regulation in one place - no more scattered government consultations",
   },
 ];
 
@@ -64,6 +64,95 @@ export default function RegulationsPage() {
               </div>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* Fabrick Analysis - what to prioritise this quarter */}
+      <section className="mx-auto max-w-4xl px-4 pt-10 sm:px-6 lg:px-8">
+        <div className="rounded-2xl bg-charcoal p-6 md:p-8 text-white">
+          <div className="flex items-center gap-2 mb-3">
+            <Sparkles className="h-4 w-4 text-pink" />
+            <span className="text-[10px] font-semibold uppercase tracking-[0.18em] text-pink">
+              Fabrick Analysis
+            </span>
+          </div>
+          <h2 className="font-[family-name:var(--font-playfair)] text-xl md:text-2xl font-bold leading-tight">
+            What to prioritise this quarter
+          </h2>
+          <p className="mt-3 text-sm text-gray-300 max-w-3xl leading-relaxed">
+            Forty-plus regulatory items in flight; only a handful actually move
+            project decisions in the next 90 days. Here are the three to pay
+            attention to now, with the action each role should take.
+          </p>
+
+          <div className="mt-6 grid gap-4 md:grid-cols-3">
+            <div className="rounded-xl bg-navy-light/60 border border-white/5 p-4">
+              <div className="flex items-center gap-2 mb-2">
+                <AlertTriangle className="h-4 w-4 text-pink" />
+                <span className="text-[10px] font-semibold uppercase tracking-wider text-pink">
+                  Now
+                </span>
+              </div>
+              <h3 className="font-bold text-white text-sm">
+                Future Homes Standard final guidance
+              </h3>
+              <p className="mt-1.5 text-xs text-gray-400 leading-relaxed">
+                Approved Documents L &amp; F (2026) confirmed. Solar PV, low-carbon
+                heating and tighter U-values mandatory for new homes from Dec 2026.
+              </p>
+              <p className="mt-2 text-[11px] text-teal font-semibold">
+                Action: lock in heat pump + PV supply chain. Build HEM modelling
+                capacity now.
+              </p>
+            </div>
+
+            <div className="rounded-xl bg-navy-light/60 border border-white/5 p-4">
+              <div className="flex items-center gap-2 mb-2">
+                <Clock className="h-4 w-4 text-amber-400" />
+                <span className="text-[10px] font-semibold uppercase tracking-wider text-amber-400">
+                  Within 90 days
+                </span>
+              </div>
+              <h3 className="font-bold text-white text-sm">
+                UK CBAM scoping window
+              </h3>
+              <p className="mt-1.5 text-xs text-gray-400 leading-relaxed">
+                Carbon Border Adjustment hits steel, aluminium and cement
+                imports from Jan 2027. Reporting starts before that - pricing
+                ahead of supply.
+              </p>
+              <p className="mt-2 text-[11px] text-teal font-semibold">
+                Action: audit imported material exposure. Lock in UK-route
+                supply where possible.
+              </p>
+            </div>
+
+            <div className="rounded-xl bg-navy-light/60 border border-white/5 p-4">
+              <div className="flex items-center gap-2 mb-2">
+                <FileText className="h-4 w-4 text-teal" />
+                <span className="text-[10px] font-semibold uppercase tracking-wider text-teal">
+                  Watch
+                </span>
+              </div>
+              <h3 className="font-bold text-white text-sm">
+                Part Z whole-life carbon
+              </h3>
+              <p className="mt-1.5 text-xs text-gray-400 leading-relaxed">
+                Industry-backed proposal gaining Parliamentary support. Once
+                mandated, large projects will need whole-life carbon
+                assessments and reporting.
+              </p>
+              <p className="mt-2 text-[11px] text-teal font-semibold">
+                Action: start practising on current projects. Build the
+                methodology before it&rsquo;s required.
+              </p>
+            </div>
+          </div>
+
+          <p className="mt-5 text-[11px] text-gray-500">
+            Fabrick analysis based on UK government consultations, industry
+            briefings and regulatory pipelines. Updated monthly.
+          </p>
         </div>
       </section>
 

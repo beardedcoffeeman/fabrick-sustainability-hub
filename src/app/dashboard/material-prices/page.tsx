@@ -1,14 +1,15 @@
 import { Metadata } from "next";
 import { MaterialPricesWidget } from "@/components/dashboard/MaterialPricesWidget";
+import { MaterialPricesAnalysis } from "@/components/dashboard/MaterialPricesAnalysis";
 import { FabrickPlatformCTA } from "@/components/layout/FabrickCTA";
 import { Breadcrumb } from "@/components/layout/Breadcrumb";
 import { Zap, Building2, Landmark, Home, ArrowRight } from "lucide-react";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Construction Material Prices UK - Live Index Data | Fabrick",
+  title: "Construction Material Prices UK - Latest DBT Index | Fabrick",
   description:
-    "Monthly price indices for steel, timber, concrete, aggregates, bricks and more from DBT/ONS. Track UK construction material cost movements and year-on-year changes.",
+    "Latest published price indices for steel, timber, concrete, aggregates, bricks and more from the Department for Business and Trade monthly release.",
   keywords: [
     "construction material prices UK",
     "steel price index UK",
@@ -22,9 +23,9 @@ export const metadata: Metadata = {
     "brick prices UK",
   ],
   openGraph: {
-    title: "Construction Material Prices UK - Live Index Data | Fabrick",
+    title: "Construction Material Prices UK - Latest DBT Index | Fabrick",
     description:
-      "Monthly price indices for steel, timber, concrete, aggregates, bricks and more from DBT/ONS.",
+      "Latest published price indices for key UK construction materials from the DBT monthly release.",
     url: "https://sustainability.fabrick.agency/dashboard/material-prices",
   },
 };
@@ -74,25 +75,46 @@ export default function MaterialPricesPage() {
             ]}
           />
           <div className="flex items-center gap-2 mb-3">
-            <div className="h-2.5 w-2.5 rounded-full bg-emerald-400 pulse-live" />
             <span className="text-xs font-semibold uppercase tracking-wider text-gray-400">
-              Monthly Data
+              Latest Published - DBT Monthly Release
             </span>
           </div>
           <h1 className="font-[family-name:var(--font-playfair)] text-4xl font-bold md:text-5xl lg:text-6xl">
             Construction Material Prices
           </h1>
           <p className="mt-3 max-w-3xl text-lg text-gray-400">
-            Monthly price indices for key construction materials from the
-            Department for Business and Trade. Track cost movements across steel,
-            timber, concrete, aggregates, and more.
+            28 indices covering metals, cement and concrete, aggregates, timber,
+            plastics and finishes. Sourced from the Department for Business and
+            Trade&rsquo;s monthly Building Materials and Components Statistics
+            release. Updated when DBT publishes the next bulletin.
           </p>
         </div>
       </section>
 
-      {/* Main Content */}
+      {/* Analysis layer - biggest movers, cost-vs-carbon, substitution wins */}
       <section className="mx-auto max-w-7xl px-4 py-10 sm:px-6 lg:px-8">
-        <MaterialPricesWidget />
+        <MaterialPricesAnalysis />
+      </section>
+
+      {/* Full index - supporting data, not the headline */}
+      <section className="mx-auto max-w-7xl px-4 pb-10 sm:px-6 lg:px-8">
+        <div className="rounded-2xl bg-white p-1 border border-charcoal/[0.06]">
+          <div className="px-5 pt-5 pb-2">
+            <p className="text-[10px] font-semibold uppercase tracking-[0.14em] text-warm-gray">
+              Full Index
+            </p>
+            <h2 className="font-[family-name:var(--font-playfair)] text-xl md:text-2xl font-bold text-navy mt-1">
+              All material indices
+            </h2>
+            <p className="text-xs text-warm-gray mt-1">
+              Every material in the basket, with month-on-month and year-on-year
+              changes. Source: DBT Building Materials and Components Statistics.
+            </p>
+          </div>
+          <div className="p-4">
+            <MaterialPricesWidget />
+          </div>
+        </div>
       </section>
 
       {/* Explore More Data */}
@@ -118,7 +140,7 @@ export default function MaterialPricesPage() {
                   </h3>
                   <p className="text-xs text-warm-gray mt-1">{section.description}</p>
                   <span className="inline-flex items-center gap-1 text-xs text-teal font-medium mt-3">
-                    View live data <ArrowRight className="h-3 w-3" />
+                    Open dashboard <ArrowRight className="h-3 w-3" />
                   </span>
                 </Link>
               );

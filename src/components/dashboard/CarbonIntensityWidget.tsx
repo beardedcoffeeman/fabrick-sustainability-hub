@@ -119,7 +119,7 @@ export function CarbonIntensityWidget() {
           <div>
             <div className="flex items-baseline gap-2">
               <span className="text-5xl font-bold tabular-nums" style={{ color: getIntensityColor(intensity?.index || "") }}>
-                {intensity?.actual || intensity?.forecast || "—"}
+                {intensity?.actual || intensity?.forecast || "-"}
               </span>
               <span className="text-lg text-gray-400">gCO2/kWh</span>
             </div>
@@ -324,7 +324,7 @@ export function CarbonIntensityWidget() {
                 National Grid ESO Carbon Intensity API
                 <ExternalLink className="h-2.5 w-2.5" />
               </a>
-              {" "}— developed by National Grid ESO, the Environmental Defense Fund Europe, University of Oxford Department of Computer Science, and WWF.
+              {" "}- developed by National Grid ESO, the Environmental Defense Fund Europe, University of Oxford Department of Computer Science, and WWF.
             </p>
             <p className="text-[10px] text-warm-gray/60 mt-1">
               Live data refreshes every 30 minutes at source. Dashboard polls every 5 minutes. All figures are for Great Britain (England, Scotland, Wales).

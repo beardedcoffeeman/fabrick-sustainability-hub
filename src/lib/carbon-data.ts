@@ -1,11 +1,11 @@
 // ──────────────────────────────────────────────────
-// EMBODIED CARBON DATA — ICE DATABASE v4.1
+// EMBODIED CARBON DATA - ICE DATABASE v4.1
 // ──────────────────────────────────────────────────
 // Primary source: ICE Database (Inventory of Carbon & Energy) v4.1
-//   — Circular Ecology (formerly University of Bath)
-//   — https://circularecology.com/embodied-carbon-footprint-database.html
-//   — Version: v4.1 (October 2025)
-//   — Key v4.1 changes from v3.0:
+//   - Circular Ecology (formerly University of Bath)
+//   - https://circularecology.com/embodied-carbon-footprint-database.html
+//   - Version: v4.1 (October 2025)
+//   - Key v4.1 changes from v3.0:
 //     • GGBS/BFS now uses economic allocation per EN 15804+A2 (higher values)
 //     • Bitumen/asphalt updated with latest Eurobitume LCA data
 //     • New materials added: geopolymer concrete, bio-based products, MEP
@@ -13,12 +13,12 @@
 //     • Timber biogenic carbon reporting aligned with EN 15804+A2
 //
 // Supplementary sources:
-//   — RICS Professional Statement: Whole Life Carbon Assessment (2nd ed. 2023)
-//   — IStructE: How to Calculate Embodied Carbon (2nd ed. 2022)
-//   — BSRIA BG 76/2014: Embodied Carbon — The Inventory of Carbon and Energy
-//   — Manufacturer-published EPDs (Environmental Product Declarations) via EPD Hub
-//   — LETI Climate Emergency Design Guide (2020)
-//   — RIBA 2030 Climate Challenge
+//   - RICS Professional Statement: Whole Life Carbon Assessment (2nd ed. 2023)
+//   - IStructE: How to Calculate Embodied Carbon (2nd ed. 2022)
+//   - BSRIA BG 76/2014: Embodied Carbon - The Inventory of Carbon and Energy
+//   - Manufacturer-published EPDs (Environmental Product Declarations) via EPD Hub
+//   - LETI Climate Emergency Design Guide (2020)
+//   - RIBA 2030 Climate Challenge
 //
 // IMPORTANT: These values are representative industry averages for the UK
 // market. They are suitable for early-stage carbon estimation and awareness.
@@ -113,7 +113,7 @@ export const iceDatabase: MaterialData[] = [
     embodiedCarbon: 0.097,
     unit: "kgCO2e/kg",
     density: 2400,
-    notes: "GGBS cement replacement. ICE v4.1 applies economic allocation per EN 15804+A2 — value higher than v3.0 (0.089) but still ~27% less than general concrete.",
+    notes: "GGBS cement replacement. ICE v4.1 applies economic allocation per EN 15804+A2 - value higher than v3.0 (0.089) but still ~27% less than general concrete.",
     fhsRecommended: true,
     typicalApplications: "Foundations, slabs, marine structures",
   },
@@ -124,7 +124,7 @@ export const iceDatabase: MaterialData[] = [
     embodiedCarbon: 0.103,
     unit: "kgCO2e/kg",
     density: 2400,
-    notes: "Pulverised fuel ash replacement — 22% less carbon",
+    notes: "Pulverised fuel ash replacement - 22% less carbon",
     fhsRecommended: true,
     typicalApplications: "General structural, foundations, floor slabs",
   },
@@ -135,7 +135,7 @@ export const iceDatabase: MaterialData[] = [
     embodiedCarbon: 0.912,
     unit: "kgCO2e/kg",
     density: 1500,
-    notes: "Ordinary Portland Cement — most carbon-intensive binder",
+    notes: "Ordinary Portland Cement - most carbon-intensive binder",
     alternatives: ["concrete-ggbs", "concrete-pfa", "concrete-lc3"],
     typicalApplications: "Binder in concrete, mortar, render",
   },
@@ -157,7 +157,7 @@ export const iceDatabase: MaterialData[] = [
     embodiedCarbon: 0.079,
     unit: "kgCO2e/kg",
     density: 2380,
-    notes: "Limestone Calcined Clay Cement — up to 40% less carbon than CEM I mixes",
+    notes: "Limestone Calcined Clay Cement - up to 40% less carbon than CEM I mixes",
     fhsRecommended: true,
     typicalApplications: "General structural, foundations, slabs",
   },
@@ -179,7 +179,7 @@ export const iceDatabase: MaterialData[] = [
     embodiedCarbon: 0.108,
     unit: "kgCO2e/kg",
     density: 1850,
-    notes: "Uses expanded clay/shale aggregates — lighter and lower carbon",
+    notes: "Uses expanded clay/shale aggregates - lighter and lower carbon",
     typicalApplications: "Upper floor slabs, infill panels, roof decks",
   },
   {
@@ -213,7 +213,7 @@ export const iceDatabase: MaterialData[] = [
     embodiedCarbon: 0.47,
     unit: "kgCO2e/kg",
     density: 7850,
-    notes: "Electric arc furnace from scrap — 70% less carbon",
+    notes: "Electric arc furnace from scrap - 70% less carbon",
     fhsRecommended: true,
     typicalApplications: "Structural frames, beams, columns",
   },
@@ -235,7 +235,7 @@ export const iceDatabase: MaterialData[] = [
     embodiedCarbon: 0.84,
     unit: "kgCO2e/kg",
     density: 7850,
-    notes: "EAF-produced rebar from scrap — 58% less carbon",
+    notes: "EAF-produced rebar from scrap - 58% less carbon",
     fhsRecommended: true,
     typicalApplications: "Reinforced concrete structures",
   },
@@ -267,7 +267,7 @@ export const iceDatabase: MaterialData[] = [
     embodiedCarbon: 6.15,
     unit: "kgCO2e/kg",
     density: 8000,
-    notes: "High chromium content — very high embodied carbon",
+    notes: "High chromium content - very high embodied carbon",
     typicalApplications: "Fixings, balustrades, cladding features, kitchen",
   },
   {
@@ -277,7 +277,7 @@ export const iceDatabase: MaterialData[] = [
     embodiedCarbon: 9.16,
     unit: "kgCO2e/kg",
     density: 2700,
-    notes: "Virgin aluminium — very high embodied carbon",
+    notes: "Virgin aluminium - very high embodied carbon",
     alternatives: ["aluminium-recycled"],
     typicalApplications: "Windows, curtain walling, cladding, rainscreen",
   },
@@ -359,7 +359,7 @@ export const iceDatabase: MaterialData[] = [
     embodiedCarbon: 0.42,
     unit: "kgCO2e/kg",
     density: 500,
-    notes: "Engineered timber — excellent steel alternative for beams and columns",
+    notes: "Engineered timber - excellent steel alternative for beams and columns",
     fhsRecommended: true,
     typicalApplications: "Structural beams, columns, portal frames",
   },
@@ -370,7 +370,7 @@ export const iceDatabase: MaterialData[] = [
     embodiedCarbon: 0.44,
     unit: "kgCO2e/kg",
     density: 480,
-    notes: "Mass timber — rapidly growing in UK construction up to 10+ storeys",
+    notes: "Mass timber - rapidly growing in UK construction up to 10+ storeys",
     fhsRecommended: true,
     typicalApplications: "Structural walls, floors, roofs (alternative to concrete/steel frame)",
   },
@@ -429,7 +429,7 @@ export const iceDatabase: MaterialData[] = [
     embodiedCarbon: 0.40,
     unit: "kgCO2e/kg",
     density: 480,
-    notes: "Engineered joist — uses less material than solid timber",
+    notes: "Engineered joist - uses less material than solid timber",
     fhsRecommended: true,
     typicalApplications: "Floor joists, roof rafters",
   },
@@ -440,7 +440,7 @@ export const iceDatabase: MaterialData[] = [
     embodiedCarbon: 0.19,
     unit: "kgCO2e/kg",
     density: 120,
-    notes: "Harvested from bark — regenerates without felling the tree",
+    notes: "Harvested from bark - regenerates without felling the tree",
     fhsRecommended: true,
     typicalApplications: "Insulation, underlay, wall finishes, expansion joints",
   },
@@ -497,7 +497,7 @@ export const iceDatabase: MaterialData[] = [
     embodiedCarbon: 3.48,
     unit: "kgCO2e/kg",
     density: 32,
-    notes: "Polyisocyanurate — high thermal performance but high carbon",
+    notes: "Polyisocyanurate - high thermal performance but high carbon",
     alternatives: ["wood-fibre-insulation", "mineral-wool", "sheeps-wool"],
     typicalApplications: "Flat roofs, walls where thin build-up needed",
   },
@@ -519,7 +519,7 @@ export const iceDatabase: MaterialData[] = [
     embodiedCarbon: 2.50,
     unit: "kgCO2e/kg",
     density: 10,
-    notes: "Applied in-situ — fills irregular cavities but hard to remove",
+    notes: "Applied in-situ - fills irregular cavities but hard to remove",
     alternatives: ["cellulose-insulation", "sheeps-wool"],
     typicalApplications: "Retrofit cavity fill, loft spaces, irregular voids",
   },
@@ -530,7 +530,7 @@ export const iceDatabase: MaterialData[] = [
     embodiedCarbon: 0.20,
     unit: "kgCO2e/kg",
     density: 45,
-    notes: "Recycled newspaper — lowest carbon insulation option",
+    notes: "Recycled newspaper - lowest carbon insulation option",
     fhsRecommended: true,
     typicalApplications: "Loft, timber frame cavities, retrofit",
   },
@@ -541,7 +541,7 @@ export const iceDatabase: MaterialData[] = [
     embodiedCarbon: 0.45,
     unit: "kgCO2e/kg",
     density: 50,
-    notes: "Natural fibre — carbon sequestration benefits",
+    notes: "Natural fibre - carbon sequestration benefits",
     fhsRecommended: true,
     typicalApplications: "External walls, roof, breathable wall build-ups",
   },
@@ -563,7 +563,7 @@ export const iceDatabase: MaterialData[] = [
     embodiedCarbon: 0.12,
     unit: "kgCO2e/kg",
     density: 40,
-    notes: "Very low carbon with sequestration — fast-growing crop",
+    notes: "Very low carbon with sequestration - fast-growing crop",
     fhsRecommended: true,
     typicalApplications: "Timber frame walls, loft, internal wall insulation",
   },
@@ -574,7 +574,7 @@ export const iceDatabase: MaterialData[] = [
     embodiedCarbon: 5.00,
     unit: "kgCO2e/kg",
     density: 150,
-    notes: "Ultra-thin, extremely high performance — suits constrained spaces",
+    notes: "Ultra-thin, extremely high performance - suits constrained spaces",
     typicalApplications: "Heritage retrofit, thin walls, pipe insulation",
   },
 
@@ -617,7 +617,7 @@ export const iceDatabase: MaterialData[] = [
     embodiedCarbon: 1.50,
     unit: "kgCO2e/kg",
     density: 2500,
-    notes: "Higher embodied carbon but significantly better U-value — net benefit over building life",
+    notes: "Higher embodied carbon but significantly better U-value - net benefit over building life",
     fhsRecommended: true,
     typicalApplications: "Passivhaus, high-performance windows, FHS-compliant homes",
   },
@@ -638,7 +638,7 @@ export const iceDatabase: MaterialData[] = [
     embodiedCarbon: 1.35,
     unit: "kgCO2e/kg",
     density: 2500,
-    notes: "Emissivity coating reduces heat loss — standard in modern glazing",
+    notes: "Emissivity coating reduces heat loss - standard in modern glazing",
     fhsRecommended: true,
     typicalApplications: "Energy-efficient windows, curtain walling",
   },
@@ -664,7 +664,7 @@ export const iceDatabase: MaterialData[] = [
     embodiedCarbon: 0.30,
     unit: "kgCO2e/kg",
     density: 2200,
-    notes: "High-strength, low porosity — fired at higher temperatures",
+    notes: "High-strength, low porosity - fired at higher temperatures",
     alternatives: ["concrete-block"],
     typicalApplications: "DPC courses, manholes, retaining walls, foundations",
   },
@@ -675,7 +675,7 @@ export const iceDatabase: MaterialData[] = [
     embodiedCarbon: 0.12,
     unit: "kgCO2e/kg",
     density: 1850,
-    notes: "Lime + sand — autoclaved, not kiln-fired. 50% less carbon than clay",
+    notes: "Lime + sand - autoclaved, not kiln-fired. 50% less carbon than clay",
     fhsRecommended: true,
     typicalApplications: "External and internal walls, load-bearing masonry",
   },
@@ -695,7 +695,7 @@ export const iceDatabase: MaterialData[] = [
     embodiedCarbon: 0.120,
     unit: "kgCO2e/kg",
     density: 1400,
-    notes: "Aerated or aggregate-lightweight — better thermal performance",
+    notes: "Aerated or aggregate-lightweight - better thermal performance",
     typicalApplications: "Inner leaf of cavity walls, partitions",
   },
   {
@@ -705,7 +705,7 @@ export const iceDatabase: MaterialData[] = [
     embodiedCarbon: 0.30,
     unit: "kgCO2e/kg",
     density: 600,
-    notes: "Lightweight — less material per m² of wall",
+    notes: "Lightweight - less material per m² of wall",
     typicalApplications: "Inner leaf walls, partitions, upper storeys",
   },
   {
@@ -715,7 +715,7 @@ export const iceDatabase: MaterialData[] = [
     embodiedCarbon: 0.09,
     unit: "kgCO2e/kg",
     density: 2180,
-    notes: "Quarried and cut — minimal processing energy",
+    notes: "Quarried and cut - minimal processing energy",
     fhsRecommended: true,
     typicalApplications: "Cladding, walling, paving, restoration",
   },
@@ -726,7 +726,7 @@ export const iceDatabase: MaterialData[] = [
     embodiedCarbon: 0.70,
     unit: "kgCO2e/kg",
     density: 2650,
-    notes: "Hard stone — requires significant cutting and polishing energy",
+    notes: "Hard stone - requires significant cutting and polishing energy",
     typicalApplications: "Cladding, paving, worktops, kerbs",
   },
   {
@@ -736,7 +736,7 @@ export const iceDatabase: MaterialData[] = [
     embodiedCarbon: 0.024,
     unit: "kgCO2e/kg",
     density: 1900,
-    notes: "Compacted local subsoil — ultra-low embodied carbon",
+    notes: "Compacted local subsoil - ultra-low embodied carbon",
     fhsRecommended: true,
     typicalApplications: "Feature walls, residential, low-rise structures",
   },
@@ -789,7 +789,7 @@ export const iceDatabase: MaterialData[] = [
     embodiedCarbon: 7.62,
     unit: "kgCO2e/kg",
     density: 1200,
-    notes: "Very high embodied carbon — lightweight glazing alternative",
+    notes: "Very high embodied carbon - lightweight glazing alternative",
     typicalApplications: "Rooflights, canopies, atria, sports facilities",
   },
   {
@@ -808,7 +808,7 @@ export const iceDatabase: MaterialData[] = [
     embodiedCarbon: 8.10,
     unit: "kgCO2e/kg",
     density: 1140,
-    notes: "Very high embodied carbon — used in small quantities",
+    notes: "Very high embodied carbon - used in small quantities",
     typicalApplications: "Fixings, wall ties, carpet fibres, membranes",
   },
   {
@@ -869,7 +869,7 @@ export const iceDatabase: MaterialData[] = [
     embodiedCarbon: 0.0024,
     unit: "kgCO2e/kg",
     density: 1900,
-    notes: "Re-used demolition material — lowest impact aggregate",
+    notes: "Re-used demolition material - lowest impact aggregate",
     fhsRecommended: true,
     typicalApplications: "Sub-base, fill, ground works",
   },
@@ -922,7 +922,7 @@ export const iceDatabase: MaterialData[] = [
     embodiedCarbon: 0.074,
     unit: "kgCO2e/kg",
     density: 1600,
-    notes: "Lower carbon alternative to cement render — breathable finish",
+    notes: "Lower carbon alternative to cement render - breathable finish",
     fhsRecommended: true,
     typicalApplications: "External walls, heritage buildings, breathable build-ups",
   },
@@ -944,7 +944,7 @@ export const iceDatabase: MaterialData[] = [
     embodiedCarbon: 0.02,
     unit: "kgCO2e/kg",
     density: 1500,
-    notes: "Earth-based — ultra-low carbon, moisture-regulating",
+    notes: "Earth-based - ultra-low carbon, moisture-regulating",
     fhsRecommended: true,
     typicalApplications: "Internal feature walls, eco-builds, heritage",
   },
@@ -978,7 +978,7 @@ export const iceDatabase: MaterialData[] = [
     embodiedCarbon: 0.058,
     unit: "kgCO2e/kg",
     density: 2700,
-    notes: "Quarried stone — very low processing energy, long lifespan",
+    notes: "Quarried stone - very low processing energy, long lifespan",
     fhsRecommended: true,
     typicalApplications: "Pitched roof covering, feature roofing",
   },
@@ -989,7 +989,7 @@ export const iceDatabase: MaterialData[] = [
     embodiedCarbon: 0.47,
     unit: "kgCO2e/kg",
     density: 1700,
-    notes: "Cement-based manufactured slate — lighter than natural",
+    notes: "Cement-based manufactured slate - lighter than natural",
     typicalApplications: "Pitched roof covering, cladding, soffits",
   },
   {
@@ -1009,7 +1009,7 @@ export const iceDatabase: MaterialData[] = [
     embodiedCarbon: 3.09,
     unit: "kgCO2e/kg",
     density: 7135,
-    notes: "Premium metal roofing — very long lifespan (80+ years)",
+    notes: "Premium metal roofing - very long lifespan (80+ years)",
     typicalApplications: "Feature roofing, cladding, dormers, extensions",
   },
   {
@@ -1019,7 +1019,7 @@ export const iceDatabase: MaterialData[] = [
     embodiedCarbon: 3.50,
     unit: "kgCO2e/kg",
     density: 1150,
-    notes: "Synthetic rubber — long life, single-ply membrane",
+    notes: "Synthetic rubber - long life, single-ply membrane",
     typicalApplications: "Flat roofs, green roof base, garden rooms",
   },
   {
@@ -1029,7 +1029,7 @@ export const iceDatabase: MaterialData[] = [
     embodiedCarbon: 0.12,
     unit: "kgCO2e/kg",
     density: 800,
-    notes: "Growing medium for extensive/intensive green roofs — biodiversity benefits",
+    notes: "Growing medium for extensive/intensive green roofs - biodiversity benefits",
     fhsRecommended: true,
     typicalApplications: "Green roofs, blue-green infrastructure, biodiversity roofs",
   },
@@ -1053,7 +1053,7 @@ export const iceDatabase: MaterialData[] = [
     embodiedCarbon: 1.12,
     unit: "kgCO2e/kg",
     density: 2300,
-    notes: "Fired at higher temperature than ceramic — harder and denser",
+    notes: "Fired at higher temperature than ceramic - harder and denser",
     alternatives: ["ceramic-tile", "terrazzo", "natural-stone-floor"],
     typicalApplications: "High-traffic floors, external paving, commercial",
   },
@@ -1074,7 +1074,7 @@ export const iceDatabase: MaterialData[] = [
     embodiedCarbon: 3.89,
     unit: "kgCO2e/kg",
     density: 320,
-    notes: "Nylon/polypropylene pile — high embodied carbon, short lifespan",
+    notes: "Nylon/polypropylene pile - high embodied carbon, short lifespan",
     alternatives: ["carpet-wool", "linoleum"],
     typicalApplications: "Offices, residential, hospitality",
   },
@@ -1085,7 +1085,7 @@ export const iceDatabase: MaterialData[] = [
     embodiedCarbon: 1.80,
     unit: "kgCO2e/kg",
     density: 350,
-    notes: "Natural fibre — 54% less carbon than synthetic",
+    notes: "Natural fibre - 54% less carbon than synthetic",
     fhsRecommended: true,
     typicalApplications: "Residential, premium commercial",
   },
@@ -1096,7 +1096,7 @@ export const iceDatabase: MaterialData[] = [
     embodiedCarbon: 0.15,
     unit: "kgCO2e/kg",
     density: 2400,
-    notes: "Composite of marble/granite chips in cement — very durable",
+    notes: "Composite of marble/granite chips in cement - very durable",
     typicalApplications: "Lobbies, corridors, commercial, heritage restoration",
   },
   {
@@ -1106,7 +1106,7 @@ export const iceDatabase: MaterialData[] = [
     embodiedCarbon: 1.21,
     unit: "kgCO2e/kg",
     density: 1200,
-    notes: "Made from linseed oil, cork, and wood flour — natural product",
+    notes: "Made from linseed oil, cork, and wood flour - natural product",
     fhsRecommended: true,
     typicalApplications: "Healthcare, education, retail, residential",
   },
@@ -1117,7 +1117,7 @@ export const iceDatabase: MaterialData[] = [
     embodiedCarbon: 0.09,
     unit: "kgCO2e/kg",
     density: 2200,
-    notes: "Quarried and cut — minimal processing, very long lifespan",
+    notes: "Quarried and cut - minimal processing, very long lifespan",
     fhsRecommended: true,
     typicalApplications: "Entrance lobbies, kitchens, heritage, commercial",
   },
@@ -1160,7 +1160,7 @@ export const iceDatabase: MaterialData[] = [
     embodiedCarbon: 2.80,
     unit: "kgCO2e/kg",
     density: 1200,
-    notes: "Thermoplastic polyolefin — weldable, recyclable",
+    notes: "Thermoplastic polyolefin - weldable, recyclable",
     typicalApplications: "Flat roof waterproofing, podium decks",
   },
   {
@@ -1202,7 +1202,7 @@ export const iceDatabase: MaterialData[] = [
     embodiedCarbon: 6.50,
     unit: "kgCO2e/kg",
     density: 1200,
-    notes: "Two-part structural adhesive — very high embodied carbon",
+    notes: "Two-part structural adhesive - very high embodied carbon",
     typicalApplications: "Structural bonding, FRP fixing, anchoring",
   },
   {
@@ -1268,7 +1268,7 @@ export const iceDatabase: MaterialData[] = [
     embodiedCarbon: 0.082,
     unit: "kgCO2e/kg",
     density: 1700,
-    notes: "Natural hydraulic lime — 50% less carbon than cement mortar, breathable",
+    notes: "Natural hydraulic lime - 50% less carbon than cement mortar, breathable",
     fhsRecommended: true,
     typicalApplications: "Heritage, conservation, breathable masonry",
   },
@@ -1321,7 +1321,7 @@ export const iceDatabase: MaterialData[] = [
     embodiedCarbon: 0.90,
     unit: "kgCO2e/kg",
     density: 950,
-    notes: "Bio-based — significantly lower carbon than petrochemical paints",
+    notes: "Bio-based - significantly lower carbon than petrochemical paints",
     fhsRecommended: true,
     typicalApplications: "External timber, heritage, eco-builds",
   },
@@ -1332,7 +1332,7 @@ export const iceDatabase: MaterialData[] = [
     embodiedCarbon: 1.20,
     unit: "kgCO2e/kg",
     density: 7135,
-    notes: "Zinc coating for corrosion protection — extends steel life 50+ years",
+    notes: "Zinc coating for corrosion protection - extends steel life 50+ years",
     typicalApplications: "Structural steel, lintels, purlins, external fixings",
   },
   {
@@ -1342,7 +1342,7 @@ export const iceDatabase: MaterialData[] = [
     embodiedCarbon: 8.50,
     unit: "kgCO2e/kg",
     density: 2700,
-    notes: "Electrochemical process — adds to aluminium's already high embodied carbon",
+    notes: "Electrochemical process - adds to aluminium's already high embodied carbon",
     typicalApplications: "Curtain walling, window frames, architectural features",
   },
 
@@ -1356,7 +1356,7 @@ export const iceDatabase: MaterialData[] = [
     embodiedCarbon: 0.46,
     unit: "kgCO2e/kg",
     density: 2100,
-    notes: "Fired clay — durable, chemically resistant, 100+ year lifespan",
+    notes: "Fired clay - durable, chemically resistant, 100+ year lifespan",
     typicalApplications: "Below-ground foul drainage, combined sewers",
   },
   {
@@ -1404,7 +1404,7 @@ export const iceDatabase: MaterialData[] = [
     embodiedCarbon: 2.20,
     unit: "kgCO2e/kg",
     density: 1200,
-    notes: "PE-Al-PE — lower carbon alternative to copper for heating/plumbing",
+    notes: "PE-Al-PE - lower carbon alternative to copper for heating/plumbing",
     fhsRecommended: true,
     typicalApplications: "Underfloor heating, plumbing, radiator connections",
   },
@@ -1483,7 +1483,7 @@ export const iceDatabase: MaterialData[] = [
     embodiedCarbon: 3.80,
     unit: "kgCO2e/kg",
     density: 500,
-    notes: "Approximate — varies significantly by manufacturer and capacity. FHS mandates low-carbon heating.",
+    notes: "Approximate - varies significantly by manufacturer and capacity. FHS mandates low-carbon heating.",
     fhsRecommended: true,
     typicalApplications: "Space heating, hot water, FHS-compliant homes",
   },
@@ -1505,7 +1505,7 @@ export const iceDatabase: MaterialData[] = [
     embodiedCarbon: 5.50,
     unit: "kgCO2e/kg",
     density: 800,
-    notes: "Varies widely — includes housing, driver, and LED module",
+    notes: "Varies widely - includes housing, driver, and LED module",
     typicalApplications: "General lighting, commercial, residential",
   },
   {
@@ -1526,7 +1526,7 @@ export const iceDatabase: MaterialData[] = [
     embodiedCarbon: 2.40,
     unit: "kgCO2e/kg",
     density: 1100,
-    notes: "PE-X pipes in screed — efficient with heat pumps due to low flow temperatures",
+    notes: "PE-X pipes in screed - efficient with heat pumps due to low flow temperatures",
     fhsRecommended: true,
     typicalApplications: "Residential, commercial, heat pump systems",
   },
@@ -1568,7 +1568,7 @@ export const iceDatabase: MaterialData[] = [
     embodiedCarbon: 0.52,
     unit: "kgCO2e/kg",
     density: 1800,
-    notes: "Low-carbon alternative to stainless steel — 92% less embodied carbon",
+    notes: "Low-carbon alternative to stainless steel - 92% less embodied carbon",
     fhsRecommended: true,
     typicalApplications: "Cavity wall construction, thermal bridge reduction",
   },
@@ -1612,7 +1612,7 @@ export const iceDatabase: MaterialData[] = [
     embodiedCarbon: 0.045,
     unit: "kgCO2e/kg",
     density: 2250,
-    notes: "Reclaimed asphalt planings blended into new mix — ~30% carbon saving",
+    notes: "Reclaimed asphalt planings blended into new mix - ~30% carbon saving",
     fhsRecommended: true,
     typicalApplications: "Road resurfacing, car parks, base courses",
   },
@@ -1623,7 +1623,7 @@ export const iceDatabase: MaterialData[] = [
     embodiedCarbon: 0.055,
     unit: "kgCO2e/kg",
     density: 2300,
-    notes: "Mixed at lower temperatures — ~15% energy saving over hot mix",
+    notes: "Mixed at lower temperatures - ~15% energy saving over hot mix",
     fhsRecommended: true,
     typicalApplications: "Road surfacing, urban works, night works",
   },
@@ -1666,7 +1666,7 @@ export const iceDatabase: MaterialData[] = [
     embodiedCarbon: 3.43,
     unit: "kgCO2e/kg",
     density: 50,
-    notes: "PP modular crates — essential for SuDS compliance",
+    notes: "PP modular crates - essential for SuDS compliance",
     typicalApplications: "Stormwater attenuation, soakaways, SuDS",
   },
   {
@@ -1676,7 +1676,7 @@ export const iceDatabase: MaterialData[] = [
     embodiedCarbon: 0.08,
     unit: "kgCO2e/kg",
     density: 1200,
-    notes: "Natural clay mineral — self-healing, very low embodied carbon",
+    notes: "Natural clay mineral - self-healing, very low embodied carbon",
     fhsRecommended: true,
     typicalApplications: "Below-ground waterproofing, basement tanking, ponds",
   },
@@ -1687,7 +1687,7 @@ export const iceDatabase: MaterialData[] = [
     embodiedCarbon: 1.62,
     unit: "kgCO2e/kg",
     density: 7850,
-    notes: "Wire basket only — fill with local stone for low overall carbon",
+    notes: "Wire basket only - fill with local stone for low overall carbon",
     typicalApplications: "Retaining walls, erosion control, landscape features",
   },
 
@@ -1760,7 +1760,7 @@ export const iceDatabase: MaterialData[] = [
     embodiedCarbon: 0.055,
     unit: "kgCO2e/kg",
     density: 2350,
-    notes: "No Portland cement — activated by alkali solution. New in ICE v4.1. Up to 60% less carbon than general concrete.",
+    notes: "No Portland cement - activated by alkali solution. New in ICE v4.1. Up to 60% less carbon than general concrete.",
     fhsRecommended: true,
     typicalApplications: "Precast elements, floor slabs, foundations (where approved)",
   },
@@ -1790,7 +1790,7 @@ export const iceDatabase: MaterialData[] = [
     embodiedCarbon: 0.082,
     unit: "kgCO2e/kg",
     density: 2400,
-    notes: "ICE v4.1 economic allocation. Very high GGBS replacement — slow early strength gain.",
+    notes: "ICE v4.1 economic allocation. Very high GGBS replacement - slow early strength gain.",
     fhsRecommended: true,
     typicalApplications: "Mass foundations, raft slabs, marine structures",
   },
@@ -1801,7 +1801,7 @@ export const iceDatabase: MaterialData[] = [
     embodiedCarbon: 0.145,
     unit: "kgCO2e/kg",
     density: 2400,
-    notes: "Flows under own weight — no vibration needed, higher fines content",
+    notes: "Flows under own weight - no vibration needed, higher fines content",
     typicalApplications: "Complex formwork, congested reinforcement, architectural finish",
   },
   {
@@ -1811,7 +1811,7 @@ export const iceDatabase: MaterialData[] = [
     embodiedCarbon: 0.155,
     unit: "kgCO2e/kg",
     density: 2300,
-    notes: "Pneumatically applied — higher waste factor than cast concrete",
+    notes: "Pneumatically applied - higher waste factor than cast concrete",
     typicalApplications: "Tunnel linings, retaining walls, slope stabilisation",
   },
   {
@@ -1821,7 +1821,7 @@ export const iceDatabase: MaterialData[] = [
     embodiedCarbon: 0.760,
     unit: "kgCO2e/kg",
     density: 1500,
-    notes: "Up to 20% limestone replacement — now the default UK cement type",
+    notes: "Up to 20% limestone replacement - now the default UK cement type",
     typicalApplications: "General purpose cement for concrete, mortar, render",
   },
   {
@@ -1846,7 +1846,7 @@ export const iceDatabase: MaterialData[] = [
     embodiedCarbon: 1.78,
     unit: "kgCO2e/kg",
     density: 7850,
-    notes: "Light gauge steel — additional processing energy over hot-rolled",
+    notes: "Light gauge steel - additional processing energy over hot-rolled",
     typicalApplications: "Light steel framing, mezzanines, modular construction",
   },
   {
@@ -1892,7 +1892,7 @@ export const iceDatabase: MaterialData[] = [
     embodiedCarbon: 3.30,
     unit: "kgCO2e/kg",
     density: 7200,
-    notes: "Premium architectural material — very long lifespan, fully recyclable",
+    notes: "Premium architectural material - very long lifespan, fully recyclable",
     typicalApplications: "Standing seam roofing, cladding, rainwater goods",
   },
 
@@ -1906,7 +1906,7 @@ export const iceDatabase: MaterialData[] = [
     embodiedCarbon: 0.006,
     unit: "kgCO2e/kg",
     density: 100,
-    notes: "Agricultural by-product — carbon negative when biogenic storage included",
+    notes: "Agricultural by-product - carbon negative when biogenic storage included",
     fhsRecommended: true,
     typicalApplications: "Timber frame infill, self-build, eco-housing",
   },
@@ -1917,7 +1917,7 @@ export const iceDatabase: MaterialData[] = [
     embodiedCarbon: 0.06,
     unit: "kgCO2e/kg",
     density: 330,
-    notes: "Carbon-negative wall material — sequesters more CO₂ than emitted in production",
+    notes: "Carbon-negative wall material - sequesters more CO₂ than emitted in production",
     fhsRecommended: true,
     typicalApplications: "Timber frame infill walls, renovation, self-build",
   },
@@ -1928,7 +1928,7 @@ export const iceDatabase: MaterialData[] = [
     embodiedCarbon: 7.50,
     unit: "kgCO2e/kg",
     density: 200,
-    notes: "5-8x the thermal performance per mm of conventional insulation — very high embodied carbon per kg but minimal per m² of wall",
+    notes: "5-8x the thermal performance per mm of conventional insulation - very high embodied carbon per kg but minimal per m² of wall",
     typicalApplications: "Ultra-thin refurbishment, heritage, floor build-ups",
   },
   {
@@ -1938,7 +1938,7 @@ export const iceDatabase: MaterialData[] = [
     embodiedCarbon: 1.45,
     unit: "kgCO2e/kg",
     density: 30,
-    notes: "Made from recycled plastic bottles — diverts waste from landfill",
+    notes: "Made from recycled plastic bottles - diverts waste from landfill",
     typicalApplications: "Acoustic insulation, timber frame, internal partitions",
   },
 
@@ -1952,7 +1952,7 @@ export const iceDatabase: MaterialData[] = [
     embodiedCarbon: 0.85,
     unit: "kgCO2e/kg",
     density: 510,
-    notes: "Chemically modified softwood — 50+ year durability class 1. Higher carbon but dramatically longer life than treated softwood.",
+    notes: "Chemically modified softwood - 50+ year durability class 1. Higher carbon but dramatically longer life than treated softwood.",
     typicalApplications: "External cladding, windows, doors, decking, bridges",
   },
   {
@@ -1962,7 +1962,7 @@ export const iceDatabase: MaterialData[] = [
     embodiedCarbon: 0.52,
     unit: "kgCO2e/kg",
     density: 700,
-    notes: "Fast-growing grass — 3-5 year harvest cycle. Transport emissions from Asia reduce benefit.",
+    notes: "Fast-growing grass - 3-5 year harvest cycle. Transport emissions from Asia reduce benefit.",
     typicalApplications: "Flooring, panels, structural elements, worktops",
   },
   {
@@ -1982,7 +1982,7 @@ export const iceDatabase: MaterialData[] = [
     embodiedCarbon: 0.38,
     unit: "kgCO2e/kg",
     density: 350,
-    notes: "Factory-insulated panel — lower site waste, faster erection",
+    notes: "Factory-insulated panel - lower site waste, faster erection",
     fhsRecommended: true,
     typicalApplications: "Residential house building, MMC, modular construction",
   },
@@ -1993,7 +1993,7 @@ export const iceDatabase: MaterialData[] = [
     embodiedCarbon: 0.92,
     unit: "kgCO2e/kg",
     density: 200,
-    notes: "OSB skins with EPS/PUR core — excellent airtightness",
+    notes: "OSB skins with EPS/PUR core - excellent airtightness",
     typicalApplications: "Walls, roofs, residential, self-build, extensions",
   },
 
@@ -2007,7 +2007,7 @@ export const iceDatabase: MaterialData[] = [
     embodiedCarbon: 0.06,
     unit: "kgCO2e/kg",
     density: 400,
-    notes: "Pre-formed hemp-lime blocks — carbon negative",
+    notes: "Pre-formed hemp-lime blocks - carbon negative",
     fhsRecommended: true,
     typicalApplications: "Non-structural infill, internal walls, renovation",
   },
@@ -2018,7 +2018,7 @@ export const iceDatabase: MaterialData[] = [
     embodiedCarbon: 0.03,
     unit: "kgCO2e/kg",
     density: 1700,
-    notes: "Sun-dried or compressed earth — 87% less carbon than fired clay",
+    notes: "Sun-dried or compressed earth - 87% less carbon than fired clay",
     fhsRecommended: true,
     typicalApplications: "Internal walls, thermal mass, eco-builds",
   },
@@ -2029,7 +2029,7 @@ export const iceDatabase: MaterialData[] = [
     embodiedCarbon: 0.078,
     unit: "kgCO2e/kg",
     density: 1950,
-    notes: "Contains recycled demolition aggregate — 17% less carbon",
+    notes: "Contains recycled demolition aggregate - 17% less carbon",
     fhsRecommended: true,
     typicalApplications: "Internal walls, foundations, below-ground",
   },
@@ -2040,7 +2040,7 @@ export const iceDatabase: MaterialData[] = [
     embodiedCarbon: 0.01,
     unit: "kgCO2e/kg",
     density: 1900,
-    notes: "Salvaged and cleaned — embodied carbon limited to transport and cleaning only",
+    notes: "Salvaged and cleaned - embodied carbon limited to transport and cleaning only",
     fhsRecommended: true,
     typicalApplications: "Feature walls, heritage, residential, garden walls",
   },
@@ -2061,19 +2061,19 @@ export interface RegulationEvent {
 export const regulations: RegulationEvent[] = [
   {
     id: "fhs-2025",
-    title: "Future Homes Standard — Transitional Arrangements",
+    title: "Future Homes Standard - Transitional Arrangements",
     date: "2025-06-01",
     status: "active",
     category: "energy",
     description:
       "Transitional provisions allowing approved plans to proceed under current Part L before full FHS takes effect. Plans submitted before the cutoff can use 2021 Part L standards.",
     impact:
-      "Window closing for developers — plans submitted after cutoff must meet full FHS requirements.",
+      "Window closing for developers - plans submitted after cutoff must meet full FHS requirements.",
     affectedRoles: ["developer", "architect"],
   },
   {
     id: "fhs-published",
-    title: "Future Homes & Buildings Standards — Published",
+    title: "Future Homes & Buildings Standards - Published",
     date: "2026-03-24",
     status: "active",
     category: "energy",
@@ -2085,7 +2085,7 @@ export const regulations: RegulationEvent[] = [
   },
   {
     id: "part-z-consultation",
-    title: "Part Z (Whole-Life Carbon) — Government Consultation",
+    title: "Part Z (Whole-Life Carbon) - Government Consultation",
     date: "2025-09-01",
     status: "active",
     category: "carbon",
@@ -2097,7 +2097,7 @@ export const regulations: RegulationEvent[] = [
   },
   {
     id: "building-safety-act-deadline",
-    title: "Building Safety Act — Principal Designer Registration Deadline",
+    title: "Building Safety Act - Principal Designer Registration Deadline",
     date: "2025-10-01",
     status: "active",
     category: "reporting",
@@ -2109,7 +2109,7 @@ export const regulations: RegulationEvent[] = [
   },
   {
     id: "uknzcbs",
-    title: "UK Net Zero Carbon Building Standard (UKNZCBS) — Published",
+    title: "UK Net Zero Carbon Building Standard (UKNZCBS) - Published",
     date: "2026-01-15",
     status: "active",
     category: "carbon",
@@ -2121,7 +2121,7 @@ export const regulations: RegulationEvent[] = [
   },
   {
     id: "uk-srs-voluntary",
-    title: "UK Sustainability Reporting Standards — Voluntary Adoption",
+    title: "UK Sustainability Reporting Standards - Voluntary Adoption",
     date: "2026-03-01",
     status: "active",
     category: "reporting",
@@ -2133,7 +2133,7 @@ export const regulations: RegulationEvent[] = [
   },
   {
     id: "fbs-published",
-    title: "Future Buildings Standard — Published",
+    title: "Future Buildings Standard - Published",
     date: "2026-03-24",
     status: "active",
     category: "energy",
@@ -2145,7 +2145,7 @@ export const regulations: RegulationEvent[] = [
   },
   {
     id: "uk-srs-mandatory",
-    title: "UK SRS — Mandatory FCA Rules Expected",
+    title: "UK SRS - Mandatory FCA Rules Expected",
     date: "2026-10-01",
     status: "upcoming",
     category: "reporting",
@@ -2157,7 +2157,7 @@ export const regulations: RegulationEvent[] = [
   },
   {
     id: "cbam-registration",
-    title: "UK CBAM — Importer Registration Opens",
+    title: "UK CBAM - Importer Registration Opens",
     date: "2026-10-01",
     status: "upcoming",
     category: "trade",
@@ -2169,7 +2169,7 @@ export const regulations: RegulationEvent[] = [
   },
   {
     id: "fhs-full",
-    title: "Future Homes Standard — Full Compliance Required",
+    title: "Future Homes Standard - Full Compliance Required",
     date: "2028-01-01",
     status: "upcoming",
     category: "energy",
@@ -2181,7 +2181,7 @@ export const regulations: RegulationEvent[] = [
   },
   {
     id: "cbam-launch",
-    title: "UK CBAM — Full Launch",
+    title: "UK CBAM - Full Launch",
     date: "2027-01-01",
     status: "future",
     category: "trade",
@@ -2193,7 +2193,7 @@ export const regulations: RegulationEvent[] = [
   },
   {
     id: "uk-srs-first-reports",
-    title: "UK SRS — First Mandatory Reports Due",
+    title: "UK SRS - First Mandatory Reports Due",
     date: "2027-04-01",
     status: "future",
     category: "reporting",
@@ -2205,19 +2205,19 @@ export const regulations: RegulationEvent[] = [
   },
   {
     id: "epc-c-minimum",
-    title: "EPC Rating C Minimum — Non-Domestic (Proposed)",
+    title: "EPC Rating C Minimum - Non-Domestic (Proposed)",
     date: "2027-04-01",
     status: "future",
     category: "energy",
     description:
-      "Proposed MEES tightening requiring non-domestic rented buildings to achieve minimum EPC Rating C. Government consultation response still awaited — date may shift to 2028.",
+      "Proposed MEES tightening requiring non-domestic rented buildings to achieve minimum EPC Rating C. Government consultation response still awaited - date may shift to 2028.",
     impact:
       "Landlords must retrofit properties or face penalties. Major retrofit wave expected. Demand for energy consultancy and building services design to surge.",
     affectedRoles: ["developer", "contractor"],
   },
   {
     id: "biodiversity-net-gain",
-    title: "Biodiversity Net Gain — Small Sites Compliance",
+    title: "Biodiversity Net Gain - Small Sites Compliance",
     date: "2027-04-01",
     status: "future",
     category: "reporting",
@@ -2229,7 +2229,7 @@ export const regulations: RegulationEvent[] = [
   },
   {
     id: "part-z-limits",
-    title: "Part Z — Mandatory Embodied Carbon Limits (Expected)",
+    title: "Part Z - Mandatory Embodied Carbon Limits (Expected)",
     date: "2028-01-01",
     status: "future",
     category: "carbon",
@@ -2241,12 +2241,12 @@ export const regulations: RegulationEvent[] = [
   },
   {
     id: "epc-c-domestic",
-    title: "EPC Rating C — Domestic Rented Properties (Proposed)",
+    title: "EPC Rating C - Domestic Rented Properties (Proposed)",
     date: "2028-12-01",
     status: "future",
     category: "energy",
     description:
-      "Proposed requirement for all rented domestic properties to achieve EPC Rating C. Repeatedly delayed — currently expected no earlier than 2028. Cost cap per property likely.",
+      "Proposed requirement for all rented domestic properties to achieve EPC Rating C. Repeatedly delayed - currently expected no earlier than 2028. Cost cap per property likely.",
     impact:
       "Massive retrofit demand across UK rental stock. Insulation, glazing, and heating system upgrades at scale.",
     affectedRoles: ["developer", "contractor", "manufacturer"],

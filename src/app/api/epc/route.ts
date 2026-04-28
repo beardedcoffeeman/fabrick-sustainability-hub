@@ -4,6 +4,11 @@ import { NextRequest, NextResponse } from "next/server";
 const cache = new Map<string, { data: EPCResult; timestamp: number }>();
 const CACHE_TTL = 60 * 60 * 1000; // 1 hour
 
+// MHCLG "Get Energy Performance of Buildings Data" API
+// Docs: https://get-energy-performance-data.communities.gov.uk/api-technical-documentation
+const EPC_API_BASE =
+  "https://api.get-energy-performance-data.communities.gov.uk";
+
 interface EPCCertificate {
   address: string;
   currentRating: string;
@@ -16,6 +21,9 @@ interface EPCCertificate {
   certificateDate: string;
   currentEnergyEfficiency: number;
   potentialEnergyEfficiency: number;
+  // UPRN lets the client dedupe re-registrations of the same property
+  // (one UPRN can have several certificates over time - we want the latest).
+  uprn: number | null;
 }
 
 interface EPCResult {
@@ -25,124 +33,84 @@ interface EPCResult {
   isSampleData: boolean;
 }
 
+// New API response shape (lean - search endpoint)
+interface MHCLGRow {
+  certificateNumber: string;
+  addressLine1: string | null;
+  addressLine2: string | null;
+  addressLine3: string | null;
+  addressLine4: string | null;
+  postcode: string;
+  postTown: string | null;
+  council: string | null;
+  constituency: string | null;
+  currentEnergyEfficiencyBand: string;
+  registrationDate: string;
+  uprn: number | null;
+}
+
+function buildAddress(row: MHCLGRow): string {
+  const parts = [
+    row.addressLine1,
+    row.addressLine2,
+    row.addressLine3,
+    row.addressLine4,
+    row.postTown,
+    row.postcode,
+  ]
+    .filter(Boolean)
+    .map((s) => s?.trim());
+  return parts.join(", ") || "Address unavailable";
+}
+
+/**
+ * The new MHCLG search endpoint returns only the band letter + address +
+ * registration date. SAP score, potential rating, property type, floor area,
+ * heating and wall construction are not included. We populate the legacy
+ * widget shape with the data we do have, and zero/empty for the rest. The
+ * widget hides fields with empty/zero values.
+ */
+function mapAPIResponse(rows: MHCLGRow[]): EPCCertificate[] {
+  return rows.map((row) => ({
+    address: buildAddress(row),
+    currentRating: row.currentEnergyEfficiencyBand || "Unknown",
+    potentialRating: "",
+    sapScore: 0,
+    propertyType: "",
+    floorArea: 0,
+    heatingType: "",
+    wallConstruction: "",
+    certificateDate: row.registrationDate || "",
+    currentEnergyEfficiency: 0,
+    potentialEnergyEfficiency: 0,
+    uprn: row.uprn,
+  }));
+}
+
 function generateSampleData(postcode: string): EPCResult {
-  const ratings = ["B", "C", "C", "D", "D", "D", "E", "E", "C", "D", "F", "B", "C", "D", "E"];
-  const propertyTypes = [
-    "Detached house",
-    "Semi-detached house",
-    "Terraced house",
-    "Flat",
-    "Maisonette",
-    "Bungalow",
-    "End-terrace house",
-  ];
-  const heatingTypes = [
-    "Mains gas - combi boiler",
-    "Mains gas - regular boiler",
-    "Electric storage heaters",
-    "Air source heat pump",
-    "Oil - regular boiler",
-    "LPG - combi boiler",
-  ];
-  const wallTypes = [
-    "Cavity wall, filled insulation",
-    "Cavity wall, no insulation",
-    "Solid brick, no insulation",
-    "Solid brick, internal insulation",
-    "Timber frame, insulated",
-    "System built, partial insulation",
-  ];
-  const streets = [
-    "High Street",
-    "Church Lane",
-    "Station Road",
-    "Park Avenue",
-    "Mill Lane",
-    "The Crescent",
-    "Elm Grove",
-    "Oakfield Road",
-  ];
-
-  const sapScoreMap: Record<string, [number, number]> = {
-    A: [92, 100],
-    B: [81, 91],
-    C: [69, 80],
-    D: [55, 68],
-    E: [39, 54],
-    F: [21, 38],
-    G: [1, 20],
-  };
-
-  const potentialBetter: Record<string, string[]> = {
-    A: ["A"],
-    B: ["A", "B"],
-    C: ["A", "B", "C"],
-    D: ["B", "C", "D"],
-    E: ["C", "D"],
-    F: ["C", "D", "E"],
-    G: ["D", "E", "F"],
-  };
-
-  const certificates: EPCCertificate[] = ratings.map((rating, i) => {
-    const [minSap, maxSap] = sapScoreMap[rating];
-    const sapScore = Math.floor(Math.random() * (maxSap - minSap + 1)) + minSap;
-
-    const potential =
-      potentialBetter[rating][
-        Math.floor(Math.random() * potentialBetter[rating].length)
-      ];
-    const [minPot, maxPot] = sapScoreMap[potential];
-    const potentialEfficiency =
-      Math.floor(Math.random() * (maxPot - minPot + 1)) + minPot;
-
-    const year = 2018 + Math.floor(Math.random() * 7);
-    const month = String(Math.floor(Math.random() * 12) + 1).padStart(2, "0");
-    const day = String(Math.floor(Math.random() * 28) + 1).padStart(2, "0");
-
-    return {
-      address: `${i + 1} ${streets[i % streets.length]}, ${postcode.toUpperCase()}`,
-      currentRating: rating,
-      potentialRating: potential,
-      sapScore,
-      propertyType: propertyTypes[i % propertyTypes.length],
-      floorArea: Math.floor(Math.random() * 120) + 40,
-      heatingType: heatingTypes[i % heatingTypes.length],
-      wallConstruction: wallTypes[i % wallTypes.length],
-      certificateDate: `${year}-${month}-${day}`,
-      currentEnergyEfficiency: sapScore,
-      potentialEnergyEfficiency: potentialEfficiency,
-    };
-  });
-
+  // Used only when EPC_API_TOKEN is missing (local dev without env file).
+  // Real production calls should never reach this path.
+  const ratings = ["B", "C", "C", "D", "D", "D", "E"];
+  const certificates: EPCCertificate[] = ratings.map((rating, i) => ({
+    address: `${i + 1} Sample Street, ${postcode.toUpperCase()}`,
+    currentRating: rating,
+    potentialRating: "",
+    sapScore: 0,
+    propertyType: "",
+    floorArea: 0,
+    heatingType: "",
+    wallConstruction: "",
+    certificateDate: "2024-01-01",
+    currentEnergyEfficiency: 0,
+    potentialEnergyEfficiency: 0,
+    uprn: null,
+  }));
   return {
     certificates,
     postcode: postcode.toUpperCase(),
     totalResults: certificates.length,
     isSampleData: true,
   };
-}
-
-function mapAPIResponse(rows: Record<string, string>[]): EPCCertificate[] {
-  return rows.map((row) => ({
-    address: row["address"] || row["address1"] || "Unknown address",
-    currentRating: row["current-energy-rating"] || "Unknown",
-    potentialRating: row["potential-energy-rating"] || "Unknown",
-    sapScore: parseInt(row["current-energy-efficiency"] || "0", 10),
-    propertyType: row["property-type"] || "Unknown",
-    floorArea: parseFloat(row["total-floor-area"] || "0"),
-    heatingType:
-      row["mainheat-description"] || row["main-heating-controls"] || "Unknown",
-    wallConstruction: row["walls-description"] || "Unknown",
-    certificateDate: row["lodgement-date"] || row["inspection-date"] || "Unknown",
-    currentEnergyEfficiency: parseInt(
-      row["current-energy-efficiency"] || "0",
-      10
-    ),
-    potentialEnergyEfficiency: parseInt(
-      row["potential-energy-efficiency"] || "0",
-      10
-    ),
-  }));
 }
 
 export async function GET(request: NextRequest) {
@@ -158,50 +126,65 @@ export async function GET(request: NextRequest) {
 
   const normalised = postcode.replace(/\s+/g, "").toUpperCase();
 
-  // Check cache
   const cached = cache.get(normalised);
   if (cached && Date.now() - cached.timestamp < CACHE_TTL) {
     return NextResponse.json(cached.data);
   }
 
-  const apiKey = process.env.EPC_API_KEY;
+  const token = process.env.EPC_API_TOKEN;
 
-  if (!apiKey) {
-    // No API key -- return sample data with a flag
-    const sampleData = generateSampleData(normalised);
-    cache.set(normalised, { data: sampleData, timestamp: Date.now() });
-    return NextResponse.json(sampleData);
+  if (!token) {
+    const sample = generateSampleData(normalised);
+    cache.set(normalised, { data: sample, timestamp: Date.now() });
+    return NextResponse.json(sample);
   }
 
   try {
-    const encodedPostcode = encodeURIComponent(postcode.trim());
-    const res = await fetch(
-      `https://epc.opendatacommunities.org/api/v1/domestic/search?postcode=${encodedPostcode}&size=50`,
-      {
-        headers: {
-          Accept: "application/json",
-          Authorization: `Basic ${Buffer.from(`${apiKey}:`).toString("base64")}`,
-        },
-        next: { revalidate: 3600 },
-      }
-    );
+    // Page size 500 covers virtually any UK postcode (avg ~15 properties).
+    // Larger sample = better band-distribution stats for the retrofit-market
+    // headline metric (% below band C).
+    const url = `${EPC_API_BASE}/api/domestic/search?postcode=${encodeURIComponent(
+      postcode.trim()
+    )}&page_size=500`;
+
+    const res = await fetch(url, {
+      headers: {
+        Accept: "application/json",
+        Authorization: `Bearer ${token}`,
+      },
+      next: { revalidate: 3600 },
+    });
+
+    // The MHCLG API returns 404 "No certificates could be found for that query"
+    // for valid-but-empty postcodes. That is a real "no results" signal, not
+    // an error - render an empty result.
+    if (res.status === 404) {
+      const empty: EPCResult = {
+        certificates: [],
+        postcode: normalised,
+        totalResults: 0,
+        isSampleData: false,
+      };
+      cache.set(normalised, { data: empty, timestamp: Date.now() });
+      return NextResponse.json(empty);
+    }
 
     if (!res.ok) {
-      console.error(`EPC API error: ${res.status} ${res.statusText}`);
-      // Fall back to sample data on API error
-      const sampleData = generateSampleData(normalised);
-      sampleData.isSampleData = true;
-      cache.set(normalised, { data: sampleData, timestamp: Date.now() });
-      return NextResponse.json(sampleData);
+      console.error(`EPC API error ${res.status} ${res.statusText}`);
+      return NextResponse.json(
+        { error: "EPC service unavailable", status: res.status },
+        { status: 502 }
+      );
     }
 
     const json = await res.json();
-    const rows = json.rows || [];
+    const rows: MHCLGRow[] = Array.isArray(json.data) ? json.data : [];
+    const totalResults: number = json.pagination?.totalRecords ?? rows.length;
 
     const result: EPCResult = {
       certificates: mapAPIResponse(rows),
       postcode: normalised,
-      totalResults: rows.length,
+      totalResults,
       isSampleData: false,
     };
 
@@ -209,9 +192,9 @@ export async function GET(request: NextRequest) {
     return NextResponse.json(result);
   } catch (error) {
     console.error("EPC API fetch error:", error);
-    // Fall back to sample data on any error
-    const sampleData = generateSampleData(normalised);
-    cache.set(normalised, { data: sampleData, timestamp: Date.now() });
-    return NextResponse.json(sampleData);
+    return NextResponse.json(
+      { error: "EPC service unavailable" },
+      { status: 502 }
+    );
   }
 }

@@ -16,7 +16,10 @@ import {
   MapPin,
   FileText,
   BarChart3,
+  Sparkles,
 } from "lucide-react";
+
+export type PlanningCategory = "commercial" | "residential" | "mixed" | "all";
 
 interface PlanningApplication {
   id: number;
@@ -31,23 +34,50 @@ interface PlanningApplication {
   address: string | null;
   documentationUrl: string | null;
   coordinates: { lat: number; lng: number } | null;
+  category: "commercial" | "residential" | "mixed" | "other" | "unclassified";
+}
+
+interface PlanningSummary {
+  total: number;
+  decided: number;
+  approved: number;
+  refused: number;
+  pending: number;
+  approvalRate: number;
+  totalInDataset: number;
+  poolSize: number;
+  matchedInPool: number;
+  breakdown: {
+    commercial: number;
+    residential: number;
+    mixed: number;
+    other: number;
+    unclassified: number;
+  };
+  category: PlanningCategory;
 }
 
 interface PlanningData {
   applications: PlanningApplication[];
-  summary: {
-    total: number;
-    decided: number;
-    approved: number;
-    refused: number;
-    pending: number;
-    approvalRate: number;
-    totalInDataset: number;
-  };
+  summary: PlanningSummary;
   lastUpdated: string;
 }
 
 const ITEMS_PER_PAGE = 5;
+
+const TAB_OPTIONS: { value: PlanningCategory; label: string }[] = [
+  { value: "commercial", label: "Commercial" },
+  { value: "residential", label: "Residential" },
+  { value: "mixed", label: "Mixed use" },
+  { value: "all", label: "All classified" },
+];
+
+const CATEGORY_LABEL: Record<PlanningCategory, string> = {
+  commercial: "commercial",
+  residential: "residential",
+  mixed: "mixed-use",
+  all: "classified",
+};
 
 function getDecisionBadge(decision: string) {
   switch (decision) {
@@ -102,16 +132,56 @@ function formatNumber(num: number): string {
   return num.toString();
 }
 
-export function PlanningActivityWidget() {
+function buildAnalysis(summary: PlanningSummary): string {
+  const label = CATEGORY_LABEL[summary.category];
+  const breakdown = summary.breakdown;
+  const classifiedTotal =
+    breakdown.commercial + breakdown.residential + breakdown.mixed + breakdown.other;
+  const share =
+    classifiedTotal > 0 && summary.category !== "all"
+      ? Math.round((breakdown[summary.category] / classifiedTotal) * 100)
+      : null;
+
+  if (summary.total === 0) {
+    return `No ${label} applications surfaced in the latest pool of ${summary.poolSize} entries from Planning Data England - coverage of this category varies by local authority.`;
+  }
+
+  if (summary.decided === 0) {
+    return `${summary.total} recent ${label} applications are tracked, but none have a published decision yet - local authority publishing schedules vary.`;
+  }
+
+  const rate = summary.approvalRate;
+  const refusalShare =
+    summary.decided > 0
+      ? Math.round((summary.refused / summary.decided) * 100)
+      : 0;
+
+  if (summary.category === "all") {
+    return `Across the latest classified batch, ${rate}% of decisions are approvals and ${refusalShare}% refusals. Residential dominates the pipeline (${breakdown.residential} entries) versus ${breakdown.commercial} commercial and ${breakdown.mixed} mixed-use.`;
+  }
+
+  const sharePhrase =
+    share !== null
+      ? `Within the classified pool, ${label} work accounts for roughly ${share}% of recent activity. `
+      : "";
+
+  return `${sharePhrase}Of the ${summary.decided} ${label} decisions in this batch, ${rate}% were approved and ${refusalShare}% refused - a useful read on what's actually getting through planning right now.`;
+}
+
+interface Props {
+  category: PlanningCategory;
+}
+
+export function PlanningActivityWidget({ category }: Props) {
   const [data, setData] = useState<PlanningData | null>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
   const [page, setPage] = useState(0);
 
-  const fetchData = async () => {
+  const fetchData = async (cat: PlanningCategory) => {
     setLoading(true);
     try {
-      const res = await fetch("/api/planning");
+      const res = await fetch(`/api/planning?category=${cat}`);
       if (!res.ok) throw new Error("Failed to fetch");
       const json = await res.json();
       setData(json);
@@ -124,10 +194,11 @@ export function PlanningActivityWidget() {
   };
 
   useEffect(() => {
-    fetchData();
-    const interval = setInterval(fetchData, 3600000); // Refresh every hour
+    setPage(0);
+    fetchData(category);
+    const interval = setInterval(() => fetchData(category), 3600000);
     return () => clearInterval(interval);
-  }, []);
+  }, [category]);
 
   if (loading && !data) {
     return (
@@ -149,7 +220,10 @@ export function PlanningActivityWidget() {
     return (
       <div className="rounded-2xl bg-white p-6 shadow-sm">
         <p className="text-warm-gray">{error}</p>
-        <button onClick={fetchData} className="mt-2 text-teal underline text-sm">
+        <button
+          onClick={() => fetchData(category)}
+          className="mt-2 text-teal underline text-sm"
+        >
           Retry
         </button>
       </div>
@@ -163,6 +237,7 @@ export function PlanningActivityWidget() {
     page * ITEMS_PER_PAGE,
     (page + 1) * ITEMS_PER_PAGE
   );
+  const labelText = CATEGORY_LABEL[category];
 
   return (
     <div className="space-y-4">
@@ -176,7 +251,7 @@ export function PlanningActivityWidget() {
             </span>
           </div>
           <button
-            onClick={fetchData}
+            onClick={() => fetchData(category)}
             className="text-gray-400 hover:text-white transition-colors"
             title="Refresh data"
           >
@@ -193,7 +268,7 @@ export function PlanningActivityWidget() {
               <span className="text-lg text-gray-400">applications</span>
             </div>
             <span className="mt-1 inline-block text-xs text-gray-500">
-              tracked by Planning Data England
+              tracked by Planning Data England · {labelText} view
             </span>
           </div>
           <div className="flex-1" />
@@ -255,12 +330,28 @@ export function PlanningActivityWidget() {
           <Info className="h-3.5 w-3.5 text-gray-400 mt-0.5 shrink-0" />
           <p className="text-[11px] text-gray-400 leading-relaxed">
             <span className="font-semibold text-gray-300">Planning data</span> from
-            English local authorities, published openly by DLUHC. Tracking planning
-            decisions helps the construction industry understand development trends,
-            approval rates, and regulatory patterns across regions.
+            English local authorities, published openly by DLUHC. Showing the latest
+            {" "}{labelText} applications with a published development classification -
+            roughly two-thirds of upstream entries are unclassified and excluded from
+            this view.
           </p>
         </div>
       </div>
+
+      {/* Fabrick Analysis */}
+      {summary && (
+        <div className="rounded-2xl bg-charcoal p-6 md:p-8 text-white">
+          <div className="flex items-center gap-2 mb-3">
+            <Sparkles className="h-4 w-4 text-pink" />
+            <span className="text-[10px] font-semibold uppercase tracking-[0.18em] text-pink">
+              Fabrick Analysis
+            </span>
+          </div>
+          <p className="text-base md:text-lg leading-relaxed text-white/90 max-w-3xl">
+            {buildAnalysis(summary)}
+          </p>
+        </div>
+      )}
 
       {/* Application Feed */}
       <div className="rounded-2xl bg-white p-5 shadow-sm">
@@ -268,7 +359,7 @@ export function PlanningActivityWidget() {
           <div className="flex items-center gap-2">
             <FileText className="h-4 w-4 text-teal" />
             <h3 className="text-xs font-semibold uppercase tracking-wider text-warm-gray">
-              Recent Applications
+              Recent {labelText} applications
             </h3>
           </div>
           {totalPages > 1 && (
@@ -296,7 +387,7 @@ export function PlanningActivityWidget() {
 
         <AnimatePresence mode="wait">
           <motion.div
-            key={page}
+            key={`${category}-${page}`}
             initial={{ opacity: 0, x: 12 }}
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: -12 }}
@@ -374,7 +465,7 @@ export function PlanningActivityWidget() {
 
         {applications.length === 0 && (
           <div className="text-center py-8 text-warm-gray text-sm">
-            No planning applications found
+            No {labelText} applications found in the latest batch
           </div>
         )}
       </div>
@@ -472,13 +563,40 @@ export function PlanningActivityWidget() {
               Communities (DLUHC). Open data from English local planning authorities.
             </p>
             <p className="text-[10px] text-warm-gray/60 mt-1">
-              Data cached for 1 hour. Shows the most recently added applications.
-              Decision statuses are normalised from local authority records. Not all
+              Data cached for 1 hour. Categorisation uses MHCLG planning
+              development classification codes; entries without a published
+              classification are excluded from the filtered views. Not all
               authorities publish at the same frequency.
             </p>
           </div>
         </div>
       </div>
+    </div>
+  );
+}
+
+interface ControlProps {
+  value: PlanningCategory;
+  onChange: (value: PlanningCategory) => void;
+}
+
+export function PlanningCategoryTabs({ value, onChange }: ControlProps) {
+  return (
+    <div className="flex flex-wrap items-center gap-2 text-xs">
+      <span className="text-warm-gray mr-1">View:</span>
+      {TAB_OPTIONS.map((opt) => (
+        <button
+          key={opt.value}
+          onClick={() => onChange(opt.value)}
+          className={`rounded-full px-3 py-1 font-semibold transition-colors ${
+            value === opt.value
+              ? "bg-charcoal text-white"
+              : "bg-white text-warm-gray border border-cream-dark hover:bg-cream-dark hover:border-charcoal/30"
+          }`}
+        >
+          {opt.label}
+        </button>
+      ))}
     </div>
   );
 }
