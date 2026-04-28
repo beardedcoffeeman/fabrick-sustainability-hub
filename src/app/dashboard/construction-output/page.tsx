@@ -6,9 +6,10 @@ import { Zap, Package, Landmark, Home, ArrowRight } from "lucide-react";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "UK Construction Output Data - Monthly ONS Statistics | Fabrick",
+  title:
+    "Where is UK construction growing, and where is it shrinking? | Fabrick",
   description:
-    "Live UK construction sector output data from ONS - new work, repair & maintenance, sector breakdown. Monthly statistics for private housing, infrastructure, commercial, and industrial.",
+    "Monthly ONS construction output data by sector: private housing, infrastructure, commercial, industrial, and repair & maintenance. Forecast pipeline, target high-growth sectors, spot trend reversals early.",
   keywords: [
     "UK construction output",
     "construction output ONS",
@@ -21,9 +22,10 @@ export const metadata: Metadata = {
     "construction industry statistics",
   ],
   openGraph: {
-    title: "UK Construction Output Data - Monthly ONS Statistics | Fabrick",
+    title:
+      "Where is UK construction growing, and where is it shrinking? | Fabrick",
     description:
-      "Live UK construction sector output data from ONS - new work, repair & maintenance, sector breakdown.",
+      "Monthly ONS construction output by sector. Pipeline, growth and trend reversals across UK construction.",
     url: "https://sustainability.fabrick.agency/dashboard/construction-output",
   },
 };
@@ -73,18 +75,18 @@ export default function ConstructionOutputPage() {
             ]}
           />
           <div className="flex items-center gap-2 mb-3">
-            <div className="h-2.5 w-2.5 rounded-full bg-emerald-400 pulse-live" />
-            <span className="text-xs font-semibold uppercase tracking-wider text-gray-400">
-              Monthly Data
+            <span className="text-[11px] font-semibold uppercase tracking-[0.18em] text-pink">
+              Fabrick Analysis
             </span>
           </div>
-          <h1 className="font-[family-name:var(--font-playfair)] text-4xl font-bold md:text-5xl lg:text-6xl">
-            UK Construction Output
+          <h1 className="font-[family-name:var(--font-playfair)] text-4xl font-bold md:text-5xl lg:text-6xl leading-[1.05]">
+            Where is UK construction growing, and where is it shrinking?
           </h1>
-          <p className="mt-3 max-w-3xl text-lg text-gray-400">
-            Monthly construction output data from the ONS. Total sector activity,
-            new work vs repair and maintenance, and breakdown by sector -- private
-            housing, public, infrastructure, commercial, and industrial.
+          <p className="mt-4 max-w-3xl text-lg text-gray-400">
+            Monthly ONS data on new work, repair and maintenance, and the
+            sector mix across private housing, infrastructure, commercial and
+            industrial. Use it to forecast pipeline, target the high-growth
+            sectors, and spot trend reversals before they hit the news.
           </p>
         </div>
       </section>

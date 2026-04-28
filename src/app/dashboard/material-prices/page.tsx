@@ -7,9 +7,10 @@ import { Zap, Building2, Landmark, Home, ArrowRight } from "lucide-react";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Construction Material Prices UK - Latest DBT Index | Fabrick",
+  title:
+    "What's moving in the UK construction materials basket? | Fabrick",
   description:
-    "Latest published price indices for steel, timber, concrete, aggregates, bricks and more from the Department for Business and Trade monthly release.",
+    "Latest published price indices for 28 UK construction materials from the Department for Business and Trade. Time procurement, evidence price changes in tenders, spot substitution wins.",
   keywords: [
     "construction material prices UK",
     "steel price index UK",
@@ -23,9 +24,10 @@ export const metadata: Metadata = {
     "brick prices UK",
   ],
   openGraph: {
-    title: "Construction Material Prices UK - Latest DBT Index | Fabrick",
+    title:
+      "What's moving in the UK construction materials basket? | Fabrick",
     description:
-      "Latest published price indices for key UK construction materials from the DBT monthly release.",
+      "28 monthly price indices from DBT. Movers, substitution wins and procurement timing for the people building Britain.",
     url: "https://sustainability.fabrick.agency/dashboard/material-prices",
   },
 };
@@ -75,18 +77,17 @@ export default function MaterialPricesPage() {
             ]}
           />
           <div className="flex items-center gap-2 mb-3">
-            <span className="text-xs font-semibold uppercase tracking-wider text-gray-400">
-              Latest Published - DBT Monthly Release
+            <span className="text-[11px] font-semibold uppercase tracking-[0.18em] text-pink">
+              Fabrick Analysis
             </span>
           </div>
-          <h1 className="font-[family-name:var(--font-playfair)] text-4xl font-bold md:text-5xl lg:text-6xl">
-            Construction Material Prices
+          <h1 className="font-[family-name:var(--font-playfair)] text-4xl font-bold md:text-5xl lg:text-6xl leading-[1.05]">
+            What&rsquo;s moving in the UK construction materials basket?
           </h1>
-          <p className="mt-3 max-w-3xl text-lg text-gray-400">
-            28 indices covering metals, cement and concrete, aggregates, timber,
-            plastics and finishes. Sourced from the Department for Business and
-            Trade&rsquo;s monthly Building Materials and Components Statistics
-            release. Updated when DBT publishes the next bulletin.
+          <p className="mt-4 max-w-3xl text-lg text-gray-400">
+            28 monthly price indices from the Department for Business and
+            Trade. Use it to time procurement, evidence price changes in
+            tenders, and spot the materials worth substituting.
           </p>
         </div>
       </section>

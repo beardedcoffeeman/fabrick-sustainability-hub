@@ -3,9 +3,10 @@ import { FabrickPlatformCTA } from "@/components/layout/FabrickCTA";
 import { Briefcase, HardHat, Megaphone, GraduationCap } from "lucide-react";
 
 export const metadata = {
-  title: "Knowledge Hub | Fabrick Built Environment Data",
+  title:
+    "What do the new construction rules actually mean? | Fabrick",
   description:
-    "Plain-English guides to construction sustainability. Embodied carbon, EPDs, Part Z, Future Homes Standard, and more explained.",
+    "Plain-English guides to UK construction sustainability. Embodied carbon, EPDs, Part Z, Future Homes Standard, MEES, and the rest, explained without the jargon.",
 };
 
 const painPoints = [
@@ -37,16 +38,16 @@ export default function KnowledgePage() {
       {/* Hero */}
       <section className="bg-charcoal py-12 text-white">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <span className="text-xs font-medium uppercase tracking-wider text-teal">
-            Learn
-          </span>
-          <h1 className="mt-2 font-[family-name:var(--font-playfair)] text-4xl font-bold md:text-5xl">
+          <span className="text-[11px] font-semibold uppercase tracking-[0.18em] text-pink">
             Knowledge Hub
+          </span>
+          <h1 className="mt-2 font-[family-name:var(--font-playfair)] text-4xl font-bold md:text-5xl leading-[1.05]">
+            What do the new construction rules actually mean?
           </h1>
-          <p className="mt-3 max-w-2xl text-lg text-gray-400">
-            Plain-English guides to construction sustainability. From embodied
-            carbon fundamentals to regulatory deep-dives, everything you need to
-            know in one place.
+          <p className="mt-4 max-w-2xl text-lg text-gray-400">
+            Plain-English guides to embodied carbon, EPDs, Part Z, Future
+            Homes Standard, MEES and the rest. Built so anyone in construction
+            can get up to speed without the jargon.
           </p>
 
           {/* Who this is for */}

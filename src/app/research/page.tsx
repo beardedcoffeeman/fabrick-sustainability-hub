@@ -13,9 +13,10 @@ import {
 import { EmailCaptureInline } from "@/components/research/EmailCaptureForm";
 
 export const metadata: Metadata = {
-  title: "Construction Industry Research | Fabrick Built Environment Data",
+  title:
+    "How does the UK construction industry actually decide? | Fabrick",
   description:
-    "Original research and data-driven insights for the UK built environment sector. Market research reports on AI, sustainability, procurement, and construction trends.",
+    "Original Fabrick research into how UK construction professionals search, evaluate suppliers, and make purchasing decisions. AI in procurement, search behaviour, and market intelligence.",
   keywords: [
     "construction industry research UK",
     "built environment market research",
@@ -24,9 +25,10 @@ export const metadata: Metadata = {
     "built environment data insights",
   ],
   openGraph: {
-    title: "Construction Industry Research | Fabrick Built Environment Data",
+    title:
+      "How does the UK construction industry actually decide? | Fabrick",
     description:
-      "Original research and data-driven insights for the UK built environment sector.",
+      "Original Fabrick research into UK construction decision-making, AI in procurement, and market intelligence.",
     url: "https://sustainability.fabrick.agency/research",
   },
 };
@@ -58,13 +60,16 @@ export default function ResearchPage() {
               { label: "Research" },
             ]}
           />
-          <h1 className="font-[family-name:var(--font-playfair)] text-4xl font-bold md:text-5xl lg:text-6xl">
-            Market Research &<br />
-            Industry Intelligence
+          <span className="text-[11px] font-semibold uppercase tracking-[0.18em] text-pink mb-3 inline-block">
+            Fabrick Research
+          </span>
+          <h1 className="font-[family-name:var(--font-playfair)] text-4xl font-bold md:text-5xl lg:text-6xl leading-[1.05]">
+            How does the UK construction industry actually decide?
           </h1>
           <p className="mt-4 max-w-2xl text-lg text-gray-400">
-            Original research and data-driven insights for the UK built
-            environment sector.
+            Original Fabrick research into how UK construction
+            professionals search, evaluate suppliers, and make purchasing
+            decisions in 2026.
           </p>
         </div>
       </section>

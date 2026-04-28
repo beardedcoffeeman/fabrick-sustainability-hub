@@ -76,8 +76,7 @@ const ALL_CARDS: DashboardCard[] = [
 ];
 
 // Role → recommended dashboards (priority-ordered, top 3 surface).
-// Uses the same role keys as RoleSelector. "all" never reaches this component
-// (page renders the empty-state branch instead).
+// Uses the same role keys as RoleSelector. "all" gets every dashboard.
 const RECOMMENDATIONS: Record<Exclude<Role, "all">, string[]> = {
   architect: ["material-prices", "carbon-intensity", "construction-output"],
   specifier: ["material-prices", "carbon-intensity", "construction-output"],
@@ -97,24 +96,21 @@ const ROLE_LABELS: Record<Exclude<Role, "all">, string> = {
 };
 
 export function RecommendedDashboards({ activeRole }: { activeRole: Role }) {
-  if (activeRole === "all") return null;
+  const cards =
+    activeRole === "all"
+      ? ALL_CARDS
+      : (RECOMMENDATIONS[activeRole] ?? [])
+          .map((id) => ALL_CARDS.find((c) => c.id === id))
+          .filter((c): c is DashboardCard => !!c);
 
-  const ids = RECOMMENDATIONS[activeRole] ?? [];
-  const cards = ids
-    .map((id) => ALL_CARDS.find((c) => c.id === id))
-    .filter((c): c is DashboardCard => !!c);
+  const lead =
+    activeRole === "all"
+      ? "All five dashboards. Pick a role above to see the three we'd recommend you start with."
+      : `Recommended for ${ROLE_LABELS[activeRole]}.`;
 
   return (
     <div>
-      <p className="text-center text-sm text-warm-gray mb-6">
-        Recommended for {ROLE_LABELS[activeRole]} -{" "}
-        <Link
-          href="/dashboard"
-          className="text-teal font-semibold hover:underline"
-        >
-          see all dashboards
-        </Link>
-      </p>
+      <p className="text-center text-sm text-warm-gray mb-6">{lead}</p>
 
       <div className="grid gap-4 md:grid-cols-3">
         {cards.map((card) => {

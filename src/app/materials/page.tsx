@@ -3,9 +3,10 @@ import { FabrickMarketingCTA, FabrickPlatformCTA } from "@/components/layout/Fab
 import { Ruler, HardHat, Warehouse, ClipboardCheck } from "lucide-react";
 
 export const metadata = {
-  title: "Material Carbon Calculator | Fabrick Built Environment Data",
+  title:
+    "Is your specification hitting embodied carbon targets? | Fabrick",
   description:
-    "Specify construction materials, calculate embodied carbon impact, and discover lower-carbon alternatives. Powered by the ICE database with LETI and RIBA 2030 benchmarks.",
+    "Calculate the kgCO₂e/m² of your material spec, benchmark against LETI and RIBA 2030 targets, and find substitution wins. Powered by the ICE database (Circular Ecology).",
 };
 
 const painPoints = [
@@ -37,16 +38,16 @@ export default function MaterialsPage() {
       {/* Hero */}
       <section className="bg-charcoal py-12 pb-16 text-white">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <span className="text-xs font-medium uppercase tracking-wider text-teal">
-            ICE Database · LETI Benchmarks
+          <span className="text-[11px] font-semibold uppercase tracking-[0.18em] text-pink">
+            Fabrick Analysis
           </span>
-          <h1 className="mt-2 font-[family-name:var(--font-playfair)] text-4xl font-bold md:text-5xl">
-            Carbon Calculator
+          <h1 className="mt-2 font-[family-name:var(--font-playfair)] text-4xl font-bold md:text-5xl leading-[1.05]">
+            Is your specification hitting embodied carbon targets?
           </h1>
-          <p className="mt-3 max-w-2xl text-lg text-gray-400">
-            Specify your materials, see the carbon impact, and discover
-            lower-carbon alternatives that align with Future Homes Standard and
-            Part Z requirements.
+          <p className="mt-4 max-w-2xl text-lg text-gray-400">
+            Calculate the kgCO₂e/m² of your material mix, benchmark against
+            LETI and RIBA 2030 thresholds, and find the substitution wins.
+            Powered by the ICE database (Circular Ecology).
           </p>
 
           {/* Who this is for */}

@@ -3,9 +3,10 @@ import { FabrickMarketingCTA, FabrickPlatformCTA } from "@/components/layout/Fab
 import { Building2, HardHat, Warehouse, Landmark, Sparkles, AlertTriangle, Clock, FileText } from "lucide-react";
 
 export const metadata = {
-  title: "UK Construction Sustainability Regulations | Fabrick Built Environment Data",
+  title:
+    "What construction regulations are coming, and when? | Fabrick",
   description:
-    "Track every upcoming UK construction sustainability regulation. Part Z, Future Homes Standard, UK CBAM, UKNZCBS, EPC requirements and more.",
+    "Future Homes Standard, Part Z, UK CBAM, MEES, EPC C minimum and more. Every UK construction sustainability rule on a single timeline, filterable by role and category.",
 };
 
 const painPoints = [
@@ -37,16 +38,16 @@ export default function RegulationsPage() {
       {/* Hero */}
       <section className="bg-charcoal py-12 text-white">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <span className="text-xs font-medium uppercase tracking-wider text-pink">
-            Regulatory Intelligence
+          <span className="text-[11px] font-semibold uppercase tracking-[0.18em] text-pink">
+            Fabrick Analysis
           </span>
-          <h1 className="mt-2 font-[family-name:var(--font-playfair)] text-4xl font-bold md:text-5xl">
-            UK Regulation Tracker
+          <h1 className="mt-2 font-[family-name:var(--font-playfair)] text-4xl font-bold md:text-5xl leading-[1.05]">
+            What construction regulations are coming, and when?
           </h1>
-          <p className="mt-3 max-w-2xl text-lg text-gray-400">
-            Every upcoming UK sustainability regulation affecting the
-            construction industry. Filterable by your role and regulation
-            category. Never miss a deadline.
+          <p className="mt-4 max-w-2xl text-lg text-gray-400">
+            Future Homes Standard, Part Z, UK CBAM, MEES, EPC C minimum and
+            more. Every UK construction sustainability rule on a single
+            timeline, filterable by role and category.
           </p>
 
           {/* Who this is for */}
