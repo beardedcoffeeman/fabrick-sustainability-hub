@@ -5,7 +5,7 @@ import { Pause, Play } from "lucide-react";
 
 interface BannerVideoProps {
   src: string;
-  poster: string;
+  poster?: string;
 }
 
 export function BannerVideo({ src, poster }: BannerVideoProps) {
@@ -54,15 +54,17 @@ export function BannerVideo({ src, poster }: BannerVideoProps) {
           preload="metadata"
           aria-hidden="true"
         />
-        {/* Contrast overlay: vertical gradient for text readability */}
+        {/* Contrast overlay: vertical gradient for text readability.
+            Lighter tones than before - lifts the brightness of the
+            footage while keeping copy legible. */}
         <div
           aria-hidden="true"
-          className="absolute inset-0 bg-gradient-to-b from-charcoal/75 via-charcoal/55 to-charcoal/85"
+          className="absolute inset-0 bg-gradient-to-b from-charcoal/45 via-charcoal/25 to-charcoal/55"
         />
         {/* Subtle vignette on the left where copy sits */}
         <div
           aria-hidden="true"
-          className="absolute inset-0 bg-gradient-to-r from-charcoal/40 via-transparent to-transparent"
+          className="absolute inset-0 bg-gradient-to-r from-charcoal/25 via-transparent to-transparent"
         />
       </div>
 
