@@ -78,10 +78,10 @@ export default function HomePage() {
 
             <p className="mt-6 text-base md:text-lg text-white/90 max-w-2xl leading-relaxed animate-fade-in-delay-2 [text-shadow:0_1px_12px_rgba(0,0,0,0.5)]">
               We&rsquo;re putting live data, original analysis and open
-              tools in front of the people building Britain - so every
-              decision, from how a project goes up on site to how a
-              construction company goes to market, is informed by
-              evidence.
+              tools in front of the people building Britain, so every
+              decision, from how materials are specified at RIBA Stage 4
+              to how a construction company goes to market, is informed
+              by evidence.
             </p>
           </div>
         </div>
