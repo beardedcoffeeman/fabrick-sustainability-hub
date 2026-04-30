@@ -11,6 +11,17 @@ import {
   Mail,
 } from "lucide-react";
 import { BannerVideo } from "@/components/home/BannerVideo";
+import insightsSnapshot from "@/data/insights-snapshot.json";
+
+interface InsightCard {
+  eyebrow: string;
+  headline: string;
+  detail: string;
+  href: string;
+}
+
+const LATEST_INSIGHTS: InsightCard[] = (insightsSnapshot.insights ??
+  []) as InsightCard[];
 
 // ============================================================
 // Curved SVG Arc Divider
@@ -270,32 +281,7 @@ export default function HomePage() {
           </div>
 
           <div className="grid gap-4 md:grid-cols-3">
-            {[
-              {
-                eyebrow: "UK Grid Carbon",
-                headline:
-                  "Sunday 3am is the cleanest hour of the UK week - 29% below average.",
-                detail:
-                  "Schedule grid-powered plant operations into weekend overnight windows.",
-                href: "/dashboard/carbon-intensity",
-              },
-              {
-                eyebrow: "Material Prices",
-                headline:
-                  "Structural steel down 5.5% YoY - the biggest fall in the basket.",
-                detail:
-                  "Copper is the standout riser at +9.8% YoY. Time orders against the trend.",
-                href: "/dashboard/material-prices",
-              },
-              {
-                eyebrow: "Embodied Carbon",
-                headline:
-                  "Switching CEM I to GGBS-blend cement cuts ~40% kgCO₂e/kg.",
-                detail:
-                  "The single highest-impact swap on most concrete-frame projects.",
-                href: "/materials",
-              },
-            ].map((item) => (
+            {LATEST_INSIGHTS.map((item) => (
               <Link
                 key={item.headline}
                 href={item.href}

@@ -1,0 +1,39 @@
+name: Refresh material prices
+
+# DBT publishes Building Materials and Components Statistics monthly,
+# usually on the first Wednesday of the month with data from two months
+# prior. We run on the 5th to give a buffer, and on the 12th as a
+# safety-net retry in case the 5th one missed.
+
+on:
+  schedule:
+    - cron: "0 7 5 * *"
+    - cron: "0 7 12 * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: "npm"
+      - run: npm ci
+      - name: Run DBT material prices ingest
+        run: npx tsx scripts/ingest-material-prices.ts
+      - name: Commit snapshot if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add src/data/material-prices-snapshot.json
+          if git diff --staged --quiet; then
+            echo "No changes - DBT release unchanged."
+          else
+            git commit -m "chore: refresh material prices snapshot [skip ci]"
+            git push
+          fi

@@ -1,0 +1,23 @@
+{
+  "generatedAt": "2026-04-30T15:32:41.220Z",
+  "insights": [
+    {
+      "eyebrow": "UK Grid Carbon",
+      "headline": "Sunday 3am is the cleanest hour of the UK week, 28% below average.",
+      "detail": "Schedule grid-powered plant operations into the lowest-carbon windows.",
+      "href": "/dashboard/carbon-intensity"
+    },
+    {
+      "eyebrow": "Material Prices",
+      "headline": "Imported sawn/planed timber up +7.6% YoY, the biggest mover in the UK construction basket.",
+      "detail": "Sand & gravel (incl. aggregate levy) is the next biggest mover at +7.3% YoY.",
+      "href": "/dashboard/material-prices"
+    },
+    {
+      "eyebrow": "Embodied Carbon",
+      "headline": "Switching Phenolic Foam Board to Cellulose Insulation cuts ~95% kgCO₂e/kg.",
+      "detail": "Use the calculator to model the swap against your spec and benchmark it against LETI and RIBA 2030 targets.",
+      "href": "/materials"
+    }
+  ]
+}
