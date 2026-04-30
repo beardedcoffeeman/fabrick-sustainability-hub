@@ -17,7 +17,7 @@ const playfair = Playfair_Display({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://sustainability.fabrick.agency"),
+  metadataBase: new URL("https://fabrick-sustainability-hub.vercel.app"),
   title: "Fabrick Built Environment Data | Live UK Construction Intelligence",
   description:
     "The UK construction industry's leading sustainability data hub. Live carbon data, material calculators, regulatory intelligence, and practical tools for net-zero construction.",
@@ -34,7 +34,7 @@ export const metadata: Metadata = {
     title: "Fabrick Built Environment Data | Live UK Construction Intelligence",
     description:
       "Live carbon intensity, material prices, construction output, and regulatory intelligence for the UK built environment. Driven by data. Powered by creativity.",
-    url: "https://sustainability.fabrick.agency",
+    url: "https://fabrick-sustainability-hub.vercel.app",
     siteName: "Fabrick Built Environment Data",
     type: "website",
     locale: "en_GB",

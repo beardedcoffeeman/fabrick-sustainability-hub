@@ -26,7 +26,7 @@ export const metadata: Metadata = {
       "Where is UK construction growing, and where is it shrinking? | Fabrick",
     description:
       "Monthly ONS construction output by sector. Pipeline, growth and trend reversals across UK construction.",
-    url: "https://sustainability.fabrick.agency/dashboard/construction-output",
+    url: "https://fabrick-sustainability-hub.vercel.app/dashboard/construction-output",
   },
 };
 

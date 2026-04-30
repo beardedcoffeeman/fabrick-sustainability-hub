@@ -35,7 +35,7 @@ export const metadata: Metadata = {
     title: "AI in Construction Search & Procurement | Fabrick Research",
     description:
       "How construction professionals use ChatGPT, AI search tools, and Google AI Overviews to find suppliers and products.",
-    url: "https://sustainability.fabrick.agency/research/ai-construction-search",
+    url: "https://fabrick-sustainability-hub.vercel.app/research/ai-construction-search",
   },
 };
 

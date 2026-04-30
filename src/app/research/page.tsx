@@ -29,7 +29,7 @@ export const metadata: Metadata = {
       "How does the UK construction industry actually decide? | Fabrick",
     description:
       "Original Fabrick research into UK construction decision-making, AI in procurement, and market intelligence.",
-    url: "https://sustainability.fabrick.agency/research",
+    url: "https://fabrick-sustainability-hub.vercel.app/research",
   },
 };
 
