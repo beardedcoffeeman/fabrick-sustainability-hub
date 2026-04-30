@@ -113,9 +113,17 @@ export function SpecificationCalculator() {
 
   useEffect(() => {
     if (!justAddedId) return;
+    // Only scroll if the just-added item is off-screen, and only as little
+    // as needed. "block: center" was pulling the Add Material form out of
+    // view on narrow viewports, making multi-material adding feel broken.
     const el = itemRefs.current[justAddedId];
     if (el) {
-      el.scrollIntoView({ behavior: "smooth", block: "center" });
+      const rect = el.getBoundingClientRect();
+      const inView =
+        rect.top >= 0 && rect.bottom <= window.innerHeight;
+      if (!inView) {
+        el.scrollIntoView({ behavior: "smooth", block: "nearest" });
+      }
     }
     const flashTimer = setTimeout(() => setAddedFlash(false), 1200);
     const highlightTimer = setTimeout(() => setJustAddedId(null), 2000);
@@ -290,10 +298,18 @@ export function SpecificationCalculator() {
 
       {/* ────────── Add Material ────────── */}
       <div className="rounded-2xl bg-white p-6 shadow-sm">
-        <h3 className="text-sm font-semibold text-navy mb-4 flex items-center gap-2">
-          <Plus className="h-4 w-4 text-teal" />
-          Add Material to Specification
-        </h3>
+        <div className="flex items-center justify-between mb-4 gap-3 flex-wrap">
+          <h3 className="text-sm font-semibold text-navy flex items-center gap-2">
+            <Plus className="h-4 w-4 text-teal" />
+            Add Material to Specification
+          </h3>
+          {lineItems.length > 0 && (
+            <span className="inline-flex items-center gap-1.5 rounded-full bg-teal/10 px-3 py-1 text-[11px] font-semibold text-teal">
+              <Check className="h-3 w-3" />
+              {lineItems.length} material{lineItems.length === 1 ? "" : "s"} in spec - add another
+            </span>
+          )}
+        </div>
         <div className="grid gap-3 md:grid-cols-5">
           <div className="md:col-span-1">
             <label className="text-xs font-medium text-warm-gray mb-1 block">Category</label>
