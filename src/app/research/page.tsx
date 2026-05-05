@@ -36,15 +36,14 @@ export const metadata: Metadata = {
 const researchStudies = [
   {
     slug: "ai-construction-search",
-    title:
-      "AI in Construction: How the Industry Searches, Discovers & Decides",
-    status: "Coming Soon - Q2 2026",
+    title: "How Accurate is AI for UK Construction?",
+    status: "Published 2025",
     description:
-      "The UK's first study into how construction professionals use AI tools like ChatGPT, Claude, and Google AI Overviews to find and evaluate suppliers, products, and services.",
-    statsPreview:
-      "400+ survey respondents | 20 expert interviews | 6 sectors covered",
-    tags: ["AI", "Search Behaviour", "Procurement", "Market Intelligence"],
+      "Fabrick tested 10 AI models on 1,001 technical UK construction questions across 20 categories. Claude Opus led at 77%. Paid models beat free by 10 percentage points. The definitive accuracy benchmark.",
+    statsPreview: "1,001 questions | 10 AI models | 20 categories",
+    tags: ["AI", "Accuracy Benchmark", "UK Standards", "Model Comparison"],
     icon: Brain,
+    published: true,
   },
 ];
 
@@ -90,7 +89,11 @@ export default function ResearchPage() {
                     <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-pink/20">
                       <Icon className="h-5 w-5 text-pink" />
                     </div>
-                    <span className="inline-flex items-center rounded-full bg-pink px-3 py-1 text-[10px] font-bold uppercase tracking-wider text-white">
+                    <span
+                      className={`inline-flex items-center rounded-full px-3 py-1 text-[10px] font-bold uppercase tracking-wider text-white ${
+                        study.published ? "bg-teal" : "bg-pink"
+                      }`}
+                    >
                       {study.status}
                     </span>
                   </div>
@@ -126,23 +129,33 @@ export default function ResearchPage() {
                     ))}
                   </div>
 
-                  {/* Email capture */}
+                  {/* CTA */}
                   <div className="mt-6 pt-5 border-t border-cream-dark">
-                    <p className="text-xs font-semibold text-navy mb-2.5">
-                      Register for early access
-                    </p>
-                    <EmailCaptureInline />
-                  </div>
-
-                  {/* Learn more link */}
-                  <div className="mt-4">
-                    <Link
-                      href={`/research/${study.slug}`}
-                      className="inline-flex items-center gap-1.5 text-sm font-semibold text-teal transition-colors hover:text-teal-dark"
-                    >
-                      Learn more
-                      <ArrowRight className="h-3.5 w-3.5" />
-                    </Link>
+                    {study.published ? (
+                      <Link
+                        href={`/research/${study.slug}`}
+                        className="inline-flex items-center gap-1.5 rounded-lg bg-charcoal px-4 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-navy-light"
+                      >
+                        View the results
+                        <ArrowRight className="h-3.5 w-3.5" />
+                      </Link>
+                    ) : (
+                      <>
+                        <p className="text-xs font-semibold text-navy mb-2.5">
+                          Register for early access
+                        </p>
+                        <EmailCaptureInline />
+                        <div className="mt-4">
+                          <Link
+                            href={`/research/${study.slug}`}
+                            className="inline-flex items-center gap-1.5 text-sm font-semibold text-teal transition-colors hover:text-teal-dark"
+                          >
+                            Learn more
+                            <ArrowRight className="h-3.5 w-3.5" />
+                          </Link>
+                        </div>
+                      </>
+                    )}
                   </div>
                 </div>
               </div>
