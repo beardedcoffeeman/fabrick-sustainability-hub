@@ -336,8 +336,8 @@ export function SpecificationCalculator() {
           ((material.embodiedCarbon - alt.embodiedCarbon) / material.embodiedCarbon) * 100
         ),
       }))
-      .filter((alt) => alt.saving > 0)
-      .sort((a, b) => b.saving - a.saving);
+      // Show every alternative the data lists. The table compares — it does not rank.
+      .sort((a, b) => a.name.localeCompare(b.name));
   };
 
   const potentialSaving = useMemo(() => {
@@ -581,13 +581,10 @@ export function SpecificationCalculator() {
                     {alternatives.length > 0 && (
                       <button
                         onClick={() => setExpandedAlternatives(isExpanded ? null : item.id)}
-                        className="rounded-lg p-2 text-teal hover:bg-cream transition-colors relative"
-                        title={isReportUnlocked ? "View alternatives" : "Unlock report to view alternatives"}
+                        className="rounded-lg p-2 text-teal hover:bg-cream transition-colors"
+                        title="Compare alternatives"
                       >
                         <Lightbulb className="h-4 w-4" />
-                        {!isReportUnlocked && (
-                          <Lock className="absolute -top-0.5 -right-0.5 h-2.5 w-2.5 text-warm-gray" />
-                        )}
                       </button>
                     )}
                     <button
@@ -599,76 +596,121 @@ export function SpecificationCalculator() {
                   </div>
                 </div>
 
-                {/* Alternatives panel */}
+                {/* Comparison table - present alternatives side-by-side with current
+                    spec. The table compares; it does not recommend. */}
                 {isExpanded && alternatives.length > 0 && (
-                  isReportUnlocked ? (
-                    <div className="border-t border-gray-100 bg-cream/50 p-4">
-                      <p className="text-xs font-semibold text-navy mb-1 flex items-center gap-1.5">
-                        <Lightbulb className="h-3.5 w-3.5 text-teal" />
-                        Compare alternatives for {material.name}
-                      </p>
-                      <p className="text-[11px] text-warm-gray mb-3 leading-relaxed">
-                        We rank by embodied carbon, but no single axis decides the
-                        right material. Trade-offs (thickness for the same U-value,
-                        fire rating, indicative cost) are shown alongside so you
-                        can choose what matters for your build.
-                      </p>
-                      <div className="space-y-2">
-                        {alternatives.map((alt) => {
-                          const altCarbon = kgs * alt.embodiedCarbon;
-                          return (
-                            <div
-                              key={alt.id}
-                              className="rounded-lg bg-white p-3"
-                            >
-                              <div className="flex items-start gap-3">
-                                <div className="flex-1 min-w-0">
+                  <div className="border-t border-gray-100 bg-cream/50 p-4">
+                    <p className="text-xs font-semibold text-navy mb-1 flex items-center gap-1.5">
+                      <Lightbulb className="h-3.5 w-3.5 text-teal" />
+                      Compare {material.name} with alternatives
+                    </p>
+                    <p className="text-[11px] text-warm-gray mb-3 leading-relaxed">
+                      Each row is one material. Pick what matters for your build.
+                    </p>
+                    <div className="overflow-x-auto rounded-lg border border-gray-200 bg-white">
+                      <table className="w-full text-xs">
+                        <thead>
+                          <tr className="bg-cream-dark/40 text-warm-gray">
+                            <th className="text-left font-semibold uppercase tracking-wide px-3 py-2">Material</th>
+                            <th className="text-left font-semibold uppercase tracking-wide px-3 py-2">Carbon (kgCO₂e/kg)</th>
+                            <th className="text-left font-semibold uppercase tracking-wide px-3 py-2">Thickness*</th>
+                            <th className="text-left font-semibold uppercase tracking-wide px-3 py-2">Fire</th>
+                            <th className="text-left font-semibold uppercase tracking-wide px-3 py-2">Cost</th>
+                            <th className="text-right font-semibold uppercase tracking-wide px-3 py-2"></th>
+                          </tr>
+                        </thead>
+                        <tbody className="divide-y divide-gray-100">
+                          {/* Current spec row */}
+                          <tr className="bg-cream/40">
+                            <td className="px-3 py-2.5">
+                              <div className="flex items-center gap-2 flex-wrap">
+                                <span className="font-semibold text-navy">{material.name}</span>
+                                <span className="rounded-full bg-navy text-white px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wide">
+                                  Current
+                                </span>
+                              </div>
+                            </td>
+                            <td className="px-3 py-2.5 text-charcoal/80 tabular-nums">
+                              {material.embodiedCarbon}
+                            </td>
+                            <td className="px-3 py-2.5 text-charcoal/80">baseline</td>
+                            <td className="px-3 py-2.5 text-charcoal/80">{material.fireRating ?? "—"}</td>
+                            <td className="px-3 py-2.5 text-charcoal/80">
+                              {material.costBand ? COST_SYMBOLS[material.costBand] : "—"}
+                            </td>
+                            <td className="px-3 py-2.5"></td>
+                          </tr>
+                          {/* Alternative rows */}
+                          {alternatives.map((alt) => {
+                            const thicknessLabel = (() => {
+                              if (!material.thermalConductivity || !alt.thermalConductivity) return "—";
+                              const ratio = alt.thermalConductivity / material.thermalConductivity;
+                              if (ratio > 1.05) return `+${Math.round((ratio - 1) * 100)}% thicker`;
+                              if (ratio < 0.95) return `${Math.round((1 - ratio) * 100)}% thinner`;
+                              return "similar";
+                            })();
+                            return (
+                              <tr key={alt.id} className="hover:bg-cream/30">
+                                <td className="px-3 py-2.5">
                                   <div className="flex items-center gap-2 flex-wrap">
-                                    <span className="text-sm font-semibold text-navy">{alt.name}</span>
+                                    <span className="font-medium text-navy">{alt.name}</span>
                                     {alt.fhsRecommended && (
                                       <span className="rounded-full bg-green-100 px-2 py-0.5 text-[10px] font-semibold text-green-700">
-                                        FHS ✓
+                                        FHS
                                       </span>
                                     )}
                                   </div>
-                                  {alt.notes && (
-                                    <p className="text-[11px] text-warm-gray/70 mt-0.5 leading-snug">
-                                      {alt.notes}
-                                    </p>
+                                </td>
+                                <td className="px-3 py-2.5 text-charcoal/80 tabular-nums">
+                                  {alt.embodiedCarbon}
+                                </td>
+                                <td className="px-3 py-2.5 text-charcoal/80">{thicknessLabel}</td>
+                                <td className="px-3 py-2.5 text-charcoal/80">{alt.fireRating ?? "—"}</td>
+                                <td className="px-3 py-2.5 text-charcoal/80">
+                                  {alt.costBand ? COST_SYMBOLS[alt.costBand] : "—"}
+                                </td>
+                                <td className="px-3 py-2.5 text-right">
+                                  {isReportUnlocked ? (
+                                    <button
+                                      onClick={() => {
+                                        setLineItems((prev) =>
+                                          prev.map((li) =>
+                                            li.id === item.id ? { ...li, materialId: alt.id } : li
+                                          )
+                                        );
+                                        setExpandedAlternatives(null);
+                                      }}
+                                      className="shrink-0 rounded-lg bg-teal px-3 py-1.5 text-xs font-semibold text-white hover:bg-teal-dark transition-colors"
+                                    >
+                                      Swap
+                                    </button>
+                                  ) : (
+                                    <span
+                                      title="Unlock the full report below to apply swaps"
+                                      className="shrink-0 inline-flex items-center gap-1 rounded-lg border border-warm-gray/30 px-3 py-1.5 text-xs font-medium text-warm-gray"
+                                    >
+                                      <Lock className="h-3 w-3" />
+                                      Swap
+                                    </span>
                                   )}
-                                </div>
-                                <button
-                                  onClick={() => {
-                                    setLineItems((prev) =>
-                                      prev.map((li) =>
-                                        li.id === item.id ? { ...li, materialId: alt.id } : li
-                                      )
-                                    );
-                                    setExpandedAlternatives(null);
-                                  }}
-                                  className="shrink-0 rounded-lg bg-teal px-3 py-1.5 text-xs font-semibold text-white hover:bg-teal-dark transition-colors"
-                                >
-                                  Swap
-                                </button>
-                              </div>
-                              <TradeOffChips original={material} alt={alt} altCarbonKg={altCarbon} originalCarbonKg={itemCarbon} />
-                            </div>
-                          );
-                        })}
-                      </div>
+                                </td>
+                              </tr>
+                            );
+                          })}
+                        </tbody>
+                      </table>
                     </div>
-                  ) : (
-                    /* Locked alternatives teaser */
-                    <div className="border-t border-gray-100 bg-cream/50 p-5 text-center">
-                      <Lock className="mx-auto h-5 w-5 text-warm-gray/40 mb-2" />
-                      <p className="text-sm font-medium text-navy">
-                        {alternatives.length} lower-carbon alternative{alternatives.length > 1 ? "s" : ""} available
-                      </p>
-                      <p className="text-xs text-warm-gray mt-1">
-                        Unlock your full report below to view and swap alternatives
-                      </p>
-                    </div>
-                  )
+                    <p className="text-[10px] text-warm-gray/80 mt-2 leading-snug">
+                      * Thickness shows the relative material depth needed to
+                      achieve the same U-value, derived from declared λ values.
+                      Fire = BS EN 13501-1 Euroclass. Cost is indicative
+                      (£ band). See{" "}
+                      <Link href="/methodology" className="underline underline-offset-2 hover:text-navy">
+                        methodology
+                      </Link>{" "}
+                      for sources.
+                    </p>
+                  </div>
                 )}
               </div>
             );
@@ -694,23 +736,11 @@ export function SpecificationCalculator() {
                 <strong className="text-white">
                   {fabrickAnalysis.top.material.name}
                 </strong>{" "}
-                is doing {fabrickAnalysis.topPct.toFixed(0)}% of the carbon work
-                in this spec. If you only have time for one swap, this is the
-                one that moves the number.
-              </p>
-            )}
-            {fabrickAnalysis.bestAlt && fabrickAnalysis.swapSavingPct > 5 && (
-              <p>
-                Switching to{" "}
-                <strong className="text-teal">
-                  {fabrickAnalysis.bestAlt.name}
-                </strong>{" "}
-                cuts that material&rsquo;s embodied carbon by roughly{" "}
-                <strong className="text-teal">
-                  {fabrickAnalysis.swapSavingPct.toFixed(0)}%
-                </strong>
-                . Review the trade-offs (thickness, fire rating, cost) in the
-                alternatives panel on that line item before swapping. See{" "}
+                is doing {fabrickAnalysis.topPct.toFixed(0)}% of the carbon
+                work in this spec. Click the{" "}
+                <Lightbulb className="inline h-4 w-4 text-teal -mt-0.5" />{" "}
+                icon on its line above to compare it side-by-side with
+                alternatives (carbon, thickness, fire, cost). See{" "}
                 <Link href="/methodology" className="text-teal underline underline-offset-2 hover:text-teal-dark">
                   methodology
                 </Link>{" "}
