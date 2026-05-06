@@ -7,7 +7,6 @@ import {
   Building2,
   Landmark,
   Building,
-  LayoutDashboard,
   ArrowRight,
 } from "lucide-react";
 import {
@@ -258,15 +257,6 @@ export function RecommendedDashboards({ activeRole }: { activeRole: Role }) {
         })}
       </div>
 
-      <div className="mt-8 text-center">
-        <Link
-          href="/dashboard"
-          className="inline-flex items-center gap-2 rounded-full border border-charcoal/20 bg-white px-5 py-2.5 text-sm font-semibold text-charcoal transition-all hover:bg-charcoal hover:text-white hover:border-charcoal"
-        >
-          <LayoutDashboard className="h-4 w-4" />
-          Open the combined dashboard
-        </Link>
-      </div>
     </div>
   );
 }

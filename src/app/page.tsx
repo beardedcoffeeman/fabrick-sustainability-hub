@@ -94,6 +94,77 @@ export default function HomePage() {
       </section>
 
       {/* ============================================================
+          TRUST STRIP - prominent. Six UK government and industry
+          datasets, named and credited at the top of the page.
+          ============================================================ */}
+      <section className="bg-cream py-12 md:py-14 border-b border-charcoal/[0.06]">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-8 max-w-2xl mx-auto">
+            <span className="text-[11px] font-semibold uppercase tracking-[0.18em] text-pink">
+              Trusted data
+            </span>
+            <h2 className="mt-3 font-[family-name:var(--font-playfair)] text-2xl md:text-3xl font-bold text-navy leading-tight">
+              Built on six UK government and industry datasets.
+            </h2>
+            <p className="mt-3 text-sm text-warm-gray">
+              Live, verifiable, and refreshed automatically. No black-box
+              estimates.
+            </p>
+          </div>
+
+          <div className="grid gap-3 sm:grid-cols-2 md:grid-cols-3">
+            {[
+              {
+                name: "National Grid ESO",
+                dataset: "Carbon Intensity API",
+                url: "https://carbonintensity.org.uk",
+              },
+              {
+                name: "Office for National Statistics",
+                dataset: "Construction output",
+                url: "https://www.ons.gov.uk",
+              },
+              {
+                name: "MHCLG (HM Government)",
+                dataset: "EPC open data register",
+                url: "https://epc.opendatacommunities.org/",
+              },
+              {
+                name: "planning.data.gov.uk",
+                dataset: "Live planning applications",
+                url: "https://www.planning.data.gov.uk",
+              },
+              {
+                name: "Department for Business and Trade",
+                dataset: "Material price indices",
+                url: "https://www.gov.uk/government/organisations/department-for-business-and-trade",
+              },
+              {
+                name: "ICE Database (Circular Ecology)",
+                dataset: "Embodied carbon factors",
+                url: "https://circularecology.com/embodied-carbon-footprint-database.html",
+              },
+            ].map((source) => (
+              <a
+                key={source.name}
+                href={source.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group block rounded-xl bg-white border border-charcoal/[0.08] p-4 transition-all hover:border-charcoal/30 hover:shadow-sm"
+              >
+                <p className="font-[family-name:var(--font-playfair)] text-base font-bold text-navy leading-tight group-hover:text-charcoal">
+                  {source.name}
+                </p>
+                <p className="mt-1 text-[11px] uppercase tracking-[0.1em] text-warm-gray/80">
+                  {source.dataset}
+                </p>
+              </a>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ============================================================
           ROLE SELECTOR + DASHBOARD CARDS
           The first interactive moment - tells visitors immediately
           what they can do and tailors the cards to them.
@@ -309,38 +380,6 @@ export default function HomePage() {
                 </li>
               </ul>
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* ============================================================
-          TRUST STRIP - moved below the fold so the homepage opens
-          on a clear question, not on a wall of attribution.
-          ============================================================ */}
-      <section className="bg-cream py-10 md:py-12 border-y border-charcoal/[0.06]">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <p className="text-[10px] font-semibold uppercase tracking-[0.18em] text-warm-gray text-center mb-6">
-            Trusted data from
-          </p>
-          <div className="flex flex-wrap items-center justify-center gap-x-10 gap-y-4">
-            {[
-              { name: "National Grid ESO", url: "https://carbonintensity.org.uk" },
-              { name: "Office for National Statistics", url: "https://www.ons.gov.uk" },
-              { name: "ICE Database (Circular Ecology)", url: "https://circularecology.com/embodied-carbon-footprint-database.html" },
-              { name: "Department for Business and Trade", url: "https://www.gov.uk/government/organisations/department-for-business-and-trade" },
-              { name: "MHCLG (EPC Open Data)", url: "https://epc.opendatacommunities.org/" },
-              { name: "planning.data.gov.uk", url: "https://www.planning.data.gov.uk" },
-            ].map((source) => (
-              <a
-                key={source.name}
-                href={source.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-xs md:text-sm font-semibold uppercase tracking-[0.08em] text-warm-gray/80 transition-colors hover:text-navy whitespace-nowrap"
-              >
-                {source.name}
-              </a>
-            ))}
           </div>
         </div>
       </section>
