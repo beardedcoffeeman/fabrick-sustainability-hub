@@ -84,10 +84,14 @@ export default function HomePage() {
               Build smarter. Decide faster. Stay ahead.
             </h1>
             <p className="mt-6 text-base md:text-lg text-white/90 max-w-2xl leading-relaxed animate-fade-in-delay-2 [text-shadow:0_1px_12px_rgba(0,0,0,0.5)]">
-              The construction industry is changing, and this free platform,
-              updated in real time, will help you keep up. From rising material
-              costs to tightening regulations and growing carbon pressures,
-              every decision now carries more risk and more scrutiny.
+              The construction industry is changing, and this{" "}
+              <em className="font-[family-name:var(--font-playfair)] italic font-semibold text-white tracking-wide">
+                free
+              </em>{" "}
+              platform, updated in real time, will help you keep up. From
+              rising material costs to tightening regulations and growing
+              carbon pressures, every decision now carries more risk and
+              more scrutiny.
             </p>
             <p className="mt-4 text-base md:text-lg text-white/90 max-w-2xl leading-relaxed animate-fade-in-delay-2 [text-shadow:0_1px_12px_rgba(0,0,0,0.5)]">
               We bring together live data, original analysis and practical
