@@ -8,6 +8,8 @@ import {
   BookOpen,
   Compass,
   Mail,
+  LayoutDashboard,
+  ScrollText,
 } from "lucide-react";
 import { BannerVideo } from "@/components/home/BannerVideo";
 import { RoleSelector, type Role } from "@/components/home/RoleSelector";
@@ -83,32 +85,47 @@ export default function HomePage() {
             </p>
 
             <h1 className="font-[family-name:var(--font-playfair)] text-5xl sm:text-6xl md:text-7xl font-bold text-white leading-[0.98] tracking-tight animate-fade-in-delay-1 [text-shadow:0_2px_24px_rgba(0,0,0,0.4)]">
-              The questions construction asks, answered with data.
+              Build smarter. Decide faster. Stay ahead.
             </h1>
             <p className="mt-6 text-base md:text-lg text-white/90 max-w-2xl leading-relaxed animate-fade-in-delay-2 [text-shadow:0_1px_12px_rgba(0,0,0,0.5)]">
-              Live UK datasets, original analysis and open tools. Pick your
-              role below and we will surface what is most useful for you.
+              The construction industry is changing, and this free platform,
+              updated in real time, will help you keep up. From rising material
+              costs to tightening regulations and growing carbon pressures,
+              every decision now carries more risk and more scrutiny.
+            </p>
+            <p className="mt-4 text-base md:text-lg text-white/90 max-w-2xl leading-relaxed animate-fade-in-delay-2 [text-shadow:0_1px_12px_rgba(0,0,0,0.5)]">
+              We bring together live data, original analysis and practical
+              tools so your decisions are backed by evidence, not guesswork.
+              This is where you start.
             </p>
           </div>
         </div>
       </section>
 
       {/* ============================================================
-          TRUST STRIP - prominent. Six UK government and industry
-          datasets, named and credited at the top of the page.
+          TRUST STRIP - "Powered by Trusted Data" (copy by Colin).
+          Six UK government and industry datasets, prominently
+          credited at the top of the page.
           ============================================================ */}
-      <section className="bg-cream py-12 md:py-14 border-b border-charcoal/[0.06]">
+      <section className="bg-cream py-14 md:py-16 border-b border-charcoal/[0.06]">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-8 max-w-2xl mx-auto">
+          <div className="text-center mb-10 max-w-3xl mx-auto">
             <span className="text-[11px] font-semibold uppercase tracking-[0.18em] text-pink">
-              Trusted data
+              Powered by trusted data
             </span>
-            <h2 className="mt-3 font-[family-name:var(--font-playfair)] text-2xl md:text-3xl font-bold text-navy leading-tight">
-              Built on six UK government and industry datasets.
+            <h2 className="mt-3 font-[family-name:var(--font-playfair)] text-3xl md:text-4xl font-bold text-navy leading-tight">
+              Built on the most credible sources in the UK.
             </h2>
-            <p className="mt-3 text-sm text-warm-gray">
-              Live, verifiable, and refreshed automatically. No black-box
-              estimates.
+            <p className="mt-4 text-sm md:text-base text-charcoal/80 leading-relaxed">
+              We aggregate and interpret information from leading
+              organisations including National Grid ESO, the Office for
+              National Statistics and the ICE Database, alongside key
+              government departments such as the Department for Business
+              and Trade and the Ministry of Housing, Communities and Local
+              Government, plus open platforms like planning.data.gov.uk.
+              The result: fragmented datasets turned into clear, usable
+              intelligence, and a more complete picture of what is
+              happening across construction, property and infrastructure.
             </p>
           </div>
 
@@ -191,45 +208,72 @@ export default function HomePage() {
       </section>
 
       {/* ============================================================
-          TOOLS & CONTENT - non-dashboard entry points (calculator,
-          knowledge, research). Three calm cards, not six.
+          WHAT WE'VE BUILT - five sections walked through in order.
+          Copy by Colin: a single platform that brings the data,
+          insight and intelligence shaping the built environment.
           ============================================================ */}
       <section className="bg-cream py-16 md:py-20 border-t border-charcoal/[0.06]">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-10 md:mb-12 max-w-2xl mx-auto">
+          <div className="text-center mb-10 md:mb-12 max-w-3xl mx-auto">
             <span className="text-[11px] font-semibold uppercase tracking-[0.18em] text-pink">
-              Beyond the dashboards
+              What we have built and how to use it
             </span>
             <h2 className="mt-3 font-[family-name:var(--font-playfair)] text-3xl md:text-4xl font-bold text-navy">
-              Tools, knowledge and original research.
+              A single platform for the built environment.
             </h2>
+            <p className="mt-4 text-sm md:text-base text-charcoal/80 leading-relaxed">
+              We have brought together the data, insight and intelligence
+              shaping the built environment, so you do not have to go
+              looking for it. Instead of navigating multiple sources,
+              interpreting raw datasets or trying to connect the dots
+              yourself, everything is structured here in a way that is
+              clear, accessible and immediately useful.
+            </p>
           </div>
 
-          <div className="grid gap-4 md:grid-cols-3">
+          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {[
               {
-                eyebrow: "Open tools",
-                headline: "Will swapping that material cut your carbon?",
+                eyebrow: "Dashboard",
+                headline: "Live view of the industry's key metrics.",
                 detail:
-                  "Embodied carbon calculator with multi-criteria comparison. Carbon, thermal performance, fire rating and indicative cost - all in one view.",
+                  "Carbon, material prices, planning activity, construction output and EPC ratings, refreshed automatically.",
+                href: "/dashboard",
+                icon: LayoutDashboard,
+                cta: "Open the dashboards",
+              },
+              {
+                eyebrow: "Materials",
+                headline: "Understand the real impact of what you specify.",
+                detail:
+                  "Embodied carbon calculator with multi-criteria comparison: carbon, thermal performance, fire rating and indicative cost.",
                 href: "/materials",
                 icon: Calculator,
                 cta: "Run the calculator",
               },
               {
-                eyebrow: "Knowledge hub",
-                headline: "What is changing in regulation?",
+                eyebrow: "Regulations",
+                headline: "Stay ahead of changing requirements.",
                 detail:
-                  "Future Homes Standard, CBAM, Part Z, EPC. What is coming, when, and what it means for your work.",
+                  "Future Homes Standard, Part Z, CBAM, EPC. What is coming, when, and what it means for your work.",
+                href: "/regulations",
+                icon: ScrollText,
+                cta: "See the timeline",
+              },
+              {
+                eyebrow: "Knowledge",
+                headline: "Build a deeper understanding of the issues.",
+                detail:
+                  "Plain-English explainers on the policies, standards and ideas shaping the construction industry.",
                 href: "/knowledge",
                 icon: Compass,
                 cta: "Read the explainers",
               },
               {
-                eyebrow: "Original research",
-                headline: "How does construction actually decide?",
+                eyebrow: "Research",
+                headline: "Data turned into insight you can act on.",
                 detail:
-                  "First-party Fabrick research into how UK construction professionals search, evaluate suppliers and make purchasing decisions.",
+                  "Original Fabrick research into how UK construction professionals search, evaluate suppliers and make decisions.",
                 href: "/research",
                 icon: BookOpen,
                 cta: "See the research",
