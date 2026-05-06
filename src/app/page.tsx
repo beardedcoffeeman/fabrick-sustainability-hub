@@ -216,10 +216,10 @@ export default function HomePage() {
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-10 md:mb-12 max-w-3xl mx-auto">
             <span className="text-[11px] font-semibold uppercase tracking-[0.18em] text-pink">
-              What we have built and how to use it
+              A single platform for the built environment
             </span>
             <h2 className="mt-3 font-[family-name:var(--font-playfair)] text-3xl md:text-4xl font-bold text-navy">
-              A single platform for the built environment.
+              What we have built and how to use it.
             </h2>
             <p className="mt-4 text-sm md:text-base text-charcoal/80 leading-relaxed">
               We have brought together the data, insight and intelligence
