@@ -1,6 +1,3 @@
-"use client";
-
-import { useState } from "react";
 import Link from "next/link";
 import {
   ArrowRight,
@@ -12,8 +9,7 @@ import {
   ScrollText,
 } from "lucide-react";
 import { BannerVideo } from "@/components/home/BannerVideo";
-import { RoleSelector, type Role } from "@/components/home/RoleSelector";
-import { RecommendedDashboards } from "@/components/home/RecommendedDashboards";
+import { BuiltCardVisual, type BuiltKind } from "@/components/home/BuiltCardVisual";
 import insightsSnapshot from "@/data/insights-snapshot.json";
 
 interface InsightCard {
@@ -68,8 +64,6 @@ function CurveArc({
 // ============================================================
 
 export default function HomePage() {
-  const [role, setRole] = useState<Role>("all");
-
   return (
     <div className="min-h-screen overflow-x-hidden">
       {/* ============================================================
@@ -182,32 +176,6 @@ export default function HomePage() {
       </section>
 
       {/* ============================================================
-          ROLE SELECTOR + DASHBOARD CARDS
-          The first interactive moment - tells visitors immediately
-          what they can do and tailors the cards to them.
-          ============================================================ */}
-      <section className="bg-cream-dark py-16 md:py-20">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-8 md:mb-10 max-w-2xl mx-auto">
-            <span className="text-[11px] font-semibold uppercase tracking-[0.18em] text-pink">
-              Tailor the data to your role
-            </span>
-            <h2 className="mt-3 font-[family-name:var(--font-playfair)] text-3xl md:text-4xl font-bold text-navy">
-              What do you want to know about UK construction?
-            </h2>
-          </div>
-
-          {/* Role pills */}
-          <div className="mx-auto max-w-4xl mb-10 md:mb-12">
-            <RoleSelector activeRole={role} onRoleChange={setRole} />
-          </div>
-
-          {/* Dashboard cards (filtered + ordered by role, with mini charts) */}
-          <RecommendedDashboards activeRole={role} />
-        </div>
-      </section>
-
-      {/* ============================================================
           WHAT WE'VE BUILT - five sections walked through in order.
           Copy by Colin: a single platform that brings the data,
           insight and intelligence shaping the built environment.
@@ -231,9 +199,10 @@ export default function HomePage() {
             </p>
           </div>
 
-          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-            {[
+          <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+            {([
               {
+                kind: "dashboard" as BuiltKind,
                 eyebrow: "Dashboard",
                 headline: "Live view of the industry's key metrics.",
                 detail:
@@ -243,6 +212,7 @@ export default function HomePage() {
                 cta: "Open the dashboards",
               },
               {
+                kind: "materials" as BuiltKind,
                 eyebrow: "Materials",
                 headline: "Understand the real impact of what you specify.",
                 detail:
@@ -252,6 +222,7 @@ export default function HomePage() {
                 cta: "Run the calculator",
               },
               {
+                kind: "regulations" as BuiltKind,
                 eyebrow: "Regulations",
                 headline: "Stay ahead of changing requirements.",
                 detail:
@@ -261,6 +232,7 @@ export default function HomePage() {
                 cta: "See the timeline",
               },
               {
+                kind: "knowledge" as BuiltKind,
                 eyebrow: "Knowledge",
                 headline: "Build a deeper understanding of the issues.",
                 detail:
@@ -270,6 +242,7 @@ export default function HomePage() {
                 cta: "Read the explainers",
               },
               {
+                kind: "research" as BuiltKind,
                 eyebrow: "Research",
                 headline: "Data turned into insight you can act on.",
                 detail:
@@ -278,31 +251,36 @@ export default function HomePage() {
                 icon: BookOpen,
                 cta: "See the research",
               },
-            ].map((p) => {
+            ]).map((p) => {
               const Icon = p.icon;
               return (
                 <Link
                   key={p.eyebrow}
                   href={p.href}
-                  className="group block rounded-2xl bg-white border border-charcoal/[0.06] p-6 transition-all hover:shadow-xl hover:-translate-y-0.5 focus:outline-none focus-visible:ring-2 focus-visible:ring-teal focus-visible:ring-offset-2 focus-visible:ring-offset-cream"
+                  className="group block overflow-hidden rounded-2xl bg-white border border-charcoal/[0.06] transition-all hover:shadow-2xl hover:-translate-y-1 focus:outline-none focus-visible:ring-2 focus-visible:ring-teal focus-visible:ring-offset-2 focus-visible:ring-offset-cream"
                 >
-                  <div className="flex items-center justify-between mb-4">
-                    <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-cream-dark">
-                      <Icon className="h-4 w-4 text-teal" />
-                    </div>
-                    <span className="text-[10px] font-semibold uppercase tracking-[0.16em] text-warm-gray/60">
-                      {p.eyebrow}
-                    </span>
+                  <div className="transition-transform duration-300 ease-out group-hover:scale-[1.03]">
+                    <BuiltCardVisual kind={p.kind} />
                   </div>
-                  <h3 className="font-[family-name:var(--font-playfair)] text-[1.35rem] font-bold text-navy leading-[1.15] tracking-tight">
-                    {p.headline}
-                  </h3>
-                  <p className="mt-3 text-xs text-warm-gray leading-relaxed">
-                    {p.detail}
-                  </p>
-                  <div className="mt-4 inline-flex items-center gap-1.5 text-xs font-semibold text-teal transition-all group-hover:gap-2.5">
-                    {p.cta}
-                    <ArrowRight className="h-3.5 w-3.5" />
+                  <div className="p-6">
+                    <div className="flex items-center justify-between mb-4">
+                      <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-cream-dark">
+                        <Icon className="h-4 w-4 text-teal" />
+                      </div>
+                      <span className="text-[10px] font-semibold uppercase tracking-[0.16em] text-warm-gray/60">
+                        {p.eyebrow}
+                      </span>
+                    </div>
+                    <h3 className="font-[family-name:var(--font-playfair)] text-[1.35rem] font-bold text-navy leading-[1.15] tracking-tight">
+                      {p.headline}
+                    </h3>
+                    <p className="mt-3 text-xs text-warm-gray leading-relaxed">
+                      {p.detail}
+                    </p>
+                    <div className="mt-4 inline-flex items-center gap-1.5 text-xs font-semibold text-teal transition-all group-hover:gap-2.5">
+                      {p.cta}
+                      <ArrowRight className="h-3.5 w-3.5" />
+                    </div>
                   </div>
                 </Link>
               );
