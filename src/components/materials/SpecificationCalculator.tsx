@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useMemo, useRef, useEffect } from "react";
+import Link from "next/link";
 import {
   Plus,
   Trash2,
@@ -84,6 +85,113 @@ function formatEquivalence(value: number): string {
   if (value >= 10) return Math.round(value).toLocaleString();
   if (value >= 1) return value.toFixed(1);
   return value.toFixed(2);
+}
+
+/* ── Multi-criteria trade-off chips ─────────────────────────
+   Shown under each alternative so a "lower-carbon" recommendation
+   is always read alongside what it costs in thickness, fire and £.
+   See /methodology for sources. */
+
+const EUROCLASS_ORDER = ["A1", "A2", "B", "C", "D", "E", "F"];
+function fireRank(rating?: string): number {
+  if (!rating) return 99;
+  const head = rating.split("-")[0].trim();
+  const idx = EUROCLASS_ORDER.indexOf(head);
+  return idx === -1 ? 99 : idx;
+}
+
+const COST_SYMBOLS: Record<number, string> = { 1: "£", 2: "££", 3: "£££", 4: "££££" };
+
+type ChipTone = "good" | "bad" | "neutral";
+function Chip({ label, value, tone }: { label: string; value: string; tone: ChipTone }) {
+  const cls =
+    tone === "good"
+      ? "bg-green-50 text-green-800 border-green-200"
+      : tone === "bad"
+      ? "bg-orange-50 text-orange-800 border-orange-200"
+      : "bg-gray-50 text-gray-700 border-gray-200";
+  return (
+    <span
+      className={`inline-flex items-center gap-1 rounded-full border px-2 py-0.5 text-[10px] font-medium ${cls}`}
+    >
+      <span className="opacity-70">{label}</span>
+      <span className="font-semibold">{value}</span>
+    </span>
+  );
+}
+
+function TradeOffChips({
+  original,
+  alt,
+  altCarbonKg,
+  originalCarbonKg,
+}: {
+  original: MaterialData;
+  alt: MaterialData;
+  altCarbonKg: number;
+  originalCarbonKg: number;
+}) {
+  const chips: { label: string; value: string; tone: ChipTone }[] = [];
+
+  // Carbon (always shown)
+  const carbonPct = Math.round(((originalCarbonKg - altCarbonKg) / originalCarbonKg) * 100);
+  chips.push({
+    label: "Carbon",
+    value: carbonPct >= 0 ? `${carbonPct}% lower` : `${Math.abs(carbonPct)}% higher`,
+    tone: carbonPct > 5 ? "good" : carbonPct < -5 ? "bad" : "neutral",
+  });
+
+  // Thermal (thickness penalty for same U-value)
+  if (original.thermalConductivity && alt.thermalConductivity) {
+    const ratio = alt.thermalConductivity / original.thermalConductivity;
+    if (ratio > 1.05) {
+      chips.push({
+        label: "Thickness",
+        value: `+${Math.round((ratio - 1) * 100)}% thicker`,
+        tone: "bad",
+      });
+    } else if (ratio < 0.95) {
+      chips.push({
+        label: "Thickness",
+        value: `${Math.round((1 - ratio) * 100)}% thinner`,
+        tone: "good",
+      });
+    } else {
+      chips.push({ label: "Thickness", value: "similar", tone: "neutral" });
+    }
+  }
+
+  // Fire (lower index = better)
+  if (original.fireRating && alt.fireRating) {
+    const origRank = fireRank(original.fireRating);
+    const altRank = fireRank(alt.fireRating);
+    if (altRank < origRank)
+      chips.push({ label: "Fire", value: `${alt.fireRating} (better)`, tone: "good" });
+    else if (altRank > origRank)
+      chips.push({ label: "Fire", value: `${alt.fireRating} (worse)`, tone: "bad" });
+    else chips.push({ label: "Fire", value: alt.fireRating, tone: "neutral" });
+  }
+
+  // Cost band
+  if (original.costBand && alt.costBand) {
+    if (alt.costBand < original.costBand)
+      chips.push({ label: "Cost", value: `${COST_SYMBOLS[alt.costBand]} (cheaper)`, tone: "good" });
+    else if (alt.costBand > original.costBand)
+      chips.push({
+        label: "Cost",
+        value: `${COST_SYMBOLS[alt.costBand]} (pricier)`,
+        tone: "bad",
+      });
+    else chips.push({ label: "Cost", value: COST_SYMBOLS[alt.costBand], tone: "neutral" });
+  }
+
+  return (
+    <div className="mt-2 flex flex-wrap gap-1.5">
+      {chips.map((c, i) => (
+        <Chip key={i} {...c} />
+      ))}
+    </div>
+  );
 }
 
 /* ── Component ───────────────────────────────────── */
@@ -495,9 +603,15 @@ export function SpecificationCalculator() {
                 {isExpanded && alternatives.length > 0 && (
                   isReportUnlocked ? (
                     <div className="border-t border-gray-100 bg-cream/50 p-4">
-                      <p className="text-xs font-semibold text-navy mb-3 flex items-center gap-1.5">
+                      <p className="text-xs font-semibold text-navy mb-1 flex items-center gap-1.5">
                         <Lightbulb className="h-3.5 w-3.5 text-teal" />
-                        Lower-carbon alternatives for {material.name}
+                        Compare alternatives for {material.name}
+                      </p>
+                      <p className="text-[11px] text-warm-gray mb-3 leading-relaxed">
+                        We rank by embodied carbon, but no single axis decides the
+                        right material. Trade-offs (thickness for the same U-value,
+                        fire rating, indicative cost) are shown alongside so you
+                        can choose what matters for your build.
                       </p>
                       <div className="space-y-2">
                         {alternatives.map((alt) => {
@@ -505,45 +619,39 @@ export function SpecificationCalculator() {
                           return (
                             <div
                               key={alt.id}
-                              className="flex items-center gap-3 rounded-lg bg-white p-3"
+                              className="rounded-lg bg-white p-3"
                             >
-                              <div className="flex-1 min-w-0">
-                                <div className="flex items-center gap-2">
-                                  <span className="text-sm font-medium text-navy">{alt.name}</span>
-                                  {alt.fhsRecommended && (
-                                    <span className="rounded-full bg-green-100 px-2 py-0.5 text-[10px] font-semibold text-green-700">
-                                      FHS ✓
-                                    </span>
+                              <div className="flex items-start gap-3">
+                                <div className="flex-1 min-w-0">
+                                  <div className="flex items-center gap-2 flex-wrap">
+                                    <span className="text-sm font-semibold text-navy">{alt.name}</span>
+                                    {alt.fhsRecommended && (
+                                      <span className="rounded-full bg-green-100 px-2 py-0.5 text-[10px] font-semibold text-green-700">
+                                        FHS ✓
+                                      </span>
+                                    )}
+                                  </div>
+                                  {alt.notes && (
+                                    <p className="text-[11px] text-warm-gray/70 mt-0.5 leading-snug">
+                                      {alt.notes}
+                                    </p>
                                   )}
                                 </div>
-                                <p className="text-xs text-warm-gray mt-0.5">
-                                  {alt.embodiedCarbon} kgCO₂e/kg → {formatNumber(altCarbon)} kgCO₂e total
-                                </p>
-                                {alt.notes && (
-                                  <p className="text-[11px] text-warm-gray/70 mt-0.5">{alt.notes}</p>
-                                )}
+                                <button
+                                  onClick={() => {
+                                    setLineItems((prev) =>
+                                      prev.map((li) =>
+                                        li.id === item.id ? { ...li, materialId: alt.id } : li
+                                      )
+                                    );
+                                    setExpandedAlternatives(null);
+                                  }}
+                                  className="shrink-0 rounded-lg bg-teal px-3 py-1.5 text-xs font-semibold text-white hover:bg-teal-dark transition-colors"
+                                >
+                                  Swap
+                                </button>
                               </div>
-                              <div className="text-right shrink-0">
-                                <span className="rounded-full bg-green-100 px-2.5 py-1 text-xs font-bold text-green-700">
-                                  −{alt.saving}%
-                                </span>
-                                <p className="text-[10px] text-warm-gray mt-1">
-                                  saves {formatNumber(itemCarbon - altCarbon)} kgCO₂e
-                                </p>
-                              </div>
-                              <button
-                                onClick={() => {
-                                  setLineItems((prev) =>
-                                    prev.map((li) =>
-                                      li.id === item.id ? { ...li, materialId: alt.id } : li
-                                    )
-                                  );
-                                  setExpandedAlternatives(null);
-                                }}
-                                className="shrink-0 rounded-lg bg-teal px-3 py-1.5 text-xs font-semibold text-white hover:bg-teal-dark transition-colors"
-                              >
-                                Swap
-                              </button>
+                              <TradeOffChips original={material} alt={alt} altCarbonKg={altCarbon} originalCarbonKg={itemCarbon} />
                             </div>
                           );
                         })}
@@ -600,9 +708,13 @@ export function SpecificationCalculator() {
                 cuts that material&rsquo;s embodied carbon by roughly{" "}
                 <strong className="text-teal">
                   {fabrickAnalysis.swapSavingPct.toFixed(0)}%
-                </strong>{" "}
-                on a like-for-like basis - open the alternatives panel on the
-                line item to apply it.
+                </strong>
+                . Review the trade-offs (thickness, fire rating, cost) in the
+                alternatives panel on that line item before swapping. See{" "}
+                <Link href="/methodology" className="text-teal underline underline-offset-2 hover:text-teal-dark">
+                  methodology
+                </Link>{" "}
+                for sources.
               </p>
             )}
             {fabrickAnalysis.benchmarkVerdict && (

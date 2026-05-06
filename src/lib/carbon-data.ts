@@ -38,6 +38,11 @@ export interface MaterialData {
   alternatives?: string[];
   fhsRecommended?: boolean; // aligns with Future Homes Standard guidance
   typicalApplications?: string; // where it's commonly specified
+  // Multi-criteria fields - currently populated for Insulation category.
+  // See SOURCES at the bottom of this file and /methodology page.
+  thermalConductivity?: number; // λ in W/m·K (lower = better insulator per mm)
+  fireRating?: string; // BS EN 13501-1 Euroclass (e.g. "A1", "B-s1,d0", "E")
+  costBand?: 1 | 2 | 3 | 4; // 1 = £ cheapest, 4 = ££££ most expensive
 }
 
 // LETI / RIBA 2030 embodied carbon benchmarks (kgCO2e/m² GIA)
@@ -469,6 +474,9 @@ export const iceDatabase: MaterialData[] = [
     notes: "Glass or rock wool insulation",
     alternatives: ["cellulose-insulation", "wood-fibre-insulation", "sheeps-wool", "hemp-insulation"],
     typicalApplications: "Cavity walls, loft, between studs, acoustic",
+    thermalConductivity: 0.035,
+    fireRating: "A1",
+    costBand: 2,
   },
   {
     id: "eps",
@@ -479,6 +487,9 @@ export const iceDatabase: MaterialData[] = [
     density: 20,
     alternatives: ["wood-fibre-insulation", "cellulose-insulation", "cork"],
     typicalApplications: "External wall insulation, below slab, flat roofs",
+    thermalConductivity: 0.036,
+    fireRating: "E",
+    costBand: 1,
   },
   {
     id: "xps",
@@ -489,6 +500,9 @@ export const iceDatabase: MaterialData[] = [
     density: 35,
     alternatives: ["wood-fibre-insulation", "cellulose-insulation"],
     typicalApplications: "Below ground, inverted roofs, high-moisture areas",
+    thermalConductivity: 0.034,
+    fireRating: "E",
+    costBand: 2,
   },
   {
     id: "pir",
@@ -500,6 +514,9 @@ export const iceDatabase: MaterialData[] = [
     notes: "Polyisocyanurate - high thermal performance but high carbon",
     alternatives: ["wood-fibre-insulation", "mineral-wool", "sheeps-wool"],
     typicalApplications: "Flat roofs, walls where thin build-up needed",
+    thermalConductivity: 0.022,
+    fireRating: "B-s2,d0",
+    costBand: 2,
   },
   {
     id: "phenolic-foam",
@@ -511,6 +528,9 @@ export const iceDatabase: MaterialData[] = [
     notes: "Highest thermal performance per mm but very high embodied carbon",
     alternatives: ["wood-fibre-insulation", "cellulose-insulation"],
     typicalApplications: "Thin-wall build-ups, refurbishment, flat roofs",
+    thermalConductivity: 0.02,
+    fireRating: "B-s1,d0",
+    costBand: 3,
   },
   {
     id: "spray-foam",
@@ -522,6 +542,9 @@ export const iceDatabase: MaterialData[] = [
     notes: "Applied in-situ - fills irregular cavities but hard to remove",
     alternatives: ["cellulose-insulation", "sheeps-wool"],
     typicalApplications: "Retrofit cavity fill, loft spaces, irregular voids",
+    thermalConductivity: 0.038,
+    fireRating: "D",
+    costBand: 3,
   },
   {
     id: "cellulose-insulation",
@@ -533,6 +556,9 @@ export const iceDatabase: MaterialData[] = [
     notes: "Recycled newspaper - lowest carbon insulation option",
     fhsRecommended: true,
     typicalApplications: "Loft, timber frame cavities, retrofit",
+    thermalConductivity: 0.039,
+    fireRating: "B-s2,d0",
+    costBand: 2,
   },
   {
     id: "wood-fibre-insulation",
@@ -544,6 +570,9 @@ export const iceDatabase: MaterialData[] = [
     notes: "Natural fibre - carbon sequestration benefits",
     fhsRecommended: true,
     typicalApplications: "External walls, roof, breathable wall build-ups",
+    thermalConductivity: 0.04,
+    fireRating: "E",
+    costBand: 3,
   },
   {
     id: "sheeps-wool",
@@ -555,6 +584,9 @@ export const iceDatabase: MaterialData[] = [
     notes: "Natural, breathable, and moisture-regulating insulation",
     fhsRecommended: true,
     typicalApplications: "Timber frame walls, loft, between rafters",
+    thermalConductivity: 0.04,
+    fireRating: "E",
+    costBand: 4,
   },
   {
     id: "hemp-insulation",
@@ -566,6 +598,9 @@ export const iceDatabase: MaterialData[] = [
     notes: "Very low carbon with sequestration - fast-growing crop",
     fhsRecommended: true,
     typicalApplications: "Timber frame walls, loft, internal wall insulation",
+    thermalConductivity: 0.039,
+    fireRating: "E",
+    costBand: 3,
   },
   {
     id: "aerogel-insulation",
@@ -576,6 +611,9 @@ export const iceDatabase: MaterialData[] = [
     density: 150,
     notes: "Ultra-thin, extremely high performance - suits constrained spaces",
     typicalApplications: "Heritage retrofit, thin walls, pipe insulation",
+    thermalConductivity: 0.015,
+    fireRating: "A2-s1,d0",
+    costBand: 4,
   },
 
   /* ═══════════════════════════════════════
@@ -1909,6 +1947,9 @@ export const iceDatabase: MaterialData[] = [
     notes: "Agricultural by-product - carbon negative when biogenic storage included",
     fhsRecommended: true,
     typicalApplications: "Timber frame infill, self-build, eco-housing",
+    thermalConductivity: 0.045,
+    fireRating: "F",
+    costBand: 1,
   },
   {
     id: "hempcrete",
@@ -1920,6 +1961,9 @@ export const iceDatabase: MaterialData[] = [
     notes: "Carbon-negative wall material - sequesters more CO₂ than emitted in production",
     fhsRecommended: true,
     typicalApplications: "Timber frame infill walls, renovation, self-build",
+    thermalConductivity: 0.09,
+    fireRating: "A1",
+    costBand: 3,
   },
   {
     id: "vacuum-insulation",
@@ -1930,6 +1974,9 @@ export const iceDatabase: MaterialData[] = [
     density: 200,
     notes: "5-8x the thermal performance per mm of conventional insulation - very high embodied carbon per kg but minimal per m² of wall",
     typicalApplications: "Ultra-thin refurbishment, heritage, floor build-ups",
+    thermalConductivity: 0.007,
+    fireRating: "B",
+    costBand: 4,
   },
   {
     id: "recycled-plastic-insulation",
@@ -1940,6 +1987,9 @@ export const iceDatabase: MaterialData[] = [
     density: 30,
     notes: "Made from recycled plastic bottles - diverts waste from landfill",
     typicalApplications: "Acoustic insulation, timber frame, internal partitions",
+    thermalConductivity: 0.038,
+    fireRating: "E",
+    costBand: 2,
   },
 
   /* ═══════════════════════════════════════
