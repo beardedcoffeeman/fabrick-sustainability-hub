@@ -319,10 +319,10 @@ export default function HomePage() {
           <div className="flex items-end justify-between flex-wrap gap-3 mb-6 md:mb-8">
             <div>
               <span className="text-[11px] font-semibold uppercase tracking-[0.18em] text-pink">
-                Latest insights
+                What we are seeing this month
               </span>
               <h2 className="mt-2 font-[family-name:var(--font-playfair)] text-2xl md:text-3xl font-bold text-navy">
-                What we are seeing this month.
+                Latest insights.
               </h2>
             </div>
             <Link
