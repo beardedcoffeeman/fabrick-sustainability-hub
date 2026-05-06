@@ -120,7 +120,7 @@ const findings = [
 
 const conclusions = [
   {
-    title: "AI is useful but not reliable enough to replace professional judgment.",
+    title: "AI is useful but not reliable enough to replace professional judgement.",
     text: "Even the best model got 23% of answers wrong or only partially right. For safety-critical decisions, always verify AI output against published standards.",
   },
   {

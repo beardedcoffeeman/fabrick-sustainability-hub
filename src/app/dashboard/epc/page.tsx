@@ -30,7 +30,7 @@ export const metadata: Metadata = {
     title:
       "UK Retrofit Market: Find buildings below EPC C by postcode | Fabrick",
     description:
-      "Search any UK postcode for the share of properties below EPC band C - the threshold MEES is moving toward. Sized for retrofit contractors, manufacturers and energy assessors.",
+      "Search any UK postcode for the share of properties below EPC band C - the threshold MEES is moving towards. Sized for retrofit contractors, manufacturers and energy assessors.",
     url: "https://fabrick-sustainability-hub.vercel.app/dashboard/epc",
   },
 };
