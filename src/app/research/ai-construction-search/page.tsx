@@ -26,11 +26,12 @@ import {
 export const metadata: Metadata = {
   title: "How Accurate is AI for UK Construction? | Fabrick Research",
   description:
-    "Fabrick tested 10 AI models on 1,001 technical UK construction questions across 20 categories. Claude Opus led at 77%. Paid models beat free by 10 percentage points. See the definitive results.",
+    "Fabrick tested 12 AI models on 1,001 technical UK construction questions across 20 categories. Claude Opus 4.7 led at 78%. Paid models beat free by 12.8 percentage points. See the definitive results.",
   keywords: [
     "AI construction accuracy",
     "AI model comparison construction",
-    "Claude Opus construction",
+    "Claude Opus 4.7 construction",
+    "Claude Haiku 4.5 construction",
     "ChatGPT construction accuracy",
     "Perplexity construction",
     "UK construction AI research",
@@ -40,16 +41,16 @@ export const metadata: Metadata = {
   openGraph: {
     title: "How Accurate is AI for UK Construction? | Fabrick Research",
     description:
-      "1,001 questions. 10 AI models. 20 categories. Fabrick's definitive accuracy benchmark for AI in UK construction.",
+      "1,001 questions. 12 AI models. 20 categories. Fabrick's definitive accuracy benchmark for AI in UK construction.",
     url: "https://fabrick-sustainability-hub.vercel.app/research/ai-construction-search",
   },
 };
 
 const heroStats = [
   { value: "1,001", label: "Questions" },
-  { value: "10", label: "AI Models" },
+  { value: "12", label: "AI Models" },
   { value: "20", label: "Categories" },
-  { value: "77%", label: "Best Score", accent: true },
+  { value: "78%", label: "Best Score", accent: true },
 ];
 
 const methodology = [
@@ -61,8 +62,8 @@ const methodology = [
   },
   {
     icon: Layers,
-    title: "10 AI Models Tested",
-    text: "5 paid and 5 free models from OpenAI, Anthropic, Google, Mistral and Perplexity, all tested with identical prompts and scoring criteria.",
+    title: "12 AI Models Tested",
+    text: "6 paid and 6 free models from OpenAI, Anthropic, Google, Mistral and Perplexity. Updated 5 May 2026 with Claude Opus 4.7 and Claude Haiku 4.5.",
     accent: "teal" as const,
   },
   {
@@ -81,27 +82,27 @@ const methodology = [
 
 const findings = [
   {
-    stat: "77%",
+    stat: "78%",
     label: "Highest overall score",
-    text: "Claude Opus 4.6 led the pack at 77%. No model broke the 80% barrier, highlighting clear limits in AI's construction knowledge.",
+    text: "Claude Opus 4.7 led the pack at 78%, edging out Opus 4.6 (77%). No model broke the 80% barrier, highlighting clear limits in AI's construction knowledge.",
     accent: "pink" as const,
   },
   {
-    stat: "10pp",
+    stat: "12.8pp",
     label: "Paid vs free gap",
-    text: "Paid models averaged 66.2% versus 55.9% for free models. A 10 percentage point gap that makes the business case for paid subscriptions clear.",
+    text: "Paid models averaged 68.2% versus 55.4% for free models. A 12.8 percentage point gap that makes the business case for paid subscriptions clear.",
     accent: "teal" as const,
   },
   {
-    stat: "4.7%",
+    stat: "4.8%",
     label: "Lowest error rate",
-    text: "Claude Opus had only 47 outright wrong answers from 1,001 questions. The worst performer got 400 wrong (40.0%).",
+    text: "Claude Opus 4.7 had only 48 outright wrong answers from 1,001 questions. The worst performer got 400 wrong (40.0%).",
     accent: "pink" as const,
   },
   {
     stat: "91%",
     label: "Best category score",
-    text: "Claude Opus scored 91% on Sustainability and Carbon. Well-documented, publicly available standards consistently produced higher AI accuracy.",
+    text: "Claude Opus 4.6 scored 91% on Sustainability and Carbon, with Opus 4.7 close behind at 89%. Well-documented, publicly available standards consistently produced higher AI accuracy.",
     accent: "teal" as const,
   },
   {
@@ -120,12 +121,12 @@ const findings = [
 
 const conclusions = [
   {
-    title: "AI is useful but not reliable enough to replace professional judgment.",
-    text: "Even the best model got 23% of answers wrong or only partially right. For safety-critical decisions, always verify AI output against published standards.",
+    title: "AI is useful but not reliable enough to replace professional judgement.",
+    text: "Even the best model got 22% of answers wrong or only partially right. For safety-critical decisions, always verify AI output against published standards.",
   },
   {
     title: "Pay for your AI tools.",
-    text: "The 10 percentage point gap between paid and free models is significant. If you're using AI for construction work, a paid subscription is recommended.",
+    text: "The 12.8 percentage point gap between paid and free models is significant. If you're using AI for construction work, a paid subscription is recommended.",
   },
   {
     title: "Web-connected AI performs better.",
@@ -169,7 +170,7 @@ export default function AIConstructionSearchPage() {
             How Accurate is AI for UK Construction?
           </h1>
           <p className="mt-4 max-w-2xl text-lg text-gray-400">
-            1,001 questions. 10 AI models. 20 categories. One definitive answer.
+            1,001 questions. 12 AI models. 20 categories. One definitive answer.
           </p>
 
           {/* Hero stats */}
@@ -266,13 +267,13 @@ export default function AIConstructionSearchPage() {
         <div className="mb-6 grid gap-4 sm:grid-cols-2">
           <div className="rounded-2xl bg-teal p-6 text-white">
             <p className="text-xs font-semibold uppercase tracking-wider text-white/80">Paid models average</p>
-            <p className="mt-2 text-5xl font-bold">66.2%</p>
-            <p className="mt-1 text-sm text-white/80">5 models tested</p>
+            <p className="mt-2 text-5xl font-bold">68.2%</p>
+            <p className="mt-1 text-sm text-white/80">6 models tested</p>
           </div>
           <div className="rounded-2xl bg-pink p-6 text-white">
             <p className="text-xs font-semibold uppercase tracking-wider text-white/80">Free models average</p>
-            <p className="mt-2 text-5xl font-bold">55.9%</p>
-            <p className="mt-1 text-sm text-white/80">5 models tested</p>
+            <p className="mt-2 text-5xl font-bold">55.4%</p>
+            <p className="mt-1 text-sm text-white/80">6 models tested</p>
           </div>
         </div>
         <AIPaidFreeChart />

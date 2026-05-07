@@ -37,10 +37,10 @@ const researchStudies = [
   {
     slug: "ai-construction-search",
     title: "How Accurate is AI for UK Construction?",
-    status: "Published 2025",
+    status: "Updated May 2026",
     description:
-      "Fabrick tested 10 AI models on 1,001 technical UK construction questions across 20 categories. Claude Opus led at 77%. Paid models beat free by 10 percentage points. The definitive accuracy benchmark.",
-    statsPreview: "1,001 questions | 10 AI models | 20 categories",
+      "Fabrick tested 12 AI models on 1,001 technical UK construction questions across 20 categories. Claude Opus 4.7 led at 78%. Paid models beat free by 12.8 percentage points. The definitive accuracy benchmark.",
+    statsPreview: "1,001 questions | 12 AI models | 20 categories",
     tags: ["AI", "Accuracy Benchmark", "UK Standards", "Model Comparison"],
     icon: Brain,
     published: true,
