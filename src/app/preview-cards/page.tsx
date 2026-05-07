@@ -1,4 +1,4 @@
-import Image from "next/image";
+/* eslint-disable @next/next/no-img-element */
 import Link from "next/link";
 import {
   ArrowLeft,
@@ -116,12 +116,10 @@ function CandidateCard({
           className="relative"
           style={{ aspectRatio: "2 / 1", background: card.overlay }}
         >
-          <Image
+          <img
             src={src}
             alt={`${card.eyebrow} candidate ${idx + 1}`}
-            fill
-            sizes="(max-width: 1024px) 100vw, 33vw"
-            className="object-cover"
+            className="absolute inset-0 w-full h-full object-cover"
           />
           <div
             className="absolute inset-0"
@@ -158,12 +156,10 @@ function CandidateCard({
           Show raw photo (no overlay)
         </summary>
         <div className="mt-2 overflow-hidden rounded-lg border border-charcoal/[0.08]">
-          <Image
+          <img
             src={src}
             alt={`Raw ${card.eyebrow} ${idx + 1}`}
-            width={640}
-            height={320}
-            className="w-full h-auto"
+            className="w-full h-auto block"
           />
         </div>
       </details>
