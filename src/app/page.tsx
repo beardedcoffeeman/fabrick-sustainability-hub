@@ -1,4 +1,5 @@
 "use client";
+/* eslint-disable @next/next/no-img-element */
 
 import Link from "next/link";
 import {
@@ -11,8 +12,18 @@ import {
   ScrollText,
 } from "lucide-react";
 import { BannerVideo } from "@/components/home/BannerVideo";
-import { BuiltCardVisual, type BuiltKind } from "@/components/home/BuiltCardVisual";
 import insightsSnapshot from "@/data/insights-snapshot.json";
+
+type BuiltKind = "dashboard" | "materials" | "regulations" | "knowledge" | "research";
+
+// Per-card brand tint overlaid on the photo so the cards still feel cohesive.
+const CARD_OVERLAY: Record<BuiltKind, string> = {
+  dashboard: "#00A389",
+  materials: "#FF3D7F",
+  regulations: "#2D2D3F",
+  knowledge: "#1A1A2E",
+  research: "#00BFA5",
+};
 
 interface InsightCard {
   eyebrow: string;
@@ -265,8 +276,22 @@ export default function HomePage() {
                   href={p.href}
                   className="group block overflow-hidden rounded-2xl bg-white border border-charcoal/[0.06] transition-all hover:shadow-2xl hover:-translate-y-1 focus:outline-none focus-visible:ring-2 focus-visible:ring-teal focus-visible:ring-offset-2 focus-visible:ring-offset-cream"
                 >
-                  <div className="transition-transform duration-300 ease-out group-hover:scale-[1.03]">
-                    <BuiltCardVisual kind={p.kind} />
+                  <div
+                    className="relative overflow-hidden"
+                    style={{ aspectRatio: "2 / 1", background: CARD_OVERLAY[p.kind] }}
+                  >
+                    <img
+                      src={`/built-cards/${p.kind}.jpg`}
+                      alt=""
+                      className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 ease-out group-hover:scale-[1.04]"
+                    />
+                    <div
+                      className="absolute inset-0"
+                      style={{
+                        background: `linear-gradient(180deg, ${CARD_OVERLAY[p.kind]}33 0%, ${CARD_OVERLAY[p.kind]}66 100%)`,
+                        mixBlendMode: "multiply",
+                      }}
+                    />
                   </div>
                   <div className="p-6">
                     <div className="flex items-center justify-between mb-4">
