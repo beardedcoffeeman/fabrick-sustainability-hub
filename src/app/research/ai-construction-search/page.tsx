@@ -170,7 +170,7 @@ export default function AIConstructionSearchPage() {
             How Accurate is AI for UK Construction?
           </h1>
           <p className="mt-4 max-w-2xl text-lg text-gray-400">
-            1,001 questions. 10 AI models. 20 categories. One definitive answer.
+            1,001 questions. 12 AI models. 20 categories. One definitive answer.
           </p>
 
           {/* Hero stats */}
