@@ -6,10 +6,9 @@ import { Zap, Package, Landmark, Home, ArrowRight } from "lucide-react";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title:
-    "Where is UK construction growing, and where is it shrinking? | Fabrick",
+  title: "UK Construction Output: ONS Sector Data | Fabrick",
   description:
-    "Monthly ONS construction output data by sector: private housing, infrastructure, commercial, industrial, and repair & maintenance. Forecast pipeline, target high-growth sectors, spot trend reversals early.",
+    "Monthly UK construction output by sector from the Office for National Statistics: housing, infrastructure, commercial and repair & maintenance.",
   keywords: [
     "UK construction output",
     "construction output ONS",

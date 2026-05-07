@@ -13,10 +13,9 @@ import {
 import { EmailCaptureInline } from "@/components/research/EmailCaptureForm";
 
 export const metadata: Metadata = {
-  title:
-    "How does the UK construction industry actually decide? | Fabrick",
+  title: "Original UK Construction Research | Fabrick",
   description:
-    "Original Fabrick research into how UK construction professionals search, evaluate suppliers, and make purchasing decisions. AI in procurement, search behaviour, and market intelligence.",
+    "Original Fabrick research into how UK construction professionals search, evaluate suppliers and make purchasing decisions. AI accuracy and search behaviour.",
   keywords: [
     "construction industry research UK",
     "built environment market research",

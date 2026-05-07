@@ -3,10 +3,20 @@ import { FabrickMarketingCTA, FabrickPlatformCTA } from "@/components/layout/Fab
 import { Ruler, HardHat, Warehouse, ClipboardCheck } from "lucide-react";
 
 export const metadata = {
-  title:
-    "Is your specification hitting embodied carbon targets? | Fabrick",
+  title: "Embodied Carbon Calculator: Free UK Tool | Fabrick",
   description:
-    "Calculate the kgCO₂e/m² of your material spec, benchmark against LETI and RIBA 2030 targets, and find substitution wins. Powered by the ICE database (Circular Ecology).",
+    "Free UK embodied carbon calculator. Compare materials by carbon, thermal performance, fire rating and cost. Benchmark against LETI 2020 and RIBA 2030.",
+  keywords: [
+    "embodied carbon calculator",
+    "embodied carbon",
+    "UK carbon calculator construction",
+    "Part Z embodied carbon",
+    "LETI 2020 targets",
+    "RIBA 2030 targets",
+    "ICE database calculator",
+    "whole life carbon assessment",
+    "low carbon materials UK",
+  ],
 };
 
 const painPoints = [

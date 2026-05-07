@@ -3,9 +3,9 @@ import { Breadcrumb } from "@/components/layout/Breadcrumb";
 import { RoleFilter } from "@/components/dashboard/RoleFilter";
 
 export const metadata = {
-  title: "Live Dashboard | Fabrick Built Environment Data",
+  title: "Live UK Construction Data Dashboard | Fabrick",
   description:
-    "Live UK construction data: carbon intensity, material prices, construction output, planning activity, and EPC ratings. All in one place, filterable by role.",
+    "Live UK construction data: grid carbon intensity, material prices, ONS output, planning activity and EPC ratings. Filter by role. Refreshed automatically.",
 };
 
 export default function DashboardPage() {

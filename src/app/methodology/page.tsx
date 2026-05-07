@@ -3,9 +3,9 @@ import Link from "next/link";
 import { ArrowLeft } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Methodology | Fabrick",
+  title: "Carbon Calculator Methodology and Sources | Fabrick",
   description:
-    "How the Fabrick carbon calculator works, what it measures, what it does not, and the sources behind every value.",
+    "How the Fabrick UK embodied carbon calculator works: data sources (ICE Database, BS EN 13501-1, BR443), what we measure, what we do not.",
 };
 
 export default function MethodologyPage() {

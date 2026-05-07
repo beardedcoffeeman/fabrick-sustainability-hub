@@ -7,10 +7,9 @@ import { Zap, Building2, Landmark, Home, ArrowRight } from "lucide-react";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title:
-    "What's moving in the UK construction materials basket? | Fabrick",
+  title: "UK Construction Material Prices: Live Index | Fabrick",
   description:
-    "Latest published price indices for 28 UK construction materials from the Department for Business and Trade. Time procurement, evidence price changes in tenders, spot substitution wins.",
+    "Latest UK construction material price indices from the Department for Business and Trade. 28 materials, biggest YoY movers, cost-vs-carbon scatter.",
   keywords: [
     "construction material prices UK",
     "steel price index UK",

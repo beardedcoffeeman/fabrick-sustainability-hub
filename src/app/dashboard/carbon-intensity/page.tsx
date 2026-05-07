@@ -8,10 +8,9 @@ import { Package, Building2, Landmark, Home, ArrowRight } from "lucide-react";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title:
-    "When is the UK grid cleanest? Best time to use electricity, by hour | Fabrick",
+  title: "UK Grid Carbon Intensity by Hour | Fabrick",
   description:
-    "Plan low-carbon construction work around the UK grid's cleanest hours. 90-day heatmap of National Grid ESO carbon intensity by hour of day and day of week, with Fabrick analysis and a downloadable view for tender submissions.",
+    "Live UK grid carbon intensity. Plan low-carbon construction work around the cleanest hours. 90-day heatmap from National Grid ESO with regional drill-down.",
   keywords: [
     "uk grid carbon intensity",
     "best time to use electricity uk",
