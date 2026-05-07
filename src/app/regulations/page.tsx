@@ -3,10 +3,19 @@ import { FabrickMarketingCTA, FabrickPlatformCTA } from "@/components/layout/Fab
 import { Building2, HardHat, Warehouse, Landmark, Sparkles, AlertTriangle, Clock, FileText } from "lucide-react";
 
 export const metadata = {
-  title:
-    "What construction regulations are coming, and when? | Fabrick",
+  title: "UK Construction Regulations Timeline 2026-2035 | Fabrick",
   description:
-    "Future Homes Standard, Part Z, UK CBAM, MEES, EPC C minimum and more. Every UK construction sustainability rule on a single timeline, filterable by role and category.",
+    "Future Homes Standard, Part Z, UK CBAM, MEES, EPC C and Building Safety Act. Plain-English explainers and a timeline of UK construction regulations in flight.",
+  keywords: [
+    "UK building regulations",
+    "future homes standard",
+    "Part Z embodied carbon",
+    "UK CBAM",
+    "MEES 2027",
+    "EPC C minimum",
+    "Building Safety Act",
+    "UK construction regulations timeline",
+  ],
 };
 
 const painPoints = [

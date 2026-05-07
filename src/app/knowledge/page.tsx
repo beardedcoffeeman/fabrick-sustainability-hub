@@ -3,10 +3,18 @@ import { FabrickPlatformCTA } from "@/components/layout/FabrickCTA";
 import { Briefcase, HardHat, Megaphone, GraduationCap } from "lucide-react";
 
 export const metadata = {
-  title:
-    "What do the new construction rules actually mean? | Fabrick",
+  title: "UK Construction Sustainability Explainers | Fabrick",
   description:
-    "Plain-English guides to UK construction sustainability. Embodied carbon, EPDs, Part Z, Future Homes Standard, MEES, and the rest, explained without the jargon.",
+    "Plain-English UK guides to embodied carbon, EPDs, Part Z, the Future Homes Standard and CBAM. What is changing, when, and what it means for your work.",
+  keywords: [
+    "embodied carbon",
+    "future homes standard",
+    "Part Z explained",
+    "EPD explained",
+    "UK CBAM construction",
+    "construction sustainability UK",
+    "MEES explained",
+  ],
 };
 
 const painPoints = [

@@ -157,6 +157,20 @@ export function Footer() {
           </div>
         </div>
 
+        {/* Disclaimer */}
+        <div className="border-t border-white/10 py-6">
+          <p className="text-[11px] leading-relaxed text-warm-gray max-w-3xl">
+            <span className="font-semibold text-white/80">Disclaimer.</span>{" "}
+            Information on this site is provided for general guidance only and
+            was accurate at the time of writing or last data refresh. Datasets
+            update at varying frequencies (live, daily, monthly or quarterly,
+            depending on source) and figures may have changed since you last
+            visited. Nothing here constitutes professional, legal or financial
+            advice. Always verify critical decisions against the original
+            source and current regulations.
+          </p>
+        </div>
+
         {/* Legal */}
         <div className="border-t border-white/10 py-6 flex flex-col items-start justify-between gap-2 sm:flex-row sm:items-center">
           <p className="text-xs text-warm-gray">

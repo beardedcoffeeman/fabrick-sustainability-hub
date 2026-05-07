@@ -6,9 +6,9 @@ import { Zap, Package, Building2, Home, ArrowRight } from "lucide-react";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "What commercial work is getting built across the UK? | Fabrick",
+  title: "UK Planning Applications: Live Tracker | Fabrick",
   description:
-    "Live tracker for UK commercial planning applications. See which commercial schemes are being approved, refused or are still in the pipeline - switch tabs for residential, mixed-use or all classified work.",
+    "Live tracker for UK commercial planning applications. Approval rates by local authority, recent decisions, scheme size. Built on planning.data.gov.uk.",
   keywords: [
     "UK commercial planning applications",
     "commercial development UK",

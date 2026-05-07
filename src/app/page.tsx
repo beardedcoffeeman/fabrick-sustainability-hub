@@ -1,17 +1,29 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import {
-  Zap,
   ArrowRight,
   Calculator,
   BookOpen,
   Compass,
-  Sparkles,
   Mail,
+  LayoutDashboard,
+  ScrollText,
 } from "lucide-react";
 import { BannerVideo } from "@/components/home/BannerVideo";
 import insightsSnapshot from "@/data/insights-snapshot.json";
+
+type BuiltKind = "dashboard" | "materials" | "regulations" | "knowledge" | "research";
+
+// Per-card brand tint overlaid on the photo so the cards still feel cohesive.
+const CARD_OVERLAY: Record<BuiltKind, string> = {
+  dashboard: "#00A389",
+  materials: "#FF3D7F",
+  regulations: "#2D2D3F",
+  knowledge: "#1A1A2E",
+  research: "#00BFA5",
+};
 
 interface InsightCard {
   eyebrow: string;
@@ -68,61 +80,112 @@ export default function HomePage() {
   return (
     <div className="min-h-screen overflow-x-hidden">
       {/* ============================================================
-          HERO SECTION - Banner carries the mission. No CTAs - the
-          rest of the page IS the call to action.
+          HERO - tighter promise, no extra furniture above the fold.
           ============================================================ */}
       <section className="relative overflow-hidden text-white">
         <BannerVideo src="/hero/banner.mp4" poster="/hero/banner-poster.jpg" />
 
-        <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pt-24 pb-24 md:pt-32 md:pb-32">
-          <div className="max-w-4xl">
+        <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pt-24 pb-24 md:pt-32 md:pb-28">
+          <div className="max-w-3xl">
             <p className="mb-4 text-[11px] font-semibold uppercase tracking-[0.18em] text-white/70 animate-fade-in-delay-1">
-              Fabrick - A Built Environment Marketing Agency
+              Fabrick - Built environment data for the UK construction industry
             </p>
 
-            <h1 className="font-[family-name:var(--font-playfair)] text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-[0.98] tracking-tight animate-fade-in-delay-1 [text-shadow:0_2px_24px_rgba(0,0,0,0.4)]">
-              Building a smarter construction industry.
+            <h1 className="font-[family-name:var(--font-playfair)] text-5xl sm:text-6xl md:text-7xl font-bold text-white leading-[0.98] tracking-tight animate-fade-in-delay-1 [text-shadow:0_2px_24px_rgba(0,0,0,0.4)]">
+              Build smarter. Decide faster. Stay ahead.
             </h1>
-            <p className="mt-4 font-[family-name:var(--font-playfair)] italic text-2xl md:text-3xl text-white/85 [text-shadow:0_1px_12px_rgba(0,0,0,0.4)] animate-fade-in-delay-2">
-              Sharper data. Better decisions. From site to strategy.
-            </p>
-
             <p className="mt-6 text-base md:text-lg text-white/90 max-w-2xl leading-relaxed animate-fade-in-delay-2 [text-shadow:0_1px_12px_rgba(0,0,0,0.5)]">
-              We&rsquo;re putting live data, original analysis and open
-              tools in front of the people building Britain, so every
-              decision, from how materials are specified at RIBA Stage 4
-              to how a construction company goes to market, is informed
-              by evidence.
+              The construction industry is changing, and this{" "}
+              <em className="font-[family-name:var(--font-playfair)] italic font-semibold text-white tracking-wide">
+                free
+              </em>{" "}
+              platform, updated in real time, will help you keep up. From
+              rising material costs to tightening regulations and growing
+              carbon pressures, every decision now carries more risk and
+              more scrutiny.
+            </p>
+            <p className="mt-4 text-base md:text-lg text-white/90 max-w-2xl leading-relaxed animate-fade-in-delay-2 [text-shadow:0_1px_12px_rgba(0,0,0,0.5)]">
+              We bring together live data, original analysis and practical
+              tools so your decisions are backed by evidence, not guesswork.
+              This is where you start.
             </p>
           </div>
         </div>
       </section>
 
       {/* ============================================================
-          TRUST STRIP - data sources, premium uniform treatment
+          TRUST STRIP - "Powered by Trusted Data" (copy by Colin).
+          Six UK government and industry datasets, prominently
+          credited at the top of the page.
           ============================================================ */}
-      <section className="bg-cream py-10 md:py-12 border-b border-charcoal/[0.06]">
+      <section className="bg-cream py-14 md:py-16 border-b border-charcoal/[0.06]">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <p className="text-[10px] font-semibold uppercase tracking-[0.18em] text-warm-gray text-center mb-6">
-            Trusted Data From
-          </p>
-          <div className="flex flex-wrap items-center justify-center gap-x-10 gap-y-4">
+          <div className="text-center mb-10 max-w-3xl mx-auto">
+            <span className="text-[11px] font-semibold uppercase tracking-[0.18em] text-pink">
+              Powered by trusted data
+            </span>
+            <h2 className="mt-3 font-[family-name:var(--font-playfair)] text-3xl md:text-4xl font-bold text-navy leading-tight">
+              Built on the most credible sources in the UK.
+            </h2>
+            <p className="mt-4 text-sm md:text-base text-charcoal/80 leading-relaxed">
+              We aggregate and interpret information from leading
+              organisations including National Grid ESO, the Office for
+              National Statistics and the ICE Database, alongside key
+              government departments such as the Department for Business
+              and Trade and the Ministry of Housing, Communities and Local
+              Government, plus open platforms like planning.data.gov.uk.
+              The result: fragmented datasets turned into clear, usable
+              intelligence, and a more complete picture of what is
+              happening across construction, property and infrastructure.
+            </p>
+          </div>
+
+          <div className="grid gap-3 sm:grid-cols-2 md:grid-cols-3">
             {[
-              { name: "National Grid ESO", url: "https://carbonintensity.org.uk" },
-              { name: "Office for National Statistics", url: "https://www.ons.gov.uk" },
-              { name: "ICE Database (Circular Ecology)", url: "https://circularecology.com/embodied-carbon-footprint-database.html" },
-              { name: "Department for Business and Trade", url: "https://www.gov.uk/government/organisations/department-for-business-and-trade" },
-              { name: "MHCLG (EPC Open Data)", url: "https://epc.opendatacommunities.org/" },
-              { name: "planning.data.gov.uk", url: "https://www.planning.data.gov.uk" },
+              {
+                name: "National Grid ESO",
+                dataset: "Carbon Intensity API",
+                url: "https://carbonintensity.org.uk",
+              },
+              {
+                name: "Office for National Statistics",
+                dataset: "Construction output",
+                url: "https://www.ons.gov.uk",
+              },
+              {
+                name: "MHCLG (HM Government)",
+                dataset: "EPC open data register",
+                url: "https://epc.opendatacommunities.org/",
+              },
+              {
+                name: "planning.data.gov.uk",
+                dataset: "Live planning applications",
+                url: "https://www.planning.data.gov.uk",
+              },
+              {
+                name: "Department for Business and Trade",
+                dataset: "Material price indices",
+                url: "https://www.gov.uk/government/organisations/department-for-business-and-trade",
+              },
+              {
+                name: "ICE Database (Circular Ecology)",
+                dataset: "Embodied carbon factors",
+                url: "https://circularecology.com/embodied-carbon-footprint-database.html",
+              },
             ].map((source) => (
               <a
                 key={source.name}
                 href={source.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-xs md:text-sm font-semibold uppercase tracking-[0.08em] text-warm-gray/80 transition-colors hover:text-navy whitespace-nowrap"
+                className="group block rounded-xl bg-white border border-charcoal/[0.08] p-4 transition-all hover:border-charcoal/30 hover:shadow-sm"
               >
-                {source.name}
+                <p className="font-[family-name:var(--font-playfair)] text-base font-bold text-navy leading-tight group-hover:text-charcoal">
+                  {source.name}
+                </p>
+                <p className="mt-1 text-[11px] uppercase tracking-[0.1em] text-warm-gray/80">
+                  {source.dataset}
+                </p>
               </a>
             ))}
           </div>
@@ -130,125 +193,127 @@ export default function HomePage() {
       </section>
 
       {/* ============================================================
-          WHAT WE'VE BUILT - direct map of the banner's five promises.
+          WHAT WE'VE BUILT - five sections walked through in order.
+          Copy by Colin: a single platform that brings the data,
+          insight and intelligence shaping the built environment.
           ============================================================ */}
-      <section className="bg-cream-dark py-16 md:py-20">
+      <section className="bg-cream py-16 md:py-20 border-t border-charcoal/[0.06]">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-10 md:mb-12 max-w-2xl mx-auto">
+          <div className="text-center mb-10 md:mb-12 max-w-3xl mx-auto">
             <span className="text-[11px] font-semibold uppercase tracking-[0.18em] text-pink">
-              What we&rsquo;ve built
+              A single platform for the built environment
             </span>
             <h2 className="mt-3 font-[family-name:var(--font-playfair)] text-3xl md:text-4xl font-bold text-navy">
-              Live data, analysis, tools, research and a monthly read.
+              What we have built and how to use it.
             </h2>
-            <p className="mt-3 text-warm-gray">
-              Six doorways into the platform - every one of them open for
-              the industry to use.
+            <p className="mt-4 text-sm md:text-base text-charcoal/80 leading-relaxed">
+              We have brought together the data, insight and intelligence
+              shaping the built environment, so you do not have to go
+              looking for it. Instead of navigating multiple sources,
+              interpreting raw datasets or trying to connect the dots
+              yourself, everything is structured here in a way that is
+              clear, accessible and immediately useful.
             </p>
           </div>
 
-          <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
-            {[
+          <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+            {([
               {
-                title: "Live data",
-                headline: "Five live UK construction data feeds.",
+                kind: "dashboard" as BuiltKind,
+                eyebrow: "Dashboard",
+                headline: "Live view of the industry's key metrics.",
                 detail:
-                  "Grid carbon, material prices, ONS construction output, planning activity and EPC ratings - all auto-updating.",
+                  "Carbon, material prices, planning activity, construction output and EPC ratings, refreshed automatically.",
                 href: "/dashboard",
-                icon: Zap,
-                cta: "Open dashboards",
+                icon: LayoutDashboard,
+                cta: "Open the dashboards",
               },
               {
-                title: "Original analysis",
-                headline: "What the data actually says.",
+                kind: "materials" as BuiltKind,
+                eyebrow: "Materials",
+                headline: "Understand the real impact of what you specify.",
                 detail:
-                  "Fabrick analysis layered onto every dashboard - patterns, what to do about it, when to act.",
-                href: "/dashboard/carbon-intensity",
-                icon: Sparkles,
-                cta: "Read the analysis",
-              },
-              {
-                title: "Open tools",
-                headline: "Calculators and lookups, free.",
-                detail:
-                  "Embodied carbon calculator, material substitution explorer, EPC postcode lookup.",
+                  "Embodied carbon calculator with multi-criteria comparison: carbon, thermal performance, fire rating and indicative cost.",
                 href: "/materials",
                 icon: Calculator,
-                cta: "Use the tools",
+                cta: "Run the calculator",
               },
               {
-                title: "Original research",
-                headline: "How the industry actually thinks.",
+                kind: "regulations" as BuiltKind,
+                eyebrow: "Regulations",
+                headline: "Stay ahead of changing requirements.",
                 detail:
-                  "Audience and market research from our work with UK construction clients.",
+                  "Future Homes Standard, Part Z, CBAM, EPC. What is coming, when, and what it means for your work.",
+                href: "/regulations",
+                icon: ScrollText,
+                cta: "See the timeline",
+              },
+              {
+                kind: "knowledge" as BuiltKind,
+                eyebrow: "Knowledge",
+                headline: "Build a deeper understanding of the issues.",
+                detail:
+                  "Plain-English explainers on the policies, standards and ideas shaping the construction industry.",
+                href: "/knowledge",
+                icon: Compass,
+                cta: "Read the explainers",
+              },
+              {
+                kind: "research" as BuiltKind,
+                eyebrow: "Research",
+                headline: "Data turned into insight you can act on.",
+                detail:
+                  "Original Fabrick research into how UK construction professionals search, evaluate suppliers and make decisions.",
                 href: "/research",
                 icon: BookOpen,
                 cta: "See the research",
               },
-              {
-                title: "Knowledge hub",
-                headline: "Regulation, standards, plain English.",
-                detail:
-                  "Future Homes Standard, CBAM, Part Z, EPC - what’s coming and what it means for your work.",
-                href: "/knowledge",
-                icon: Compass,
-                cta: "Open knowledge hub",
-              },
-              {
-                title: "The Data Point",
-                headline: "One monthly read for builders.",
-                detail:
-                  "Material moves, regulatory shifts, grid trends - straight to your inbox, nothing else.",
-                href: "#data-point",
-                icon: Mail,
-                cta: "Sign me up",
-                feature: true,
-              },
-            ].map((p) => {
+            ]).map((p) => {
               const Icon = p.icon;
               return (
                 <Link
-                  key={p.title}
+                  key={p.eyebrow}
                   href={p.href}
-                  className={`group block rounded-2xl p-6 transition-all hover:shadow-lg hover:-translate-y-0.5 focus:outline-none focus-visible:ring-2 focus-visible:ring-teal focus-visible:ring-offset-2 focus-visible:ring-offset-cream-dark ${
-                    p.feature
-                      ? "bg-charcoal text-white border border-white/10"
-                      : "bg-white border border-charcoal/[0.06]"
-                  }`}
+                  className="group block overflow-hidden rounded-2xl bg-white border border-charcoal/[0.06] transition-all hover:shadow-2xl hover:-translate-y-1 focus:outline-none focus-visible:ring-2 focus-visible:ring-teal focus-visible:ring-offset-2 focus-visible:ring-offset-cream"
                 >
-                  <div className="flex items-center justify-between mb-4">
+                  <div
+                    className="relative overflow-hidden"
+                    style={{ aspectRatio: "2 / 1", background: CARD_OVERLAY[p.kind] }}
+                  >
+                    <Image
+                      src={`/built-cards/${p.kind}.jpg`}
+                      alt=""
+                      fill
+                      sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                      className="object-cover transition-transform duration-500 ease-out group-hover:scale-[1.04]"
+                    />
                     <div
-                      className={`flex h-9 w-9 items-center justify-center rounded-lg ${
-                        p.feature ? "bg-white/10" : "bg-cream"
-                      }`}
-                    >
-                      <Icon className="h-4 w-4 text-teal" />
-                    </div>
-                    <span
-                      className={`text-[10px] font-semibold uppercase tracking-[0.14em] ${
-                        p.feature ? "text-pink" : "text-warm-gray/60"
-                      }`}
-                    >
-                      {p.title}
-                    </span>
+                      className="absolute inset-0"
+                      style={{
+                        background: `linear-gradient(180deg, ${CARD_OVERLAY[p.kind]}33 0%, ${CARD_OVERLAY[p.kind]}66 100%)`,
+                        mixBlendMode: "multiply",
+                      }}
+                    />
                   </div>
-                  <h3
-                    className={`font-[family-name:var(--font-playfair)] text-lg font-bold leading-snug ${
-                      p.feature ? "text-white" : "text-navy"
-                    }`}
-                  >
-                    {p.headline}
-                  </h3>
-                  <p
-                    className={`mt-2 text-xs leading-relaxed ${
-                      p.feature ? "text-gray-400" : "text-warm-gray"
-                    }`}
-                  >
-                    {p.detail}
-                  </p>
-                  <div className="mt-4 inline-flex items-center gap-1.5 text-xs font-semibold text-teal transition-all group-hover:gap-2.5">
-                    {p.cta}
-                    <ArrowRight className="h-3.5 w-3.5" />
+                  <div className="p-6">
+                    <div className="flex items-center justify-between mb-4">
+                      <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-cream-dark">
+                        <Icon className="h-4 w-4 text-teal" />
+                      </div>
+                      <span className="text-[10px] font-semibold uppercase tracking-[0.16em] text-warm-gray/60">
+                        {p.eyebrow}
+                      </span>
+                    </div>
+                    <h3 className="font-[family-name:var(--font-playfair)] text-[1.35rem] font-bold text-navy leading-[1.15] tracking-tight">
+                      {p.headline}
+                    </h3>
+                    <p className="mt-3 text-xs text-warm-gray leading-relaxed">
+                      {p.detail}
+                    </p>
+                    <div className="mt-4 inline-flex items-center gap-1.5 text-xs font-semibold text-teal transition-all group-hover:gap-2.5">
+                      {p.cta}
+                      <ArrowRight className="h-3.5 w-3.5" />
+                    </div>
                   </div>
                 </Link>
               );
@@ -260,15 +325,15 @@ export default function HomePage() {
       {/* ============================================================
           LATEST INSIGHTS - three signed Fabrick findings.
           ============================================================ */}
-      <section className="bg-cream-dark pt-2 pb-16 md:pb-20">
+      <section className="bg-cream-dark py-16 md:py-20">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="flex items-end justify-between flex-wrap gap-3 mb-6 md:mb-8">
             <div>
               <span className="text-[11px] font-semibold uppercase tracking-[0.18em] text-pink">
-                Latest insights
+                What we are seeing this month
               </span>
               <h2 className="mt-2 font-[family-name:var(--font-playfair)] text-2xl md:text-3xl font-bold text-navy">
-                What we&rsquo;re seeing this month.
+                Latest insights.
               </h2>
             </div>
             <Link
@@ -287,7 +352,7 @@ export default function HomePage() {
                 href={item.href}
                 className="group block rounded-2xl bg-white border border-charcoal/[0.06] p-6 transition-all hover:shadow-lg hover:-translate-y-0.5"
               >
-                <span className="text-[10px] font-semibold uppercase tracking-[0.14em] text-warm-gray/60">
+                <span className="text-[10px] font-semibold uppercase tracking-[0.16em] text-warm-gray/60">
                   {item.eyebrow}
                 </span>
                 <p className="mt-3 font-[family-name:var(--font-playfair)] text-lg font-bold text-navy leading-snug">
@@ -310,7 +375,7 @@ export default function HomePage() {
       <CurveArc from="var(--color-cream-dark)" to="var(--color-navy)" flip />
 
       {/* ============================================================
-          WHY THIS MATTERS - context strip with one anchoring stat
+          WHY THIS MATTERS
           ============================================================ */}
       <section className="bg-navy py-20 md:py-28 text-white">
         <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
@@ -331,16 +396,16 @@ export default function HomePage() {
             <div className="lg:col-span-7">
               <h2 className="font-[family-name:var(--font-playfair)] text-3xl md:text-4xl lg:text-5xl font-bold leading-tight">
                 Built on intuition.
-                <br className="hidden md:block" /> We&rsquo;re helping rebuild
-                it on data.
+                <br className="hidden md:block" /> We are helping rebuild it
+                on data.
               </h2>
               <p className="mt-5 text-base md:text-lg text-gray-300 leading-relaxed max-w-xl">
                 Construction is full of decisions where better information
-                changes the answer. When to schedule grid-powered work. Whether
-                to substitute that material. Where the retrofit market actually
-                is. Which audience an SME contractor should be talking to. Our
-                tools and analysis turn public datasets the industry already
-                pays for into evidence anyone can act on.
+                changes the answer. When to schedule grid-powered work.
+                Whether to substitute that material. Where the retrofit
+                market actually is. Our tools and analysis turn public
+                datasets the industry already pays for into evidence anyone
+                can act on.
               </p>
               <ul className="mt-8 grid gap-3 sm:grid-cols-3 max-w-xl">
                 <li className="border-l-2 border-pink/60 pl-3">
@@ -383,14 +448,16 @@ export default function HomePage() {
       >
         <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8 text-center">
           <span className="text-xs font-semibold uppercase tracking-wider text-pink">
+            <Mail className="inline h-3 w-3 mr-1.5 -mt-0.5" />
             The Data Point
           </span>
           <h2 className="mt-3 font-[family-name:var(--font-playfair)] text-3xl md:text-4xl font-bold leading-tight">
             One email a month. Built environment trends, decoded.
           </h2>
           <p className="mt-4 text-gray-300 max-w-xl mx-auto">
-            Live data turned into talking points. Material price moves, regulatory shifts and
-            grid trends - straight to your inbox, nothing else.
+            Live data turned into talking points. Material price moves,
+            regulatory shifts and grid trends, straight to your inbox,
+            nothing else.
           </p>
           <form
             onSubmit={(e) => e.preventDefault()}
