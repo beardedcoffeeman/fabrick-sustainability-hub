@@ -1,7 +1,7 @@
 "use client";
-/* eslint-disable @next/next/no-img-element */
 
 import Link from "next/link";
+import Image from "next/image";
 import {
   ArrowRight,
   Calculator,
@@ -280,10 +280,12 @@ export default function HomePage() {
                     className="relative overflow-hidden"
                     style={{ aspectRatio: "2 / 1", background: CARD_OVERLAY[p.kind] }}
                   >
-                    <img
+                    <Image
                       src={`/built-cards/${p.kind}.jpg`}
                       alt=""
-                      className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 ease-out group-hover:scale-[1.04]"
+                      fill
+                      sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                      className="object-cover transition-transform duration-500 ease-out group-hover:scale-[1.04]"
                     />
                     <div
                       className="absolute inset-0"
