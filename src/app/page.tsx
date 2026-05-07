@@ -48,13 +48,19 @@ function CurveArc({
   to: string;
   flip?: boolean;
 }) {
+  // Background equals the colour ABOVE the arc, so the transparent half of
+  // the SVG never reveals the body background underneath.
+  const aboveColour = flip ? from : to;
   return (
-    <div className="relative" style={{ marginTop: -1, marginBottom: -1 }}>
+    <div
+      className="relative"
+      style={{ marginTop: -1, marginBottom: -1, background: aboveColour }}
+    >
       <svg
         viewBox="0 0 1440 80"
         className="w-full block"
         preserveAspectRatio="none"
-        style={{ height: "80px", color: to }}
+        style={{ height: "80px" }}
       >
         {flip ? (
           <path
