@@ -1,5 +1,6 @@
 "use client";
 
+import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import {
@@ -79,6 +80,115 @@ function CurveArc({
 }
 
 // ============================================================
+// Data Point newsletter signup form
+// ============================================================
+
+type SignupStatus = "idle" | "submitting" | "success" | "error";
+
+function DataPointSignup() {
+  const [email, setEmail] = useState("");
+  const [company, setCompany] = useState(""); // honeypot
+  const [status, setStatus] = useState<SignupStatus>("idle");
+  const [errorMessage, setErrorMessage] = useState<string | null>(null);
+
+  async function onSubmit(e: React.FormEvent<HTMLFormElement>) {
+    e.preventDefault();
+    if (status === "submitting") return;
+    setStatus("submitting");
+    setErrorMessage(null);
+
+    try {
+      const res = await fetch("/api/data-point-signup", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email, company, source: "home_data_point" }),
+      });
+
+      if (!res.ok) {
+        const data = (await res.json().catch(() => ({}))) as {
+          error?: string;
+        };
+        setErrorMessage(
+          data.error ?? "Something went wrong. Please try again."
+        );
+        setStatus("error");
+        return;
+      }
+
+      setStatus("success");
+      setEmail("");
+    } catch {
+      setErrorMessage("Network error. Please try again.");
+      setStatus("error");
+    }
+  }
+
+  if (status === "success") {
+    return (
+      <div className="mt-8 max-w-md mx-auto rounded-2xl border border-teal/40 bg-navy-light/40 px-6 py-5 text-center">
+        <p className="font-[family-name:var(--font-playfair)] text-xl font-bold text-teal">
+          You&apos;re in.
+        </p>
+        <p className="mt-2 text-sm text-gray-300">
+          The next Data Point lands in your inbox at the start of the month.
+        </p>
+      </div>
+    );
+  }
+
+  return (
+    <>
+      <form
+        onSubmit={onSubmit}
+        className="mt-8 flex flex-col sm:flex-row gap-3 max-w-md mx-auto"
+        noValidate
+      >
+        {/* Honeypot: hidden from real users, irresistible to bots. */}
+        <label
+          aria-hidden="true"
+          className="absolute left-[-9999px] h-0 w-0 overflow-hidden"
+        >
+          Company
+          <input
+            type="text"
+            tabIndex={-1}
+            autoComplete="off"
+            value={company}
+            onChange={(e) => setCompany(e.target.value)}
+          />
+        </label>
+
+        <input
+          type="email"
+          required
+          placeholder="your@email.com"
+          aria-label="Email address"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+          disabled={status === "submitting"}
+          className="flex-1 rounded-full bg-navy-light px-5 py-3 text-sm text-white placeholder:text-gray-500 focus:outline-none focus:ring-2 focus:ring-teal/40 border border-gray-700 disabled:opacity-60"
+        />
+        <button
+          type="submit"
+          disabled={status === "submitting"}
+          className="rounded-full bg-pink px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-pink-light disabled:opacity-60"
+        >
+          {status === "submitting" ? "Signing up…" : "Sign me up"}
+        </button>
+      </form>
+      {status === "error" && errorMessage && (
+        <p className="mt-3 text-xs text-pink" role="alert">
+          {errorMessage}
+        </p>
+      )}
+      <p className="mt-4 text-xs text-gray-500">
+        No spam. Unsubscribe in one click.
+      </p>
+    </>
+  );
+}
+
+// ============================================================
 // Main Homepage Component
 // ============================================================
 
@@ -94,7 +204,7 @@ export default function HomePage() {
         <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pt-24 pb-24 md:pt-32 md:pb-28">
           <div className="max-w-3xl">
             <p className="mb-4 text-[11px] font-semibold uppercase tracking-[0.18em] text-white/70 animate-fade-in-delay-1">
-              Fabrick - Built environment data for the UK construction industry
+              Pulse by Fabrick — live UK built environment data and tools
             </p>
 
             <h1 className="font-[family-name:var(--font-playfair)] text-5xl sm:text-6xl md:text-7xl font-bold text-white leading-[0.98] tracking-tight animate-fade-in-delay-1 [text-shadow:0_2px_24px_rgba(0,0,0,0.4)]">
@@ -465,27 +575,7 @@ export default function HomePage() {
             regulatory shifts and grid trends, straight to your inbox,
             nothing else.
           </p>
-          <form
-            onSubmit={(e) => e.preventDefault()}
-            className="mt-8 flex flex-col sm:flex-row gap-3 max-w-md mx-auto"
-          >
-            <input
-              type="email"
-              required
-              placeholder="your@email.com"
-              aria-label="Email address"
-              className="flex-1 rounded-full bg-navy-light px-5 py-3 text-sm text-white placeholder:text-gray-500 focus:outline-none focus:ring-2 focus:ring-teal/40 border border-gray-700"
-            />
-            <button
-              type="submit"
-              className="rounded-full bg-pink px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-pink-light"
-            >
-              Sign me up
-            </button>
-          </form>
-          <p className="mt-4 text-xs text-gray-500">
-            No spam. Unsubscribe in one click.
-          </p>
+          <DataPointSignup />
         </div>
       </section>
     </div>

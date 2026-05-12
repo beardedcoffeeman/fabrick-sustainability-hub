@@ -1,0 +1,97 @@
+name: Refresh Planning Explorer
+
+# Weekly refresh of the Planning Explorer dataset:
+#   1. Pull latest applications from planning.data.gov.uk (open data)
+#   2. Scrape every Idox-classic LPA we know about (metadata + applicants)
+#   3. Fetch decision-notice PDFs via Playwright (headless Chromium)
+#   4. Run Claude Sonnet 4.6 over each new PDF to extract conditions
+#   5. Commit the refreshed JSON datasets so Vercel auto-redeploys
+#
+# Required secrets (configure in repo Settings → Secrets and variables):
+#   ANTHROPIC_API_KEY — Claude API key for condition extraction
+#
+# Manual trigger: workflow_dispatch (Actions tab → Refresh Planning Explorer
+# → Run workflow). Useful for testing changes without waiting for Sunday.
+
+on:
+  schedule:
+    # Sunday 22:00 UTC. Runs ~weekly, in a quiet window for LPA portals.
+    - cron: "0 22 * * 0"
+  workflow_dispatch:
+    inputs:
+      lpas:
+        description: "Which LPAs to scrape (comma-separated id list or 'all')"
+        required: false
+        default: "all"
+
+permissions:
+  contents: write
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    # Up to 3 hours — the all-LPA scrape can take 1-2 hours, then PDFs and
+    # extraction add another 30-60 minutes.
+    timeout-minutes: 180
+    env:
+      ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+      LPA_ARG: ${{ github.event.inputs.lpas || 'all' }}
+      # Cache directory used by the Playwright install step.
+      PLAYWRIGHT_BROWSERS_PATH: ~/.cache/ms-playwright
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: "npm"
+
+      - name: Install npm deps
+        run: npm ci
+
+      # Playwright needs to download the Chromium binary on a fresh runner.
+      - name: Cache Playwright browsers
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/ms-playwright
+          key: pw-${{ runner.os }}-${{ hashFiles('package-lock.json') }}
+
+      - name: Install Playwright chromium
+        run: npx playwright install --with-deps chromium
+
+      # ─── 1. gov.uk open data ─────────────────────────────────────────
+      - name: Refresh planning.data.gov.uk dataset
+        run: npm run ingest:planning
+
+      # ─── 2. LPA portal metadata scrape ───────────────────────────────
+      # Cookies + cheerio adapter. Each LPA hits a separate host so we run
+      # 6 in parallel — keeps wall-clock under an hour for all-LPA runs.
+      - name: Scrape LPA portals
+        run: npx tsx scripts/scrape-lpa.ts "$LPA_ARG" --parallel 6
+
+      # ─── 3. Decision-notice PDF download ─────────────────────────────
+      # Playwright opens the documents tab of each decided application,
+      # finds the Decision Notice link, downloads the PDF.
+      - name: Download decision-notice PDFs
+        run: npm run fetch:docs
+
+      # ─── 4. Claude condition extraction ──────────────────────────────
+      # Skips already-cached PDFs so cost is bounded to new ones.
+      - name: Extract conditions with Claude
+        run: npm run extract:pdfs
+
+      # ─── 5. Commit refreshed data ────────────────────────────────────
+      - name: Commit refreshed data if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add src/data/applications-real.json
+          git add src/data/applications-scraped.json
+          git add src/data/extracted-real.json
+          if git diff --staged --quiet; then
+            echo "No changes — dataset already up to date."
+          else
+            git commit -m "chore: refresh Planning Explorer dataset [skip ci]"
+            git push
+          fi

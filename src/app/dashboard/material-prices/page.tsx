@@ -27,7 +27,7 @@ export const metadata: Metadata = {
       "What's moving in the UK construction materials basket? | Fabrick",
     description:
       "28 monthly price indices from DBT. Movers, substitution wins and procurement timing for the people building Britain.",
-    url: "https://fabrick-sustainability-hub.vercel.app/dashboard/material-prices",
+    url: "https://pulse.fabrick.agency/dashboard/material-prices",
   },
 };
 

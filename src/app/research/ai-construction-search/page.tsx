@@ -42,7 +42,7 @@ export const metadata: Metadata = {
     title: "How Accurate is AI for UK Construction? | Fabrick Research",
     description:
       "1,001 questions. 12 AI models. 20 categories. Fabrick's definitive accuracy benchmark for AI in UK construction.",
-    url: "https://fabrick-sustainability-hub.vercel.app/research/ai-construction-search",
+    url: "https://pulse.fabrick.agency/research/ai-construction-search",
   },
 };
 

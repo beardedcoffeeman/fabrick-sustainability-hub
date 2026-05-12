@@ -277,11 +277,11 @@ function renderSnapshot(data: SnapshotData): HTMLCanvasElement {
   ctx.textBaseline = "middle";
   ctx.fillText(pillText, pillX + 10, pillY + pillH / 2 + 1);
 
-  // "Built Environment Data" next to pill
+  // "Pulse by Fabrick" next to pill
   ctx.font = "500 11px -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif";
   ctx.fillStyle = subtextColor;
   ctx.textBaseline = "middle";
-  ctx.fillText("Built Environment Data", pillX + pillW + 10, pillY + pillH / 2 + 1);
+  ctx.fillText("Pulse by Fabrick", pillX + pillW + 10, pillY + pillH / 2 + 1);
 
   // Right side: tagline and date
   ctx.textAlign = "right";
@@ -400,7 +400,7 @@ export function ShareDownload({
       .filter((line: string) => line.trim())
       .join("\n");
 
-    const formatted = `${title} - Fabrick Built Environment Data\n${"=".repeat(40)}\n${textContent}\n\nSource: ${typeof window !== "undefined" ? window.location.origin : ""}${sharePath}\nDriven by data. Powered by creativity.`;
+    const formatted = `${title} - Pulse by Fabrick\n${"=".repeat(40)}\n${textContent}\n\nSource: ${typeof window !== "undefined" ? window.location.origin : ""}${sharePath}\nDriven by data. Powered by creativity.`;
 
     navigator.clipboard.writeText(formatted).then(() => {
       setCopied(true);

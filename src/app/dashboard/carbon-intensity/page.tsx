@@ -30,7 +30,7 @@ export const metadata: Metadata = {
     title: "When is the UK grid cleanest? - 90-day analysis | Fabrick",
     description:
       "Schedule grid-powered work into the cleanest hours of the UK week. Heatmap and best/worst windows from 90 days of National Grid ESO data.",
-    url: "https://fabrick-sustainability-hub.vercel.app/dashboard/carbon-intensity",
+    url: "https://pulse.fabrick.agency/dashboard/carbon-intensity",
   },
 };
 
@@ -88,7 +88,7 @@ const ARTICLE_SCHEMA = {
   dateModified: new Date().toISOString().split("T")[0],
   mainEntityOfPage: {
     "@type": "WebPage",
-    "@id": "https://fabrick-sustainability-hub.vercel.app/dashboard/carbon-intensity",
+    "@id": "https://pulse.fabrick.agency/dashboard/carbon-intensity",
   },
 };
 
@@ -115,7 +115,7 @@ const DATASET_SCHEMA = {
   ],
   spatialCoverage: "United Kingdom",
   temporalCoverage: "P90D",
-  url: "https://fabrick-sustainability-hub.vercel.app/dashboard/carbon-intensity",
+  url: "https://pulse.fabrick.agency/dashboard/carbon-intensity",
   variableMeasured: "Carbon intensity (gCO₂ per kWh)",
 };
 

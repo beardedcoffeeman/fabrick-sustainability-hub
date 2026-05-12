@@ -9,11 +9,12 @@ import {
   Users,
   BarChart3,
   Tag,
+  Building2,
 } from "lucide-react";
 import { EmailCaptureInline } from "@/components/research/EmailCaptureForm";
 
 export const metadata: Metadata = {
-  title: "Original UK Construction Research | Fabrick",
+  title: "Original UK Construction Research | Pulse by Fabrick",
   description:
     "Original Fabrick research into how UK construction professionals search, evaluate suppliers and make purchasing decisions. AI accuracy and search behaviour.",
   keywords: [
@@ -25,14 +26,25 @@ export const metadata: Metadata = {
   ],
   openGraph: {
     title:
-      "How does the UK construction industry actually decide? | Fabrick",
+      "How does the UK construction industry actually decide? | Pulse by Fabrick",
     description:
       "Original Fabrick research into UK construction decision-making, AI in procurement, and market intelligence.",
-    url: "https://fabrick-sustainability-hub.vercel.app/research",
+    url: "https://pulse.fabrick.agency/research",
   },
 };
 
 const researchStudies = [
+  {
+    slug: "planning-explorer",
+    title: "Planning Explorer: where UK construction is actually building",
+    status: "New",
+    description:
+      "Real UK planning applications across eight construction sectors, decoded for the people who supply the industry. See where demand is moving, which LPAs are most active, and which applicants are filing the schemes you want to be specified into.",
+    statsPreview: "Real applications | 8 sectors | All UK LPAs",
+    tags: ["Planning Intelligence", "Sector Trends", "Specifier Marketing", "Built Environment"],
+    icon: Building2,
+    published: true,
+  },
   {
     slug: "ai-construction-search",
     title: "How Accurate is AI for UK Construction?",

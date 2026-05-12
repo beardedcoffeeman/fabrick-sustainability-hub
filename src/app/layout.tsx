@@ -17,12 +17,14 @@ const playfair = Playfair_Display({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://fabrick-sustainability-hub.vercel.app"),
-  title: "Live UK Construction Data and Open Tools | Fabrick",
+  metadataBase: new URL("https://pulse.fabrick.agency"),
+  title: "Pulse by Fabrick — live UK built environment data and tools",
   description:
-    "Live UK grid carbon, material prices, planning, ONS output and EPC data. Free embodied carbon calculator and a timeline of upcoming UK construction regulations.",
+    "Pulse by Fabrick: real UK planning activity, material prices, grid carbon, ONS construction output and EPC data. Free embodied carbon calculator and the UK regulations timeline.",
   keywords: [
+    "Pulse by Fabrick",
     "UK construction data",
+    "UK planning intelligence",
     "embodied carbon calculator",
     "future homes standard",
     "UK building regulations",
@@ -33,11 +35,11 @@ export const metadata: Metadata = {
     "Part Z embodied carbon",
   ],
   openGraph: {
-    title: "Live UK Construction Data and Open Tools | Fabrick",
+    title: "Pulse by Fabrick — live UK built environment data and tools",
     description:
-      "Live UK grid carbon, material prices, planning, ONS output and EPC data. Free embodied carbon calculator and the UK regulations timeline.",
-    url: "https://fabrick-sustainability-hub.vercel.app",
-    siteName: "Fabrick Built Environment Data",
+      "Pulse by Fabrick: real UK planning activity, material prices, grid carbon, ONS construction output and EPC data. Free embodied carbon calculator and the UK regulations timeline.",
+    url: "https://pulse.fabrick.agency",
+    siteName: "Pulse by Fabrick",
     type: "website",
     locale: "en_GB",
     images: [
@@ -45,15 +47,15 @@ export const metadata: Metadata = {
         url: "/og-image.png",
         width: 1200,
         height: 630,
-        alt: "Fabrick Built Environment Data - Live UK Construction Data Dashboard",
+        alt: "Pulse by Fabrick — live UK built environment data",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Live UK Construction Data and Open Tools | Fabrick",
+    title: "Pulse by Fabrick — live UK built environment data and tools",
     description:
-      "Live UK grid carbon, material prices, planning, ONS output and EPC data. Free embodied carbon calculator and the UK regulations timeline.",
+      "Pulse by Fabrick: real UK planning activity, material prices, grid carbon, ONS construction output and EPC data. Free embodied carbon calculator and the UK regulations timeline.",
     images: ["/og-image.png"],
     creator: "@FabrickAgency",
   },

@@ -282,7 +282,7 @@ export function Navbar() {
             <Link href="/" className="flex items-center gap-3">
               <FabrickLogo fill="#ffffff" height={30} />
               <span className="hidden text-xs font-medium text-warm-gray sm:block">
-                Built Environment Data
+                Pulse
               </span>
             </Link>
 

@@ -40,3 +40,11 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 .env*.local
+
+# planning explorer pipeline
+# Cache of gov.uk CSV downloads + Claude extraction outputs + Idox HTML.
+.cache/
+# Real decision-notice PDFs — fetched from LPA portals, may be copyrighted.
+_pipeline/decision-notices/*.pdf
+_pipeline/decision-notices/*.PDF
+_pipeline/decision-notices/*.meta.json

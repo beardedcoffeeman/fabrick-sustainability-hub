@@ -1,28 +1,40 @@
 {
-  "name": "fabrick-sustainability-hub",
+  "name": "pulse-by-fabrick",
   "version": "0.1.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "ingest:planning": "tsx scripts/ingest-planning-data.ts",
+    "extract:pdfs": "tsx scripts/extract-pdfs.ts",
+    "scrape:lpa": "tsx scripts/scrape-lpa.ts",
+    "fetch:docs": "tsx scripts/fetch-docs.ts"
   },
   "dependencies": {
+    "@anthropic-ai/sdk": "^0.95.2",
+    "@neondatabase/serverless": "^1.1.0",
+    "cheerio": "^1.2.0",
     "dom-to-image-more": "^3.7.2",
+    "dotenv": "^17.4.2",
     "framer-motion": "^12.35.0",
     "html-to-image": "^1.11.13",
     "html2canvas": "^1.4.1",
     "lucide-react": "^0.577.0",
     "next": "16.1.6",
+    "pdf-parse": "^2.4.5",
+    "playwright": "^1.59.1",
     "react": "19.2.3",
     "react-dom": "19.2.3",
     "recharts": "^3.7.0",
+    "tsx": "^4.21.0",
     "xlsx": "^0.18.5"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4",
     "@types/node": "^20",
+    "@types/pdf-parse": "^1.1.5",
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "eslint": "^9",

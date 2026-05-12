@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     title: "What commercial work is getting built across the UK? | Fabrick",
     description:
       "Live tracker for UK commercial planning applications, with tabs for residential, mixed-use and all classified work.",
-    url: "https://fabrick-sustainability-hub.vercel.app/dashboard/planning",
+    url: "https://pulse.fabrick.agency/dashboard/planning",
   },
 };
 

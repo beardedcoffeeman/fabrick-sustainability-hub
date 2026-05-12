@@ -1,0 +1,1838 @@
+{
+  "generatedAt": "2026-05-12T08:37:53.362Z",
+  "source": "claude-extraction",
+  "note": "Real planning conditions extracted from decision-notice PDFs by Claude Sonnet 4.6.",
+  "applications": [
+    {
+      "id": "basingstoke-RKB1KOCRJPI00",
+      "reference": "22/02903/ADV",
+      "lpa": "Basingstoke and Deane Borough Council",
+      "region": "South East",
+      "address": "North Hampshire Hospital Aldermaston Road Basingstoke Hampshire RG24 9NA",
+      "postcode": "",
+      "useClass": "Consent to display advertisements",
+      "sector": "healthcare",
+      "description": "Regularisation for the display of 3 no. illuminated backlit signs with logo 'Hampshire Hospitals Heart Centre' on new building on the North, East and South elevations",
+      "applicant": "Mr Kofi Quartey",
+      "agent": "Mr Peter Barnett",
+      "decision": "approved",
+      "decisionDate": "2023-07-13",
+      "conditions": [
+        {
+          "number": "1",
+          "type": "other",
+          "summary": "Development in accordance with approved plans",
+          "text": "The development hereby permitted shall be carried out in accordance with the following approved plans:\nLocation Plan Job No.: 39074 Drawing No.: 102 rev.: 0 Dated: 24 October 2022 Date Received: 25 October 2022\nProposed Elevations - External Signage Option Drawing Reference: 180425 DGL 01 XX DR A 2104 Rev.: P3 Revision Date: 12 August 2022 Date Received: 25 October 2022\nProposed Signage Details Job Ref. No.: DSQ15789 Version: 1 Dated: 14 July 2022 Date Received: 15 December 2022\nREASON: For the avoidance of doubt and in the interests of proper planning."
+        },
+        {
+          "number": "2",
+          "type": "other",
+          "summary": "Standard advertisement consent maintenance and safety conditions",
+          "text": "a) Any advertisements displayed and any site used for the display of advertisements, shall be maintained in a clean and tidy condition to the reasonable satisfaction of the Local Planning Authority. b) Any hoarding or similar structure, or any sign, placard, board or device erected or used principally for the purpose of displaying advertisements shall be maintained in a safe condition. c) Where any advertisement is required under the Town and Country Planning (Control of Advertisements) (England) Regulations 2007 to be removed, the removal thereof shall be carried out to the reasonable satisfaction of the Local Planning Authority. d) No advertisement is to be displayed without the permission of the owner of the site or any other person with an interest in the site entitled to grant permission. e) No advertisement shall be sited or displayed so as to obscure or hinder the ready interpretation of any road traffic sign, railway signal or aid to navigation by water or air, or so as otherwise to render hazardous the use of any highway, railway, waterway (including any coastal waters) or aerodrome (civil or military).\nREASON: As required by the provisions of the Town and Country Planning (Control of Advertisements) Regulations."
+        },
+        {
+          "number": "3",
+          "type": "other",
+          "summary": "Limited consent period of five years from date of notice",
+          "text": "This consent shall be for a limited period of five years from the date of this notice.\nREASON: As required by the provisions of the Town and Country Planning (Control of Advertisements) Regulations."
+        },
+        {
+          "number": "4",
+          "type": "lighting",
+          "summary": "Illuminated signs luminance limit not exceeding 410 cd/m² and static illumination",
+          "text": "The externally illuminated fascia sign advertisements ('Signs 1, 2 and 3') hereby consented shall have a luminance level not exceeding 410 candela per square metre and the illumination shall be static.\nREASON: In the interest of the amenities of the area and of highway safety and in accordance with Policy EM10 of the Basingstoke and Deane Local Plan 2011-2029."
+        }
+      ],
+      "source": "claude-extraction",
+      "sourceUrl": "https://planning.basingstoke.gov.uk/online-applications/applicationDetails.do?keyVal=RKB1KOCRJPI00&activeTab=summary"
+    },
+    {
+      "id": "basingstoke-RPTKK1CRFZW00",
+      "reference": "23/00344/FUL",
+      "lpa": "Basingstoke and Deane Borough Council",
+      "region": "South East",
+      "address": "Units At Exhibition Court Armstrong Road Basingstoke Hampshire",
+      "postcode": "",
+      "useClass": "Full Planning Application",
+      "sector": "logistics",
+      "description": "Erection of Builders Merchant warehouse with refurbishment to existing adjoining building to include trade counter use. New external yard and associated areas for storage and sale of goods and materials, access and parking.",
+      "applicant": "c/o agent",
+      "agent": "Mr Jack Bell",
+      "decision": "approved",
+      "decisionDate": "2023-11-15",
+      "conditions": [
+        {
+          "number": "1",
+          "type": "other",
+          "summary": "Development in accordance with approved plans",
+          "text": "The development hereby permitted shall be carried out in accordance with the following approved plans:\nLocation Plan (drawing no. 22016-HNW-ZZ-ZZ-DR-A-1000 rev P02)\nProposed Site Sections (drawing no. 22016-HNW-ZZ-ZZ-DR-A-2400 rev P03)\nProposed Roof Plan (drawing no. 22016-HNW-ZZ-ZZ-DR-A-2203 rev P02)\nProposed Site Plan (drawing no. 22016-HNW-ZZ-ZZ-DR-A-2100 rev P09)\nProposed Elevations (drawing no. 22016-HNW-ZZ-ZZ-DR-A-2300 rev P04)\nProposed Floor Plans (drawing no. 22016-HNW-ZZ-ZZ-DR-A-2200 re P07)\nREASON: For the avoidance of doubt and in the interests of proper planning."
+        },
+        {
+          "number": "2",
+          "type": "other",
+          "summary": "Development to begin within 3 years",
+          "text": "The development hereby permitted shall be begun before the expiration of 3 years from the date of this planning permission.\nREASON: To comply with Section 91 of the Town and Country Planning Act 1990 and to prevent an accumulation of unimplemented planning permissions."
+        },
+        {
+          "number": "3",
+          "type": "materials",
+          "summary": "External materials to match application form and approved plans",
+          "text": "The materials to be used in the construction of the external surfaces of the development hereby permitted shall match, in type, colour and texture to those on the application form and approved plans.\nREASON: In the interests of visual amenity and in accordance with Policy EM10 of the Basingstoke and Deane Local Plan 2011-2029."
+        },
+        {
+          "number": "4",
+          "type": "other",
+          "summary": "Pre-commencement land contamination site investigation and remediation scheme",
+          "text": "No works pursuant to this permission shall commence until there has been submitted to and approved in writing by the Local Planning Authority:- (a) a site investigation report documenting the ground conditions of the site and incorporating chemical and gas analysis identified as being appropriate by the desk study in accordance with BS10175:2011- Investigation of Potentially Contaminated Sites - Code of Practice; and, unless otherwise agreed in writing by the Local Planning Authority, (b) a detailed scheme for remedial works and measures to be undertaken to avoid risk from contaminants/or gases when the site is developed. The scheme must include a timetable of works and site management procedures and the nomination of a competent person to oversee the implementation of the works."
+        },
+        {
+          "number": "5",
+          "type": "other",
+          "summary": "Verification of contamination remediation scheme prior to occupation",
+          "text": "The development hereby permitted shall not be occupied/brought into use until there has been submitted to the Local Planning Authority verification by the competent person approved under the provisions of condition 4(b) that any remediation scheme required and approved under the provisions of condition 4(b) has been implemented fully in accordance with the approved details (unless varied with the written agreement of the Local Planning Authority in advance of implementation). Such verification shall comprise; i. as built drawings of the implemented scheme; ii. photographs of the remediation works in progress; iii. Certificates demonstrating that imported and/or material left in situ is free of contamination."
+        },
+        {
+          "number": "6",
+          "type": "ecology",
+          "summary": "Landscaping scheme to be submitted and approved prior to above slab level works",
+          "text": "No development shall take place above slab level until there has been submitted to and approved in writing by the Local Planning Authority a scheme of landscaping which shall specify species, planting sizes, spacing and numbers of trees/shrubs to be planted (including replacement trees where appropriate). The works approved shall be carried out in the first planting and seeding seasons following the first occupation of the building(s) or when the use hereby permitted is commenced. Any trees or plants which, within a period of 5 years from the date of planting, die, are removed or become seriously damaged or diseased shall be replaced in the next planting season with others of similar size and species, to be agreed in writing by the Local Planning Authority."
+        },
+        {
+          "number": "7",
+          "type": "ecology",
+          "summary": "Development to accord with Preliminary Ecological Survey and Roost Assessment recommendations",
+          "text": "The development must be in accordance with the recommendations within the Preliminary Ecological Survey and Preliminary Roost Assessment carried out by Arbtech dated 20/12/2022 and maintained as such in perpetuity.\nREASON: In order to provide biodiversity enhancements to the site in line with the Environment Act 2021, Section 15 of National Planning Policy Framework (2023) and Policy EM4 of the Basingstoke and Deane Local Plan 2011-2029."
+        },
+        {
+          "number": "8",
+          "type": "bng",
+          "summary": "Pre-commencement habitat and species enhancement plan",
+          "text": "No development shall commence on site until a habitat and species enhancement plan describing and depicting features listed within Table 8 (which should include bat and bird nesting/roosting boxes and tubes and the provision of native plants such as trees and shrubs within the site) of the Preliminary Ecological Appraisal and Preliminary Roost Assessment by Arbtech dated 20/12/2022 shall be provided to and approved by the Local Planning Authority. Development shall be carried out in accordance with the approved details.\nREASON: In order to provide net gains for biodiversity in line with Policy EM4 of the Basingstoke and Deane Local Plan 2011-2029."
+        },
+        {
+          "number": "9",
+          "type": "hours",
+          "summary": "Construction deliveries and spoil removal hours restriction",
+          "text": "No deliveries of construction materials or plant and machinery and no removal of any spoil from the site, shall take place before the hours of 0730 nor after 1800 Monday to Friday, before the hours of 0800 nor after 1300 Saturdays nor on Sundays or recognised public or bank holidays.\nREASON: To protect the amenities of the occupiers of nearby properties during the construction period and in accordance Policies EM10 and EM12 of the Basingstoke and Deane Local Plan 2011-2029."
+        },
+        {
+          "number": "10",
+          "type": "hours",
+          "summary": "Construction working hours restriction",
+          "text": "No work relating to the construction of the development hereby approved shall take place before the hours of 0730 nor after 1800 Monday to Friday, before the hours of 0800 nor after 1300 Saturdays nor on Sundays or recognised public or bank holidays.\nREASON: To protect the amenities of the occupiers of nearby properties during the construction period and in accordance Policies EM10 and EM12 of the Basingstoke and Deane Local Plan 2011-2029."
+        },
+        {
+          "number": "11",
+          "type": "hours",
+          "summary": "Operational hours restriction (06:30–17:00 Mon–Fri, 07:00–13:00 Sat, closed Sun/BH)",
+          "text": "The premises shall not open before 06:30 hours or remain open after 17:00 hours on Mondays to Fridays and 07:00 hours to 13:00 hours on Saturdays nor open at any time on Sundays or any recognised public holiday.\nREASON: To protect the amenities of the occupiers of nearby properties and in accordance with Policy EM10 of the Basingstoke and Deane Local Plan 2011-2029."
+        },
+        {
+          "number": "12",
+          "type": "transport",
+          "summary": "Signage/road markings scheme and Service Management Plan prior to occupation",
+          "text": "The development shall not be occupied until a scheme of signage/road markings at the site access and a Service Management Plan have been submitted to and approved in writing by the Local Planning Authority. The scheme and Service Management Plan so approved shall be implemented before the development hereby approved is first brought into use.\nREASON: In the interests of highway safety and to achieve a satisfactory layout in accordance with Policy EM10 and CN9 of the Basingstoke and Deane Local Plan 2011-2029."
+        },
+        {
+          "number": "13",
+          "type": "drainage",
+          "summary": "Vehicle and pedestrian areas to be laid out with drained surface prior to use",
+          "text": "The development shall not be brought into use until all areas indicated to be used for vehicles and pedestrians on the approved plan have been laid out with a drained surface. Provision shall be made to direct run-off water from the surface to a permeable or porous area or surface within the curtilage of the development. Such areas shall be retained as such for the lifetime of the development.\nREASON: To ensure adequate provision for surface water drainage and in the interests of highway safety in accordance with Policy EM10 and CN9 of the Basingstoke and Deane Local Plan 2011-2029."
+        },
+        {
+          "number": "14",
+          "type": "transport",
+          "summary": "Pre-commencement Construction Method Statement",
+          "text": "No development shall take place, (including any works of demolition), until a Construction Method Statement has been submitted to, and approved in writing by, the Local Planning Authority. The approved statement shall include scaled drawings illustrating the provision for: 1) The parking of site operatives and visitors vehicles. 2) Loading and unloading of plant and materials. 3) Management of construction traffic and access routes. 4) Storage of plant and materials used in constructing the development. 5) Wheel washing facilities.\nREASON: In the interests of highway safety in accordance with Policy EM10 and CN9 of the Basingstoke and Deane Local Plan 2011-2029."
+        },
+        {
+          "number": "15",
+          "type": "transport",
+          "summary": "Car parking area to be provided, marked out and maintained prior to occupation",
+          "text": "The development shall not be brought into use until the car parking area shown on the submitted plan has been provided, marked out and thereafter maintained for car parking for the lifetime of the development and used for no other purpose.\nREASON: To ensure adequate space within the site for vehicle movements and parking provision in accordance with Policy EM10 and CN9 of the Basingstoke and Deane Local Plan 2011-2029."
+        },
+        {
+          "number": "16",
+          "type": "transport",
+          "summary": "Turning facilities to be provided prior to occupation and kept free from obstruction",
+          "text": "The development shall not be brought into use until turning facilities have been provided in accordance with the details shown on the approved plan. The turning facilities shall be available for use by vehicles and kept free from obstruction throughout the lifetime of the development.\nREASON: In the interests of traffic safety and to achieve a satisfactory layout in accordance with Policy EM10 and CN9 of the Basingstoke and Deane Local Plan 2011-2029."
+        },
+        {
+          "number": "17",
+          "type": "transport",
+          "summary": "Vehicular access to be constructed per approved plan with visibility splays maintained",
+          "text": "Before the development is brought into use, the means of vehicular access to the site shall be constructed in accordance with the approved plan (Transport Assessment Drg No.2209003-01 Rev. A) and no structure, erection or planting exceeding 1.0m in height shall thereafter be placed within the visibility splays shown on the approved plans.\nREASON: To ensure a suitable access and layout in the interests of highway safety in accordance with Policy EM10 and CN9 of the Basingstoke and Deane Local Plan 2011-2029."
+        },
+        {
+          "number": "18",
+          "type": "transport",
+          "summary": "Cycle parking to be fully implemented prior to occupation and retained",
+          "text": "The development shall be occupied until cycle parking has been fully implemented and shall thereafter be retained for that specific purpose.\nREASON: To ensure adequate cycle parking provision is provided in accordance with Policies EM10 and CN9 of the Basingstoke and Deane Local Plan 2011-2029."
+        },
+        {
+          "number": "19",
+          "type": "other",
+          "summary": "No increase in size of permitted mezzanine floor or additional mezzanines",
+          "text": "The development hereby approved shall not increase the size of the permitted mezzanine floor or create any additional mezzanine floors within the building.\nREASON: To avoid additional pressure on parking arrangements at the site, in accordance with Policies CN9 and EM10 of the Basingstoke and Deane Local Plan 2011-2029."
+        },
+        {
+          "number": "20",
+          "type": "other",
+          "summary": "No increase in size of permitted external forecourt storage area",
+          "text": "The development hereby approved shall not increase the size of the permitted external storage area in the forecourt.\nREASON: To avoid additional pressure on parking arrangements at the site, in accordance Policies CN9 and EM10 of the Basingstoke and Deane Local Plan 2011-2029."
+        },
+        {
+          "number": "21",
+          "type": "drainage",
+          "summary": "Development to be built and maintained in accordance with approved Drainage Statement and SuDS documents",
+          "text": "The development hereby approved shall be built and maintained in accordance with the Drainage Statement (dated January 2023), Drainage Design (drg no. 0200 rev P01) and the SUDS Maintenance Guide Owners Manual (dated December 2022) all prepared by Infrastruct CS Ltd. The development thereafter shall be thereafter maintained as such in perpetuity.\nREASON: In order to avoid adverse impact in regards to surface water flooding in accordance with Policy EM7 of the Basingstoke and Deane Local Plan 2011-2029."
+        }
+      ],
+      "source": "claude-extraction",
+      "sourceUrl": "https://planning.basingstoke.gov.uk/online-applications/applicationDetails.do?keyVal=RPTKK1CRFZW00&activeTab=summary"
+    },
+    {
+      "id": "basingstoke-RR79BMCRH1V00",
+      "reference": "23/00606/ROC",
+      "lpa": "Basingstoke and Deane Borough Council",
+      "region": "South East",
+      "address": "4 Sandford House Cottages Knowl Hill Kingsclere Hampshire RG20 4NZ",
+      "postcode": "",
+      "useClass": "Removal/Variation of Condition (Sec 73)",
+      "sector": "renewable-energy",
+      "description": "Variation of Condition 1 of 21/01200/FUL Erection of a 3 bedroom dwellinghouse, detached garage and vehicular access. Internal alterations including rearrangement of Utility and WC; Bathroom/Ensuite Bed 3; new plant room/study. Addition of photovoltaic panels with battery storage and larger storage area, extension to rear of kitchen and removal of corner glazing. Roof design to garage amended and Site arrangementaltered.",
+      "applicant": "Mr Holmes & Ms Small",
+      "agent": "Mr Martin Runcie",
+      "decision": "approved",
+      "decisionDate": "2023-05-19",
+      "conditions": [
+        {
+          "number": "6",
+          "type": "ecology",
+          "summary": "Wildlife Protection and Mitigation Plan required prior to development",
+          "text": "No development, including any demolition works, soil moving, temporary access construction/widening, or storage of materials, shall commence until a Wildlife Protection and Mitigation Plan has been submitted and approved in writing by the Local Planning Authority. The plan shall include the wildlife mitigation measures given in Section 7 of Ecological Survey Ltd's Preliminary Ecological Appraisal dated January 2021.\nNo development or other operations shall take place other than in complete accordance with the approved Wildlife Protection and Mitigation Plan. No habitat or other landscape features that are to be retained as part of the approved Wildlife Protection and Mitigation Plan shall be damaged, destroyed or removed without the prior written approval of the Local Planning Authority, for the duration of activities permitted by this planning permission.\nIf a habitat or other landscape feature is removed or damaged in contravention of this condition, a scheme of remedial action, with a timetable for implementation, shall be submitted to and approved in writing by the Local Planning Authority within 28 days of the incident."
+        },
+        {
+          "number": "7",
+          "type": "bng",
+          "summary": "Habitat creation, enhancement and management scheme for biodiversity net gain",
+          "text": "No development shall take place until full details of a habitat creation, enhancement and management scheme to achieve the biodiversity net gain as shown in the submitted DEFRA biodiversity offsetting metric has been submitted to and approved in writing by the Local Planning Authority. The development shall be carried out and thereafter maintained in accordance with the details so approved. The details shall include: The recommendations given in Section 7 of Ecological Surveys Ltd's Preliminary Ecological Appraisal dated January 2021; The proposals for on-site habitat creation and enhancement to achieve the biodiversity net gain as shown in the submitted DEFRA biodiversity offsetting metric (including sources of planting stock and its origin); The provision of arrangements to secure the delivery of the offsetting measures (including a timetable for their delivery); and A management and monitoring plan (to include for the provision and maintenance of the submitted offsetting measures in perpetuity)."
+        }
+      ],
+      "source": "claude-extraction",
+      "sourceUrl": "https://planning.basingstoke.gov.uk/online-applications/applicationDetails.do?keyVal=RR79BMCRH1V00&activeTab=summary"
+    },
+    {
+      "id": "basingstoke-RU6ZAGCRJ8O00",
+      "reference": "23/01170/FUL",
+      "lpa": "Basingstoke and Deane Borough Council",
+      "region": "South East",
+      "address": "8A And 10 Mulfords Hill Tadley Hampshire RG26 3LJ",
+      "postcode": "",
+      "useClass": "Full Planning Application",
+      "sector": "healthcare",
+      "description": "Construction of a care home (within Class C2), parking, access, hard and soft landscaping and other associated works.",
+      "applicant": "-",
+      "agent": "Ms Laura Grimason",
+      "decision": "refused",
+      "decisionDate": "2023-10-20",
+      "conditions": [
+        {
+          "number": "1",
+          "type": "other",
+          "summary": "Unacceptable scale, bulk and massing – harmful to character and streetscene",
+          "text": "The proposal, by virtue of its scale, bulk and massing, would not be sympathetic to the character and visual quality of the area. The proposed scheme fails to have due regard to the scale, layout and appearance of the surrounding area, and the relationship to neighbouring buildings and landscape features. It fails to positively contribute to local distinctiveness, and the sense of place and would appear incongruous within the existing streetscene and cramped within the site. The development cannot be successfully integrated or mitigated within the landscape and surroundings. Accordingly, the proposal is contrary to the National Planning Policy Framework (September 2023) and Policies EM1 and EM10 of the Basingstoke and Deane Local Plan 2011-2029."
+        },
+        {
+          "number": "2",
+          "type": "ecology",
+          "summary": "Harmful impact on boundary and category B trees – loss detrimental to character",
+          "text": "The proposed development would put pressure on the future health and retention of the boundary trees which are considered to be important features in the local landscape. In addition, the scheme would result in the loss of a number of category B trees which add to the character of the area and there is insufficient space on site to seek replacement trees. The loss of trees would detrimentally impact the character and appearance of the surrounding area. Accordingly, the proposal is contrary to the National Planning Policy Framework (September 2023), criteria b) and e) of Policy EM1 of the Basingstoke and Deane Local Plan 2011-2029, and the Landscape, Biodiversity and Trees Supplementary Planning Document 2018."
+        },
+        {
+          "number": "3",
+          "type": "other",
+          "summary": "Unacceptable impact on AWE Aldermaston DEPZ emergency planning arrangements",
+          "text": "The application site is situated within the Detailed Emergency Planning Zone (DEPZ) surrounding the Aldermaston Atomic Weapons Establishment (AWE). The proposed development would as a result of the associated increase in population, proximity to the centre of the DEPZ and location within a densely populated sector of the DEPZ, have a detrimental impact on the Aldermaston off-site emergency planning arrangements in terms of response and recovery. The proposed emergency response plan is considered to be insufficient. As such the proposal would be contrary to the requirements of Policy SS7 of the Basingstoke and Deane Local Plan 2011-2029 and guidance contained within the National Planning Policy Framework (September 2023)."
+        },
+        {
+          "number": "4",
+          "type": "daylight",
+          "summary": "Harmful overbearing and overlooking impact on No.8 Mulfords Hill residential amenity",
+          "text": "As a result of the proximity of the proposed building to the adjacent dwelling (No.8 Mulfords Hill) the proposed development would result in a harmful impact on the amenity of this neighbour. The development would result in a dominant and overbearing experience for No.8 Mulfords Hill, causing an intrusive, oppressive and claustrophobic effect on their living conditions, which would result in a loss of privacy and outlook from their dwelling and garden. The resultant impact would be to significantly reduce the residential amenities of No.8 Mulfords Hill to a level below what may reasonably be expected in this location. Accordingly, the proposed development is contrary to Policy EM10 of the Basingstoke and Deane Local Plan 2011-2029 and Section 10 (Residential Amenity) of the Design and Sustainability Supplementary Planning Document (2018)."
+        },
+        {
+          "number": "5",
+          "type": "transport",
+          "summary": "Absence of legal agreement securing a Travel Plan",
+          "text": "In the absence of any suitable legal agreement, or justification for the absence of a legal agreement, the proposed development does not make adequate provision for a Travel Plan. The proposed development is therefore contrary to the National Planning Policy Framework 2023; Policies CN6 and CN9 of the Basingstoke and Deane Local Plan 2011-2029, the Planning Obligations for Infrastructure Supplementary Planning Document 2018, and the Community Infrastructure Levy Regulations 2010 (as amended)."
+        },
+        {
+          "number": "6",
+          "type": "drainage",
+          "summary": "Insufficient information on ecological impact of surface water drainage on adjacent SSSI",
+          "text": "Insufficient information has been submitted with which to assess the full ecological impact of surface water drainage on the adjacent Pamber Forest and Silchester Common SSSI. Consequently, the submission is considered lacking in essential information and the development would be contrary to the guidance set out within Section 15 of the National Planning Policy Framework (September 2023), Policy EM4 of the Basingstoke and Deane Local Plan 2011-2029, Section 5 of the Landscape, Biodiversity, Trees Supplementary Planning Document (December 2018) and the Conservation of Habitats and Species Regulations 2017."
+        }
+      ],
+      "source": "claude-extraction",
+      "sourceUrl": "https://planning.basingstoke.gov.uk/online-applications/applicationDetails.do?keyVal=RU6ZAGCRJ8O00&activeTab=summary"
+    },
+    {
+      "id": "basingstoke-RX0FW0CRL7600",
+      "reference": "23/01618/RET",
+      "lpa": "Basingstoke and Deane Borough Council",
+      "region": "South East",
+      "address": "10 Chequers Road Basingstoke Hampshire",
+      "postcode": "",
+      "useClass": "Retention of Development (Section 73A)",
+      "sector": "hotels",
+      "description": "Change of use of 10 Chequers Road from Children's Day Nursery (Class E) to C1 aparthotel use and associated internal works (retrospective)",
+      "applicant": "Ms Linzi Ruddick",
+      "agent": "Mrs Kristina Wall",
+      "decision": "approved",
+      "decisionDate": "2024-02-26",
+      "conditions": [
+        {
+          "number": "1",
+          "type": "other",
+          "summary": "Development in accordance with approved plans",
+          "text": "The development hereby permitted shall be carried out in accordance with the following approved plans:\nDrawing No. P01 Rev A (Site Location and block plan) received 29/06/2023\nDrawing No. P02 Rev C (Floor Plan) received 08/12/2023\nREASON: For the avoidance of doubt and in the interests of proper planning."
+        },
+        {
+          "number": "2",
+          "type": "transport",
+          "summary": "Retention of 10 on-site parking spaces",
+          "text": "The parking of 10 vehicles within the curtilage of the application site as shown on approved Drawing No. P01 Rev A (block plan received 29/06/2023) shall be retained at all times and shall not be used for any purpose other than the parking of vehicles in connection with the application site.\nREASON: In the interests of highway safety and in accordance with Policies EM10 and CN9 of the Basingstoke and Deane Local Plan 2011-2029."
+        }
+      ],
+      "source": "claude-extraction",
+      "sourceUrl": "https://planning.basingstoke.gov.uk/online-applications/applicationDetails.do?keyVal=RX0FW0CRL7600&activeTab=summary"
+    },
+    {
+      "id": "basingstoke-S36ZCDCRI1R00",
+      "reference": "T/00485/23/TPO",
+      "lpa": "Basingstoke and Deane Borough Council",
+      "region": "South East",
+      "address": "Trillium House Priestley Road Basingstoke Hampshire RG24 9JP",
+      "postcode": "",
+      "useClass": "Works to Trees - TPO",
+      "sector": "healthcare",
+      "description": "T1 - 1 x Sycamore Tree: prune. G1 - Mixed Species Trees along hospital boundary to corner of Site 2 Building: prune",
+      "applicant": "Theresa Ridgers",
+      "agent": "Mrs Theresa Ridgers",
+      "decision": "approved",
+      "decisionDate": "2024-02-20",
+      "conditions": [
+        {
+          "number": "1",
+          "type": "ecology",
+          "summary": "Tree work to comply with BS 3998:2010 using target pruning technique",
+          "text": "The work shall be carried out in accordance with the British Standard 3998:2010 Tree Work - Recommendations, employing target pruning technique. Climbing irons shall only be used on trees to be removed.\nREASON: To ensure the work carried out is to the long term well-being of the tree(s)."
+        },
+        {
+          "number": "2",
+          "type": "other",
+          "summary": "Permitted tree works to be completed within two years of consent",
+          "text": "The permitted work shall be completed within two years from the date of consent unless an extension is applied for and granted in writing by the Local Planning Authority.\nREASON: To ensure the work is completed within a reasonable time scale."
+        }
+      ],
+      "source": "claude-extraction",
+      "sourceUrl": "https://planning.basingstoke.gov.uk/online-applications/applicationDetails.do?keyVal=S36ZCDCRI1R00&activeTab=summary"
+    },
+    {
+      "id": "basingstoke-S4KW7ICRIZ400",
+      "reference": "23/02898/FUL",
+      "lpa": "Basingstoke and Deane Borough Council",
+      "region": "South East",
+      "address": "Dores Hill Cow House Lane North Sydmonton Hampshire RG20 9AF",
+      "postcode": "",
+      "useClass": "Full Planning Application",
+      "sector": "renewable-energy",
+      "description": "Installation of 27no. ground mounted PV solar panels (together with battery storage and battery inverter charger in enclosure and underground cabling)",
+      "applicant": "Sir and Mrs Anthony and Audrey Greener and Paterson",
+      "agent": "Mrs Brigid Taylor",
+      "decision": "approved",
+      "decisionDate": "2024-01-15",
+      "conditions": [
+        {
+          "number": "1",
+          "type": "other",
+          "summary": "Development in accordance with approved plans and documents",
+          "text": "The development hereby permitted shall be carried out in accordance with the following approved plans and supporting documents:\nLocation Plan - Date Received: 23rd November 2023\nSite Layout / Block Plan - Date Received: 23rd November 2023\nIsometric View Drawing No.: 34778-2 Rev.: A Dated: 27th September 2023 - Date Received: 23rd November 2023\nTop View Drawing No.: 34778-3 Rev.: A Dated: 27th September 2023 - Date Received: 23rd November 2023\nFront View (Proposed Front Elevation) and Rear (Top) View Drawing No.: 34778-4 Rev.: A Dated: 27th September 2023 - Date Received: 23rd November 2023\nPanel Details and Example Installation Drawing No.: 34778-5 Rev.: A Dated: 27th September 2023\nREASON: For the avoidance of doubt and in the interests of proper planning."
+        },
+        {
+          "number": "2",
+          "type": "other",
+          "summary": "Development to commence within 3 years of permission date",
+          "text": "The development hereby permitted shall be begun before the expiration of 3 years from the date of this planning permission.\nREASON: To comply with Section 91 of the Town and Country Planning Act 1990 and to prevent an accumulation of unimplemented planning permissions."
+        },
+        {
+          "number": "3",
+          "type": "other",
+          "summary": "Decommissioning and restoration scheme if solar array ceases operation for 6 months",
+          "text": "If the solar panel array hereby permitted ceases to operate for a continuous period of 6 months, then a scheme for the decommissioning and removal of the solar panel array and ancillary equipment together with the restoration of the site shall be submitted within 3 months of the end of the cessation period to the Local Planning Authority for written approval. The scheme shall make provision for: the removal of the solar panels and associated above ground works approved under this permission; the management and timing of any works; and details of site restoration. The decommissioning of the site shall be carried out in accordance with the approved scheme.\nREASON: To ensure that the decommissioning and restoration of the site is carried out in a managed approach that minimises the impacts on the natural and built environment and in the interests of visual amenity in accordance with Policies EM1, EM4, EM10 and EM12 of the Basingstoke and Deane Local Plan 2011-2029."
+        }
+      ],
+      "source": "claude-extraction",
+      "sourceUrl": "https://planning.basingstoke.gov.uk/online-applications/applicationDetails.do?keyVal=S4KW7ICRIZ400&activeTab=summary"
+    },
+    {
+      "id": "basingstoke-S4SD3HCR0AQ00",
+      "reference": "23/02920/FUL",
+      "lpa": "Basingstoke and Deane Borough Council",
+      "region": "South East",
+      "address": "Pet Cremation Services Yew Tree Farm Hatt Common East Woodhay Newbury Hampshire RG20 0NG",
+      "postcode": "",
+      "useClass": "Full Planning Application",
+      "sector": "logistics",
+      "description": "Extension of Newbury Pet Crematorium to include an adjoining store/warehouse, the addition of a lean-to, the siting of a storage container, and the installation of an additional cremator and associated flue",
+      "applicant": "Mr G Tuck",
+      "agent": "Mr O McLeod",
+      "decision": "approved",
+      "decisionDate": "2024-01-26",
+      "conditions": [
+        {
+          "number": "3",
+          "type": "ecology",
+          "summary": "Construction Environmental Management Plan (CEMP) to protect habitats and species",
+          "text": "Prior to development commencing, a Construction Environmental Management Plan (CEMP) shall be submitted to and agreed in writing by the Local Planning Authority. The plan shall outline the measures to be taken to avoid or mitigate construction impacts on important habitats and species. This shall cover aspects including (but not necessarily limited to) the following: • Dust pollution • Water pollution • Storage of fuel/chemicals • Protection of adjacent semi-natural habitats • Visual/noise disturbance to species. The development shall be carried out and thereafter maintained in accordance with the details so approved."
+        }
+      ],
+      "source": "claude-extraction",
+      "sourceUrl": "https://planning.basingstoke.gov.uk/online-applications/applicationDetails.do?keyVal=S4SD3HCR0AQ00&activeTab=summary"
+    },
+    {
+      "id": "basingstoke-S57D7VCRJDG00",
+      "reference": "23/03012/FUL",
+      "lpa": "Basingstoke and Deane Borough Council",
+      "region": "South East",
+      "address": "Land At Hook Lane Malshanger Hampshire",
+      "postcode": "",
+      "useClass": "Full Planning Application",
+      "sector": "renewable-energy",
+      "description": "Solar farm and associated development",
+      "applicant": "N.A.",
+      "agent": "Mr James Jamieson",
+      "decision": "approved",
+      "decisionDate": "2026-02-13",
+      "conditions": [],
+      "source": "claude-extraction",
+      "sourceUrl": "https://planning.basingstoke.gov.uk/online-applications/applicationDetails.do?keyVal=S57D7VCRJDG00&activeTab=summary"
+    },
+    {
+      "id": "basingstoke-S73SLLCRKDR00",
+      "reference": "24/00075/FUL",
+      "lpa": "Basingstoke and Deane Borough Council",
+      "region": "South East",
+      "address": "Land To The East Of Ash Lane And Ash Park Business Centre Ash Lane Little London Hampshire",
+      "postcode": "",
+      "useClass": "Full Planning Application",
+      "sector": "renewable-energy",
+      "description": "Construction of a battery Storage Facility with ancillary development",
+      "applicant": "Bramley BESS 2 Limited",
+      "agent": "",
+      "decision": "approved",
+      "decisionDate": "2025-04-11",
+      "conditions": [],
+      "source": "claude-extraction",
+      "sourceUrl": "https://planning.basingstoke.gov.uk/online-applications/applicationDetails.do?keyVal=S73SLLCRKDR00&activeTab=summary"
+    },
+    {
+      "id": "basingstoke-S7RK1HCRKS500",
+      "reference": "24/00163/FUL",
+      "lpa": "Basingstoke and Deane Borough Council",
+      "region": "South East",
+      "address": "120 Winchester Road Basingstoke Hampshire RG21 8YW",
+      "postcode": "",
+      "useClass": "Full Planning Application",
+      "sector": "hotels",
+      "description": "Change of use from C1 (hotels) to C4 (HMO)",
+      "applicant": "Mr Nick Thorne",
+      "agent": "",
+      "decision": "refused",
+      "decisionDate": "2024-09-13",
+      "conditions": [
+        {
+          "number": "1",
+          "type": "other",
+          "summary": "Inadequate self-contained facilities / kitchen access for all HMO rooms",
+          "text": "The applicant has failed to demonstrate that all the rooms within the property (including rooms 8, 9 and 10) would be adequately serviced and would have direct access to a kitchen from within the dwelling and thus would fail the minimum standards required for an HMO to be considered appropriate with respect to self-contained facilities for each dwelling. This is contrary to Policy EM10 of the Basingstoke and Deane Local Plan 2011-2029 and the Design and Sustainability Supplementary Planning Document (2018)."
+        },
+        {
+          "number": "2",
+          "type": "transport",
+          "summary": "Inadequate on-site vehicular and cycle parking provision",
+          "text": "The proposal would not provide adequate on-site vehicular parking for ten vehicles to serve the property and no cycle parking provisions have been made. As a result, the proposed development could result in the displacement of parking onto the highway, obstructing and causing undue interference with the convenience of users of the highway. There are no other material considerations that would address these harms. As such the proposed development is contrary to Policies CN9 and EM10 of the Basingstoke and Deane Local Plan 2011-2029 and the Basingstoke and Deane Parking Supplementary Planning Document July 2018."
+        },
+        {
+          "number": "3",
+          "type": "transport",
+          "summary": "Insufficient information on visibility splays and highway safety",
+          "text": "Due to the insufficient information provided to support the application with respect to the level of visibility splays and highway safety, the applicant has failed to demonstrate that the amended rear parking area together with the proposal to widen the dropped kerb (on Wessex Close) would not result in an unacceptable level of risk to the motorists and other highway users, contrary to of highway safety Policy CN9 of the Basingstoke and Deane Local Plan 2011-2029 and the Basingstoke and Deane Parking Supplementary Planning Document July 2018."
+        },
+        {
+          "number": "4",
+          "type": "other",
+          "summary": "Lack of information on refuse and recycling storage and collection",
+          "text": "Due to the lack of information on refuse and recycling storage and collection, the application has failed to demonstrate that there is adequate provision for refuse/recycle storage and safe collection points on site contrary to Policy CN9 of the Basingstoke and Deane Local Plan 2011-2029 and the Basingstoke and Deane Parking Supplementary Planning Document July 2018."
+        },
+        {
+          "number": "5",
+          "type": "drainage",
+          "summary": "Increased flood risk from additional hardstanding – no flood risk assessment",
+          "text": "The site falls within an area which has potential to increase flooding as it falls within an area at risk of surface water flooding and falls within an area with a history of flooding. Due to the increase in the amount of hardstanding surface area resulting from the proposed extended Wessex Close parking area and enlarged dropped kerb (to the rear of the property), the proposal would result in an increase in the risk of flooding. No flood risk assessment has been provided to support the proposal and thus the applicant has failed to demonstrate that the proposal would not result in increased risk of flooding within the immediate surrounding area, contrary to Policy EM7 of the Basingstoke and Deane Local Plan 2011-2029."
+        },
+        {
+          "number": "6",
+          "type": "other",
+          "summary": "Inadequate outdoor amenity space for future HMO occupants",
+          "text": "Given the size of the existing outdoor amenity space at the property, the proposal would not provide adequate amenity space for the enjoyment of the future occupants of the HMO. The harm would be exacerbated by the reduction in the size of the existing limited private amenity space due to the proposed extension of the existing rear parking space on Wessex Close, and further by the existing shortage of public outdoor amenity space within the immediate and wider area. This is contrary to Policy EM10 of the Basingstoke and Deane Local Plan 2011-2029 and the Design and Sustainability Supplementary Planning Document (2018)."
+        }
+      ],
+      "source": "claude-extraction",
+      "sourceUrl": "https://planning.basingstoke.gov.uk/online-applications/applicationDetails.do?keyVal=S7RK1HCRKS500&activeTab=summary"
+    },
+    {
+      "id": "basingstoke-S86OHLCRL3400",
+      "reference": "24/00229/LDEU",
+      "lpa": "Basingstoke and Deane Borough Council",
+      "region": "South East",
+      "address": "Workshop And Office Rear Of Goose Hill House Ashford Hill Road Goose Hill Thatcham Hampshire RG19 8AT",
+      "postcode": "",
+      "useClass": "Cert of Lawful Dev't-extng use/condition",
+      "sector": "logistics",
+      "description": "Certificate of lawfulness for the existing commercial use within Class B8 of the storage/warehouse \"Building A\" and the existing commercial use within Class E (g)(i) of the office building",
+      "applicant": "Mr Stuart Charles Woodhead",
+      "agent": "Mr Bernard Ralph",
+      "decision": "approved",
+      "decisionDate": "2024-04-04",
+      "conditions": [],
+      "source": "claude-extraction",
+      "sourceUrl": "https://planning.basingstoke.gov.uk/online-applications/applicationDetails.do?keyVal=S86OHLCRL3400&activeTab=summary"
+    },
+    {
+      "id": "basingstoke-SARA0JCRMS100",
+      "reference": "24/00679/FUL",
+      "lpa": "Basingstoke and Deane Borough Council",
+      "region": "South East",
+      "address": "Cherry Blossom Manor German Road Bramley Hampshire RG26 5GF",
+      "postcode": "",
+      "useClass": "Full Planning Application",
+      "sector": "healthcare",
+      "description": "Erection of two storey extension to care home, plus garden pavilion and five additional car parking spaces.",
+      "applicant": "Barchester Healthcare Ltd",
+      "agent": "Mrs S Matthews",
+      "decision": "approved",
+      "decisionDate": "2024-07-02",
+      "conditions": [
+        {
+          "number": "1",
+          "type": "other",
+          "summary": "Development in accordance with approved plans",
+          "text": "The development hereby permitted shall be carried out in accordance with the following approved plans:\nAL(0)000 P1 - Location Plan\nAL(1)103 P1 - Proposed Roof Plan\nAL(1)101 P1 - Proposed Ground Floor Plan\nAL(1)150 P1 - Proposed Garden Pavilion\nAL(1)102 P1 - Proposed First Floor Plan\nAL(1)140 P1 - Proposed Elevations\nAL(9)902 P1 - Proposed Block Plan\nAL(9)901 P1 - Proposed Site Plan\nREASON: For the avoidance of doubt and in the interests of proper planning."
+        },
+        {
+          "number": "2",
+          "type": "other",
+          "summary": "Development to commence within 3 years",
+          "text": "The development hereby permitted shall be begun before the expiration of 3 years from the date of this planning permission.\nREASON: To comply with Section 91 of the Town and Country Planning Act 1990 and to prevent an accumulation of unimplemented planning permissions."
+        },
+        {
+          "number": "3",
+          "type": "materials",
+          "summary": "External materials to match existing building / approved plans",
+          "text": "The materials to be used in the construction of the external surfaces of the care home extension hereby permitted shall match, in type, colour and texture to those on the existing building. With regard to the garden pavilion, the materials to be used in the construction of the external surfaces of the garden pavilion hereby permitted shall match, in type, colour and texture to those on the approved plans.\nREASON: In the interests of the visual amenities of the area and in accordance with Policy EM10 of the Basingstoke and Deane Local Plan 2011-2029."
+        },
+        {
+          "number": "4",
+          "type": "transport",
+          "summary": "Construction Method Statement to be submitted and approved prior to development",
+          "text": "No development shall take place, (including any works of demolition), until a Construction Method Statement has been submitted to, and approved in writing by, the Local Planning Authority. The approved statement shall include scaled drawings illustrating the provision for -\n1) The parking of site operatives and visitors vehicles.\n2) Loading and unloading of plant and materials.\n3) Management of construction traffic and access routes.\n4) Storage of plant and materials used in constructing the development.\nREASON: In the interests of highway safety in accordance with Policy CN9 of the Basingstoke and Deane Local Plan 2011-2029."
+        },
+        {
+          "number": "5",
+          "type": "transport",
+          "summary": "Car parking area to be provided and maintained before first use",
+          "text": "The development shall not be brought into use until the car parking area shown on the submitted plan has been provided, marked out and thereafter maintained for car parking for the lifetime of the development and used for no other purpose.\nREASON: To ensure adequate space within the site for vehicle movements and parking provision in accordance with Policy CN9 of the Basingstoke and Deane Local Plan 2011-2029."
+        },
+        {
+          "number": "6",
+          "type": "transport",
+          "summary": "Turning facilities to be provided and kept free from obstruction",
+          "text": "The development shall not be brought into use until turning facilities have been provided in accordance with the details shown on the approved plan. The turning facilities shall be available for use by vehicles and kept free from obstruction throughout the lifetime of the development.\nREASON: In the interests of traffic safety and to achieve a satisfactory layout in accordance with Policy CN9 of the Basingstoke and Deane Local Plan 2011-2029."
+        },
+        {
+          "number": "7",
+          "type": "ecology",
+          "summary": "Development to follow Preliminary Ecological Appraisal recommendations",
+          "text": "Development shall be undertaken in line with recommendations and procedures contained within Chapter 5 Recommendations of the Preliminary Ecological Appraisal by Windrush Ecology dated 11/2023.\nREASON: In order to mitigate impacts on key species and provide enhancements for biodiversity in line with Policy EM4 of the Basingstoke and Deane Local Plan 2011-2029."
+        },
+        {
+          "number": "8",
+          "type": "drainage",
+          "summary": "Development to follow Flood Risk Assessment and appendices",
+          "text": "Development shall be undertaken in line with the Flood Risk Assessment dated 19th March 2024 and the relevant appendices A-K.\nREASON: In order to ensure flood risk is mitigated in line with Policy EM7 of the Basingstoke and Deane Local Plan 2011-2029."
+        },
+        {
+          "number": "9",
+          "type": "other",
+          "summary": "BREEAM 'excellent' sustainable water use construction statement required",
+          "text": "No development above ground floor slab level shall commence on site until a Construction Statement detailing how the building shall meet BREEAM 'excellent' standards for water consumption (unless otherwise agreed in writing with the Local Planning Authority through a demonstration that this requirement for sustainable water use cannot be achieved on technical or viability grounds) shall be submitted to and approved in writing by the Local Planning Authority. The development shall be carried out in accordance with the approved details.\nREASON: In the absence of such details being provided within the planning submission, details are required to ensure that the development delivers a level of sustainable water use in accordance with Policy EM9 of the Basingstoke and Deane Local Plan 2011-2029."
+        },
+        {
+          "number": "10",
+          "type": "other",
+          "summary": "Hard and soft landscaping to be implemented and maintained",
+          "text": "The proposed development shall be carried out in accordance with the soft and hard landscaping details, drawing number: CBM L1 Rev B - Landscaping proposals. The approved works shall take place during the first planting and seeding seasons following the first occupation of the building(s) or when the use hereby permitted is commenced. Any trees or plants which, within a period of 5 years from the date of planting, die, are removed or become seriously damaged or diseased shall be replaced in the next planting season with others of similar size and species, to be agreed in writing by the Local Planning Authority.\nREASON: To improve the appearance of the site in the interests of visual amenity in accordance with Policy EM10 of the Basingstoke and Deane Local Plan 2011-2029."
+        },
+        {
+          "number": "11",
+          "type": "other",
+          "summary": "Gas impermeable membrane and ventilated sub-floor details to be submitted",
+          "text": "With the exception of works to the existing buildings and removal of existing hardstanding and any underground infrastructure no works pursuant to this permission shall commence until there has been submitted to and approved in writing by the Local Planning Authority:-\nDetails of the gas impermeable membrane should be submitted along with details of the ventilated sub-floor area. Particular attention to joins with any existing structures and seals around any services, should be submitted to and agreed in writing by the Local Planning Authority. Any services entering/leaving the structure shall be located above the gas impermeable membrane, and adequate seals will be provided to ensure the membrane is not breached. The works shall be undertaken in accordance with the approved details.\nREASON: To ensure that adequate measures are taken to avoid the potential risk to future occupiers from natural gases arising from the ground in accordance with Policy EM12 of the Basingstoke and Deane Local Plan 2011-2029."
+        },
+        {
+          "number": "12",
+          "type": "other",
+          "summary": "Verification of gas remediation scheme before occupation",
+          "text": "The development hereby permitted shall not be occupied/brought into use until there has been submitted to the Local Planning Authority verification by the competent person approved under the provisions of condition 11 that any remediation scheme required and approved under the provisions of condition 11 has been implemented fully in accordance with the approved details (unless varied with the written agreement of the Local Planning Authority in advance of implementation). Such verification shall comprise; as built drawings of the implemented scheme; photographs of the remediation works in progress. Thereafter the scheme shall be monitored and maintained in accordance with the scheme approved under condition 11.\nREASON: To ensure that risks from land contamination to the future users of the land and neighbouring land are minimised, together with those to controlled waters, property and ecological systems, in accordance Policy EM12 of the Basingstoke and Deane Local Plan 2011-2029."
+        },
+        {
+          "number": "13",
+          "type": "hours",
+          "summary": "Construction working hours restricted (Mon–Fri 07:30–18:00, Sat 08:00–13:00)",
+          "text": "No work relating to the construction of the development hereby approved, including works of demolition or preparation prior to operations, or internal painting or fitting out, shall take place before the hours of 0730 nor after 1800 Monday to Friday, before the hours of 0800 nor after 1300 Saturdays nor on Sundays or recognised public holidays.\nREASON: To protect the amenities of the occupiers of nearby properties during the construction period and in accordance Policy EM10 and EM12 of the Basingstoke and Deane Local Plan 2011-2029."
+        },
+        {
+          "number": "14",
+          "type": "hours",
+          "summary": "Construction deliveries and spoil removal hours restricted",
+          "text": "No deliveries of construction materials or plant and machinery and no removal of any spoil from the site shall take place before the hours of 07:30; nor after 18:00; Monday to Friday, before the hours of 08:00; nor after 13:00; Saturdays nor on Sundays or recognised public holidays.\nREASON: To protect the amenities of the occupiers of nearby properties during the construction period and in accordance with Policy EM10 and EM12 of the Basingstoke and Deane Local Plan 2011-2029."
+        }
+      ],
+      "source": "claude-extraction",
+      "sourceUrl": "https://planning.basingstoke.gov.uk/online-applications/applicationDetails.do?keyVal=SARA0JCRMS100&activeTab=summary"
+    },
+    {
+      "id": "basingstoke-SEAYYUCRHLT00",
+      "reference": "24/01252/GPDSP",
+      "lpa": "Basingstoke and Deane Borough Council",
+      "region": "South East",
+      "address": "Sherfield On Loddon Village Hall Reading Road Sherfield-On-Loddon Hampshire RG27 0EZ",
+      "postcode": "",
+      "useClass": "General Permitted Dev - Solar panels",
+      "sector": "renewable-energy",
+      "description": "Installation of 28 Solar Panels and Battery storage indoors to provide green energy to offset Village hall energy costs",
+      "applicant": "Mr Derek Tarrant",
+      "agent": "",
+      "decision": "approved",
+      "decisionDate": "2024-06-27",
+      "conditions": [
+        {
+          "number": "1",
+          "type": "other",
+          "summary": "Compliance with Schedule 2, Part 14, Class J of the GPDO 2015",
+          "text": "The proposed development complies with the limitations and conditions of Schedule 2, Part 14, Class J of The Town and Country Planning (General Permitted Development) (England) Order 2015 (as amended)."
+        }
+      ],
+      "source": "claude-extraction",
+      "sourceUrl": "https://planning.basingstoke.gov.uk/online-applications/applicationDetails.do?keyVal=SEAYYUCRHLT00&activeTab=summary"
+    },
+    {
+      "id": "basingstoke-SEIAV6CRHPZ00",
+      "reference": "24/01270/FUL",
+      "lpa": "Basingstoke and Deane Borough Council",
+      "region": "South East",
+      "address": "2 The Station, Thomas House Station Hill Overton Hampshire RG25 3JH",
+      "postcode": "",
+      "useClass": "Full Planning Application",
+      "sector": "logistics",
+      "description": "Subdivision of the industrial/warehouse building to form 3 units with new doors and windows",
+      "applicant": "Mr I Ford",
+      "agent": "Mr Martin Runcie",
+      "decision": "approved",
+      "decisionDate": "2024-07-29",
+      "conditions": [
+        {
+          "number": "1",
+          "type": "other",
+          "summary": "Development in accordance with approved plans",
+          "text": "The development hereby permitted shall be carried out in accordance with the following approved plans:\nSite Location and Block Plan drawing no. P01 Rev A\nProposed Plans drawing no. P02 Rev A\nProposed Elevations drawing no. P03 Rev A\nREASON: For the avoidance of doubt and in the interests of proper planning."
+        },
+        {
+          "number": "2",
+          "type": "other",
+          "summary": "Development to begin within 3 years",
+          "text": "The development hereby permitted shall be begun before the expiration of 3 years from the date of this planning permission.\nREASON: To comply with Section 91 of the Town and Country Planning Act 1990 and to prevent an accumulation of unimplemented planning permissions."
+        },
+        {
+          "number": "3",
+          "type": "materials",
+          "summary": "External materials to match approved plans and application form",
+          "text": "The materials to be used in the construction of the external surfaces of the development hereby permitted shall match, in type, colour and texture to those on the approved plans and application form.\nREASON: In the interests of visual amenity and in accordance with Policy EM10 of the Basingstoke and Deane Local Plan 2011-2029."
+        }
+      ],
+      "source": "claude-extraction",
+      "sourceUrl": "https://planning.basingstoke.gov.uk/online-applications/applicationDetails.do?keyVal=SEIAV6CRHPZ00&activeTab=summary"
+    },
+    {
+      "id": "basingstoke-SFC0XZCRI9V00",
+      "reference": "24/01418/FUL",
+      "lpa": "Basingstoke and Deane Borough Council",
+      "region": "South East",
+      "address": "Sony Europe Ltd Jays Close Basingstoke Hampshire RG22 4SB",
+      "postcode": "",
+      "useClass": "Full Planning Application",
+      "sector": "logistics",
+      "description": "Demolition of existing buildings and structures and the phased development of the site for two industrial units (use classes E(g)(ii) R&D, E(g)(iii) light industrial, B2 Industrial and B8 warehouse / storage to include ancillary office accommodation) with associated site wide infrastructure, earthworks, access, parking and landscaping",
+      "applicant": "St Modwen Strategic Land Ltd",
+      "agent": "Vail Williams LLP",
+      "decision": "approved",
+      "decisionDate": "2024-12-19",
+      "conditions": [
+        {
+          "number": "3",
+          "type": "materials",
+          "summary": "External materials types, colours and samples approval (Phase 1 partial discharge)",
+          "text": "No development of building B42 (Phase 1) and subsequently building B161 (Phase 2), above slab level, shall commence on site until details of the types and colours of external materials to be used, together with samples, have been submitted to and approved in writing by the Local Planning Authority. The development shall be carried out and thereafter maintained in accordance with the details so approved.\n\nREASON: Details are required due to insufficient information being submitted with the application in this regard, in the interests of the visual amenities of the area and in accordance with Policy EM10 of the Basingstoke and Deane Local Plan 2011-2029."
+        }
+      ],
+      "source": "claude-extraction",
+      "sourceUrl": "https://planning.basingstoke.gov.uk/online-applications/applicationDetails.do?keyVal=SFC0XZCRI9V00&activeTab=summary"
+    },
+    {
+      "id": "basingstoke-SI7HD6CRK9Z00",
+      "reference": "24/01871/ROC",
+      "lpa": "Basingstoke and Deane Borough Council",
+      "region": "South East",
+      "address": "Cherry Blossom Manor German Road Bramley Hampshire RG26 5GF",
+      "postcode": "",
+      "useClass": "Removal/Variation of Condition (Sec 73)",
+      "sector": "healthcare",
+      "description": "Variation of conditions 1, 4, 9 and 11 of approved Planning 24/00679/FUL (Erection of two storey extension to care home, plus garden pavilion and five additional car parking spaces) to reduce footprint of extension and additional details",
+      "applicant": "Barchester Healthcare Ltd",
+      "agent": "Mrs S Matthews",
+      "decision": "approved",
+      "decisionDate": "2024-10-08",
+      "conditions": [],
+      "source": "claude-extraction",
+      "sourceUrl": "https://planning.basingstoke.gov.uk/online-applications/applicationDetails.do?keyVal=SI7HD6CRK9Z00&activeTab=summary"
+    },
+    {
+      "id": "basingstoke-SN0667CRFQP00",
+      "reference": "24/02660/ROC",
+      "lpa": "Basingstoke and Deane Borough Council",
+      "region": "South East",
+      "address": "Bramley Battery Storage Minchens Lane Bramley Tadley Hampshire RG26 5BH",
+      "postcode": "",
+      "useClass": "Removal/Variation of Condition (Sec 73)",
+      "sector": "renewable-energy",
+      "description": "Variation of Conditions 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13 and 18 of 21/00349/FUL (Installation of a battery storage facility with associated works) - Amendment to site layout and wording of conditions.",
+      "applicant": "Ms Anna Murray",
+      "agent": "Ben Lewis",
+      "decision": "approved",
+      "decisionDate": "2025-05-13",
+      "conditions": [
+        {
+          "number": "1",
+          "type": "other",
+          "summary": "Development in accordance with approved plans",
+          "text": "The development hereby permitted shall be carried out in accordance with the following approved plans: Site Location Plan (drawing no. 33-7622 Rev O), Proposed Site Layout (drawing no. 10-7622 Rev F), Client Switchgear-Control Room (drawing no. 14-7622 Rev C), DNO Control room (drawing no. 18-7622 Rev D), Grid Transformer (drawing no. 19-7622 Rev B), Auxiliary Transformer (drawing no. 20-7622 Rev C), Battery Container - Plan and Elevations (drawing no. 21-7622 Rev E), 20ft Inverter and Transfer Container (drawing no. 22-7622 Rev C), Battery Compound Fence and Gate Details (drawing no. 25-7622 Rev A), DNO Compound Fence and Gate Details (drawing no. 26-7622 Rev A), 20ft Spares Container (drawing no. 40-7622), Compound Elevation (drawing no. 12-7622 Rev A), CCTV Post (drawing no. 12-7622-1 Rev B), External Materials Specification Sheet - Revision B, Detailed Landscape Proposals (drawing no. P20-1830_10 Rev B). REASON: For the avoidance of doubt and in the interests of proper planning."
+        },
+        {
+          "number": "2",
+          "type": "materials",
+          "summary": "External materials to match approved specification sheet",
+          "text": "The materials to be used in the construction of the external surfaces of the development hereby permitted shall match, in type, colour and texture to those on the External Materials Specification Sheet - Revision B. REASON: In the interests of visual amenity and in accordance with Policy EM10 of the Basingstoke and Deane Local Plan 2011-2029 and Policies D1 and D2 of the Bramley Neighbourhood Development Plan 2011-2029."
+        },
+        {
+          "number": "3",
+          "type": "bng",
+          "summary": "Development in accordance with Biodiversity Management Plan and Wildlife Mitigation and Protection Plan",
+          "text": "The development shall be built in accordance with the Biodiversity Management Plan (ref. WOR 4751.BMP dated November 2024) and the Wildlife Mitigation and Protection Plan (ref. WOR 4751.WMMP dated November 2024). REASON: In order to ensure that biodiversity net gains are acheived in the longterm and to prevent adverse impacts on key species and habitats in accordance with Policy EM4 of the Basingstoke and Deane Local Plan 2011-2029 and Policy RE3 of the Bramley Neighbourhood Development Plan 2011-2029."
+        },
+        {
+          "number": "4",
+          "type": "drainage",
+          "summary": "Drainage system per approved Flood Risk Assessment; surface water limited to 2.7l/s",
+          "text": "The drainage system shall be constructed in accordance with the Flood Risk Assessment (ref. CTP-20-746 dated January 2021 Rev 02) and the Flood Risk Addendum Note (ref. J-15677-PO3 dated November 2024). Surface water discharge to the watercourse shall be limited to 2.7l/s. Any changes to the approved documentation must first be submitted to and approved in writing by the Local Planning Authority in consultation with the Lead Local Flood Authority. Any revised details submitted for approval must include a technical summary highlighting any changes, updated detailed drainage drawings and detailed drainage calculations. REASON: To ensure that sufficient capacity is made available to cope with the new development and in order to avoid adverse environmental impact on the local community in accordance with Policy EM7 of the Basingstoke and Deane Local Plan 2011-2029 and Policy RE2 of the Bramley Neighbourhood Development Plan 2011-2029."
+        },
+        {
+          "number": "5",
+          "type": "noise",
+          "summary": "Development in accordance with Addendum Noise Assessment (LF Acoustics, rev. 2.1, Nov 2024)",
+          "text": "The development hereby approved shall be constructed in accordance with all recommendations outlined in the Addendum Noise Assessment prepared by LF Acoustics (rev. 2.1 dated November 2024) which shall be implemented prior to the battery storage facility coming into use and shall be thereafter maintained in accordance with the approved details. REASON: To ensure that the buildings, structures and plant are adequately sound proofed in the interests of the amenities of the occupants of nearby premises in accordance with Policies EM10 and EM12 of the Basingstoke and Deane Local Plan 2011-2029."
+        },
+        {
+          "number": "6",
+          "type": "transport",
+          "summary": "Pre-construction road condition survey compliance and 6-monthly monitoring during construction",
+          "text": "The development shall be carried out in accordance with the Pre-construction Road Condition Survey prepared by Miles White Transport (ref. 22136, dated 27 February 2023) as approved under 23/00526/CONDN on 28 March 2023. The condition of the road shall be monitored against the findings of the condition survey and reported to the Local Planning Authority every 6 months throughout the construction period of the development and any defects or damage attributable to the construction activity to be rectified by the developer at their expense within 3 months of the defect being identified. REASON: In the interests of highway safety in accordance with Policies EM10 and CN9 of the Basingstoke and Deane Local Plan 2011-2029."
+        },
+        {
+          "number": "7",
+          "type": "transport",
+          "summary": "Implementation of approved Construction Travel Plan (Pegasus Group, Aug 2021)",
+          "text": "The proposed development shall be implemented, monitored and maintained in accordance with the approved Construction Travel Plan ref: P20-1830 Rev A prepared by the Pegasus Group dated August 2021. REASON: To encourage more sustainable modes of transport and discourage the use of the private car, and in the interests of highway safety in accordance with Policies EM10 and CN9 of the Basingstoke and Deane Local Plan 2011-2029."
+        },
+        {
+          "number": "8",
+          "type": "ecology",
+          "summary": "Arboricultural Impact Assessment Addendum compliance and tree protection measures",
+          "text": "The development hereby approved shall be carried out in accordance with the submitted Arboricultural Impact Assessment Addendum prepared by Barton Hyett Associates (dated November 2024). Protective measures shall be maintained until completion of the development. No development or other operations shall take place other than in complete accordance with the Arboricultural Impact Assessment Addendum. REASON: To ensure that reasonable measures are taken to safeguard protected/important landscape trees in the interests of local amenity and the enhancement of the development itself in accordance with Policies EM1 and EM10 of the Basingstoke and Deane Local Plan 2011-2029."
+        },
+        {
+          "number": "9",
+          "type": "other",
+          "summary": "Landscaping in accordance with approved Landscape and Visual Impact Technical Note and Detailed Landscape Proposals",
+          "text": "The development hereby approved shall be carried out in accordance with the submitted Landscape and Visual Impact Technical Note (ref. P20-1830EN, dated 11/11/2024) and Detailed Landscape Proposals (drawing no. P20-1830_10 Rev B). The works approved shall be carried out in the first planting and seeding season following the use hereby permitted commencing. Any trees or plants which, within a period of 5 years from the date of planting, die, are removed or become seriously damaged or diseased shall be replaced in the next planting season with others of similar size and species. REASON: To improve the appearance of the site in the interests of visual amenity in accordance with Policy EM10 of the Basingstoke and Deane Local Plan 2011-2029 and Policy D1 of the Bramley Neighbourhood Plan 2011-2029."
+        },
+        {
+          "number": "10",
+          "type": "lighting",
+          "summary": "External lighting details to be submitted and approved prior to installation; ILP GN01 compliance",
+          "text": "No external lighting shall be installed in the site until full details of all the proposed lighting (including levels of illumination) have been submitted to and approved in writing by the Local Planning Authority. The lighting scheme shall comply with the Institute of Lighting Professionals Guidance Note 1 for the reduction of obtrusive light 2021 (or any such later revision), having regard to the lighting guidelines produced by the Bat Conservation Trust and comprise the minimum level of lighting needed for security and operational purposes and be designed to minimise light pollution and glare and spillage outside the site's boundaries. The development shall be carried out and thereafter maintained in accordance with the approved details. REASON: Details are required in order to protect residential amenity, the character of the area and in case of bats using the site for commuting and foraging grounds in accordance with Policies EM4, EM10 and EM12 of the Basingstoke and Deane Local Plan 2011-2029, Policy RE3 of the Bramley Neighbourhood Plan 2011-2029."
+        },
+        {
+          "number": "11",
+          "type": "hours",
+          "summary": "Construction working hours: Mon–Fri 0730–1800, Sat 0800–1300, no Sundays or public holidays",
+          "text": "No work relating to the construction of the development hereby approved, including works of demolition or preparation prior to operations, shall take place before the hours of 0730 nor after 1800 Monday to Friday, before the hours of 0800 nor after 1300 Saturdays nor on Sundays or recognised public holidays. REASON: To protect the amenities of the occupiers of nearby properties during the construction period and in accordance Policy EM10 of the Basingstoke and Deane Local Plan 2011-2029."
+        },
+        {
+          "number": "12",
+          "type": "hours",
+          "summary": "Construction deliveries/spoil removal hours: Mon–Fri 0730–1800, Sat 0800–1300, no Sundays or public holidays",
+          "text": "No deliveries of construction materials or plant and machinery and no removal of any spoil from the site shall take place before the hours of 0730 nor after 1800 Monday to Friday, before the hours of 0800 nor after 1300 Saturdays nor on Sundays or recognised public holidays. REASON: To protect the amenities of the occupiers of nearby properties during the construction period and in accordance with Policy EM10 of the Basingstoke and Deane Local Plan 2011-2029."
+        },
+        {
+          "number": "13",
+          "type": "transport",
+          "summary": "Development in accordance with approved Construction Traffic Management Plan (Miles White Transport, Feb 2023)",
+          "text": "The development shall be built in accordance with the Construction Traffic Management Plan prepared by Miles White Transport (ref. 22136 Issue 2, dated 28 February 2023) approved under 23/00526/CONDN on 28 March 2023. REASON: To protect the amenities of the occupiers of nearby properties during the construction period and in accordance with Policies EM10 and EM12 of the Basingstoke and Deane Local Plan 2011-2029."
+        },
+        {
+          "number": "14",
+          "type": "fire",
+          "summary": "Battery Safety Management Plan (inc. emergency response) to be submitted within one month and approved",
+          "text": "Within one month of the date of this decision, a Battery Safety Management Plan (incorporating an emergency response plan) shall be submitted to the Local Planning Authority and approved in writing by in consultation with the Hampshire & Isle of Wight Fire and Rescue Service. The Battery Safety Management Plan shall be informed by site specific risk assessments and modelling where appropriate and developed in discussion with the Hampshire and Isle of Wight Fire Service and other relevant emergency services. The development shall thereafter be implemented, retained and maintained in full accordance with the approved details. REASON: Details are required to ensure that the suitable measures are taken in the event of a fire incident to protect the development itself and surrounding property in accordance with Policies EM10 and EM12 of the Basingstoke and Deane Local Plan 2011-2029."
+        }
+      ],
+      "source": "claude-extraction",
+      "sourceUrl": "https://planning.basingstoke.gov.uk/online-applications/applicationDetails.do?keyVal=SN0667CRFQP00&activeTab=summary"
+    },
+    {
+      "id": "basingstoke-SNNJO1CRG4B00",
+      "reference": "24/02783/FUL",
+      "lpa": "Basingstoke and Deane Borough Council",
+      "region": "South East",
+      "address": "North Hampshire Hospital Aldermaston Road Basingstoke Hampshire RG24 9NA",
+      "postcode": "",
+      "useClass": "Full Planning Application",
+      "sector": "healthcare",
+      "description": "Erection of ground floor extension to MRI building to provide additional floorspace for supporting hospital clinical needs (Use Class C2), relocation of cycle parking area and associated works.",
+      "applicant": "Hampshire Hospitals CS Ltd",
+      "agent": "Mrs Carol Clarke",
+      "decision": "approved",
+      "decisionDate": "2025-01-31",
+      "conditions": [
+        {
+          "number": "1",
+          "type": "other",
+          "summary": "Development in accordance with approved plans",
+          "text": "The development hereby permitted shall be carried out in accordance with the following approved plans:\nLocation Plan\nBlock Plan - Drawing No. 148619-ARC-WS-XX-PL-A-100-0011 Revision P2\nProposed Ground Floor Plan - Drawing No. 148619-ARC-WS-XX-PL-A-100-0020 Revision P2\nProposed Elevations - Drawing No. 148619-ARC-WS-XX-PL-A-100-0021 Revision P1\nProposed Cycle Store Plan - Drawing No. 148619-ARC-WS-XX-PL-A-100-0023 Revision P2\nProposed Cycle Store Elevations - Drawing No. 148619-ARC-WS-XX-EL-A-100-0025\nREASON: For the avoidance of doubt and in the interests of proper planning."
+        },
+        {
+          "number": "2",
+          "type": "other",
+          "summary": "Development to begin within 3 years of permission date",
+          "text": "The development hereby permitted shall be begun before the expiration of 3 years from the date of this planning permission.\nREASON: To comply with Section 91 of the Town and Country Planning Act 1990 and to prevent an accumulation of unimplemented planning permissions."
+        },
+        {
+          "number": "3",
+          "type": "materials",
+          "summary": "External materials to match approved plans and application forms",
+          "text": "The materials to be used in the construction of the external surfaces of the development hereby permitted shall match, in type, colour and texture those on the approved plans and application forms.\nREASON: In the interests of visual amenity and in accordance with Policy EM10 of the Basingstoke and Deane Local Plan 2011-2029."
+        }
+      ],
+      "source": "claude-extraction",
+      "sourceUrl": "https://planning.basingstoke.gov.uk/online-applications/applicationDetails.do?keyVal=SNNJO1CRG4B00&activeTab=summary"
+    },
+    {
+      "id": "basingstoke-SQYIZVCRI3W00",
+      "reference": "25/00204/FUL",
+      "lpa": "Basingstoke and Deane Borough Council",
+      "region": "South East",
+      "address": "Oak Lodge Nursing Home Oakley Hall Oakley Basingstoke Hampshire RG23 7EL",
+      "postcode": "",
+      "useClass": "Full Planning Application",
+      "sector": "healthcare",
+      "description": "Change of window to French doors on South Elevation from a sitting room within the care home to allow for direct access to the courtyard.",
+      "applicant": "Mr Kevin Miller",
+      "agent": "",
+      "decision": "approved",
+      "decisionDate": "2025-03-27",
+      "conditions": [
+        {
+          "number": "1",
+          "type": "other",
+          "summary": "Development in accordance with approved plans",
+          "text": "The development hereby permitted shall be carried out in accordance with the following approved plans:\nLocation Plan - Drawing No. PL01 Rev A\nBlock Plan - Drawing No. PL02\nProposed Floor Plan and Elevations - Drawing No. PL04\nREASON: For the avoidance of doubt and in the interests of proper planning."
+        },
+        {
+          "number": "2",
+          "type": "other",
+          "summary": "3-year time limit for commencement",
+          "text": "The development hereby permitted shall be begun before the expiration of 3 years from the date of this planning permission.\nREASON: To comply with Section 91 of the Town and Country Planning Act 1990 and to prevent an accumulation of unimplemented planning permissions."
+        },
+        {
+          "number": "3",
+          "type": "materials",
+          "summary": "External materials to match existing building",
+          "text": "The materials to be used in the construction of the external surfaces of the development hereby permitted shall match, in type, colour and texture to those on the existing building.\nREASON: In the interests of visual amenity and in accordance with Policies EM10 and EM11 of the Basingstoke and Deane Local Plan 2011-2029."
+        }
+      ],
+      "source": "claude-extraction",
+      "sourceUrl": "https://planning.basingstoke.gov.uk/online-applications/applicationDetails.do?keyVal=SQYIZVCRI3W00&activeTab=summary"
+    },
+    {
+      "id": "basingstoke-SUC4RJCRKI000",
+      "reference": "25/00867/HSE",
+      "lpa": "Basingstoke and Deane Borough Council",
+      "region": "South East",
+      "address": "6 Almond Close Old Basing Hampshire RG24 7DW",
+      "postcode": "",
+      "useClass": "Householder Permission",
+      "sector": "renewable-energy",
+      "description": "Fitting solar panels to the roof, plus battery storage on the side of the house",
+      "applicant": "Dr Adam Jacobs",
+      "agent": "",
+      "decision": "approved",
+      "decisionDate": "2025-05-20",
+      "conditions": [
+        {
+          "number": "1",
+          "type": "other",
+          "summary": "Development in accordance with approved plans",
+          "text": "The development hereby permitted shall be carried out in accordance with the following approved plans:\nLocation Plan, Planning Portal Reference: PP-13925259v1\nBlock Plan, Drawing no: TQRQM25095173555922\nPhotos and Details, Received 07/04/2025\nManufacturers Details by South England Solar Ltd Quote #: 5809042 Version 1.2 2024/05/11, Received 14/04/2025\nManufacturers Details and Dimensions, Aiko - N-Type ABC Neostar Series - Received 14/04/2025\nREASON: For the avoidance of doubt and in the interests of proper planning."
+        },
+        {
+          "number": "2",
+          "type": "other",
+          "summary": "Development to begin within 3 years of permission date",
+          "text": "The development hereby permitted shall be begun before the expiration of 3 years from the date of this planning permission.\nREASON: To comply with Section 91 of the Town and Country Planning Act 1990 and to prevent an accumulation of unimplemented planning permissions."
+        },
+        {
+          "number": "3",
+          "type": "materials",
+          "summary": "External materials to match approved plans and application form",
+          "text": "The materials to be used in the construction of the external surfaces of the development hereby permitted shall match, in type, colour and texture to those on the approved plans and application form.\nREASON: In the interests of visual amenity and in accordance with Policy EM10 of the Basingstoke and Deane Local Plan 2011-2029 and Policies OB&L 6 and OB&L 7 of the Old Basing and Lychpit Neighbourhood Plan 2015-2029."
+        }
+      ],
+      "source": "claude-extraction",
+      "sourceUrl": "https://planning.basingstoke.gov.uk/online-applications/applicationDetails.do?keyVal=SUC4RJCRKI000&activeTab=summary"
+    },
+    {
+      "id": "basingstoke-SZ824RCRGDM00",
+      "reference": "25/01713/FUL",
+      "lpa": "Basingstoke and Deane Borough Council",
+      "region": "South East",
+      "address": "Sycamore Cottage Skippetts Lane West Basingstoke Hampshire RG21 3HP",
+      "postcode": "",
+      "useClass": "Full Planning Application",
+      "sector": "healthcare",
+      "description": "Erection of a ground floor and first floor extension to residential care home, in order to provide three new bedrooms with en suite bathrooms, and two additional en suite bathrooms to existing bedrooms. Installation of an additional fire escape",
+      "applicant": "Mr Anthony Vanderslott",
+      "agent": "RACHEL MCCARTHY",
+      "decision": "approved",
+      "decisionDate": "2025-09-03",
+      "conditions": [
+        {
+          "number": "1",
+          "type": "other",
+          "summary": "Development in accordance with approved plans",
+          "text": "The development hereby permitted shall be carried out in accordance with the following approved plans:\nLocation Plan - Drawing Number 24053-05\nSite Plan - Drawing Number 20050-02 Rev A\nGround Floor Plan and Elevations - Drawing Number 20050-03 Rev B\nFirst Floor Plan and Roof Plan - Drawing Number 20050-04 Rev A\nREASON: For the avoidance of doubt and in the interests of proper planning."
+        },
+        {
+          "number": "2",
+          "type": "other",
+          "summary": "Development to commence within 3 years",
+          "text": "The development hereby permitted shall be begun before the expiration of 3 years from the date of this planning permission.\nREASON: To comply with Section 91 of the Town and Country Planning Act 1990 and to prevent an accumulation of unimplemented planning permissions."
+        },
+        {
+          "number": "3",
+          "type": "materials",
+          "summary": "External materials to match existing building",
+          "text": "The materials to be used in the construction of the external surfaces of the development hereby permitted shall match, in type, colour and texture to those on the existing building.\nREASON: In the interests of visual amenity and in accordance with Policy EM10 of the Basingstoke and Deane Local Plan 2011-2029."
+        },
+        {
+          "number": "4",
+          "type": "other",
+          "summary": "First floor western elevation windows – obscure glazing and restricted opening",
+          "text": "The windows at first floor level on the western (side) elevation of the proposed extension, shall be non opening unless the parts that can be opened are more than 1.7 metres above the floor of the room in which the window is installed and glazed with obscured glass, to at least the equivalent of Pilkington level 4 standard. The window and glazing shall be installed prior to occupation of the development and shall be permanently maintained in that condition.\nREASON: To protect the privacy of the adjacent properties and to prevent overlooking, in accordance with Policy EM10 of the Basingstoke and Deane Local Plan 2011-2029."
+        },
+        {
+          "number": "5",
+          "type": "ecology",
+          "summary": "Tree protection measures in accordance with Arboricultural Impact Assessment",
+          "text": "Protective measures, including fencing, ground protection, supervision, working procedures and special engineering solutions shall be carried out in accordance with the Arboricultural Impact Assessment, Protection Plan and Method Statement written by Harrison Arboriculture, Report Ref: 401-1561-6/10/2021 dated 30 June 2021. The tree protection measures shall be retained for the duration of the construction works.\nREASON: To ensure that reasonable measures are taken to safeguard trees in the interests of local amenity and the enhancement of the development itself, in accordance with the National Planning Policy Framework (2024) and Policy EM1 of the Basingstoke and Deane Local Plan 2011-2029."
+        }
+      ],
+      "source": "claude-extraction",
+      "sourceUrl": "https://planning.basingstoke.gov.uk/online-applications/applicationDetails.do?keyVal=SZ824RCRGDM00&activeTab=summary"
+    },
+    {
+      "id": "basingstoke-T7IZ9ACRM7G00",
+      "reference": "25/02962/FUL",
+      "lpa": "Basingstoke and Deane Borough Council",
+      "region": "South East",
+      "address": "Shire House Waltham Road Overton Hampshire RG25 3NJ",
+      "postcode": "",
+      "useClass": "Full Planning Application",
+      "sector": "logistics",
+      "description": "Erection of a first floor extension above existing warehouse/workshop to form additional offices",
+      "applicant": "Mr Ian Ford",
+      "agent": "Mr Martin Runcie",
+      "decision": "approved",
+      "decisionDate": "2026-03-05",
+      "conditions": [
+        {
+          "number": "1",
+          "type": "other",
+          "summary": "Development in accordance with approved plans",
+          "text": "The development hereby permitted shall be carried out in accordance with the following approved plans:\nLocation and Block Plan - Drawing No. 779 P01 Revision A\nProposed Floor Plans - Drawing No. 779 P02 Revision E\nProposed Elevations - Drawing No. 779 P03 Revision F\nREASON: For the avoidance of doubt and in the interests of proper planning."
+        },
+        {
+          "number": "2",
+          "type": "other",
+          "summary": "Development to commence within 3 years",
+          "text": "The development hereby permitted shall be begun before the expiration of 3 years from the date of this planning permission.\nREASON: To comply with Section 91 of the Town and Country Planning Act 1990 and to prevent an accumulation of unimplemented planning permissions."
+        },
+        {
+          "number": "3",
+          "type": "materials",
+          "summary": "External materials to match existing as per approved plans",
+          "text": "The materials to be used in the construction of the external surfaces of the development hereby permitted shall match, in type, colour and texture those on the approved plans and application form.\nREASON: In the interests of visual amenity and in accordance with Policies EM1 and EM10 of the Basingstoke and Deane Local Plan 2011-2029 and Policy LBE1 of the Overton Neighbourhood Plan 2016-2029."
+        },
+        {
+          "number": "4",
+          "type": "hours",
+          "summary": "Construction hours restriction for external works",
+          "text": "No work relating to the external construction of the development hereby approved, including works of preparation prior to operations, shall take place before the hours of 0730 nor after 1800 Monday to Friday, before the hours of 0800 nor after 1300 Saturdays nor on Sundays or recognised public holidays.\nREASON: To protect the amenities of the occupiers of nearby properties during the construction period and in accordance with Policy EM12 of the Basingstoke and Deane Borough Local Plan 2011-2029."
+        },
+        {
+          "number": "5",
+          "type": "hours",
+          "summary": "Construction delivery and spoil removal hours restriction",
+          "text": "No deliveries of construction materials or plant and machinery and no removal of any spoil from the site shall take place before the hours of 0730 nor after 1800 Monday to Friday, before the hours of 0800 nor after 1300 Saturdays nor on Sundays or recognised public holidays.\nREASON: To protect the amenities of the occupiers of nearby properties during the construction period and in accordance Policy EM12 of the Basingstoke and Deane Local Plan 2011-2029."
+        }
+      ],
+      "source": "claude-extraction",
+      "sourceUrl": "https://planning.basingstoke.gov.uk/online-applications/applicationDetails.do?keyVal=T7IZ9ACRM7G00&activeTab=summary"
+    },
+    {
+      "id": "basingstoke-TC1BMNCRHCZ00",
+      "reference": "26/00562/FUL",
+      "lpa": "Basingstoke and Deane Borough Council",
+      "region": "South East",
+      "address": "Rowan Lodge Crown Lane Newnham Hampshire RG27 9AN",
+      "postcode": "",
+      "useClass": "Full Planning Application",
+      "sector": "healthcare",
+      "description": "Construction of single storey flat roof extension to rear of building, to provide additional internal communal space for residents of care home. Extension to be constructed over area of existing external terrace within current footprint of existing building",
+      "applicant": "Mr Jon Huxford",
+      "agent": "Mr Tom Linsell",
+      "decision": "approved",
+      "decisionDate": "2026-05-06",
+      "conditions": [
+        {
+          "number": "1",
+          "type": "other",
+          "summary": "Development in accordance with approved plans",
+          "text": "The development hereby permitted shall be carried out in accordance with the following approved plans:\nLocation Plan - Drawing No.: R004-LP-100 - Dated: February 2026\nBlock Plan - Drawing No.: R004-SP-101 - Dated: February 2026\nProposed Elevations - Drawing No.: RL-CH-103-EL (South West)\nProposed Elevations - Drawing No.: RL-CH-104-EL (South East)\nProposed Elevations - Drawing No.: RL-CH-105-EL (North East)\nProposed Upper Ground Floor Plan: RL-CH-101-GA\nProposed Roof Plan - Drawing No.: RL-CH-102-RP\nREASON: For the avoidance of doubt and in the interests of proper planning."
+        },
+        {
+          "number": "2",
+          "type": "other",
+          "summary": "Development to commence within 3 years",
+          "text": "The development hereby permitted shall be begun before the expiration of 3 years from the date of this planning permission.\nREASON: To comply with Section 91 of the Town and Country Planning Act 1990 and to prevent an accumulation of unimplemented planning permissions."
+        },
+        {
+          "number": "3",
+          "type": "materials",
+          "summary": "External materials to match existing building",
+          "text": "The materials to be used in the construction of the external surfaces of the development hereby permitted shall match, in type, colour and texture to those on the existing building.\nREASON: In the interests of visual amenity and in accordance with Policy EM10 of the Basingstoke and Deane Local Plan 2011-2029."
+        }
+      ],
+      "source": "claude-extraction",
+      "sourceUrl": "https://planning.basingstoke.gov.uk/online-applications/applicationDetails.do?keyVal=TC1BMNCRHCZ00&activeTab=summary"
+    },
+    {
+      "id": "greater-cambridge-O8UOOIDXM9D00",
+      "reference": "16/1134/OUT",
+      "lpa": "Greater Cambridge Shared Planning",
+      "region": "East of England",
+      "address": "West Cambridge Site Madingley Road Cambridge Cambridgeshire",
+      "postcode": "",
+      "useClass": "Outline Application",
+      "sector": "data-centre",
+      "description": "Outline planning permission with all matters reserved is sought for up to 383,300m2 of development comprising up to 370,000m2 of academic floorspace (Class D1 space), commercial/research institute floorspace (Class B1b and sui generis research uses), of which not more than 170,000m2 will be commercial floorspace (Class B1b), up to 2,500m2 nursery floorspace (Class D1), up to 4,000 m2 of retail/food and drink floorspace (Classes A1-A5), up to 4,100m2 and not less than 3,000m2 for assembly and leisure floorspace (Class D2), up to 5,700m2 of sui generis uses, including Energy Centre and Data Centre, associated infrastructure including roads (including adaptations to highway junctions on Madingley Road), pedestrian, cycle and vehicle routes, parking, drainage, open spaces, landscaping and earthworks, and demolition of existing buildings and breaking up of hardstanding.",
+      "applicant": "Mark Parsons",
+      "agent": "",
+      "decision": "approved",
+      "decisionDate": "2024-06-21",
+      "conditions": [],
+      "source": "claude-extraction",
+      "sourceUrl": "https://applications.greatercambridgeplanning.org/online-applications/applicationDetails.do?keyVal=O8UOOIDXM9D00&activeTab=summary"
+    },
+    {
+      "id": "greater-cambridge-RZJ037DXK8Z00",
+      "reference": "23/03182/S73",
+      "lpa": "Greater Cambridge Shared Planning",
+      "region": "East of England",
+      "address": "Technology Park Fulbourn Road Cambridge Cambridgeshire",
+      "postcode": "",
+      "useClass": "Section 73 - Remove/Vary Condition",
+      "sector": "data-centre",
+      "description": "S73 to vary conditions 16 (Approved plans), 64 (Cycle parking) and 65 (Car parking) of outline planning permission 21/00772/OUT (A hybrid planning application for a total of 56,473sqm of commercial floorspace for Use Classes E(g) i (offices), ii (research and development), ii (light industrial) and B8 (storage and distribution - limited to data centres) uses. Comprising a) an Outline Application with all matters reserved (except for access) for the development of up to 44,671 sqm of floorspace, with associated access, structural landscaping, car and cycle parking and associated infrastructure works, b) a Full Application for the first Phase comprising the main access, one commercial building, a multi-decked car and cycle park and associated landscaping and infrastructure works, and c) a Full Application for the details of initial enabling works comprising site wide earth works and drainage)",
+      "applicant": "C/O Agent",
+      "agent": "Miss Alice Maguire",
+      "decision": "approved",
+      "decisionDate": "2023-12-18",
+      "conditions": [],
+      "source": "claude-extraction",
+      "sourceUrl": "https://applications.greatercambridgeplanning.org/online-applications/applicationDetails.do?keyVal=RZJ037DXK8Z00&activeTab=summary"
+    },
+    {
+      "id": "greater-cambridge-SSCNXNDXHTQ00",
+      "reference": "25/00760/FUL",
+      "lpa": "Greater Cambridge Shared Planning",
+      "region": "East of England",
+      "address": "Unit 2 Dickerson Industrial Estate Waterbeach CB25 9PG",
+      "postcode": "",
+      "useClass": "Full Application",
+      "sector": "logistics",
+      "description": "Installation of a two-storey portacabin office and tented warehouse, car parking, associated equipment works and infrastructure.",
+      "applicant": "UK Power Networks & Alboro Develop",
+      "agent": "Mr Edward Clarke",
+      "decision": "approved",
+      "decisionDate": "2025-05-27",
+      "conditions": [
+        {
+          "number": "1",
+          "type": "other",
+          "summary": "Development to commence within three years of permission date",
+          "text": "The development hereby permitted shall be begun before the expiration of three years from the date of this permission.\n\nReason: In accordance with the requirements of Section 91 of the Town and Country Planning Act 1990 (as amended by Section 51 of the Planning and Compulsory Purchase Act 2004)."
+        },
+        {
+          "number": "2",
+          "type": "other",
+          "summary": "Development to be carried out in accordance with approved plans",
+          "text": "The development hereby permitted shall be carried out in accordance with the approved plans as listed on this decision notice.\n\nReason: In the interests of good planning, for the avoidance of doubt and to facilitate any future application to the Local Planning Authority under Section 73 of the Town and Country Planning Act 1990."
+        },
+        {
+          "number": "3",
+          "type": "ecology",
+          "summary": "Pre-occupation ecological enhancement scheme (bat/bird boxes, hedgehog provisions)",
+          "text": "Prior to the occupation of the proposed development an ecological enhancement scheme shall be submitted to and approved in writing by the local planning authority. The scheme shall include details of bat and bird box installation, hedgehog provisions and other ecological enhancements. The approved scheme shall be fully implemented prior to first occupation or in accordance with a timescale agreed in writing by the local planning authority.\n\nReason: To conserve and enhance ecological interests in accordance with South Cambridgeshire Local Plan 2018 policies HQ/1 and NH/4 and the Greater Cambridge Planning Biodiversity Supplementary Planning Document (2022)."
+        },
+        {
+          "number": "4",
+          "type": "lighting",
+          "summary": "Pre-occupation lighting design strategy for biodiversity/bat-sensitive areas",
+          "text": "Prior to occupation a lighting design strategy for biodiversity features or areas to be lit shall be submitted to and approved in writing by the local planning authority. The strategy shall: a) Identify those areas/features on site that are particularly sensitive for bats and that are likely to cause disturbance in or around their breeding sites and resting places or along important routes used to access key areas of their territory, for example, for foraging; and b) show how and where external lighting will be installed (through the provision of appropriate lighting contour plans and technical specification) so that it can be clearly demonstrated that areas to be lit will not disturb or prevent the above species using their territory or having access to their breeding sites and resting places. All external lighting shall be installed in accordance with the specifications and locations set out in the strategy, and these shall be maintained thereafter in accordance with the strategy. Under no circumstances should any other external lighting be installed without prior consent from the local planning authority."
+        },
+        {
+          "number": "5",
+          "type": "materials",
+          "summary": "External materials to follow approved plans specifications",
+          "text": "The materials to be used in the external construction of the development, hereby permitted, shall follow the specifications in accordance with the details specified within the approved plans unless otherwise agreed in writing by the Local Planning Authority.\n\nReason: To ensure the external appearance of the development does not detract from the character and appearance of the area in accordance with Policy HQ/1 of the South Cambridgeshire Local Plan 2018."
+        }
+      ],
+      "source": "claude-extraction",
+      "sourceUrl": "https://applications.greatercambridgeplanning.org/online-applications/applicationDetails.do?keyVal=SSCNXNDXHTQ00&activeTab=summary"
+    },
+    {
+      "id": "greater-cambridge-SVU4L1DXLB300",
+      "reference": "25/01763/FUL",
+      "lpa": "Greater Cambridge Shared Planning",
+      "region": "East of England",
+      "address": "Cambridge Assessment Hill Farm Road Whittlesford Cambridgeshire CB22 4FZ",
+      "postcode": "",
+      "useClass": "Full Application",
+      "sector": "logistics",
+      "description": "Replacement of the existing main warehouse roof, together with the installation of a PV array, rooflights and balustrade protection.",
+      "applicant": "Mr Jonathan Taylor",
+      "agent": "Mr Thomas Mann",
+      "decision": "approved",
+      "decisionDate": "2025-09-25",
+      "conditions": [
+        {
+          "number": "1",
+          "type": "other",
+          "summary": "Development to commence within three years of permission date",
+          "text": "The development hereby permitted shall be begun before the expiration of three years from the date of this permission.\n\nReason: In accordance with the requirements of Section 91 of the Town and Country Planning Act 1990 (as amended by Section 51 of the Planning and Compulsory Purchase Act 2004)."
+        },
+        {
+          "number": "2",
+          "type": "other",
+          "summary": "Development to be carried out in accordance with approved plans",
+          "text": "The development hereby permitted shall be carried out in accordance with the approved plans as listed on this decision notice.\n\nReason: In the interests of good planning, for the avoidance of doubt and to facilitate any future application to the Local Planning Authority under Section 73 of the Town and Country Planning Act 1990."
+        },
+        {
+          "number": "3",
+          "type": "hours",
+          "summary": "Restriction on construction/demolition hours",
+          "text": "No construction or demolition work shall be carried out and no plant or power operated machinery operated other than between the following hours: 0800 hours and 1800 hours on Monday to Friday, 0800 hours and 1300 hours on Saturday and at no time on Sundays, Bank or Public Holidays, unless otherwise previously agreed in writing with the Local Planning Authority.\n\nReason: To protect the amenity of the adjoining properties in accordance with Policy CC/6 of the South Cambridgeshire Local Plan 2018."
+        }
+      ],
+      "source": "claude-extraction",
+      "sourceUrl": "https://applications.greatercambridgeplanning.org/online-applications/applicationDetails.do?keyVal=SVU4L1DXLB300&activeTab=summary"
+    },
+    {
+      "id": "greater-cambridge-SXP0X8DXFHS00",
+      "reference": "25/02308/FUL",
+      "lpa": "Greater Cambridge Shared Planning",
+      "region": "East of England",
+      "address": "Atlas Building 68 Stirling Way Papworth Everard Cambridgeshire CB23 3GY",
+      "postcode": "",
+      "useClass": "Full Application",
+      "sector": "logistics",
+      "description": "Insertion of new first floor windows into front elevation and part conversion of first floor warehouse space to Office space",
+      "applicant": "Mr B. Hill",
+      "agent": "Ainsley Foster",
+      "decision": "approved",
+      "decisionDate": "2025-08-04",
+      "conditions": [
+        {
+          "number": "1",
+          "type": "other",
+          "summary": "Development to begin within three years of permission date",
+          "text": "The development hereby permitted shall be begun before the expiration of three years from the date of this permission.\n\nReason: In accordance with the requirements of Section 91 of the Town and Country Planning Act 1990 (as amended by Section 51 of the Planning and Compulsory Purchase Act 2004)."
+        },
+        {
+          "number": "2",
+          "type": "other",
+          "summary": "Development to be carried out in accordance with approved plans",
+          "text": "The development hereby permitted shall be carried out in accordance with the approved plans as listed on this decision notice.\n\nReason: In the interests of good planning, for the avoidance of doubt and to facilitate any future application to the Local Planning Authority under Section 73 of the Town and Country Planning Act 1990."
+        },
+        {
+          "number": "3",
+          "type": "other",
+          "summary": "Ancillary office space restricted to warehouse-related use only, no further expansion",
+          "text": "The ancillary office space, hereby approved, shall be used only for office space in relation to the warehouse floorspace in the remainder of the building and not for other purposes and shall not be expanded further without express written consent from the Local Planning Authority.\n\nReason: To ensure the building is used in a manner appropriate to the local area and would not place undue pressure of car and cycle parking on the site, in accordance with Policy HQ/1 of the South Cambridgeshire Local Plan (2018)."
+        }
+      ],
+      "source": "claude-extraction",
+      "sourceUrl": "https://applications.greatercambridgeplanning.org/online-applications/applicationDetails.do?keyVal=SXP0X8DXFHS00&activeTab=summary"
+    },
+    {
+      "id": "greater-cambridge-SYD9GNDXG4V00",
+      "reference": "25/02472/FUL",
+      "lpa": "Greater Cambridge Shared Planning",
+      "region": "East of England",
+      "address": "Former David Ball (Db Group) Site Wellington Way Bourn Airfield Cambridge CB23 2TQ",
+      "postcode": "",
+      "useClass": "Full Application",
+      "sector": "logistics",
+      "description": "Hybrid planning application comprising of full planning permission for the demolition of the existing buildings, and outline planning permission with all matters reserved for up to 7,800sqm/83,960sqft (GEA) of commercial floorspace falling use classes E(g)(ii) Research and Development, E(g)(iii) Industrial processes and B8 Warehouse and Distribution, and associated infrastructure works at Phase 3 of Bourn Quarter. The application includes an Environmental Statement.",
+      "applicant": "Diageo Pension Trust Ltd",
+      "agent": "Amanda Sutton",
+      "decision": "approved",
+      "decisionDate": "2026-04-10",
+      "conditions": [],
+      "source": "claude-extraction",
+      "sourceUrl": "https://applications.greatercambridgeplanning.org/online-applications/applicationDetails.do?keyVal=SYD9GNDXG4V00&activeTab=summary"
+    },
+    {
+      "id": "greater-cambridge-T5I4QIDXFP000",
+      "reference": "25/04362/S73",
+      "lpa": "Greater Cambridge Shared Planning",
+      "region": "East of England",
+      "address": "Rear Of 56 Cherry Hinton Road Cambridge Cambridgeshire CB1 7AQ",
+      "postcode": "",
+      "useClass": "Section 73 - Remove/Vary Condition",
+      "sector": "logistics",
+      "description": "S73 to vary conditions 10, 12, 13, 15 and 18 of ref: 23/04257/FUL (Erection of 7 No. apartments comprising 1 No. 2 bed and 6 No. 1bed units, including bin and cycle storage facilities, together with reconfiguring the pedestrian access to 56A and 58A Cherry Hinton Road and installation of a new ground floor rear wall to the retained retail unit at 56-58 Cherry Hinton Road, following demolition of existing warehouse building together with the proposed installation of a replacement Odour Extraction System at 64 Cherry Hinton Road).",
+      "applicant": "Mrs Kathryn Brand",
+      "agent": "",
+      "decision": "approved",
+      "decisionDate": "2026-01-16",
+      "conditions": [],
+      "source": "claude-extraction",
+      "sourceUrl": "https://applications.greatercambridgeplanning.org/online-applications/applicationDetails.do?keyVal=T5I4QIDXFP000&activeTab=summary"
+    },
+    {
+      "id": "greater-cambridge-TAX6MZDXL2Q00",
+      "reference": "24/03964/NMA2",
+      "lpa": "Greater Cambridge Shared Planning",
+      "region": "East of England",
+      "address": "Land At 6-7, 8, 9-11, 13, 14-16 Mercers Row Cambridge Cambridgeshire CB5 8HY",
+      "postcode": "",
+      "useClass": "Non-Material Amendment",
+      "sector": "logistics",
+      "description": "Non material amendment on application 24/03964/FUL for amendments to the 1) Removal of all windows along east elevation to Unit 1 at ground floor. 2) Removal of bi-fold expanding mesh panels at first floor to northern elevation windows of Unit 1 (replacing with a film to mitigate light pollution). 3) Removal of bi-fold expanding mesh panels at ground floor to western elevation windows of Unit 2. 4) Removal of fritting to ground floor windows. 5) Removal of cat ladders and roof hatches from warehouse areas. 6) Reverting to metal feature stair in lieu of concrete. 7) Adjusting final position of internal escape stairs. 8)Introducing compartment breaks in the north facing polycarbonate wall lights in the form of solid composite metal panels. 9) Removal of expanding mesh feature/ signage panel at unit entrances. 10) Changed single swing escape doors to double leaf escape doors at ground floor to meet U-values, fire and security requirements. 11) Lowering of the head of the ground floor windows and string course by 300mm to meet the maximum fire rated glazing requirements. 12) Internal changes to meet Wired score requirements. i.e. additional Comms Room at ground floor. 13) Splash pads added along footpath adjacent to Unit 2 west elevation.",
+      "applicant": "C/O AGENT",
+      "agent": "Mr Lyndon Gill",
+      "decision": "approved",
+      "decisionDate": "2026-03-24",
+      "conditions": [
+        {
+          "number": "1",
+          "type": "other",
+          "summary": "Non-material amendment approval – 13 listed design/fabric changes to 24/03964/FUL",
+          "text": "Non material amendment on application 24/03964/FUL for the; 1) Removal of all windows along east elevation to Unit 1 at ground floor. 2) Removal of bi-fold expanding mesh panels at first floor to northern elevation windows of Unit 1 (replacing with a film to mitigate light pollution). 3) Removal of bi-fold expanding mesh panels at ground floor to western elevation windows of Unit 2. 4) Removal of fritting to ground floor windows. 5) Removal of cat ladders and roof hatches from warehouse areas. 6) Reverting to metal feature stair in lieu of concrete. 7) Adjusting final position of internal escape stairs. 8) Introducing compartment breaks in the north facing polycarbonate wall lights in the form of solid composite metal panels. 9) Removal of expanding mesh feature/signage panel at unit entrances. 10) Changed single swing escape doors to double leaf escape doors at ground floor to meet U-values, fire and security requirements. 11) Lowering of the head of the ground floor windows and string course by 300mm to meet the maximum fire rated glazing requirements. 12) Internal changes to meet Wired score requirements. i.e. additional Comms Room at ground floor. 13) Splash pads added along footpath adjacent to Unit 2 west elevation."
+        }
+      ],
+      "source": "claude-extraction",
+      "sourceUrl": "https://applications.greatercambridgeplanning.org/online-applications/applicationDetails.do?keyVal=TAX6MZDXL2Q00&activeTab=summary"
+    },
+    {
+      "id": "hertsmere-RDTTWGIF02800",
+      "reference": "22/1071/OUT",
+      "lpa": "Hertsmere Borough Council",
+      "region": "East of England",
+      "address": "Land East Of Little Bushey Lane And North Of The Squirrels Little Bushey Lane Bushey Hertfordshire",
+      "postcode": "",
+      "useClass": "Outline Application",
+      "sector": "education",
+      "description": "Application for residential development (up to 310 units) with access from Little Bushey Lane, and land reserved for primary school, community facilities and mobility hub (Class E) along with car parking, drainage and earthworks to facilitate drainage, open space and all ancillary and enabling works. (Outline Application with Appearance, Landscaping, Layout and Scale Reserved).",
+      "applicant": "Redrow Homes Ltd",
+      "agent": "Scarlett Lambeth",
+      "decision": "refused",
+      "decisionDate": "2023-07-19",
+      "conditions": [],
+      "source": "claude-extraction",
+      "sourceUrl": "https://www6.hertsmere.gov.uk/online-applications/applicationDetails.do?keyVal=RDTTWGIF02800&activeTab=summary"
+    },
+    {
+      "id": "hertsmere-RRMD2OIFHIU00",
+      "reference": "23/0415/FUL",
+      "lpa": "Hertsmere Borough Council",
+      "region": "East of England",
+      "address": "Unit 2 Elstree Distribution Park Elstree Way Borehamwood Hertfordshire WD6 1RU",
+      "postcode": "",
+      "useClass": "Full Planning Permission",
+      "sector": "logistics",
+      "description": "Change of use from existing warehouse (Use Class B8) to dual use warehouse (Use Class B8) / vehicle hire depot (sui generis) to include enclosed parking with 1.8 metre high fence with entrance gates, washbay with spray screen enclosure and self bunded fuel.",
+      "applicant": "Mr Chris Dent",
+      "agent": "Mr Gary Swarbrick",
+      "decision": "approved",
+      "decisionDate": "2023-07-27",
+      "conditions": [
+        {
+          "number": "01",
+          "type": "other",
+          "summary": "Development to begin within 3 years of permission date",
+          "text": "The development hereby permitted shall be begun before the expiration of 3 years from the date of this permission.\nReason: To comply with the requirements of Section 91 of the Town and Country Planning Act 1990 (as amended)."
+        },
+        {
+          "number": "02",
+          "type": "other",
+          "summary": "Development to accord with approved plans and drawings",
+          "text": "The development hereby permitted shall be carried out in complete accordance with the approved plans and drawings listed in this decision notice, other than where those details are altered pursuant to the conditions of this planning permission.\n- RS/90154/100 - Site Location Plan (16/03/2023)\n- RS/90154/02 - Proposed Plans and Elevations (16/03/2023)\n- RS/90154/03 - Proposed Wash Bay (16/03/2023)\n- RS/90154/01 - Existing Plans and Elevations (16/03/2023)\nReason: For the avoidance of doubt and in the interests of proper planning."
+        },
+        {
+          "number": "03",
+          "type": "materials",
+          "summary": "Details of palisade fence to be submitted and approved prior to first occupation",
+          "text": "Prior to the first occupation of the development, details of the proposed palisade fence shall be erected along the site boundary detailed within drwg no. RS/90154/02 - Proposed Plans and Elevations (16/03/2023) shall be submitted to the Local Planning Authority for approval. The wall or fence shall be permanently retained and maintained.\nReason: To satisfactorily protect the character and appearance of the area and the residential amenities of nearby occupiers. To comply with Policies H8, D20 and D21 of the Hertsmere Local Plan 2003 and Policy CS20 of the Hertsmere Core Strategy 2008."
+        },
+        {
+          "number": "04",
+          "type": "transport",
+          "summary": "Parking, loading/unloading and turning space to be laid out prior to occupation",
+          "text": "The application site shall not be occupied until space has been laid out within the site in accordance with drwg no. RS/90154/02 - Proposed Plans and Elevations (16/03/2023) for cars to be parked and for the loading and unloading of vehicles and for vehicles to turn so that they may enter and leave the site in forward gear.\nReason: To ensure adequate off-street parking provision at all times so that the development does not prejudice the free flow of traffic or the conditions of general safety along the adjacent highway, or the amenities and convenience of existing local residents."
+        },
+        {
+          "number": "05",
+          "type": "noise",
+          "summary": "Operational plant noise limit – 10dB(LAeq) below background at nearest residential properties",
+          "text": "Noise from plant and equipment associated with the development shall be 10dB (LAeq) below the background noise level (LA90) at the nearest residential properties (5dB below the background noise level if evidence is provided which shows that no tonality is present).\nReason: To protect the character and amenities of neighbouring areas by ensuring that measures are implemented to avoid any noise nuisance. To comply with Policy D14 of the Hertsmere Local Plan 2003 and Policy CS15 of the Hertsmere Core Strategy 2008."
+        },
+        {
+          "number": "06",
+          "type": "noise",
+          "summary": "Doors and windows to remain closed during use of power tools or noisy works",
+          "text": "Whilst the use of power tools (drills, electric saws) or other noisy works (hammering) are taking place doors and windows to the building must remain closed.\nReason: To protect the character and amenities of neighbouring areas by ensuring that measures are implemented to avoid any noise nuisance. To comply with Policy D14 of the Hertsmere Local Plan 2003 and Policy CS15 of the Hertsmere Core Strategy 2008."
+        },
+        {
+          "number": "07",
+          "type": "noise",
+          "summary": "No fabrication/repair works using power tools or hammering outside the building",
+          "text": "No fabrication, repair work or other such works requiring power tools or hammering shall take place outside the building (other than the use of the wash bay for cleaning/valeting vehicles).\nReason: To protect the character and amenities of neighbouring areas by ensuring that measures are implemented to avoid any noise nuisance. To comply with Policy D14 of the Hertsmere Local Plan 2003 and Policy CS15 of the Hertsmere Core Strategy 2008."
+        },
+        {
+          "number": "08",
+          "type": "hours",
+          "summary": "Jet wash and noisy wash bay equipment restricted to 08:00–18:00 Mon–Sat",
+          "text": "The jet wash and other noisy equipment (vacuum cleaners etc.) within the wash bay shall only be used between the hours of 8am to 6pm Monday to Saturday.\nReason: To protect the character and amenities of neighbouring areas by ensuring that measures are implemented to avoid any noise nuisance. To comply with Policy D14 of the Hertsmere Local Plan 2003 and Policy CS15 of the Hertsmere Core Strategy 2008."
+        },
+        {
+          "number": "09",
+          "type": "other",
+          "summary": "Reporting and remediation of unexpected contamination found during development",
+          "text": "In the event that contamination is found at any time when carrying out the approved development that was not previously identified, it must be reported in writing within 7 days to the Local Planning Authority and once the Local Planning Authority has identified the part of the site affected by the unexpected contamination, development must be halted on that part of the site. Before development recommences on the part of the site where contamination is present a scheme outlining appropriate measures to prevent the pollution of the water environment, to safeguard the health of intended site users, and to ensure that the site will not qualify as contaminated land under Part 2A of the Environmental Protection Act 1990 in relation to the intended use of the land after remediation and approved conclusions shall be submitted to and approved in writing by the Local Planning Authority. Thereafter the development shall not be implemented otherwise than in accordance with the approved remediation scheme."
+        },
+        {
+          "number": "10",
+          "type": "other",
+          "summary": "Approved fencing to be permanently retained and maintained for life of development",
+          "text": "The proposed fencing detailed within drwg no. RS/90154/02 - Proposed Plans and Elevations (16/03/2023) shall be permanently retained and maintained for the life of the development.\nReason: To satisfactorily protect the character and appearance of the area and the residential amenities of nearby occupiers. To comply with Policies H8, D20 and D21 of the Hertsmere Local Plan 2003 and Policy CS20 of the Hertsmere Core Strategy 2008."
+        }
+      ],
+      "source": "claude-extraction",
+      "sourceUrl": "https://www6.hertsmere.gov.uk/online-applications/applicationDetails.do?keyVal=RRMD2OIFHIU00&activeTab=summary"
+    },
+    {
+      "id": "hertsmere-S6FDA2IFLAW00",
+      "reference": "23/1808/FUL",
+      "lpa": "Hertsmere Borough Council",
+      "region": "East of England",
+      "address": "55 Darkes Lane Potters Bar Hertfordshire EN6 1BJ",
+      "postcode": "",
+      "useClass": "Full Planning Permission",
+      "sector": "healthcare",
+      "description": "Change of Use from Retail - Barnet Hospital Charity (Use Class E) to a Nail Bar (Use Class E) and replacement shopfront (Amendments received on 21/02/2024 to reflect the retrospective nature).",
+      "applicant": "Mr James Doan",
+      "agent": "Mr Nicholas Mumby",
+      "decision": "approved",
+      "decisionDate": "2024-04-16",
+      "conditions": [
+        {
+          "number": "01",
+          "type": "other",
+          "summary": "Development to commence within 3 years of permission",
+          "text": "The development hereby permitted shall be begun before the expiration of 3 years from the date of this permission.\n\nReason: To comply with the requirements of Section 91 of the Town and Country Planning Act 1990 (as amended)."
+        },
+        {
+          "number": "02",
+          "type": "other",
+          "summary": "Development in accordance with approved plans",
+          "text": "The development hereby permitted shall be carried out in complete accordance with the approved plans and drawings listed in this decision notice, other than where those details are altered pursuant to the conditions of this planning permission: 2064/PL/01RET, 2064/PL/02RET, 2064/PL/03RET, 2064/PL/04RET, 2064/PL/05RET received 21/02/2024.\n\nReason: For the avoidance of doubt and in the interests of proper planning."
+        },
+        {
+          "number": "03",
+          "type": "hours",
+          "summary": "Permitted opening hours: Mon–Sat 10:00–19:00, Sundays closed",
+          "text": "The premises shall be open to the public Monday to Saturdays 10:00am to 19:00pm and Sundays Closed unless otherwise agreed in writing by the Local Planning Authority.\n\nReason: To satisfactorily protect the residential amenities of nearby occupiers. To comply with Policy SADM30 and SADM46 of the Site Allocations and Development Management Policies Plan 2016 and Policy CS22 of the Hertsmere Core Strategy 2013."
+        },
+        {
+          "number": "04",
+          "type": "noise",
+          "summary": "Plant and equipment noise limit: 10dB(LAeq) below background at nearest residential",
+          "text": "Noise from plant and equipment associated with the development shall be 10dB (LAeq) below the background noise level (LA90) at the nearest residential properties (5dB below the background noise level if evidence is provided which shows that no tonality is present).\n\nReason: To satisfactorily protect the residential amenities of nearby occupiers. To comply with Policy SADM30 and SADM46 of the Site Allocations and Development Management Policies Plan 2016 and Policy CS22 of the Hertsmere Core Strategy 2013."
+        },
+        {
+          "number": "05",
+          "type": "transport",
+          "summary": "External doors shall be inward opening only",
+          "text": "The development hereby permitted shall only have inward opening external doors.\n\nReason: To safeguard pedestrian and highway safety. To comply with SADM40 of the Site Allocations and Development Management Policies Plan."
+        }
+      ],
+      "source": "claude-extraction",
+      "sourceUrl": "https://www6.hertsmere.gov.uk/online-applications/applicationDetails.do?keyVal=S6FDA2IFLAW00&activeTab=summary"
+    },
+    {
+      "id": "hertsmere-S73D55IFLFP00",
+      "reference": "24/0044/FUL",
+      "lpa": "Hertsmere Borough Council",
+      "region": "East of England",
+      "address": "12 - 14 Station Close Potters Bar Hertfordshire",
+      "postcode": "",
+      "useClass": "Full Planning Permission",
+      "sector": "logistics",
+      "description": "Change of use from existing warehouse (Use Class B8) to light industrial/laboratory (Class E) to include provision for bicycle parking.",
+      "applicant": "Mr Sanjiv K Sawock",
+      "agent": "",
+      "decision": "approved",
+      "decisionDate": "2024-02-28",
+      "conditions": [
+        {
+          "number": "01",
+          "type": "other",
+          "summary": "Development to begin within 3 years of permission date",
+          "text": "The development hereby permitted shall be begun before the expiration of 3 years from the date of this permission.\n\nReason: To comply with the requirements of Section 91 of the Town and Country Planning Act 1990 (as amended)."
+        },
+        {
+          "number": "02",
+          "type": "other",
+          "summary": "Development to accord with approved plans and drawings",
+          "text": "The development hereby permitted shall be carried out in complete accordance with the following approved plans and drawings:\n- Location Plan (dated 11 Jan 2024);\n- 12-14 Ground floor existing warehouse (received 17 Jan 2024); and\n- 12-14 Proposed plan for E class use (received 17 Jan 2024).\n\nReason: For the avoidance of doubt and in the interests of proper planning."
+        },
+        {
+          "number": "03",
+          "type": "other",
+          "summary": "Use restricted to Class E(g) only",
+          "text": "The use of the building hereby permitted shall be limited to Class E(g) only and for no other purpose (including any other purpose in Class E of the Schedule to the Town and Country Planning (Use Classes) Order 1987 (as amended), or in any provision equivalent to that Class in any statutory instrument revoking and re-enacting that Order with or without modification).\n\nReason: To ensure that the use of the building does not undermine the character and quality of the designated Employment Area and its primary employment function, in accordance with the aims of Policies CS8 and CS10 of the Hertsmere Core Strategy 2013."
+        },
+        {
+          "number": "04",
+          "type": "transport",
+          "summary": "Cycle parking details to be submitted, approved and implemented (min. 10 spaces)",
+          "text": "BEFORE THE FIRST OCCUPATION OR USE OF THE DEVELOPMENT HEREBY PERMITTED full details of a scheme for the parking of at least 10 no. cycles (5 no. cycles to the north of the existing buildings and 5 no. cycles to the south of the existing buildings), including details of the design, level and siting of the proposed cycle racks, shall be submitted to and approved in writing by the Local Planning Authority. The approved scheme shall be fully implemented in accordance with the approved details before the development is first occupied (or brought into use) and thereafter retained for the sole use of cycle parking for the development hereby permitted.\n\nReason: To promote the use of sustainable transport methods in accordance with Policy CS25 of the Core Strategy 2013 and Policy SADM40 of the Site Allocations and Development Management Policies Plan 2016."
+        },
+        {
+          "number": "05",
+          "type": "noise",
+          "summary": "Plant/equipment noise to be 10dB(LAeq) below background at nearest residential properties",
+          "text": "Noise from plant and equipment associated with the development shall be 10dB (LAeq) below the background noise level (LA90) at the nearest residential properties (5dB below the background noise level if evidence is provided which shows that no tonality is present).\n\nReason: To satisfactorily protect the residential amenities of nearby occupiers. To comply with Policy SADM30 of the Site Allocations and Development Management Policies Plan 2016 and Policy CS22 of the Hertsmere Core Strategy 2013."
+        },
+        {
+          "number": "06",
+          "type": "hours",
+          "summary": "Operational hours: 08:00–18:00 Mon–Fri, 08:00–17:00 Sat, not Sundays/Bank Holidays",
+          "text": "The hours of operation of the building hereby permitted shall be between the hours of 08:00 and 18:00 Monday to Friday, 08:00 and 17:00 on Saturdays and at no time on Sundays and Bank Holidays.\n\nReason: To satisfactorily protect the residential amenities of nearby occupiers. To comply with Policy SADM30 of the Site Allocations and Development Management Policies Plan 2016 and Policy CS22 of the Hertsmere Core Strategy 2013."
+        }
+      ],
+      "source": "claude-extraction",
+      "sourceUrl": "https://www6.hertsmere.gov.uk/online-applications/applicationDetails.do?keyVal=S73D55IFLFP00&activeTab=summary"
+    },
+    {
+      "id": "hertsmere-S9X6TYIF07N00",
+      "reference": "24/0302/PD56O",
+      "lpa": "Hertsmere Borough Council",
+      "region": "East of England",
+      "address": "Spire Bushey Hospital Heathbourne Road Bushey Heath Bushey Hertfordshire WD23 1RD",
+      "postcode": "",
+      "useClass": "PD - Prior Approval 56 day - Others",
+      "sector": "healthcare",
+      "description": "Installation of 142 solar panels (maximum output 59.64 kWp) on the hospital flat roofs. Application to determine whether Prior Approval is required as per the Town and Country Planning (General Permitted Development) (England) Order 2015 (as amended) Schedule 2, Part 14, Class J.",
+      "applicant": "Spire Bushey Hospital",
+      "agent": "Mr David Taylor",
+      "decision": "approved",
+      "decisionDate": "2024-04-24",
+      "conditions": [
+        {
+          "number": "01",
+          "type": "other",
+          "summary": "Development in accordance with approved drawings",
+          "text": "The development hereby permitted shall be carried out in complete accordance with the approved plans and drawings listed in this decision notice: Site location plan, Roof plan as proposed (labelled Overview Plan), Dimensioning plan, Roof plan as proposed marked with dimensions: 1, Roof plan as proposed marked with dimensions: 2, Section drawing of a solar panel. Reason: For the avoidance of doubt and in the interests of proper planning. To comply with paragraph J.4(10)(b) of the Town and Country Planning (General Permitted Development) (England) Order 2015 (as amended)."
+        },
+        {
+          "number": "02",
+          "type": "other",
+          "summary": "Solar PV/thermal equipment sited to minimise visual impact on building and area",
+          "text": "The solar PV equipment or solar thermal equipment must, so far as practicable, be sited so as to minimise its effect on the external appearance of the building and the amenity of the area. Reason: To comply with the stipulations of Schedule 2, Part 14, Class J, regulation J.4(1)(a) of the Town and Country Planning (General Permitted Development) (England) Order 2015 (as amended)."
+        },
+        {
+          "number": "03",
+          "type": "other",
+          "summary": "Solar PV/thermal equipment to be removed when no longer needed",
+          "text": "The solar PV equipment or solar thermal equipment shall be removed as soon as reasonably practicable when no longer needed. Reason: To comply with the stipulations of Schedule 2, Part 14, Class J, regulation J.4(1)(b) of the Town and Country Planning (General Permitted Development) (England) Order 2015 (as amended)."
+        }
+      ],
+      "source": "claude-extraction",
+      "sourceUrl": "https://www6.hertsmere.gov.uk/online-applications/applicationDetails.do?keyVal=S9X6TYIF07N00&activeTab=summary"
+    },
+    {
+      "id": "hertsmere-SDZAYHIFFS900",
+      "reference": "24/0694/CLP",
+      "lpa": "Hertsmere Borough Council",
+      "region": "East of England",
+      "address": "Earls Farm Earls Lane South Mimms Potters Bar Hertfordshire EN6 3LT",
+      "postcode": "",
+      "useClass": "Certificate Proposed Lawful Use/Dev",
+      "sector": "healthcare",
+      "description": "Change of use to C2 to provide children's care home with 24/7 care staff Certificate of Lawful Development (Proposed)",
+      "applicant": "Nyadowa Homes Ltd",
+      "agent": "Malm Consulting",
+      "decision": "refused",
+      "decisionDate": "2024-07-19",
+      "conditions": [
+        {
+          "number": "01",
+          "type": "other",
+          "summary": "Refusal: material change of use not permissible under GPDO 2015 – express permission required",
+          "text": "The proposal would constitute a material change of use that would not be permissible under the General Permitted Development Order 2015 (as amended). Given this, express planning permission from the Local Planning Authority would be required for the proposed development, and this has not been obtained. As such, the proposed development is not lawful and therefore the application for a Certificate of Lawful Development (Proposed) is refused."
+        }
+      ],
+      "source": "claude-extraction",
+      "sourceUrl": "https://www6.hertsmere.gov.uk/online-applications/applicationDetails.do?keyVal=SDZAYHIFFS900&activeTab=summary"
+    },
+    {
+      "id": "hertsmere-SH4SYNIFGXH00",
+      "reference": "24/0967/FUL",
+      "lpa": "Hertsmere Borough Council",
+      "region": "East of England",
+      "address": "Warwick Place Warwick Road Borehamwood Hertfordshire",
+      "postcode": "",
+      "useClass": "Full Planning Permission",
+      "sector": "logistics",
+      "description": "Two storey front extension to allow for parking at ground floor and warehouse storage at first floor (additional plans dated 03.03.2025 and amended plan dated 12.06.2025).",
+      "applicant": "Alam",
+      "agent": "Mr Ahmad Alam",
+      "decision": "approved",
+      "decisionDate": "2025-12-17",
+      "conditions": [
+        {
+          "number": "01",
+          "type": "other",
+          "summary": "Development to begin within 3 years of permission date",
+          "text": "The development hereby permitted shall be begun before the expiration of 3 years from the date of this permission.\n\nReason: To comply with the requirements of Section 91 of the Town and Country Planning Act 1990 (as amended)."
+        },
+        {
+          "number": "02",
+          "type": "other",
+          "summary": "Development to accord with approved plans and drawings",
+          "text": "The development hereby permitted shall be carried out in complete accordance with the approved plans and drawings listed in this decision notice, other than where those details are altered pursuant to the conditions of this planning permission.\n\nReason: For the avoidance of doubt and in the interests of proper planning."
+        },
+        {
+          "number": "03",
+          "type": "materials",
+          "summary": "Pre-commencement submission and approval of external materials samples",
+          "text": "NO DEVELOPMENT SHALL COMMENCE until samples of the materials to be used in the construction of the external surfaces of the development hereby permitted (roofing covering, cladding system and doors) have been submitted to and approved in writing by the Local Planning Authority. Development shall be carried out in accordance with the approved details.\n\nReason: To ensure that the finished appearance of the development will enhance the character and visual amenities of the area. To comply with Policies SADM3 and SADM30 of the Site Allocations and Development Management Policies Plan (2016), Policy CS22 of the Hertsmere Core Strategy 2013 and the NPPF 2024."
+        }
+      ],
+      "source": "claude-extraction",
+      "sourceUrl": "https://www6.hertsmere.gov.uk/online-applications/applicationDetails.do?keyVal=SH4SYNIFGXH00&activeTab=summary"
+    },
+    {
+      "id": "hertsmere-SIVTHUIFHJG00",
+      "reference": "24/1101/OUTEI",
+      "lpa": "Hertsmere Borough Council",
+      "region": "East of England",
+      "address": "Land To The West Of Barnet Road, And East Of Baker Street, Potters Bar",
+      "postcode": "",
+      "useClass": "Outline with EIA application",
+      "sector": "healthcare",
+      "description": "Outline application (with all matters reserved except for means of access) for a new neighbourhood comprising up to 900 dwellings (Use Class C3) (including affordable housing), a neighbourhood centre and community facilities (Use Class E (a), Class E (e) and F2 (b), a primary school (Use Class F1 (a)), land for an up to 80-bed care home (Use Class C2), strategic and informal open space, landscaping, parking, associated infrastructure and works, with vehicle and pedestrian accesses from Baker Street and Barnet Road (Amended plans and additional documents received).",
+      "applicant": "",
+      "agent": "Mr Steven Brown",
+      "decision": "refused",
+      "decisionDate": "2025-12-05",
+      "conditions": [
+        {
+          "number": "01",
+          "type": "other",
+          "summary": "Refusal: inappropriate Green Belt development, no very special circumstances",
+          "text": "The proposed development is not considered to comply with any exception set out at paragraphs 154 or 155 of the NPPF 2024, and therefore is considered to be inappropriate development in the Green Belt. The benefits of the development including the provision of housing, including 50% affordable housing, compliance with the Golden Rules set out at paragraphs 156 and 157 of the NPPF, provision of land for a care home, provision of land for a neighbourhood centre and associated economic benefits, flood risk betterment, and provision of open space, sports pitches and associated community building, are not considered to clearly outweigh the harms arising. The harms identified include definitional harm to the Green Belt, harm to Green Belt openness, conflict with Green Belt purpose (a), landscape harm, failure of the Flood Risk Sequential Test, and the loss of Best and Most Versatile agricultural land. As such, there are no very special circumstances that would justify the grant of planning permission as set out at paragraph 143 of the NPPF. The scheme would fail to comply with the NPPF (2024), Policy SADM26 of the Site Allocations and Development Management Policies Plan (2016) and Policy CS13 of the Core Strategy (2013). Accordingly planning permission is refused."
+        }
+      ],
+      "source": "claude-extraction",
+      "sourceUrl": "https://www6.hertsmere.gov.uk/online-applications/applicationDetails.do?keyVal=SIVTHUIFHJG00&activeTab=summary"
+    },
+    {
+      "id": "hertsmere-SK4AAIIFI0H00",
+      "reference": "24/1211/OUT",
+      "lpa": "Hertsmere Borough Council",
+      "region": "East of England",
+      "address": "Land South Of Shenley Hill Radlett Hertfordshire",
+      "postcode": "",
+      "useClass": "Outline Application",
+      "sector": "education",
+      "description": "Outline permission (with all matters reserved except for means of access) for the erection of up to 195 new homes (50% affordable), safeguarded land for the expansion of Newberries Primary School and provision of a new medical centre, along with associated access, landscaping and parking.",
+      "applicant": "Fairfax Acquisitions Ltd",
+      "agent": "Ms Olivia Docker",
+      "decision": "refused",
+      "decisionDate": "2025-10-06",
+      "conditions": [
+        {
+          "number": "01",
+          "type": "other",
+          "summary": "Refusal: Inappropriate Green Belt development – no Very Special Circumstances",
+          "text": "The proposal is not considered to comply with any exception within Paragraph 154 or 155 of the NPPF 2024, and therefore is considered inappropriate development in the Green Belt. The benefits identified including the provision of housing, medical centre land and primary school land is not considered to outweigh the harm to the Green Belt and landscape harm identified. The proposal would therefore not provide Very Special Circumstances in accordance with Paragraph 143 of the NPPF (2024) and therefore the development is refused. The scheme would fail to comply with the NPPF (2024), SADM26 of the Site Allocations and Development Management Plan and CS13 of the Core Strategy."
+        }
+      ],
+      "source": "claude-extraction",
+      "sourceUrl": "https://www6.hertsmere.gov.uk/online-applications/applicationDetails.do?keyVal=SK4AAIIFI0H00&activeTab=summary"
+    },
+    {
+      "id": "hertsmere-SVHIHBIFMDJ00",
+      "reference": "25/0655/FUL",
+      "lpa": "Hertsmere Borough Council",
+      "region": "East of England",
+      "address": "Greenhill Residential Care Home Wagon Road Barnet Hertfordshire EN4 0PH",
+      "postcode": "",
+      "useClass": "Full Planning Permission",
+      "sector": "healthcare",
+      "description": "Erection of a two storey pitched roof extension on the south east wing of the existing care home to provide a second lift, with access ramp, and demolition of the existing rear conservatory/sun lounge to be replaced with a single storey orangery.",
+      "applicant": "Mr Lee Wood",
+      "agent": "Mr Marcus Lambert",
+      "decision": "approved",
+      "decisionDate": "2025-07-01",
+      "conditions": [
+        {
+          "number": "01",
+          "type": "other",
+          "summary": "Development to begin within 3 years of permission date",
+          "text": "The development hereby permitted shall be begun before the expiration of 3 years from the date of this permission.\n\nReason: To comply with the requirements of Section 91 of the Town and Country Planning Act 1990 (as amended)."
+        },
+        {
+          "number": "02",
+          "type": "other",
+          "summary": "Development to accord with approved plans and drawings",
+          "text": "The development hereby permitted shall be carried out in complete accordance with the approved plans and drawings listed in this decision notice, other than where those details are altered pursuant to the conditions of this planning permission.\n\no GH-BM-XX-XX-DR-A-0050a P02 - Proposed ground floor plan\no GH-BM-XX-XX-DR-A-0051 P01- Proposed first floor plan shown orangery roof layout plan\no GH-BM-XX-XX-DR-A-0052 P01- Existing ground floor plan\no GH-BM-XX-XX-DR-A-0053 P01 - Existing first floor plan\no GH-BM-XX-XX-DR-A-0054b P04 - Proposed elevations of orangery and lift\no GH-BM-XX-XX-DR-A-0055a P02- Proposed elevations of orangery and lift\no GH-BM-XX-XX-DR-A-0056 P02 - Existing elevation of care home\no GH-BM-XX-XX-DR-A-0057 P02 - Existing elevation of care home\no GH-BM-XX-XX-DR-A-0058b P03- Larger scale part elevations platform lift\no GH-BM-XX-XX-DR-A-0059a P02- Larger scale part elevations Orangery\no GH-BM-XX-XX-DR-A-0060 P02 - Site layout\no GH-BM-XX-XX-DR-A-0061a - Block plan / site location plan\no GH-BM-XX-XX-DR-A-0062 P01- Topographical laser survey\no GH-BM-XX-XX-DR-A-0063 P01 - Proposed roof layout plan\no GH-BM-XX-XX-DR-A-0064 P01 - Existing roof layout plan\n\nReason: For the avoidance of doubt and in the interests of proper planning."
+        },
+        {
+          "number": "03",
+          "type": "ecology",
+          "summary": "Arboricultural Method Statement and Tree Protection Plan to be implemented",
+          "text": "The development hereby approved shall be carried out in accordance with the Arboricultural Method Statement and Tree Protection Plan contained within the approved Arboricultural Report (Ref. NTA_R 0411-222- REV B). The protection measures shall be implemented prior to any below ground works and shall be retained for the entire period of the duration of any work at the site, in connection with the development hereby permitted.\n\nReason: To ensure that the trees and hedges on site are adequately protected, to safeguard the character and visual amenity of the area, in accordance with policies SP1 and CS12 of the Core Strategy 2013, policy SADM12 of the Site Allocations and Development Management Policies Plan 2016 and the NPPF."
+        },
+        {
+          "number": "04",
+          "type": "ecology",
+          "summary": "Replacement Atlas Cedar tree to be planted within 1 year of commencement",
+          "text": "Within 1 year of the commencement of the development hereby approved, the proposed Atlas Cedar tree shown on drawing D0411_0221 rev.B shall be planted per the details specified on that drawing.\n\nIf the tree is removed, uprooted, destroyed, or be caused to die, or become seriously damaged or defective, within five years of planting, it shall be replaced with a tree of the same species and size and in an agreed location, in the first available planting season following removal.\n\nReason: To mitigate for the impact on the protected trees within the site. In accordance with policies CS12 of the Core Strategy 2013 and SADM12 of the Site Allocations and Development Management Policies Plan 2016."
+        },
+        {
+          "number": "05",
+          "type": "materials",
+          "summary": "External materials to match existing building",
+          "text": "The materials to be used in the construction of the external surfaces of the development hereby permitted shall match those used in the existing building unless otherwise approved in writing by the Local Planning Authority.\n\nReason: To ensure that the finished appearance of the development will enhance the character and visual amenities of the area. To comply with Policy SADM30 of the Site Allocations and Development Management Policies Plan 2016, Policies SP1 and CS22 of the Hertsmere Core Strategy 2013 and the NPPF."
+        },
+        {
+          "number": "06",
+          "type": "noise",
+          "summary": "Operational plant noise limit – 10dB(LAeq) below background at nearest residential",
+          "text": "Noise from plant and equipment associated with the development shall be 10dB (LAeq) below the background noise level (LA90) at the nearest residential properties (5dB below the background noise level if evidence is provided which shows that no tonality is present).\n\nReason: To protect the amenity of residents in the locality as required by polices SP1 and CS16 of the Core Strategy 2013, policy SADM20 of the Site Allocations and Development Management Policies Plan 2016 and the NPPF."
+        },
+        {
+          "number": "07",
+          "type": "ecology",
+          "summary": "Bat protection mitigation measures to be implemented during construction",
+          "text": "During construction of the development hereby approved, the mitigation measures to protect bats set out in the PRA Letter Report-Rev01 (Ref. TT4209), dated 22nd April 2025 shall be implemented in full.\n\nReason: To allow the LPA to discharge its duties under the Conservation of Habitats and Species Regulations 2017 (as amended), the Wildlife & Countryside Act 1981 (as amended) and s40 of the NERC Act 2006 (Priority habitats & species) and to comply with policies SP1 and CS12 of the Core Strategy 2013 and SADM10 of Site Allocations and Development Management Policies Plan 2016."
+        }
+      ],
+      "source": "claude-extraction",
+      "sourceUrl": "https://www6.hertsmere.gov.uk/online-applications/applicationDetails.do?keyVal=SVHIHBIFMDJ00&activeTab=summary"
+    },
+    {
+      "id": "hertsmere-SWCU3YIFMSG00",
+      "reference": "25/0766/FUL",
+      "lpa": "Hertsmere Borough Council",
+      "region": "East of England",
+      "address": "8 - 9 Station Close Potters Bar Hertfordshire EN6 1TL",
+      "postcode": "",
+      "useClass": "Full Planning Permission",
+      "sector": "logistics",
+      "description": "Change of use from existing warehouse (Use Class B8) to provision of medical or health services (Use Class E(e)) and erection of cycle store.",
+      "applicant": "Oakside International Ltd",
+      "agent": "Mr Andrew Neil",
+      "decision": "refused",
+      "decisionDate": "2025-10-02",
+      "conditions": [
+        {
+          "number": "01",
+          "type": "other",
+          "summary": "Inappropriate use in designated employment area — contrary to Policies CS8, CS10 and SADM5",
+          "text": "The proposed development would result in the provision of an inappropriate use within a designated employment area and would undermine and be harmful to the function of the designated employment area. No employment land need assessment or similar has been submitted to justify the proposal. The development would thereby be contrary to Policies CS8 and CS10 of the Hertsmere Core Strategy 2013 and Policies SADM5 of the Site Allocations and Development Management Policies Plan 2016."
+        }
+      ],
+      "source": "claude-extraction",
+      "sourceUrl": "https://www6.hertsmere.gov.uk/online-applications/applicationDetails.do?keyVal=SWCU3YIFMSG00&activeTab=summary"
+    },
+    {
+      "id": "hertsmere-SZG2BEIFG9O00",
+      "reference": "25/1047/VOC",
+      "lpa": "Hertsmere Borough Council",
+      "region": "East of England",
+      "address": "Littledene Care Home 54 Bushey Grove Road Bushey Hertfordshire WD23 2JJ",
+      "postcode": "",
+      "useClass": "Variation of Condition",
+      "sector": "healthcare",
+      "description": "Variation of condition 1 to allow for broadening of the use of the existing care home property (Use Class C2) to include provision of care for children with learning difficulties following grant of planning permission 21/1287/VOC and TP/86/0038 (additional information received on 18.11.2025).",
+      "applicant": "SPV PPR Bushey 1 LLP",
+      "agent": "Carney Sweeney",
+      "decision": "approved",
+      "decisionDate": "2025-12-19",
+      "conditions": [
+        {
+          "number": "01",
+          "type": "other",
+          "summary": "Restriction of use to specified C2 care home purposes only",
+          "text": "The premises shall be used for the provision of residential accommodation and care to adults in need of care by reason of old age, disablement or dementia, and children in need of care by reason of learning difficulties, and for no other purpose within Class C2 of the Schedule to the Town and Country Planning (Use Classes) Order 1987, as amended, without the consent in writing of the Local Planning Authority."
+        },
+        {
+          "number": "02",
+          "type": "other",
+          "summary": "Maximum capacity limits for children's home and other C2 uses",
+          "text": "The premises shall operate at a maximum capacity of 8-bedrooms when in use as a children's home for children in need of care by reason of learning difficulties, with all other permitted Class C2 uses of the Schedule to the Town and Country Planning (Use Classes) Order 1987 as amended, may operate to a maximum capacity of 14-bedrooms, unless prior consent is obtained in writing from the Local Planning Authority."
+        },
+        {
+          "number": "03",
+          "type": "other",
+          "summary": "Compliance with submitted Operational Management Plan (2025)",
+          "text": "The development hereby permitted shall be carried out in strict accordance with the recommendations and arrangements, as set out within the submitted Operational Management Plan (dated 2025)."
+        },
+        {
+          "number": "04",
+          "type": "other",
+          "summary": "Development in accordance with approved plans and documents",
+          "text": "The development hereby permitted shall be carried out in complete accordance with the approved plans and drawings listed in this decision notice, other than where those details are altered pursuant to the conditions of this planning permission. Operational management plan (dated 2025); 01 - Location plan; Covering letter (dated 15th July 2025); Assessment of childrens care needs in hertfordshire (dated May 2025); Transport statement reference: itl201064-001c."
+        }
+      ],
+      "source": "claude-extraction",
+      "sourceUrl": "https://www6.hertsmere.gov.uk/online-applications/applicationDetails.do?keyVal=SZG2BEIFG9O00&activeTab=summary"
+    },
+    {
+      "id": "hertsmere-T1JG96IFH3500",
+      "reference": "25/1228/FUL",
+      "lpa": "Hertsmere Borough Council",
+      "region": "East of England",
+      "address": "The Manor Hotel Edgwarebury Lane Elstree Borehamwood Hertfordshire WD6 3RE",
+      "postcode": "",
+      "useClass": "Full Planning Permission",
+      "sector": "hotels",
+      "description": "Retention of single story flat roofed outbuilding with proposed additional landscaping and continued use as a Restaurant and use of existing Hotel parking (Retrospective).",
+      "applicant": "Mr Salim Hussain",
+      "agent": "Mr Robert Young",
+      "decision": "refused",
+      "decisionDate": "2025-11-28",
+      "conditions": [
+        {
+          "number": "01",
+          "type": "other",
+          "summary": "Inappropriate development in Green Belt – harmful to openness",
+          "text": "The proposal constitutes inappropriate development in the Green Belt due to the scale of the building over and above the size of the previous garage block and as such, is considered to materially harm the openness of the Green Belt. There are no very special circumstances which outweigh this harm and therefore, the proposal is contrary to the NPPF 2024, Policy CS13 of the Hertsmere Core Strategy 2013 and SADM26 of the Site Allocations and Development Management Policies Plan 2016."
+        }
+      ],
+      "source": "claude-extraction",
+      "sourceUrl": "https://www6.hertsmere.gov.uk/online-applications/applicationDetails.do?keyVal=T1JG96IFH3500&activeTab=summary"
+    },
+    {
+      "id": "hertsmere-T4IUVSIFI9V00",
+      "reference": "25/1523/FUL",
+      "lpa": "Hertsmere Borough Council",
+      "region": "East of England",
+      "address": "Dayson House Warwick Road Borehamwood Hertfordshire WD6 1US",
+      "postcode": "",
+      "useClass": "Full Planning Permission",
+      "sector": "logistics",
+      "description": "Raising of the roof over the existing warehouse, construction of a mezzanine floor, and installation of external cladding to the elevations of the existing building.",
+      "applicant": "Ms Sonal Haria",
+      "agent": "Mr Dale Venn",
+      "decision": "approved",
+      "decisionDate": "2026-02-02",
+      "conditions": [
+        {
+          "number": "01",
+          "type": "other",
+          "summary": "Development to commence within 3 years of permission date",
+          "text": "The development hereby permitted shall be begun before the expiration of 3 years from the date of this permission.\nReason: To comply with the requirements of Section 91 of the Town and Country Planning Act 1990 (as amended)."
+        },
+        {
+          "number": "02",
+          "type": "other",
+          "summary": "Development to accord with approved plans and drawings",
+          "text": "The development hereby permitted shall be carried out in complete accordance with the approved plans and drawings listed in this decision notice, other than where those details are altered pursuant to the conditions of this planning permission:\nLocation plan: scaled 1:1250\nExisting plans/elevations: 6021-1; 6021-2; 6021-3\nProposed plans: 6021-5\n(Received on 22.10.2025)\nProposed plans/elevations: 6021-4 Rev B; 6021-6 Rev C\n(Received on 21.01.2026)\nTransport Statement Revision A (dated January 2026)\n(Received on 27.01.2026).\nReason: For the avoidance of doubt and in the interests of proper planning."
+        },
+        {
+          "number": "03",
+          "type": "transport",
+          "summary": "Bicycle parking to be provided prior to first occupation and retained",
+          "text": "Prior to the first occupation of the development hereby approved, the bicycle parking facilities shall be provided in accordance with the approved plans and shall thereafter be retained and maintained for the lifetime of the development.\nReason: To ensure a choice of sustainable transport options are provided for future occupiers. In accordance with Policies SP1, CS22, CS25, CS26 of the Hertsmere Local Plan Core Strategy (2013), Policies SADM30 and SADM40 of the Site Allocations and Development Management Policies Plan (2016) and the National Planning Policy Framework."
+        },
+        {
+          "number": "04",
+          "type": "transport",
+          "summary": "Car parking spaces to be provided prior to first occupation and retained",
+          "text": "Prior to the first occupation of the development hereby approved, the car parking spaces shall be provided in accordance with the approved plans and shall thereafter be retained and maintained for the lifetime of the development.\nReason: To accord with Policies CS22, CS24, CS25 of the Hertsmere Local Plan Core Strategy (2013), Policy SADM40 of the Site Allocations and Development Management Policies Plan (2016) and the National Planning Policy Framework."
+        }
+      ],
+      "source": "claude-extraction",
+      "sourceUrl": "https://www6.hertsmere.gov.uk/online-applications/applicationDetails.do?keyVal=T4IUVSIFI9V00&activeTab=summary"
+    }
+  ]
+}
