@@ -81,7 +81,7 @@ export function BuiltCardVisual({ kind }: { kind: BuiltKind }) {
             <line x1="20" y1="60" x2="300" y2="60" stroke={c.primary} strokeOpacity="0.5" strokeWidth="2" />
             {/* Milestone dots */}
             {[
-              { x: 50, label: "2025", filled: true },
+              { x: 50, label: "2026", filled: true },
               { x: 130, label: "2027", filled: true },
               { x: 210, label: "2030", filled: false },
               { x: 290, label: "2035", filled: false },

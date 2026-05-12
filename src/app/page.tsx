@@ -367,7 +367,7 @@ export default function HomePage() {
               {
                 kind: "knowledge" as BuiltKind,
                 eyebrow: "Knowledge",
-                headline: "Build a deeper understanding of the issues.",
+                headline: "Build a deeper understanding of the challenges.",
                 detail:
                   "Plain-English explainers on the policies, standards and ideas shaping the construction industry.",
                 href: "/knowledge",
