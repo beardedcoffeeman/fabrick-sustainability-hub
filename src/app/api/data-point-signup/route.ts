@@ -1,12 +1,13 @@
 import { NextRequest, NextResponse } from "next/server";
 import { createHash } from "node:crypto";
+import { Resend } from "resend";
 import { sql } from "@/lib/db";
 
 export const runtime = "nodejs";
 
-// RFC 5322 is brutal; this matches the same shape the browser <input type=email>
-// already enforces. Good enough to reject obvious garbage.
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+const NOTIFY_TO = "tom.colgan@fabrick.agency";
+const NOTIFY_FROM = "onboarding@resend.dev"; // Resend free-tier sandbox sender
 
 interface SignupPayload {
   email?: unknown;
@@ -15,8 +16,58 @@ interface SignupPayload {
   company?: unknown;
 }
 
+interface InsertResult {
+  inserted: boolean; // false if email was already on the list
+  totalSubscribers: number;
+}
+
 function hashIp(ip: string): string {
   return createHash("sha256").update(ip).digest("hex").slice(0, 32);
+}
+
+/**
+ * Notify Tom that someone signed up. Fire-and-don't-wait — a Resend hiccup
+ * must not break the signup form. Errors are logged for diagnosis.
+ */
+async function notifySignup(opts: {
+  email: string;
+  source: string;
+  userAgent: string | null;
+  ipHash: string | null;
+  totalSubscribers: number;
+}) {
+  const key = process.env.RESEND_API_KEY;
+  if (!key) {
+    console.warn("RESEND_API_KEY not set — skipping notification");
+    return;
+  }
+  try {
+    const resend = new Resend(key);
+    const { email, source, userAgent, ipHash, totalSubscribers } = opts;
+    const sub = `New Data Point subscriber: ${email}`;
+    const lines = [
+      `<p><strong>${email}</strong> just signed up for The Data Point.</p>`,
+      "<table style=\"border-collapse:collapse;font-family:sans-serif;font-size:13px\">",
+      `<tr><td style=\"padding:4px 12px 4px 0;color:#666\">Source</td><td><code>${source}</code></td></tr>`,
+      `<tr><td style=\"padding:4px 12px 4px 0;color:#666\">User-Agent</td><td><code>${userAgent ?? "(none)"}</code></td></tr>`,
+      `<tr><td style=\"padding:4px 12px 4px 0;color:#666\">IP hash</td><td><code>${ipHash ?? "(none)"}</code></td></tr>`,
+      `<tr><td style=\"padding:4px 12px 4px 0;color:#666\">Total subscribers</td><td><strong>${totalSubscribers.toLocaleString()}</strong></td></tr>`,
+      `<tr><td style=\"padding:4px 12px 4px 0;color:#666\">When</td><td>${new Date().toUTCString()}</td></tr>`,
+      "</table>",
+      "<p style=\"color:#888;font-size:11px;margin-top:24px\">Sent from Pulse by Fabrick — pulse.fabrick.agency</p>",
+    ];
+    const result = await resend.emails.send({
+      from: `Pulse Signups <${NOTIFY_FROM}>`,
+      to: NOTIFY_TO,
+      subject: sub,
+      html: lines.join("\n"),
+    });
+    if (result.error) {
+      console.error("Resend send error:", result.error);
+    }
+  } catch (err) {
+    console.error("notifySignup threw:", err);
+  }
 }
 
 export async function POST(req: NextRequest) {
@@ -52,16 +103,25 @@ export async function POST(req: NextRequest) {
     null;
   const ipHash = ip ? hashIp(ip) : null;
 
+  let result: InsertResult;
   try {
     // ON CONFLICT keeps the endpoint idempotent: re-submitting the same email
-    // is treated as success without leaking whether the address was already
-    // on the list.
-    await sql`
+    // is treated as success without leaking whether it was already on the
+    // list. RETURNING tells us whether this was a real new row, which lets
+    // us suppress the notification for duplicate signups.
+    const rows = (await sql`
       INSERT INTO data_point_subscribers (email, source, user_agent, ip_hash)
       VALUES (${rawEmail}, ${source}, ${userAgent}, ${ipHash})
       ON CONFLICT (email) DO NOTHING
-    `;
-    return NextResponse.json({ ok: true });
+      RETURNING id
+    `) as unknown as Array<{ id: number }>;
+    const countRows = (await sql`
+      SELECT COUNT(*)::int AS n FROM data_point_subscribers
+    `) as unknown as Array<{ n: number }>;
+    result = {
+      inserted: rows.length > 0,
+      totalSubscribers: countRows[0]?.n ?? 0,
+    };
   } catch (err) {
     console.error("data-point-signup insert failed:", err);
     return NextResponse.json(
@@ -69,4 +129,20 @@ export async function POST(req: NextRequest) {
       { status: 500 }
     );
   }
+
+  // Best-effort notification — never blocks the user-facing response.
+  if (result.inserted) {
+    // Don't await — let the response return fast and let Resend run in the
+    // background. (Vercel keeps the function alive long enough for fetches
+    // initiated before the response is sent.)
+    notifySignup({
+      email: rawEmail,
+      source,
+      userAgent,
+      ipHash,
+      totalSubscribers: result.totalSubscribers,
+    });
+  }
+
+  return NextResponse.json({ ok: true });
 }
