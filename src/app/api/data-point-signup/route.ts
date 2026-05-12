@@ -6,7 +6,11 @@ import { sql } from "@/lib/db";
 export const runtime = "nodejs";
 
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-const NOTIFY_TO = "tom.colgan@fabrick.agency";
+// Resend free tier only delivers to the email that owns the Resend account,
+// which is tom@fabrick.agency (not tom.colgan@). Once fabrick.agency is
+// verified as a sending domain in Resend, both NOTIFY_TO and NOTIFY_FROM
+// can be tightened up (signups@fabrick.agency → tom.colgan@fabrick.agency).
+const NOTIFY_TO = "tom@fabrick.agency";
 const NOTIFY_FROM = "onboarding@resend.dev"; // Resend free-tier sandbox sender
 
 interface SignupPayload {
@@ -130,12 +134,12 @@ export async function POST(req: NextRequest) {
     );
   }
 
-  // Best-effort notification — never blocks the user-facing response.
+  // Best-effort notification. We DO await it because Vercel serverless can
+  // kill the function as soon as the response is sent — fire-and-forget
+  // sends were getting clipped in production. notifySignup catches its own
+  // errors so a Resend hiccup still returns 200 to the user.
   if (result.inserted) {
-    // Don't await — let the response return fast and let Resend run in the
-    // background. (Vercel keeps the function alive long enough for fetches
-    // initiated before the response is sent.)
-    notifySignup({
+    await notifySignup({
       email: rawEmail,
       source,
       userAgent,
