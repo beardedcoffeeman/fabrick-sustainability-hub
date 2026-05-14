@@ -10,7 +10,8 @@
     "ingest:planning": "tsx scripts/ingest-planning-data.ts",
     "extract:pdfs": "tsx scripts/extract-pdfs.ts",
     "scrape:lpa": "tsx scripts/scrape-lpa.ts",
-    "fetch:docs": "tsx scripts/fetch-docs.ts"
+    "fetch:docs": "tsx scripts/fetch-docs.ts",
+    "migrate:director": "tsx scripts/migrate-master-task-list.ts"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.95.2",
@@ -23,6 +24,8 @@
     "html2canvas": "^1.4.1",
     "lucide-react": "^0.577.0",
     "next": "16.1.6",
+    "next-auth": "5.0.0-beta.25",
+    "swr": "^2.3.3",
     "pdf-parse": "^2.4.5",
     "playwright": "^1.59.1",
     "react": "19.2.3",
