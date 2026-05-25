@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-18T10:03:59.899Z",
+  "generatedAt": "2026-05-25T10:07:11.319Z",
   "source": "MHCLG Get Energy Performance of Buildings register (api.get-energy-performance-data.communities.gov.uk)",
   "notes": [
     "England + Wales only. Scotland and Northern Ireland use separate registers.",
@@ -8,21 +8,40 @@
     "Below-C share covers bands D, E, F, G. Band D is currently MEES-compliant; the 2027/2030 proposals bring D into scope."
   ],
   "national": {
-    "total": 2699,
-    "belowCPct": 52.79733234531307,
-    "urgentPct": 14.597999258984808,
-    "compliantPct": 47.20266765468692,
+    "total": 2709,
+    "belowCPct": 52.93466223698782,
+    "urgentPct": 14.544112218530822,
+    "compliantPct": 47.06533776301218,
     "bandCounts": {
       "A": 8,
       "B": 264,
-      "C": 1002,
-      "D": 1031,
+      "C": 1003,
+      "D": 1040,
       "E": 332,
       "F": 46,
       "G": 16
     }
   },
   "cities": [
+    {
+      "city": "Bath",
+      "region": "South West",
+      "total": 10,
+      "bandCounts": {
+        "A": 0,
+        "B": 0,
+        "C": 1,
+        "D": 9,
+        "E": 0,
+        "F": 0,
+        "G": 0
+      },
+      "belowCPct": 90,
+      "urgentPct": 0,
+      "compliantPct": 10,
+      "postcodesSampled": 10,
+      "postcodesWithData": 1
+    },
     {
       "city": "Swansea",
       "region": "Wales",
@@ -440,25 +459,6 @@
       "compliantPct": 83.13725490196079,
       "postcodesSampled": 10,
       "postcodesWithData": 8
-    },
-    {
-      "city": "Bath",
-      "region": "South West",
-      "total": 0,
-      "bandCounts": {
-        "A": 0,
-        "B": 0,
-        "C": 0,
-        "D": 0,
-        "E": 0,
-        "F": 0,
-        "G": 0
-      },
-      "belowCPct": 0,
-      "urgentPct": 0,
-      "compliantPct": 0,
-      "postcodesSampled": 10,
-      "postcodesWithData": 0
     },
     {
       "city": "Bournemouth",
