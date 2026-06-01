@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-25T10:07:11.319Z",
+  "generatedAt": "2026-06-01T11:33:11.008Z",
   "source": "MHCLG Get Energy Performance of Buildings register (api.get-energy-performance-data.communities.gov.uk)",
   "notes": [
     "England + Wales only. Scotland and Northern Ireland use separate registers.",
@@ -8,40 +8,21 @@
     "Below-C share covers bands D, E, F, G. Band D is currently MEES-compliant; the 2027/2030 proposals bring D into scope."
   ],
   "national": {
-    "total": 2709,
-    "belowCPct": 52.93466223698782,
-    "urgentPct": 14.544112218530822,
-    "compliantPct": 47.06533776301218,
+    "total": 2791,
+    "belowCPct": 53.06341812970261,
+    "urgentPct": 14.618416338230025,
+    "compliantPct": 46.93658187029738,
     "bandCounts": {
-      "A": 8,
-      "B": 264,
-      "C": 1003,
-      "D": 1040,
-      "E": 332,
-      "F": 46,
+      "A": 9,
+      "B": 268,
+      "C": 1033,
+      "D": 1073,
+      "E": 343,
+      "F": 49,
       "G": 16
     }
   },
   "cities": [
-    {
-      "city": "Bath",
-      "region": "South West",
-      "total": 10,
-      "bandCounts": {
-        "A": 0,
-        "B": 0,
-        "C": 1,
-        "D": 9,
-        "E": 0,
-        "F": 0,
-        "G": 0
-      },
-      "belowCPct": 90,
-      "urgentPct": 0,
-      "compliantPct": 10,
-      "postcodesSampled": 10,
-      "postcodesWithData": 1
-    },
     {
       "city": "Swansea",
       "region": "Wales",
@@ -252,6 +233,25 @@
       "postcodesWithData": 9
     },
     {
+      "city": "Bath",
+      "region": "South West",
+      "total": 92,
+      "bandCounts": {
+        "A": 1,
+        "B": 5,
+        "C": 30,
+        "D": 42,
+        "E": 11,
+        "F": 3,
+        "G": 0
+      },
+      "belowCPct": 60.86956521739131,
+      "urgentPct": 15.217391304347828,
+      "compliantPct": 39.130434782608695,
+      "postcodesSampled": 10,
+      "postcodesWithData": 7
+    },
+    {
       "city": "Leeds",
       "region": "Yorkshire",
       "total": 127,
@@ -352,8 +352,8 @@
       "total": 95,
       "bandCounts": {
         "A": 6,
-        "B": 13,
-        "C": 37,
+        "B": 12,
+        "C": 38,
         "D": 28,
         "E": 11,
         "F": 0,
