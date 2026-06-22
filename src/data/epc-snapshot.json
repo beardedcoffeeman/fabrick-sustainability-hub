@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-15T12:10:50.426Z",
+  "generatedAt": "2026-06-22T11:52:11.300Z",
   "source": "MHCLG Get Energy Performance of Buildings register (api.get-energy-performance-data.communities.gov.uk)",
   "notes": [
     "England + Wales only. Scotland and Northern Ireland use separate registers.",
@@ -8,40 +8,21 @@
     "Below-C share covers bands D, E, F, G. Band D is currently MEES-compliant; the 2027/2030 proposals bring D into scope."
   ],
   "national": {
-    "total": 2647,
-    "belowCPct": 55.005666792595385,
-    "urgentPct": 15.035889686437475,
-    "compliantPct": 44.99433320740461,
+    "total": 3062,
+    "belowCPct": 52.7759634225996,
+    "urgentPct": 14.500326583932072,
+    "compliantPct": 47.22403657740039,
     "bandCounts": {
-      "A": 4,
-      "B": 266,
-      "C": 921,
-      "D": 1058,
-      "E": 331,
-      "F": 48,
+      "A": 9,
+      "B": 320,
+      "C": 1117,
+      "D": 1172,
+      "E": 370,
+      "F": 55,
       "G": 19
     }
   },
   "cities": [
-    {
-      "city": "Hull",
-      "region": "Yorkshire",
-      "total": 12,
-      "bandCounts": {
-        "A": 0,
-        "B": 0,
-        "C": 1,
-        "D": 8,
-        "E": 3,
-        "F": 0,
-        "G": 0
-      },
-      "belowCPct": 91.66666666666666,
-      "urgentPct": 25,
-      "compliantPct": 8.333333333333332,
-      "postcodesSampled": 10,
-      "postcodesWithData": 1
-    },
     {
       "city": "Swansea",
       "region": "Wales",
@@ -81,6 +62,25 @@
       "postcodesWithData": 8
     },
     {
+      "city": "Norwich",
+      "region": "East of England",
+      "total": 63,
+      "bandCounts": {
+        "A": 0,
+        "B": 1,
+        "C": 12,
+        "D": 33,
+        "E": 16,
+        "F": 1,
+        "G": 0
+      },
+      "belowCPct": 79.36507936507937,
+      "urgentPct": 26.984126984126984,
+      "compliantPct": 20.634920634920633,
+      "postcodesSampled": 10,
+      "postcodesWithData": 7
+    },
+    {
       "city": "Reading",
       "region": "South East",
       "total": 99,
@@ -100,23 +100,23 @@
       "postcodesWithData": 7
     },
     {
-      "city": "Stoke-on-Trent",
-      "region": "West Midlands",
-      "total": 34,
+      "city": "Plymouth",
+      "region": "South West",
+      "total": 18,
       "bandCounts": {
         "A": 0,
-        "B": 1,
-        "C": 7,
-        "D": 19,
-        "E": 6,
+        "B": 0,
+        "C": 4,
+        "D": 11,
+        "E": 2,
         "F": 1,
         "G": 0
       },
-      "belowCPct": 76.47058823529412,
-      "urgentPct": 20.588235294117645,
-      "compliantPct": 23.52941176470588,
+      "belowCPct": 77.77777777777779,
+      "urgentPct": 16.666666666666664,
+      "compliantPct": 22.22222222222222,
       "postcodesSampled": 10,
-      "postcodesWithData": 3
+      "postcodesWithData": 2
     },
     {
       "city": "Coventry",
@@ -197,19 +197,19 @@
     {
       "city": "Cardiff",
       "region": "Wales",
-      "total": 106,
+      "total": 107,
       "bandCounts": {
         "A": 0,
         "B": 4,
         "C": 30,
-        "D": 51,
+        "D": 52,
         "E": 16,
         "F": 4,
         "G": 1
       },
-      "belowCPct": 67.9245283018868,
-      "urgentPct": 19.81132075471698,
-      "compliantPct": 32.075471698113205,
+      "belowCPct": 68.22429906542055,
+      "urgentPct": 19.626168224299064,
+      "compliantPct": 31.775700934579437,
       "postcodesSampled": 10,
       "postcodesWithData": 8
     },
@@ -252,6 +252,25 @@
       "postcodesWithData": 9
     },
     {
+      "city": "Bath",
+      "region": "South West",
+      "total": 92,
+      "bandCounts": {
+        "A": 1,
+        "B": 5,
+        "C": 30,
+        "D": 42,
+        "E": 11,
+        "F": 3,
+        "G": 0
+      },
+      "belowCPct": 60.86956521739131,
+      "urgentPct": 15.217391304347828,
+      "compliantPct": 39.130434782608695,
+      "postcodesSampled": 10,
+      "postcodesWithData": 7
+    },
+    {
       "city": "Leeds",
       "region": "Yorkshire",
       "total": 127,
@@ -269,25 +288,6 @@
       "compliantPct": 41.732283464566926,
       "postcodesSampled": 10,
       "postcodesWithData": 8
-    },
-    {
-      "city": "Preston",
-      "region": "North West",
-      "total": 74,
-      "bandCounts": {
-        "A": 2,
-        "B": 11,
-        "C": 20,
-        "D": 35,
-        "E": 4,
-        "F": 2,
-        "G": 0
-      },
-      "belowCPct": 55.4054054054054,
-      "urgentPct": 8.108108108108109,
-      "compliantPct": 44.5945945945946,
-      "postcodesSampled": 10,
-      "postcodesWithData": 3
     },
     {
       "city": "Birmingham",
@@ -334,15 +334,15 @@
       "bandCounts": {
         "A": 0,
         "B": 6,
-        "C": 72,
-        "D": 60,
+        "C": 73,
+        "D": 59,
         "E": 16,
         "F": 3,
         "G": 0
       },
-      "belowCPct": 50.318471337579616,
+      "belowCPct": 49.681528662420384,
       "urgentPct": 12.101910828025478,
-      "compliantPct": 49.681528662420384,
+      "compliantPct": 50.318471337579616,
       "postcodesSampled": 12,
       "postcodesWithData": 8
     },
@@ -366,6 +366,25 @@
       "postcodesWithData": 8
     },
     {
+      "city": "Cambridge",
+      "region": "East of England",
+      "total": 95,
+      "bandCounts": {
+        "A": 6,
+        "B": 12,
+        "C": 38,
+        "D": 28,
+        "E": 11,
+        "F": 0,
+        "G": 0
+      },
+      "belowCPct": 41.05263157894737,
+      "urgentPct": 11.578947368421053,
+      "compliantPct": 58.94736842105262,
+      "postcodesSampled": 10,
+      "postcodesWithData": 6
+    },
+    {
       "city": "Newcastle upon Tyne",
       "region": "North East",
       "total": 126,
@@ -383,6 +402,25 @@
       "compliantPct": 61.904761904761905,
       "postcodesSampled": 10,
       "postcodesWithData": 8
+    },
+    {
+      "city": "Bournemouth",
+      "region": "South West",
+      "total": 149,
+      "bandCounts": {
+        "A": 0,
+        "B": 39,
+        "C": 54,
+        "D": 45,
+        "E": 7,
+        "F": 4,
+        "G": 0
+      },
+      "belowCPct": 37.58389261744966,
+      "urgentPct": 7.38255033557047,
+      "compliantPct": 62.41610738255034,
+      "postcodesSampled": 10,
+      "postcodesWithData": 6
     },
     {
       "city": "Brighton & Hove",
@@ -425,21 +463,21 @@
     {
       "city": "Oxford",
       "region": "South East",
-      "total": 27,
+      "total": 144,
       "bandCounts": {
         "A": 0,
-        "B": 0,
-        "C": 22,
-        "D": 4,
-        "E": 1,
-        "F": 0,
+        "B": 9,
+        "C": 107,
+        "D": 21,
+        "E": 6,
+        "F": 1,
         "G": 0
       },
-      "belowCPct": 18.51851851851852,
-      "urgentPct": 3.7037037037037033,
-      "compliantPct": 81.48148148148148,
+      "belowCPct": 19.444444444444446,
+      "urgentPct": 4.861111111111112,
+      "compliantPct": 80.55555555555556,
       "postcodesSampled": 10,
-      "postcodesWithData": 2
+      "postcodesWithData": 6
     },
     {
       "city": "London (Outer)",
@@ -461,103 +499,46 @@
       "postcodesWithData": 8
     },
     {
-      "city": "Cambridge",
-      "region": "East of England",
-      "total": 0,
-      "bandCounts": {
-        "A": 0,
-        "B": 0,
-        "C": 0,
-        "D": 0,
-        "E": 0,
-        "F": 0,
-        "G": 0
-      },
-      "belowCPct": 0,
-      "urgentPct": 0,
-      "compliantPct": 0,
-      "postcodesSampled": 10,
-      "postcodesWithData": 0
-    },
-    {
-      "city": "Norwich",
-      "region": "East of England",
-      "total": 0,
-      "bandCounts": {
-        "A": 0,
-        "B": 0,
-        "C": 0,
-        "D": 0,
-        "E": 0,
-        "F": 0,
-        "G": 0
-      },
-      "belowCPct": 0,
-      "urgentPct": 0,
-      "compliantPct": 0,
-      "postcodesSampled": 10,
-      "postcodesWithData": 0
-    },
-    {
-      "city": "Plymouth",
-      "region": "South West",
-      "total": 0,
-      "bandCounts": {
-        "A": 0,
-        "B": 0,
-        "C": 0,
-        "D": 0,
-        "E": 0,
-        "F": 0,
-        "G": 0
-      },
-      "belowCPct": 0,
-      "urgentPct": 0,
-      "compliantPct": 0,
-      "postcodesSampled": 10,
-      "postcodesWithData": 0
-    },
-    {
-      "city": "Bath",
-      "region": "South West",
-      "total": 0,
-      "bandCounts": {
-        "A": 0,
-        "B": 0,
-        "C": 0,
-        "D": 0,
-        "E": 0,
-        "F": 0,
-        "G": 0
-      },
-      "belowCPct": 0,
-      "urgentPct": 0,
-      "compliantPct": 0,
-      "postcodesSampled": 10,
-      "postcodesWithData": 0
-    },
-    {
-      "city": "Bournemouth",
-      "region": "South West",
-      "total": 0,
-      "bandCounts": {
-        "A": 0,
-        "B": 0,
-        "C": 0,
-        "D": 0,
-        "E": 0,
-        "F": 0,
-        "G": 0
-      },
-      "belowCPct": 0,
-      "urgentPct": 0,
-      "compliantPct": 0,
-      "postcodesSampled": 10,
-      "postcodesWithData": 0
-    },
-    {
       "city": "York",
       "region": "Yorkshire",
+      "total": 0,
+      "bandCounts": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "D": 0,
+        "E": 0,
+        "F": 0,
+        "G": 0
+      },
+      "belowCPct": 0,
+      "urgentPct": 0,
+      "compliantPct": 0,
+      "postcodesSampled": 10,
+      "postcodesWithData": 0
+    },
+    {
+      "city": "Hull",
+      "region": "Yorkshire",
+      "total": 0,
+      "bandCounts": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "D": 0,
+        "E": 0,
+        "F": 0,
+        "G": 0
+      },
+      "belowCPct": 0,
+      "urgentPct": 0,
+      "compliantPct": 0,
+      "postcodesSampled": 10,
+      "postcodesWithData": 0
+    },
+    {
+      "city": "Stoke-on-Trent",
+      "region": "West Midlands",
       "total": 0,
       "bandCounts": {
         "A": 0,
@@ -615,6 +596,25 @@
     {
       "city": "Milton Keynes",
       "region": "South East",
+      "total": 0,
+      "bandCounts": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "D": 0,
+        "E": 0,
+        "F": 0,
+        "G": 0
+      },
+      "belowCPct": 0,
+      "urgentPct": 0,
+      "compliantPct": 0,
+      "postcodesSampled": 10,
+      "postcodesWithData": 0
+    },
+    {
+      "city": "Preston",
+      "region": "North West",
       "total": 0,
       "bandCounts": {
         "A": 0,
