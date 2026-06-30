@@ -3,6 +3,7 @@
 import { useMemo, useState } from "react";
 import Link from "next/link";
 import { ArrowLeft, X, Building2, Target, MapPin, ListChecks } from "lucide-react";
+import { ExportButton } from "@/components/ExportButton";
 import {
   BarChart,
   Bar,
@@ -199,7 +200,7 @@ export default function PlanningExplorerPage() {
         </div>
       </section>
 
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 flex flex-wrap items-center justify-between gap-3">
         <div className="inline-flex rounded-full border border-navy/10 bg-white p-1 shadow-sm">
           {(["trends", "conditions"] as Tab[]).map((t) => (
             <button
@@ -215,9 +216,18 @@ export default function PlanningExplorerPage() {
             </button>
           ))}
         </div>
+        <ExportButton
+          targetId="planning-explorer-capture"
+          filename={`pulse-planning-explorer-${tab}`}
+          source={`planning-explorer:${tab}`}
+          label="Download view"
+        />
       </div>
 
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-8 pb-12">
+      <div
+        id="planning-explorer-capture"
+        className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-8 pb-12"
+      >
         {tab === "trends" ? <TrendsTab /> : <ConditionsTab />}
       </div>
 

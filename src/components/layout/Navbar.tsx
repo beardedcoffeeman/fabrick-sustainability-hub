@@ -18,6 +18,7 @@ import {
   Check,
   BookOpen,
   Brain,
+  Telescope,
 } from "lucide-react";
 import { FabrickLogo } from "./FabrickLogo";
 
@@ -46,6 +47,11 @@ const dashboardItems = [
     href: "/dashboard/planning",
     label: "Planning Activity",
     icon: Landmark,
+  },
+  {
+    href: "/research/planning-explorer",
+    label: "Planning Explorer",
+    icon: Telescope,
   },
   {
     href: "/dashboard/epc",

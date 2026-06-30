@@ -7,6 +7,8 @@ import {
   Building2,
   Landmark,
   Building,
+  Telescope,
+  Star,
   ArrowRight,
 } from "lucide-react";
 import {
@@ -18,6 +20,7 @@ import {
   YAxis,
 } from "recharts";
 import type { Role } from "./RoleSelector";
+import { track } from "@/lib/analytics";
 
 type ChartShape = "spark" | "bars";
 
@@ -99,6 +102,22 @@ const ALL_CARDS: DashboardCard[] = [
     },
   },
   {
+    id: "planning-explorer",
+    title: "Planning Explorer",
+    href: "/research/planning-explorer",
+    icon: Telescope,
+    insight: "Where is the sector active right now?",
+    detail:
+      "Real UK planning applications by sector and region, the most active local authorities, and conditions extracted from decision notices.",
+    cta: "Explore the data",
+    metric: { value: "8 sectors", label: "Live planning intelligence" },
+    chart: {
+      shape: "bars",
+      tone: "neutral",
+      data: [30, 44, 38, 52, 41, 58, 47, 63, 55, 70, 61, 74],
+    },
+  },
+  {
     id: "epc",
     title: "EPC Lookup",
     href: "/dashboard/epc",
@@ -116,23 +135,14 @@ const ALL_CARDS: DashboardCard[] = [
   },
 ];
 
-// Role → recommended dashboards (priority-ordered, top 3 surface).
+// Role → recommended dashboards (priority-ordered, top surface).
 const RECOMMENDATIONS: Record<Exclude<Role, "all">, string[]> = {
   architect: ["material-prices", "carbon-intensity", "construction-output"],
-  specifier: ["material-prices", "carbon-intensity", "construction-output"],
+  specifier: ["material-prices", "planning-explorer", "carbon-intensity"],
   "site-manager": ["carbon-intensity", "construction-output", "planning"],
-  contractor: ["carbon-intensity", "material-prices", "planning"],
-  manufacturer: ["material-prices", "construction-output", "epc"],
+  contractor: ["planning-explorer", "construction-output", "material-prices"],
+  manufacturer: ["planning-explorer", "material-prices", "construction-output"],
   "sustainability-lead": ["carbon-intensity", "material-prices", "epc"],
-};
-
-const ROLE_LABELS: Record<Exclude<Role, "all">, string> = {
-  architect: "architects",
-  specifier: "specifiers",
-  "site-manager": "site managers",
-  contractor: "contractors",
-  manufacturer: "manufacturers",
-  "sustainability-lead": "sustainability leads",
 };
 
 const ROLE_QUESTIONS: Record<Exclude<Role, "all">, string> = {
@@ -145,7 +155,7 @@ const ROLE_QUESTIONS: Record<Exclude<Role, "all">, string> = {
   contractor:
     "Tendering, tracking pipeline and watching input costs? Start here.",
   manufacturer:
-    "Tracking demand, EPCs and specifier behaviour? Start here.",
+    "Finding live schemes, tracking demand and specifier behaviour? Start here.",
   "sustainability-lead":
     "Building the carbon roadmap across projects? Start here.",
 };
@@ -188,7 +198,97 @@ function CardChart({ shape, data, tone }: DashboardCard["chart"]) {
   );
 }
 
-export function RecommendedDashboards({ activeRole }: { activeRole: Role }) {
+function DashboardCardView({
+  card,
+  context,
+  favourite,
+  onToggleFavourite,
+}: {
+  card: DashboardCard;
+  context: "favourite" | "recommended";
+  favourite: boolean;
+  onToggleFavourite: (id: string) => void;
+}) {
+  const Icon = card.icon;
+  return (
+    // Relative wrapper so the pin button can sit OUTSIDE the <Link> (a button
+    // nested inside an anchor is invalid and breaks keyboard/AT behaviour).
+    <div className="relative">
+      <button
+        type="button"
+        aria-pressed={favourite}
+        aria-label={favourite ? `Unpin ${card.title}` : `Pin ${card.title}`}
+        title={favourite ? "Unpin from your dashboards" : "Pin to your dashboards"}
+        onClick={() => onToggleFavourite(card.id)}
+        className="absolute right-3 top-3 z-10 flex h-8 w-8 items-center justify-center rounded-full bg-white/90 shadow-sm border border-charcoal/[0.06] transition-colors hover:bg-cream"
+      >
+        <Star
+          className={`h-4 w-4 transition-colors ${
+            favourite ? "fill-pink text-pink" : "text-warm-gray/50"
+          }`}
+        />
+      </button>
+
+      <Link
+        href={card.href}
+        onClick={() =>
+          track("dashboard_opened", { dashboard: card.id, context })
+        }
+        className="group block rounded-2xl bg-white border border-charcoal/[0.06] p-6 transition-all hover:shadow-xl hover:-translate-y-0.5 focus:outline-none focus-visible:ring-2 focus-visible:ring-teal focus-visible:ring-offset-2 focus-visible:ring-offset-cream-dark"
+      >
+        <div className="flex items-center justify-between mb-4 pr-9">
+          <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-cream">
+            <Icon className="h-4 w-4 text-teal" />
+          </div>
+          <span className="text-[10px] font-semibold uppercase tracking-[0.16em] text-warm-gray/60">
+            {card.title}
+          </span>
+        </div>
+
+        {/* Sensational headline (the question this dashboard answers) */}
+        <h3 className="font-[family-name:var(--font-playfair)] text-[1.35rem] md:text-[1.45rem] font-bold text-navy leading-[1.15] tracking-tight">
+          {card.insight}
+        </h3>
+
+        {/* Live mini-chart */}
+        <div className="mt-4 h-[44px]">
+          <CardChart {...card.chart} />
+        </div>
+
+        {/* Headline metric */}
+        <div className="mt-3 flex items-baseline gap-2">
+          <span className="font-[family-name:var(--font-playfair)] text-2xl font-bold tabular-nums text-navy">
+            {card.metric.value}
+          </span>
+          <span className="text-[11px] uppercase tracking-wider text-warm-gray/70">
+            {card.metric.label}
+          </span>
+        </div>
+
+        <p className="mt-3 text-xs text-warm-gray leading-relaxed">
+          {card.detail}
+        </p>
+        <div className="mt-4 inline-flex items-center gap-1.5 text-xs font-semibold text-teal transition-all group-hover:gap-2.5">
+          {card.cta}
+          <ArrowRight className="h-3.5 w-3.5" />
+        </div>
+      </Link>
+    </div>
+  );
+}
+
+export function RecommendedDashboards({
+  activeRole,
+  isFavourite,
+  onToggleFavourite,
+}: {
+  activeRole: Role;
+  isFavourite?: (id: string) => boolean;
+  onToggleFavourite?: (id: string) => void;
+}) {
+  const fav = isFavourite ?? (() => false);
+  const toggle = onToggleFavourite ?? (() => {});
+
   const cards =
     activeRole === "all"
       ? ALL_CARDS
@@ -196,67 +296,62 @@ export function RecommendedDashboards({ activeRole }: { activeRole: Role }) {
           .map((id) => ALL_CARDS.find((c) => c.id === id))
           .filter((c): c is DashboardCard => !!c);
 
+  // Pinned dashboards, surfaced first so a returning visitor's set is "already
+  // there". Hydration-safe via useSyncExternalStore: empty on the server/first
+  // paint, then populated once prefs sync.
+  const favouriteCards = ALL_CARDS.filter((c) => fav(c.id));
+
   const lead =
     activeRole === "all"
-      ? "All five live dashboards. Pick a role above to see the three most useful for you."
+      ? "Every live dashboard. Pick a role above to see the ones most useful for you, and pin the ones you use most."
       : ROLE_QUESTIONS[activeRole];
 
   return (
     <div>
+      {favouriteCards.length > 0 && (
+        <div className="mb-12">
+          <div className="flex items-center gap-2 mb-6 justify-center">
+            <Star className="h-4 w-4 fill-pink text-pink" />
+            <h4 className="text-sm font-semibold uppercase tracking-[0.16em] text-navy">
+              Your dashboards
+            </h4>
+          </div>
+          <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+            {favouriteCards.map((card) => (
+              <DashboardCardView
+                key={card.id}
+                card={card}
+                context="favourite"
+                favourite
+                onToggleFavourite={toggle}
+              />
+            ))}
+          </div>
+          <div className="mt-10 border-t border-charcoal/[0.08]" />
+        </div>
+      )}
+
       <p className="text-center text-sm text-warm-gray mb-6 max-w-2xl mx-auto">
         {lead}
       </p>
 
-      <div className={`grid gap-4 ${activeRole === "all" ? "md:grid-cols-2 lg:grid-cols-3" : "md:grid-cols-3"}`}>
-        {cards.map((card) => {
-          const Icon = card.icon;
-          return (
-            <Link
-              key={card.id}
-              href={card.href}
-              className="group block rounded-2xl bg-white border border-charcoal/[0.06] p-6 transition-all hover:shadow-xl hover:-translate-y-0.5 focus:outline-none focus-visible:ring-2 focus-visible:ring-teal focus-visible:ring-offset-2 focus-visible:ring-offset-cream-dark"
-            >
-              <div className="flex items-center justify-between mb-4">
-                <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-cream">
-                  <Icon className="h-4 w-4 text-teal" />
-                </div>
-                <span className="text-[10px] font-semibold uppercase tracking-[0.16em] text-warm-gray/60">
-                  {card.title}
-                </span>
-              </div>
-
-              {/* Sensational headline (the question this dashboard answers) */}
-              <h3 className="font-[family-name:var(--font-playfair)] text-[1.35rem] md:text-[1.45rem] font-bold text-navy leading-[1.15] tracking-tight">
-                {card.insight}
-              </h3>
-
-              {/* Live mini-chart */}
-              <div className="mt-4 h-[44px]">
-                <CardChart {...card.chart} />
-              </div>
-
-              {/* Headline metric */}
-              <div className="mt-3 flex items-baseline gap-2">
-                <span className="font-[family-name:var(--font-playfair)] text-2xl font-bold tabular-nums text-navy">
-                  {card.metric.value}
-                </span>
-                <span className="text-[11px] uppercase tracking-wider text-warm-gray/70">
-                  {card.metric.label}
-                </span>
-              </div>
-
-              <p className="mt-3 text-xs text-warm-gray leading-relaxed">
-                {card.detail}
-              </p>
-              <div className="mt-4 inline-flex items-center gap-1.5 text-xs font-semibold text-teal transition-all group-hover:gap-2.5">
-                {card.cta}
-                <ArrowRight className="h-3.5 w-3.5" />
-              </div>
-            </Link>
-          );
-        })}
+      <div
+        className={`grid gap-4 ${
+          activeRole === "all"
+            ? "md:grid-cols-2 lg:grid-cols-3"
+            : "md:grid-cols-3"
+        }`}
+      >
+        {cards.map((card) => (
+          <DashboardCardView
+            key={card.id}
+            card={card}
+            context="recommended"
+            favourite={fav(card.id)}
+            onToggleFavourite={toggle}
+          />
+        ))}
       </div>
-
     </div>
   );
 }

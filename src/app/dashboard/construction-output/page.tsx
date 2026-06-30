@@ -1,5 +1,6 @@
 import { Metadata } from "next";
 import { ConstructionOutputWidget } from "@/components/dashboard/ConstructionOutputWidget";
+import { ExportButton } from "@/components/ExportButton";
 import { FabrickPlatformCTA } from "@/components/layout/FabrickCTA";
 import { Breadcrumb } from "@/components/layout/Breadcrumb";
 import { Zap, Package, Landmark, Home, ArrowRight } from "lucide-react";
@@ -92,7 +93,16 @@ export default function ConstructionOutputPage() {
 
       {/* Main Content */}
       <section className="mx-auto max-w-7xl px-4 py-10 sm:px-6 lg:px-8">
-        <ConstructionOutputWidget />
+        <div className="mb-4 flex justify-end">
+          <ExportButton
+            targetId="output-capture"
+            filename="pulse-construction-output"
+            source="dashboard:construction-output"
+          />
+        </div>
+        <div id="output-capture">
+          <ConstructionOutputWidget />
+        </div>
       </section>
 
       {/* Explore More Data */}

@@ -1,6 +1,7 @@
 import { Metadata } from "next";
 import { MaterialPricesWidget } from "@/components/dashboard/MaterialPricesWidget";
 import { MaterialPricesAnalysis } from "@/components/dashboard/MaterialPricesAnalysis";
+import { ExportButton } from "@/components/ExportButton";
 import { FabrickPlatformCTA } from "@/components/layout/FabrickCTA";
 import { Breadcrumb } from "@/components/layout/Breadcrumb";
 import { Zap, Building2, Landmark, Home, ArrowRight } from "lucide-react";
@@ -93,7 +94,16 @@ export default function MaterialPricesPage() {
 
       {/* Analysis layer - biggest movers, cost-vs-carbon, substitution wins */}
       <section className="mx-auto max-w-7xl px-4 py-10 sm:px-6 lg:px-8">
-        <MaterialPricesAnalysis />
+        <div className="mb-4 flex justify-end">
+          <ExportButton
+            targetId="materials-capture"
+            filename="pulse-material-prices"
+            source="dashboard:material-prices"
+          />
+        </div>
+        <div id="materials-capture">
+          <MaterialPricesAnalysis />
+        </div>
       </section>
 
       {/* Full index - supporting data, not the headline */}

@@ -2,6 +2,7 @@ import { Metadata } from "next";
 import { LiveGridSummary } from "@/components/dashboard/LiveGridSummary";
 import { CarbonAnalysis } from "@/components/dashboard/CarbonAnalysis";
 import { CarbonFAQ } from "@/components/dashboard/CarbonFAQ";
+import { ExportButton } from "@/components/ExportButton";
 import { FabrickPlatformCTA } from "@/components/layout/FabrickCTA";
 import { Breadcrumb } from "@/components/layout/Breadcrumb";
 import { Package, Building2, Landmark, Home, ArrowRight } from "lucide-react";
@@ -160,7 +161,16 @@ export default function CarbonIntensityPage() {
 
       {/* Analysis lead - heatmap, commentary, best/worst windows */}
       <section className="mx-auto max-w-7xl px-4 py-10 sm:px-6 lg:px-8">
-        <CarbonAnalysis />
+        <div className="mb-4 flex justify-end">
+          <ExportButton
+            targetId="carbon-capture"
+            filename="pulse-grid-carbon"
+            source="dashboard:carbon-intensity"
+          />
+        </div>
+        <div id="carbon-capture">
+          <CarbonAnalysis />
+        </div>
       </section>
 
       {/* Live read - compact context, not the headline */}

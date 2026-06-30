@@ -1,5 +1,6 @@
 import { Metadata } from "next";
 import { PlanningActivitySection } from "@/components/dashboard/PlanningActivitySection";
+import { ExportButton } from "@/components/ExportButton";
 import { FabrickPlatformCTA } from "@/components/layout/FabrickCTA";
 import { Breadcrumb } from "@/components/layout/Breadcrumb";
 import { Zap, Package, Building2, Home, ArrowRight } from "lucide-react";
@@ -91,7 +92,16 @@ export default function PlanningPage() {
 
       {/* Main Content */}
       <section className="mx-auto max-w-7xl px-4 py-10 sm:px-6 lg:px-8">
-        <PlanningActivitySection />
+        <div className="mb-4 flex justify-end">
+          <ExportButton
+            targetId="planning-dash-capture"
+            filename="pulse-planning-activity"
+            source="dashboard:planning"
+          />
+        </div>
+        <div id="planning-dash-capture">
+          <PlanningActivitySection />
+        </div>
       </section>
 
       {/* Explore More Data */}
