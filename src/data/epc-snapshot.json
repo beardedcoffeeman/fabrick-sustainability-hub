@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-29T10:54:41.838Z",
+  "generatedAt": "2026-07-06T10:15:56.679Z",
   "source": "MHCLG Get Energy Performance of Buildings register (api.get-energy-performance-data.communities.gov.uk)",
   "notes": [
     "England + Wales only. Scotland and Northern Ireland use separate registers.",
@@ -8,16 +8,16 @@
     "Below-C share covers bands D, E, F, G. Band D is currently MEES-compliant; the 2027/2030 proposals bring D into scope."
   ],
   "national": {
-    "total": 3103,
-    "belowCPct": 52.143087334837254,
-    "urgentPct": 14.340960360941024,
-    "compliantPct": 47.856912665162746,
+    "total": 3119,
+    "belowCPct": 52.2282782943251,
+    "urgentPct": 14.363578069894197,
+    "compliantPct": 47.7717217056749,
     "bandCounts": {
       "A": 9,
       "B": 319,
-      "C": 1157,
-      "D": 1173,
-      "E": 371,
+      "C": 1162,
+      "D": 1181,
+      "E": 374,
       "F": 57,
       "G": 17
     }
@@ -197,40 +197,59 @@
     {
       "city": "Cardiff",
       "region": "Wales",
-      "total": 107,
+      "total": 108,
       "bandCounts": {
         "A": 0,
         "B": 4,
-        "C": 30,
-        "D": 52,
+        "C": 32,
+        "D": 51,
         "E": 16,
         "F": 4,
         "G": 1
       },
-      "belowCPct": 68.22429906542055,
-      "urgentPct": 19.626168224299064,
-      "compliantPct": 31.775700934579437,
+      "belowCPct": 66.66666666666666,
+      "urgentPct": 19.444444444444446,
+      "compliantPct": 33.33333333333333,
       "postcodesSampled": 10,
       "postcodesWithData": 8
     },
     {
       "city": "Leicester",
       "region": "East Midlands",
-      "total": 157,
+      "total": 158,
       "bandCounts": {
         "A": 0,
         "B": 8,
         "C": 46,
-        "D": 82,
+        "D": 83,
         "E": 17,
         "F": 3,
         "G": 1
       },
-      "belowCPct": 65.60509554140127,
-      "urgentPct": 13.375796178343949,
-      "compliantPct": 34.394904458598724,
+      "belowCPct": 65.82278481012658,
+      "urgentPct": 13.291139240506327,
+      "compliantPct": 34.177215189873415,
       "postcodesSampled": 10,
       "postcodesWithData": 9
+    },
+    {
+      "city": "Hull",
+      "region": "Yorkshire",
+      "total": 86,
+      "bandCounts": {
+        "A": 0,
+        "B": 2,
+        "C": 28,
+        "D": 30,
+        "E": 22,
+        "F": 3,
+        "G": 1
+      },
+      "belowCPct": 65.11627906976744,
+      "urgentPct": 30.23255813953488,
+      "compliantPct": 34.883720930232556,
+      "postcodesSampled": 10,
+      "postcodesWithData": 4
     },
     {
       "city": "Bath",
@@ -250,25 +269,6 @@
       "compliantPct": 39.130434782608695,
       "postcodesSampled": 10,
       "postcodesWithData": 7
-    },
-    {
-      "city": "Hull",
-      "region": "Yorkshire",
-      "total": 74,
-      "bandCounts": {
-        "A": 0,
-        "B": 2,
-        "C": 27,
-        "D": 22,
-        "E": 19,
-        "F": 3,
-        "G": 1
-      },
-      "belowCPct": 60.810810810810814,
-      "urgentPct": 31.08108108108108,
-      "compliantPct": 39.189189189189186,
-      "postcodesSampled": 10,
-      "postcodesWithData": 3
     },
     {
       "city": "Leeds",
@@ -368,19 +368,19 @@
     {
       "city": "York",
       "region": "Yorkshire",
-      "total": 81,
+      "total": 82,
       "bandCounts": {
         "A": 0,
         "B": 9,
-        "C": 36,
+        "C": 37,
         "D": 30,
         "E": 5,
         "F": 1,
         "G": 0
       },
-      "belowCPct": 44.44444444444444,
-      "urgentPct": 7.4074074074074066,
-      "compliantPct": 55.55555555555556,
+      "belowCPct": 43.90243902439025,
+      "urgentPct": 7.317073170731707,
+      "compliantPct": 56.09756097560976,
       "postcodesSampled": 10,
       "postcodesWithData": 5
     },
@@ -444,19 +444,19 @@
     {
       "city": "Newcastle upon Tyne",
       "region": "North East",
-      "total": 128,
+      "total": 129,
       "bandCounts": {
         "A": 0,
         "B": 9,
-        "C": 72,
+        "C": 73,
         "D": 30,
         "E": 16,
         "F": 0,
         "G": 1
       },
-      "belowCPct": 36.71875,
-      "urgentPct": 13.28125,
-      "compliantPct": 63.28125,
+      "belowCPct": 36.434108527131784,
+      "urgentPct": 13.178294573643413,
+      "compliantPct": 63.565891472868216,
       "postcodesSampled": 10,
       "postcodesWithData": 8
     },
