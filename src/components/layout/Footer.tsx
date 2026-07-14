@@ -51,7 +51,7 @@ export function Footer() {
           <div className="md:col-span-2">
             <div className="flex items-center gap-3 mb-5">
               <FabrickLogo fill="#ffffff" height={28} />
-              <span className="text-xs font-medium uppercase tracking-[0.16em] text-warm-gray">
+              <span className="text-xs font-bold uppercase tracking-[0.16em] text-teal">
                 Pulse - the signal before the noise
               </span>
             </div>

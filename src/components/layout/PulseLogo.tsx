@@ -45,8 +45,8 @@ export function PulseLogo({
         </span>
         {strapline && (
           <span
-            className={`hidden sm:block mt-1 text-[8px] font-semibold uppercase tracking-[0.2em] ${
-              light ? "text-warm-gray" : "text-warm-gray"
+            className={`hidden sm:block mt-1 text-[10px] font-bold uppercase tracking-[0.16em] ${
+              light ? "text-teal" : "text-teal-dark"
             }`}
           >
             The signal before the noise
