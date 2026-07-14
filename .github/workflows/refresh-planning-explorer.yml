@@ -99,5 +99,19 @@ jobs:
             echo "No changes — dataset already up to date."
           else
             git commit -m "chore: refresh Planning Explorer dataset [skip ci]"
-            git push
+            # main has hours to move while this job runs, so a plain push can
+            # be rejected as non-fast-forward (that killed the 14 Jul run and
+            # lost the whole dataset). Rebase the data commit on top of the
+            # current main and retry; the data JSONs never conflict with app
+            # code, so the rebase is clean.
+            ok=0
+            for attempt in 1 2 3; do
+              if git pull --rebase origin main && git push; then
+                ok=1
+                break
+              fi
+              echo "push attempt $attempt failed; retrying in 15s"
+              sleep 15
+            done
+            [ "$ok" = "1" ] || exit 1
           fi
