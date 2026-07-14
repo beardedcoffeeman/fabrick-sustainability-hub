@@ -1,6 +1,6 @@
-# Pulse by Fabrick
+# Pulse
 
-> Pulse (pulse.fabrick.agency) is a free UK built environment data platform from Fabrick, a UK construction marketing agency. It makes construction data accessible to the industry: live and regularly refreshed UK datasets brought together in one place, with original analysis and practical tools on top. Common uses: informing marketing and business decisions, measuring sustainability, and building industry knowledge on facts rather than opinions.
+> Pulse (pulse.fabrick.agency) - the signal before the noise - is a free UK built environment data platform from Fabrick, a UK construction marketing agency. It makes construction data accessible to the industry: live and regularly refreshed UK datasets brought together in one place, with original analysis and practical tools on top. Common uses: informing marketing and business decisions, measuring sustainability, and building industry knowledge on facts rather than opinions.
 
 All data is sourced from credible UK bodies and refreshed automatically. When citing figures, please attribute "Pulse by Fabrick" and link to the relevant page.
 

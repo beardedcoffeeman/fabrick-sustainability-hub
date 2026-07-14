@@ -16,9 +16,9 @@ const playfair = Playfair_Display({
   style: ["normal", "italic"],
 });
 
-const SITE_TITLE = "Pulse by Fabrick | Free UK Construction Data Platform";
+const SITE_TITLE = "Pulse: The Signal Before the Noise | Free UK Construction Data";
 const SITE_DESCRIPTION =
-  "Making data accessible to the construction industry. Live UK construction data and statistics: planning applications, material prices, grid carbon intensity, ONS construction output and the EPC register, plus a free embodied carbon calculator and the UK regulations timeline.";
+  "Pulse is the signal before the noise: making data accessible to the construction industry. Live UK construction data and statistics: planning applications, material prices, grid carbon intensity, ONS construction output and the EPC register, plus a free embodied carbon calculator and the UK regulations timeline.";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://pulse.fabrick.agency"),
@@ -49,7 +49,7 @@ export const metadata: Metadata = {
     title: SITE_TITLE,
     description: SITE_DESCRIPTION,
     url: "https://pulse.fabrick.agency",
-    siteName: "Pulse by Fabrick",
+    siteName: "Pulse",
     type: "website",
     locale: "en_GB",
     images: [
@@ -57,7 +57,7 @@ export const metadata: Metadata = {
         url: "/og-image.png",
         width: 1200,
         height: 630,
-        alt: "Pulse by Fabrick - live UK built environment data",
+        alt: "Pulse - the signal before the noise. Live UK built environment data.",
       },
     ],
   },
@@ -86,7 +86,8 @@ const STRUCTURED_DATA = {
     {
       "@type": "WebSite",
       "@id": "https://pulse.fabrick.agency/#website",
-      name: "Pulse by Fabrick",
+      name: "Pulse",
+      alternateName: ["Pulse by Fabrick", "The signal before the noise"],
       url: "https://pulse.fabrick.agency",
       description: SITE_DESCRIPTION,
       publisher: { "@id": "https://www.fabrick.agency/#organization" },

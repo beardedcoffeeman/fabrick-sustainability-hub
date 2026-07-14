@@ -26,9 +26,9 @@ import {
 // ---------------------------------------------------------------------------
 
 export const metadata: Metadata = {
-  title: "Pulse by Fabrick - what's inside",
+  title: "Pulse - what's inside",
   description:
-    "A tour of Pulse by Fabrick: live dashboards, the embodied carbon calculator, the UK regulations timeline, the knowledge hub, original research and the Planning Explorer.",
+    "A tour of Pulse, the signal before the noise: live dashboards, the embodied carbon calculator, the UK regulations timeline, the knowledge hub, original research and the Planning Explorer.",
 };
 
 const TOOLS = [
@@ -95,7 +95,7 @@ export default function ShowcasePage() {
       <section className="bg-charcoal text-white py-20 md:py-28">
         <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8 text-center">
           <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-pink mb-4">
-            Pulse by Fabrick
+            Pulse - the signal before the noise
           </p>
           {/* TODO(copy): Colin to confirm headline. Tom's steer: "answering
               important questions in construction, using data." */}

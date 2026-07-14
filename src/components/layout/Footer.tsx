@@ -52,7 +52,7 @@ export function Footer() {
             <div className="flex items-center gap-3 mb-5">
               <FabrickLogo fill="#ffffff" height={28} />
               <span className="text-xs font-medium uppercase tracking-[0.16em] text-warm-gray">
-                Pulse — UK Built Environment Data
+                Pulse - the signal before the noise
               </span>
             </div>
             <p className="font-[family-name:var(--font-playfair)] text-2xl md:text-3xl font-bold leading-snug max-w-xl">
