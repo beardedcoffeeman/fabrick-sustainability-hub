@@ -26,7 +26,7 @@ import {
 // ---------------------------------------------------------------------------
 
 export const metadata: Metadata = {
-  title: "Pulse by Fabrick — what's inside",
+  title: "Pulse by Fabrick - what's inside",
   description:
     "A tour of Pulse by Fabrick: live dashboards, the embodied carbon calculator, the UK regulations timeline, the knowledge hub, original research and the Planning Explorer.",
 };

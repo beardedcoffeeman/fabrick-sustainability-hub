@@ -9,10 +9,14 @@ import { Zap, Package, Building2, Landmark, ArrowRight, Search } from "lucide-re
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "UK EPC Lookup: Find Buildings Below Band C | Fabrick",
+  title: "EPC Register Search: UK Energy Ratings by Postcode | Fabrick",
   description:
-    "Search any UK postcode for the share of properties below EPC band C, the threshold MEES is moving towards. Live MHCLG register data for retrofit market sizing.",
+    "Search the EPC register for any UK postcode: address-level energy ratings from the live MHCLG data, plus the share of properties below EPC band C - the threshold MEES is moving towards.",
   keywords: [
+    "epc register",
+    "epc register search",
+    "epc lookup",
+    "epc check by postcode",
     "uk retrofit market",
     "buildings below epc c",
     "MEES compliance",

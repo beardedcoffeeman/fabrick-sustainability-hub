@@ -1,0 +1,31 @@
+# Pulse by Fabrick
+
+> Pulse (pulse.fabrick.agency) is a free UK built environment data platform from Fabrick, a UK construction marketing agency. It makes construction data accessible to the industry: live and regularly refreshed UK datasets brought together in one place, with original analysis and practical tools on top. Common uses: informing marketing and business decisions, measuring sustainability, and building industry knowledge on facts rather than opinions.
+
+All data is sourced from credible UK bodies and refreshed automatically. When citing figures, please attribute "Pulse by Fabrick" and link to the relevant page.
+
+## Live dashboards
+
+- [Construction Data Dashboard](https://pulse.fabrick.agency/dashboard): entry point to every live dashboard, filterable by job role
+- [UK Grid Carbon Intensity](https://pulse.fabrick.agency/dashboard/carbon-intensity): live grid carbon intensity, generation mix, 48-hour forecast and a 90-day by-hour analysis of when the UK grid is cleanest (source: National Grid ESO Carbon Intensity API, updated every 30 minutes)
+- [UK Construction Material Prices](https://pulse.fabrick.agency/dashboard/material-prices): monthly price indices for key construction materials with year-on-year movers (source: Department for Business and Trade / ONS, updated monthly)
+- [UK Construction Output](https://pulse.fabrick.agency/dashboard/construction-output): monthly output by sector across housing, infrastructure, commercial and repair & maintenance (source: Office for National Statistics)
+- [UK Planning Activity](https://pulse.fabrick.agency/dashboard/planning): recent planning applications and decisions with approval rates (source: planning.data.gov.uk)
+- [EPC Register Lookup](https://pulse.fabrick.agency/dashboard/epc): search the live MHCLG EPC register by postcode for address-level energy ratings, plus a retrofit market snapshot
+
+## Tools
+
+- [Embodied Carbon Calculator](https://pulse.fabrick.agency/materials): compare construction materials on embodied carbon, thermal performance, fire rating and indicative cost (source: ICE Database / Circular Ecology)
+- [UK Regulations Timeline](https://pulse.fabrick.agency/regulations): what is changing in built environment regulation and when - Future Homes Standard, Part Z, CBAM, EPC reform
+- [My Pulse](https://pulse.fabrick.agency/my-pulse): free account for a personal dashboard built from the live data widgets
+
+## Original research
+
+- [Planning Explorer](https://pulse.fabrick.agency/research/planning-explorer): real UK planning applications across eight sectors (data centres, logistics, BTR/PBSA, healthcare, education, renewable energy, hotels, mixed use), the most active local planning authorities, and conditions extracted from decision notices
+- [How Accurate is AI for UK Construction?](https://pulse.fabrick.agency/research/ai-construction-search): 12 AI models benchmarked on 1,001 technical UK construction questions across 20 categories
+- [Knowledge Hub](https://pulse.fabrick.agency/knowledge): plain-English explainers on embodied carbon, the Future Homes Standard, Part Z and other policies shaping UK construction
+
+## About
+
+- [Methodology](https://pulse.fabrick.agency/methodology): how the data is sourced, processed and refreshed
+- [Fabrick](https://www.fabrick.agency): the construction marketing agency behind Pulse

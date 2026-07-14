@@ -5,11 +5,15 @@ import Link from "next/link";
 import Image from "next/image";
 import {
   ArrowRight,
+  Briefcase,
   Calculator,
   BookOpen,
   Compass,
+  GraduationCap,
+  Leaf,
   Mail,
   LayoutDashboard,
+  Megaphone,
   ScrollText,
 } from "lucide-react";
 import { BannerVideo } from "@/components/home/BannerVideo";
@@ -204,28 +208,99 @@ export default function HomePage() {
         <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pt-24 pb-24 md:pt-32 md:pb-28">
           <div className="max-w-3xl">
             <p className="mb-4 text-[11px] font-semibold uppercase tracking-[0.18em] text-white/70 animate-fade-in-delay-1">
-              Pulse by Fabrick — live UK built environment data and tools
+              Pulse by Fabrick - live UK built environment data and tools
             </p>
 
             <h1 className="font-[family-name:var(--font-playfair)] text-5xl sm:text-6xl md:text-7xl font-bold text-white leading-[0.98] tracking-tight animate-fade-in-delay-1 [text-shadow:0_2px_24px_rgba(0,0,0,0.4)]">
-              Build smarter. Decide faster. Stay ahead.
+              Making data accessible to the construction industry.
             </h1>
             <p className="mt-6 text-base md:text-lg text-white/90 max-w-2xl leading-relaxed animate-fade-in-delay-2 [text-shadow:0_1px_12px_rgba(0,0,0,0.5)]">
-              The construction industry is changing, and this{" "}
+              The data that shapes the built environment is hidden in
+              scattered sources, hard to find and harder to interpret. Pulse
+              brings it together in one{" "}
               <em className="font-[family-name:var(--font-playfair)] italic font-semibold text-white tracking-wide">
                 free
               </em>{" "}
-              platform, updated in real time, will help you keep up. From
-              rising material costs to tightening regulations and growing
-              carbon pressures, every decision now carries more risk and
-              more scrutiny.
+              platform, updated in real time.
             </p>
             <p className="mt-4 text-base md:text-lg text-white/90 max-w-2xl leading-relaxed animate-fade-in-delay-2 [text-shadow:0_1px_12px_rgba(0,0,0,0.5)]">
-              We bring together live data, original analysis and practical
-              tools so your decisions are backed by evidence, not guesswork.
-              This is where you start.
+              We also dive deeper, with original analysis and practical tools
+              that turn raw numbers into decisions you can stand behind. This
+              is a first iteration, and it will grow with your feedback.
             </p>
           </div>
+        </div>
+      </section>
+
+      {/* ============================================================
+          COMMON USES - what people actually use Pulse for (Tom's
+          positioning notes, 14 Jul 2026).
+          ============================================================ */}
+      <section className="bg-navy py-14 md:py-16 text-white">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-10 max-w-2xl mx-auto">
+            <span className="text-[11px] font-semibold uppercase tracking-[0.18em] text-pink">
+              Common uses
+            </span>
+            <h2 className="mt-3 font-[family-name:var(--font-playfair)] text-3xl md:text-4xl font-bold leading-tight">
+              How the industry uses Pulse.
+            </h2>
+          </div>
+          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+            {[
+              {
+                icon: Megaphone,
+                title: "Inform marketing decisions",
+                detail:
+                  "See where demand is moving and which sectors are active before you plan campaigns and content.",
+              },
+              {
+                icon: Briefcase,
+                title: "Inform business decisions",
+                detail:
+                  "Track output, prices and planning activity to time investment, tenders and market entry.",
+              },
+              {
+                icon: Leaf,
+                title: "Measure sustainability",
+                detail:
+                  "Grid carbon, embodied carbon and EPC data to evidence progress rather than estimate it.",
+              },
+              {
+                icon: GraduationCap,
+                title: "Build industry knowledge",
+                detail:
+                  "Explainers and original research grounded in real data. Facts, not opinions.",
+              },
+            ].map((use) => {
+              const Icon = use.icon;
+              return (
+                <div
+                  key={use.title}
+                  className="rounded-2xl bg-navy-light/60 border border-white/10 p-6"
+                >
+                  <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-white/10 mb-4">
+                    <Icon className="h-4 w-4 text-teal" />
+                  </div>
+                  <h3 className="font-semibold leading-snug">{use.title}</h3>
+                  <p className="mt-2 text-xs text-gray-400 leading-relaxed">
+                    {use.detail}
+                  </p>
+                </div>
+              );
+            })}
+          </div>
+          <p className="mt-8 text-center text-xs text-gray-400">
+            Pulse will keep growing with feedback from the people who use it.
+            If there is data that would help you,{" "}
+            <a
+              href="https://www.fabrick.agency/contact-us"
+              className="font-semibold text-teal hover:text-white transition-colors"
+            >
+              tell us
+            </a>
+            .
+          </p>
         </div>
       </section>
 

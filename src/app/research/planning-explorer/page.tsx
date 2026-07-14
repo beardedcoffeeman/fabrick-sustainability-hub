@@ -156,7 +156,7 @@ export default function PlanningExplorerPage() {
             <AudienceCard
               icon={<Building2 className="h-5 w-5 text-teal" />}
               title="Building product manufacturers"
-              body="Insulation, cladding, glazing, M&E, fit-out, structural, roofing. Find the schemes where your product needs to be specified — before the spec is set."
+              body="Insulation, cladding, glazing, M&E, fit-out, structural, roofing. Find the schemes where your product needs to be specified, before the spec is set."
             />
             <AudienceCard
               icon={<Target className="h-5 w-5 text-pink" />}
@@ -261,7 +261,7 @@ function DataSourcesFooter() {
               >
                 planning.data.gov.uk
               </a>{" "}
-              — the UK government&apos;s open planning data service.
+              - the UK government&apos;s open planning data service.
               Currently in alpha; coverage grows monthly as more councils
               join.
             </p>
@@ -296,7 +296,7 @@ function DataSourcesFooter() {
             Pulse by Fabrick
           </a>
           . Data refreshes weekly. We do not republish content that LPAs
-          intend to keep behind their own portals — every record links
+          intend to keep behind their own portals - every record links
           back to the source. If you spot something we&apos;ve got wrong,{" "}
           <a
             href="mailto:hello@fabrick.agency?subject=Planning%20Explorer%20feedback"
@@ -558,7 +558,7 @@ function TrendsTab() {
             Applicants we&apos;ve identified
           </h2>
           <p className="mt-1 text-xs text-warm-gray">
-            Applicant detail is sparse in the current open-data sources — most
+            Applicant detail is sparse in the current open-data sources - most
             entries don&apos;t carry it. Where we have a named applicant, it&apos;s
             shown here. Coverage will grow as we add direct LPA-portal feeds.
           </p>
