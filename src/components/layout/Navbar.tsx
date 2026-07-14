@@ -21,6 +21,7 @@ import {
   Telescope,
   CircleUserRound,
 } from "lucide-react";
+import { PulseLogo } from "./PulseLogo";
 import { useAccount } from "@/lib/useAccount";
 
 const dashboardItems = [
@@ -330,14 +331,9 @@ export function Navbar() {
       <nav className="sticky top-0 z-50 bg-navy text-white">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="flex h-16 items-center justify-between">
-            {/* Brand: Pulse wordmark + strapline */}
-            <Link href="/" className="flex flex-col justify-center leading-none">
-              <span className="font-[family-name:var(--font-playfair)] text-[26px] font-bold tracking-tight text-white">
-                Pulse
-              </span>
-              <span className="hidden sm:block mt-1 text-[8.5px] font-semibold uppercase tracking-[0.22em] text-warm-gray">
-                The signal before the noise
-              </span>
+            {/* Brand: signal mark + Pulse wordmark + strapline */}
+            <Link href="/" aria-label="Pulse home">
+              <PulseLogo />
             </Link>
 
             {/* Desktop Navigation */}

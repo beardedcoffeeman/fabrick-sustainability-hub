@@ -1,5 +1,19 @@
 @import "tailwindcss";
 
+/* Brand typography: the same Adobe Fonts kit as www.fabrick.agency
+   (linked in layout.tsx). Variable names are historical - they used to
+   point at Google's Playfair Display and Inter; every component references
+   them, so the names stay and the faces changed:
+     --font-playfair -> new-spirit (headings)
+     --font-inter    -> dinosaur (body)
+     --font-trump    -> trumpgothicpro (display accents, sparing use) */
+:root {
+  --font-playfair: "new-spirit", Georgia, "Times New Roman", serif;
+  --font-inter: "dinosaur", -apple-system, "Segoe UI", Roboto, Helvetica,
+    Arial, sans-serif;
+  --font-trump: "trumpgothicpro", "Arial Narrow", Impact, sans-serif;
+}
+
 @theme inline {
   --color-cream: #F0EBE3;
   --color-cream-dark: #E5DFD5;
