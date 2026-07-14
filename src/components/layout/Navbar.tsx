@@ -63,7 +63,9 @@ const dashboardItems = [
 ];
 
 const navLinks = [
-  { href: "/materials", label: "Carbon Calculator" },
+  // Carbon Calculator hidden from the main menu 14 Jul 2026 (Tom) - page is
+  // still live at /materials and linked from the footer; restore by
+  // re-adding: { href: "/materials", label: "Carbon Calculator" },
   { href: "/regulations", label: "Regulations" },
 ];
 
