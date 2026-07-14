@@ -19,3 +19,23 @@ export function track(event: string, props?: Record<string, unknown>): void {
   if (!process.env.NEXT_PUBLIC_POSTHOG_KEY) return;
   posthog.capture(event, props);
 }
+
+/**
+ * Tie the PostHog person to a signed-in Pulse account, so "which data do
+ * known users actually look at" is answerable. Safe to call always.
+ */
+export function identify(
+  id: string,
+  props?: Record<string, unknown>,
+): void {
+  if (typeof window === "undefined") return;
+  if (!process.env.NEXT_PUBLIC_POSTHOG_KEY) return;
+  posthog.identify(id, props);
+}
+
+/** Detach the PostHog person on sign-out. Safe to call always. */
+export function resetIdentity(): void {
+  if (typeof window === "undefined") return;
+  if (!process.env.NEXT_PUBLIC_POSTHOG_KEY) return;
+  posthog.reset();
+}

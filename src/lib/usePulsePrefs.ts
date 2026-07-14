@@ -88,6 +88,34 @@ function write(next: PulsePrefs): void {
   listeners.forEach((l) => l());
 }
 
+// -- Account sync hooks (used by useAccount, one-way dependency) --------------
+
+/** Current prefs outside React, e.g. to send with a login request. */
+export function getPrefs(): PulsePrefs {
+  return getSnapshot();
+}
+
+/**
+ * Overwrite local prefs with the account's server-merged copy after
+ * sign-in/sign-up, so the anonymous view and the account agree.
+ */
+export function applyPrefs(next: PulsePrefs): void {
+  if (typeof window === "undefined") return;
+  write({
+    role: typeof next.role === "string" ? next.role : "all",
+    favourites: Array.isArray(next.favourites) ? next.favourites : [],
+  });
+}
+
+/**
+ * Subscribe to local pref changes outside React. useAccount uses this to
+ * mirror pin/role changes to the server while signed in.
+ */
+export function onPrefsChange(cb: () => void): () => void {
+  listeners.add(cb);
+  return () => listeners.delete(cb);
+}
+
 export function usePulsePrefs() {
   const prefs = useSyncExternalStore(
     subscribe,

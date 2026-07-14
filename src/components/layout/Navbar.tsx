@@ -19,8 +19,10 @@ import {
   BookOpen,
   Brain,
   Telescope,
+  CircleUserRound,
 } from "lucide-react";
 import { FabrickLogo } from "./FabrickLogo";
+import { useAccount } from "@/lib/useAccount";
 
 const dashboardItems = [
   {
@@ -207,6 +209,49 @@ function NewsletterCTA({
   );
 }
 
+// "Sign in" when signed out, a name chip into /account when signed in.
+// Renders nothing until the account check resolves, so there is no flash of
+// the wrong state.
+function AccountButton({
+  variant,
+  onAction,
+}: {
+  variant: "desktop" | "mobile";
+  onAction?: () => void;
+}) {
+  const { status, user } = useAccount();
+  if (status === "loading") return null;
+
+  const label = user
+    ? (user.name?.split(" ")[0] ?? "Account")
+    : "Sign in";
+
+  if (variant === "mobile") {
+    return (
+      <Link
+        href="/account"
+        className="flex items-center gap-2.5 rounded-lg px-3 py-2 text-base font-medium text-gray-300 transition-colors hover:bg-navy-light hover:text-white"
+        onClick={onAction}
+      >
+        <CircleUserRound className="h-4 w-4 text-teal shrink-0" />
+        {user ? `${label} - your account` : "Sign in / create account"}
+      </Link>
+    );
+  }
+
+  return (
+    <Link
+      href="/account"
+      title={user ? "Your Pulse account" : "Sign in or create a free account"}
+      className="flex items-center gap-1.5 rounded-full border border-white/20 px-3.5 py-1.5 text-sm font-medium text-gray-300 transition-colors hover:border-white/40 hover:text-white"
+      onClick={onAction}
+    >
+      <CircleUserRound className="h-4 w-4 text-teal" />
+      {label}
+    </Link>
+  );
+}
+
 export function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [dashboardOpen, setDashboardOpen] = useState(false);
@@ -345,6 +390,14 @@ export function Navbar() {
                 </Link>
               ))}
 
+              {/* Personal dashboard */}
+              <Link
+                href="/my-pulse"
+                className="text-sm font-medium text-gray-300 transition-colors hover:text-white"
+              >
+                My Pulse
+              </Link>
+
               {/* Insights dropdown (Knowledge + Research) */}
               <div
                 ref={insightsRef}
@@ -391,6 +444,7 @@ export function Navbar() {
 
             {/* CTA Buttons */}
             <div className="hidden md:flex items-center gap-2">
+              <AccountButton variant="desktop" />
               <NewsletterCTA variant="desktop" />
               <a
                 href="https://www.fabrick.agency/contact-us"
@@ -457,6 +511,15 @@ export function Navbar() {
                 </Link>
               ))}
 
+              {/* Personal dashboard */}
+              <Link
+                href="/my-pulse"
+                className="block rounded-lg px-3 py-2 text-base font-medium text-gray-300 transition-colors hover:bg-navy-light hover:text-white"
+                onClick={() => setIsOpen(false)}
+              >
+                My Pulse
+              </Link>
+
               {/* Insights expandable */}
               <button
                 className="flex w-full items-center justify-between rounded-lg px-3 py-2 text-base font-medium text-gray-300 transition-colors hover:bg-navy-light hover:text-white"
@@ -485,6 +548,11 @@ export function Navbar() {
                   })}
                 </div>
               )}
+
+              <AccountButton
+                variant="mobile"
+                onAction={() => setIsOpen(false)}
+              />
 
               <div className="mt-2">
                 <NewsletterCTA
