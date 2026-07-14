@@ -52,10 +52,31 @@ const PlanningCategoryTabs = dynamic(
     ),
   { loading: () => null },
 );
+const PlanningExplorerWidget = dynamic(
+  () =>
+    import("@/components/dashboard/PlanningExplorerWidget").then(
+      (m) => m.PlanningExplorerWidget,
+    ),
+  { loading: spinner },
+);
 const RetrofitMarketWidget = dynamic(
   () =>
     import("@/components/dashboard/RetrofitMarketWidget").then(
       (m) => m.RetrofitMarketWidget,
+    ),
+  { loading: spinner },
+);
+const RegulationsWidget = dynamic(
+  () =>
+    import("@/components/dashboard/RegulationsWidget").then(
+      (m) => m.RegulationsWidget,
+    ),
+  { loading: spinner },
+);
+const ResearchWidget = dynamic(
+  () =>
+    import("@/components/dashboard/ResearchWidget").then(
+      (m) => m.ResearchWidget,
     ),
   { loading: spinner },
 );
@@ -111,10 +132,16 @@ export function WidgetHost({
         </div>
       );
     }
+    case "planning-explorer":
+      return <PlanningExplorerWidget />;
     case "retrofit":
       return <RetrofitMarketWidget />;
     case "epc":
       return <EPCLookupWidget />;
+    case "regulations":
+      return <RegulationsWidget />;
+    case "research":
+      return <ResearchWidget />;
     default:
       return null;
   }

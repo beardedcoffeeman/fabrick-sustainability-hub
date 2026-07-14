@@ -9,8 +9,11 @@ export const WIDGET_TYPES = [
   "material-prices",
   "construction-output",
   "planning",
+  "planning-explorer",
   "retrofit",
   "epc",
+  "regulations",
+  "research",
 ] as const;
 
 export type WidgetType = (typeof WIDGET_TYPES)[number];
@@ -49,6 +52,12 @@ export const WIDGET_CATALOGUE: WidgetMeta[] = [
     description: "Recent applications and decisions, filterable by category.",
   },
   {
+    type: "planning-explorer",
+    title: "Planning Explorer",
+    description:
+      "Live planning intelligence: applications by sector and the most active authorities.",
+  },
+  {
     type: "retrofit",
     title: "Retrofit Market",
     description: "EPC retrofit market snapshot from the MHCLG register.",
@@ -58,28 +67,40 @@ export const WIDGET_CATALOGUE: WidgetMeta[] = [
     title: "EPC Lookup",
     description: "Search live energy ratings for any UK postcode.",
   },
+  {
+    type: "regulations",
+    title: "Regulations Watch",
+    description:
+      "What is changing in built-environment regulation, soonest first.",
+  },
+  {
+    type: "research",
+    title: "Fabrick Research",
+    description: "Original Fabrick studies into how UK construction decides.",
+  },
 ];
 
 /**
  * Dashboard-card id -> widget type, used to seed a brand-new account's
  * My Pulse layout from the dashboards they had already pinned anonymously.
- * (planning-explorer has no widget equivalent, so it is absent.)
  */
 const CARD_TO_WIDGET: Record<string, WidgetType> = {
   "carbon-intensity": "carbon-intensity",
   "material-prices": "material-prices",
   "construction-output": "construction-output",
   planning: "planning",
+  "planning-explorer": "planning-explorer",
   epc: "epc",
+  regulations: "regulations",
 };
 
 /** Role id -> starter widgets, mirroring RecommendedDashboards. */
 const ROLE_DEFAULT_WIDGETS: Record<string, WidgetType[]> = {
   architect: ["material-prices", "carbon-intensity", "construction-output"],
-  specifier: ["material-prices", "carbon-intensity", "planning"],
+  specifier: ["material-prices", "planning-explorer", "carbon-intensity"],
   "site-manager": ["carbon-intensity", "construction-output", "planning"],
-  contractor: ["planning", "construction-output", "material-prices"],
-  manufacturer: ["planning", "material-prices", "construction-output"],
+  contractor: ["planning-explorer", "construction-output", "material-prices"],
+  manufacturer: ["planning-explorer", "material-prices", "construction-output"],
   "sustainability-lead": ["carbon-intensity", "material-prices", "epc"],
 };
 
