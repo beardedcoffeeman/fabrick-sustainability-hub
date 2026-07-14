@@ -225,8 +225,7 @@ export default function HomePage() {
             </p>
             <p className="mt-4 text-base md:text-lg text-white/90 max-w-2xl leading-relaxed animate-fade-in-delay-2 [text-shadow:0_1px_12px_rgba(0,0,0,0.5)]">
               We also dive deeper, with original analysis and practical tools
-              that turn raw numbers into decisions you can stand behind. This
-              is a first iteration, and it will grow with your feedback.
+              that turn raw numbers into decisions you can stand behind.
             </p>
           </div>
         </div>
