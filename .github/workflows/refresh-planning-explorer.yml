@@ -30,9 +30,11 @@ permissions:
 jobs:
   refresh:
     runs-on: ubuntu-latest
-    # Up to 3 hours — the all-LPA scrape can take 1-2 hours, then PDFs and
-    # extraction add another 30-60 minutes.
-    timeout-minutes: 180
+    # Up to 5 hours (GitHub-hosted job ceiling is 6). The all-LPA scrape takes
+    # 1-2 hours, PDFs and extraction add more - and the first backfill run
+    # after a gap has a large PDF/extraction backlog. 180 was not enough: the
+    # 14 Jul 2026 backfill was cancelled at exactly 3h with nothing committed.
+    timeout-minutes: 300
     env:
       ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
       LPA_ARG: ${{ github.event.inputs.lpas || 'all' }}
@@ -82,7 +84,11 @@ jobs:
         run: npm run extract:pdfs
 
       # ─── 5. Commit refreshed data ────────────────────────────────────
+      # if: always() so a timeout/cancellation still banks whatever stages
+      # completed - each script writes its JSON as it finishes, so partial
+      # progress is real progress and the next run has less to do.
       - name: Commit refreshed data if changed
+        if: always()
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
