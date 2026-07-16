@@ -18,6 +18,7 @@ const TOOLS_LINKS: Array<[string, string]> = [
   ["Regulation Tracker", "/regulations"],
   ["Knowledge Hub", "/knowledge"],
   ["Original Research", "/research"],
+  ["Have Your Say", "/poll"],
 ];
 
 const KNOWLEDGE_LINKS: Array<[string, string]> = [
@@ -60,9 +61,9 @@ export function Footer() {
               campaigns, decisions and the industry.
             </p>
             <p className="mt-4 text-sm text-warm-gray max-w-xl leading-relaxed">
-              These tools, this analysis and our monthly Data Point newsletter
-              are how we share what we see. The deeper, project-specific
-              analysis is what we do for clients.
+              These tools, this analysis and our monthly newsletter, The
+              signal before the noise, are how we share what we see. The
+              deeper, project-specific analysis is what we do for clients.
             </p>
           </div>
           <div className="flex flex-col gap-3 md:items-end md:justify-end">

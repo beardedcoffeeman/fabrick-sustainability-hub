@@ -10,7 +10,7 @@ export default function robots(): MetadataRoute.Robots {
       {
         userAgent: "*",
         allow: "/",
-        disallow: ["/api/", "/account"],
+        disallow: ["/api/", "/account", "/poll/admin"],
       },
     ],
     sitemap: "https://pulse.fabrick.agency/sitemap.xml",
