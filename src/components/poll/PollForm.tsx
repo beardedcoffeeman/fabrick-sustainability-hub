@@ -9,6 +9,7 @@ const FEATURES = [
   "Material prices",
   "Construction output",
   "Planning activity",
+  "Planning explorer",
   "EPC lookup",
 ];
 
