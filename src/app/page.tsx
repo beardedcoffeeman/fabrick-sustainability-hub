@@ -134,7 +134,8 @@ function DataPointSignup() {
           You&apos;re in.
         </p>
         <p className="mt-2 text-sm text-gray-300">
-          The next Data Point lands in your inbox at the start of the month.
+          The signal before the noise lands in your inbox at the start of the
+          month.
         </p>
       </div>
     );
@@ -639,7 +640,7 @@ export default function HomePage() {
         <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8 text-center">
           <span className="text-xs font-semibold uppercase tracking-wider text-pink">
             <Mail className="inline h-3 w-3 mr-1.5 -mt-0.5" />
-            The Data Point
+            The signal before the noise
           </span>
           <h2 className="mt-3 font-[family-name:var(--font-playfair)] text-3xl md:text-4xl font-bold leading-tight">
             One email a month. Built environment trends, decoded.

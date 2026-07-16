@@ -48,9 +48,9 @@ async function notifySignup(opts: {
   try {
     const resend = new Resend(key);
     const { email, source, userAgent, ipHash, totalSubscribers } = opts;
-    const sub = `New Data Point subscriber: ${email}`;
+    const sub = `New newsletter subscriber: ${email}`;
     const lines = [
-      `<p><strong>${email}</strong> just signed up for The Data Point.</p>`,
+      `<p><strong>${email}</strong> just signed up for The signal before the noise.</p>`,
       "<table style=\"border-collapse:collapse;font-family:sans-serif;font-size:13px\">",
       `<tr><td style=\"padding:4px 12px 4px 0;color:#666\">Source</td><td><code>${source}</code></td></tr>`,
       `<tr><td style=\"padding:4px 12px 4px 0;color:#666\">User-Agent</td><td><code>${userAgent ?? "(none)"}</code></td></tr>`,

@@ -189,8 +189,8 @@ function AuthForms({ next }: { next: string }) {
               onChange={(e) => setSubscribe(e.target.checked)}
               className="mt-0.5 h-4 w-4 rounded border-charcoal/20 accent-[#00BFA5]"
             />
-            Also send me The Data Point - Pulse&apos;s short email on what&apos;s
-            moving in UK construction data.
+            Also send me The signal before the noise - Pulse&apos;s short email
+            on what&apos;s moving in UK construction data.
           </label>
         )}
 

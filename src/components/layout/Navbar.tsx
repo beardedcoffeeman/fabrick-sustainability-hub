@@ -165,7 +165,7 @@ function NewsletterCTA({
           {!submitted ? (
             <>
               <p className="text-[10px] font-semibold uppercase tracking-[0.14em] text-pink mb-2">
-                The Data Point
+                The signal before the noise
               </p>
               <h3 className="font-[family-name:var(--font-playfair)] text-lg font-bold text-white leading-tight mb-1">
                 One email a month. Built environment trends, decoded.
