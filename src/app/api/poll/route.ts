@@ -12,10 +12,11 @@ const NOTIFY_TO = "tom@fabrick.agency";
 const NOTIFY_FROM = "onboarding@resend.dev";
 
 const FEATURES = [
-  "Live dashboard",
-  "Carbon calculator",
-  "Regulations",
-  "Insights",
+  "Grid carbon analysis",
+  "Material prices",
+  "Construction output",
+  "Planning activity",
+  "EPC lookup",
 ] as const;
 
 const MAX_ANSWER_LENGTH = 2000;
@@ -71,7 +72,7 @@ async function notifyResponse(opts: {
     const html = [
       "<p>A new Pulse poll response just came in.</p>",
       '<table style="border-collapse:collapse;font-family:sans-serif;font-size:13px">',
-      row("Most time-saving feature", feature),
+      row("Most useful dashboard", feature),
       row("Data they wish was easier", dataWish),
       row("Question for Pulse", question),
       row("Total responses", String(totalResponses)),

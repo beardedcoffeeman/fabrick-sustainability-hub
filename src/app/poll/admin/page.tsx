@@ -110,7 +110,7 @@ export default function PollAdminPage() {
 
             <section>
               <h2 className="text-[11px] font-semibold uppercase tracking-[0.18em] text-pink mb-4">
-                Which feature would save you the most time?
+                Which of the live dashboards was most useful to you?
               </h2>
               {data.featureCounts.length === 0 ? (
                 <p className="text-sm text-warm-gray">No votes yet.</p>

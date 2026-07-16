@@ -5,10 +5,11 @@ import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 
 const FEATURES = [
-  "Live dashboard",
-  "Carbon calculator",
-  "Regulations",
-  "Insights",
+  "Grid carbon analysis",
+  "Material prices",
+  "Construction output",
+  "Planning activity",
+  "EPC lookup",
 ];
 
 type PollStatus = "idle" | "submitting" | "success" | "error";
@@ -104,7 +105,7 @@ export function PollForm() {
 
   return (
     <form onSubmit={onSubmit} className="space-y-6" noValidate>
-      <QuestionCard number="01" title="Which feature would save you the most time?">
+      <QuestionCard number="01" title="Which of the live dashboards was most useful to you?">
         <div className="grid gap-3 sm:grid-cols-2">
           {FEATURES.map((option) => (
             <label
