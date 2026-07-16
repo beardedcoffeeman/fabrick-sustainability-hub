@@ -31,29 +31,23 @@ export default function PollPage() {
               href="/"
               className="mt-6 inline-flex items-center gap-2 rounded-full bg-pink px-6 py-3 text-sm font-semibold text-white transition-all hover:bg-pink-light"
             >
-              Visit pulse.fabrick.agency
+              View the full website
               <ArrowUpRight className="h-4 w-4" />
             </Link>
           </div>
 
-          {/* Browser-frame mockup of the site (stands in for the prototype's
-              laptop render, using assets we actually own). */}
-          <div className="hidden md:block w-72 shrink-0">
-            <div className="rounded-xl border border-navy/15 bg-white shadow-xl overflow-hidden">
-              <div className="flex items-center gap-1.5 bg-cream-dark/60 px-3 py-2">
-                <span className="h-2 w-2 rounded-full bg-pink/70" />
-                <span className="h-2 w-2 rounded-full bg-teal/70" />
-                <span className="h-2 w-2 rounded-full bg-navy/20" />
-              </div>
-              <Image
-                src="/og-image.png"
-                alt="The Pulse by Fabrick dashboard"
-                width={1200}
-                height={630}
-                className="w-full h-auto"
-                priority
-              />
-            </div>
+          {/* Animated laptop render carried over from the original poll page
+              (unoptimized keeps the GIF animating through next/image). */}
+          <div className="hidden md:block w-80 shrink-0">
+            <Image
+              src="/pulse-hero.gif"
+              alt="Pulse by Fabrick"
+              width={1920}
+              height={1080}
+              className="w-full h-auto"
+              unoptimized
+              priority
+            />
           </div>
         </div>
 
