@@ -316,7 +316,7 @@ export default function HomePage() {
               Powered by trusted data
             </span>
             <h2 className="mt-3 font-[family-name:var(--font-playfair)] text-3xl md:text-4xl font-bold text-navy leading-tight">
-              Built on the most credible sources in the UK.
+              Built on some of the most credible sources in the UK.
             </h2>
             <p className="mt-4 text-sm md:text-base text-charcoal/80 leading-relaxed">
               We aggregate and interpret information from leading
