@@ -80,7 +80,7 @@ const CHANGESET_SCHEMA = {
         properties: {
           id: { type: "string" },
           date: nullableString,
-          status: { type: ["string", "null"], enum: [...STATUSES, null] },
+          status: { anyOf: [{ type: "string", enum: [...STATUSES] }, { type: "null" }] },
           description: nullableString,
           impact: nullableString,
           reason: { type: "string" },
