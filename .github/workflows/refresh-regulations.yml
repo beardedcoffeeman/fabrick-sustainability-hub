@@ -53,9 +53,15 @@ jobs:
           git add src/lib/regulations-data.json
           git commit -m "Regulations: monthly research refresh $(date -u +%Y-%m)"
           git push --force origin "$BRANCH"
-          gh pr create \
+          if gh pr create \
             --title "Regulations refresh $(date -u +%Y-%m)" \
             --body-file .cache/regulations-research-summary.md \
             --base main \
-            --head "$BRANCH" \
-          || echo "PR already exists for $BRANCH - branch updated with the new changeset."
+            --head "$BRANCH"; then
+            echo "PR opened for $BRANCH."
+          elif gh pr view "$BRANCH" --json url -q .url; then
+            echo "PR already exists for $BRANCH - branch updated with the new changeset."
+          else
+            echo "::error::Branch pushed but PR could not be created - check Actions PR permissions."
+            exit 1
+          fi
