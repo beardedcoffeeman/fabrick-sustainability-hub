@@ -62,13 +62,29 @@ export async function POST(req: NextRequest) {
       WHERE email NOT ILIKE '%@example.com'
     `) as unknown as Array<{ total: number; max_id: number }>;
 
-    const recentSubscribers = (await sql`
-      SELECT id, email, source
-      FROM data_point_subscribers
-      WHERE email NOT ILIKE '%@example.com'
-      ORDER BY id DESC
-      LIMIT 50
-    `) as unknown as Array<{ id: number; email: string; source: string | null }>;
+    let recentSubscribers: Array<{
+      id: number;
+      email: string;
+      source: string | null;
+      created_at?: string;
+    }>;
+    try {
+      recentSubscribers = (await sql`
+        SELECT id, email, source, created_at
+        FROM data_point_subscribers
+        WHERE email NOT ILIKE '%@example.com'
+        ORDER BY id DESC
+        LIMIT 50
+      `) as unknown as typeof recentSubscribers;
+    } catch {
+      recentSubscribers = (await sql`
+        SELECT id, email, source
+        FROM data_point_subscribers
+        WHERE email NOT ILIKE '%@example.com'
+        ORDER BY id DESC
+        LIMIT 50
+      `) as unknown as typeof recentSubscribers;
+    }
 
     // data_point_subscribers predates the repo and may not carry created_at;
     // callers fall back to id watermarks when this comes back null.
