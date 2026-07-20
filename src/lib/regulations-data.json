@@ -1,33 +1,5 @@
 [
   {
-    "id": "fhs-2025",
-    "title": "Future Homes Standard - Transitional Arrangements",
-    "date": "2025-06-01",
-    "status": "active",
-    "category": "energy",
-    "description": "Transitional provisions allowing approved plans to proceed under current Part L before full FHS takes effect. Plans submitted before the cutoff can use 2021 Part L standards.",
-    "impact": "Window closing for developers - plans submitted after cutoff must meet full FHS requirements.",
-    "affectedRoles": [
-      "developer",
-      "architect"
-    ]
-  },
-  {
-    "id": "fhs-published",
-    "title": "Future Homes & Buildings Standards - Published",
-    "date": "2026-03-24",
-    "status": "active",
-    "category": "energy",
-    "description": "Government has laid the regulations for the Future Homes Standard and Future Buildings Standard, publishing updated Approved Documents L and F (2026). New homes must be built with solar panels, low-carbon heating (heat pumps/heat networks), and high fabric efficiency as standard. Creates at least 75% less carbon emissions than 2013 standards. Home Energy Model (HEM) confirmed as new calculation methodology replacing SAP.",
-    "impact": "Landmark moment for UK construction. Housebuilders must now prepare supply chains for heat pumps, solar PV, and MVHR. Families could save up to £830/year on energy bills. Industry must upskill for new compliance methodology (HEM).",
-    "affectedRoles": [
-      "developer",
-      "architect",
-      "manufacturer",
-      "contractor"
-    ]
-  },
-  {
     "id": "part-z-consultation",
     "title": "Part Z (Whole-Life Carbon) - Government Consultation",
     "date": "2025-09-01",
@@ -70,6 +42,16 @@
     ]
   },
   {
+    "id": "fca-cp26-5",
+    "title": "FCA CP26/5 - Sustainability Disclosures Consultation",
+    "date": "2026-01-27",
+    "status": "consultation",
+    "category": "reporting",
+    "description": "The FCA opened consultation CP26/5 on requiring listed issuers to disclose against the UK SRS. This is the concrete regulatory mechanism behind the expected mandatory sustainability reporting rules for large listed companies.",
+    "impact": "Listed construction companies should review CP26/5 and prepare to disclose against UK SRS, building Scope 3 supply-chain data systems.",
+    "affectedRoles": []
+  },
+  {
     "id": "uk-srs-voluntary",
     "title": "UK Sustainability Reporting Standards - Voluntary Adoption",
     "date": "2026-03-01",
@@ -84,18 +66,53 @@
     ]
   },
   {
+    "id": "uk-srs-final-standards",
+    "title": "UK Sustainability Reporting Standards (UK SRS S1 & S2) - Final Standards Published",
+    "date": "2026-03-01",
+    "status": "active",
+    "category": "reporting",
+    "description": "The government published the final UK Sustainability Reporting Standards (UK SRS S1 and S2), based on ISSB standards, following the 2025 exposure draft. These provide the definitive basis for voluntary adoption ahead of expected mandatory requirements.",
+    "impact": "Companies should align their sustainability reporting frameworks and Scope 3 data collection with the final UK SRS S1 and S2 standards now.",
+    "affectedRoles": []
+  },
+  {
+    "id": "fhs-published",
+    "title": "Future Homes & Buildings Standards - Published",
+    "date": "2026-03-24",
+    "status": "active",
+    "category": "energy",
+    "description": "Government has laid the regulations for the Future Homes Standard and Future Buildings Standard via SI 2026/335 (The Building Regulations etc. (Amendment) (England) Regulations 2026), publishing updated Approved Documents L and F (2026). New homes must be built with solar panels, low-carbon heating (heat pumps/heat networks), and high fabric efficiency as standard, achieving at least 75% less carbon than 2013 standards. Compliance is initially demonstrated using SAP 10.3; the Home Energy Model (HEM) is not yet an approved methodology and is expected to follow later. Regulations come into force 24 March 2027 (24 September 2027 for higher-risk building work), subject to transitional provisions.",
+    "impact": "Housebuilders must prepare supply chains for heat pumps, solar PV, and MVHR, and upskill for SAP 10.3 compliance now, with HEM adoption to follow.",
+    "affectedRoles": [
+      "developer",
+      "architect",
+      "manufacturer",
+      "contractor"
+    ]
+  },
+  {
     "id": "fbs-published",
     "title": "Future Buildings Standard - Published",
     "date": "2026-03-24",
     "status": "active",
     "category": "energy",
-    "description": "Published alongside the Future Homes Standard. Sets new energy performance requirements for non-domestic buildings including updated Parts L and F. Impact assessment published covering costs, benefits and wider impacts on businesses and the public sector.",
-    "impact": "Commercial developers must now prepare for updated compliance requirements. New non-domestic buildings will need to meet significantly higher energy performance standards.",
+    "description": "Published alongside the Future Homes Standard under SI 2026/335. Sets new energy performance requirements for non-domestic buildings including updated Parts L and F. Compliance is initially demonstrated using SAP 10.3 rather than the Home Energy Model. Regulations come into force 24 March 2027 (24 September 2027 for higher-risk building work), subject to transitional provisions.",
+    "impact": "Commercial developers must prepare for updated compliance requirements using SAP 10.3, with new non-domestic buildings needing significantly higher energy performance.",
     "affectedRoles": [
       "developer",
       "architect",
       "contractor"
     ]
+  },
+  {
+    "id": "epc-metrics-reform",
+    "title": "EPC Reform - New Energy Performance Metrics",
+    "date": "2026-07-01",
+    "status": "upcoming",
+    "category": "energy",
+    "description": "MHCLG/DESNZ reforms to the Energy Performance of Buildings regime move EPCs from a single energy-efficiency rating to multiple headline metrics (fabric performance, heating system, smart readiness, energy cost), with dwellings transitioning to the Home Energy Model. Changes anticipated in the second half of 2026.",
+    "impact": "Developers and landlords should prepare for new multi-metric EPCs, as these will underpin MEES and Part L compliance from H2 2026.",
+    "affectedRoles": []
   },
   {
     "id": "uk-srs-mandatory",
@@ -116,24 +133,9 @@
     "date": "2026-10-01",
     "status": "upcoming",
     "category": "trade",
-    "description": "Importers of steel, aluminium, cement, ceramics, and fertiliser must register ahead of the UK Carbon Border Adjustment Mechanism launch in January 2027.",
-    "impact": "Importers need to understand the carbon content of their supply chain and prepare reporting systems.",
+    "description": "Importers of steel, aluminium, cement, ceramics, and fertiliser must register ahead of the UK Carbon Border Adjustment Mechanism launch in January 2027. A minimum registration threshold of £50,000 of relevant imports applies (raised from the originally proposed £10,000).",
+    "impact": "Importers should assess whether they exceed the £50,000 threshold, understand the carbon content of their supply chain, and prepare reporting systems.",
     "affectedRoles": [
-      "manufacturer",
-      "contractor"
-    ]
-  },
-  {
-    "id": "fhs-full",
-    "title": "Future Homes Standard - Full Compliance Required",
-    "date": "2028-01-01",
-    "status": "upcoming",
-    "category": "energy",
-    "description": "All new homes must meet the full Future Homes Standard after the transition period. Solar panels, low-carbon heating (heat pumps or heat networks), and high fabric efficiency mandatory. No new gas boilers. At least 75% less carbon emissions than 2013 standards. Compliance demonstrated via the Home Energy Model (HEM).",
-    "impact": "Fundamental change to UK housebuilding. Every new home must have solar, heat pump, and meet stringent fabric standards. Housebuilders who haven't adapted their supply chains and designs will face compliance issues.",
-    "affectedRoles": [
-      "developer",
-      "architect",
       "manufacturer",
       "contractor"
     ]
@@ -149,6 +151,19 @@
     "affectedRoles": [
       "manufacturer",
       "contractor"
+    ]
+  },
+  {
+    "id": "fhs-2025",
+    "title": "Future Homes Standard - Transitional Arrangements",
+    "date": "2027-03-24",
+    "status": "active",
+    "category": "energy",
+    "description": "Transitional provisions under SI 2026/335 allowing approved plans to proceed under current Part L before full FHS takes effect. For transitional protection, notices must be submitted before 24 March 2027 and construction commenced within the transitional window (by around 24 March 2028). SME developers get no blanket exemption.",
+    "impact": "Window closing for developers - submit building notices before 24 March 2027 and commence work by ~24 March 2028 to retain transitional protection.",
+    "affectedRoles": [
+      "developer",
+      "architect"
     ]
   },
   {
@@ -207,13 +222,28 @@
     ]
   },
   {
+    "id": "fhs-full",
+    "title": "Future Homes Standard - Full Compliance Required",
+    "date": "2028-03-24",
+    "status": "upcoming",
+    "category": "energy",
+    "description": "All new homes must meet the full Future Homes Standard after the transitional period ends (~24 March 2028, roughly 12 months after the regulations come into force on 24 March 2027 under SI 2026/335). Solar panels, low-carbon heating (heat pumps or heat networks), and high fabric efficiency mandatory. No new gas boilers. At least 75% less carbon emissions than 2013 standards. Compliance demonstrated via SAP 10.3 (HEM to follow later).",
+    "impact": "Every new home must have solar, a heat pump, and meet stringent fabric standards; housebuilders must adapt supply chains and designs before the transitional tail ends around March 2028.",
+    "affectedRoles": [
+      "developer",
+      "architect",
+      "manufacturer",
+      "contractor"
+    ]
+  },
+  {
     "id": "epc-c-domestic",
     "title": "EPC Rating C - Domestic Rented Properties (Proposed)",
-    "date": "2028-12-01",
-    "status": "future",
+    "date": "2030-10-01",
+    "status": "upcoming",
     "category": "energy",
-    "description": "Proposed requirement for all rented domestic properties to achieve EPC Rating C. Repeatedly delayed - currently expected no earlier than 2028. Cost cap per property likely.",
-    "impact": "Massive retrofit demand across UK rental stock. Insulation, glazing, and heating system upgrades at scale.",
+    "description": "Government response published 21 January 2026 confirming privately rented homes in England and Wales must meet the equivalent of EPC C by a single compliance date of 1 October 2030. A dual-metric standard applies (fabric performance first, then a heating-system or smart-readiness standard), with a raised cost cap of £10,000 and 10-year exemption validity. Legislation to follow, with a statutory instrument aimed to come into force in 2027.",
+    "impact": "Landlords should plan retrofits now to meet EPC C by 1 October 2030, budgeting up to the £10,000 cost cap and prioritising fabric-first improvements.",
     "affectedRoles": [
       "developer",
       "contractor",
