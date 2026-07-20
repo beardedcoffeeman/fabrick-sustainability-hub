@@ -1,4 +1,5 @@
 import { RegulationTimeline } from "@/components/regulatory/RegulationTimeline";
+import { RegulationAlertsCTA } from "@/components/regulatory/RegulationAlertsCTA";
 import { FabrickMarketingCTA, FabrickPlatformCTA } from "@/components/layout/FabrickCTA";
 import { Building2, HardHat, Warehouse, Landmark, Sparkles, AlertTriangle, Clock, FileText } from "lucide-react";
 
@@ -165,6 +166,10 @@ export default function RegulationsPage() {
           </p>
         </div>
       </section>
+
+      <div className="mx-auto max-w-4xl px-4 pt-8 sm:px-6 lg:px-8">
+        <RegulationAlertsCTA />
+      </div>
 
       <div className="mx-auto max-w-4xl px-4 py-8 sm:px-6 lg:px-8">
         <RegulationTimeline />
