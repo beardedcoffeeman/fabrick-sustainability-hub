@@ -1,0 +1,61 @@
+name: Research regulations updates
+
+# Monthly AI research pass over the regulations timeline
+# (src/lib/regulations-data.json). Claude researches UK construction
+# sustainability regulation changes with web search and proposes a
+# changeset; any diff becomes a PULL REQUEST for human review - this
+# workflow never commits to main directly.
+#
+# Required secrets: ANTHROPIC_API_KEY (same key as Planning Explorer).
+# Manual trigger: workflow_dispatch (Actions tab).
+
+on:
+  schedule:
+    # 1st of the month, 06:00 UTC - lands in Tom's inbox via the daily
+    # regulations check + PR notification the same morning.
+    - cron: "0 6 1 * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  research:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    env:
+      ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+      GH_TOKEN: ${{ github.token }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: "npm"
+
+      - run: npm ci
+
+      - name: Research regulation changes
+        run: npx tsx scripts/research-regulations.ts
+
+      - name: Open PR if the timeline changed
+        run: |
+          if git diff --quiet src/lib/regulations-data.json; then
+            echo "No regulation changes this month."
+            exit 0
+          fi
+          BRANCH="regulations-refresh-$(date -u +%Y-%m)"
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git checkout -B "$BRANCH"
+          git add src/lib/regulations-data.json
+          git commit -m "Regulations: monthly research refresh $(date -u +%Y-%m)"
+          git push --force origin "$BRANCH"
+          gh pr create \
+            --title "Regulations refresh $(date -u +%Y-%m)" \
+            --body-file .cache/regulations-research-summary.md \
+            --base main \
+            --head "$BRANCH" \
+          || echo "PR already exists for $BRANCH - branch updated with the new changeset."
