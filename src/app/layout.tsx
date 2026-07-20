@@ -19,6 +19,9 @@ export const metadata: Metadata = {
     template: "%s",
   },
   description: SITE_DESCRIPTION,
+  verification: {
+    google: "eAml2WgmS9vxJCp7t4MIzbuYYTBNtXDCb3iGXfZupO8",
+  },
   // Self-referencing canonical on every page (resolved per-route against
   // metadataBase); pages can still override.
   alternates: { canonical: "./" },
