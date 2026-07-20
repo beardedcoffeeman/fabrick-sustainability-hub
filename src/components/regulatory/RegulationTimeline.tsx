@@ -26,13 +26,27 @@ const roles = [
   { id: "contractor", label: "Contractor" },
 ];
 
+const timelineYears = Array.from(
+  new Set(regulations.map((reg) => new Date(reg.date).getFullYear().toString()))
+).sort((a, b) => parseInt(a) - parseInt(b));
+
 export function RegulationTimeline() {
   const [roleFilter, setRoleFilter] = useState("all");
   const [categoryFilter, setCategoryFilter] = useState<string>("all");
+  const [whenFilter, setWhenFilter] = useState<string>("all");
+
+  const now = new Date();
 
   const filtered = regulations.filter((reg) => {
     if (roleFilter !== "all" && !reg.affectedRoles.includes(roleFilter)) return false;
     if (categoryFilter !== "all" && reg.category !== categoryFilter) return false;
+    if (whenFilter === "upcoming" && new Date(reg.date) < now) return false;
+    if (
+      whenFilter !== "all" &&
+      whenFilter !== "upcoming" &&
+      new Date(reg.date).getFullYear().toString() !== whenFilter
+    )
+      return false;
     return true;
   });
 
@@ -42,8 +56,6 @@ export function RegulationTimeline() {
     acc[year].push(reg);
     return acc;
   }, {});
-
-  const now = new Date();
 
   return (
     <div className="space-y-6">
@@ -100,11 +112,38 @@ export function RegulationTimeline() {
               ))}
             </div>
           </div>
+          <div>
+            <p className="text-xs text-warm-gray mb-2">When</p>
+            <div className="flex flex-wrap gap-2">
+              {[
+                { id: "all", label: "All years" },
+                { id: "upcoming", label: "Upcoming" },
+                ...timelineYears.map((year) => ({ id: year, label: year })),
+              ].map((option) => (
+                <button
+                  key={option.id}
+                  onClick={() => setWhenFilter(option.id)}
+                  className={`rounded-full px-3 py-1.5 text-xs font-medium transition-all ${
+                    whenFilter === option.id
+                      ? "bg-navy text-white"
+                      : "bg-cream text-navy hover:bg-cream-dark"
+                  }`}
+                >
+                  {option.label}
+                </button>
+              ))}
+            </div>
+          </div>
         </div>
       </div>
 
       {/* Timeline */}
       <div className="space-y-8">
+        {filtered.length === 0 && (
+          <p className="rounded-xl bg-white p-5 text-sm text-warm-gray shadow-sm">
+            No regulations match these filters. Try widening the year or role.
+          </p>
+        )}
         {Object.entries(grouped)
           .sort(([a], [b]) => parseInt(a) - parseInt(b))
           .map(([year, regs]) => (

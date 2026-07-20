@@ -59,11 +59,13 @@ export async function POST(req: NextRequest) {
     const subscriberTotals = (await sql`
       SELECT COUNT(*)::int AS total, COALESCE(MAX(id), 0)::int AS max_id
       FROM data_point_subscribers
+      WHERE email NOT ILIKE '%@example.com'
     `) as unknown as Array<{ total: number; max_id: number }>;
 
     const recentSubscribers = (await sql`
       SELECT id, email, source
       FROM data_point_subscribers
+      WHERE email NOT ILIKE '%@example.com'
       ORDER BY id DESC
       LIMIT 50
     `) as unknown as Array<{ id: number; email: string; source: string | null }>;
@@ -76,6 +78,7 @@ export async function POST(req: NextRequest) {
         SELECT COUNT(*)::int AS n
         FROM data_point_subscribers
         WHERE created_at >= NOW() - INTERVAL '7 days'
+          AND email NOT ILIKE '%@example.com'
       `) as unknown as Array<{ n: number }>;
       subscribersNew7d = rows[0]?.n ?? null;
     } catch {
