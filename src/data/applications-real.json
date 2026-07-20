@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-14T20:28:27.535Z",
+  "generatedAt": "2026-07-19T22:57:25.101Z",
   "source": "planning.data.gov.uk",
   "note": "Real planning applications ingested from the UK government open data service. Decision is inferred as 'approved' where a decision-date is present, 'pending' otherwise. Conditions are not in this dataset and are filled in separately by the PDF extractor.",
   "applications": [
@@ -5032,23 +5032,6 @@
       "agent": "",
       "decision": "approved",
       "decisionDate": "2024-06-24",
-      "conditions": [],
-      "source": "planning.data.gov.uk"
-    },
-    {
-      "id": "pd-10000084143",
-      "reference": "2023/1021/P",
-      "lpa": "London Borough of Camden",
-      "region": "London",
-      "address": "",
-      "postcode": "",
-      "useClass": "",
-      "sector": "hotels",
-      "description": "Erection of two storey extension forming new step free entrance at street level; works to car parking area and addition of new floor to create 55 new hotel bedrooms at levels 1&2; infilling of undercroft at level 3 and new flat roof link to extend existing hotel bar/restaurant.",
-      "applicant": "",
-      "agent": "",
-      "decision": "approved",
-      "decisionDate": "2023-07-18",
       "conditions": [],
       "source": "planning.data.gov.uk"
     },
