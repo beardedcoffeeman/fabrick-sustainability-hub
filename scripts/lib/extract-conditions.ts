@@ -131,7 +131,7 @@ const RECORD_CONDITIONS_TOOL = {
   },
 };
 
-const MODEL = "claude-sonnet-4-6";
+const MODEL = "claude-haiku-4-5";
 
 function hashInput(text: string): string {
   return createHash("sha256").update(text).digest("hex");

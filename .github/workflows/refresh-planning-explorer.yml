@@ -1,22 +1,24 @@
 name: Refresh Planning Explorer
 
-# Weekly refresh of the Planning Explorer dataset:
+# Monthly refresh of the Planning Explorer dataset:
 #   1. Pull latest applications from planning.data.gov.uk (open data)
 #   2. Scrape every Idox-classic LPA we know about (metadata + applicants)
 #   3. Fetch decision-notice PDFs via Playwright (headless Chromium)
-#   4. Run Claude Sonnet 4.6 over each new PDF to extract conditions
+#   4. Run Claude Haiku 4.5 over each new PDF to extract conditions
 #   5. Commit the refreshed JSON datasets so Vercel auto-redeploys
 #
 # Required secrets (configure in repo Settings → Secrets and variables):
 #   ANTHROPIC_API_KEY — Claude API key for condition extraction
 #
 # Manual trigger: workflow_dispatch (Actions tab → Refresh Planning Explorer
-# → Run workflow). Useful for testing changes without waiting for Sunday.
+# → Run workflow). Useful for testing changes without waiting for the
+# monthly run.
 
 on:
   schedule:
-    # Sunday 22:00 UTC. Runs ~weekly, in a quiet window for LPA portals.
-    - cron: "0 22 * * 0"
+    # 1st of the month, 22:00 UTC — a quiet window for LPA portals.
+    # Was weekly (Sun 22:00); cut to monthly Jul 2026 to reduce API spend.
+    - cron: "0 22 1 * *"
   workflow_dispatch:
     inputs:
       lpas:
@@ -30,11 +32,12 @@ permissions:
 jobs:
   refresh:
     runs-on: ubuntu-latest
-    # Up to 5 hours (GitHub-hosted job ceiling is 6). The all-LPA scrape takes
-    # 1-2 hours, PDFs and extraction add more - and the first backfill run
-    # after a gap has a large PDF/extraction backlog. 180 was not enough: the
+    # Up to 5h50m (GitHub-hosted job ceiling is 6h). The all-LPA scrape takes
+    # 1-2 hours, PDFs and extraction add more - and a monthly run carries
+    # ~4 weeks of PDF backlog. 180 was not enough even for weekly: the
     # 14 Jul 2026 backfill was cancelled at exactly 3h with nothing committed.
-    timeout-minutes: 300
+    # The commit step runs `if: always()`, so a timeout still banks progress.
+    timeout-minutes: 350
     env:
       ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
       LPA_ARG: ${{ github.event.inputs.lpas || 'all' }}

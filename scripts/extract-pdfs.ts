@@ -181,7 +181,7 @@ async function main() {
       {
         generatedAt: new Date().toISOString(),
         source: "claude-extraction",
-        note: "Real planning conditions extracted from decision-notice PDFs by Claude Sonnet 4.6.",
+        note: "Real planning conditions extracted from decision-notice PDFs by Claude Haiku 4.5.",
         applications,
       },
       null,
