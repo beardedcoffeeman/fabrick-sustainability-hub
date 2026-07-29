@@ -15,6 +15,7 @@ import {
   AlertTriangle,
   TrendingUp,
   BookOpen,
+  FlaskConical,
 } from "lucide-react";
 import {
   AIRankingsChart,
@@ -22,123 +23,135 @@ import {
   AICategoryHeatmap,
   AICategoryDeepDive,
 } from "@/components/research/AIResearchCharts";
+// Imported from the data module rather than the chart component: plain values
+// cannot cross a "use client" boundary into a server component.
+import { MODELS, STUDY } from "@/components/research/aiStudyData";
+
+// Everything quoted below is derived from the study data rather than typed by
+// hand, so a re-run cannot leave stale figures in the copy.
+const best = MODELS[0];
+const worst = MODELS[MODELS.length - 1];
+const bestErrorRate = ((best.wrong / (best.correct + best.partial + best.wrong)) * 100).toFixed(1);
+const worstErrorRate = ((worst.wrong / (worst.correct + worst.partial + worst.wrong)) * 100).toFixed(1);
+const notFullyRight = (100 - best.score).toFixed(1);
 
 export const metadata: Metadata = {
   title: "How Accurate is AI for UK Construction? | Fabrick Research",
-  description:
-    "Fabrick tested 12 AI models on 1,001 technical UK construction questions across 20 categories. Claude Opus 4.7 led at 78%. Paid models beat free by 12.8 percentage points. See the definitive results.",
+  description: `Fabrick tested ${STUDY.models} AI models on ${STUDY.questions.toLocaleString()} technical UK construction questions across ${STUDY.categories} categories. ${best.name} led at ${best.score}%. Paid models beat free by ${STUDY.gapPp} percentage points.`,
   keywords: [
     "AI construction accuracy",
     "AI model comparison construction",
-    "Claude Opus 4.7 construction",
-    "Claude Haiku 4.5 construction",
-    "ChatGPT construction accuracy",
-    "Perplexity construction",
     "UK construction AI research",
     "AI building regulations test",
     "construction AI benchmark",
+    "Claude Opus construction",
+    "GPT construction accuracy",
+    "Gemini construction",
   ],
   openGraph: {
     title: "How Accurate is AI for UK Construction? | Fabrick Research",
-    description:
-      "1,001 questions. 12 AI models. 20 categories. Fabrick's definitive accuracy benchmark for AI in UK construction.",
+    description: `${STUDY.questions.toLocaleString()} questions. ${STUDY.models} AI models. ${STUDY.categories} categories. Fabrick's accuracy benchmark for AI in UK construction.`,
     url: "https://pulse.fabrick.agency/research/ai-construction-search",
   },
 };
 
 const heroStats = [
-  { value: "1,001", label: "Questions" },
-  { value: "12", label: "AI Models" },
-  { value: "20", label: "Categories" },
-  { value: "78%", label: "Best Score", accent: true },
+  { value: STUDY.questions.toLocaleString(), label: "Questions" },
+  { value: String(STUDY.models), label: "AI Models" },
+  { value: String(STUDY.categories), label: "Categories" },
+  { value: `${best.score}%`, label: "Best Score", accent: true },
 ];
 
 const methodology = [
   {
     icon: Settings,
-    title: "1,001 Technical Questions",
-    text: "Questions spanning building regulations, British Standards, health and safety, fire safety, structural design and 15 other categories relevant to UK construction professionals.",
+    title: `${STUDY.questions.toLocaleString()} technical questions`,
+    text: `Building regulations, British Standards, health and safety, fire safety, structural design and ${STUDY.categories - 5} other categories. Every answer is tied to a named clause, table or section in a published UK document.`,
     accent: "pink" as const,
   },
   {
     icon: Layers,
-    title: "12 AI Models Tested",
-    text: "6 paid and 6 free models from OpenAI, Anthropic, Google, Mistral and Perplexity. Updated 5 May 2026 with Claude Opus 4.7 and Claude Haiku 4.5.",
+    title: `${STUDY.models} models, exact versions published`,
+    text: `${STUDY.paidCount} paid and ${STUDY.freeCount} free models from Anthropic, OpenAI, Google, xAI, Mistral, DeepSeek, Moonshot and Perplexity. Each is listed with the precise API identifier tested, not just a marketing name.`,
     accent: "teal" as const,
   },
   {
     icon: CheckCircle,
-    title: "3-Point Scoring",
-    text: "Each answer scored as Correct (full marks), Partial (half marks) or Wrong (zero). Scores verified against published standards and regulations.",
+    title: "Graded blind, by two AIs",
+    text: `Each answer is scored Correct, Partial or Wrong by two models from different vendors, neither told which AI wrote the answer. A score counts only where both agree. They agreed ${STUDY.judgeAgreement}% of the time.`,
     accent: "pink" as const,
   },
   {
     icon: Star,
-    title: "20 Specialist Categories",
-    text: "From Accessibility to Waterproofing, covering the full breadth of knowledge a UK construction professional might need from an AI assistant.",
+    title: "Identical prompt for every model",
+    text: "No documents supplied, no web search requested, no follow-up questions. This measures what each model knows unaided, which is how most people actually ask it.",
     accent: "teal" as const,
   },
 ];
 
 const findings = [
   {
-    stat: "78%",
+    stat: `${best.score}%`,
     label: "Highest overall score",
-    text: "Claude Opus 4.7 led the pack at 78%, edging out Opus 4.6 (77%). No model broke the 80% barrier, highlighting clear limits in AI's construction knowledge.",
+    text: `${best.name} led the field. No model was fully right on more than ${Math.round(best.score)}% of the marks available, which puts a hard ceiling on how far any of them can be trusted unaided.`,
     accent: "pink" as const,
   },
   {
-    stat: "12.8pp",
-    label: "Paid vs free gap",
-    text: "Paid models averaged 68.2% versus 55.4% for free models. A 12.8 percentage point gap that makes the business case for paid subscriptions clear.",
+    stat: `${STUDY.gapPp}pp`,
+    label: "Paid versus free gap",
+    text: `Paid models averaged ${STUDY.paidAvg}% against ${STUDY.freeAvg}% for free ones. If you use AI for construction work, the subscription is doing something.`,
     accent: "teal" as const,
   },
   {
-    stat: "4.8%",
+    stat: `${bestErrorRate}%`,
     label: "Lowest error rate",
-    text: "Claude Opus 4.7 had only 48 outright wrong answers from 1,001 questions. The worst performer got 400 wrong (40.0%).",
+    text: `Even the best model got ${best.wrong} of ${STUDY.questions.toLocaleString()} questions outright wrong. The weakest, ${worst.name}, got ${worst.wrong} wrong (${worstErrorRate}%).`,
     accent: "pink" as const,
   },
   {
-    stat: "91%",
-    label: "Best category score",
-    text: "Claude Opus 4.6 scored 91% on Sustainability and Carbon, with Opus 4.7 close behind at 89%. Well-documented, publicly available standards consistently produced higher AI accuracy.",
+    stat: `${notFullyRight}%`,
+    label: "Not fully right, best model",
+    text: `Counting partial credit, the leading model still failed to give a complete, correct answer on ${notFullyRight}% of the marks available. That is the number to hold in your head before relying on any of this.`,
     accent: "teal" as const,
   },
   {
-    stat: "Web",
-    label: "Perplexity advantage",
-    text: "Perplexity models consistently outperformed ChatGPT models, likely due to real-time web search giving access to current standards and guidance.",
+    stat: `${STUDY.judgeAgreement}%`,
+    label: "Inter-judge agreement",
+    text: `Two AI judges from different vendors agreed on ${STUDY.judgeAgreement}% of the ${STUDY.responses.toLocaleString()} answers. Disagreements were excluded rather than settled by picking a favourite judge.`,
     accent: "pink" as const,
   },
   {
-    stat: "48%",
-    label: "Worst category average",
-    text: "Construction Technology, Contracts, Waterproofing and Demolition all averaged under 50%. Paywalled and niche specialist standards are poorly represented in AI training data.",
+    stat: `${STUDY.bands}`,
+    label: "Groups, not places",
+    text: `Models within ${STUDY.tieBandPp} percentage points of each other are too close to separate, so the ${STUDY.models} models resolve into ${STUDY.bands} groups. Three lead the field; six more are bunched in the middle.`,
     accent: "teal" as const,
   },
 ];
 
 const conclusions = [
   {
-    title: "AI is useful but not reliable enough to replace professional judgement.",
-    text: "Even the best model got 22% of answers wrong or only partially right. For safety-critical decisions, always verify AI output against published standards.",
+    title: `Read the table as ${STUDY.bands} groups, not ${STUDY.models} places.`,
+    text: `Models within ${STUDY.tieBandPp} percentage points of each other are tied. Three models lead on ${best.score}% to ${MODELS[2].score}%; six more sit bunched together in the middle. Picking between models inside a band on these numbers would be reading noise.`,
   },
   {
-    title: "Pay for your AI tools.",
-    text: "The 12.8 percentage point gap between paid and free models is significant. If you're using AI for construction work, a paid subscription is recommended.",
+    title: "Useful for recall. Not a substitute for a competent person.",
+    text: `The best model still leaves ${notFullyRight}% of the available marks on the table. For anything that carries safety, regulatory or contractual weight, check the answer against the published document before you act on it.`,
   },
   {
-    title: "Web-connected AI performs better.",
-    text: "Perplexity's real-time web access gave it a measurable advantage over models relying purely on training data. Look for AI tools that can reference live sources.",
+    title: "Ask for the clause, then go and read it.",
+    text: "These models are strongest at telling you where a requirement lives. Used as a way into a document rather than a replacement for it, they save real time at low risk.",
   },
   {
-    title: "Specialist and paywalled standards remain a blind spot.",
-    text: "AI struggles most with niche areas like waterproofing, construction technology and contracts. These are precisely the areas where professionals need the most help.",
+    title: "Pay for the tool if the work matters.",
+    text: `A ${STUDY.gapPp} percentage point gap between paid and free is not a rounding error. If AI is touching billable work, the free tier is the wrong place to do it.`,
   },
   {
-    title: "AI accuracy tracks public data availability.",
-    text: "Well-documented areas like planning, health and safety, and sustainability score highest. Industry bodies should consider how their standards are made accessible to AI systems.",
+    title: "Specialist and paywalled standards remain the weak spot.",
+    text: "Accuracy tracks how freely available a document is. Areas that sit behind paywalls or in niche guidance score consistently worse, and those are often exactly where professionals need help.",
+  },
+  {
+    title: "Treat any figure here as a snapshot.",
+    text: "Several models tested are preview releases, and providers change models behind the same name. We publish the exact version identifiers so you can tell whether a result still applies.",
   },
 ];
 
@@ -162,7 +175,7 @@ export default function AIConstructionSearchPage() {
             </div>
             <span className="inline-flex items-center gap-1.5 rounded-full bg-teal px-3 py-1 text-[10px] font-bold uppercase tracking-wider text-white">
               <CheckCircle className="h-3 w-3" />
-              Research published 2025
+              Tested 28 July 2026
             </span>
           </div>
 
@@ -170,27 +183,49 @@ export default function AIConstructionSearchPage() {
             How Accurate is AI for UK Construction?
           </h1>
           <p className="mt-4 max-w-2xl text-lg text-gray-400">
-            1,001 questions. 12 AI models. 20 categories. One definitive answer.
+            {STUDY.questions.toLocaleString()} questions. {STUDY.models} AI models.{" "}
+            {STUDY.categories} categories. Graded blind, with the workings published.
           </p>
 
-          {/* Hero stats */}
           <div className="mt-8 grid grid-cols-2 gap-px overflow-hidden rounded-2xl bg-white/10 sm:grid-cols-4">
             {heroStats.map((s) => (
               <div key={s.label} className="bg-navy-light p-5 text-center">
-                <p className={`text-2xl md:text-3xl font-bold ${s.accent ? "text-teal" : "text-pink"}`}>{s.value}</p>
-                <p className="mt-1 text-[10px] font-semibold uppercase tracking-wider text-gray-400">{s.label}</p>
+                <p className={`text-2xl md:text-3xl font-bold ${s.accent ? "text-teal" : "text-pink"}`}>
+                  {s.value}
+                </p>
+                <p className="mt-1 text-[10px] font-semibold uppercase tracking-wider text-gray-400">
+                  {s.label}
+                </p>
               </div>
             ))}
           </div>
+
+          <Link
+            href="/research/ai-construction-search/methodology"
+            className="mt-6 inline-flex items-center gap-1.5 rounded-lg border border-white/20 px-4 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-white/10"
+          >
+            <FlaskConical className="h-4 w-4 text-teal" />
+            Read the full methodology and limitations
+            <ArrowRight className="h-3.5 w-3.5" />
+          </Link>
         </div>
       </section>
 
-      {/* Methodology */}
+      {/* Methodology summary */}
       <section className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8 md:py-16">
         <div className="mb-8 max-w-3xl">
-          <h2 className="font-[family-name:var(--font-playfair)] text-3xl font-bold text-navy md:text-4xl">Methodology</h2>
+          <h2 className="font-[family-name:var(--font-playfair)] text-3xl font-bold text-navy md:text-4xl">
+            How we tested
+          </h2>
           <p className="mt-2 text-warm-gray">
-            How we tested AI&apos;s knowledge of UK construction standards and regulations.
+            The short version. The{" "}
+            <Link
+              href="/research/ai-construction-search/methodology"
+              className="font-semibold text-teal underline underline-offset-2"
+            >
+              full methodology
+            </Link>{" "}
+            lists every model version, the scoring rubric, and where this study is weak.
           </p>
         </div>
         <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
@@ -217,12 +252,18 @@ export default function AIConstructionSearchPage() {
           <div className="mb-8 max-w-3xl">
             <div className="flex items-center gap-2 mb-2">
               <BarChart3 className="h-5 w-5 text-teal" />
-              <span className="text-[11px] font-semibold uppercase tracking-[0.18em] text-teal">Overall Rankings</span>
+              <span className="text-[11px] font-semibold uppercase tracking-[0.18em] text-teal">
+                Overall Rankings
+              </span>
             </div>
             <h2 className="font-[family-name:var(--font-playfair)] text-3xl font-bold text-navy md:text-4xl">
-              All 10 models ranked by accuracy
+              All {STUDY.models} models, scored and grouped
             </h2>
-            <p className="mt-2 text-warm-gray">Across 1,001 questions covering UK construction standards and regulations.</p>
+            <p className="mt-2 text-warm-gray">
+              Across {STUDY.questions.toLocaleString()} questions on UK construction standards and
+              regulations. Models close enough to be tied are grouped rather than separated by
+              place. Hover any bar for the correct, partial and wrong split.
+            </p>
           </div>
           <AIRankingsChart />
         </div>
@@ -234,7 +275,9 @@ export default function AIConstructionSearchPage() {
           <div className="mb-8 max-w-3xl">
             <div className="flex items-center gap-2 mb-2">
               <Award className="h-5 w-5 text-pink" />
-              <span className="text-[11px] font-semibold uppercase tracking-[0.18em] text-pink">Key Findings</span>
+              <span className="text-[11px] font-semibold uppercase tracking-[0.18em] text-pink">
+                Key Findings
+              </span>
             </div>
             <h2 className="font-[family-name:var(--font-playfair)] text-3xl font-bold md:text-4xl">
               What the data reveals about AI in UK construction
@@ -243,8 +286,12 @@ export default function AIConstructionSearchPage() {
           <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
             {findings.map((f) => (
               <div key={f.label} className="rounded-2xl bg-navy-light p-6">
-                <p className={`text-4xl font-bold ${f.accent === "pink" ? "text-pink" : "text-teal"}`}>{f.stat}</p>
-                <p className="mt-1 text-xs font-semibold uppercase tracking-wider text-gray-400">{f.label}</p>
+                <p className={`text-4xl font-bold ${f.accent === "pink" ? "text-pink" : "text-teal"}`}>
+                  {f.stat}
+                </p>
+                <p className="mt-1 text-xs font-semibold uppercase tracking-wider text-gray-400">
+                  {f.label}
+                </p>
                 <p className="mt-3 text-sm leading-relaxed text-gray-300">{f.text}</p>
               </div>
             ))}
@@ -257,23 +304,32 @@ export default function AIConstructionSearchPage() {
         <div className="mb-8 max-w-3xl">
           <div className="flex items-center gap-2 mb-2">
             <TrendingUp className="h-5 w-5 text-pink" />
-            <span className="text-[11px] font-semibold uppercase tracking-[0.18em] text-pink">Paid vs Free</span>
+            <span className="text-[11px] font-semibold uppercase tracking-[0.18em] text-pink">
+              Paid vs Free
+            </span>
           </div>
           <h2 className="font-[family-name:var(--font-playfair)] text-3xl font-bold text-navy md:text-4xl">
             Is paying for AI worth it in construction?
           </h2>
-          <p className="mt-2 text-warm-gray">The data is decisive.</p>
+          <p className="mt-2 text-warm-gray">
+            &ldquo;Paid&rdquo; means a professional would need a paid subscription or paid API access
+            to reach that model. The full definition is in the methodology.
+          </p>
         </div>
         <div className="mb-6 grid gap-4 sm:grid-cols-2">
           <div className="rounded-2xl bg-teal p-6 text-white">
-            <p className="text-xs font-semibold uppercase tracking-wider text-white/80">Paid models average</p>
-            <p className="mt-2 text-5xl font-bold">68.2%</p>
-            <p className="mt-1 text-sm text-white/80">6 models tested</p>
+            <p className="text-xs font-semibold uppercase tracking-wider text-white/80">
+              Paid models average
+            </p>
+            <p className="mt-2 text-5xl font-bold">{STUDY.paidAvg}%</p>
+            <p className="mt-1 text-sm text-white/80">{STUDY.paidCount} models tested</p>
           </div>
           <div className="rounded-2xl bg-pink p-6 text-white">
-            <p className="text-xs font-semibold uppercase tracking-wider text-white/80">Free models average</p>
-            <p className="mt-2 text-5xl font-bold">55.4%</p>
-            <p className="mt-1 text-sm text-white/80">6 models tested</p>
+            <p className="text-xs font-semibold uppercase tracking-wider text-white/80">
+              Free models average
+            </p>
+            <p className="mt-2 text-5xl font-bold">{STUDY.freeAvg}%</p>
+            <p className="mt-1 text-sm text-white/80">{STUDY.freeCount} models tested</p>
           </div>
         </div>
         <AIPaidFreeChart />
@@ -285,10 +341,12 @@ export default function AIConstructionSearchPage() {
           <div className="mb-8 max-w-3xl">
             <div className="flex items-center gap-2 mb-2">
               <Globe className="h-5 w-5 text-teal" />
-              <span className="text-[11px] font-semibold uppercase tracking-[0.18em] text-teal">Category Heatmap</span>
+              <span className="text-[11px] font-semibold uppercase tracking-[0.18em] text-teal">
+                Category Heatmap
+              </span>
             </div>
             <h2 className="font-[family-name:var(--font-playfair)] text-3xl font-bold text-navy md:text-4xl">
-              All 20 categories across all 10 models
+              All {STUDY.categories} categories across all {STUDY.models} models
             </h2>
             <p className="mt-2 text-warm-gray">Green is good. Red is risky.</p>
           </div>
@@ -301,12 +359,16 @@ export default function AIConstructionSearchPage() {
         <div className="mb-8 max-w-3xl">
           <div className="flex items-center gap-2 mb-2">
             <BarChart3 className="h-5 w-5 text-pink" />
-            <span className="text-[11px] font-semibold uppercase tracking-[0.18em] text-pink">Category Deep Dive</span>
+            <span className="text-[11px] font-semibold uppercase tracking-[0.18em] text-pink">
+              Category Deep Dive
+            </span>
           </div>
           <h2 className="font-[family-name:var(--font-playfair)] text-3xl font-bold text-navy md:text-4xl">
             Compare model performance by category
           </h2>
-          <p className="mt-2 text-warm-gray">Select any of the 20 categories to see how each model performed.</p>
+          <p className="mt-2 text-warm-gray">
+            Select any of the {STUDY.categories} categories to see how each model performed.
+          </p>
         </div>
         <AICategoryDeepDive />
       </section>
@@ -317,7 +379,9 @@ export default function AIConstructionSearchPage() {
           <div className="mb-8">
             <div className="flex items-center gap-2 mb-2">
               <AlertTriangle className="h-5 w-5 text-pink" />
-              <span className="text-[11px] font-semibold uppercase tracking-[0.18em] text-pink">Conclusions</span>
+              <span className="text-[11px] font-semibold uppercase tracking-[0.18em] text-pink">
+                Conclusions
+              </span>
             </div>
             <h2 className="font-[family-name:var(--font-playfair)] text-3xl font-bold text-navy md:text-4xl">
               What this means for UK construction professionals
@@ -339,20 +403,40 @@ export default function AIConstructionSearchPage() {
         </div>
       </section>
 
-      {/* Footer note + back to research */}
+      {/* Footer note */}
       <section className="mx-auto max-w-4xl px-4 py-10 sm:px-6 lg:px-8">
         <div className="rounded-2xl border border-cream-dark bg-white p-6">
           <p className="text-sm leading-relaxed text-warm-gray">
-            This study was conducted by Fabrick in 2025. All questions were written by construction industry
-            professionals and verified against published UK standards and regulations. Models tested using identical
-            prompts and 3-point scoring (Correct / Partial / Wrong).
+            All {STUDY.responses.toLocaleString()} answers were collected from the models on 28 July
+            2026, with scoring completed on 29 July 2026. The {STUDY.questions.toLocaleString()}{" "}
+            questions were generated against published UK standards and Approved Documents, with each
+            answer tied to a specific clause, table or section; they have not been independently
+            verified by a chartered professional. Answers were graded by two AI models from different
+            vendors, blind to which model produced each answer, and counted only where both agreed.
+            Exact model versions, the scoring rubric and the study&apos;s limitations are set out in
+            the{" "}
+            <Link
+              href="/research/ai-construction-search/methodology"
+              className="font-semibold text-teal underline underline-offset-2"
+            >
+              methodology
+            </Link>
+            .
           </p>
           <div className="mt-5 flex flex-wrap gap-3">
             <Link
-              href="/research"
+              href="/research/ai-construction-search/methodology"
               className="inline-flex items-center gap-1.5 rounded-lg bg-charcoal px-4 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-navy-light"
             >
-              <BookOpen className="h-4 w-4" />
+              <FlaskConical className="h-4 w-4" />
+              Methodology
+              <ArrowRight className="h-3.5 w-3.5" />
+            </Link>
+            <Link
+              href="/research"
+              className="inline-flex items-center gap-1.5 rounded-lg border border-cream-dark bg-white px-4 py-2.5 text-sm font-semibold text-navy transition-colors hover:bg-cream"
+            >
+              <BookOpen className="h-4 w-4 text-teal" />
               All Research
               <ArrowRight className="h-3.5 w-3.5" />
             </Link>

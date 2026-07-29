@@ -13,65 +13,14 @@ import {
   LabelList,
 } from "recharts";
 
-// ──────────────────────────────────────────────────
-// Data — Fabrick AI in Construction Test (2025)
-// ──────────────────────────────────────────────────
+// Study data lives in aiStudyData.ts, which is deliberately not a client
+// module so the server-rendered pages can import the same values. Re-exported
+// here so existing imports from this file keep working.
+import { MODELS, MODEL_ORDER, MODEL_NAMES, CATEGORIES, STUDY } from "./aiStudyData";
+import type { ModelRow, CategoryRow } from "./aiStudyData";
 
-export interface ModelRow {
-  id: string;
-  name: string;
-  score: number;
-  correct: number;
-  partial: number;
-  wrong: number;
-  paid: boolean;
-}
-
-export const MODELS: ModelRow[] = [
-  { id: "claude_opus_47", name: "Claude Opus 4.7", score: 78.0, correct: 609, partial: 344, wrong: 48, paid: true },
-  { id: "claude_opus", name: "Claude Opus 4.6", score: 77.0, correct: 587, partial: 367, wrong: 47, paid: true },
-  { id: "perplexity_pro", name: "Perplexity Pro", score: 69.6, correct: 502, partial: 390, wrong: 109, paid: true },
-  { id: "perplexity", name: "Perplexity", score: 68.0, correct: 478, partial: 405, wrong: 118, paid: false },
-  { id: "mistral_large", name: "Mistral Large", score: 64.9, correct: 432, partial: 436, wrong: 133, paid: true },
-  { id: "claude_sonnet", name: "Claude Sonnet 4.6", score: 64.8, correct: 436, partial: 426, wrong: 139, paid: false },
-  { id: "gemini_paid", name: "Gemini 2.5 Pro", score: 62.1, correct: 408, partial: 427, wrong: 166, paid: true },
-  { id: "chatgpt_paid", name: "ChatGPT 5.4", score: 57.4, correct: 355, partial: 440, wrong: 206, paid: true },
-  { id: "mistral_small", name: "Mistral Small", score: 54.4, correct: 328, partial: 434, wrong: 239, paid: false },
-  { id: "claude_haiku_45", name: "Claude Haiku 4.5", score: 52.9, correct: 304, partial: 452, wrong: 245, paid: false },
-  { id: "chatgpt_free", name: "ChatGPT Free 5.3", score: 49.3, correct: 271, partial: 444, wrong: 286, paid: false },
-  { id: "gemini_free", name: "Gemini 2.5 Flash", score: 42.9, correct: 258, partial: 343, wrong: 400, paid: false },
-];
-
-export const MODEL_ORDER = MODELS.map((m) => m.id);
-export const MODEL_NAMES: Record<string, string> = Object.fromEntries(MODELS.map((m) => [m.id, m.name]));
-
-export interface CategoryRow {
-  questions: number;
-  scores: Record<string, number>;
-}
-
-export const CATEGORIES: Record<string, CategoryRow> = {
-  "Accessibility & Inclusive Design": { questions: 50, scores: { claude_opus_47: 74, claude_opus: 67, perplexity_pro: 62, perplexity: 52, mistral_large: 61, claude_sonnet: 45, gemini_paid: 58, chatgpt_paid: 40, mistral_small: 38, claude_haiku_45: 37, chatgpt_free: 35, gemini_free: 34 } },
-  "British Standards - Concrete & Steel": { questions: 50, scores: { claude_opus_47: 83, claude_opus: 80, perplexity_pro: 80, perplexity: 78, mistral_large: 79, claude_sonnet: 72, gemini_paid: 76, chatgpt_paid: 65, mistral_small: 60, claude_haiku_45: 71, chatgpt_free: 51, gemini_free: 55 } },
-  "British Standards - Other Materials": { questions: 50, scores: { claude_opus_47: 85, claude_opus: 87, perplexity: 82, perplexity_pro: 79, gemini_paid: 80, mistral_large: 74, claude_sonnet: 77, chatgpt_paid: 67, mistral_small: 65, claude_haiku_45: 64, chatgpt_free: 58, gemini_free: 56 } },
-  "Building Regulations - Fire Safety": { questions: 55, scores: { claude_opus_47: 80, claude_opus: 87, claude_sonnet: 77, mistral_large: 77, gemini_paid: 74, perplexity_pro: 73, perplexity: 69, chatgpt_paid: 65, mistral_small: 58, claude_haiku_45: 58, chatgpt_free: 52, gemini_free: 55 } },
-  "Building Regulations - Other Parts": { questions: 50, scores: { claude_opus_47: 77, claude_opus: 78, perplexity: 74, perplexity_pro: 74, gemini_paid: 70, claude_sonnet: 67, mistral_large: 65, chatgpt_paid: 55, mistral_small: 52, claude_haiku_45: 54, chatgpt_free: 48, gemini_free: 52 } },
-  "Building Regulations - Thermal": { questions: 50, scores: { claude_opus_47: 78, claude_opus: 87, perplexity_pro: 75, gemini_paid: 72, perplexity: 71, claude_sonnet: 65, mistral_large: 62, chatgpt_paid: 55, mistral_small: 50, claude_haiku_45: 51, chatgpt_free: 42, gemini_free: 48 } },
-  "Construction Technology": { questions: 50, scores: { claude_opus_47: 71, claude_opus: 73, perplexity_pro: 66, perplexity: 59, gemini_paid: 55, claude_sonnet: 52, mistral_large: 49, chatgpt_paid: 42, mistral_small: 38, claude_haiku_45: 51, chatgpt_free: 33, gemini_free: 28 } },
-  "Contracts & Procurement": { questions: 55, scores: { claude_opus_47: 70, claude_opus: 64, claude_sonnet: 56, perplexity_pro: 55, mistral_large: 53, perplexity: 50, gemini_paid: 50, chatgpt_paid: 42, mistral_small: 38, claude_haiku_45: 49, chatgpt_free: 30, gemini_free: 32 } },
-  "Demolition & Refurbishment": { questions: 41, scores: { claude_opus_47: 73, claude_opus: 71, perplexity: 61, perplexity_pro: 61, claude_sonnet: 58, gemini_paid: 56, mistral_large: 55, chatgpt_paid: 48, mistral_small: 44, claude_haiku_45: 50, chatgpt_free: 40, gemini_free: 36 } },
-  "Environmental & Contamination": { questions: 45, scores: { claude_opus_47: 81, perplexity_pro: 70, perplexity: 68, claude_opus: 66, gemini_paid: 60, claude_sonnet: 58, mistral_large: 55, chatgpt_paid: 50, mistral_small: 46, claude_haiku_45: 48, chatgpt_free: 42, gemini_free: 42 } },
-  "Fire Safety - Post-Grenfell": { questions: 50, scores: { claude_opus_47: 84, claude_opus: 79, perplexity: 76, perplexity_pro: 74, mistral_large: 68, gemini_paid: 67, claude_sonnet: 66, chatgpt_paid: 57, mistral_small: 52, claude_haiku_45: 45, chatgpt_free: 45, gemini_free: 48 } },
-  "Health & Safety / CDM": { questions: 50, scores: { claude_opus_47: 84, claude_opus: 78, perplexity: 76, perplexity_pro: 72, gemini_paid: 72, mistral_large: 69, claude_sonnet: 68, chatgpt_paid: 61, mistral_small: 58, claude_haiku_45: 49, chatgpt_free: 54, gemini_free: 56 } },
-  "MEP & Building Services": { questions: 50, scores: { claude_opus_47: 73, claude_opus: 73, perplexity_pro: 71, perplexity: 70, gemini_paid: 63, claude_sonnet: 62, mistral_large: 58, chatgpt_paid: 50, mistral_small: 45, claude_haiku_45: 49, chatgpt_free: 38, gemini_free: 46 } },
-  "Materials & Products": { questions: 50, scores: { claude_opus_47: 77, claude_opus: 77, perplexity_pro: 73, perplexity: 70, gemini_paid: 68, mistral_large: 64, claude_sonnet: 64, chatgpt_paid: 56, mistral_small: 50, claude_haiku_45: 61, chatgpt_free: 44, gemini_free: 58 } },
-  "NHBC Standards": { questions: 50, scores: { claude_opus_47: 73, claude_opus: 75, perplexity_pro: 64, mistral_large: 64, perplexity: 62, gemini_paid: 60, claude_sonnet: 60, chatgpt_paid: 52, mistral_small: 48, claude_haiku_45: 54, chatgpt_free: 42, gemini_free: 42 } },
-  "Planning & Permitted Development": { questions: 55, scores: { claude_opus_47: 86, claude_opus: 87, perplexity: 76, perplexity_pro: 76, mistral_large: 73, claude_sonnet: 73, gemini_paid: 72, chatgpt_paid: 67, mistral_small: 62, claude_haiku_45: 57, chatgpt_free: 55, gemini_free: 44 } },
-  "Roofing & Cladding": { questions: 50, scores: { claude_opus_47: 74, claude_opus: 76, perplexity_pro: 66, claude_sonnet: 65, perplexity: 62, gemini_paid: 58, mistral_large: 57, chatgpt_paid: 48, mistral_small: 42, claude_haiku_45: 54, chatgpt_free: 38, gemini_free: 46 } },
-  "Structural Design & Loading": { questions: 50, scores: { claude_opus_47: 84, claude_opus: 82, perplexity: 77, mistral_large: 77, perplexity_pro: 75, gemini_paid: 70, claude_sonnet: 68, chatgpt_paid: 60, mistral_small: 55, claude_haiku_45: 65, chatgpt_free: 48, gemini_free: 56 } },
-  "Sustainability & Carbon": { questions: 50, scores: { claude_opus_47: 89, claude_opus: 91, claude_sonnet: 78, perplexity_pro: 78, gemini_paid: 75, perplexity: 72, mistral_large: 72, chatgpt_paid: 65, mistral_small: 60, claude_haiku_45: 57, chatgpt_free: 55, gemini_free: 60 } },
-  "Waterproofing & Below-Ground": { questions: 50, scores: { claude_opus_47: 63, claude_opus: 59, claude_sonnet: 57, gemini_paid: 53, perplexity_pro: 52, perplexity: 50, mistral_large: 47, chatgpt_paid: 42, mistral_small: 38, claude_haiku_45: 33, chatgpt_free: 33, gemini_free: 34 } },
-};
+export { MODELS, MODEL_ORDER, MODEL_NAMES, CATEGORIES, STUDY };
+export type { ModelRow, CategoryRow };
 
 const TEAL = "#00BFA5";
 const PINK = "#FF3D7F";
@@ -82,6 +31,10 @@ const PINK = "#FF3D7F";
 
 export function AIRankingsChart() {
   const data = MODELS.map((m) => ({ ...m }));
+  // Models within the tie band scored closely enough that the order between
+  // them is not meaningful. Grouping them keeps the chart from implying a
+  // precision the data does not support.
+  const bands = Array.from(new Set(data.map((m) => m.band)));
   return (
     <div className="rounded-2xl bg-white p-6 shadow-sm">
       <div className="mb-4 flex flex-wrap items-center gap-4 text-xs">
@@ -94,18 +47,37 @@ export function AIRankingsChart() {
           <span className="text-warm-gray">Free model</span>
         </div>
       </div>
-      <div className="h-[460px] w-full">
+      <p className="mb-4 rounded-lg bg-cream px-3 py-2 text-xs leading-relaxed text-warm-gray">
+        <strong className="text-navy">Read these as {bands.length} groups, not 18 places.</strong>{" "}
+        Models within {STUDY.tieBandPp} percentage points of each other are tied, because gaps that
+        small sit inside the margin of the scoring method. Hover any bar for the exact model version
+        tested and the models it ties with.
+      </p>
+      {/* Height scales with the model count so bars stay legible as the
+          line-up changes between waves. */}
+      <div className="w-full" style={{ height: Math.max(460, data.length * 34 + 48) }}>
         <ResponsiveContainer width="100%" height="100%">
           <BarChart data={data} layout="vertical" margin={{ top: 8, right: 40, left: 8, bottom: 8 }}>
             <CartesianGrid horizontal={false} stroke="#E5DFD5" />
             <XAxis type="number" domain={[0, 100]} tickFormatter={(v) => `${v}%`} stroke="#8A8A9A" fontSize={11} />
-            <YAxis type="category" dataKey="name" width={140} stroke="#2D2D3F" fontSize={12} tick={{ fontWeight: 600 }} />
+            <YAxis type="category" dataKey="name" width={150} stroke="#2D2D3F" fontSize={12} tick={{ fontWeight: 600 }} />
             <Tooltip
               cursor={{ fill: "rgba(0,191,165,0.06)" }}
               contentStyle={{ background: "#1A1A2E", border: "none", borderRadius: 8, color: "#fff", fontSize: 12 }}
               formatter={(value, _name, ctx) => {
-                const m = data[(ctx as { payload?: { index?: number } }).payload?.index ?? 0];
-                return [`${value}% — Correct ${m?.correct} | Partial ${m?.partial} | Wrong ${m?.wrong}`, "Score"];
+                // Read the row straight off the payload rather than by index:
+                // the previous index lookup silently returned the wrong model
+                // whenever Recharts reordered or filtered the series.
+                const m = (ctx as { payload?: ModelRow }).payload;
+                if (!m) return [`${value}%`, "Score"];
+                const ties = data.filter((d) => d.band === m.band && d.id !== m.id);
+                const tieNote = ties.length
+                  ? ` — tied with ${ties.map((t) => t.name).join(", ")}`
+                  : " — no other model within the tie band";
+                return [
+                  `${value}%  (Correct ${m.correct} | Partial ${m.partial} | Wrong ${m.wrong})${tieNote}`,
+                  m.modelId,
+                ];
               }}
             />
             <Bar dataKey="score" radius={[0, 6, 6, 0]}>
@@ -131,9 +103,9 @@ export function AIPaidFreeChart() {
   const data = [...paid, ...free];
   return (
     <div className="rounded-2xl bg-white p-6 shadow-sm">
-      <div className="h-[400px] w-full">
+      <div className="w-full" style={{ height: 440 }}>
         <ResponsiveContainer width="100%" height="100%">
-          <BarChart data={data} margin={{ top: 8, right: 8, left: 8, bottom: 60 }}>
+          <BarChart data={data} margin={{ top: 8, right: 8, left: 8, bottom: 96 }}>
             <CartesianGrid vertical={false} stroke="#E5DFD5" />
             <XAxis dataKey="name" stroke="#2D2D3F" fontSize={11} angle={-30} textAnchor="end" interval={0} />
             <YAxis domain={[0, 100]} tickFormatter={(v) => `${v}%`} stroke="#8A8A9A" fontSize={11} />
@@ -241,12 +213,14 @@ export function AICategoryDeepDive() {
           ))}
         </select>
       </div>
-      <div className="h-[460px] w-full">
+      {/* Height scales with the model count so bars stay legible as the
+          line-up changes between waves. */}
+      <div className="w-full" style={{ height: Math.max(460, data.length * 34 + 48) }}>
         <ResponsiveContainer width="100%" height="100%">
           <BarChart data={data} layout="vertical" margin={{ top: 8, right: 40, left: 8, bottom: 8 }}>
             <CartesianGrid horizontal={false} stroke="#E5DFD5" />
             <XAxis type="number" domain={[0, 100]} tickFormatter={(v) => `${v}%`} stroke="#8A8A9A" fontSize={11} />
-            <YAxis type="category" dataKey="name" width={140} stroke="#2D2D3F" fontSize={12} tick={{ fontWeight: 600 }} />
+            <YAxis type="category" dataKey="name" width={150} stroke="#2D2D3F" fontSize={12} tick={{ fontWeight: 600 }} />
             <Tooltip
               cursor={{ fill: "rgba(0,191,165,0.06)" }}
               contentStyle={{ background: "#1A1A2E", border: "none", borderRadius: 8, color: "#fff", fontSize: 12 }}

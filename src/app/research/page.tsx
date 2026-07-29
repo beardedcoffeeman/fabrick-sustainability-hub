@@ -12,6 +12,7 @@ import {
   Building2,
 } from "lucide-react";
 import { EmailCaptureInline } from "@/components/research/EmailCaptureForm";
+import { MODELS as AI_MODELS, STUDY } from "@/components/research/aiStudyData";
 
 export const metadata: Metadata = {
   title: "Original UK Construction Research | Pulse by Fabrick",
@@ -48,10 +49,9 @@ const researchStudies = [
   {
     slug: "ai-construction-search",
     title: "How Accurate is AI for UK Construction?",
-    status: "Updated May 2026",
-    description:
-      "Fabrick tested 12 AI models on 1,001 technical UK construction questions across 20 categories. Claude Opus 4.7 led at 78%. Paid models beat free by 12.8 percentage points. The definitive accuracy benchmark.",
-    statsPreview: "1,001 questions | 12 AI models | 20 categories",
+    status: "Updated July 2026",
+    description: `Fabrick put ${STUDY.questions.toLocaleString()} technical UK construction questions to ${STUDY.models} AI models across ${STUDY.categories} categories, including the newest releases from Anthropic, OpenAI, Google and Moonshot. ${AI_MODELS[0].name} led at ${AI_MODELS[0].score}%. Paid models beat free by ${STUDY.gapPp} percentage points. Every answer graded blind by two AI judges, with the exact model versions published.`,
+    statsPreview: `${STUDY.questions.toLocaleString()} questions | ${STUDY.models} AI models | ${STUDY.categories} categories`,
     tags: ["AI", "Accuracy Benchmark", "UK Standards", "Model Comparison"],
     icon: Brain,
     published: true,
