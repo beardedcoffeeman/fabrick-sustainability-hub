@@ -28,6 +28,20 @@
     ]
   },
   {
+    "id": "heat-network-zoning",
+    "title": "Heat Network Zoning (England) - Government Response Published",
+    "date": "2026-01-01",
+    "status": "upcoming",
+    "category": "energy",
+    "description": "The Government published its response to the heat network zoning consultation in January 2026, confirming a zoning model under Energy Act 2023 powers. Local authorities designate zones, a national digital zoning service is built, and a competitively appointed developer gets exclusive rights within a zone. Regulations are not yet in force, with the service in private beta ahead of public beta and commencement.",
+    "impact": "Developers should monitor emerging heat network zone designations, as buildings within zones may face connection requirements once regulations commence.",
+    "affectedRoles": [
+      "developer",
+      "contractor",
+      "architect"
+    ]
+  },
+  {
     "id": "uknzcbs",
     "title": "UK Net Zero Carbon Building Standard (UKNZCBS) - Published",
     "date": "2026-01-15",
@@ -113,6 +127,19 @@
     ]
   },
   {
+    "id": "biodiversity-net-gain",
+    "title": "Biodiversity Net Gain - Small Sites Compliance",
+    "date": "2026-08-06",
+    "status": "active",
+    "category": "reporting",
+    "description": "Under SI 2026/790, new biodiversity net gain exemptions take effect from 6 August 2026 for planning applications made on or after that date. A 0.2 hectare exemption applies to the smallest developments (unless onsite priority habitat is negatively impacted), alongside a temporary development exemption. Minor sites over 0.2 ha not otherwise exempt may go straight to offsite units. The self- and custom-build exemption is removed. Existing applications and permissions remain under current rules.",
+    "impact": "Developers should check whether new sites fall under the 0.2 ha or temporary development exemptions and factor BNG requirements into feasibility only where applicable.",
+    "affectedRoles": [
+      "developer",
+      "architect"
+    ]
+  },
+  {
     "id": "uk-srs-mandatory",
     "title": "UK SRS - Mandatory FCA Rules Expected",
     "date": "2026-10-01",
@@ -131,8 +158,8 @@
     "date": "2026-10-01",
     "status": "upcoming",
     "category": "trade",
-    "description": "Importers of steel, aluminium, cement, ceramics, and fertiliser must register ahead of the UK Carbon Border Adjustment Mechanism launch in January 2027. A minimum registration threshold of \u00a350,000 of relevant imports applies (raised from the originally proposed \u00a310,000).",
-    "impact": "Importers should assess whether they exceed the \u00a350,000 threshold, understand the carbon content of their supply chain, and prepare reporting systems.",
+    "description": "Importers of steel, aluminium, cement, ceramics, and fertiliser must register ahead of the UK Carbon Border Adjustment Mechanism launch in January 2027. A minimum registration threshold of £50,000 of relevant imports applies (raised from the originally proposed £10,000).",
+    "impact": "Importers should assess whether they exceed the £50,000 threshold, understand the carbon content of their supply chain, and prepare reporting systems.",
     "affectedRoles": [
       "manufacturer",
       "contractor"
@@ -179,32 +206,6 @@
     ]
   },
   {
-    "id": "epc-c-minimum",
-    "title": "EPC Rating C Minimum - Non-Domestic (Proposed)",
-    "date": "2027-04-01",
-    "status": "future",
-    "category": "energy",
-    "description": "Proposed MEES tightening requiring non-domestic rented buildings to achieve minimum EPC Rating C. Government consultation response still awaited - date may shift to 2028.",
-    "impact": "Landlords must retrofit properties or face penalties. Major retrofit wave expected. Demand for energy consultancy and building services design to surge.",
-    "affectedRoles": [
-      "developer",
-      "contractor"
-    ]
-  },
-  {
-    "id": "biodiversity-net-gain",
-    "title": "Biodiversity Net Gain - Small Sites Compliance",
-    "date": "2027-04-01",
-    "status": "future",
-    "category": "reporting",
-    "description": "All developments including small sites must deliver minimum 10% biodiversity net gain, measured using the statutory biodiversity metric. Two-year transition period from February 2024 mandate for major sites.",
-    "impact": "All developers must factor BNG costs and land requirements into project feasibility. Habitat banking market growing rapidly.",
-    "affectedRoles": [
-      "developer",
-      "architect"
-    ]
-  },
-  {
     "id": "epc-metrics-reform",
     "title": "EPC Reform - New Energy Performance Metrics",
     "date": "2027-07-01",
@@ -224,7 +225,7 @@
     "date": "2028-01-01",
     "status": "future",
     "category": "carbon",
-    "description": "Expected introduction of mandatory whole-life carbon reporting and embodied carbon limits for buildings over 1,000m\u00b2. Will require A1-A5 reporting at planning stage and whole-life (A-C) at completion.",
+    "description": "Expected introduction of mandatory whole-life carbon reporting and embodied carbon limits for buildings over 1,000m². Will require A1-A5 reporting at planning stage and whole-life (A-C) at completion.",
     "impact": "Material selection becomes carbon-critical. Low-carbon specification, design for disassembly, and material passports will become standard practice.",
     "affectedRoles": [
       "developer",
@@ -254,12 +255,25 @@
     "date": "2030-10-01",
     "status": "upcoming",
     "category": "energy",
-    "description": "Government response published 21 January 2026 confirming privately rented homes in England and Wales must meet the equivalent of EPC C by a single compliance date of 1 October 2030. A dual-metric standard applies (fabric performance first, then a heating-system or smart-readiness standard), with a raised cost cap of \u00a310,000 and 10-year exemption validity. Legislation to follow, with a statutory instrument aimed to come into force in 2027.",
-    "impact": "Landlords should plan retrofits now to meet EPC C by 1 October 2030, budgeting up to the \u00a310,000 cost cap and prioritising fabric-first improvements.",
+    "description": "Government response published 21 January 2026 confirming privately rented homes in England and Wales must meet the equivalent of EPC C by a single compliance date of 1 October 2030. A dual-metric standard applies (fabric performance first, then a heating-system or smart-readiness standard), with a raised cost cap of £10,000 and 10-year exemption validity. Legislation to follow, with a statutory instrument aimed to come into force in 2027.",
+    "impact": "Landlords should plan retrofits now to meet EPC C by 1 October 2030, budgeting up to the £10,000 cost cap and prioritising fabric-first improvements.",
     "affectedRoles": [
       "developer",
       "contractor",
       "manufacturer"
+    ]
+  },
+  {
+    "id": "epc-c-minimum",
+    "title": "EPC Rating C Minimum - Non-Domestic (Proposed)",
+    "date": "2031-01-01",
+    "status": "future",
+    "category": "energy",
+    "description": "In a written ministerial statement on 18 June 2026 (HCWS126), the Government confirmed the previously consulted 2027 interim EPC C milestone for privately rented non-domestic buildings will NOT be taken forward. Instead, from 2031, privately rented non-domestic buildings over 1,000m2 in England and Wales must meet EPC B where cost-effective. Buildings below 1,000m2 remain subject to the current EPC E minimum. Secondary legislation and a full consultation response are still to follow.",
+    "impact": "Non-domestic landlords should plan retrofits toward EPC B for buildings over 1,000m2 by 2031, while noting the 2027 EPC C milestone has been dropped and smaller buildings remain at EPC E.",
+    "affectedRoles": [
+      "developer",
+      "contractor"
     ]
   }
 ]
