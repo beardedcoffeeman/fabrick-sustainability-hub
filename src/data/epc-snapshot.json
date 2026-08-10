@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-03T09:36:50.547Z",
+  "generatedAt": "2026-08-10T07:23:52.125Z",
   "source": "MHCLG Get Energy Performance of Buildings register (api.get-energy-performance-data.communities.gov.uk)",
   "notes": [
     "England + Wales only. Scotland and Northern Ireland use separate registers.",
@@ -8,16 +8,16 @@
     "Below-C share covers bands D, E, F, G. Band D is currently MEES-compliant; the 2027/2030 proposals bring D into scope."
   ],
   "national": {
-    "total": 3952,
-    "belowCPct": 53.213562753036435,
-    "urgentPct": 15.156882591093119,
-    "compliantPct": 46.786437246963565,
+    "total": 3953,
+    "belowCPct": 53.17480394636984,
+    "urgentPct": 15.127751075132812,
+    "compliantPct": 46.82519605363015,
     "bandCounts": {
       "A": 12,
       "B": 424,
-      "C": 1413,
+      "C": 1415,
       "D": 1504,
-      "E": 492,
+      "E": 491,
       "F": 78,
       "G": 29
     }
@@ -49,36 +49,17 @@
       "bandCounts": {
         "A": 2,
         "B": 2,
-        "C": 38,
-        "D": 107,
+        "C": 39,
+        "D": 106,
         "E": 54,
         "F": 12,
         "G": 2
       },
-      "belowCPct": 80.64516129032258,
+      "belowCPct": 80.18433179723502,
       "urgentPct": 31.336405529953915,
-      "compliantPct": 19.35483870967742,
+      "compliantPct": 19.81566820276498,
       "postcodesSampled": 10,
       "postcodesWithData": 8
-    },
-    {
-      "city": "Norwich",
-      "region": "East of England",
-      "total": 68,
-      "bandCounts": {
-        "A": 0,
-        "B": 1,
-        "C": 13,
-        "D": 36,
-        "E": 16,
-        "F": 2,
-        "G": 0
-      },
-      "belowCPct": 79.41176470588235,
-      "urgentPct": 26.47058823529412,
-      "compliantPct": 20.588235294117645,
-      "postcodesSampled": 10,
-      "postcodesWithData": 7
     },
     {
       "city": "Plymouth",
@@ -115,6 +96,25 @@
       "belowCPct": 78.64077669902912,
       "urgentPct": 35.92233009708738,
       "compliantPct": 21.35922330097087,
+      "postcodesSampled": 10,
+      "postcodesWithData": 7
+    },
+    {
+      "city": "Norwich",
+      "region": "East of England",
+      "total": 68,
+      "bandCounts": {
+        "A": 0,
+        "B": 1,
+        "C": 14,
+        "D": 36,
+        "E": 15,
+        "F": 2,
+        "G": 0
+      },
+      "belowCPct": 77.94117647058823,
+      "urgentPct": 25,
+      "compliantPct": 22.058823529411764,
       "postcodesSampled": 10,
       "postcodesWithData": 7
     },
@@ -178,19 +178,19 @@
     {
       "city": "Cardiff",
       "region": "Wales",
-      "total": 117,
+      "total": 118,
       "bandCounts": {
         "A": 0,
         "B": 4,
         "C": 33,
-        "D": 55,
+        "D": 56,
         "E": 20,
         "F": 4,
         "G": 1
       },
-      "belowCPct": 68.37606837606837,
-      "urgentPct": 21.367521367521366,
-      "compliantPct": 31.62393162393162,
+      "belowCPct": 68.64406779661016,
+      "urgentPct": 21.1864406779661,
+      "compliantPct": 31.35593220338983,
       "postcodesSampled": 10,
       "postcodesWithData": 8
     },
