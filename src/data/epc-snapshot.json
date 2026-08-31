@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-24T06:48:22.777Z",
+  "generatedAt": "2026-08-31T12:32:12.935Z",
   "source": "MHCLG Get Energy Performance of Buildings register (api.get-energy-performance-data.communities.gov.uk)",
   "notes": [
     "England + Wales only. Scotland and Northern Ireland use separate registers.",
@@ -8,17 +8,17 @@
     "Below-C share covers bands D, E, F, G. Band D is currently MEES-compliant; the 2027/2030 proposals bring D into scope."
   ],
   "national": {
-    "total": 4070,
-    "belowCPct": 53.83292383292383,
-    "urgentPct": 15.724815724815725,
-    "compliantPct": 46.16707616707617,
+    "total": 4077,
+    "belowCPct": 53.81407897964189,
+    "urgentPct": 15.722344861417708,
+    "compliantPct": 46.18592102035811,
     "bandCounts": {
       "A": 12,
-      "B": 434,
-      "C": 1433,
-      "D": 1551,
+      "B": 435,
+      "C": 1436,
+      "D": 1553,
       "E": 519,
-      "F": 88,
+      "F": 89,
       "G": 33
     }
   },
@@ -64,19 +64,19 @@
     {
       "city": "Nottingham",
       "region": "East Midlands",
-      "total": 225,
+      "total": 226,
       "bandCounts": {
         "A": 2,
         "B": 2,
-        "C": 41,
+        "C": 42,
         "D": 107,
         "E": 58,
         "F": 13,
         "G": 2
       },
-      "belowCPct": 80,
-      "urgentPct": 32.44444444444444,
-      "compliantPct": 20,
+      "belowCPct": 79.64601769911505,
+      "urgentPct": 32.30088495575221,
+      "compliantPct": 20.353982300884958,
       "postcodesSampled": 10,
       "postcodesWithData": 8
     },
@@ -102,19 +102,19 @@
     {
       "city": "Reading",
       "region": "South East",
-      "total": 104,
+      "total": 105,
       "bandCounts": {
         "A": 0,
         "B": 4,
         "C": 18,
-        "D": 45,
+        "D": 46,
         "E": 32,
         "F": 4,
         "G": 1
       },
-      "belowCPct": 78.84615384615384,
-      "urgentPct": 35.57692307692308,
-      "compliantPct": 21.153846153846153,
+      "belowCPct": 79.04761904761905,
+      "urgentPct": 35.23809523809524,
+      "compliantPct": 20.952380952380953,
       "postcodesSampled": 10,
       "postcodesWithData": 7
     },
@@ -195,25 +195,6 @@
       "postcodesWithData": 8
     },
     {
-      "city": "Sheffield",
-      "region": "Yorkshire",
-      "total": 87,
-      "bandCounts": {
-        "A": 0,
-        "B": 3,
-        "C": 26,
-        "D": 42,
-        "E": 11,
-        "F": 2,
-        "G": 3
-      },
-      "belowCPct": 66.66666666666666,
-      "urgentPct": 18.39080459770115,
-      "compliantPct": 33.33333333333333,
-      "postcodesSampled": 10,
-      "postcodesWithData": 6
-    },
-    {
       "city": "Bradford",
       "region": "Yorkshire",
       "total": 131,
@@ -238,8 +219,8 @@
       "total": 63,
       "bandCounts": {
         "A": 0,
-        "B": 2,
-        "C": 20,
+        "B": 3,
+        "C": 19,
         "D": 31,
         "E": 9,
         "F": 1,
@@ -269,6 +250,25 @@
       "compliantPct": 35.16483516483517,
       "postcodesSampled": 10,
       "postcodesWithData": 4
+    },
+    {
+      "city": "Sheffield",
+      "region": "Yorkshire",
+      "total": 90,
+      "bandCounts": {
+        "A": 0,
+        "B": 3,
+        "C": 29,
+        "D": 42,
+        "E": 11,
+        "F": 2,
+        "G": 3
+      },
+      "belowCPct": 64.44444444444444,
+      "urgentPct": 17.77777777777778,
+      "compliantPct": 35.55555555555556,
+      "postcodesSampled": 10,
+      "postcodesWithData": 6
     },
     {
       "city": "Wolverhampton",
@@ -368,19 +368,19 @@
     {
       "city": "Birmingham",
       "region": "West Midlands",
-      "total": 145,
+      "total": 146,
       "bandCounts": {
         "A": 0,
         "B": 1,
         "C": 63,
-        "D": 61,
+        "D": 62,
         "E": 16,
         "F": 4,
         "G": 0
       },
-      "belowCPct": 55.86206896551724,
-      "urgentPct": 13.793103448275861,
-      "compliantPct": 44.13793103448276,
+      "belowCPct": 56.16438356164384,
+      "urgentPct": 13.698630136986301,
+      "compliantPct": 43.83561643835616,
       "postcodesSampled": 10,
       "postcodesWithData": 7
     },
@@ -539,19 +539,19 @@
     {
       "city": "Newcastle upon Tyne",
       "region": "North East",
-      "total": 132,
+      "total": 133,
       "bandCounts": {
         "A": 0,
         "B": 9,
         "C": 75,
         "D": 31,
         "E": 16,
-        "F": 0,
+        "F": 1,
         "G": 1
       },
-      "belowCPct": 36.36363636363637,
-      "urgentPct": 12.878787878787879,
-      "compliantPct": 63.63636363636363,
+      "belowCPct": 36.84210526315789,
+      "urgentPct": 13.533834586466165,
+      "compliantPct": 63.1578947368421,
       "postcodesSampled": 10,
       "postcodesWithData": 8
     },
