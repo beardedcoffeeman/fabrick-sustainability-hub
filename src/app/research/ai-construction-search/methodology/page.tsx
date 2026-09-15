@@ -50,12 +50,12 @@ const limitations = [
     text: "All models received an identical short prompt with no retrieval, no documents attached and no follow-up. Models that would normally be used with a document uploaded, or as part of a tuned workflow, will score differently in that setting.",
   },
   {
-    title: "Results are a snapshot of a single day.",
-    text: "Every answer was collected on 28 July 2026, with scoring and review completed the following day. Models are updated continuously, several tested here are explicitly preview or beta releases, and a provider can change a model behind the same name. These figures describe the versions listed above as they behaved on that date, and nothing more.",
+    title: "Results are a snapshot of two collection dates.",
+    text: `The original ${STUDY.julyModels} models were tested on 28 July 2026, with scoring and review completed the following day. The ${STUDY.septemberModels} models added in September 2026 were tested on 7 and 15 September against the same frozen question set, prompt and judges. The July models were not re-run, so a September model is compared with its predecessor as that predecessor behaved in July, and the version behind a July identifier may have changed since. Models are updated continuously, several tested here are explicitly preview releases, and a provider can change a model behind the same name. These figures describe the versions listed above as they behaved on those dates, and nothing more.`,
   },
   {
     title: "Some models were reached through a gateway, not the vendor directly.",
-    text: "Where a vendor's own account was rate-limited or out of quota, the model was called through OpenRouter instead. The underlying model version is the same and is listed above, but the routing differed and is recorded in the raw data.",
+    text: "Where a vendor's own account was rate-limited or out of quota, the model was called through OpenRouter instead. That applies to the OpenAI GPT-5.6 and GPT-6 models and to the DeepSeek and Kimi models. The underlying model version is the same and is listed above, but the routing differed and is recorded in the raw data.",
   },
 ];
 
@@ -106,9 +106,15 @@ export default function MethodologyPage() {
         <div className="mt-5 space-y-4 text-warm-gray leading-relaxed">
           <p>
             {STUDY.questions.toLocaleString()} technical questions about UK construction were put to{" "}
-            {STUDY.models} AI models, producing {STUDY.responses.toLocaleString()} answers. The
+            {STUDY.models} AI models, producing {STUDY.responses.toLocaleString()} scored answers. The
             questions span {STUDY.categories} categories, from Building Regulations and British
             Standards through to waterproofing, demolition and contracts.
+          </p>
+          <p>
+            The study was run in two waves. {STUDY.julyModels} models were tested on 28 July 2026.{" "}
+            {STUDY.septemberModels} models released after that date were added on 7 and 15 September
+            2026, using the same frozen question set, the same prompt and the same two judges, so
+            their scores sit on the same scale. The July models were not re-run.
           </p>
           <p>
             Each question has one verified answer tied to a specific place in a published document:
@@ -188,6 +194,7 @@ export default function MethodologyPage() {
                   <th className="px-3 py-3 text-left font-semibold text-navy">API model identifier</th>
                   <th className="px-3 py-3 text-left font-semibold text-navy">Vendor</th>
                   <th className="px-3 py-3 text-left font-semibold text-navy">Tier</th>
+                  <th className="px-3 py-3 text-left font-semibold text-navy">Tested</th>
                 </tr>
               </thead>
               <tbody>
@@ -201,6 +208,9 @@ export default function MethodologyPage() {
                     </td>
                     <td className="px-3 py-2.5 text-warm-gray">{m.vendor}</td>
                     <td className="px-3 py-2.5 text-warm-gray">{m.paid ? "Paid" : "Free"}</td>
+                    <td className="px-3 py-2.5 text-warm-gray">
+                      {m.wave === "2026-09" ? "Sep 2026" : "Jul 2026"}
+                    </td>
                   </tr>
                 ))}
               </tbody>
@@ -293,7 +303,7 @@ export default function MethodologyPage() {
           <div className="grid gap-4 sm:grid-cols-3">
             {[
               { v: String(STUDY.stabilityRho), l: "Rank correlation", t: "Spearman, before versus after correction" },
-              { v: `${STUDY.stabilityUnmoved}/${STUDY.models}`, l: "Models unmoved", t: "Did not change position at all" },
+              { v: `${STUDY.stabilityUnmoved}/${STUDY.julyModels}`, l: "Models unmoved", t: "Did not change position at all (July wave)" },
               { v: "+0.01pp", l: "Mean score change", t: "Individual models moved between −1.1 and +1.6" },
             ].map((x) => (
               <div key={x.l} className="rounded-xl bg-white p-4 shadow-sm">
@@ -304,10 +314,11 @@ export default function MethodologyPage() {
             ))}
           </div>
           <p>
-            The top three and the bottom five did not move. What movement there was happened in the
-            middle of the table, where six models sit within a single percentage point of each
-            other. That is why the results are presented as {STUDY.bands} bands rather than{" "}
-            {STUDY.models} ranked places: a gap smaller than {STUDY.tieBandPp} percentage points is
+            This check was run on the July wave of {STUDY.julyModels} models, before the September
+            additions. The top three and the bottom five did not move. What movement there was
+            happened in the middle of the table, where six models sat within a single percentage
+            point of each other. That is why the results are presented as {STUDY.bands} bands rather
+            than {STUDY.models} ranked places: a gap smaller than {STUDY.tieBandPp} percentage points is
             inside the margin our own corrections moved things, so it is not a finding.
           </p>
           <p className="rounded-xl border border-cream-dark bg-white p-4 text-sm">
@@ -341,8 +352,14 @@ export default function MethodologyPage() {
               returned an empty answer; those are recorded and counted.
             </li>
             <li className="rounded-xl bg-white p-4 shadow-sm">
-              <strong className="text-navy">Every model tested is published.</strong> No model was
-              run and then left out of the results.
+              <strong className="text-navy">Every completed run is published.</strong> No model was
+              run to completion and then left out of the results. One September run did not
+              complete: Grok 4.6 (<code className="rounded bg-cream px-1 text-[12px]">grok-4.6</code>)
+              answered 433 of the 1,001 questions before the xAI account ran out of credit, and the
+              run was not resumed. Those 433 are the first questions in file order, on which its
+              predecessor also scores well above its full-set average, so a partial score would
+              have flattered it. It is excluded rather than published on a partial set. Its
+              predecessor, Grok 4.5, remains in the July results.
             </li>
           </ul>
         </div>

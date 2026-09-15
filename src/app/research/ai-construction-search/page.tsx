@@ -25,7 +25,7 @@ import {
 } from "@/components/research/AIResearchCharts";
 // Imported from the data module rather than the chart component: plain values
 // cannot cross a "use client" boundary into a server component.
-import { MODELS, STUDY } from "@/components/research/aiStudyData";
+import { MODELS, STUDY, SEPTEMBER } from "@/components/research/aiStudyData";
 
 // Everything quoted below is derived from the study data rather than typed by
 // hand, so a re-run cannot leave stale figures in the copy.
@@ -34,6 +34,17 @@ const worst = MODELS[MODELS.length - 1];
 const bestErrorRate = ((best.wrong / (best.correct + best.partial + best.wrong)) * 100).toFixed(1);
 const worstErrorRate = ((worst.wrong / (worst.correct + worst.partial + worst.wrong)) * 100).toFixed(1);
 const notFullyRight = (100 - best.score).toFixed(1);
+const leadGroup = MODELS.filter((m) => m.band === 1);
+const bandSizes = MODELS.reduce<Record<number, number>>((acc, m) => {
+  acc[m.band] = (acc[m.band] ?? 0) + 1;
+  return acc;
+}, {});
+const largestBand = Math.max(...Object.values(bandSizes));
+// September addendum figures, derived so the copy cannot drift from the data.
+const septemberUp = SEPTEMBER.filter((r) => (r.deltaPp ?? 0) > 0).length;
+const septemberBestGain = SEPTEMBER.reduce((a, b) => ((b.deltaPp ?? -99) > (a.deltaPp ?? -99) ? b : a));
+const septemberWorstDrop = SEPTEMBER.reduce((a, b) => ((b.deltaPp ?? 99) < (a.deltaPp ?? 99) ? b : a));
+const fmtDelta = (d: number | null) => (d === null ? "n/a" : `${d > 0 ? "+" : ""}${d.toFixed(1)}pp`);
 
 export const metadata: Metadata = {
   title: "How Accurate is AI for UK Construction? | Fabrick Research",
@@ -123,7 +134,7 @@ const findings = [
   {
     stat: `${STUDY.bands}`,
     label: "Groups, not places",
-    text: `Models within ${STUDY.tieBandPp} percentage points of each other are too close to separate, so the ${STUDY.models} models resolve into ${STUDY.bands} groups. Three lead the field; six more are bunched in the middle.`,
+    text: `Models within ${STUDY.tieBandPp} percentage points of each other are too close to separate, so the ${STUDY.models} models resolve into ${STUDY.bands} groups. ${leadGroup.length} lead the field; the largest group has ${largestBand} models bunched together in the middle.`,
     accent: "teal" as const,
   },
 ];
@@ -131,7 +142,7 @@ const findings = [
 const conclusions = [
   {
     title: `Read the table as ${STUDY.bands} groups, not ${STUDY.models} places.`,
-    text: `Models within ${STUDY.tieBandPp} percentage points of each other are tied. Three models lead on ${best.score}% to ${MODELS[2].score}%; six more sit bunched together in the middle. Picking between models inside a band on these numbers would be reading noise.`,
+    text: `Models within ${STUDY.tieBandPp} percentage points of each other are tied. ${leadGroup.length} models lead on ${best.score}% to ${leadGroup[leadGroup.length - 1].score}%; the largest group, ${largestBand} models, sits bunched together in the middle. Picking between models inside a band on these numbers would be reading noise.`,
   },
   {
     title: "Useful for recall. Not a substitute for a competent person.",
@@ -148,6 +159,10 @@ const conclusions = [
   {
     title: "Specialist and paywalled standards remain the weak spot.",
     text: "Accuracy tracks how freely available a document is. Areas that sit behind paywalls or in niche guidance score consistently worse, and those are often exactly where professionals need help.",
+  },
+  {
+    title: "Newer is not automatically better.",
+    text: `Of the ${STUDY.septemberModels} models added in September 2026, ${septemberUp} scored above the version they replaced and ${STUDY.septemberModels - septemberUp} scored below. The biggest gain was ${septemberBestGain.name} (${fmtDelta(septemberBestGain.deltaPp)}); the biggest fall was ${septemberWorstDrop.name} (${fmtDelta(septemberWorstDrop.deltaPp)}). Check the version, not the headline.`,
   },
   {
     title: "Treat any figure here as a snapshot.",
@@ -175,7 +190,7 @@ export default function AIConstructionSearchPage() {
             </div>
             <span className="inline-flex items-center gap-1.5 rounded-full bg-teal px-3 py-1 text-[10px] font-bold uppercase tracking-wider text-white">
               <CheckCircle className="h-3 w-3" />
-              Tested 28 July 2026
+              Tested July and September 2026
             </span>
           </div>
 
@@ -267,6 +282,81 @@ export default function AIConstructionSearchPage() {
           </div>
           <AIRankingsChart />
         </div>
+      </section>
+
+      {/* September 2026 addendum */}
+      <section className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8 md:py-16">
+        <div className="mb-8 max-w-3xl">
+          <div className="flex items-center gap-2 mb-2">
+            <TrendingUp className="h-5 w-5 text-teal" />
+            <span className="text-[11px] font-semibold uppercase tracking-[0.18em] text-teal">
+              September 2026 update
+            </span>
+          </div>
+          <h2 className="font-[family-name:var(--font-playfair)] text-3xl font-bold text-navy md:text-4xl">
+            {STUDY.septemberModels} models released since July, tested the same way
+          </h2>
+          <p className="mt-2 text-warm-gray">
+            The original {STUDY.julyModels} models were tested on 28 July 2026. These{" "}
+            {STUDY.septemberModels} were released afterwards and were run in September against the
+            same {STUDY.questions.toLocaleString()} questions, prompt and blind judges. The July
+            models were not re-run, so each comparison spans two collection dates as well as two
+            versions. The chart above already includes them.
+          </p>
+        </div>
+        <div className="overflow-x-auto rounded-2xl bg-white p-4 shadow-sm">
+          <table className="w-full border-collapse text-sm">
+            <thead>
+              <tr className="border-b border-cream-dark">
+                <th className="px-3 py-3 text-left font-semibold text-navy">New model</th>
+                <th className="px-3 py-3 text-right font-semibold text-navy">Score</th>
+                <th className="px-3 py-3 text-right font-semibold text-navy">Overall place</th>
+                <th className="px-3 py-3 text-left font-semibold text-navy">Replaces</th>
+                <th className="px-3 py-3 text-right font-semibold text-navy">Previous score</th>
+                <th className="px-3 py-3 text-right font-semibold text-navy">Change</th>
+              </tr>
+            </thead>
+            <tbody>
+              {SEPTEMBER.map((r) => (
+                <tr key={r.id} className="border-b border-cream-dark/60">
+                  <td className="px-3 py-2.5 font-medium text-navy">
+                    {r.name}
+                    <span className="ml-2 rounded bg-cream px-1.5 py-0.5 text-[11px] text-warm-gray">
+                      {r.paid ? "Paid" : "Free"}
+                    </span>
+                  </td>
+                  <td className="px-3 py-2.5 text-right font-semibold text-navy">{r.score}%</td>
+                  <td className="px-3 py-2.5 text-right text-warm-gray">
+                    {r.rank} of {STUDY.models} (group {r.band})
+                  </td>
+                  <td className="px-3 py-2.5 text-warm-gray">{r.predecessor ?? "n/a"}</td>
+                  <td className="px-3 py-2.5 text-right text-warm-gray">
+                    {r.predecessorScore === null ? "n/a" : `${r.predecessorScore}%`}
+                  </td>
+                  <td
+                    className={`px-3 py-2.5 text-right font-semibold ${
+                      (r.deltaPp ?? 0) > 0 ? "text-teal" : (r.deltaPp ?? 0) < 0 ? "text-pink" : "text-warm-gray"
+                    }`}
+                  >
+                    {fmtDelta(r.deltaPp)}
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+        <p className="mt-4 max-w-3xl text-sm leading-relaxed text-warm-gray">
+          A change smaller than {STUDY.tieBandPp} percentage points is inside the tie band and should
+          be read as no change. One further model, Grok 4.6, was started but not completed and is not
+          included; the{" "}
+          <Link
+            href="/research/ai-construction-search/methodology"
+            className="font-semibold text-teal underline underline-offset-2"
+          >
+            methodology
+          </Link>{" "}
+          explains why.
+        </p>
       </section>
 
       {/* Key Findings */}
@@ -407,8 +497,10 @@ export default function AIConstructionSearchPage() {
       <section className="mx-auto max-w-4xl px-4 py-10 sm:px-6 lg:px-8">
         <div className="rounded-2xl border border-cream-dark bg-white p-6">
           <p className="text-sm leading-relaxed text-warm-gray">
-            All {STUDY.responses.toLocaleString()} answers were collected from the models on 28 July
-            2026, with scoring completed on 29 July 2026. The {STUDY.questions.toLocaleString()}{" "}
+            The original {STUDY.julyModels} models were tested on 28 July 2026 and scored the next
+            day. {STUDY.septemberModels} models released since then were tested on 7 and 15 September
+            2026 with the same questions, prompt and judges; the July models were not re-run. In all,{" "}
+            {STUDY.responses.toLocaleString()} answers were scored. The {STUDY.questions.toLocaleString()}{" "}
             questions were generated against published UK standards and Approved Documents, with each
             answer tied to a specific clause, table or section; they have not been independently
             verified by a chartered professional. Answers were graded by two AI models from different

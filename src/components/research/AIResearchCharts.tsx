@@ -48,7 +48,7 @@ export function AIRankingsChart() {
         </div>
       </div>
       <p className="mb-4 rounded-lg bg-cream px-3 py-2 text-xs leading-relaxed text-warm-gray">
-        <strong className="text-navy">Read these as {bands.length} groups, not 18 places.</strong>{" "}
+        <strong className="text-navy">Read these as {bands.length} groups, not {data.length} places.</strong>{" "}
         Models within {STUDY.tieBandPp} percentage points of each other are tied, because gaps that
         small sit inside the margin of the scoring method. Hover any bar for the exact model version
         tested and the models it ties with.
@@ -74,8 +74,9 @@ export function AIRankingsChart() {
                 const tieNote = ties.length
                   ? ` — tied with ${ties.map((t) => t.name).join(", ")}`
                   : " — no other model within the tie band";
+                const waveNote = m.wave === "2026-09" ? " — added Sep 2026" : "";
                 return [
-                  `${value}%  (Correct ${m.correct} | Partial ${m.partial} | Wrong ${m.wrong})${tieNote}`,
+                  `${value}%  (Correct ${m.correct} | Partial ${m.partial} | Wrong ${m.wrong})${tieNote}${waveNote}`,
                   m.modelId,
                 ];
               }}
