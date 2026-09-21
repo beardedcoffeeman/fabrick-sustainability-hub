@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-14T11:37:44.216Z",
+  "generatedAt": "2026-09-21T11:50:33.004Z",
   "source": "MHCLG Get Energy Performance of Buildings register (api.get-energy-performance-data.communities.gov.uk)",
   "notes": [
     "England + Wales only. Scotland and Northern Ireland use separate registers.",
@@ -8,14 +8,14 @@
     "Below-C share covers bands D, E, F, G. Band D is currently MEES-compliant; the 2027/2030 proposals bring D into scope."
   ],
   "national": {
-    "total": 4074,
-    "belowCPct": 53.73097692685322,
-    "urgentPct": 15.66028473244968,
-    "compliantPct": 46.26902307314678,
+    "total": 4078,
+    "belowCPct": 53.678273663560574,
+    "urgentPct": 15.644923982344286,
+    "compliantPct": 46.32172633643943,
     "bandCounts": {
       "A": 12,
-      "B": 435,
-      "C": 1438,
+      "B": 437,
+      "C": 1440,
       "D": 1551,
       "E": 517,
       "F": 88,
@@ -69,13 +69,13 @@
         "A": 2,
         "B": 2,
         "C": 42,
-        "D": 107,
-        "E": 58,
+        "D": 108,
+        "E": 57,
         "F": 13,
         "G": 2
       },
       "belowCPct": 79.64601769911505,
-      "urgentPct": 32.30088495575221,
+      "urgentPct": 31.858407079646017,
       "compliantPct": 20.353982300884958,
       "postcodesSampled": 10,
       "postcodesWithData": 8
@@ -121,19 +121,19 @@
     {
       "city": "Coventry",
       "region": "West Midlands",
-      "total": 100,
+      "total": 103,
       "bandCounts": {
         "A": 0,
-        "B": 3,
+        "B": 5,
         "C": 20,
-        "D": 56,
+        "D": 57,
         "E": 15,
         "F": 5,
         "G": 1
       },
-      "belowCPct": 77,
-      "urgentPct": 21,
-      "compliantPct": 23,
+      "belowCPct": 75.72815533980582,
+      "urgentPct": 20.388349514563107,
+      "compliantPct": 24.271844660194176,
       "postcodesSampled": 10,
       "postcodesWithData": 7
     },
@@ -163,15 +163,15 @@
       "bandCounts": {
         "A": 0,
         "B": 0,
-        "C": 41,
-        "D": 84,
+        "C": 42,
+        "D": 83,
         "E": 14,
         "F": 2,
         "G": 1
       },
-      "belowCPct": 71.12676056338029,
+      "belowCPct": 70.4225352112676,
       "urgentPct": 11.971830985915492,
-      "compliantPct": 28.87323943661972,
+      "compliantPct": 29.577464788732392,
       "postcodesSampled": 10,
       "postcodesWithData": 5
     },
@@ -254,19 +254,19 @@
     {
       "city": "Sheffield",
       "region": "Yorkshire",
-      "total": 90,
+      "total": 91,
       "bandCounts": {
         "A": 0,
         "B": 3,
-        "C": 29,
+        "C": 30,
         "D": 42,
         "E": 11,
         "F": 2,
         "G": 3
       },
-      "belowCPct": 64.44444444444444,
-      "urgentPct": 17.77777777777778,
-      "compliantPct": 35.55555555555556,
+      "belowCPct": 63.73626373626373,
+      "urgentPct": 17.582417582417584,
+      "compliantPct": 36.26373626373626,
       "postcodesSampled": 10,
       "postcodesWithData": 6
     },
@@ -315,15 +315,15 @@
       "bandCounts": {
         "A": 0,
         "B": 18,
-        "C": 54,
-        "D": 87,
+        "C": 53,
+        "D": 88,
         "E": 19,
         "F": 6,
         "G": 1
       },
-      "belowCPct": 61.08108108108108,
+      "belowCPct": 61.62162162162163,
       "urgentPct": 14.054054054054054,
-      "compliantPct": 38.91891891891892,
+      "compliantPct": 38.37837837837838,
       "postcodesSampled": 10,
       "postcodesWithData": 9
     },
@@ -430,13 +430,13 @@
         "A": 0,
         "B": 12,
         "C": 78,
-        "D": 64,
-        "E": 18,
+        "D": 63,
+        "E": 19,
         "F": 3,
         "G": 0
       },
       "belowCPct": 48.57142857142857,
-      "urgentPct": 12,
+      "urgentPct": 12.571428571428573,
       "compliantPct": 51.42857142857142,
       "postcodesSampled": 12,
       "postcodesWithData": 9
@@ -467,15 +467,15 @@
       "bandCounts": {
         "A": 6,
         "B": 12,
-        "C": 38,
-        "D": 31,
+        "C": 39,
+        "D": 30,
         "E": 13,
         "F": 2,
         "G": 2
       },
-      "belowCPct": 46.15384615384615,
+      "belowCPct": 45.19230769230769,
       "urgentPct": 16.346153846153847,
-      "compliantPct": 53.84615384615385,
+      "compliantPct": 54.807692307692314,
       "postcodesSampled": 10,
       "postcodesWithData": 6
     },
