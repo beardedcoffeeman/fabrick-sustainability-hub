@@ -5,8 +5,8 @@
     "date": "2025-09-01",
     "status": "active",
     "category": "carbon",
-    "description": "Government consultation on whole-life carbon reporting for large buildings launched. Industry-led Part Z proposal has gained significant Parliamentary support with cross-party backing.",
-    "impact": "Major projects should begin whole-life carbon assessments now to prepare for mandatory requirements.",
+    "description": "Part Z remains an industry-led proposal for whole-life carbon reporting, not a government consultation heading toward a mandate. In March 2026 the government rejected the Environmental Audit Committee's recommendation to mandate whole-life carbon assessments for major developments, opting for a voluntary approach. NISTA published a voluntary Whole Life Carbon Management Handbook (March 2026) instead of regulation.",
+    "impact": "Major projects should voluntarily adopt whole-life carbon assessments using the NISTA handbook, as there is currently no mandate planned.",
     "affectedRoles": [
       "developer",
       "architect",
@@ -25,6 +25,20 @@
       "developer",
       "architect",
       "contractor"
+    ]
+  },
+  {
+    "id": "heat-network-zoning-england",
+    "title": "Heat Network Zoning (England) - Government Response Published",
+    "date": "2026-01-01",
+    "status": "active",
+    "category": "energy",
+    "description": "In January 2026 the government published its formal response to the 2023 heat network zoning consultation, setting out implementation in England under Energy Act 2023 powers. These include powers to require certain buildings to connect, appoint zone developers, and designate zones. Zone designation and implementation will follow.",
+    "impact": "Developers and contractors should assess whether projects fall within likely designated zones and plan for potential mandatory heat network connection.",
+    "affectedRoles": [
+      "developer",
+      "contractor",
+      "architect"
     ]
   },
   {
@@ -47,8 +61,8 @@
     "date": "2026-01-30",
     "status": "consultation",
     "category": "reporting",
-    "description": "The FCA consulted (30 January to 20 March 2026) on requiring listed issuers to disclose against the UK SRS, replacing current climate disclosure rules. A policy statement is expected in autumn 2026, with mandatory UK SRS S2 climate reporting for around 500 listed companies applying to accounting periods from 1 January 2027.",
-    "impact": "Listed construction companies should prepare to disclose against UK SRS and build Scope 3 supply-chain data systems ahead of the expected 1 January 2027 start.",
+    "description": "The FCA consulted (30 January to 20 March 2026) on requiring listed issuers to disclose against the UK SRS, replacing current climate disclosure rules. The outcome has now been published as policy statement PS26/19 (30 September 2026), finalising comply-or-explain rules applying to accounting periods from 1 January 2027 with first reporting in 2028.",
+    "impact": "Listed construction companies should prepare to disclose against UK SRS and build Scope 3 supply-chain data systems ahead of the 1 January 2027 start.",
     "affectedRoles": [
       "developer",
       "manufacturer",
@@ -113,13 +127,26 @@
     ]
   },
   {
+    "id": "biodiversity-net-gain",
+    "title": "Biodiversity Net Gain - Small Sites Compliance",
+    "date": "2026-08-06",
+    "status": "active",
+    "category": "reporting",
+    "description": "SI 2026/790 (in force 6 August 2026), following the April 2026 government response, introduced a 0.2 hectare exemption so the smallest developments are no longer required to deliver mandatory BNG (unless on-site priority habitat is harmed). It also added a temporary-development exemption, a modified gain hierarchy for minor sites, and removed the self/custom-build exemption. Other developments still deliver minimum 10% BNG.",
+    "impact": "Developers should check whether sites fall under the 0.2ha exemption; larger sites must still factor in 10% BNG costs and land requirements.",
+    "affectedRoles": [
+      "developer",
+      "architect"
+    ]
+  },
+  {
     "id": "uk-srs-mandatory",
     "title": "UK SRS - Mandatory FCA Rules Expected",
-    "date": "2026-10-01",
-    "status": "upcoming",
+    "date": "2026-09-30",
+    "status": "active",
     "category": "reporting",
-    "description": "FCA expected to finalise mandatory sustainability reporting rules for large listed companies in autumn 2026, applying for accounting periods from January 2027. Scope 3 emissions reporting included.",
-    "impact": "All major construction companies must prepare Scope 3 supply chain data. Material manufacturers will face data requests from clients.",
+    "description": "FCA published policy statement PS26/19 on 30 September 2026 finalising sustainability disclosure rules for listed issuers against UK SRS. Rules are comply-or-explain (not strictly mandatory) and apply to accounting periods starting on or after 1 January 2027, with first reporting in 2028. Transitional reliefs apply: 1 year for Scope 3 and 2 years for wider UK SRS S1 disclosures.",
+    "impact": "Listed construction companies should build Scope 3 supply-chain data systems now to report against UK SRS for accounting periods from 1 January 2027.",
     "affectedRoles": [
       "manufacturer",
       "developer"
@@ -131,8 +158,8 @@
     "date": "2026-10-01",
     "status": "upcoming",
     "category": "trade",
-    "description": "Importers of steel, aluminium, cement, ceramics, and fertiliser must register ahead of the UK Carbon Border Adjustment Mechanism launch in January 2027. A minimum registration threshold of \u00a350,000 of relevant imports applies (raised from the originally proposed \u00a310,000).",
-    "impact": "Importers should assess whether they exceed the \u00a350,000 threshold, understand the carbon content of their supply chain, and prepare reporting systems.",
+    "description": "Importers of aluminium, cement, fertiliser, hydrogen, and iron & steel must register ahead of the UK Carbon Border Adjustment Mechanism launch in January 2027. Ceramics and glass are excluded from 2027. A minimum registration threshold of £50,000 of relevant imports applies.",
+    "impact": "Importers should assess whether they exceed the £50,000 threshold across the five in-scope sectors, understand supply-chain carbon content, and prepare reporting systems.",
     "affectedRoles": [
       "manufacturer",
       "contractor"
@@ -144,8 +171,8 @@
     "date": "2027-01-01",
     "status": "future",
     "category": "trade",
-    "description": "UK Carbon Border Adjustment Mechanism launches. Carbon levy on imports of steel, aluminium, cement, ceramics, hydrogen, electricity, and glass. Based on actual or default emission values.",
-    "impact": "Imported construction materials face carbon pricing. UK domestic manufacturers may gain competitive advantage. Material costs for imported steel/aluminium likely to rise.",
+    "description": "UK Carbon Border Adjustment Mechanism launches, applying a carbon levy to imports across five sectors: aluminium, cement, fertiliser, hydrogen, and iron & steel. Ceramics, glass, and electricity are not in scope for 2027. Based on actual or default emission values; indirect emissions delayed to 2029 at the earliest.",
+    "impact": "Imported in-scope construction materials face carbon pricing; UK domestic manufacturers may gain advantage and imported steel/aluminium costs likely rise.",
     "affectedRoles": [
       "manufacturer",
       "contractor"
@@ -159,46 +186,6 @@
     "category": "energy",
     "description": "Transitional provisions under SI 2026/335 allowing approved plans to proceed under current Part L before full FHS takes effect. For transitional protection, notices must be submitted before 24 March 2027 and construction commenced within the transitional window (by around 24 March 2028). SME developers get no blanket exemption.",
     "impact": "Window closing for developers - submit building notices before 24 March 2027 and commence work by ~24 March 2028 to retain transitional protection.",
-    "affectedRoles": [
-      "developer",
-      "architect"
-    ]
-  },
-  {
-    "id": "uk-srs-first-reports",
-    "title": "UK SRS - First Mandatory Reports Due",
-    "date": "2027-04-01",
-    "status": "future",
-    "category": "reporting",
-    "description": "First mandatory sustainability reports due from large listed companies for accounting periods starting January 2027. Scope 1, 2, and 3 emissions reporting required.",
-    "impact": "Construction companies must have emissions data systems in place. Supply chain data requests will cascade to subcontractors and manufacturers.",
-    "affectedRoles": [
-      "manufacturer",
-      "developer",
-      "contractor"
-    ]
-  },
-  {
-    "id": "epc-c-minimum",
-    "title": "EPC Rating C Minimum - Non-Domestic (Proposed)",
-    "date": "2027-04-01",
-    "status": "future",
-    "category": "energy",
-    "description": "Proposed MEES tightening requiring non-domestic rented buildings to achieve minimum EPC Rating C. Government consultation response still awaited - date may shift to 2028.",
-    "impact": "Landlords must retrofit properties or face penalties. Major retrofit wave expected. Demand for energy consultancy and building services design to surge.",
-    "affectedRoles": [
-      "developer",
-      "contractor"
-    ]
-  },
-  {
-    "id": "biodiversity-net-gain",
-    "title": "Biodiversity Net Gain - Small Sites Compliance",
-    "date": "2027-04-01",
-    "status": "future",
-    "category": "reporting",
-    "description": "All developments including small sites must deliver minimum 10% biodiversity net gain, measured using the statutory biodiversity metric. Two-year transition period from February 2024 mandate for major sites.",
-    "impact": "All developers must factor BNG costs and land requirements into project feasibility. Habitat banking market growing rapidly.",
     "affectedRoles": [
       "developer",
       "architect"
@@ -224,8 +211,8 @@
     "date": "2028-01-01",
     "status": "future",
     "category": "carbon",
-    "description": "Expected introduction of mandatory whole-life carbon reporting and embodied carbon limits for buildings over 1,000m\u00b2. Will require A1-A5 reporting at planning stage and whole-life (A-C) at completion.",
-    "impact": "Material selection becomes carbon-critical. Low-carbon specification, design for disassembly, and material passports will become standard practice.",
+    "description": "Possible future introduction of mandatory whole-life carbon reporting and embodied carbon limits for buildings over 1,000m2, which would require A1-A5 reporting at planning stage and whole-life (A-C) at completion. This is speculative and not government policy: in March 2026 the government opted for a voluntary approach to whole-life carbon rather than regulation.",
+    "impact": "Developers and designers should treat low-carbon specification and material passports as best practice, while noting no mandate is currently planned.",
     "affectedRoles": [
       "developer",
       "architect",
@@ -249,17 +236,44 @@
     ]
   },
   {
+    "id": "uk-srs-first-reports",
+    "title": "UK SRS - First Mandatory Reports Due",
+    "date": "2028-04-01",
+    "status": "future",
+    "category": "reporting",
+    "description": "First reports under the FCA's UK SRS regime (PS26/19) fall due in 2028, covering accounting periods starting on or after 1 January 2027. Rules are comply-or-explain. Scope 1, 2, and 3 emissions reporting required, with transitional reliefs for Scope 3 and wider S1 disclosures.",
+    "impact": "Construction companies must have emissions data systems in place by 2028; supply chain data requests will cascade to subcontractors and manufacturers.",
+    "affectedRoles": [
+      "manufacturer",
+      "developer",
+      "contractor"
+    ]
+  },
+  {
     "id": "epc-c-domestic",
     "title": "EPC Rating C - Domestic Rented Properties (Proposed)",
     "date": "2030-10-01",
     "status": "upcoming",
     "category": "energy",
-    "description": "Government response published 21 January 2026 confirming privately rented homes in England and Wales must meet the equivalent of EPC C by a single compliance date of 1 October 2030. A dual-metric standard applies (fabric performance first, then a heating-system or smart-readiness standard), with a raised cost cap of \u00a310,000 and 10-year exemption validity. Legislation to follow, with a statutory instrument aimed to come into force in 2027.",
-    "impact": "Landlords should plan retrofits now to meet EPC C by 1 October 2030, budgeting up to the \u00a310,000 cost cap and prioritising fabric-first improvements.",
+    "description": "Government response published 21 January 2026 confirming privately rented homes in England and Wales must meet the equivalent of EPC C by a single compliance date of 1 October 2030. A dual-metric standard applies (fabric performance first, then a heating-system or smart-readiness standard), with a raised cost cap of £10,000 and 10-year exemption validity. Legislation to follow, with a statutory instrument aimed to come into force in 2027.",
+    "impact": "Landlords should plan retrofits now to meet EPC C by 1 October 2030, budgeting up to the £10,000 cost cap and prioritising fabric-first improvements.",
     "affectedRoles": [
       "developer",
       "contractor",
       "manufacturer"
+    ]
+  },
+  {
+    "id": "epc-c-minimum",
+    "title": "EPC Rating C Minimum - Non-Domestic (Proposed)",
+    "date": "2031-01-01",
+    "status": "future",
+    "category": "energy",
+    "description": "The 2027 interim EPC C milestone for non-domestic private-rented buildings has been scrapped (Written Ministerial Statement HCWS126, 18 June 2026). Instead, from 2031 non-domestic private-rented buildings over 1,000m2 in England and Wales must meet EPC B where cost-effective. Buildings under 1,000m2 remain at the current EPC E minimum.",
+    "impact": "Landlords of non-domestic buildings over 1,000m2 should plan retrofits to reach EPC B by 2031; smaller buildings stay at EPC E.",
+    "affectedRoles": [
+      "developer",
+      "contractor"
     ]
   }
 ]
