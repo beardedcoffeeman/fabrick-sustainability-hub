@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-28T12:46:08.217Z",
+  "generatedAt": "2026-10-05T13:27:13.045Z",
   "source": "MHCLG Get Energy Performance of Buildings register (api.get-energy-performance-data.communities.gov.uk)",
   "notes": [
     "England + Wales only. Scotland and Northern Ireland use separate registers.",
@@ -8,18 +8,18 @@
     "Below-C share covers bands D, E, F, G. Band D is currently MEES-compliant; the 2027/2030 proposals bring D into scope."
   ],
   "national": {
-    "total": 4084,
-    "belowCPct": 53.721841332027424,
-    "urgentPct": 15.621939275220372,
-    "compliantPct": 46.278158667972576,
+    "total": 4087,
+    "belowCPct": 53.73134328358209,
+    "urgentPct": 15.634940053829213,
+    "compliantPct": 46.26865671641791,
     "bandCounts": {
       "A": 12,
       "B": 436,
-      "C": 1442,
-      "D": 1556,
+      "C": 1443,
+      "D": 1557,
       "E": 517,
       "F": 88,
-      "G": 33
+      "G": 34
     }
   },
   "cities": [
@@ -140,19 +140,19 @@
     {
       "city": "Bristol",
       "region": "South West",
-      "total": 125,
+      "total": 126,
       "bandCounts": {
         "A": 0,
         "B": 1,
         "C": 34,
-        "D": 65,
+        "D": 66,
         "E": 20,
         "F": 4,
         "G": 1
       },
-      "belowCPct": 72,
-      "urgentPct": 20,
-      "compliantPct": 28.000000000000004,
+      "belowCPct": 72.22222222222221,
+      "urgentPct": 19.841269841269842,
+      "compliantPct": 27.77777777777778,
       "postcodesSampled": 10,
       "postcodesWithData": 9
     },
@@ -315,34 +315,34 @@
       "bandCounts": {
         "A": 0,
         "B": 18,
-        "C": 53,
-        "D": 88,
+        "C": 54,
+        "D": 87,
         "E": 19,
         "F": 6,
         "G": 1
       },
-      "belowCPct": 61.62162162162163,
+      "belowCPct": 61.08108108108108,
       "urgentPct": 14.054054054054054,
-      "compliantPct": 38.37837837837838,
+      "compliantPct": 38.91891891891892,
       "postcodesSampled": 10,
       "postcodesWithData": 9
     },
     {
       "city": "Leeds",
       "region": "Yorkshire",
-      "total": 144,
+      "total": 145,
       "bandCounts": {
         "A": 0,
-        "B": 0,
+        "B": 1,
         "C": 61,
         "D": 68,
         "E": 13,
         "F": 1,
         "G": 1
       },
-      "belowCPct": 57.638888888888886,
-      "urgentPct": 10.416666666666668,
-      "compliantPct": 42.36111111111111,
+      "belowCPct": 57.24137931034483,
+      "urgentPct": 10.344827586206897,
+      "compliantPct": 42.758620689655174,
       "postcodesSampled": 10,
       "postcodesWithData": 8
     },
@@ -387,7 +387,7 @@
     {
       "city": "Manchester",
       "region": "North West",
-      "total": 71,
+      "total": 72,
       "bandCounts": {
         "A": 0,
         "B": 2,
@@ -395,11 +395,11 @@
         "D": 29,
         "E": 7,
         "F": 2,
-        "G": 1
+        "G": 2
       },
-      "belowCPct": 54.929577464788736,
-      "urgentPct": 14.084507042253522,
-      "compliantPct": 45.07042253521127,
+      "belowCPct": 55.55555555555556,
+      "urgentPct": 15.277777777777779,
+      "compliantPct": 44.44444444444444,
       "postcodesSampled": 10,
       "postcodesWithData": 8
     },
@@ -505,15 +505,15 @@
       "bandCounts": {
         "A": 0,
         "B": 44,
-        "C": 56,
-        "D": 49,
+        "C": 55,
+        "D": 50,
         "E": 8,
         "F": 8,
         "G": 2
       },
-      "belowCPct": 40.119760479041915,
+      "belowCPct": 40.7185628742515,
       "urgentPct": 10.778443113772456,
-      "compliantPct": 59.88023952095808,
+      "compliantPct": 59.2814371257485,
       "postcodesSampled": 10,
       "postcodesWithData": 7
     },
@@ -580,8 +580,8 @@
       "total": 281,
       "bandCounts": {
         "A": 0,
-        "B": 108,
-        "C": 111,
+        "B": 107,
+        "C": 112,
         "D": 48,
         "E": 11,
         "F": 0,
