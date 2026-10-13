@@ -536,8 +536,9 @@ export function ConstructionOutputWidget() {
               {" "}- Office for National Statistics. Released {data.releaseDate}.
             </p>
             <p className="text-[10px] text-warm-gray/60 mt-1">
-              {source.notes} Data shown for {data.period}. Dashboard caches for 24 hours.
-              All figures in current prices (not inflation-adjusted).
+              {source.notes} Data shown for {data.period}. Snapshot refreshed
+              monthly from the ONS reference workbook (Table 2a). Figures are
+              chained volume measures, so they are inflation-adjusted.
             </p>
           </div>
         </div>

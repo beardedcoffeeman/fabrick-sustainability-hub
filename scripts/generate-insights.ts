@@ -27,7 +27,7 @@ const OUTPUT = join(ROOT, "src/data/insights-snapshot.json");
 const PRICES_SNAPSHOT = join(ROOT, "src/data/material-prices-snapshot.json");
 
 const SITE =
-  process.env.INSIGHTS_SITE_URL ?? "https://fabrick-sustainability-hub.vercel.app";
+  process.env.INSIGHTS_SITE_URL ?? "https://pulse.fabrick.agency";
 
 interface Insight {
   eyebrow: string;

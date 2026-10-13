@@ -1,0 +1,42 @@
+name: Refresh construction output
+
+# ONS publishes "Construction output in Great Britain" monthly, usually in
+# the second week of the month (the July 2026 data landed 11 September 2026,
+# next release 15 October 2026). We run on the 16th to catch it and on the
+# 23rd as a safety-net retry. scripts/ingest-construction-output.ts reads
+# Table 2a of the reference workbook and rewrites
+# src/data/construction-output-snapshot.json.
+
+on:
+  schedule:
+    - cron: "0 7 16 * *"
+    - cron: "0 7 23 * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: "npm"
+      - run: npm ci
+      - name: Run ONS construction output ingest
+        run: npx tsx scripts/ingest-construction-output.ts
+      - name: Commit snapshot if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add src/data/construction-output-snapshot.json
+          if git diff --staged --quiet; then
+            echo "No changes - ONS release unchanged."
+          else
+            git commit -m "chore: refresh construction output snapshot [skip ci]"
+            git pull --rebase origin main
+            git push
+          fi

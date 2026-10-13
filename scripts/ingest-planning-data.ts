@@ -379,10 +379,28 @@ interface OutputApplication {
 
 async function main() {
   console.log("Fetching gov.uk planning data CSVs...");
-  const [appsCsv, laCsv] = await Promise.all([
-    fetchWithCache(PLANNING_APP_CSV, "planning-application.csv"),
-    fetchWithCache(LOCAL_AUTHORITY_CSV, "local-authority.csv"),
-  ]);
+  let appsCsv: string;
+  let laCsv: string;
+  try {
+    [appsCsv, laCsv] = await Promise.all([
+      fetchWithCache(PLANNING_APP_CSV, "planning-application.csv"),
+      fetchWithCache(LOCAL_AUTHORITY_CSV, "local-authority.csv"),
+    ]);
+  } catch (err) {
+    // planning.data.gov.uk withdrew the planning-application dataset as
+    // "incomplete and not yet ready for use" (entity count 0, CSV returns
+    // 403 as of October 2026). Keep whatever we already have on disk so the
+    // LPA-portal scrape and condition extraction that follow in the
+    // workflow still run, rather than failing the whole refresh here.
+    console.warn(
+      `  upstream unavailable (${err instanceof Error ? err.message : String(err)}).`
+    );
+    if (existsSync(OUTPUT)) {
+      console.warn(`  keeping existing ${OUTPUT} unchanged.`);
+      return;
+    }
+    throw err;
+  }
 
   console.log("Parsing local-authority...");
   const laRows = parseCsv(laCsv);
@@ -395,6 +413,12 @@ async function main() {
   console.log("Parsing planning-application...");
   const appRows = parseCsv(appsCsv);
   console.log(`  ${appRows.length} application rows`);
+  if (appRows.length < 1000 && existsSync(OUTPUT)) {
+    console.warn(
+      `  upstream returned only ${appRows.length} rows - looks withdrawn/empty. Keeping existing ${OUTPUT}.`
+    );
+    return;
+  }
 
   const out: OutputApplication[] = [];
   const sectorCounts: Record<string, number> = {};

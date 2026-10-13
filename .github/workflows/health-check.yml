@@ -1,0 +1,33 @@
+name: Pulse health check
+
+# Daily probe of https://pulse.fabrick.agency/api/health. The endpoint
+# returns 503 when any feed is down (stale snapshot, upstream API failing,
+# database unreachable), which fails this job and triggers GitHub's
+# workflow-failure email to the repo owner. "degraded" (e.g. an upstream
+# that we have a fallback for) still passes but is printed in the log.
+
+on:
+  schedule:
+    - cron: "30 7 * * *"
+  workflow_dispatch:
+
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Probe /api/health
+        run: |
+          set -o pipefail
+          code=$(curl -sS -o health.json -w "%{http_code}" --max-time 60 https://pulse.fabrick.agency/api/health || echo "000")
+          echo "HTTP $code"
+          if [ -f health.json ]; then
+            jq -r '.status as $s | "status: \($s)", (.checks[] | "  [\(.level)] \(.name): \(.detail)")' health.json || cat health.json
+          fi
+          if [ "$code" != "200" ]; then
+            echo "::error::Pulse health check failed with HTTP $code - see log above for the failing feed(s)."
+            exit 1
+          fi
+          if jq -e '.status == "degraded"' health.json >/dev/null; then
+            echo "::warning::Pulse is degraded - one or more feeds are on fallback."
+          fi

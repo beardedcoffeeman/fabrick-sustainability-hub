@@ -2,7 +2,7 @@
 
 import { useMemo, useState } from "react";
 import Link from "next/link";
-import { ArrowLeft, X, Building2, Target, MapPin, ListChecks } from "lucide-react";
+import { ArrowLeft, Building2, Target, MapPin, ListChecks } from "lucide-react";
 import { ExportButton } from "@/components/ExportButton";
 import {
   BarChart,
@@ -25,28 +25,23 @@ import {
   loadApplications,
   getDatasetCounts,
 } from "@/lib/planning";
+import {
+  SECTORS,
+  SECTOR_COLORS,
+  AudienceCard,
+  HowToCard,
+  ConditionTeaser,
+  FilterGroup,
+  Chip,
+  Kpi,
+  ApplicationRow,
+  ApplicationDrawer,
+  downloadCsv,
+} from "@/components/planning/shared";
+import { DisciplineLensTab, ApplicantTypeBars, tallyApplicantTypes } from "@/components/planning/DisciplineLensTab";
+import { classifyApplicant, APPLICANT_TYPE_LABELS, type ApplicantType } from "@/lib/planning-lens";
+import { track } from "@/lib/analytics";
 
-const SECTORS: Sector[] = [
-  "data-centre",
-  "logistics",
-  "btr-pbsa",
-  "healthcare",
-  "education",
-  "renewable-energy",
-  "hotels",
-  "mixed-use",
-];
-
-const SECTOR_COLORS: Record<Sector, string> = {
-  "data-centre": "#00A389",
-  logistics: "#2D2D3F",
-  "btr-pbsa": "#FF3D7F",
-  healthcare: "#1A8FE3",
-  education: "#F2994A",
-  "renewable-energy": "#27AE60",
-  hotels: "#9B51E0",
-  "mixed-use": "#EB5757",
-};
 const CONDITION_TYPES: ConditionType[] = [
   "noise",
   "bng",
@@ -63,7 +58,7 @@ const CONDITION_TYPES: ConditionType[] = [
   "materials",
 ];
 
-type Tab = "trends" | "conditions";
+type Tab = "trends" | "discipline" | "conditions";
 
 interface ConditionHit {
   application: Application;
@@ -138,7 +133,7 @@ export default function PlanningExplorerPage() {
               month: "long",
               year: "numeric",
             })}
-            . Auto-updates weekly.
+            . Auto-updates monthly.
           </p>
         )}
       </header>
@@ -184,8 +179,8 @@ export default function PlanningExplorerPage() {
         <div className="mt-4 grid gap-4 md:grid-cols-3">
           <HowToCard
             number="01"
-            title="Pick your sector"
-            body="Filter to the sectors where your product, service or strategy lives. Eight options covering most of UK construction demand: data centres, logistics, BTR/PBSA, healthcare, education, renewable energy, hotels, mixed-use regen."
+            title="Pick your sector, or your discipline"
+            body="Filter to the sectors where your product, service or strategy lives, or switch to 'For your discipline' to see only the schemes whose planning conditions call for what you do: acoustics, ecology, drainage, lighting, heritage and more."
           />
           <HowToCard
             number="02"
@@ -202,17 +197,24 @@ export default function PlanningExplorerPage() {
 
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 flex flex-wrap items-center justify-between gap-3">
         <div className="inline-flex rounded-full border border-navy/10 bg-white p-1 shadow-sm">
-          {(["trends", "conditions"] as Tab[]).map((t) => (
+          {(["trends", "discipline", "conditions"] as Tab[]).map((t) => (
             <button
               key={t}
-              onClick={() => setTab(t)}
+              onClick={() => {
+                setTab(t);
+                track("planning_explorer_tab", { tab: t });
+              }}
               className={`rounded-full px-5 py-2 text-xs font-semibold transition-colors ${
                 tab === t
                   ? "bg-navy text-white"
                   : "text-warm-gray hover:text-navy"
               }`}
             >
-              {t === "trends" ? "Trends" : "Conditions search"}
+              {t === "trends"
+                ? "Trends"
+                : t === "discipline"
+                ? "For your discipline"
+                : "Conditions search"}
             </button>
           ))}
         </div>
@@ -228,7 +230,13 @@ export default function PlanningExplorerPage() {
         id="planning-explorer-capture"
         className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-8 pb-12"
       >
-        {tab === "trends" ? <TrendsTab /> : <ConditionsTab />}
+        {tab === "trends" ? (
+          <TrendsTab />
+        ) : tab === "discipline" ? (
+          <DisciplineLensTab applications={APPLICATIONS} />
+        ) : (
+          <ConditionsTab />
+        )}
       </div>
 
       <DataSourcesFooter />
@@ -295,7 +303,7 @@ function DataSourcesFooter() {
           >
             Pulse by Fabrick
           </a>
-          . Data refreshes weekly. We do not republish content that LPAs
+          . Data refreshes monthly. We do not republish content that LPAs
           intend to keep behind their own portals - every record links
           back to the source. If you spot something we&apos;ve got wrong,{" "}
           <a
@@ -321,6 +329,7 @@ function TrendsTab() {
   const [decisionFilter, setDecisionFilter] = useState<
     "all" | "approved" | "refused"
   >("all");
+  const [applicantType, setApplicantType] = useState<ApplicantType | "all">("all");
 
   // All UK regions, always visible as filter chips — empty regions just yield
   // zero results when picked, rather than vanishing.
@@ -347,8 +356,24 @@ function TrendsTab() {
       )
       .filter((a) =>
         decisionFilter === "all" ? true : a.decision === decisionFilter
+      )
+      .filter((a) =>
+        applicantType === "all" ? true : classifyApplicant(a.applicant) === applicantType
       );
+  }, [sectors, regions, decisionFilter, applicantType]);
+
+  // Applicant types present under the sector/region/decision filters (so the
+  // chips only offer options that return something).
+  const applicantTypeOptions = useMemo(() => {
+    const base = APPLICATIONS.filter((a) => sectors.includes(a.sector))
+      .filter((a) =>
+        regions === null ? true : a.region !== "" && regions.includes(a.region as Region)
+      )
+      .filter((a) => (decisionFilter === "all" ? true : a.decision === decisionFilter));
+    return tallyApplicantTypes(base).filter((r) => r.type !== "not-stated");
   }, [sectors, regions, decisionFilter]);
+
+  const applicantTypeRows = useMemo(() => tallyApplicantTypes(filtered), [filtered]);
 
   const total = filtered.length;
   const approved = filtered.filter((a) => a.decision === "approved").length;
@@ -464,6 +489,27 @@ function TrendsTab() {
             ))}
           </FilterGroup>
         </div>
+
+        <div className="mt-5">
+          <FilterGroup title="Applicant type">
+            <Chip
+              active={applicantType === "all"}
+              onClick={() => setApplicantType("all")}
+              label="All applicants"
+            />
+            {applicantTypeOptions.map((r) => (
+              <Chip
+                key={r.type}
+                active={applicantType === r.type}
+                onClick={() => {
+                  setApplicantType((cur) => (cur === r.type ? "all" : r.type));
+                  track("planning_applicant_type_selected", { type: r.type });
+                }}
+                label={`${APPLICANT_TYPE_LABELS[r.type]} (${r.count})`}
+              />
+            ))}
+          </FilterGroup>
+        </div>
       </section>
 
       {/* KPIs */}
@@ -503,6 +549,17 @@ function TrendsTab() {
             </BarChart>
           </ResponsiveContainer>
         </div>
+      </section>
+
+      {/* APPLICANT TYPES */}
+      <section className="rounded-2xl border border-navy/10 bg-white p-5">
+        <h2 className="text-sm font-semibold text-navy">Who is applying</h2>
+        <p className="mt-1 text-xs text-warm-gray">
+          Type of organisation named as applicant, classified from the name on
+          the LPA portal. Housebuilders and investors, NHS trusts, councils,
+          operators, private individuals.
+        </p>
+        <ApplicantTypeBars rows={applicantTypeRows} />
       </section>
 
       {/* LPA TALLY */}
@@ -577,7 +634,12 @@ function TrendsTab() {
                     key={row.name}
                     className="border-b border-navy/5 last:border-0"
                   >
-                    <td className="py-2 pr-4 text-navy">{row.name}</td>
+                    <td className="py-2 pr-4 text-navy">
+                      {row.name}
+                      <span className="block text-[10px] text-warm-gray/80">
+                        {APPLICANT_TYPE_LABELS[classifyApplicant(row.name)]}
+                      </span>
+                    </td>
                     <td className="py-2 pr-4 text-warm-gray text-xs">
                       {row.sectors.map((s) => SECTOR_LABELS[s]).join(", ")}
                     </td>
@@ -895,361 +957,3 @@ function ConditionsTab() {
   );
 }
 
-// ============================================================
-// SHARED COMPONENTS
-// ============================================================
-
-function AudienceCard({
-  icon,
-  title,
-  body,
-}: {
-  icon: React.ReactNode;
-  title: string;
-  body: string;
-}) {
-  return (
-    <div className="rounded-2xl bg-navy-light/40 border border-white/5 p-5">
-      <div className="flex items-center gap-2">
-        {icon}
-        <h3 className="text-sm font-semibold text-white">{title}</h3>
-      </div>
-      <p className="mt-2 text-xs text-gray-300 leading-relaxed">{body}</p>
-    </div>
-  );
-}
-
-function HowToCard({
-  number,
-  title,
-  body,
-}: {
-  number: string;
-  title: string;
-  body: string;
-}) {
-  return (
-    <div className="rounded-2xl border border-navy/10 bg-white p-5">
-      <p className="text-[11px] font-semibold tracking-wider text-pink tabular-nums">
-        {number}
-      </p>
-      <h3 className="mt-1 text-sm font-semibold text-navy">{title}</h3>
-      <p className="mt-2 text-xs text-warm-gray leading-relaxed">{body}</p>
-    </div>
-  );
-}
-
-function csvEscape(v: string | number | undefined): string {
-  if (v === undefined || v === null) return "";
-  const s = String(v);
-  if (/[",\n\r]/.test(s)) return `"${s.replace(/"/g, '""')}"`;
-  return s;
-}
-
-function downloadCsv(apps: Application[]) {
-  const headers = [
-    "id",
-    "reference",
-    "lpa",
-    "region",
-    "address",
-    "useClass",
-    "sector",
-    "description",
-    "applicant",
-    "agent",
-    "decision",
-    "decisionDate",
-    "grossFloorAreaSqm",
-    "source",
-    "conditionCount",
-    "sourceUrl",
-  ];
-  const rows = apps.map((a) => [
-    a.id,
-    a.reference,
-    a.lpa,
-    a.region,
-    a.address,
-    a.useClass,
-    SECTOR_LABELS[a.sector],
-    a.description,
-    a.applicant,
-    a.agent,
-    a.decision,
-    a.decisionDate,
-    a.grossFloorAreaSqm,
-    a.source,
-    a.conditions.length,
-    a.sourceUrl ?? "",
-  ]);
-  const csv = [
-    headers.join(","),
-    ...rows.map((r) => r.map(csvEscape).join(",")),
-  ].join("\n");
-
-  const blob = new Blob([csv], { type: "text/csv;charset=utf-8" });
-  const url = URL.createObjectURL(blob);
-  const a = document.createElement("a");
-  a.href = url;
-  const date = new Date().toISOString().slice(0, 10);
-  a.download = `planning-explorer-${date}.csv`;
-  document.body.appendChild(a);
-  a.click();
-  document.body.removeChild(a);
-  URL.revokeObjectURL(url);
-}
-
-function ConditionTeaser({ label, body }: { label: string; body: string }) {
-  return (
-    <div className="rounded-2xl bg-cream/60 p-4 border border-navy/5">
-      <p className="text-[10px] font-semibold uppercase tracking-wider text-teal-dark">
-        {label}
-      </p>
-      <p className="mt-1.5 text-xs text-warm-gray leading-relaxed">{body}</p>
-    </div>
-  );
-}
-
-function FilterGroup({
-  title,
-  children,
-}: {
-  title: string;
-  children: React.ReactNode;
-}) {
-  return (
-    <div>
-      <p className="text-[11px] font-semibold uppercase tracking-wider text-warm-gray/80 mb-2">
-        {title}
-      </p>
-      <div className="flex flex-wrap gap-2">{children}</div>
-    </div>
-  );
-}
-
-function Chip({
-  active,
-  onClick,
-  label,
-}: {
-  active: boolean;
-  onClick: () => void;
-  label: string;
-}) {
-  return (
-    <button
-      onClick={onClick}
-      className={`rounded-full px-3 py-1 text-xs font-semibold transition-colors border ${
-        active
-          ? "bg-navy text-white border-navy"
-          : "bg-white text-warm-gray border-navy/15 hover:border-navy/40"
-      }`}
-    >
-      {label}
-    </button>
-  );
-}
-
-function Kpi({ label, value }: { label: string; value: string }) {
-  return (
-    <div className="rounded-2xl border border-navy/10 bg-white p-4">
-      <p className="text-[11px] font-semibold uppercase tracking-wider text-warm-gray">
-        {label}
-      </p>
-      <p className="mt-1 font-[family-name:var(--font-playfair)] text-3xl font-bold text-navy tabular-nums">
-        {value}
-      </p>
-    </div>
-  );
-}
-
-function SourceBadge({ source }: { source: Application["source"] }) {
-  if (source === "claude-extraction") {
-    return (
-      <span className="rounded-full bg-pink/10 px-2 py-0.5 text-[9px] font-semibold uppercase tracking-wider text-pink">
-        Conditions extracted
-      </span>
-    );
-  }
-  if (source === "lpa-portal-scrape") {
-    return (
-      <span className="rounded-full bg-pink/10 px-2 py-0.5 text-[9px] font-semibold uppercase tracking-wider text-pink">
-        LPA portal
-      </span>
-    );
-  }
-  return (
-    <span className="rounded-full bg-teal/10 px-2 py-0.5 text-[9px] font-semibold uppercase tracking-wider text-teal-dark">
-      Open data
-    </span>
-  );
-}
-
-function ApplicationRow({ app }: { app: Application }) {
-  return (
-    <div className="py-4">
-      <div className="flex flex-wrap items-baseline gap-x-3 gap-y-1">
-        <span
-          className={`rounded-full px-2.5 py-0.5 text-[10px] font-semibold uppercase tracking-wider ${
-            app.decision === "approved"
-              ? "bg-teal/10 text-teal-dark"
-              : app.decision === "refused"
-              ? "bg-pink/10 text-pink"
-              : "bg-warm-gray/10 text-warm-gray"
-          }`}
-        >
-          {app.decision}
-        </span>
-        <SourceBadge source={app.source} />
-        <span className="text-sm font-semibold text-navy">
-          {app.applicant || <em className="text-warm-gray font-normal">(applicant not in dataset)</em>}
-        </span>
-        <span className="text-[11px] text-warm-gray">
-          {app.lpa} · {app.useClass || "—"} · {app.decisionDate || "pending"}
-        </span>
-      </div>
-      <p className="mt-1 text-xs text-warm-gray leading-relaxed">
-        {app.description}
-      </p>
-      <p className="mt-1 text-[11px] text-warm-gray/70">
-        Ref {app.reference} · {app.address}
-        {app.grossFloorAreaSqm
-          ? ` · ${app.grossFloorAreaSqm.toLocaleString()} sqm`
-          : ""}
-        {app.conditions.length > 0
-          ? ` · ${app.conditions.length} condition${
-              app.conditions.length === 1 ? "" : "s"
-            }`
-          : ""}
-      </p>
-    </div>
-  );
-}
-
-function ApplicationDrawer({
-  app,
-  highlightTypes,
-  onClose,
-}: {
-  app: Application;
-  highlightTypes: ConditionType[];
-  onClose: () => void;
-}) {
-  return (
-    <div
-      className="fixed inset-0 z-50 bg-navy/40 backdrop-blur-sm flex items-end sm:items-center justify-center p-0 sm:p-6"
-      onClick={onClose}
-    >
-      <div
-        className="bg-white w-full max-w-2xl rounded-t-3xl sm:rounded-3xl max-h-[90vh] overflow-y-auto"
-        onClick={(e) => e.stopPropagation()}
-      >
-        <div className="sticky top-0 bg-white border-b border-navy/10 px-6 py-4 flex items-start justify-between gap-4">
-          <div>
-            <p className="text-[10px] font-semibold uppercase tracking-wider text-warm-gray">
-              {app.lpa} · Ref {app.reference}
-            </p>
-            <h3 className="mt-1 font-[family-name:var(--font-playfair)] text-xl font-bold text-navy">
-              {app.applicant}
-            </h3>
-          </div>
-          <button
-            onClick={onClose}
-            className="rounded-full p-2 hover:bg-cream"
-            aria-label="Close"
-          >
-            <X className="h-4 w-4 text-warm-gray" />
-          </button>
-        </div>
-
-        <div className="px-6 py-5 space-y-5">
-          <div>
-            <p className="text-[11px] font-semibold uppercase tracking-wider text-warm-gray">
-              About the application
-            </p>
-            <p className="mt-1 text-sm text-navy">{app.description}</p>
-            <dl className="mt-3 grid grid-cols-2 gap-x-4 gap-y-1 text-xs text-warm-gray">
-              <dt>Address</dt>
-              <dd className="text-navy">
-                {app.address}, {app.postcode}
-              </dd>
-              <dt>Region</dt>
-              <dd className="text-navy">{app.region}</dd>
-              <dt>Sector / Use class</dt>
-              <dd className="text-navy">
-                {SECTOR_LABELS[app.sector]} · {app.useClass}
-              </dd>
-              <dt>Agent</dt>
-              <dd className="text-navy">{app.agent}</dd>
-              <dt>Decision</dt>
-              <dd className="text-navy capitalize">
-                {app.decision} · {app.decisionDate}
-              </dd>
-              {app.grossFloorAreaSqm && (
-                <>
-                  <dt>GIA</dt>
-                  <dd className="text-navy tabular-nums">
-                    {app.grossFloorAreaSqm.toLocaleString()} sqm
-                  </dd>
-                </>
-              )}
-            </dl>
-            {app.sourceUrl && (
-              <a
-                href={app.sourceUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="mt-4 inline-flex items-center gap-1.5 rounded-full bg-navy px-4 py-2 text-xs font-semibold text-white hover:bg-navy-light"
-              >
-                View on the LPA portal
-                <span aria-hidden="true">↗</span>
-              </a>
-            )}
-          </div>
-
-          <div>
-            <p className="text-[11px] font-semibold uppercase tracking-wider text-warm-gray">
-              Conditions ({app.conditions.length})
-            </p>
-            <div className="mt-2 space-y-3">
-              {app.conditions.map((c) => {
-                const highlighted = highlightTypes.includes(c.type);
-                return (
-                  <div
-                    key={c.number}
-                    className={`rounded-xl border p-3 ${
-                      highlighted
-                        ? "border-teal/40 bg-teal/5"
-                        : "border-navy/10 bg-cream/40"
-                    }`}
-                  >
-                    <div className="flex items-center gap-2">
-                      <span className="rounded-full bg-white px-2 py-0.5 text-[10px] font-semibold text-navy border border-navy/10">
-                        {c.number}
-                      </span>
-                      <span className="text-[10px] font-semibold uppercase tracking-wider text-teal-dark">
-                        {CONDITION_LABELS[c.type]}
-                      </span>
-                      <span className="text-xs font-semibold text-navy">
-                        {c.summary}
-                      </span>
-                    </div>
-                    <p className="mt-1.5 text-xs text-warm-gray leading-relaxed">
-                      {c.text}
-                    </p>
-                  </div>
-                );
-              })}
-              {app.conditions.length === 0 && (
-                <p className="text-xs text-warm-gray">
-                  No conditions on record (refused / withdrawn / pending).
-                </p>
-              )}
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  );
-}

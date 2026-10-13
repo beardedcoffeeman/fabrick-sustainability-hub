@@ -35,6 +35,16 @@ interface PlanningApplication {
   documentationUrl: string | null;
   coordinates: { lat: number; lng: number } | null;
   category: "commercial" | "residential" | "mixed" | "other" | "unclassified";
+  sector?: string;
+  applicant?: string;
+}
+
+interface PlanningDataSource {
+  mode: "upstream" | "pulse-dataset";
+  name: string;
+  url: string;
+  note: string;
+  lastRefreshed: string;
 }
 
 interface PlanningSummary {
@@ -60,6 +70,7 @@ interface PlanningSummary {
 interface PlanningData {
   applications: PlanningApplication[];
   summary: PlanningSummary;
+  dataSource?: PlanningDataSource;
   lastUpdated: string;
 }
 
@@ -548,26 +559,51 @@ export function PlanningActivityWidget({ category }: Props) {
         <div className="flex items-start gap-2">
           <Info className="h-3.5 w-3.5 text-warm-gray/60 mt-0.5 shrink-0" />
           <div>
-            <p className="text-[11px] text-warm-gray leading-relaxed">
-              <span className="font-semibold text-navy">Data source:</span>{" "}
-              <a
-                href="https://www.planning.data.gov.uk"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-teal hover:underline inline-flex items-center gap-0.5"
-              >
-                Planning Data England
-                <ExternalLink className="h-2.5 w-2.5" />
-              </a>
-              {" "}- published by the Department for Levelling Up, Housing and
-              Communities (DLUHC). Open data from English local planning authorities.
-            </p>
-            <p className="text-[10px] text-warm-gray/60 mt-1">
-              Data cached for 1 hour. Categorisation uses MHCLG planning
-              development classification codes; entries without a published
-              classification are excluded from the filtered views. Not all
-              authorities publish at the same frequency.
-            </p>
+            {data?.dataSource?.mode === "pulse-dataset" ? (
+              <>
+                <p className="text-[11px] text-warm-gray leading-relaxed">
+                  <span className="font-semibold text-navy">Data source:</span>{" "}
+                  <a
+                    href={data.dataSource.url}
+                    className="text-teal hover:underline inline-flex items-center gap-0.5"
+                  >
+                    {data.dataSource.name}
+                    <ExternalLink className="h-2.5 w-2.5" />
+                  </a>
+                </p>
+                <p className="text-[10px] text-warm-gray/60 mt-1">
+                  {data.dataSource.note}
+                  {data.dataSource.lastRefreshed
+                    ? ` Last refreshed ${formatDate(data.dataSource.lastRefreshed)}.`
+                    : ""}{" "}
+                  Categories map Pulse sectors to commercial, residential and
+                  mixed-use. Decisions are as published by each authority.
+                </p>
+              </>
+            ) : (
+              <>
+                <p className="text-[11px] text-warm-gray leading-relaxed">
+                  <span className="font-semibold text-navy">Data source:</span>{" "}
+                  <a
+                    href="https://www.planning.data.gov.uk"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-teal hover:underline inline-flex items-center gap-0.5"
+                  >
+                    Planning Data England
+                    <ExternalLink className="h-2.5 w-2.5" />
+                  </a>
+                  {" "}- published by the Ministry of Housing, Communities and
+                  Local Government (MHCLG). Open data from English local planning authorities.
+                </p>
+                <p className="text-[10px] text-warm-gray/60 mt-1">
+                  Data cached for 1 hour. Categorisation uses MHCLG planning
+                  development classification codes; entries without a published
+                  classification are excluded from the filtered views. Not all
+                  authorities publish at the same frequency.
+                </p>
+              </>
+            )}
           </div>
         </div>
       </div>
