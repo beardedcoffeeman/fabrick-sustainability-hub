@@ -1,6 +1,6 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import Link from "next/link";
 import { ArrowLeft, Building2, Target, MapPin, ListChecks } from "lucide-react";
 import { ExportButton } from "@/components/ExportButton";
@@ -39,7 +39,9 @@ import {
   downloadCsv,
 } from "@/components/planning/shared";
 import { DisciplineLensTab, ApplicantTypeBars, tallyApplicantTypes } from "@/components/planning/DisciplineLensTab";
-import { classifyApplicant, APPLICANT_TYPE_LABELS, type ApplicantType } from "@/lib/planning-lens";
+import { classifyApplicant, APPLICANT_TYPE_LABELS, DISCIPLINE_BY_ID, REGION_GRID, type ApplicantType, type DisciplineId } from "@/lib/planning-lens";
+
+const REGIONS: Region[] = REGION_GRID.flat().filter((r): r is Region => r !== null);
 import { track } from "@/lib/analytics";
 
 const CONDITION_TYPES: ConditionType[] = [
@@ -71,6 +73,21 @@ const MAX_LIST_RENDER = 50;
 
 export default function PlanningExplorerPage() {
   const [tab, setTab] = useState<Tab>("trends");
+  // Deep links, e.g. ?tab=discipline&discipline=drainage&region=London,
+  // so a view can be pre-set for a demo or shared with a client. Read on
+  // mount from window.location to avoid a Suspense boundary for useSearchParams.
+  const [preset, setPreset] = useState<{ discipline?: DisciplineId; region?: Region } | null>(null);
+  useEffect(() => {
+    const q = new URLSearchParams(window.location.search);
+    const t = q.get("tab");
+    if (t === "trends" || t === "discipline" || t === "conditions") setTab(t);
+    const d = q.get("discipline");
+    const r = q.get("region");
+    setPreset({
+      discipline: d && d in DISCIPLINE_BY_ID ? (d as DisciplineId) : undefined,
+      region: r && REGIONS.includes(r as Region) ? (r as Region) : undefined,
+    });
+  }, []);
 
   return (
     <main className="min-h-screen bg-cream">
@@ -233,7 +250,7 @@ export default function PlanningExplorerPage() {
         {tab === "trends" ? (
           <TrendsTab />
         ) : tab === "discipline" ? (
-          <DisciplineLensTab applications={APPLICATIONS} />
+          <DisciplineLensTab applications={APPLICATIONS} initialDiscipline={preset?.discipline} initialRegion={preset?.region} />
         ) : (
           <ConditionsTab />
         )}

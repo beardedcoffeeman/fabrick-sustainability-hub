@@ -50,12 +50,22 @@ const REGION_SHORT: Record<Region, string> = {
 
 interface Props {
   applications: Application[];
+  /** Pre-set from the page's URL (?discipline=drainage&region=London). */
+  initialDiscipline?: DisciplineId;
+  initialRegion?: Region;
 }
 
-export function DisciplineLensTab({ applications }: Props) {
-  const [disciplineId, setDisciplineId] = useState<DisciplineId>("acoustic");
+export function DisciplineLensTab({ applications, initialDiscipline, initialRegion }: Props) {
+  const [disciplineId, setDisciplineId] = useState<DisciplineId>(initialDiscipline ?? "acoustic");
   const [sectors, setSectors] = useState<Sector[]>([...SECTORS]);
-  const [region, setRegion] = useState<Region | null>(null);
+  const [region, setRegion] = useState<Region | null>(initialRegion ?? null);
+  // The page reads the URL after mount, so apply presets when they arrive.
+  useEffect(() => {
+    if (initialDiscipline) setDisciplineId(initialDiscipline);
+  }, [initialDiscipline]);
+  useEffect(() => {
+    if (initialRegion) setRegion(initialRegion);
+  }, [initialRegion]);
   const [openId, setOpenId] = useState<string | null>(null);
 
   const discipline = DISCIPLINE_BY_ID[disciplineId];
