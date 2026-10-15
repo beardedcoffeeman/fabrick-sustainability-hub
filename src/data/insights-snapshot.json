@@ -1,16 +1,16 @@
 {
-  "generatedAt": "2026-09-15T13:02:40.768Z",
+  "generatedAt": "2026-10-15T13:00:04.000Z",
   "insights": [
     {
       "eyebrow": "UK Grid Carbon",
-      "headline": "Saturday 12pm is the cleanest hour of the UK week, 52% below average.",
+      "headline": "Saturday 12pm is the cleanest hour of the UK week, 51% below average.",
       "detail": "Schedule grid-powered plant operations into the lowest-carbon windows.",
       "href": "/dashboard/carbon-intensity"
     },
     {
       "eyebrow": "Material Prices",
-      "headline": "Fabricated structural steel up +17.7% YoY, the biggest mover in the UK construction basket.",
-      "detail": "Plastic pipes (rigid) is the next biggest mover at +12.0% YoY.",
+      "headline": "Fabricated structural steel up +21.2% YoY, the biggest mover in the UK construction basket.",
+      "detail": "Plastic pipes (rigid) is the next biggest mover at +15.5% YoY.",
       "href": "/dashboard/material-prices"
     },
     {
