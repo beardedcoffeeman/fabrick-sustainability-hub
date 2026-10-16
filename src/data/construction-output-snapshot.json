@@ -1,14 +1,14 @@
 {
-  "generatedAt": "2026-09-11T07:00:00.000Z",
+  "generatedAt": "2026-10-15T07:00:00.000Z",
   "source": {
     "name": "ONS - Output in the Construction Industry",
     "publisher": "Office for National Statistics",
     "url": "https://www.ons.gov.uk/businessindustryandtrade/constructionindustry/datasets/outputintheconstructionindustry",
     "workbook": "https://www.ons.gov.uk/file?uri=/businessindustryandtrade/constructionindustry/datasets/outputintheconstructionindustry/current/bulletindataset2.xlsx",
     "table": "Table 2a: volume, seasonally adjusted, by sector",
-    "releaseDate": "2026-09-11",
-    "nextRelease": "15 October 2026",
-    "dataPeriod": "Jul 2026",
+    "releaseDate": "2026-10-15",
+    "nextRelease": "12 November 2026",
+    "dataPeriod": "Aug 2026",
     "unit": "GBP million, chained volume measures, seasonally adjusted",
     "notes": "Great Britain. Chained volume measures (2023 prices), seasonally adjusted. Published monthly, roughly six weeks after the reference month. Contains public sector information licensed under the Open Government Licence v3.0."
   },
@@ -19,184 +19,184 @@
       "cdid": "MV4A",
       "values": [
         {
-          "period": "Aug 2023",
-          "periodKey": "2023-aug",
-          "value": 18371
-        },
-        {
           "period": "Sep 2023",
           "periodKey": "2023-sep",
-          "value": 18525
+          "value": 18629
         },
         {
           "period": "Oct 2023",
           "periodKey": "2023-oct",
-          "value": 18520
+          "value": 18670
         },
         {
           "period": "Nov 2023",
           "periodKey": "2023-nov",
-          "value": 18448
+          "value": 18547
         },
         {
           "period": "Dec 2023",
           "periodKey": "2023-dec",
-          "value": 18332
+          "value": 18375
         },
         {
           "period": "Jan 2024",
           "periodKey": "2024-jan",
-          "value": 18582
+          "value": 18640
         },
         {
           "period": "Feb 2024",
           "periodKey": "2024-feb",
-          "value": 18353
+          "value": 18509
         },
         {
           "period": "Mar 2024",
           "periodKey": "2024-mar",
-          "value": 18373
+          "value": 18447
         },
         {
           "period": "Apr 2024",
           "periodKey": "2024-apr",
-          "value": 18259
+          "value": 18297
         },
         {
           "period": "May 2024",
           "periodKey": "2024-may",
-          "value": 18556
+          "value": 18531
         },
         {
           "period": "Jun 2024",
           "periodKey": "2024-jun",
-          "value": 18688
+          "value": 18542
         },
         {
           "period": "Jul 2024",
           "periodKey": "2024-jul",
-          "value": 18408
+          "value": 18363
         },
         {
           "period": "Aug 2024",
           "periodKey": "2024-aug",
-          "value": 18450
+          "value": 18455
         },
         {
           "period": "Sep 2024",
           "periodKey": "2024-sep",
-          "value": 18378
+          "value": 18402
         },
         {
           "period": "Oct 2024",
           "periodKey": "2024-oct",
-          "value": 18388
+          "value": 18348
         },
         {
           "period": "Nov 2024",
           "periodKey": "2024-nov",
-          "value": 18506
+          "value": 18529
         },
         {
           "period": "Dec 2024",
           "periodKey": "2024-dec",
-          "value": 18425
+          "value": 18376
         },
         {
           "period": "Jan 2025",
           "periodKey": "2025-jan",
-          "value": 18418
+          "value": 18413
         },
         {
           "period": "Feb 2025",
           "periodKey": "2025-feb",
-          "value": 18481
+          "value": 18473
         },
         {
           "period": "Mar 2025",
           "periodKey": "2025-mar",
-          "value": 18529
+          "value": 18551
         },
         {
           "period": "Apr 2025",
           "periodKey": "2025-apr",
-          "value": 18652
+          "value": 18654
         },
         {
           "period": "May 2025",
           "periodKey": "2025-may",
-          "value": 18553
+          "value": 18554
         },
         {
           "period": "Jun 2025",
           "periodKey": "2025-jun",
-          "value": 18590
+          "value": 18575
         },
         {
           "period": "Jul 2025",
           "periodKey": "2025-jul",
-          "value": 18652
+          "value": 18614
         },
         {
           "period": "Aug 2025",
           "periodKey": "2025-aug",
-          "value": 18567
+          "value": 18557
         },
         {
           "period": "Sep 2025",
           "periodKey": "2025-sep",
-          "value": 18629
+          "value": 18624
         },
         {
           "period": "Oct 2025",
           "periodKey": "2025-oct",
-          "value": 18351
+          "value": 18356
         },
         {
           "period": "Nov 2025",
           "periodKey": "2025-nov",
-          "value": 18135
+          "value": 18173
         },
         {
           "period": "Dec 2025",
           "periodKey": "2025-dec",
-          "value": 17937
+          "value": 18043
         },
         {
           "period": "Jan 2026",
           "periodKey": "2026-jan",
-          "value": 18054
+          "value": 18145
         },
         {
           "period": "Feb 2026",
           "periodKey": "2026-feb",
-          "value": 18111
+          "value": 18176
         },
         {
           "period": "Mar 2026",
           "periodKey": "2026-mar",
-          "value": 18369
+          "value": 18472
         },
         {
           "period": "Apr 2026",
           "periodKey": "2026-apr",
-          "value": 18343
+          "value": 18492
         },
         {
           "period": "May 2026",
           "periodKey": "2026-may",
-          "value": 18191
+          "value": 18399
         },
         {
           "period": "Jun 2026",
           "periodKey": "2026-jun",
-          "value": 18164
+          "value": 18352
         },
         {
           "period": "Jul 2026",
           "periodKey": "2026-jul",
-          "value": 18185
+          "value": 18263
+        },
+        {
+          "period": "Aug 2026",
+          "periodKey": "2026-aug",
+          "value": 18221
         }
       ]
     },
@@ -206,44 +206,39 @@
       "cdid": "MV44",
       "values": [
         {
-          "period": "Aug 2023",
-          "periodKey": "2023-aug",
-          "value": 11514
-        },
-        {
           "period": "Sep 2023",
           "periodKey": "2023-sep",
-          "value": 11451
+          "value": 11415
         },
         {
           "period": "Oct 2023",
           "periodKey": "2023-oct",
-          "value": 11307
+          "value": 11312
         },
         {
           "period": "Nov 2023",
           "periodKey": "2023-nov",
-          "value": 11040
+          "value": 11027
         },
         {
           "period": "Dec 2023",
           "periodKey": "2023-dec",
-          "value": 10883
+          "value": 10829
         },
         {
           "period": "Jan 2024",
           "periodKey": "2024-jan",
-          "value": 11079
+          "value": 11035
         },
         {
           "period": "Feb 2024",
           "periodKey": "2024-feb",
-          "value": 10937
+          "value": 10959
         },
         {
           "period": "Mar 2024",
           "periodKey": "2024-mar",
-          "value": 10837
+          "value": 10836
         },
         {
           "period": "Apr 2024",
@@ -253,137 +248,142 @@
         {
           "period": "May 2024",
           "periodKey": "2024-may",
-          "value": 10837
+          "value": 10783
         },
         {
           "period": "Jun 2024",
           "periodKey": "2024-jun",
-          "value": 11028
+          "value": 10863
         },
         {
           "period": "Jul 2024",
           "periodKey": "2024-jul",
-          "value": 10801
+          "value": 10731
         },
         {
           "period": "Aug 2024",
           "periodKey": "2024-aug",
-          "value": 10858
+          "value": 10828
         },
         {
           "period": "Sep 2024",
           "periodKey": "2024-sep",
-          "value": 10725
+          "value": 10732
         },
         {
           "period": "Oct 2024",
           "periodKey": "2024-oct",
-          "value": 10757
+          "value": 10708
         },
         {
           "period": "Nov 2024",
           "periodKey": "2024-nov",
-          "value": 10863
+          "value": 10854
         },
         {
           "period": "Dec 2024",
           "periodKey": "2024-dec",
-          "value": 10901
+          "value": 10850
         },
         {
           "period": "Jan 2025",
           "periodKey": "2025-jan",
-          "value": 10896
+          "value": 10878
         },
         {
           "period": "Feb 2025",
           "periodKey": "2025-feb",
-          "value": 10887
+          "value": 10841
         },
         {
           "period": "Mar 2025",
           "periodKey": "2025-mar",
-          "value": 10942
+          "value": 10916
         },
         {
           "period": "Apr 2025",
           "periodKey": "2025-apr",
-          "value": 10920
+          "value": 10893
         },
         {
           "period": "May 2025",
           "periodKey": "2025-may",
-          "value": 10978
+          "value": 10927
         },
         {
           "period": "Jun 2025",
           "periodKey": "2025-jun",
-          "value": 10878
+          "value": 10787
         },
         {
           "period": "Jul 2025",
           "periodKey": "2025-jul",
-          "value": 10739
+          "value": 10624
         },
         {
           "period": "Aug 2025",
           "periodKey": "2025-aug",
-          "value": 10779
+          "value": 10689
         },
         {
           "period": "Sep 2025",
           "periodKey": "2025-sep",
-          "value": 10880
+          "value": 10791
         },
         {
           "period": "Oct 2025",
           "periodKey": "2025-oct",
-          "value": 10572
+          "value": 10488
         },
         {
           "period": "Nov 2025",
           "periodKey": "2025-nov",
-          "value": 10382
+          "value": 10322
         },
         {
           "period": "Dec 2025",
           "periodKey": "2025-dec",
-          "value": 10377
+          "value": 10355
         },
         {
           "period": "Jan 2026",
           "periodKey": "2026-jan",
-          "value": 10138
+          "value": 10120
         },
         {
           "period": "Feb 2026",
           "periodKey": "2026-feb",
-          "value": 10174
+          "value": 10131
         },
         {
           "period": "Mar 2026",
           "periodKey": "2026-mar",
-          "value": 10360
+          "value": 10339
         },
         {
           "period": "Apr 2026",
           "periodKey": "2026-apr",
-          "value": 10289
+          "value": 10292
         },
         {
           "period": "May 2026",
           "periodKey": "2026-may",
-          "value": 10266
+          "value": 10294
         },
         {
           "period": "Jun 2026",
           "periodKey": "2026-jun",
-          "value": 10237
+          "value": 10264
         },
         {
           "period": "Jul 2026",
           "periodKey": "2026-jul",
-          "value": 10196
+          "value": 10144
+        },
+        {
+          "period": "Aug 2026",
+          "periodKey": "2026-aug",
+          "value": 10073
         }
       ]
     },
@@ -393,184 +393,184 @@
       "cdid": "MV49",
       "values": [
         {
-          "period": "Aug 2023",
-          "periodKey": "2023-aug",
-          "value": 6856
-        },
-        {
           "period": "Sep 2023",
           "periodKey": "2023-sep",
-          "value": 7074
+          "value": 7214
         },
         {
           "period": "Oct 2023",
           "periodKey": "2023-oct",
-          "value": 7213
+          "value": 7359
         },
         {
           "period": "Nov 2023",
           "periodKey": "2023-nov",
-          "value": 7409
+          "value": 7521
         },
         {
           "period": "Dec 2023",
           "periodKey": "2023-dec",
-          "value": 7449
+          "value": 7546
         },
         {
           "period": "Jan 2024",
           "periodKey": "2024-jan",
-          "value": 7503
+          "value": 7605
         },
         {
           "period": "Feb 2024",
           "periodKey": "2024-feb",
-          "value": 7417
+          "value": 7550
         },
         {
           "period": "Mar 2024",
           "periodKey": "2024-mar",
-          "value": 7536
+          "value": 7610
         },
         {
           "period": "Apr 2024",
           "periodKey": "2024-apr",
-          "value": 7601
+          "value": 7639
         },
         {
           "period": "May 2024",
           "periodKey": "2024-may",
-          "value": 7719
+          "value": 7748
         },
         {
           "period": "Jun 2024",
           "periodKey": "2024-jun",
-          "value": 7659
+          "value": 7680
         },
         {
           "period": "Jul 2024",
           "periodKey": "2024-jul",
-          "value": 7607
+          "value": 7633
         },
         {
           "period": "Aug 2024",
           "periodKey": "2024-aug",
-          "value": 7591
+          "value": 7626
         },
         {
           "period": "Sep 2024",
           "periodKey": "2024-sep",
-          "value": 7653
+          "value": 7671
         },
         {
           "period": "Oct 2024",
           "periodKey": "2024-oct",
-          "value": 7630
+          "value": 7641
         },
         {
           "period": "Nov 2024",
           "periodKey": "2024-nov",
-          "value": 7643
+          "value": 7674
         },
         {
           "period": "Dec 2024",
           "periodKey": "2024-dec",
-          "value": 7524
+          "value": 7525
         },
         {
           "period": "Jan 2025",
           "periodKey": "2025-jan",
-          "value": 7523
+          "value": 7535
         },
         {
           "period": "Feb 2025",
           "periodKey": "2025-feb",
-          "value": 7594
+          "value": 7631
         },
         {
           "period": "Mar 2025",
           "periodKey": "2025-mar",
-          "value": 7587
+          "value": 7635
         },
         {
           "period": "Apr 2025",
           "periodKey": "2025-apr",
-          "value": 7731
+          "value": 7760
         },
         {
           "period": "May 2025",
           "periodKey": "2025-may",
-          "value": 7576
+          "value": 7627
         },
         {
           "period": "Jun 2025",
           "periodKey": "2025-jun",
-          "value": 7712
+          "value": 7788
         },
         {
           "period": "Jul 2025",
           "periodKey": "2025-jul",
-          "value": 7913
+          "value": 7990
         },
         {
           "period": "Aug 2025",
           "periodKey": "2025-aug",
-          "value": 7789
+          "value": 7867
         },
         {
           "period": "Sep 2025",
           "periodKey": "2025-sep",
-          "value": 7749
+          "value": 7834
         },
         {
           "period": "Oct 2025",
           "periodKey": "2025-oct",
-          "value": 7779
+          "value": 7868
         },
         {
           "period": "Nov 2025",
           "periodKey": "2025-nov",
-          "value": 7753
+          "value": 7851
         },
         {
           "period": "Dec 2025",
           "periodKey": "2025-dec",
-          "value": 7560
+          "value": 7688
         },
         {
           "period": "Jan 2026",
           "periodKey": "2026-jan",
-          "value": 7915
+          "value": 8025
         },
         {
           "period": "Feb 2026",
           "periodKey": "2026-feb",
-          "value": 7937
+          "value": 8045
         },
         {
           "period": "Mar 2026",
           "periodKey": "2026-mar",
-          "value": 8010
+          "value": 8133
         },
         {
           "period": "Apr 2026",
           "periodKey": "2026-apr",
-          "value": 8054
+          "value": 8200
         },
         {
           "period": "May 2026",
           "periodKey": "2026-may",
-          "value": 7925
+          "value": 8105
         },
         {
           "period": "Jun 2026",
           "periodKey": "2026-jun",
-          "value": 7927
+          "value": 8088
         },
         {
           "period": "Jul 2026",
           "periodKey": "2026-jul",
-          "value": 7989
+          "value": 8119
+        },
+        {
+          "period": "Aug 2026",
+          "periodKey": "2026-aug",
+          "value": 8148
         }
       ]
     },
@@ -580,184 +580,184 @@
       "cdid": "MVL9",
       "values": [
         {
-          "period": "Aug 2023",
-          "periodKey": "2023-aug",
-          "value": 4474
-        },
-        {
           "period": "Sep 2023",
           "periodKey": "2023-sep",
-          "value": 4408
+          "value": 4168
         },
         {
           "period": "Oct 2023",
           "periodKey": "2023-oct",
-          "value": 4259
+          "value": 4047
         },
         {
           "period": "Nov 2023",
           "periodKey": "2023-nov",
-          "value": 4226
+          "value": 4013
         },
         {
           "period": "Dec 2023",
           "periodKey": "2023-dec",
-          "value": 4233
+          "value": 3952
         },
         {
           "period": "Jan 2024",
           "periodKey": "2024-jan",
-          "value": 4243
+          "value": 4054
         },
         {
           "period": "Feb 2024",
           "periodKey": "2024-feb",
-          "value": 4221
+          "value": 4039
         },
         {
           "period": "Mar 2024",
           "periodKey": "2024-mar",
-          "value": 4248
+          "value": 4058
         },
         {
           "period": "Apr 2024",
           "periodKey": "2024-apr",
-          "value": 4078
+          "value": 3887
         },
         {
           "period": "May 2024",
           "periodKey": "2024-may",
-          "value": 4169
+          "value": 3966
         },
         {
           "period": "Jun 2024",
           "periodKey": "2024-jun",
-          "value": 4229
+          "value": 3946
         },
         {
           "period": "Jul 2024",
           "periodKey": "2024-jul",
-          "value": 4146
+          "value": 3949
         },
         {
           "period": "Aug 2024",
           "periodKey": "2024-aug",
-          "value": 4164
+          "value": 3987
         },
         {
           "period": "Sep 2024",
           "periodKey": "2024-sep",
-          "value": 4126
+          "value": 3962
         },
         {
           "period": "Oct 2024",
           "periodKey": "2024-oct",
-          "value": 4083
+          "value": 3918
         },
         {
           "period": "Nov 2024",
           "periodKey": "2024-nov",
-          "value": 4128
+          "value": 3954
         },
         {
           "period": "Dec 2024",
           "periodKey": "2024-dec",
-          "value": 4154
+          "value": 3959
         },
         {
           "period": "Jan 2025",
           "periodKey": "2025-jan",
-          "value": 4160
+          "value": 3976
         },
         {
           "period": "Feb 2025",
           "periodKey": "2025-feb",
-          "value": 4170
+          "value": 3979
         },
         {
           "period": "Mar 2025",
           "periodKey": "2025-mar",
-          "value": 4236
+          "value": 4011
         },
         {
           "period": "Apr 2025",
           "periodKey": "2025-apr",
-          "value": 4248
+          "value": 4044
         },
         {
           "period": "May 2025",
           "periodKey": "2025-may",
-          "value": 4194
+          "value": 3976
         },
         {
           "period": "Jun 2025",
           "periodKey": "2025-jun",
-          "value": 4179
+          "value": 3956
         },
         {
           "period": "Jul 2025",
           "periodKey": "2025-jul",
-          "value": 4114
+          "value": 3879
         },
         {
           "period": "Aug 2025",
           "periodKey": "2025-aug",
-          "value": 4156
+          "value": 3934
         },
         {
           "period": "Sep 2025",
           "periodKey": "2025-sep",
-          "value": 4294
+          "value": 4075
         },
         {
           "period": "Oct 2025",
           "periodKey": "2025-oct",
-          "value": 4130
+          "value": 3886
         },
         {
           "period": "Nov 2025",
           "periodKey": "2025-nov",
-          "value": 3950
+          "value": 3762
         },
         {
           "period": "Dec 2025",
           "periodKey": "2025-dec",
-          "value": 3950
+          "value": 3771
         },
         {
           "period": "Jan 2026",
           "periodKey": "2026-jan",
-          "value": 3781
+          "value": 3643
         },
         {
           "period": "Feb 2026",
           "periodKey": "2026-feb",
-          "value": 3847
+          "value": 3710
         },
         {
           "period": "Mar 2026",
           "periodKey": "2026-mar",
-          "value": 3942
+          "value": 3773
         },
         {
           "period": "Apr 2026",
           "periodKey": "2026-apr",
-          "value": 3866
+          "value": 3698
         },
         {
           "period": "May 2026",
           "periodKey": "2026-may",
-          "value": 3899
+          "value": 3743
         },
         {
           "period": "Jun 2026",
           "periodKey": "2026-jun",
-          "value": 3828
+          "value": 3663
         },
         {
           "period": "Jul 2026",
           "periodKey": "2026-jul",
-          "value": 3690
+          "value": 3558
+        },
+        {
+          "period": "Aug 2026",
+          "periodKey": "2026-aug",
+          "value": 3483
         }
       ]
     },
@@ -767,184 +767,184 @@
       "cdid": "MV3W",
       "values": [
         {
-          "period": "Aug 2023",
-          "periodKey": "2023-aug",
-          "value": 1019
-        },
-        {
           "period": "Sep 2023",
           "periodKey": "2023-sep",
-          "value": 1000
+          "value": 694
         },
         {
           "period": "Oct 2023",
           "periodKey": "2023-oct",
-          "value": 979
+          "value": 700
         },
         {
           "period": "Nov 2023",
           "periodKey": "2023-nov",
-          "value": 1002
+          "value": 736
         },
         {
           "period": "Dec 2023",
           "periodKey": "2023-dec",
-          "value": 997
+          "value": 738
         },
         {
           "period": "Jan 2024",
           "periodKey": "2024-jan",
-          "value": 915
+          "value": 722
         },
         {
           "period": "Feb 2024",
           "periodKey": "2024-feb",
-          "value": 865
+          "value": 658
         },
         {
           "period": "Mar 2024",
           "periodKey": "2024-mar",
-          "value": 834
+          "value": 633
         },
         {
           "period": "Apr 2024",
           "periodKey": "2024-apr",
-          "value": 778
+          "value": 576
         },
         {
           "period": "May 2024",
           "periodKey": "2024-may",
-          "value": 833
+          "value": 615
         },
         {
           "period": "Jun 2024",
           "periodKey": "2024-jun",
-          "value": 899
+          "value": 607
         },
         {
           "period": "Jul 2024",
           "periodKey": "2024-jul",
-          "value": 845
+          "value": 626
         },
         {
           "period": "Aug 2024",
           "periodKey": "2024-aug",
-          "value": 815
+          "value": 610
         },
         {
           "period": "Sep 2024",
           "periodKey": "2024-sep",
-          "value": 787
+          "value": 590
         },
         {
           "period": "Oct 2024",
           "periodKey": "2024-oct",
-          "value": 760
+          "value": 550
         },
         {
           "period": "Nov 2024",
           "periodKey": "2024-nov",
-          "value": 753
+          "value": 529
         },
         {
           "period": "Dec 2024",
           "periodKey": "2024-dec",
-          "value": 705
+          "value": 507
         },
         {
           "period": "Jan 2025",
           "periodKey": "2025-jan",
-          "value": 750
+          "value": 542
         },
         {
           "period": "Feb 2025",
           "periodKey": "2025-feb",
-          "value": 798
+          "value": 540
         },
         {
           "period": "Mar 2025",
           "periodKey": "2025-mar",
-          "value": 775
+          "value": 512
         },
         {
           "period": "Apr 2025",
           "periodKey": "2025-apr",
-          "value": 781
+          "value": 522
         },
         {
           "period": "May 2025",
           "periodKey": "2025-may",
-          "value": 772
+          "value": 522
         },
         {
           "period": "Jun 2025",
           "periodKey": "2025-jun",
-          "value": 751
+          "value": 519
         },
         {
           "period": "Jul 2025",
           "periodKey": "2025-jul",
-          "value": 790
+          "value": 536
         },
         {
           "period": "Aug 2025",
           "periodKey": "2025-aug",
-          "value": 788
+          "value": 534
         },
         {
           "period": "Sep 2025",
           "periodKey": "2025-sep",
-          "value": 808
+          "value": 546
         },
         {
           "period": "Oct 2025",
           "periodKey": "2025-oct",
-          "value": 794
+          "value": 537
         },
         {
           "period": "Nov 2025",
           "periodKey": "2025-nov",
-          "value": 702
+          "value": 466
         },
         {
           "period": "Dec 2025",
           "periodKey": "2025-dec",
-          "value": 706
+          "value": 467
         },
         {
           "period": "Jan 2026",
           "periodKey": "2026-jan",
-          "value": 692
+          "value": 453
         },
         {
           "period": "Feb 2026",
           "periodKey": "2026-feb",
-          "value": 667
+          "value": 434
         },
         {
           "period": "Mar 2026",
           "periodKey": "2026-mar",
-          "value": 690
+          "value": 449
         },
         {
           "period": "Apr 2026",
           "periodKey": "2026-apr",
-          "value": 698
+          "value": 454
         },
         {
           "period": "May 2026",
           "periodKey": "2026-may",
-          "value": 670
+          "value": 434
         },
         {
           "period": "Jun 2026",
           "periodKey": "2026-jun",
-          "value": 596
+          "value": 370
         },
         {
           "period": "Jul 2026",
           "periodKey": "2026-jul",
-          "value": 615
+          "value": 395
+        },
+        {
+          "period": "Aug 2026",
+          "periodKey": "2026-aug",
+          "value": 380
         }
       ]
     },
@@ -954,184 +954,184 @@
       "cdid": "MV3X",
       "values": [
         {
-          "period": "Aug 2023",
-          "periodKey": "2023-aug",
-          "value": 3455
-        },
-        {
           "period": "Sep 2023",
           "periodKey": "2023-sep",
-          "value": 3408
+          "value": 3474
         },
         {
           "period": "Oct 2023",
           "periodKey": "2023-oct",
-          "value": 3280
+          "value": 3348
         },
         {
           "period": "Nov 2023",
           "periodKey": "2023-nov",
-          "value": 3224
+          "value": 3276
         },
         {
           "period": "Dec 2023",
           "periodKey": "2023-dec",
-          "value": 3236
+          "value": 3214
         },
         {
           "period": "Jan 2024",
           "periodKey": "2024-jan",
-          "value": 3328
+          "value": 3332
         },
         {
           "period": "Feb 2024",
           "periodKey": "2024-feb",
-          "value": 3356
+          "value": 3381
         },
         {
           "period": "Mar 2024",
           "periodKey": "2024-mar",
-          "value": 3414
+          "value": 3425
         },
         {
           "period": "Apr 2024",
           "periodKey": "2024-apr",
-          "value": 3300
+          "value": 3311
         },
         {
           "period": "May 2024",
           "periodKey": "2024-may",
-          "value": 3336
+          "value": 3351
         },
         {
           "period": "Jun 2024",
           "periodKey": "2024-jun",
-          "value": 3330
+          "value": 3340
         },
         {
           "period": "Jul 2024",
           "periodKey": "2024-jul",
-          "value": 3300
+          "value": 3323
         },
         {
           "period": "Aug 2024",
           "periodKey": "2024-aug",
-          "value": 3348
+          "value": 3377
         },
         {
           "period": "Sep 2024",
           "periodKey": "2024-sep",
-          "value": 3339
+          "value": 3372
         },
         {
           "period": "Oct 2024",
           "periodKey": "2024-oct",
-          "value": 3323
+          "value": 3369
         },
         {
           "period": "Nov 2024",
           "periodKey": "2024-nov",
-          "value": 3374
+          "value": 3425
         },
         {
           "period": "Dec 2024",
           "periodKey": "2024-dec",
-          "value": 3449
+          "value": 3452
         },
         {
           "period": "Jan 2025",
           "periodKey": "2025-jan",
-          "value": 3410
+          "value": 3433
         },
         {
           "period": "Feb 2025",
           "periodKey": "2025-feb",
-          "value": 3372
+          "value": 3439
         },
         {
           "period": "Mar 2025",
           "periodKey": "2025-mar",
-          "value": 3461
+          "value": 3499
         },
         {
           "period": "Apr 2025",
           "periodKey": "2025-apr",
-          "value": 3467
+          "value": 3522
         },
         {
           "period": "May 2025",
           "periodKey": "2025-may",
-          "value": 3422
+          "value": 3455
         },
         {
           "period": "Jun 2025",
           "periodKey": "2025-jun",
-          "value": 3428
+          "value": 3437
         },
         {
           "period": "Jul 2025",
           "periodKey": "2025-jul",
-          "value": 3323
+          "value": 3343
         },
         {
           "period": "Aug 2025",
           "periodKey": "2025-aug",
-          "value": 3368
+          "value": 3400
         },
         {
           "period": "Sep 2025",
           "periodKey": "2025-sep",
-          "value": 3486
+          "value": 3528
         },
         {
           "period": "Oct 2025",
           "periodKey": "2025-oct",
-          "value": 3336
+          "value": 3349
         },
         {
           "period": "Nov 2025",
           "periodKey": "2025-nov",
-          "value": 3248
+          "value": 3296
         },
         {
           "period": "Dec 2025",
           "periodKey": "2025-dec",
-          "value": 3244
+          "value": 3304
         },
         {
           "period": "Jan 2026",
           "periodKey": "2026-jan",
-          "value": 3089
+          "value": 3190
         },
         {
           "period": "Feb 2026",
           "periodKey": "2026-feb",
-          "value": 3181
+          "value": 3275
         },
         {
           "period": "Mar 2026",
           "periodKey": "2026-mar",
-          "value": 3252
+          "value": 3323
         },
         {
           "period": "Apr 2026",
           "periodKey": "2026-apr",
-          "value": 3168
+          "value": 3244
         },
         {
           "period": "May 2026",
           "periodKey": "2026-may",
-          "value": 3229
+          "value": 3309
         },
         {
           "period": "Jun 2026",
           "periodKey": "2026-jun",
-          "value": 3232
+          "value": 3293
         },
         {
           "period": "Jul 2026",
           "periodKey": "2026-jul",
-          "value": 3075
+          "value": 3163
+        },
+        {
+          "period": "Aug 2026",
+          "periodKey": "2026-aug",
+          "value": 3103
         }
       ]
     },
@@ -1141,184 +1141,184 @@
       "cdid": "MV3Y",
       "values": [
         {
-          "period": "Aug 2023",
-          "periodKey": "2023-aug",
-          "value": 3161
-        },
-        {
           "period": "Sep 2023",
           "periodKey": "2023-sep",
-          "value": 3160
+          "value": 3255
         },
         {
           "period": "Oct 2023",
           "periodKey": "2023-oct",
-          "value": 3089
+          "value": 3186
         },
         {
           "period": "Nov 2023",
           "periodKey": "2023-nov",
-          "value": 3003
+          "value": 3075
         },
         {
           "period": "Dec 2023",
           "periodKey": "2023-dec",
-          "value": 2806
+          "value": 2885
         },
         {
           "period": "Jan 2024",
           "periodKey": "2024-jan",
-          "value": 3008
+          "value": 3039
         },
         {
           "period": "Feb 2024",
           "periodKey": "2024-feb",
-          "value": 2901
+          "value": 2957
         },
         {
           "period": "Mar 2024",
           "periodKey": "2024-mar",
-          "value": 2758
+          "value": 2850
         },
         {
           "period": "Apr 2024",
           "periodKey": "2024-apr",
-          "value": 2759
+          "value": 2842
         },
         {
           "period": "May 2024",
           "periodKey": "2024-may",
-          "value": 2795
+          "value": 2867
         },
         {
           "period": "Jun 2024",
           "periodKey": "2024-jun",
-          "value": 2826
+          "value": 2906
         },
         {
           "period": "Jul 2024",
           "periodKey": "2024-jul",
-          "value": 2798
+          "value": 2871
         },
         {
           "period": "Aug 2024",
           "periodKey": "2024-aug",
-          "value": 2809
+          "value": 2896
         },
         {
           "period": "Sep 2024",
           "periodKey": "2024-sep",
-          "value": 2838
+          "value": 2915
         },
         {
           "period": "Oct 2024",
           "periodKey": "2024-oct",
-          "value": 2868
+          "value": 2928
         },
         {
           "period": "Nov 2024",
           "periodKey": "2024-nov",
-          "value": 2770
+          "value": 2856
         },
         {
           "period": "Dec 2024",
           "periodKey": "2024-dec",
-          "value": 2797
+          "value": 2849
         },
         {
           "period": "Jan 2025",
           "periodKey": "2025-jan",
-          "value": 2845
+          "value": 2921
         },
         {
           "period": "Feb 2025",
           "periodKey": "2025-feb",
-          "value": 2833
+          "value": 2928
         },
         {
           "period": "Mar 2025",
           "periodKey": "2025-mar",
-          "value": 2883
+          "value": 3001
         },
         {
           "period": "Apr 2025",
           "periodKey": "2025-apr",
-          "value": 2870
+          "value": 2977
         },
         {
           "period": "May 2025",
           "periodKey": "2025-may",
-          "value": 2940
+          "value": 3022
         },
         {
           "period": "Jun 2025",
           "periodKey": "2025-jun",
-          "value": 2876
+          "value": 2930
         },
         {
           "period": "Jul 2025",
           "periodKey": "2025-jul",
-          "value": 2810
+          "value": 2864
         },
         {
           "period": "Aug 2025",
           "periodKey": "2025-aug",
-          "value": 2829
+          "value": 2871
         },
         {
           "period": "Sep 2025",
           "periodKey": "2025-sep",
-          "value": 2744
+          "value": 2790
         },
         {
           "period": "Oct 2025",
           "periodKey": "2025-oct",
-          "value": 2727
+          "value": 2780
         },
         {
           "period": "Nov 2025",
           "periodKey": "2025-nov",
-          "value": 2725
+          "value": 2761
         },
         {
           "period": "Dec 2025",
           "periodKey": "2025-dec",
-          "value": 2688
+          "value": 2765
         },
         {
           "period": "Jan 2026",
           "periodKey": "2026-jan",
-          "value": 2632
+          "value": 2708
         },
         {
           "period": "Feb 2026",
           "periodKey": "2026-feb",
-          "value": 2640
+          "value": 2715
         },
         {
           "period": "Mar 2026",
           "periodKey": "2026-mar",
-          "value": 2674
+          "value": 2774
         },
         {
           "period": "Apr 2026",
           "periodKey": "2026-apr",
-          "value": 2684
+          "value": 2784
         },
         {
           "period": "May 2026",
           "periodKey": "2026-may",
-          "value": 2686
+          "value": 2795
         },
         {
           "period": "Jun 2026",
           "periodKey": "2026-jun",
-          "value": 2729
+          "value": 2858
         },
         {
           "period": "Jul 2026",
           "periodKey": "2026-jul",
-          "value": 2822
+          "value": 2900
+        },
+        {
+          "period": "Aug 2026",
+          "periodKey": "2026-aug",
+          "value": 2901
         }
       ]
     },
@@ -1328,184 +1328,184 @@
       "cdid": "MV3Z",
       "values": [
         {
-          "period": "Aug 2023",
-          "periodKey": "2023-aug",
-          "value": 967
-        },
-        {
           "period": "Sep 2023",
           "periodKey": "2023-sep",
-          "value": 906
+          "value": 921
         },
         {
           "period": "Oct 2023",
           "periodKey": "2023-oct",
-          "value": 1000
+          "value": 1015
         },
         {
           "period": "Nov 2023",
           "periodKey": "2023-nov",
-          "value": 941
+          "value": 958
         },
         {
           "period": "Dec 2023",
           "periodKey": "2023-dec",
-          "value": 953
+          "value": 969
         },
         {
           "period": "Jan 2024",
           "periodKey": "2024-jan",
-          "value": 977
+          "value": 991
         },
         {
           "period": "Feb 2024",
           "periodKey": "2024-feb",
-          "value": 972
+          "value": 983
         },
         {
           "period": "Mar 2024",
           "periodKey": "2024-mar",
-          "value": 983
+          "value": 978
         },
         {
           "period": "Apr 2024",
           "periodKey": "2024-apr",
-          "value": 978
+          "value": 993
         },
         {
           "period": "May 2024",
           "periodKey": "2024-may",
-          "value": 1004
+          "value": 1022
         },
         {
           "period": "Jun 2024",
           "periodKey": "2024-jun",
-          "value": 1063
+          "value": 1062
         },
         {
           "period": "Jul 2024",
           "periodKey": "2024-jul",
-          "value": 997
+          "value": 1023
         },
         {
           "period": "Aug 2024",
           "periodKey": "2024-aug",
-          "value": 993
+          "value": 1022
         },
         {
           "period": "Sep 2024",
           "periodKey": "2024-sep",
-          "value": 995
+          "value": 1024
         },
         {
           "period": "Oct 2024",
           "periodKey": "2024-oct",
-          "value": 972
+          "value": 995
         },
         {
           "period": "Nov 2024",
           "periodKey": "2024-nov",
-          "value": 1080
+          "value": 1095
         },
         {
           "period": "Dec 2024",
           "periodKey": "2024-dec",
-          "value": 1068
+          "value": 1096
         },
         {
           "period": "Jan 2025",
           "periodKey": "2025-jan",
-          "value": 1112
+          "value": 1141
         },
         {
           "period": "Feb 2025",
           "periodKey": "2025-feb",
-          "value": 1139
+          "value": 1162
         },
         {
           "period": "Mar 2025",
           "periodKey": "2025-mar",
-          "value": 1125
+          "value": 1152
         },
         {
           "period": "Apr 2025",
           "periodKey": "2025-apr",
-          "value": 1109
+          "value": 1137
         },
         {
           "period": "May 2025",
           "periodKey": "2025-may",
-          "value": 1125
+          "value": 1152
         },
         {
           "period": "Jun 2025",
           "periodKey": "2025-jun",
-          "value": 1131
+          "value": 1161
         },
         {
           "period": "Jul 2025",
           "periodKey": "2025-jul",
-          "value": 1109
+          "value": 1133
         },
         {
           "period": "Aug 2025",
           "periodKey": "2025-aug",
-          "value": 1128
+          "value": 1161
         },
         {
           "period": "Sep 2025",
           "periodKey": "2025-sep",
-          "value": 1131
+          "value": 1153
         },
         {
           "period": "Oct 2025",
           "periodKey": "2025-oct",
-          "value": 1127
+          "value": 1156
         },
         {
           "period": "Nov 2025",
           "periodKey": "2025-nov",
-          "value": 1100
+          "value": 1125
         },
         {
           "period": "Dec 2025",
           "periodKey": "2025-dec",
-          "value": 1150
+          "value": 1171
         },
         {
           "period": "Jan 2026",
           "periodKey": "2026-jan",
-          "value": 1116
+          "value": 1122
         },
         {
           "period": "Feb 2026",
           "periodKey": "2026-feb",
-          "value": 1111
+          "value": 1114
         },
         {
           "period": "Mar 2026",
           "periodKey": "2026-mar",
-          "value": 1108
+          "value": 1102
         },
         {
           "period": "Apr 2026",
           "periodKey": "2026-apr",
-          "value": 1095
+          "value": 1091
         },
         {
           "period": "May 2026",
           "periodKey": "2026-may",
-          "value": 1078
+          "value": 1073
         },
         {
           "period": "Jun 2026",
           "periodKey": "2026-jun",
-          "value": 1048
+          "value": 1025
         },
         {
           "period": "Jul 2026",
           "periodKey": "2026-jul",
-          "value": 1053
+          "value": 991
+        },
+        {
+          "period": "Aug 2026",
+          "periodKey": "2026-aug",
+          "value": 993
         }
       ]
     },
@@ -1515,169 +1515,164 @@
       "cdid": "MV42",
       "values": [
         {
-          "period": "Aug 2023",
-          "periodKey": "2023-aug",
-          "value": 629
-        },
-        {
           "period": "Sep 2023",
           "periodKey": "2023-sep",
-          "value": 652
+          "value": 671
         },
         {
           "period": "Oct 2023",
           "periodKey": "2023-oct",
-          "value": 639
+          "value": 656
         },
         {
           "period": "Nov 2023",
           "periodKey": "2023-nov",
-          "value": 649
+          "value": 667
         },
         {
           "period": "Dec 2023",
           "periodKey": "2023-dec",
-          "value": 676
+          "value": 695
         },
         {
           "period": "Jan 2024",
           "periodKey": "2024-jan",
-          "value": 639
+          "value": 668
         },
         {
           "period": "Feb 2024",
           "periodKey": "2024-feb",
-          "value": 638
+          "value": 665
         },
         {
           "period": "Mar 2024",
           "periodKey": "2024-mar",
-          "value": 644
+          "value": 657
         },
         {
           "period": "Apr 2024",
           "periodKey": "2024-apr",
-          "value": 637
+          "value": 660
         },
         {
           "period": "May 2024",
           "periodKey": "2024-may",
-          "value": 655
+          "value": 674
         },
         {
           "period": "Jun 2024",
           "periodKey": "2024-jun",
-          "value": 661
+          "value": 665
         },
         {
           "period": "Jul 2024",
           "periodKey": "2024-jul",
-          "value": 661
+          "value": 664
         },
         {
           "period": "Aug 2024",
           "periodKey": "2024-aug",
-          "value": 676
+          "value": 682
         },
         {
           "period": "Sep 2024",
           "periodKey": "2024-sep",
-          "value": 652
+          "value": 666
         },
         {
           "period": "Oct 2024",
           "periodKey": "2024-oct",
-          "value": 697
+          "value": 711
         },
         {
           "period": "Nov 2024",
           "periodKey": "2024-nov",
-          "value": 700
+          "value": 715
         },
         {
           "period": "Dec 2024",
           "periodKey": "2024-dec",
-          "value": 727
+          "value": 738
         },
         {
           "period": "Jan 2025",
           "periodKey": "2025-jan",
-          "value": 744
+          "value": 753
         },
         {
           "period": "Feb 2025",
           "periodKey": "2025-feb",
-          "value": 759
+          "value": 758
         },
         {
           "period": "Mar 2025",
           "periodKey": "2025-mar",
-          "value": 768
+          "value": 772
         },
         {
           "period": "Apr 2025",
           "periodKey": "2025-apr",
-          "value": 770
+          "value": 755
         },
         {
           "period": "May 2025",
           "periodKey": "2025-may",
-          "value": 767
+          "value": 761
         },
         {
           "period": "Jun 2025",
           "periodKey": "2025-jun",
-          "value": 773
+          "value": 765
         },
         {
           "period": "Jul 2025",
           "periodKey": "2025-jul",
-          "value": 750
+          "value": 735
         },
         {
           "period": "Aug 2025",
           "periodKey": "2025-aug",
-          "value": 742
+          "value": 731
         },
         {
           "period": "Sep 2025",
           "periodKey": "2025-sep",
-          "value": 738
+          "value": 724
         },
         {
           "period": "Oct 2025",
           "periodKey": "2025-oct",
-          "value": 751
+          "value": 743
         },
         {
           "period": "Nov 2025",
           "periodKey": "2025-nov",
-          "value": 732
+          "value": 721
         },
         {
           "period": "Dec 2025",
           "periodKey": "2025-dec",
-          "value": 715
+          "value": 702
         },
         {
           "period": "Jan 2026",
           "periodKey": "2026-jan",
-          "value": 717
+          "value": 711
         },
         {
           "period": "Feb 2026",
           "periodKey": "2026-feb",
-          "value": 694
+          "value": 703
         },
         {
           "period": "Mar 2026",
           "periodKey": "2026-mar",
-          "value": 680
+          "value": 689
         },
         {
           "period": "Apr 2026",
           "periodKey": "2026-apr",
-          "value": 690
+          "value": 692
         },
         {
           "period": "May 2026",
@@ -1687,12 +1682,17 @@
         {
           "period": "Jun 2026",
           "periodKey": "2026-jun",
-          "value": 678
+          "value": 672
         },
         {
           "period": "Jul 2026",
           "periodKey": "2026-jul",
-          "value": 685
+          "value": 687
+        },
+        {
+          "period": "Aug 2026",
+          "periodKey": "2026-aug",
+          "value": 675
         }
       ]
     },
@@ -1702,184 +1702,184 @@
       "cdid": "MV43",
       "values": [
         {
-          "period": "Aug 2023",
-          "periodKey": "2023-aug",
-          "value": 2283
-        },
-        {
           "period": "Sep 2023",
           "periodKey": "2023-sep",
-          "value": 2325
+          "value": 2400
         },
         {
           "period": "Oct 2023",
           "periodKey": "2023-oct",
-          "value": 2320
+          "value": 2408
         },
         {
           "period": "Nov 2023",
           "periodKey": "2023-nov",
-          "value": 2220
+          "value": 2314
         },
         {
           "period": "Dec 2023",
           "periodKey": "2023-dec",
-          "value": 2215
+          "value": 2328
         },
         {
           "period": "Jan 2024",
           "periodKey": "2024-jan",
-          "value": 2212
+          "value": 2282
         },
         {
           "period": "Feb 2024",
           "periodKey": "2024-feb",
-          "value": 2205
+          "value": 2316
         },
         {
           "period": "Mar 2024",
           "periodKey": "2024-mar",
-          "value": 2205
+          "value": 2293
         },
         {
           "period": "Apr 2024",
           "periodKey": "2024-apr",
-          "value": 2206
+          "value": 2275
         },
         {
           "period": "May 2024",
           "periodKey": "2024-may",
-          "value": 2215
+          "value": 2254
         },
         {
           "period": "Jun 2024",
           "periodKey": "2024-jun",
-          "value": 2250
+          "value": 2283
         },
         {
           "period": "Jul 2024",
           "periodKey": "2024-jul",
-          "value": 2200
+          "value": 2224
         },
         {
           "period": "Aug 2024",
           "periodKey": "2024-aug",
-          "value": 2216
+          "value": 2240
         },
         {
           "period": "Sep 2024",
           "periodKey": "2024-sep",
-          "value": 2114
+          "value": 2165
         },
         {
           "period": "Oct 2024",
           "periodKey": "2024-oct",
-          "value": 2138
+          "value": 2155
         },
         {
           "period": "Nov 2024",
           "periodKey": "2024-nov",
-          "value": 2186
+          "value": 2235
         },
         {
           "period": "Dec 2024",
           "periodKey": "2024-dec",
-          "value": 2155
+          "value": 2210
         },
         {
           "period": "Jan 2025",
           "periodKey": "2025-jan",
-          "value": 2034
+          "value": 2088
         },
         {
           "period": "Feb 2025",
           "periodKey": "2025-feb",
-          "value": 1986
+          "value": 2015
         },
         {
           "period": "Mar 2025",
           "periodKey": "2025-mar",
-          "value": 1930
+          "value": 1979
         },
         {
           "period": "Apr 2025",
           "periodKey": "2025-apr",
-          "value": 1924
+          "value": 1981
         },
         {
           "period": "May 2025",
           "periodKey": "2025-may",
-          "value": 1952
+          "value": 2016
         },
         {
           "period": "Jun 2025",
           "periodKey": "2025-jun",
-          "value": 1918
+          "value": 1976
         },
         {
           "period": "Jul 2025",
           "periodKey": "2025-jul",
-          "value": 1956
+          "value": 2013
         },
         {
           "period": "Aug 2025",
           "periodKey": "2025-aug",
-          "value": 1925
+          "value": 1992
         },
         {
           "period": "Sep 2025",
           "periodKey": "2025-sep",
-          "value": 1973
+          "value": 2049
         },
         {
           "period": "Oct 2025",
           "periodKey": "2025-oct",
-          "value": 1838
+          "value": 1922
         },
         {
           "period": "Nov 2025",
           "periodKey": "2025-nov",
-          "value": 1876
+          "value": 1952
         },
         {
           "period": "Dec 2025",
           "periodKey": "2025-dec",
-          "value": 1874
+          "value": 1946
         },
         {
           "period": "Jan 2026",
           "periodKey": "2026-jan",
-          "value": 1891
+          "value": 1937
         },
         {
           "period": "Feb 2026",
           "periodKey": "2026-feb",
-          "value": 1882
+          "value": 1890
         },
         {
           "period": "Mar 2026",
           "periodKey": "2026-mar",
-          "value": 1956
+          "value": 2001
         },
         {
           "period": "Apr 2026",
           "periodKey": "2026-apr",
-          "value": 1954
+          "value": 2027
         },
         {
           "period": "May 2026",
           "periodKey": "2026-may",
-          "value": 1934
+          "value": 2014
         },
         {
           "period": "Jun 2026",
           "periodKey": "2026-jun",
-          "value": 1954
+          "value": 2047
         },
         {
           "period": "Jul 2026",
           "periodKey": "2026-jul",
-          "value": 1946
+          "value": 2008
+        },
+        {
+          "period": "Aug 2026",
+          "periodKey": "2026-aug",
+          "value": 2021
         }
       ]
     },
@@ -1889,184 +1889,184 @@
       "cdid": "MV47",
       "values": [
         {
-          "period": "Aug 2023",
-          "periodKey": "2023-aug",
-          "value": 3562
-        },
-        {
           "period": "Sep 2023",
           "periodKey": "2023-sep",
-          "value": 3621
+          "value": 3734
         },
         {
           "period": "Oct 2023",
           "periodKey": "2023-oct",
-          "value": 3731
+          "value": 3854
         },
         {
           "period": "Nov 2023",
           "periodKey": "2023-nov",
-          "value": 3860
+          "value": 3990
         },
         {
           "period": "Dec 2023",
           "periodKey": "2023-dec",
-          "value": 3894
+          "value": 4024
         },
         {
           "period": "Jan 2024",
           "periodKey": "2024-jan",
-          "value": 3970
+          "value": 4090
         },
         {
           "period": "Feb 2024",
           "periodKey": "2024-feb",
-          "value": 3907
+          "value": 4061
         },
         {
           "period": "Mar 2024",
           "periodKey": "2024-mar",
-          "value": 4105
+          "value": 4193
         },
         {
           "period": "Apr 2024",
           "periodKey": "2024-apr",
-          "value": 4059
+          "value": 4114
         },
         {
           "period": "May 2024",
           "periodKey": "2024-may",
-          "value": 4064
+          "value": 4105
         },
         {
           "period": "Jun 2024",
           "periodKey": "2024-jun",
-          "value": 3953
+          "value": 3980
         },
         {
           "period": "Jul 2024",
           "periodKey": "2024-jul",
-          "value": 3915
+          "value": 3945
         },
         {
           "period": "Aug 2024",
           "periodKey": "2024-aug",
-          "value": 3920
+          "value": 3950
         },
         {
           "period": "Sep 2024",
           "periodKey": "2024-sep",
-          "value": 4024
+          "value": 4021
         },
         {
           "period": "Oct 2024",
           "periodKey": "2024-oct",
-          "value": 3944
+          "value": 3935
         },
         {
           "period": "Nov 2024",
           "periodKey": "2024-nov",
-          "value": 3961
+          "value": 3950
         },
         {
           "period": "Dec 2024",
           "periodKey": "2024-dec",
-          "value": 3925
+          "value": 3895
         },
         {
           "period": "Jan 2025",
           "periodKey": "2025-jan",
-          "value": 3903
+          "value": 3880
         },
         {
           "period": "Feb 2025",
           "periodKey": "2025-feb",
-          "value": 3938
+          "value": 3933
         },
         {
           "period": "Mar 2025",
           "periodKey": "2025-mar",
-          "value": 3956
+          "value": 3960
         },
         {
           "period": "Apr 2025",
           "periodKey": "2025-apr",
-          "value": 4019
+          "value": 4011
         },
         {
           "period": "May 2025",
           "periodKey": "2025-may",
-          "value": 3984
+          "value": 4004
         },
         {
           "period": "Jun 2025",
           "periodKey": "2025-jun",
-          "value": 4062
+          "value": 4097
         },
         {
           "period": "Jul 2025",
           "periodKey": "2025-jul",
-          "value": 4302
+          "value": 4335
         },
         {
           "period": "Aug 2025",
           "periodKey": "2025-aug",
-          "value": 4142
+          "value": 4171
         },
         {
           "period": "Sep 2025",
           "periodKey": "2025-sep",
-          "value": 4082
+          "value": 4108
         },
         {
           "period": "Oct 2025",
           "periodKey": "2025-oct",
-          "value": 4129
+          "value": 4153
         },
         {
           "period": "Nov 2025",
           "periodKey": "2025-nov",
-          "value": 4067
+          "value": 4091
         },
         {
           "period": "Dec 2025",
           "periodKey": "2025-dec",
-          "value": 4030
+          "value": 4078
         },
         {
           "period": "Jan 2026",
           "periodKey": "2026-jan",
-          "value": 4202
+          "value": 4223
         },
         {
           "period": "Feb 2026",
           "periodKey": "2026-feb",
-          "value": 4220
+          "value": 4245
         },
         {
           "period": "Mar 2026",
           "periodKey": "2026-mar",
-          "value": 4251
+          "value": 4293
         },
         {
           "period": "Apr 2026",
           "periodKey": "2026-apr",
-          "value": 4274
+          "value": 4320
         },
         {
           "period": "May 2026",
           "periodKey": "2026-may",
-          "value": 4170
+          "value": 4236
         },
         {
           "period": "Jun 2026",
           "periodKey": "2026-jun",
-          "value": 4227
+          "value": 4283
         },
         {
           "period": "Jul 2026",
           "periodKey": "2026-jul",
-          "value": 4330
+          "value": 4339
+        },
+        {
+          "period": "Aug 2026",
+          "periodKey": "2026-aug",
+          "value": 4366
         }
       ]
     },
@@ -2076,184 +2076,184 @@
       "cdid": "MV48",
       "values": [
         {
-          "period": "Aug 2023",
-          "periodKey": "2023-aug",
-          "value": 3294
-        },
-        {
           "period": "Sep 2023",
           "periodKey": "2023-sep",
-          "value": 3453
+          "value": 3479
         },
         {
           "period": "Oct 2023",
           "periodKey": "2023-oct",
-          "value": 3482
+          "value": 3505
         },
         {
           "period": "Nov 2023",
           "periodKey": "2023-nov",
-          "value": 3548
+          "value": 3531
         },
         {
           "period": "Dec 2023",
           "periodKey": "2023-dec",
-          "value": 3555
+          "value": 3522
         },
         {
           "period": "Jan 2024",
           "periodKey": "2024-jan",
-          "value": 3533
+          "value": 3515
         },
         {
           "period": "Feb 2024",
           "periodKey": "2024-feb",
-          "value": 3509
+          "value": 3489
         },
         {
           "period": "Mar 2024",
           "periodKey": "2024-mar",
-          "value": 3431
+          "value": 3417
         },
         {
           "period": "Apr 2024",
           "periodKey": "2024-apr",
-          "value": 3542
+          "value": 3526
         },
         {
           "period": "May 2024",
           "periodKey": "2024-may",
-          "value": 3655
+          "value": 3643
         },
         {
           "period": "Jun 2024",
           "periodKey": "2024-jun",
-          "value": 3706
+          "value": 3699
         },
         {
           "period": "Jul 2024",
           "periodKey": "2024-jul",
-          "value": 3691
+          "value": 3687
         },
         {
           "period": "Aug 2024",
           "periodKey": "2024-aug",
-          "value": 3671
+          "value": 3677
         },
         {
           "period": "Sep 2024",
           "periodKey": "2024-sep",
-          "value": 3629
+          "value": 3650
         },
         {
           "period": "Oct 2024",
           "periodKey": "2024-oct",
-          "value": 3686
+          "value": 3705
         },
         {
           "period": "Nov 2024",
           "periodKey": "2024-nov",
-          "value": 3682
+          "value": 3725
         },
         {
           "period": "Dec 2024",
           "periodKey": "2024-dec",
-          "value": 3599
+          "value": 3630
         },
         {
           "period": "Jan 2025",
           "periodKey": "2025-jan",
-          "value": 3620
+          "value": 3655
         },
         {
           "period": "Feb 2025",
           "periodKey": "2025-feb",
-          "value": 3656
+          "value": 3699
         },
         {
           "period": "Mar 2025",
           "periodKey": "2025-mar",
-          "value": 3632
+          "value": 3675
         },
         {
           "period": "Apr 2025",
           "periodKey": "2025-apr",
-          "value": 3713
+          "value": 3749
         },
         {
           "period": "May 2025",
           "periodKey": "2025-may",
-          "value": 3591
+          "value": 3623
         },
         {
           "period": "Jun 2025",
           "periodKey": "2025-jun",
-          "value": 3650
+          "value": 3691
         },
         {
           "period": "Jul 2025",
           "periodKey": "2025-jul",
-          "value": 3612
+          "value": 3655
         },
         {
           "period": "Aug 2025",
           "periodKey": "2025-aug",
-          "value": 3646
+          "value": 3696
         },
         {
           "period": "Sep 2025",
           "periodKey": "2025-sep",
-          "value": 3668
+          "value": 3726
         },
         {
           "period": "Oct 2025",
           "periodKey": "2025-oct",
-          "value": 3650
+          "value": 3716
         },
         {
           "period": "Nov 2025",
           "periodKey": "2025-nov",
-          "value": 3686
+          "value": 3759
         },
         {
           "period": "Dec 2025",
           "periodKey": "2025-dec",
-          "value": 3529
+          "value": 3610
         },
         {
           "period": "Jan 2026",
           "periodKey": "2026-jan",
-          "value": 3713
+          "value": 3801
         },
         {
           "period": "Feb 2026",
           "periodKey": "2026-feb",
-          "value": 3717
+          "value": 3800
         },
         {
           "period": "Mar 2026",
           "periodKey": "2026-mar",
-          "value": 3758
+          "value": 3840
         },
         {
           "period": "Apr 2026",
           "periodKey": "2026-apr",
-          "value": 3780
+          "value": 3880
         },
         {
           "period": "May 2026",
           "periodKey": "2026-may",
-          "value": 3755
+          "value": 3870
         },
         {
           "period": "Jun 2026",
           "periodKey": "2026-jun",
-          "value": 3699
+          "value": 3805
         },
         {
           "period": "Jul 2026",
           "periodKey": "2026-jul",
-          "value": 3659
+          "value": 3780
+        },
+        {
+          "period": "Aug 2026",
+          "periodKey": "2026-aug",
+          "value": 3782
         }
       ]
     }
