@@ -60,10 +60,12 @@ export default async function ArticlePage({ params }: PageProps) {
           <p className="mt-4 text-lg text-gray-400 leading-relaxed">
             {article.heroSubtitle}
           </p>
-          <div className="mt-6 flex items-center gap-3 text-sm text-gray-500">
+          <div className="mt-6 flex flex-wrap items-center gap-x-3 gap-y-1 text-sm text-gray-500">
             <span>{article.author}</span>
             <span>·</span>
-            <span>{new Date(article.publishDate).toLocaleDateString("en-GB", { day: "numeric", month: "long", year: "numeric" })}</span>
+            <span>Published {new Date(article.publishDate).toLocaleDateString("en-GB", { day: "numeric", month: "long", year: "numeric" })}</span>
+            <span>·</span>
+            <span>Fact-checked {new Date(article.reviewedDate).toLocaleDateString("en-GB", { day: "numeric", month: "long", year: "numeric" })}</span>
           </div>
         </div>
       </section>
@@ -103,6 +105,30 @@ export default async function ArticlePage({ params }: PageProps) {
               </li>
             ))}
           </ul>
+        </div>
+
+        {/* Sources */}
+        <div className="mt-8 rounded-2xl bg-white p-6 shadow-sm">
+          <h3 className="font-[family-name:var(--font-playfair)] text-xl font-bold text-navy mb-2">
+            Sources
+          </h3>
+          <p className="text-xs text-warm-gray mb-4">
+            Every figure in this article is taken from the official or primary documents below. Last checked {new Date(article.reviewedDate).toLocaleDateString("en-GB", { day: "numeric", month: "long", year: "numeric" })}.
+          </p>
+          <ol className="space-y-2 list-decimal pl-5">
+            {article.sources.map((source, idx) => (
+              <li key={idx} className="text-sm text-navy/80 leading-snug">
+                <a
+                  href={source.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-teal underline decoration-navy/20 underline-offset-2 transition-colors"
+                >
+                  {source.title}
+                </a>
+              </li>
+            ))}
+          </ol>
         </div>
 
         {/* CTA */}

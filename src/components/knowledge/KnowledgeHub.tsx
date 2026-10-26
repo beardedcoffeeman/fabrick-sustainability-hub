@@ -18,82 +18,82 @@ const articles: Article[] = [
     id: "what-is-embodied-carbon",
     title: "What Is Embodied Carbon? A Plain-English Guide for Construction",
     excerpt:
-      "Embodied carbon accounts for up to 50% of a building's total lifecycle emissions. Here's everything you need to know about measuring, reducing, and reporting it.",
+      "Embodied carbon can represent 40 to 70% of a new building's whole-life carbon (LETI). What it is, how it is measured under the RICS standard, and where UK policy stands.",
     category: "Fundamentals",
-    readTime: "8 min read",
+    readTime: "5 min read",
     featured: true,
   },
   {
     id: "part-z-explained",
-    title: "Part Z Explained: What Whole-Life Carbon Regulation Means for You",
+    title: "Part Z Explained: Where the Whole-Life Carbon Proposal Stands",
     excerpt:
-      "Part Z is an industry-backed proposal to regulate whole-life carbon in buildings. With growing Parliamentary support, it could require large projects to report whole-life carbon. We break down what this means for developers, architects, and contractors.",
+      "Part Z is an industry proposal to regulate whole-life carbon in England. The latest bill fell in April 2026 and the Government has commissioned research rather than committed to regulate. What it proposes and what applies today.",
     category: "Regulations",
-    readTime: "10 min read",
+    readTime: "3 min read",
   },
   {
     id: "future-homes-standard-2026",
-    title: "Future Homes Standard 2026: The Complete Guide",
+    title: "Future Homes Standard: What the March 2026 Regulations Require and When",
     excerpt:
-      "Taking full legal effect in December 2026, the Future Homes Standard requires 75-80% less carbon in new homes. Here's how to prepare.",
+      "Laid 24 March 2026 and in force from 24 March 2027, the Future Homes Standard requires new homes in England to emit on average at least 75% less carbon than 2013 standards. Dates, transition rules and requirements from the official documents.",
     category: "Regulations",
-    readTime: "12 min read",
+    readTime: "3 min read",
   },
   {
     id: "what-is-epd",
     title: "What Is an EPD and Why Does It Matter?",
     excerpt:
-      "Environmental Product Declarations are becoming essential for material specification. Learn how to read them and why they're increasingly required.",
+      "Environmental Product Declarations are the preferred carbon data for specified products under GLA guidance and the RICS standard. What EN 15804+A2 requires them to cover and how to read one.",
     category: "Fundamentals",
-    readTime: "6 min read",
+    readTime: "3 min read",
   },
   {
     id: "whole-life-carbon-assessment",
     title: "How to Conduct a Whole-Life Carbon Assessment",
     excerpt:
-      "A step-by-step guide to assessing the total carbon footprint of a building project, from cradle to grave, including modules A-D.",
+      "A step-by-step guide to assessing a building's whole-life carbon to the RICS professional standard, with the LETI, RIBA 2030 and UKNZCBS benchmarks and their module scopes.",
     category: "Guides",
-    readTime: "15 min read",
+    readTime: "4 min read",
   },
   {
     id: "low-carbon-concrete",
     title: "The Carbon Footprint of Concrete: Alternatives and Reduction Strategies",
     excerpt:
-      "Concrete is responsible for 8% of global CO2 emissions. Explore GGBS, PFA, and other strategies to cut your concrete carbon by up to 50%.",
+      "Cement production is around 8% of global CO₂ emissions. The MPA's published factors for CEM I, GGBS and fly ash blends, what has changed in fly ash supply, and the design moves that use less concrete.",
     category: "Materials",
-    readTime: "9 min read",
+    readTime: "3 min read",
   },
   {
     id: "timber-vs-steel",
     title: "Timber vs Steel Frame: A Carbon Comparison",
     excerpt:
-      "With CLT and glulam gaining ground in UK construction, we compare the embodied carbon, cost, and performance of timber versus steel framing systems.",
+      "Published factors from IStructE, the BCSA and manufacturer EPDs, how biogenic carbon is counted, and the fire rules that actually apply to timber in England.",
     category: "Materials",
-    readTime: "7 min read",
+    readTime: "4 min read",
   },
   {
     id: "uk-cbam-construction",
     title: "UK CBAM: What It Means for Construction Material Imports",
     excerpt:
-      "From January 2027, the UK Carbon Border Adjustment Mechanism will apply to steel, aluminium, and cement imports. Here's what you need to know.",
+      "From 1 January 2027 the UK CBAM charges a carbon price on imported iron and steel, aluminium, cement, fertiliser and hydrogen. It is a tax from day one, with the first return due 31 May 2028.",
     category: "Regulations",
-    readTime: "8 min read",
+    readTime: "3 min read",
   },
   {
     id: "uknzcbs-guide",
-    title: "UK Net Zero Carbon Building Standard: Requirements Explained",
+    title: "UK Net Zero Carbon Buildings Standard: Requirements Explained",
     excerpt:
-      "Launched early 2026, the UKNZCBS defines what 'net zero carbon' means for UK buildings. We explain the requirements for embodied and operational emissions.",
+      "Piloted in September 2024 and published as Version 1 in March 2026, the UKNZCBS sets pass/fail upfront carbon and energy limits by building type and start year. Verification opened in July 2026.",
     category: "Regulations",
-    readTime: "11 min read",
+    readTime: "3 min read",
   },
   {
     id: "carbon-reduction-case-studies",
-    title: "5 UK Construction Projects That Slashed Embodied Carbon",
+    title: "Five UK Projects With Published Embodied Carbon Figures",
     excerpt:
-      "Real-world case studies showing how leading UK projects achieved 30-60% reductions in embodied carbon through smart material choices and design.",
+      "Five named UK projects whose design teams have published their embodied carbon results through LETI, UKGBC or their own case studies, with the figures quoted as published.",
     category: "Case Studies",
-    readTime: "10 min read",
+    readTime: "4 min read",
   },
 ];
 
