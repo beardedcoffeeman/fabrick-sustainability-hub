@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-19T11:57:56.697Z",
+  "generatedAt": "2026-10-26T12:09:43.708Z",
   "source": "MHCLG Get Energy Performance of Buildings register (api.get-energy-performance-data.communities.gov.uk)",
   "notes": [
     "England + Wales only. Scotland and Northern Ireland use separate registers.",
@@ -8,17 +8,17 @@
     "Below-C share covers bands D, E, F, G. Band D is currently MEES-compliant; the 2027/2030 proposals bring D into scope."
   ],
   "national": {
-    "total": 4094,
-    "belowCPct": 53.663898387884714,
-    "urgentPct": 15.559355153883732,
-    "compliantPct": 46.336101612115286,
+    "total": 4096,
+    "belowCPct": 53.61328125,
+    "urgentPct": 15.5029296875,
+    "compliantPct": 46.38671875,
     "bandCounts": {
       "A": 12,
       "B": 435,
-      "C": 1450,
-      "D": 1560,
-      "E": 515,
-      "F": 88,
+      "C": 1453,
+      "D": 1561,
+      "E": 514,
+      "F": 87,
       "G": 34
     }
   },
@@ -87,34 +87,34 @@
       "bandCounts": {
         "A": 2,
         "B": 2,
-        "C": 44,
-        "D": 108,
+        "C": 45,
+        "D": 107,
         "E": 56,
         "F": 13,
         "G": 2
       },
-      "belowCPct": 78.8546255506608,
+      "belowCPct": 78.41409691629956,
       "urgentPct": 31.277533039647576,
-      "compliantPct": 21.145374449339208,
+      "compliantPct": 21.58590308370044,
       "postcodesSampled": 10,
       "postcodesWithData": 8
     },
     {
       "city": "Reading",
       "region": "South East",
-      "total": 106,
+      "total": 107,
       "bandCounts": {
         "A": 0,
         "B": 4,
-        "C": 19,
+        "C": 20,
         "D": 46,
         "E": 32,
         "F": 4,
         "G": 1
       },
-      "belowCPct": 78.30188679245283,
-      "urgentPct": 34.90566037735849,
-      "compliantPct": 21.69811320754717,
+      "belowCPct": 77.57009345794393,
+      "urgentPct": 34.57943925233645,
+      "compliantPct": 22.429906542056074,
       "postcodesSampled": 10,
       "postcodesWithData": 7
     },
@@ -182,15 +182,15 @@
       "bandCounts": {
         "A": 0,
         "B": 4,
-        "C": 33,
-        "D": 58,
+        "C": 34,
+        "D": 57,
         "E": 23,
         "F": 4,
         "G": 1
       },
-      "belowCPct": 69.91869918699187,
+      "belowCPct": 69.10569105691057,
       "urgentPct": 22.76422764227642,
-      "compliantPct": 30.081300813008134,
+      "compliantPct": 30.89430894308943,
       "postcodesSampled": 10,
       "postcodesWithData": 8
     },
@@ -240,13 +240,13 @@
         "A": 0,
         "B": 2,
         "C": 30,
-        "D": 30,
-        "E": 25,
+        "D": 31,
+        "E": 24,
         "F": 3,
         "G": 1
       },
       "belowCPct": 64.83516483516483,
-      "urgentPct": 31.868131868131865,
+      "urgentPct": 30.76923076923077,
       "compliantPct": 35.16483516483517,
       "postcodesSampled": 10,
       "postcodesWithData": 4
@@ -273,19 +273,19 @@
     {
       "city": "Wolverhampton",
       "region": "West Midlands",
-      "total": 133,
+      "total": 134,
       "bandCounts": {
         "A": 0,
         "B": 18,
         "C": 31,
-        "D": 61,
+        "D": 62,
         "E": 20,
         "F": 2,
         "G": 1
       },
-      "belowCPct": 63.1578947368421,
-      "urgentPct": 17.293233082706767,
-      "compliantPct": 36.84210526315789,
+      "belowCPct": 63.43283582089553,
+      "urgentPct": 17.16417910447761,
+      "compliantPct": 36.56716417910448,
       "postcodesSampled": 10,
       "postcodesWithData": 7
     },
@@ -506,13 +506,13 @@
         "A": 0,
         "B": 44,
         "C": 55,
-        "D": 50,
+        "D": 51,
         "E": 8,
-        "F": 8,
+        "F": 7,
         "G": 2
       },
       "belowCPct": 40.7185628742515,
-      "urgentPct": 10.778443113772456,
+      "urgentPct": 10.179640718562874,
       "compliantPct": 59.2814371257485,
       "postcodesSampled": 10,
       "postcodesWithData": 7
