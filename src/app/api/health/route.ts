@@ -173,7 +173,7 @@ export async function GET() {
   const snapshots: Check[] = [
     snapshotCheck("snapshot:material-prices", (materialPrices as { generatedAt?: string }).generatedAt, 45,
       `data period ${(materialPrices as { source?: { dataPeriod?: string } }).source?.dataPeriod ?? "?"}`),
-    snapshotCheck("snapshot:epc-retrofit", (epc as { generatedAt?: string }).generatedAt, 14),
+    snapshotCheck("snapshot:epc-retrofit", (epc as { generatedAt?: string }).generatedAt, 45),
     snapshotCheck("snapshot:construction-output", (constructionOutput as { generatedAt?: string }).generatedAt, 60,
       `data period ${(constructionOutput as { source?: { dataPeriod?: string } }).source?.dataPeriod ?? "?"}`),
     snapshotCheck("snapshot:homepage-insights", (insights as { generatedAt?: string }).generatedAt, 45),

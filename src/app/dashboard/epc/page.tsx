@@ -131,8 +131,9 @@ export default function EPCPage() {
           <p className="mt-4 max-w-3xl text-lg text-gray-400">
             Every building below EPC band C is a candidate for retrofit work as
             MEES tightens - C minimum proposed for non-domestic rentals from
-            April 2027. Below, a ranked view of UK cities by share of homes
-            below band C, plus a postcode-level lookup further down the page.
+            April 2027. Below, every local authority in England and Wales
+            ranked by share of homes below band C, built from the full EPC
+            register, plus a postcode-level lookup further down the page.
           </p>
         </div>
       </section>
@@ -162,8 +163,8 @@ export default function EPCPage() {
           Drill into a single postcode
         </h2>
         <p className="text-sm text-warm-gray mb-6 max-w-2xl">
-          The leaderboard above is a snapshot of representative residential
-          postcodes. To check a specific area, search any UK postcode below.
+          The leaderboard above counts every home with an EPC in England and
+          Wales. To check a specific street, search any UK postcode below.
         </p>
         <RetrofitMarketWidget />
       </section>
