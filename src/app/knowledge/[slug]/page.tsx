@@ -2,6 +2,7 @@ import { notFound } from "next/navigation";
 import Link from "next/link";
 import { ArrowLeft, Clock, Tag, ArrowUpRight, Leaf } from "lucide-react";
 import { getArticleContent, articleContent } from "@/lib/article-content";
+import { ArticleFigure } from "@/components/knowledge/ArticleFigure";
 
 interface PageProps {
   params: Promise<{ slug: string }>;
@@ -72,6 +73,22 @@ export default async function ArticlePage({ params }: PageProps) {
 
       {/* Article Body */}
       <article className="mx-auto max-w-3xl px-4 py-10 sm:px-6 lg:px-8">
+        {/* Key Takeaways */}
+        <div className="mb-10 rounded-2xl bg-charcoal p-6 text-white">
+          <h3 className="font-[family-name:var(--font-playfair)] text-xl font-bold mb-4 flex items-center gap-2">
+            <Leaf className="h-5 w-5 text-teal" />
+            Key Takeaways
+          </h3>
+          <ul className="space-y-2">
+            {article.keyTakeaways.map((takeaway, idx) => (
+              <li key={idx} className="flex items-start gap-3 text-sm text-gray-300">
+                <span className="mt-1.5 h-1.5 w-1.5 rounded-full bg-teal shrink-0" />
+                {takeaway}
+              </li>
+            ))}
+          </ul>
+        </div>
+
         <div className="space-y-8">
           {article.sections.map((section, idx) => (
             <section key={idx}>
@@ -87,24 +104,11 @@ export default async function ArticlePage({ params }: PageProps) {
                   </p>
                 ))}
               </div>
+              {section.figures?.map((fig, fIdx) => (
+                <ArticleFigure key={fIdx} figure={fig} />
+              ))}
             </section>
           ))}
-        </div>
-
-        {/* Key Takeaways */}
-        <div className="mt-12 rounded-2xl bg-charcoal p-6 text-white">
-          <h3 className="font-[family-name:var(--font-playfair)] text-xl font-bold mb-4 flex items-center gap-2">
-            <Leaf className="h-5 w-5 text-teal" />
-            Key Takeaways
-          </h3>
-          <ul className="space-y-2">
-            {article.keyTakeaways.map((takeaway, idx) => (
-              <li key={idx} className="flex items-start gap-3 text-sm text-gray-300">
-                <span className="mt-1.5 h-1.5 w-1.5 rounded-full bg-teal shrink-0" />
-                {takeaway}
-              </li>
-            ))}
-          </ul>
         </div>
 
         {/* Sources */}
