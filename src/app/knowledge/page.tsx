@@ -5,8 +5,9 @@ import { Briefcase, HardHat, Megaphone, GraduationCap } from "lucide-react";
 export const metadata = {
   title: "UK Construction Sustainability Explainers | Fabrick",
   description:
-    "Plain-English UK guides to embodied carbon, EPDs, Part Z, the Future Homes Standard and CBAM. What is changing, when, and what it means for your work.",
+    "Plain-English UK guides to Budget 2026, embodied carbon, EPDs, Part Z, the Future Homes Standard and CBAM. What is changing, when, and what it means for your work.",
   keywords: [
+    "Budget 2026 construction",
     "embodied carbon",
     "future homes standard",
     "Part Z explained",
