@@ -15,6 +15,15 @@ interface Article {
 
 const articles: Article[] = [
   {
+    id: "budget-2026-construction",
+    title: "Budget 2026: What It Means for Construction and Housing",
+    excerpt:
+      "No new employer taxes, £1.5bn more for social housing and a £4.7bn first-time buyer scheme from April 2027, while the OBR forecasts 190,000 fewer homes than it expected in March. The measures, the forecast and the latest official data, from the primary documents.",
+    category: "Policy",
+    readTime: "7 min read",
+    featured: true,
+  },
+  {
     id: "what-is-embodied-carbon",
     title: "What Is Embodied Carbon? A Plain-English Guide for Construction",
     excerpt:
@@ -97,7 +106,7 @@ const articles: Article[] = [
   },
 ];
 
-const categories = ["All", "Fundamentals", "Regulations", "Materials", "Guides", "Case Studies"];
+const categories = ["All", "Policy", "Fundamentals", "Regulations", "Materials", "Guides", "Case Studies"];
 
 export function KnowledgeHub() {
   const [selectedCategory, setSelectedCategory] = useState("All");
