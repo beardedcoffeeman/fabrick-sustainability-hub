@@ -28,6 +28,19 @@
     ]
   },
   {
+    "id": "heat-network-zoning",
+    "title": "Heat Network Zoning (England) Regulations - Draft",
+    "date": "2026-01-01",
+    "status": "consultation",
+    "category": "energy",
+    "description": "Draft Heat Network Zones (England) Regulations 2026 under the Energy Act 2023 create a national Heat Network Zoning Authority and local Zone Coordinators who designate zones and may require certain buildings within a zone to connect to a heat network. Currently at draft SI and consultation stage with no firm in-force date.",
+    "impact": "Developers and contractors operating in areas likely to be designated as heat network zones should monitor the regulations and plan for potential mandatory connection requirements.",
+    "affectedRoles": [
+      "developer",
+      "contractor"
+    ]
+  },
+  {
     "id": "uknzcbs",
     "title": "UK Net Zero Carbon Building Standard (UKNZCBS) - Published",
     "date": "2026-01-15",
@@ -47,8 +60,8 @@
     "date": "2026-01-30",
     "status": "consultation",
     "category": "reporting",
-    "description": "The FCA consulted (30 January to 20 March 2026) on requiring listed issuers to disclose against the UK SRS, replacing current climate disclosure rules. A policy statement is expected in autumn 2026, with mandatory UK SRS S2 climate reporting for around 500 listed companies applying to accounting periods from 1 January 2027.",
-    "impact": "Listed construction companies should prepare to disclose against UK SRS and build Scope 3 supply-chain data systems ahead of the expected 1 January 2027 start.",
+    "description": "The FCA consulted (30 January to 20 March 2026) on requiring listed issuers to disclose against the UK SRS, replacing current climate disclosure rules. The awaited policy statement has now been published as PS26/19 on 30 September 2026, confirming a comply-or-explain regime for accounting periods beginning on or after 1 January 2027.",
+    "impact": "Listed construction companies should prepare to disclose against UK SRS on a comply-or-explain basis and build Scope 3 supply-chain data systems ahead of the 1 January 2027 start.",
     "affectedRoles": [
       "developer",
       "manufacturer",
@@ -115,27 +128,14 @@
   {
     "id": "uk-srs-mandatory",
     "title": "UK SRS - Mandatory FCA Rules Expected",
-    "date": "2026-10-01",
-    "status": "upcoming",
+    "date": "2026-09-30",
+    "status": "active",
     "category": "reporting",
-    "description": "FCA expected to finalise mandatory sustainability reporting rules for large listed companies in autumn 2026, applying for accounting periods from January 2027. Scope 3 emissions reporting included.",
-    "impact": "All major construction companies must prepare Scope 3 supply chain data. Material manufacturers will face data requests from clients.",
+    "description": "The FCA published its final sustainability reporting rules in Policy Statement PS26/19 on 30 September 2026. The rules apply on a 'comply or explain' basis for around 600 listed companies, for accounting periods beginning on or after 1 January 2027. Scope 3 emissions reporting is included.",
+    "impact": "All major listed construction companies must prepare Scope 3 supply chain data and plan to comply or explain against UK SRS. Material manufacturers will face data requests from clients.",
     "affectedRoles": [
       "manufacturer",
       "developer"
-    ]
-  },
-  {
-    "id": "cbam-registration",
-    "title": "UK CBAM - Importer Registration Opens",
-    "date": "2026-10-01",
-    "status": "upcoming",
-    "category": "trade",
-    "description": "Importers of steel, aluminium, cement, ceramics, and fertiliser must register ahead of the UK Carbon Border Adjustment Mechanism launch in January 2027. A minimum registration threshold of \u00a350,000 of relevant imports applies (raised from the originally proposed \u00a310,000).",
-    "impact": "Importers should assess whether they exceed the \u00a350,000 threshold, understand the carbon content of their supply chain, and prepare reporting systems.",
-    "affectedRoles": [
-      "manufacturer",
-      "contractor"
     ]
   },
   {
@@ -144,8 +144,8 @@
     "date": "2027-01-01",
     "status": "future",
     "category": "trade",
-    "description": "UK Carbon Border Adjustment Mechanism launches. Carbon levy on imports of steel, aluminium, cement, ceramics, hydrogen, electricity, and glass. Based on actual or default emission values.",
-    "impact": "Imported construction materials face carbon pricing. UK domestic manufacturers may gain competitive advantage. Material costs for imported steel/aluminium likely to rise.",
+    "description": "UK Carbon Border Adjustment Mechanism launches 1 January 2027. Carbon levy on imports of five goods: aluminium, cement, fertilisers, hydrogen, and iron and steel. Ceramics, glass and electricity were considered but are not in the launch scope. Based on actual or default emission values.",
+    "impact": "Imported construction materials in scope face carbon pricing. UK domestic manufacturers may gain competitive advantage. Material costs for imported steel/aluminium likely to rise.",
     "affectedRoles": [
       "manufacturer",
       "contractor"
@@ -179,19 +179,6 @@
     ]
   },
   {
-    "id": "epc-c-minimum",
-    "title": "EPC Rating C Minimum - Non-Domestic (Proposed)",
-    "date": "2027-04-01",
-    "status": "future",
-    "category": "energy",
-    "description": "Proposed MEES tightening requiring non-domestic rented buildings to achieve minimum EPC Rating C. Government consultation response still awaited - date may shift to 2028.",
-    "impact": "Landlords must retrofit properties or face penalties. Major retrofit wave expected. Demand for energy consultancy and building services design to surge.",
-    "affectedRoles": [
-      "developer",
-      "contractor"
-    ]
-  },
-  {
     "id": "biodiversity-net-gain",
     "title": "Biodiversity Net Gain - Small Sites Compliance",
     "date": "2027-04-01",
@@ -219,12 +206,25 @@
     ]
   },
   {
+    "id": "cbam-registration",
+    "title": "UK CBAM - Importer Registration Opens",
+    "date": "2028-01-01",
+    "status": "future",
+    "category": "trade",
+    "description": "The UK CBAM tax begins 1 January 2027, but importer registration opens 1 January 2028. The first accounting period is the whole of 2027, with the first return and payment due 31 May 2028. The levy applies to five goods: aluminium, cement, fertilisers, hydrogen, and iron and steel (ceramics are not in scope). A minimum registration threshold of £50,000 of relevant imports applies.",
+    "impact": "Importers should assess whether they exceed the £50,000 threshold, understand the carbon content of their supply chain, and prepare to register from 1 January 2028 ahead of the first return due 31 May 2028.",
+    "affectedRoles": [
+      "manufacturer",
+      "contractor"
+    ]
+  },
+  {
     "id": "part-z-limits",
     "title": "Part Z - Mandatory Embodied Carbon Limits (Expected)",
     "date": "2028-01-01",
     "status": "future",
     "category": "carbon",
-    "description": "Expected introduction of mandatory whole-life carbon reporting and embodied carbon limits for buildings over 1,000m\u00b2. Will require A1-A5 reporting at planning stage and whole-life (A-C) at completion.",
+    "description": "Expected introduction of mandatory whole-life carbon reporting and embodied carbon limits for buildings over 1,000m². Will require A1-A5 reporting at planning stage and whole-life (A-C) at completion.",
     "impact": "Material selection becomes carbon-critical. Low-carbon specification, design for disassembly, and material passports will become standard practice.",
     "affectedRoles": [
       "developer",
@@ -254,12 +254,25 @@
     "date": "2030-10-01",
     "status": "upcoming",
     "category": "energy",
-    "description": "Government response published 21 January 2026 confirming privately rented homes in England and Wales must meet the equivalent of EPC C by a single compliance date of 1 October 2030. A dual-metric standard applies (fabric performance first, then a heating-system or smart-readiness standard), with a raised cost cap of \u00a310,000 and 10-year exemption validity. Legislation to follow, with a statutory instrument aimed to come into force in 2027.",
-    "impact": "Landlords should plan retrofits now to meet EPC C by 1 October 2030, budgeting up to the \u00a310,000 cost cap and prioritising fabric-first improvements.",
+    "description": "Government response published 21 January 2026 confirming privately rented homes in England and Wales must meet the equivalent of EPC C by a single compliance date of 1 October 2030. A dual-metric standard applies (fabric performance first, then a heating-system or smart-readiness standard), with a raised cost cap of £10,000 and 10-year exemption validity. Legislation to follow, with a statutory instrument aimed to come into force in 2027.",
+    "impact": "Landlords should plan retrofits now to meet EPC C by 1 October 2030, budgeting up to the £10,000 cost cap and prioritising fabric-first improvements.",
     "affectedRoles": [
       "developer",
       "contractor",
       "manufacturer"
+    ]
+  },
+  {
+    "id": "epc-c-minimum",
+    "title": "EPC Rating C Minimum - Non-Domestic (Proposed)",
+    "date": "2031-04-01",
+    "status": "future",
+    "category": "energy",
+    "description": "DESNZ published an interim response on non-domestic MEES (England & Wales). The previously proposed interim EPC C milestone for 2027 will not be taken forward and is replaced by a single compliance date of EPC B by 2031 for buildings of 1,000 m² or more (sub-1,000 m² remains at EPC E). Existing flexibility mechanisms, such as the seven-year payback test, remain. Legislation still to follow.",
+    "impact": "Landlords of larger non-domestic rented buildings should plan retrofits to reach EPC B by 2031 rather than EPC C by 2027, while smaller buildings continue to require EPC E.",
+    "affectedRoles": [
+      "developer",
+      "contractor"
     ]
   }
 ]
