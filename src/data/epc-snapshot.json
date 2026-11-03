@@ -1,14 +1,14 @@
 {
- "generatedAt": "2026-10-27T12:12:41Z",
+ "generatedAt": "2026-11-03T13:49:06Z",
  "method": "full-register",
  "source": "MHCLG Energy Performance of Buildings register, domestic full-load download (api.get-energy-performance-data.communities.gov.uk/api/files/domestic/csv)",
- "dataTo": "2026-10-12",
- "certificatesProcessed": 30433590,
- "propertiesCounted": 20397946,
+ "dataTo": "2026-10-31",
+ "certificatesProcessed": 30529452,
+ "propertiesCounted": 20429397,
  "excluded": {
   "invalidBand": 0,
   "outsideEnglandWales": 7,
-  "unknownCouncil": 25273
+  "unknownCouncil": 28604
  },
  "notes": [
   "Every domestic certificate lodged in England and Wales since 2008; the latest certificate per property is counted (UPRN, or address + postcode where UPRN is missing). Same basis as the ONS local authority EPC statistics.",
@@ -18,19 +18,19 @@
   "Council names and regions follow the ONS local authority list; superseded GSS codes are folded into the current council."
  ],
  "national": {
-  "total": 20397946,
+  "total": 20429397,
   "bandCounts": {
-   "A": 166404,
-   "B": 2839450,
-   "C": 7292930,
-   "D": 7281185,
-   "E": 2259787,
-   "F": 434127,
-   "G": 124063
+   "A": 168691,
+   "B": 2843314,
+   "C": 7323072,
+   "D": 7281643,
+   "E": 2255363,
+   "F": 433430,
+   "G": 123884
   },
-  "belowCPct": 49.51,
-  "urgentPct": 13.82,
-  "compliantPct": 50.49
+  "belowCPct": 49.41,
+  "urgentPct": 13.77,
+  "compliantPct": 50.59
  },
  "councils": [
   {
@@ -43,9 +43,9 @@
     "B": 32,
     "C": 99,
     "D": 234,
-    "E": 245,
-    "F": 177,
-    "G": 121
+    "E": 247,
+    "F": 176,
+    "G": 120
    },
    "belowCPct": 85.1,
    "urgentPct": 59.47,
@@ -55,5707 +55,5707 @@
    "council": "Gwynedd",
    "code": "W06000002",
    "region": "Wales",
-   "total": 41964,
+   "total": 42026,
    "bandCounts": {
-    "A": 690,
-    "B": 2289,
-    "C": 9221,
-    "D": 13490,
-    "E": 9199,
-    "F": 4740,
-    "G": 2335
+    "A": 693,
+    "B": 2300,
+    "C": 9251,
+    "D": 13515,
+    "E": 9201,
+    "F": 4735,
+    "G": 2331
    },
-   "belowCPct": 70.93,
-   "urgentPct": 38.78,
-   "compliantPct": 29.07
+   "belowCPct": 70.87,
+   "urgentPct": 38.71,
+   "compliantPct": 29.13
   },
   {
    "council": "Castle Point",
    "code": "E07000069",
    "region": "East of England",
-   "total": 25404,
+   "total": 25427,
    "bandCounts": {
-    "A": 125,
-    "B": 1584,
-    "C": 6059,
-    "D": 12312,
-    "E": 4539,
+    "A": 126,
+    "B": 1588,
+    "C": 6084,
+    "D": 12310,
+    "E": 4534,
     "F": 681,
     "G": 104
    },
-   "belowCPct": 69.42,
-   "urgentPct": 20.96,
-   "compliantPct": 30.58
+   "belowCPct": 69.33,
+   "urgentPct": 20.92,
+   "compliantPct": 30.67
   },
   {
    "council": "Ceredigion",
    "code": "W06000008",
    "region": "Wales",
-   "total": 25786,
+   "total": 25874,
    "bandCounts": {
-    "A": 319,
-    "B": 1955,
-    "C": 5958,
-    "D": 7769,
-    "E": 6271,
-    "F": 2368,
+    "A": 353,
+    "B": 1975,
+    "C": 5964,
+    "D": 7786,
+    "E": 6280,
+    "F": 2370,
     "G": 1146
    },
-   "belowCPct": 68.08,
-   "urgentPct": 37.95,
-   "compliantPct": 31.92
+   "belowCPct": 67.95,
+   "urgentPct": 37.86,
+   "compliantPct": 32.05
   },
   {
    "council": "Staffordshire Moorlands",
    "code": "E07000198",
    "region": "West Midlands",
-   "total": 29158,
+   "total": 29195,
    "bandCounts": {
-    "A": 271,
-    "B": 2097,
-    "C": 7020,
-    "D": 13116,
-    "E": 4721,
-    "F": 1407,
-    "G": 526
+    "A": 274,
+    "B": 2093,
+    "C": 7044,
+    "D": 13133,
+    "E": 4719,
+    "F": 1403,
+    "G": 529
    },
-   "belowCPct": 67.8,
-   "urgentPct": 22.82,
-   "compliantPct": 32.2
+   "belowCPct": 67.77,
+   "urgentPct": 22.78,
+   "compliantPct": 32.23
   },
   {
    "council": "Pendle",
    "code": "E07000122",
    "region": "North West",
-   "total": 31628,
+   "total": 31658,
    "bandCounts": {
-    "A": 443,
-    "B": 1941,
-    "C": 8115,
-    "D": 13602,
-    "E": 5933,
-    "F": 1207,
-    "G": 387
+    "A": 450,
+    "B": 1937,
+    "C": 8154,
+    "D": 13610,
+    "E": 5923,
+    "F": 1198,
+    "G": 386
    },
-   "belowCPct": 66.8,
-   "urgentPct": 23.8,
-   "compliantPct": 33.2
+   "belowCPct": 66.7,
+   "urgentPct": 23.71,
+   "compliantPct": 33.3
   },
   {
    "council": "Isle of Anglesey",
    "code": "W06000001",
    "region": "Wales",
-   "total": 25561,
+   "total": 25581,
    "bandCounts": {
-    "A": 596,
-    "B": 2300,
-    "C": 5924,
+    "A": 599,
+    "B": 2311,
+    "C": 5933,
     "D": 7781,
     "E": 5377,
     "F": 2424,
-    "G": 1159
+    "G": 1156
    },
-   "belowCPct": 65.49,
-   "urgentPct": 35.05,
-   "compliantPct": 34.51
+   "belowCPct": 65.43,
+   "urgentPct": 35.01,
+   "compliantPct": 34.57
   },
   {
    "council": "North Norfolk",
    "code": "E07000147",
    "region": "East of England",
-   "total": 42042,
+   "total": 42098,
    "bandCounts": {
-    "A": 314,
-    "B": 3833,
-    "C": 10501,
-    "D": 15834,
-    "E": 8097,
-    "F": 2640,
-    "G": 823
+    "A": 320,
+    "B": 3851,
+    "C": 10528,
+    "D": 15840,
+    "E": 8098,
+    "F": 2642,
+    "G": 819
    },
-   "belowCPct": 65.16,
-   "urgentPct": 27.5,
-   "compliantPct": 34.84
-  },
-  {
-   "council": "Powys",
-   "code": "W06000023",
-   "region": "Wales",
-   "total": 45487,
-   "bandCounts": {
-    "A": 979,
-    "B": 3290,
-    "C": 11925,
-    "D": 15042,
-    "E": 8678,
-    "F": 3803,
-    "G": 1770
-   },
-   "belowCPct": 64.4,
-   "urgentPct": 31.33,
-   "compliantPct": 35.6
+   "belowCPct": 65.08,
+   "urgentPct": 27.46,
+   "compliantPct": 34.92
   },
   {
    "council": "Southend-on-Sea",
    "code": "E06000033",
    "region": "East of England",
-   "total": 61983,
+   "total": 62016,
    "bandCounts": {
     "A": 189,
-    "B": 3949,
-    "C": 17928,
-    "D": 27021,
-    "E": 11018,
-    "F": 1607,
-    "G": 271
+    "B": 3948,
+    "C": 17968,
+    "D": 27041,
+    "E": 10994,
+    "F": 1603,
+    "G": 273
    },
-   "belowCPct": 64.4,
-   "urgentPct": 20.81,
-   "compliantPct": 35.6
+   "belowCPct": 64.36,
+   "urgentPct": 20.75,
+   "compliantPct": 35.64
+  },
+  {
+   "council": "Powys",
+   "code": "W06000023",
+   "region": "Wales",
+   "total": 45569,
+   "bandCounts": {
+    "A": 995,
+    "B": 3297,
+    "C": 11968,
+    "D": 15057,
+    "E": 8685,
+    "F": 3797,
+    "G": 1770
+   },
+   "belowCPct": 64.32,
+   "urgentPct": 31.28,
+   "compliantPct": 35.68
   },
   {
    "council": "Conwy",
    "code": "W06000003",
    "region": "Wales",
-   "total": 43453,
+   "total": 43496,
    "bandCounts": {
     "A": 399,
-    "B": 3342,
-    "C": 12007,
-    "D": 17694,
-    "E": 7080,
-    "F": 2024,
-    "G": 907
+    "B": 3348,
+    "C": 12053,
+    "D": 17710,
+    "E": 7060,
+    "F": 2021,
+    "G": 905
    },
-   "belowCPct": 63.76,
-   "urgentPct": 23.04,
-   "compliantPct": 36.24
+   "belowCPct": 63.67,
+   "urgentPct": 22.96,
+   "compliantPct": 36.33
   },
   {
    "council": "Hyndburn",
    "code": "E07000120",
    "region": "North West",
-   "total": 27941,
+   "total": 27976,
    "bandCounts": {
     "A": 48,
-    "B": 1824,
-    "C": 8295,
-    "D": 12559,
-    "E": 4321,
+    "B": 1825,
+    "C": 8343,
+    "D": 12549,
+    "E": 4317,
     "F": 646,
     "G": 248
    },
-   "belowCPct": 63.61,
-   "urgentPct": 18.66,
-   "compliantPct": 36.39
+   "belowCPct": 63.48,
+   "urgentPct": 18.63,
+   "compliantPct": 36.52
   },
   {
    "council": "Denbighshire",
    "code": "W06000004",
    "region": "Wales",
-   "total": 33919,
+   "total": 33963,
    "bandCounts": {
-    "A": 575,
-    "B": 2881,
-    "C": 9018,
-    "D": 13092,
-    "E": 5798,
-    "F": 1798,
-    "G": 757
+    "A": 579,
+    "B": 2885,
+    "C": 9040,
+    "D": 13112,
+    "E": 5790,
+    "F": 1802,
+    "G": 755
    },
-   "belowCPct": 63.22,
-   "urgentPct": 24.63,
-   "compliantPct": 36.78
+   "belowCPct": 63.18,
+   "urgentPct": 24.58,
+   "compliantPct": 36.82
   },
   {
    "council": "Carmarthenshire",
    "code": "W06000010",
    "region": "Wales",
-   "total": 62505,
+   "total": 62616,
    "bandCounts": {
-    "A": 1039,
-    "B": 5776,
-    "C": 16402,
-    "D": 22446,
-    "E": 11062,
-    "F": 4190,
-    "G": 1590
+    "A": 1062,
+    "B": 5780,
+    "C": 16465,
+    "D": 22489,
+    "E": 11049,
+    "F": 4185,
+    "G": 1586
    },
-   "belowCPct": 62.86,
-   "urgentPct": 26.95,
-   "compliantPct": 37.14
+   "belowCPct": 62.78,
+   "urgentPct": 26.86,
+   "compliantPct": 37.22
   },
   {
    "council": "Blackpool",
    "code": "E06000009",
    "region": "North West",
-   "total": 57154,
+   "total": 57206,
    "bandCounts": {
-    "A": 232,
-    "B": 2412,
-    "C": 18586,
-    "D": 24994,
-    "E": 8869,
-    "F": 1493,
-    "G": 568
+    "A": 235,
+    "B": 2419,
+    "C": 18687,
+    "D": 24974,
+    "E": 8828,
+    "F": 1498,
+    "G": 565
    },
-   "belowCPct": 62.85,
-   "urgentPct": 19.12,
-   "compliantPct": 37.15
+   "belowCPct": 62.69,
+   "urgentPct": 19.04,
+   "compliantPct": 37.31
   },
   {
    "council": "Westmorland and Furness",
    "code": "E06000064",
    "region": "North West",
-   "total": 84891,
+   "total": 84998,
    "bandCounts": {
-    "A": 737,
-    "B": 7976,
-    "C": 22969,
-    "D": 32325,
-    "E": 14205,
-    "F": 5033,
-    "G": 1646
+    "A": 747,
+    "B": 7977,
+    "C": 23041,
+    "D": 32371,
+    "E": 14189,
+    "F": 5034,
+    "G": 1639
    },
-   "belowCPct": 62.68,
-   "urgentPct": 24.6,
-   "compliantPct": 37.32
+   "belowCPct": 62.63,
+   "urgentPct": 24.54,
+   "compliantPct": 37.37
   },
   {
    "council": "Calderdale",
    "code": "E08000033",
    "region": "Yorkshire and The Humber",
-   "total": 72386,
+   "total": 72488,
    "bandCounts": {
-    "A": 267,
-    "B": 4863,
-    "C": 22964,
-    "D": 29048,
-    "E": 12358,
-    "F": 2030,
-    "G": 856
+    "A": 275,
+    "B": 4871,
+    "C": 23094,
+    "D": 29044,
+    "E": 12322,
+    "F": 2025,
+    "G": 857
    },
-   "belowCPct": 61.19,
-   "urgentPct": 21.06,
-   "compliantPct": 38.81
+   "belowCPct": 61.04,
+   "urgentPct": 20.97,
+   "compliantPct": 38.96
   },
   {
    "council": "Derbyshire Dales",
    "code": "E07000035",
    "region": "East Midlands",
-   "total": 25756,
+   "total": 25799,
    "bandCounts": {
-    "A": 365,
-    "B": 3097,
-    "C": 6583,
-    "D": 9254,
-    "E": 4612,
-    "F": 1394,
-    "G": 451
+    "A": 370,
+    "B": 3102,
+    "C": 6595,
+    "D": 9279,
+    "E": 4610,
+    "F": 1393,
+    "G": 450
    },
-   "belowCPct": 61.0,
-   "urgentPct": 25.07,
-   "compliantPct": 39.0
+   "belowCPct": 60.98,
+   "urgentPct": 25.01,
+   "compliantPct": 39.02
   },
   {
    "council": "Pembrokeshire",
    "code": "W06000009",
    "region": "Wales",
-   "total": 44494,
+   "total": 44584,
    "bandCounts": {
-    "A": 1144,
-    "B": 4201,
-    "C": 12064,
-    "D": 15049,
-    "E": 7959,
-    "F": 2892,
-    "G": 1185
+    "A": 1156,
+    "B": 4214,
+    "C": 12106,
+    "D": 15068,
+    "E": 7979,
+    "F": 2882,
+    "G": 1179
    },
-   "belowCPct": 60.87,
-   "urgentPct": 27.05,
-   "compliantPct": 39.13
+   "belowCPct": 60.8,
+   "urgentPct": 27.01,
+   "compliantPct": 39.2
   },
   {
    "council": "Bradford",
    "code": "E08000032",
    "region": "Yorkshire and The Humber",
-   "total": 174065,
+   "total": 174242,
    "bandCounts": {
-    "A": 480,
-    "B": 13799,
-    "C": 54187,
-    "D": 70723,
-    "E": 29605,
-    "F": 3756,
-    "G": 1515
+    "A": 484,
+    "B": 13823,
+    "C": 54590,
+    "D": 70620,
+    "E": 29475,
+    "F": 3742,
+    "G": 1508
    },
-   "belowCPct": 60.67,
-   "urgentPct": 20.04,
-   "compliantPct": 39.33
+   "belowCPct": 60.46,
+   "urgentPct": 19.93,
+   "compliantPct": 39.54
   },
   {
    "council": "King's Lynn and West Norfolk",
    "code": "E07000146",
    "region": "East of England",
-   "total": 57187,
+   "total": 57272,
    "bandCounts": {
-    "A": 405,
-    "B": 6119,
-    "C": 16369,
-    "D": 20460,
-    "E": 10367,
-    "F": 2770,
-    "G": 697
+    "A": 410,
+    "B": 6129,
+    "C": 16418,
+    "D": 20500,
+    "E": 10359,
+    "F": 2762,
+    "G": 694
    },
-   "belowCPct": 59.97,
-   "urgentPct": 24.19,
-   "compliantPct": 40.03
+   "belowCPct": 59.92,
+   "urgentPct": 24.12,
+   "compliantPct": 40.08
   },
   {
    "council": "East Lindsey",
    "code": "E07000137",
    "region": "East Midlands",
-   "total": 55571,
+   "total": 55678,
    "bandCounts": {
-    "A": 597,
-    "B": 6551,
-    "C": 15417,
-    "D": 19811,
-    "E": 9488,
-    "F": 2789,
-    "G": 918
+    "A": 609,
+    "B": 6571,
+    "C": 15491,
+    "D": 19798,
+    "E": 9499,
+    "F": 2794,
+    "G": 916
    },
-   "belowCPct": 59.39,
-   "urgentPct": 23.74,
-   "compliantPct": 40.61
+   "belowCPct": 59.28,
+   "urgentPct": 23.72,
+   "compliantPct": 40.72
   },
   {
    "council": "Lancaster",
    "code": "E07000121",
    "region": "North West",
-   "total": 48125,
+   "total": 48185,
    "bandCounts": {
-    "A": 412,
-    "B": 4291,
-    "C": 14860,
+    "A": 433,
+    "B": 4286,
+    "C": 14926,
     "D": 20107,
-    "E": 6658,
-    "F": 1351,
-    "G": 446
+    "E": 6643,
+    "F": 1345,
+    "G": 445
    },
-   "belowCPct": 59.35,
-   "urgentPct": 17.57,
-   "compliantPct": 40.65
+   "belowCPct": 59.23,
+   "urgentPct": 17.5,
+   "compliantPct": 40.77
   },
   {
    "council": "West Devon",
    "code": "E07000047",
    "region": "South West",
-   "total": 20464,
+   "total": 20502,
    "bandCounts": {
-    "A": 295,
-    "B": 2771,
-    "C": 5270,
-    "D": 6353,
-    "E": 3597,
-    "F": 1566,
-    "G": 612
+    "A": 298,
+    "B": 2773,
+    "C": 5295,
+    "D": 6357,
+    "E": 3606,
+    "F": 1562,
+    "G": 611
    },
-   "belowCPct": 59.27,
-   "urgentPct": 28.22,
-   "compliantPct": 40.73
+   "belowCPct": 59.19,
+   "urgentPct": 28.19,
+   "compliantPct": 40.81
   },
   {
    "council": "Rossendale",
    "code": "E07000125",
    "region": "North West",
-   "total": 23937,
+   "total": 23976,
    "bandCounts": {
-    "A": 146,
-    "B": 1824,
-    "C": 7806,
-    "D": 9797,
-    "E": 3554,
-    "F": 626,
+    "A": 150,
+    "B": 1828,
+    "C": 7844,
+    "D": 9809,
+    "E": 3539,
+    "F": 622,
     "G": 184
    },
-   "belowCPct": 59.16,
-   "urgentPct": 18.23,
-   "compliantPct": 40.84
+   "belowCPct": 59.03,
+   "urgentPct": 18.12,
+   "compliantPct": 40.97
   },
   {
    "council": "Rother",
    "code": "E07000064",
    "region": "South East",
-   "total": 35788,
+   "total": 35858,
    "bandCounts": {
-    "A": 158,
-    "B": 3835,
-    "C": 10674,
-    "D": 13786,
-    "E": 5548,
-    "F": 1379,
-    "G": 408
+    "A": 164,
+    "B": 3858,
+    "C": 10713,
+    "D": 13802,
+    "E": 5533,
+    "F": 1382,
+    "G": 406
    },
-   "belowCPct": 59.02,
-   "urgentPct": 20.5,
-   "compliantPct": 40.98
+   "belowCPct": 58.91,
+   "urgentPct": 20.42,
+   "compliantPct": 41.09
   },
   {
    "council": "Torbay",
    "code": "E06000027",
    "region": "South West",
-   "total": 52777,
+   "total": 52850,
    "bandCounts": {
     "A": 123,
-    "B": 4247,
-    "C": 17364,
-    "D": 21874,
-    "E": 7431,
-    "F": 1303,
-    "G": 435
+    "B": 4254,
+    "C": 17411,
+    "D": 21895,
+    "E": 7430,
+    "F": 1301,
+    "G": 436
    },
-   "belowCPct": 58.82,
-   "urgentPct": 17.37,
-   "compliantPct": 41.18
+   "belowCPct": 58.77,
+   "urgentPct": 17.35,
+   "compliantPct": 41.23
   },
   {
    "council": "Broxtowe",
    "code": "E07000172",
    "region": "East Midlands",
-   "total": 36461,
+   "total": 36521,
    "bandCounts": {
-    "A": 256,
-    "B": 3629,
-    "C": 11139,
-    "D": 15615,
-    "E": 4913,
-    "F": 775,
+    "A": 262,
+    "B": 3642,
+    "C": 11184,
+    "D": 15619,
+    "E": 4906,
+    "F": 774,
     "G": 134
    },
-   "belowCPct": 58.79,
-   "urgentPct": 15.97,
-   "compliantPct": 41.21
-  },
-  {
-   "council": "Rhondda Cynon Taf",
-   "code": "W06000016",
-   "region": "Wales",
-   "total": 76590,
-   "bandCounts": {
-    "A": 943,
-    "B": 6030,
-    "C": 24624,
-    "D": 33179,
-    "E": 9915,
-    "F": 1489,
-    "G": 410
-   },
-   "belowCPct": 58.75,
-   "urgentPct": 15.42,
-   "compliantPct": 41.25
+   "belowCPct": 58.69,
+   "urgentPct": 15.92,
+   "compliantPct": 41.31
   },
   {
    "council": "Stockport",
    "code": "E08000007",
    "region": "North West",
-   "total": 93004,
+   "total": 93127,
    "bandCounts": {
-    "A": 292,
-    "B": 7998,
-    "C": 30087,
-    "D": 40555,
-    "E": 11927,
-    "F": 1798,
+    "A": 295,
+    "B": 7989,
+    "C": 30231,
+    "D": 40572,
+    "E": 11899,
+    "F": 1794,
     "G": 347
    },
-   "belowCPct": 58.74,
-   "urgentPct": 15.13,
-   "compliantPct": 41.26
+   "belowCPct": 58.64,
+   "urgentPct": 15.08,
+   "compliantPct": 41.36
+  },
+  {
+   "council": "Rhondda Cynon Taf",
+   "code": "W06000016",
+   "region": "Wales",
+   "total": 76683,
+   "bandCounts": {
+    "A": 954,
+    "B": 6054,
+    "C": 24724,
+    "D": 33171,
+    "E": 9888,
+    "F": 1481,
+    "G": 411
+   },
+   "belowCPct": 58.62,
+   "urgentPct": 15.36,
+   "compliantPct": 41.38
   },
   {
    "council": "Wirral",
    "code": "E08000015",
    "region": "North West",
-   "total": 108623,
+   "total": 108812,
    "bandCounts": {
-    "A": 324,
-    "B": 7975,
-    "C": 36555,
-    "D": 45879,
-    "E": 14823,
-    "F": 2386,
-    "G": 681
+    "A": 328,
+    "B": 7986,
+    "C": 36778,
+    "D": 45901,
+    "E": 14764,
+    "F": 2378,
+    "G": 677
    },
-   "belowCPct": 58.71,
-   "urgentPct": 16.47,
-   "compliantPct": 41.29
+   "belowCPct": 58.56,
+   "urgentPct": 16.38,
+   "compliantPct": 41.44
   },
   {
    "council": "Erewash",
    "code": "E07000036",
    "region": "East Midlands",
-   "total": 37304,
+   "total": 37363,
    "bandCounts": {
-    "A": 163,
-    "B": 2496,
-    "C": 12790,
-    "D": 15428,
-    "E": 5291,
-    "F": 955,
-    "G": 181
+    "A": 166,
+    "B": 2499,
+    "C": 12822,
+    "D": 15457,
+    "E": 5286,
+    "F": 953,
+    "G": 180
    },
-   "belowCPct": 58.59,
-   "urgentPct": 17.23,
-   "compliantPct": 41.41
+   "belowCPct": 58.55,
+   "urgentPct": 17.18,
+   "compliantPct": 41.45
   },
   {
    "council": "Tendring",
    "code": "E07000076",
    "region": "East of England",
-   "total": 56375,
+   "total": 56455,
    "bandCounts": {
-    "A": 639,
-    "B": 8549,
-    "C": 14444,
-    "D": 22125,
-    "E": 8325,
-    "F": 1751,
-    "G": 542
-   },
-   "belowCPct": 58.08,
-   "urgentPct": 18.83,
-   "compliantPct": 41.92
-  },
-  {
-   "council": "Cumberland",
-   "code": "E06000063",
-   "region": "North West",
-   "total": 96974,
-   "bandCounts": {
-    "A": 707,
-    "B": 10999,
-    "C": 29005,
-    "D": 37764,
-    "E": 12977,
-    "F": 3969,
-    "G": 1553
+    "A": 650,
+    "B": 8570,
+    "C": 14480,
+    "D": 22140,
+    "E": 8322,
+    "F": 1750,
+    "G": 543
    },
    "belowCPct": 58.02,
-   "urgentPct": 19.08,
+   "urgentPct": 18.8,
    "compliantPct": 41.98
-  },
-  {
-   "council": "Blaenau Gwent",
-   "code": "W06000019",
-   "region": "Wales",
-   "total": 21772,
-   "bandCounts": {
-    "A": 239,
-    "B": 1342,
-    "C": 7563,
-    "D": 9452,
-    "E": 2767,
-    "F": 335,
-    "G": 74
-   },
-   "belowCPct": 58.0,
-   "urgentPct": 14.59,
-   "compliantPct": 42.0
   },
   {
    "council": "Kirklees",
    "code": "E08000034",
    "region": "Yorkshire and The Humber",
-   "total": 136779,
+   "total": 137216,
    "bandCounts": {
-    "A": 858,
-    "B": 12123,
-    "C": 44528,
-    "D": 58560,
-    "E": 17169,
-    "F": 2657,
-    "G": 884
+    "A": 882,
+    "B": 12134,
+    "C": 44713,
+    "D": 58821,
+    "E": 17144,
+    "F": 2644,
+    "G": 878
    },
-   "belowCPct": 57.95,
-   "urgentPct": 15.14,
-   "compliantPct": 42.05
+   "belowCPct": 57.93,
+   "urgentPct": 15.06,
+   "compliantPct": 42.07
+  },
+  {
+   "council": "Cumberland",
+   "code": "E06000063",
+   "region": "North West",
+   "total": 97167,
+   "bandCounts": {
+    "A": 719,
+    "B": 11026,
+    "C": 29153,
+    "D": 37800,
+    "E": 12957,
+    "F": 3964,
+    "G": 1548
+   },
+   "belowCPct": 57.91,
+   "urgentPct": 19.01,
+   "compliantPct": 42.09
   },
   {
    "council": "Dudley",
    "code": "E08000027",
    "region": "West Midlands",
-   "total": 99302,
+   "total": 99454,
    "bandCounts": {
-    "A": 348,
-    "B": 6993,
-    "C": 34487,
+    "A": 356,
+    "B": 7019,
+    "C": 34628,
     "D": 43542,
-    "E": 11738,
-    "F": 1741,
+    "E": 11725,
+    "F": 1731,
     "G": 453
    },
-   "belowCPct": 57.88,
-   "urgentPct": 14.03,
-   "compliantPct": 42.12
+   "belowCPct": 57.77,
+   "urgentPct": 13.99,
+   "compliantPct": 42.23
+  },
+  {
+   "council": "Blaenau Gwent",
+   "code": "W06000019",
+   "region": "Wales",
+   "total": 21833,
+   "bandCounts": {
+    "A": 246,
+    "B": 1342,
+    "C": 7637,
+    "D": 9450,
+    "E": 2758,
+    "F": 326,
+    "G": 74
+   },
+   "belowCPct": 57.75,
+   "urgentPct": 14.46,
+   "compliantPct": 42.25
   },
   {
    "council": "Worthing",
    "code": "E07000229",
    "region": "South East",
-   "total": 40307,
+   "total": 40381,
    "bandCounts": {
     "A": 129,
-    "B": 3729,
-    "C": 13169,
-    "D": 16817,
-    "E": 5546,
-    "F": 760,
+    "B": 3734,
+    "C": 13236,
+    "D": 16829,
+    "E": 5539,
+    "F": 757,
     "G": 157
    },
-   "belowCPct": 57.76,
-   "urgentPct": 16.03,
-   "compliantPct": 42.24
+   "belowCPct": 57.66,
+   "urgentPct": 15.98,
+   "compliantPct": 42.34
   },
   {
    "council": "Cornwall",
    "code": "E06000052",
    "region": "South West",
-   "total": 219868,
+   "total": 220192,
    "bandCounts": {
-    "A": 3252,
-    "B": 29846,
-    "C": 60229,
-    "D": 64751,
-    "E": 40019,
-    "F": 15766,
-    "G": 6005
+    "A": 3288,
+    "B": 29865,
+    "C": 60413,
+    "D": 64766,
+    "E": 40063,
+    "F": 15777,
+    "G": 6020
    },
-   "belowCPct": 57.55,
-   "urgentPct": 28.1,
-   "compliantPct": 42.45
-  },
-  {
-   "council": "Bexley",
-   "code": "E09000004",
-   "region": "London",
-   "total": 72851,
-   "bandCounts": {
-    "A": 291,
-    "B": 7156,
-    "C": 23527,
-    "D": 30803,
-    "E": 9596,
-    "F": 1217,
-    "G": 261
-   },
-   "belowCPct": 57.48,
-   "urgentPct": 15.2,
-   "compliantPct": 42.52
+   "belowCPct": 57.51,
+   "urgentPct": 28.09,
+   "compliantPct": 42.49
   },
   {
    "council": "Tandridge",
    "code": "E07000215",
    "region": "South East",
-   "total": 27285,
+   "total": 27313,
    "bandCounts": {
-    "A": 238,
-    "B": 3361,
-    "C": 8018,
-    "D": 10791,
-    "E": 3873,
-    "F": 823,
-    "G": 181
+    "A": 241,
+    "B": 3360,
+    "C": 8039,
+    "D": 10801,
+    "E": 3871,
+    "F": 821,
+    "G": 180
    },
-   "belowCPct": 57.42,
-   "urgentPct": 17.87,
-   "compliantPct": 42.58
+   "belowCPct": 57.38,
+   "urgentPct": 17.84,
+   "compliantPct": 42.62
+  },
+  {
+   "council": "Bexley",
+   "code": "E09000004",
+   "region": "London",
+   "total": 72970,
+   "bandCounts": {
+    "A": 293,
+    "B": 7196,
+    "C": 23624,
+    "D": 30800,
+    "E": 9582,
+    "F": 1216,
+    "G": 259
+   },
+   "belowCPct": 57.36,
+   "urgentPct": 15.15,
+   "compliantPct": 42.64
   },
   {
    "council": "Oadby and Wigston",
    "code": "E07000135",
    "region": "East Midlands",
-   "total": 17257,
+   "total": 17288,
    "bandCounts": {
-    "A": 202,
-    "B": 2263,
-    "C": 4902,
-    "D": 7432,
-    "E": 2137,
-    "F": 278,
-    "G": 43
+    "A": 205,
+    "B": 2273,
+    "C": 4915,
+    "D": 7447,
+    "E": 2125,
+    "F": 279,
+    "G": 44
    },
-   "belowCPct": 57.31,
-   "urgentPct": 14.24,
-   "compliantPct": 42.69
+   "belowCPct": 57.24,
+   "urgentPct": 14.16,
+   "compliantPct": 42.76
   },
   {
    "council": "North Warwickshire",
    "code": "E07000218",
    "region": "West Midlands",
-   "total": 21290,
+   "total": 21327,
    "bandCounts": {
-    "A": 241,
-    "B": 2781,
-    "C": 6069,
-    "D": 8387,
-    "E": 3061,
-    "F": 571,
-    "G": 180
+    "A": 243,
+    "B": 2782,
+    "C": 6099,
+    "D": 8391,
+    "E": 3063,
+    "F": 566,
+    "G": 183
    },
-   "belowCPct": 57.3,
-   "urgentPct": 17.91,
-   "compliantPct": 42.7
-  },
-  {
-   "council": "Sevenoaks",
-   "code": "E07000111",
-   "region": "South East",
-   "total": 35170,
-   "bandCounts": {
-    "A": 177,
-    "B": 3824,
-    "C": 11016,
-    "D": 13394,
-    "E": 5207,
-    "F": 1265,
-    "G": 287
-   },
-   "belowCPct": 57.3,
-   "urgentPct": 19.22,
-   "compliantPct": 42.7
+   "belowCPct": 57.22,
+   "urgentPct": 17.87,
+   "compliantPct": 42.78
   },
   {
    "council": "Richmond upon Thames",
    "code": "E09000027",
    "region": "London",
-   "total": 63115,
+   "total": 63214,
    "bandCounts": {
-    "A": 187,
-    "B": 4052,
-    "C": 22720,
-    "D": 25506,
-    "E": 9079,
-    "F": 1316,
-    "G": 255
+    "A": 188,
+    "B": 4090,
+    "C": 22787,
+    "D": 25505,
+    "E": 9080,
+    "F": 1311,
+    "G": 253
    },
-   "belowCPct": 57.29,
-   "urgentPct": 16.87,
-   "compliantPct": 42.71
+   "belowCPct": 57.19,
+   "urgentPct": 16.84,
+   "compliantPct": 42.81
   },
   {
    "council": "South Hams",
    "code": "E07000044",
    "region": "South West",
-   "total": 37028,
+   "total": 37067,
    "bandCounts": {
-    "A": 763,
-    "B": 5773,
-    "C": 9344,
-    "D": 11540,
-    "E": 6453,
-    "F": 2387,
+    "A": 765,
+    "B": 5778,
+    "C": 9369,
+    "D": 11544,
+    "E": 6467,
+    "F": 2376,
     "G": 768
    },
-   "belowCPct": 57.11,
-   "urgentPct": 25.95,
-   "compliantPct": 42.89
+   "belowCPct": 57.07,
+   "urgentPct": 25.93,
+   "compliantPct": 42.93
   },
   {
-   "council": "Burnley",
-   "code": "E07000117",
-   "region": "North West",
-   "total": 33511,
+   "council": "Sevenoaks",
+   "code": "E07000111",
+   "region": "South East",
+   "total": 35329,
    "bandCounts": {
-    "A": 244,
-    "B": 2696,
-    "C": 11443,
-    "D": 13306,
-    "E": 4754,
-    "F": 804,
-    "G": 264
+    "A": 182,
+    "B": 3943,
+    "C": 11051,
+    "D": 13402,
+    "E": 5197,
+    "F": 1265,
+    "G": 289
    },
-   "belowCPct": 57.08,
-   "urgentPct": 17.37,
-   "compliantPct": 42.92
+   "belowCPct": 57.04,
+   "urgentPct": 19.11,
+   "compliantPct": 42.96
   },
   {
    "council": "Herefordshire, County of",
    "code": "E06000019",
    "region": "West Midlands",
-   "total": 65425,
+   "total": 65535,
    "bandCounts": {
-    "A": 930,
-    "B": 7764,
-    "C": 19497,
-    "D": 21814,
-    "E": 10528,
-    "F": 3567,
-    "G": 1325
+    "A": 953,
+    "B": 7771,
+    "C": 19555,
+    "D": 21837,
+    "E": 10531,
+    "F": 3560,
+    "G": 1328
    },
-   "belowCPct": 56.91,
-   "urgentPct": 23.57,
-   "compliantPct": 43.09
+   "belowCPct": 56.85,
+   "urgentPct": 23.53,
+   "compliantPct": 43.15
+  },
+  {
+   "council": "Burnley",
+   "code": "E07000117",
+   "region": "North West",
+   "total": 33551,
+   "bandCounts": {
+    "A": 248,
+    "B": 2698,
+    "C": 11535,
+    "D": 13271,
+    "E": 4735,
+    "F": 798,
+    "G": 266
+   },
+   "belowCPct": 56.84,
+   "urgentPct": 17.28,
+   "compliantPct": 43.16
   },
   {
    "council": "Wyre Forest",
    "code": "E07000239",
    "region": "West Midlands",
-   "total": 33305,
+   "total": 33489,
    "bandCounts": {
-    "A": 278,
-    "B": 3777,
-    "C": 10306,
-    "D": 13239,
-    "E": 4551,
+    "A": 279,
+    "B": 3792,
+    "C": 10401,
+    "D": 13313,
+    "E": 4548,
     "F": 888,
-    "G": 266
+    "G": 268
    },
-   "belowCPct": 56.88,
-   "urgentPct": 17.13,
-   "compliantPct": 43.12
+   "belowCPct": 56.79,
+   "urgentPct": 17.03,
+   "compliantPct": 43.21
   },
   {
    "council": "Bromley",
    "code": "E09000006",
    "region": "London",
-   "total": 101833,
+   "total": 101929,
    "bandCounts": {
-    "A": 249,
-    "B": 8466,
-    "C": 35205,
-    "D": 41263,
-    "E": 14203,
-    "F": 2057,
-    "G": 390
+    "A": 253,
+    "B": 8470,
+    "C": 35327,
+    "D": 41268,
+    "E": 14176,
+    "F": 2046,
+    "G": 389
    },
-   "belowCPct": 56.87,
-   "urgentPct": 16.35,
-   "compliantPct": 43.13
-  },
-  {
-   "council": "North East Lincolnshire",
-   "code": "E06000012",
-   "region": "Yorkshire and The Humber",
-   "total": 55842,
-   "bandCounts": {
-    "A": 469,
-    "B": 5144,
-    "C": 18643,
-    "D": 24251,
-    "E": 6244,
-    "F": 834,
-    "G": 257
-   },
-   "belowCPct": 56.56,
-   "urgentPct": 13.14,
-   "compliantPct": 43.44
+   "belowCPct": 56.78,
+   "urgentPct": 16.3,
+   "compliantPct": 43.22
   },
   {
    "council": "Trafford",
    "code": "E08000009",
    "region": "North West",
-   "total": 75010,
+   "total": 75110,
    "bandCounts": {
-    "A": 133,
-    "B": 7566,
-    "C": 24901,
-    "D": 31220,
-    "E": 9410,
-    "F": 1492,
-    "G": 288
+    "A": 135,
+    "B": 7577,
+    "C": 24980,
+    "D": 31251,
+    "E": 9391,
+    "F": 1489,
+    "G": 287
    },
-   "belowCPct": 56.54,
-   "urgentPct": 14.92,
-   "compliantPct": 43.46
-  },
-  {
-   "council": "North Yorkshire",
-   "code": "E06000065",
-   "region": "Yorkshire and The Humber",
-   "total": 227933,
-   "bandCounts": {
-    "A": 2527,
-    "B": 32395,
-    "C": 64318,
-    "D": 82251,
-    "E": 33916,
-    "F": 9547,
-    "G": 2979
-   },
-   "belowCPct": 56.46,
-   "urgentPct": 20.38,
-   "compliantPct": 43.54
+   "belowCPct": 56.47,
+   "urgentPct": 14.87,
+   "compliantPct": 43.53
   },
   {
    "council": "Adur",
    "code": "E07000223",
    "region": "South East",
-   "total": 21090,
+   "total": 21128,
    "bandCounts": {
-    "A": 117,
-    "B": 2241,
-    "C": 6827,
-    "D": 8944,
+    "A": 118,
+    "B": 2249,
+    "C": 6852,
+    "D": 8947,
     "E": 2519,
-    "F": 365,
+    "F": 366,
     "G": 77
    },
-   "belowCPct": 56.45,
-   "urgentPct": 14.04,
-   "compliantPct": 43.55
+   "belowCPct": 56.37,
+   "urgentPct": 14.02,
+   "compliantPct": 43.63
+  },
+  {
+   "council": "North Yorkshire",
+   "code": "E06000065",
+   "region": "Yorkshire and The Humber",
+   "total": 228281,
+   "bandCounts": {
+    "A": 2561,
+    "B": 32471,
+    "C": 64560,
+    "D": 82251,
+    "E": 33915,
+    "F": 9548,
+    "G": 2975
+   },
+   "belowCPct": 56.37,
+   "urgentPct": 20.34,
+   "compliantPct": 43.63
+  },
+  {
+   "council": "North East Lincolnshire",
+   "code": "E06000012",
+   "region": "Yorkshire and The Humber",
+   "total": 55955,
+   "bandCounts": {
+    "A": 492,
+    "B": 5161,
+    "C": 18771,
+    "D": 24230,
+    "E": 6211,
+    "F": 833,
+    "G": 257
+   },
+   "belowCPct": 56.35,
+   "urgentPct": 13.05,
+   "compliantPct": 43.65
   },
   {
    "council": "Wyre",
    "code": "E07000128",
    "region": "North West",
-   "total": 40279,
+   "total": 40335,
    "bandCounts": {
-    "A": 426,
-    "B": 6301,
-    "C": 10848,
-    "D": 16078,
-    "E": 5239,
+    "A": 437,
+    "B": 6313,
+    "C": 10888,
+    "D": 16093,
+    "E": 5219,
     "F": 1080,
-    "G": 307
+    "G": 305
    },
-   "belowCPct": 56.37,
-   "urgentPct": 16.45,
-   "compliantPct": 43.63
-  },
-  {
-   "council": "Havering",
-   "code": "E09000016",
-   "region": "London",
-   "total": 77692,
-   "bandCounts": {
-    "A": 262,
-    "B": 9596,
-    "C": 24076,
-    "D": 32234,
-    "E": 10000,
-    "F": 1276,
-    "G": 248
-   },
-   "belowCPct": 56.32,
-   "urgentPct": 14.83,
-   "compliantPct": 43.68
+   "belowCPct": 56.27,
+   "urgentPct": 16.37,
+   "compliantPct": 43.73
   },
   {
    "council": "Bury",
    "code": "E08000002",
    "region": "North West",
-   "total": 60380,
+   "total": 60451,
    "bandCounts": {
-    "A": 398,
-    "B": 4426,
-    "C": 21601,
-    "D": 25794,
-    "E": 6973,
-    "F": 969,
-    "G": 219
+    "A": 403,
+    "B": 4431,
+    "C": 21668,
+    "D": 25806,
+    "E": 6961,
+    "F": 961,
+    "G": 221
    },
-   "belowCPct": 56.24,
-   "urgentPct": 13.52,
-   "compliantPct": 43.76
+   "belowCPct": 56.16,
+   "urgentPct": 13.47,
+   "compliantPct": 43.84
+  },
+  {
+   "council": "Havering",
+   "code": "E09000016",
+   "region": "London",
+   "total": 77884,
+   "bandCounts": {
+    "A": 263,
+    "B": 9595,
+    "C": 24284,
+    "D": 32248,
+    "E": 9974,
+    "F": 1273,
+    "G": 247
+   },
+   "belowCPct": 56.16,
+   "urgentPct": 14.76,
+   "compliantPct": 43.84
   },
   {
    "council": "Mole Valley",
    "code": "E07000210",
    "region": "South East",
-   "total": 27619,
+   "total": 27662,
    "bandCounts": {
-    "A": 97,
-    "B": 2868,
-    "C": 9138,
-    "D": 10137,
-    "E": 4362,
-    "F": 843,
+    "A": 98,
+    "B": 2869,
+    "C": 9173,
+    "D": 10155,
+    "E": 4360,
+    "F": 833,
     "G": 174
    },
-   "belowCPct": 56.18,
-   "urgentPct": 19.48,
-   "compliantPct": 43.82
+   "belowCPct": 56.11,
+   "urgentPct": 19.4,
+   "compliantPct": 43.89
   },
   {
    "council": "Redbridge",
    "code": "E09000026",
    "region": "London",
-   "total": 79342,
+   "total": 79469,
    "bandCounts": {
-    "A": 206,
-    "B": 7143,
-    "C": 27460,
-    "D": 33820,
-    "E": 9293,
-    "F": 1129,
-    "G": 291
+    "A": 207,
+    "B": 7142,
+    "C": 27605,
+    "D": 33832,
+    "E": 9263,
+    "F": 1128,
+    "G": 292
    },
-   "belowCPct": 56.13,
-   "urgentPct": 13.5,
-   "compliantPct": 43.87
+   "belowCPct": 56.02,
+   "urgentPct": 13.44,
+   "compliantPct": 43.98
   },
   {
    "council": "Forest of Dean",
    "code": "E07000080",
    "region": "South West",
-   "total": 28785,
+   "total": 28837,
    "bandCounts": {
-    "A": 419,
-    "B": 4766,
-    "C": 7512,
-    "D": 8873,
-    "E": 4989,
-    "F": 1708,
-    "G": 518
+    "A": 424,
+    "B": 4781,
+    "C": 7534,
+    "D": 8890,
+    "E": 4974,
+    "F": 1714,
+    "G": 520
    },
-   "belowCPct": 55.89,
-   "urgentPct": 25.07,
-   "compliantPct": 44.11
+   "belowCPct": 55.82,
+   "urgentPct": 25.0,
+   "compliantPct": 44.18
   },
   {
    "council": "Leicester",
    "code": "E06000016",
    "region": "East Midlands",
-   "total": 110677,
+   "total": 110794,
    "bandCounts": {
-    "A": 869,
-    "B": 9385,
-    "C": 38755,
-    "D": 45074,
-    "E": 14494,
-    "F": 1745,
-    "G": 355
+    "A": 868,
+    "B": 9383,
+    "C": 38925,
+    "D": 45091,
+    "E": 14434,
+    "F": 1742,
+    "G": 351
    },
-   "belowCPct": 55.72,
-   "urgentPct": 14.99,
-   "compliantPct": 44.28
+   "belowCPct": 55.61,
+   "urgentPct": 14.92,
+   "compliantPct": 44.39
   },
   {
    "council": "Isle of Wight",
    "code": "E06000046",
    "region": "South East",
-   "total": 54613,
+   "total": 54681,
    "bandCounts": {
-    "A": 366,
-    "B": 5172,
-    "C": 18737,
-    "D": 19707,
-    "E": 7935,
-    "F": 2025,
+    "A": 370,
+    "B": 5173,
+    "C": 18795,
+    "D": 19712,
+    "E": 7936,
+    "F": 2024,
     "G": 671
    },
-   "belowCPct": 55.55,
-   "urgentPct": 19.47,
-   "compliantPct": 44.45
+   "belowCPct": 55.49,
+   "urgentPct": 19.44,
+   "compliantPct": 44.51
   },
   {
    "council": "Torridge",
    "code": "E07000046",
    "region": "South West",
-   "total": 27466,
+   "total": 27523,
    "bandCounts": {
-    "A": 380,
-    "B": 3980,
-    "C": 7860,
-    "D": 8348,
-    "E": 4519,
-    "F": 1731,
-    "G": 648
+    "A": 390,
+    "B": 4001,
+    "C": 7875,
+    "D": 8335,
+    "E": 4537,
+    "F": 1741,
+    "G": 644
    },
-   "belowCPct": 55.51,
-   "urgentPct": 25.11,
-   "compliantPct": 44.49
+   "belowCPct": 55.43,
+   "urgentPct": 25.15,
+   "compliantPct": 44.57
   },
   {
    "council": "High Peak",
    "code": "E07000037",
    "region": "East Midlands",
-   "total": 29805,
+   "total": 29846,
    "bandCounts": {
-    "A": 144,
-    "B": 3480,
-    "C": 9663,
-    "D": 11948,
-    "E": 3602,
-    "F": 761,
-    "G": 207
+    "A": 147,
+    "B": 3479,
+    "C": 9701,
+    "D": 11954,
+    "E": 3593,
+    "F": 766,
+    "G": 206
    },
-   "belowCPct": 55.42,
-   "urgentPct": 15.33,
-   "compliantPct": 44.58
-  },
-  {
-   "council": "Birmingham",
-   "code": "E08000025",
-   "region": "West Midlands",
-   "total": 364323,
-   "bandCounts": {
-    "A": 1273,
-    "B": 37165,
-    "C": 124306,
-    "D": 143311,
-    "E": 48993,
-    "F": 7181,
-    "G": 2094
-   },
-   "belowCPct": 55.33,
-   "urgentPct": 15.99,
-   "compliantPct": 44.67
+   "belowCPct": 55.35,
+   "urgentPct": 15.3,
+   "compliantPct": 44.65
   },
   {
    "council": "Cotswold",
    "code": "E07000079",
    "region": "South West",
-   "total": 34192,
+   "total": 34229,
    "bandCounts": {
-    "A": 358,
-    "B": 5863,
-    "C": 9063,
-    "D": 10456,
-    "E": 6257,
-    "F": 1763,
+    "A": 366,
+    "B": 5862,
+    "C": 9083,
+    "D": 10469,
+    "E": 6263,
+    "F": 1754,
     "G": 432
    },
-   "belowCPct": 55.3,
-   "urgentPct": 24.72,
-   "compliantPct": 44.7
+   "belowCPct": 55.27,
+   "urgentPct": 24.68,
+   "compliantPct": 44.73
+  },
+  {
+   "council": "Birmingham",
+   "code": "E08000025",
+   "region": "West Midlands",
+   "total": 364711,
+   "bandCounts": {
+    "A": 1280,
+    "B": 37164,
+    "C": 124873,
+    "D": 143343,
+    "E": 48811,
+    "F": 7147,
+    "G": 2093
+   },
+   "belowCPct": 55.22,
+   "urgentPct": 15.92,
+   "compliantPct": 44.78
   },
   {
    "council": "Doncaster",
    "code": "E08000017",
    "region": "Yorkshire and The Humber",
-   "total": 105500,
+   "total": 105686,
    "bandCounts": {
-    "A": 754,
-    "B": 13213,
-    "C": 33230,
-    "D": 44477,
-    "E": 11517,
-    "F": 1790,
-    "G": 519
+    "A": 772,
+    "B": 13257,
+    "C": 33390,
+    "D": 44459,
+    "E": 11489,
+    "F": 1801,
+    "G": 518
    },
-   "belowCPct": 55.26,
-   "urgentPct": 13.11,
-   "compliantPct": 44.74
-  },
-  {
-   "council": "Enfield",
-   "code": "E09000010",
-   "region": "London",
-   "total": 97441,
-   "bandCounts": {
-    "A": 215,
-    "B": 8384,
-    "C": 35030,
-    "D": 40853,
-    "E": 11240,
-    "F": 1384,
-    "G": 335
-   },
-   "belowCPct": 55.23,
-   "urgentPct": 13.3,
-   "compliantPct": 44.77
+   "belowCPct": 55.13,
+   "urgentPct": 13.07,
+   "compliantPct": 44.87
   },
   {
    "council": "Wolverhampton",
    "code": "E08000031",
    "region": "West Midlands",
-   "total": 81091,
+   "total": 81188,
    "bandCounts": {
     "A": 751,
-    "B": 6743,
-    "C": 28845,
-    "D": 32525,
-    "E": 10228,
-    "F": 1599,
+    "B": 6740,
+    "C": 28982,
+    "D": 32531,
+    "E": 10197,
+    "F": 1587,
     "G": 400
    },
-   "belowCPct": 55.19,
-   "urgentPct": 15.08,
-   "compliantPct": 44.81
+   "belowCPct": 55.08,
+   "urgentPct": 15.01,
+   "compliantPct": 44.92
+  },
+  {
+   "council": "Enfield",
+   "code": "E09000010",
+   "region": "London",
+   "total": 97629,
+   "bandCounts": {
+    "A": 219,
+    "B": 8476,
+    "C": 35217,
+    "D": 40806,
+    "E": 11203,
+    "F": 1373,
+    "G": 335
+   },
+   "belowCPct": 55.02,
+   "urgentPct": 13.22,
+   "compliantPct": 44.98
   },
   {
    "council": "Bromsgrove",
    "code": "E07000234",
    "region": "West Midlands",
-   "total": 29522,
+   "total": 29558,
    "bandCounts": {
-    "A": 361,
-    "B": 3703,
-    "C": 9206,
-    "D": 11386,
-    "E": 3899,
-    "F": 789,
+    "A": 364,
+    "B": 3706,
+    "C": 9247,
+    "D": 11381,
+    "E": 3896,
+    "F": 786,
     "G": 178
    },
-   "belowCPct": 55.05,
-   "urgentPct": 16.48,
-   "compliantPct": 44.95
+   "belowCPct": 54.95,
+   "urgentPct": 16.44,
+   "compliantPct": 45.05
   },
   {
    "council": "North Devon",
    "code": "E07000043",
    "region": "South West",
-   "total": 38046,
+   "total": 38140,
    "bandCounts": {
-    "A": 625,
-    "B": 5569,
-    "C": 10974,
-    "D": 12366,
+    "A": 627,
+    "B": 5579,
+    "C": 11049,
+    "D": 12378,
     "E": 5934,
-    "F": 1832,
-    "G": 746
+    "F": 1825,
+    "G": 748
    },
-   "belowCPct": 54.88,
-   "urgentPct": 22.37,
-   "compliantPct": 45.12
-  },
-  {
-   "council": "Newcastle-under-Lyme",
-   "code": "E07000195",
-   "region": "West Midlands",
-   "total": 39469,
-   "bandCounts": {
-    "A": 295,
-    "B": 4256,
-    "C": 13263,
-    "D": 15961,
-    "E": 4745,
-    "F": 755,
-    "G": 194
-   },
-   "belowCPct": 54.87,
-   "urgentPct": 14.43,
-   "compliantPct": 45.13
-  },
-  {
-   "council": "Stoke-on-Trent",
-   "code": "E06000021",
-   "region": "West Midlands",
-   "total": 85910,
-   "bandCounts": {
-    "A": 338,
-    "B": 7439,
-    "C": 31044,
-    "D": 36345,
-    "E": 9203,
-    "F": 1208,
-    "G": 333
-   },
-   "belowCPct": 54.81,
-   "urgentPct": 12.51,
-   "compliantPct": 45.19
+   "belowCPct": 54.76,
+   "urgentPct": 22.3,
+   "compliantPct": 45.24
   },
   {
    "council": "Walsall",
    "code": "E08000030",
    "region": "West Midlands",
-   "total": 86500,
+   "total": 86673,
    "bandCounts": {
-    "A": 327,
-    "B": 8002,
-    "C": 30767,
-    "D": 35552,
-    "E": 10191,
-    "F": 1319,
-    "G": 342
+    "A": 328,
+    "B": 8011,
+    "C": 30928,
+    "D": 35600,
+    "E": 10156,
+    "F": 1309,
+    "G": 341
    },
-   "belowCPct": 54.8,
-   "urgentPct": 13.7,
-   "compliantPct": 45.2
+   "belowCPct": 54.7,
+   "urgentPct": 13.62,
+   "compliantPct": 45.3
+  },
+  {
+   "council": "Newcastle-under-Lyme",
+   "code": "E07000195",
+   "region": "West Midlands",
+   "total": 39563,
+   "bandCounts": {
+    "A": 298,
+    "B": 4261,
+    "C": 13366,
+    "D": 15959,
+    "E": 4733,
+    "F": 754,
+    "G": 192
+   },
+   "belowCPct": 54.69,
+   "urgentPct": 14.35,
+   "compliantPct": 45.31
+  },
+  {
+   "council": "Stoke-on-Trent",
+   "code": "E06000021",
+   "region": "West Midlands",
+   "total": 86019,
+   "bandCounts": {
+    "A": 342,
+    "B": 7433,
+    "C": 31226,
+    "D": 36328,
+    "E": 9150,
+    "F": 1207,
+    "G": 333
+   },
+   "belowCPct": 54.66,
+   "urgentPct": 12.43,
+   "compliantPct": 45.34
   },
   {
    "council": "Epsom and Ewell",
    "code": "E07000208",
    "region": "South East",
-   "total": 23015,
+   "total": 23044,
    "bandCounts": {
     "A": 49,
-    "B": 2612,
-    "C": 7787,
-    "D": 8627,
-    "E": 3399,
-    "F": 476,
+    "B": 2614,
+    "C": 7820,
+    "D": 8626,
+    "E": 3396,
+    "F": 474,
     "G": 65
    },
-   "belowCPct": 54.6,
-   "urgentPct": 17.12,
-   "compliantPct": 45.4
+   "belowCPct": 54.51,
+   "urgentPct": 17.08,
+   "compliantPct": 45.49
   },
   {
    "council": "North Lincolnshire",
    "code": "E06000013",
    "region": "Yorkshire and The Humber",
-   "total": 55367,
+   "total": 55441,
    "bandCounts": {
     "A": 492,
-    "B": 5083,
-    "C": 19588,
-    "D": 22303,
-    "E": 6313,
-    "F": 1250,
-    "G": 338
+    "B": 5092,
+    "C": 19666,
+    "D": 22304,
+    "E": 6298,
+    "F": 1249,
+    "G": 340
    },
-   "belowCPct": 54.55,
-   "urgentPct": 14.27,
-   "compliantPct": 45.45
+   "belowCPct": 54.46,
+   "urgentPct": 14.23,
+   "compliantPct": 45.54
   },
   {
    "council": "Fylde",
    "code": "E07000119",
    "region": "North West",
-   "total": 31341,
+   "total": 31376,
    "bandCounts": {
-    "A": 289,
+    "A": 300,
     "B": 5652,
-    "C": 8316,
-    "D": 12032,
-    "E": 4140,
-    "F": 706,
-    "G": 206
+    "C": 8353,
+    "D": 12025,
+    "E": 4132,
+    "F": 707,
+    "G": 207
    },
-   "belowCPct": 54.51,
-   "urgentPct": 16.12,
-   "compliantPct": 45.49
-  },
-  {
-   "council": "Chesterfield",
-   "code": "E07000034",
-   "region": "East Midlands",
-   "total": 37449,
-   "bandCounts": {
-    "A": 283,
-    "B": 3408,
-    "C": 13362,
-    "D": 16266,
-    "E": 3629,
-    "F": 421,
-    "G": 80
-   },
-   "belowCPct": 54.46,
-   "urgentPct": 11.03,
-   "compliantPct": 45.54
+   "belowCPct": 54.41,
+   "urgentPct": 16.08,
+   "compliantPct": 45.59
   },
   {
    "council": "Malvern Hills",
    "code": "E07000235",
    "region": "West Midlands",
-   "total": 28772,
+   "total": 28817,
    "bandCounts": {
     "A": 858,
-    "B": 4969,
-    "C": 7283,
-    "D": 8907,
-    "E": 4791,
-    "F": 1516,
+    "B": 4984,
+    "C": 7299,
+    "D": 8927,
+    "E": 4787,
+    "F": 1514,
     "G": 448
    },
-   "belowCPct": 54.43,
-   "urgentPct": 23.48,
-   "compliantPct": 45.57
+   "belowCPct": 54.4,
+   "urgentPct": 23.42,
+   "compliantPct": 45.6
+  },
+  {
+   "council": "Chesterfield",
+   "code": "E07000034",
+   "region": "East Midlands",
+   "total": 37524,
+   "bandCounts": {
+    "A": 292,
+    "B": 3415,
+    "C": 13432,
+    "D": 16274,
+    "E": 3611,
+    "F": 420,
+    "G": 80
+   },
+   "belowCPct": 54.33,
+   "urgentPct": 10.96,
+   "compliantPct": 45.67
   },
   {
    "council": "Derby",
    "code": "E06000015",
    "region": "East Midlands",
-   "total": 85948,
+   "total": 86042,
    "bandCounts": {
-    "A": 542,
-    "B": 8899,
-    "C": 29734,
-    "D": 33813,
-    "E": 11085,
-    "F": 1576,
-    "G": 299
+    "A": 555,
+    "B": 8882,
+    "C": 29863,
+    "D": 33832,
+    "E": 11036,
+    "F": 1579,
+    "G": 295
    },
-   "belowCPct": 54.42,
-   "urgentPct": 15.08,
-   "compliantPct": 45.58
-  },
-  {
-   "council": "Sandwell",
-   "code": "E08000028",
-   "region": "West Midlands",
-   "total": 101327,
-   "bandCounts": {
-    "A": 353,
-    "B": 7830,
-    "C": 38009,
-    "D": 41820,
-    "E": 11257,
-    "F": 1602,
-    "G": 456
-   },
-   "belowCPct": 54.41,
-   "urgentPct": 13.14,
-   "compliantPct": 45.59
+   "belowCPct": 54.32,
+   "urgentPct": 15.0,
+   "compliantPct": 45.68
   },
   {
    "council": "New Forest",
    "code": "E07000091",
    "region": "South East",
-   "total": 57703,
+   "total": 57787,
    "bandCounts": {
-    "A": 303,
-    "B": 4599,
-    "C": 21428,
-    "D": 22834,
-    "E": 6784,
-    "F": 1392,
-    "G": 363
+    "A": 308,
+    "B": 4605,
+    "C": 21486,
+    "D": 22857,
+    "E": 6781,
+    "F": 1386,
+    "G": 364
    },
-   "belowCPct": 54.37,
-   "urgentPct": 14.8,
-   "compliantPct": 45.63
+   "belowCPct": 54.32,
+   "urgentPct": 14.76,
+   "compliantPct": 45.68
+  },
+  {
+   "council": "Sandwell",
+   "code": "E08000028",
+   "region": "West Midlands",
+   "total": 101458,
+   "bandCounts": {
+    "A": 353,
+    "B": 7821,
+    "C": 38204,
+    "D": 41814,
+    "E": 11219,
+    "F": 1590,
+    "G": 457
+   },
+   "belowCPct": 54.29,
+   "urgentPct": 13.08,
+   "compliantPct": 45.71
   },
   {
    "council": "Teignbridge",
    "code": "E07000045",
    "region": "South West",
-   "total": 48430,
+   "total": 48481,
    "bandCounts": {
-    "A": 631,
-    "B": 7248,
-    "C": 14259,
-    "D": 17266,
-    "E": 6626,
-    "F": 1822,
-    "G": 578
+    "A": 636,
+    "B": 7242,
+    "C": 14309,
+    "D": 17276,
+    "E": 6615,
+    "F": 1828,
+    "G": 575
    },
-   "belowCPct": 54.29,
-   "urgentPct": 18.64,
-   "compliantPct": 45.71
+   "belowCPct": 54.24,
+   "urgentPct": 18.6,
+   "compliantPct": 45.76
   },
   {
    "council": "Swansea",
    "code": "W06000011",
    "region": "Wales",
-   "total": 79662,
+   "total": 79766,
    "bandCounts": {
-    "A": 846,
-    "B": 7801,
-    "C": 27777,
-    "D": 30489,
-    "E": 10343,
-    "F": 1941,
-    "G": 465
+    "A": 853,
+    "B": 7798,
+    "C": 27885,
+    "D": 30498,
+    "E": 10319,
+    "F": 1944,
+    "G": 469
    },
-   "belowCPct": 54.28,
-   "urgentPct": 16.0,
-   "compliantPct": 45.72
+   "belowCPct": 54.2,
+   "urgentPct": 15.96,
+   "compliantPct": 45.8
   },
   {
    "council": "Melton",
    "code": "E07000133",
    "region": "East Midlands",
-   "total": 18735,
+   "total": 18763,
    "bandCounts": {
-    "A": 247,
-    "B": 3433,
-    "C": 4906,
-    "D": 6495,
-    "E": 2844,
-    "F": 627,
-    "G": 183
+    "A": 251,
+    "B": 3432,
+    "C": 4924,
+    "D": 6503,
+    "E": 2843,
+    "F": 628,
+    "G": 182
    },
-   "belowCPct": 54.17,
-   "urgentPct": 19.5,
-   "compliantPct": 45.83
+   "belowCPct": 54.13,
+   "urgentPct": 19.47,
+   "compliantPct": 45.87
   },
   {
    "council": "Epping Forest",
    "code": "E07000072",
    "region": "East of England",
-   "total": 40407,
+   "total": 40466,
    "bandCounts": {
-    "A": 171,
+    "A": 172,
     "B": 4229,
-    "C": 14126,
-    "D": 15366,
-    "E": 5293,
-    "F": 992,
-    "G": 230
+    "C": 14180,
+    "D": 15382,
+    "E": 5287,
+    "F": 987,
+    "G": 229
    },
-   "belowCPct": 54.15,
-   "urgentPct": 16.12,
-   "compliantPct": 45.85
+   "belowCPct": 54.08,
+   "urgentPct": 16.07,
+   "compliantPct": 45.92
   },
   {
    "council": "Sefton",
    "code": "E08000014",
    "region": "North West",
-   "total": 96613,
+   "total": 96756,
    "bandCounts": {
-    "A": 493,
-    "B": 9192,
-    "C": 34624,
-    "D": 36748,
-    "E": 12420,
-    "F": 2367,
-    "G": 769
+    "A": 497,
+    "B": 9206,
+    "C": 34786,
+    "D": 36764,
+    "E": 12368,
+    "F": 2368,
+    "G": 767
    },
-   "belowCPct": 54.14,
-   "urgentPct": 16.1,
-   "compliantPct": 45.86
+   "belowCPct": 54.02,
+   "urgentPct": 16.02,
+   "compliantPct": 45.98
   },
   {
    "council": "Gedling",
    "code": "E07000173",
    "region": "East Midlands",
-   "total": 39480,
+   "total": 39561,
    "bandCounts": {
-    "A": 430,
-    "B": 4979,
-    "C": 12752,
-    "D": 14870,
-    "E": 5373,
-    "F": 966,
+    "A": 435,
+    "B": 5007,
+    "C": 12788,
+    "D": 14899,
+    "E": 5357,
+    "F": 965,
     "G": 110
    },
-   "belowCPct": 54.0,
-   "urgentPct": 16.33,
-   "compliantPct": 46.0
+   "belowCPct": 53.92,
+   "urgentPct": 16.26,
+   "compliantPct": 46.08
   },
   {
    "council": "East Riding of Yorkshire",
    "code": "E06000011",
    "region": "Yorkshire and The Humber",
-   "total": 122753,
+   "total": 122991,
    "bandCounts": {
-    "A": 1486,
-    "B": 18431,
-    "C": 36563,
-    "D": 46260,
-    "E": 15328,
-    "F": 3569,
-    "G": 1116
+    "A": 1514,
+    "B": 18477,
+    "C": 36753,
+    "D": 46287,
+    "E": 15287,
+    "F": 3565,
+    "G": 1108
    },
-   "belowCPct": 53.99,
-   "urgentPct": 16.3,
-   "compliantPct": 46.01
+   "belowCPct": 53.86,
+   "urgentPct": 16.23,
+   "compliantPct": 46.14
   },
   {
    "council": "Maldon",
    "code": "E07000074",
    "region": "East of England",
-   "total": 21859,
+   "total": 21926,
    "bandCounts": {
-    "A": 434,
-    "B": 3977,
-    "C": 5657,
-    "D": 7251,
-    "E": 3249,
-    "F": 1043,
+    "A": 447,
+    "B": 4007,
+    "C": 5678,
+    "D": 7247,
+    "E": 3254,
+    "F": 1045,
     "G": 248
    },
-   "belowCPct": 53.94,
-   "urgentPct": 20.77,
-   "compliantPct": 46.06
+   "belowCPct": 53.79,
+   "urgentPct": 20.74,
+   "compliantPct": 46.21
   },
   {
    "council": "Rochford",
    "code": "E07000075",
    "region": "East of England",
-   "total": 25719,
+   "total": 25775,
    "bandCounts": {
-    "A": 323,
-    "B": 4065,
-    "C": 7479,
-    "D": 9605,
-    "E": 3463,
-    "F": 658,
-    "G": 126
+    "A": 328,
+    "B": 4082,
+    "C": 7502,
+    "D": 9618,
+    "E": 3462,
+    "F": 656,
+    "G": 127
    },
-   "belowCPct": 53.86,
-   "urgentPct": 16.51,
-   "compliantPct": 46.14
-  },
-  {
-   "council": "Blackburn with Darwen",
-   "code": "E06000008",
-   "region": "North West",
-   "total": 50304,
-   "bandCounts": {
-    "A": 568,
-    "B": 5587,
-    "C": 17078,
-    "D": 19316,
-    "E": 6240,
-    "F": 1191,
-    "G": 324
-   },
-   "belowCPct": 53.81,
-   "urgentPct": 15.42,
-   "compliantPct": 46.19
-  },
-  {
-   "council": "Mid Devon",
-   "code": "E07000042",
-   "region": "South West",
-   "total": 28247,
-   "bandCounts": {
-    "A": 528,
-    "B": 4180,
-    "C": 8350,
-    "D": 8664,
-    "E": 4432,
-    "F": 1577,
-    "G": 516
-   },
-   "belowCPct": 53.77,
-   "urgentPct": 23.1,
-   "compliantPct": 46.23
-  },
-  {
-   "council": "Shropshire",
-   "code": "E06000051",
-   "region": "West Midlands",
-   "total": 109831,
-   "bandCounts": {
-    "A": 1435,
-    "B": 16318,
-    "C": 33048,
-    "D": 35777,
-    "E": 16043,
-    "F": 5157,
-    "G": 2053
-   },
-   "belowCPct": 53.75,
-   "urgentPct": 21.17,
-   "compliantPct": 46.25
+   "belowCPct": 53.78,
+   "urgentPct": 16.47,
+   "compliantPct": 46.22
   },
   {
    "council": "Amber Valley",
    "code": "E07000032",
    "region": "East Midlands",
-   "total": 43709,
+   "total": 43782,
    "bandCounts": {
-    "A": 728,
-    "B": 6249,
-    "C": 13241,
-    "D": 16598,
-    "E": 5474,
-    "F": 1145,
-    "G": 274
+    "A": 735,
+    "B": 6252,
+    "C": 13279,
+    "D": 16622,
+    "E": 5465,
+    "F": 1151,
+    "G": 278
    },
-   "belowCPct": 53.74,
-   "urgentPct": 15.77,
-   "compliantPct": 46.26
+   "belowCPct": 53.71,
+   "urgentPct": 15.75,
+   "compliantPct": 46.29
+  },
+  {
+   "council": "Mid Devon",
+   "code": "E07000042",
+   "region": "South West",
+   "total": 28298,
+   "bandCounts": {
+    "A": 538,
+    "B": 4194,
+    "C": 8377,
+    "D": 8669,
+    "E": 4431,
+    "F": 1576,
+    "G": 513
+   },
+   "belowCPct": 53.68,
+   "urgentPct": 23.04,
+   "compliantPct": 46.32
+  },
+  {
+   "council": "Shropshire",
+   "code": "E06000051",
+   "region": "West Midlands",
+   "total": 110002,
+   "bandCounts": {
+    "A": 1452,
+    "B": 16345,
+    "C": 33164,
+    "D": 35806,
+    "E": 16033,
+    "F": 5151,
+    "G": 2051
+   },
+   "belowCPct": 53.67,
+   "urgentPct": 21.12,
+   "compliantPct": 46.33
+  },
+  {
+   "council": "Blackburn with Darwen",
+   "code": "E06000008",
+   "region": "North West",
+   "total": 50419,
+   "bandCounts": {
+    "A": 595,
+    "B": 5600,
+    "C": 17182,
+    "D": 19311,
+    "E": 6220,
+    "F": 1191,
+    "G": 320
+   },
+   "belowCPct": 53.63,
+   "urgentPct": 15.33,
+   "compliantPct": 46.37
   },
   {
    "council": "South Staffordshire",
    "code": "E07000196",
    "region": "West Midlands",
-   "total": 31573,
+   "total": 31620,
    "bandCounts": {
     "A": 258,
-    "B": 4142,
-    "C": 10270,
-    "D": 12036,
-    "E": 3796,
-    "F": 843,
+    "B": 4144,
+    "C": 10310,
+    "D": 12048,
+    "E": 3786,
+    "F": 846,
     "G": 228
    },
-   "belowCPct": 53.54,
-   "urgentPct": 15.42,
-   "compliantPct": 46.46
+   "belowCPct": 53.47,
+   "urgentPct": 15.37,
+   "compliantPct": 46.53
   },
   {
    "council": "Hastings",
    "code": "E07000062",
    "region": "South East",
-   "total": 36373,
+   "total": 36412,
    "bandCounts": {
-    "A": 153,
-    "B": 2658,
-    "C": 14092,
-    "D": 14262,
-    "E": 4387,
-    "F": 623,
-    "G": 198
+    "A": 154,
+    "B": 2660,
+    "C": 14133,
+    "D": 14255,
+    "E": 4391,
+    "F": 620,
+    "G": 199
    },
-   "belowCPct": 53.53,
-   "urgentPct": 14.32,
-   "compliantPct": 46.47
+   "belowCPct": 53.46,
+   "urgentPct": 14.31,
+   "compliantPct": 46.54
   },
   {
    "council": "Stroud",
    "code": "E07000082",
    "region": "South West",
-   "total": 41009,
+   "total": 41061,
    "bandCounts": {
-    "A": 563,
-    "B": 7157,
-    "C": 11377,
-    "D": 13986,
-    "E": 6072,
-    "F": 1477,
-    "G": 377
+    "A": 575,
+    "B": 7153,
+    "C": 11403,
+    "D": 14004,
+    "E": 6071,
+    "F": 1479,
+    "G": 376
    },
-   "belowCPct": 53.43,
-   "urgentPct": 19.33,
-   "compliantPct": 46.57
-  },
-  {
-   "council": "Thanet",
-   "code": "E07000114",
-   "region": "South East",
-   "total": 56370,
-   "bandCounts": {
-    "A": 489,
-    "B": 5739,
-    "C": 20051,
-    "D": 21906,
-    "E": 6819,
-    "F": 1044,
-    "G": 322
-   },
-   "belowCPct": 53.38,
-   "urgentPct": 14.52,
-   "compliantPct": 46.62
+   "belowCPct": 53.41,
+   "urgentPct": 19.3,
+   "compliantPct": 46.59
   },
   {
    "council": "Ribble Valley",
    "code": "E07000124",
    "region": "North West",
-   "total": 21353,
+   "total": 21381,
    "bandCounts": {
-    "A": 234,
-    "B": 4865,
-    "C": 4868,
-    "D": 7587,
-    "E": 2871,
-    "F": 740,
-    "G": 188
+    "A": 235,
+    "B": 4867,
+    "C": 4888,
+    "D": 7592,
+    "E": 2870,
+    "F": 739,
+    "G": 190
    },
-   "belowCPct": 53.32,
-   "urgentPct": 17.79,
-   "compliantPct": 46.68
+   "belowCPct": 53.28,
+   "urgentPct": 17.77,
+   "compliantPct": 46.72
   },
   {
-   "council": "Redcar and Cleveland",
-   "code": "E06000003",
-   "region": "North East",
-   "total": 47787,
+   "council": "Thanet",
+   "code": "E07000114",
+   "region": "South East",
+   "total": 56443,
    "bandCounts": {
-    "A": 457,
-    "B": 5897,
-    "C": 15975,
-    "D": 18682,
-    "E": 5549,
-    "F": 948,
-    "G": 279
+    "A": 497,
+    "B": 5757,
+    "C": 20157,
+    "D": 21862,
+    "E": 6808,
+    "F": 1042,
+    "G": 320
    },
-   "belowCPct": 53.27,
-   "urgentPct": 14.18,
-   "compliantPct": 46.73
+   "belowCPct": 53.21,
+   "urgentPct": 14.47,
+   "compliantPct": 46.79
   },
   {
    "council": "South Holland",
    "code": "E07000140",
    "region": "East Midlands",
-   "total": 34935,
+   "total": 34969,
    "bandCounts": {
-    "A": 669,
-    "B": 6083,
-    "C": 9589,
-    "D": 12877,
-    "E": 4311,
-    "F": 1088,
-    "G": 318
+    "A": 674,
+    "B": 6085,
+    "C": 9626,
+    "D": 12878,
+    "E": 4302,
+    "F": 1085,
+    "G": 319
    },
-   "belowCPct": 53.22,
-   "urgentPct": 16.36,
-   "compliantPct": 46.78
+   "belowCPct": 53.14,
+   "urgentPct": 16.32,
+   "compliantPct": 46.86
   },
   {
    "council": "Lewes",
    "code": "E07000063",
    "region": "South East",
-   "total": 34783,
+   "total": 34833,
    "bandCounts": {
-    "A": 329,
-    "B": 4136,
-    "C": 11818,
-    "D": 13146,
-    "E": 4306,
-    "F": 839,
-    "G": 209
+    "A": 340,
+    "B": 4144,
+    "C": 11851,
+    "D": 13151,
+    "E": 4303,
+    "F": 837,
+    "G": 207
    },
-   "belowCPct": 53.19,
-   "urgentPct": 15.39,
-   "compliantPct": 46.81
+   "belowCPct": 53.1,
+   "urgentPct": 15.35,
+   "compliantPct": 46.9
+  },
+  {
+   "council": "Redcar and Cleveland",
+   "code": "E06000003",
+   "region": "North East",
+   "total": 47875,
+   "bandCounts": {
+    "A": 468,
+    "B": 5906,
+    "C": 16079,
+    "D": 18667,
+    "E": 5534,
+    "F": 943,
+    "G": 278
+   },
+   "belowCPct": 53.1,
+   "urgentPct": 14.11,
+   "compliantPct": 46.9
   },
   {
    "council": "East Suffolk",
    "code": "E07000244",
    "region": "East of England",
-   "total": 89569,
+   "total": 89706,
    "bandCounts": {
-    "A": 658,
-    "B": 10650,
-    "C": 30649,
-    "D": 32208,
+    "A": 661,
+    "B": 10676,
+    "C": 30760,
+    "D": 32216,
     "E": 11731,
-    "F": 2876,
-    "G": 797
+    "F": 2871,
+    "G": 791
    },
-   "belowCPct": 53.16,
-   "urgentPct": 17.2,
-   "compliantPct": 46.84
+   "belowCPct": 53.07,
+   "urgentPct": 17.16,
+   "compliantPct": 46.93
   },
   {
    "council": "Kingston upon Thames",
    "code": "E09000021",
    "region": "London",
-   "total": 54167,
+   "total": 54205,
    "bandCounts": {
     "A": 104,
-    "B": 5825,
-    "C": 19490,
-    "D": 20282,
-    "E": 7144,
-    "F": 1074,
-    "G": 248
+    "B": 5820,
+    "C": 19560,
+    "D": 20271,
+    "E": 7132,
+    "F": 1071,
+    "G": 247
    },
-   "belowCPct": 53.07,
-   "urgentPct": 15.63,
-   "compliantPct": 46.93
-  },
-  {
-   "council": "North East Derbyshire",
-   "code": "E07000038",
-   "region": "East Midlands",
-   "total": 35040,
-   "bandCounts": {
-    "A": 357,
-    "B": 5352,
-    "C": 10773,
-    "D": 14231,
-    "E": 3475,
-    "F": 683,
-    "G": 169
-   },
-   "belowCPct": 52.96,
-   "urgentPct": 12.35,
-   "compliantPct": 47.04
+   "belowCPct": 52.99,
+   "urgentPct": 15.59,
+   "compliantPct": 47.01
   },
   {
    "council": "Brentwood",
    "code": "E07000068",
    "region": "East of England",
-   "total": 26125,
+   "total": 26152,
    "bandCounts": {
     "A": 91,
-    "B": 2738,
-    "C": 9464,
-    "D": 10065,
-    "E": 3155,
+    "B": 2740,
+    "C": 9488,
+    "D": 10072,
+    "E": 3150,
     "F": 511,
-    "G": 101
+    "G": 100
    },
-   "belowCPct": 52.95,
-   "urgentPct": 14.42,
-   "compliantPct": 47.05
+   "belowCPct": 52.89,
+   "urgentPct": 14.38,
+   "compliantPct": 47.11
   },
   {
-   "council": "Waverley",
-   "code": "E07000216",
-   "region": "South East",
-   "total": 42867,
+   "council": "North East Derbyshire",
+   "code": "E07000038",
+   "region": "East Midlands",
+   "total": 35078,
    "bandCounts": {
-    "A": 466,
-    "B": 5884,
-    "C": 13859,
-    "D": 15564,
-    "E": 5657,
-    "F": 1197,
-    "G": 240
+    "A": 363,
+    "B": 5349,
+    "C": 10820,
+    "D": 14230,
+    "E": 3465,
+    "F": 680,
+    "G": 171
    },
-   "belowCPct": 52.86,
-   "urgentPct": 16.55,
-   "compliantPct": 47.14
-  },
-  {
-   "council": "Bath and North East Somerset",
-   "code": "E06000022",
-   "region": "South West",
-   "total": 64610,
-   "bandCounts": {
-    "A": 371,
-    "B": 8545,
-    "C": 21545,
-    "D": 23394,
-    "E": 8624,
-    "F": 1706,
-    "G": 425
-   },
-   "belowCPct": 52.85,
-   "urgentPct": 16.65,
-   "compliantPct": 47.15
+   "belowCPct": 52.87,
+   "urgentPct": 12.3,
+   "compliantPct": 47.13
   },
   {
    "council": "Wrexham",
    "code": "W06000006",
    "region": "Wales",
-   "total": 42585,
+   "total": 42650,
    "bandCounts": {
-    "A": 478,
-    "B": 3680,
-    "C": 15923,
-    "D": 16233,
-    "E": 4730,
-    "F": 1119,
-    "G": 422
+    "A": 485,
+    "B": 3675,
+    "C": 15946,
+    "D": 16284,
+    "E": 4722,
+    "F": 1118,
+    "G": 420
    },
-   "belowCPct": 52.84,
-   "urgentPct": 14.73,
-   "compliantPct": 47.16
+   "belowCPct": 52.86,
+   "urgentPct": 14.68,
+   "compliantPct": 47.14
+  },
+  {
+   "council": "Waverley",
+   "code": "E07000216",
+   "region": "South East",
+   "total": 42944,
+   "bandCounts": {
+    "A": 469,
+    "B": 5885,
+    "C": 13913,
+    "D": 15572,
+    "E": 5663,
+    "F": 1203,
+    "G": 239
+   },
+   "belowCPct": 52.81,
+   "urgentPct": 16.54,
+   "compliantPct": 47.19
+  },
+  {
+   "council": "Bath and North East Somerset",
+   "code": "E06000022",
+   "region": "South West",
+   "total": 64700,
+   "bandCounts": {
+    "A": 375,
+    "B": 8527,
+    "C": 21650,
+    "D": 23403,
+    "E": 8626,
+    "F": 1701,
+    "G": 418
+   },
+   "belowCPct": 52.78,
+   "urgentPct": 16.61,
+   "compliantPct": 47.22
   },
   {
    "council": "Great Yarmouth",
    "code": "E07000145",
    "region": "East of England",
-   "total": 36128,
+   "total": 36169,
    "bandCounts": {
-    "A": 195,
-    "B": 3437,
-    "C": 13412,
-    "D": 12341,
+    "A": 197,
+    "B": 3440,
+    "C": 13443,
+    "D": 12350,
     "E": 4704,
-    "F": 1503,
-    "G": 536
+    "F": 1498,
+    "G": 537
    },
-   "belowCPct": 52.82,
-   "urgentPct": 18.66,
-   "compliantPct": 47.18
+   "belowCPct": 52.78,
+   "urgentPct": 18.63,
+   "compliantPct": 47.22
   },
   {
    "council": "Tunbridge Wells",
    "code": "E07000116",
    "region": "South East",
-   "total": 40603,
+   "total": 40669,
    "bandCounts": {
-    "A": 298,
-    "B": 5889,
-    "C": 13000,
-    "D": 14215,
-    "E": 5678,
-    "F": 1220,
-    "G": 303
+    "A": 310,
+    "B": 5921,
+    "C": 13050,
+    "D": 14201,
+    "E": 5665,
+    "F": 1217,
+    "G": 305
    },
-   "belowCPct": 52.74,
-   "urgentPct": 17.74,
-   "compliantPct": 47.26
+   "belowCPct": 52.59,
+   "urgentPct": 17.67,
+   "compliantPct": 47.41
   },
   {
    "council": "Broadland",
    "code": "E07000144",
    "region": "East of England",
-   "total": 43811,
+   "total": 43880,
    "bandCounts": {
-    "A": 936,
-    "B": 7738,
-    "C": 12064,
-    "D": 16648,
-    "E": 5119,
-    "F": 1086,
-    "G": 220
+    "A": 947,
+    "B": 7757,
+    "C": 12106,
+    "D": 16652,
+    "E": 5109,
+    "F": 1091,
+    "G": 218
    },
-   "belowCPct": 52.66,
-   "urgentPct": 14.67,
-   "compliantPct": 47.34
+   "belowCPct": 52.58,
+   "urgentPct": 14.63,
+   "compliantPct": 47.42
   },
   {
    "council": "Dorset",
    "code": "E06000059",
    "region": "South West",
-   "total": 135729,
+   "total": 135924,
    "bandCounts": {
-    "A": 1171,
-    "B": 18373,
-    "C": 44818,
-    "D": 47427,
-    "E": 18037,
-    "F": 4572,
-    "G": 1331
+    "A": 1180,
+    "B": 18378,
+    "C": 44948,
+    "D": 47476,
+    "E": 18054,
+    "F": 4558,
+    "G": 1330
    },
-   "belowCPct": 52.58,
-   "urgentPct": 17.64,
-   "compliantPct": 47.42
+   "belowCPct": 52.54,
+   "urgentPct": 17.61,
+   "compliantPct": 47.46
   },
   {
    "council": "Wealden",
    "code": "E07000065",
    "region": "South East",
-   "total": 55276,
+   "total": 55429,
    "bandCounts": {
-    "A": 690,
-    "B": 9950,
-    "C": 15584,
-    "D": 19133,
-    "E": 7383,
-    "F": 1999,
-    "G": 537
+    "A": 703,
+    "B": 9984,
+    "C": 15662,
+    "D": 19160,
+    "E": 7389,
+    "F": 1993,
+    "G": 538
    },
-   "belowCPct": 52.56,
-   "urgentPct": 17.94,
-   "compliantPct": 47.44
+   "belowCPct": 52.46,
+   "urgentPct": 17.9,
+   "compliantPct": 47.54
   },
   {
    "council": "Luton",
    "code": "E06000032",
    "region": "East of England",
-   "total": 63500,
+   "total": 63581,
    "bandCounts": {
-    "A": 128,
-    "B": 5621,
-    "C": 24409,
-    "D": 25025,
-    "E": 7391,
-    "F": 776,
-    "G": 150
+    "A": 127,
+    "B": 5619,
+    "C": 24537,
+    "D": 25020,
+    "E": 7357,
+    "F": 772,
+    "G": 149
    },
-   "belowCPct": 52.51,
-   "urgentPct": 13.1,
-   "compliantPct": 47.49
-  },
-  {
-   "council": "Darlington",
-   "code": "E06000005",
-   "region": "North East",
-   "total": 40022,
-   "bandCounts": {
-    "A": 463,
-    "B": 5521,
-    "C": 13072,
-    "D": 14926,
-    "E": 5015,
-    "F": 840,
-    "G": 185
-   },
-   "belowCPct": 52.39,
-   "urgentPct": 15.09,
-   "compliantPct": 47.61
+   "belowCPct": 52.37,
+   "urgentPct": 13.02,
+   "compliantPct": 47.63
   },
   {
    "council": "Rutland",
    "code": "E06000017",
    "region": "East Midlands",
-   "total": 13324,
+   "total": 13335,
    "bandCounts": {
-    "A": 87,
-    "B": 2210,
-    "C": 4060,
-    "D": 4607,
-    "E": 1759,
-    "F": 475,
-    "G": 126
+    "A": 90,
+    "B": 2209,
+    "C": 4066,
+    "D": 4615,
+    "E": 1757,
+    "F": 476,
+    "G": 122
    },
-   "belowCPct": 52.29,
-   "urgentPct": 17.71,
-   "compliantPct": 47.71
+   "belowCPct": 52.27,
+   "urgentPct": 17.66,
+   "compliantPct": 47.73
+  },
+  {
+   "council": "Darlington",
+   "code": "E06000005",
+   "region": "North East",
+   "total": 40093,
+   "bandCounts": {
+    "A": 471,
+    "B": 5533,
+    "C": 13138,
+    "D": 14926,
+    "E": 4999,
+    "F": 842,
+    "G": 184
+   },
+   "belowCPct": 52.26,
+   "urgentPct": 15.03,
+   "compliantPct": 47.74
   },
   {
    "council": "Barnsley",
    "code": "E08000016",
    "region": "Yorkshire and The Humber",
-   "total": 85081,
+   "total": 85206,
    "bandCounts": {
-    "A": 638,
-    "B": 10452,
-    "C": 29509,
-    "D": 35310,
-    "E": 7915,
+    "A": 655,
+    "B": 10476,
+    "C": 29612,
+    "D": 35317,
+    "E": 7890,
     "F": 1006,
-    "G": 251
-   },
-   "belowCPct": 52.28,
-   "urgentPct": 10.78,
-   "compliantPct": 47.72
-  },
-  {
-   "council": "Neath Port Talbot",
-   "code": "W06000012",
-   "region": "Wales",
-   "total": 45787,
-   "bandCounts": {
-    "A": 1127,
-    "B": 4649,
-    "C": 16107,
-    "D": 16520,
-    "E": 5780,
-    "F": 1277,
-    "G": 327
-   },
-   "belowCPct": 52.21,
-   "urgentPct": 16.13,
-   "compliantPct": 47.79
-  },
-  {
-   "council": "Solihull",
-   "code": "E08000029",
-   "region": "West Midlands",
-   "total": 67335,
-   "bandCounts": {
-    "A": 260,
-    "B": 7740,
-    "C": 24199,
-    "D": 26345,
-    "E": 7407,
-    "F": 1133,
-    "G": 251
+    "G": 250
    },
    "belowCPct": 52.18,
-   "urgentPct": 13.06,
+   "urgentPct": 10.73,
    "compliantPct": 47.82
   },
   {
    "council": "Blaby",
    "code": "E07000129",
    "region": "East Midlands",
-   "total": 30912,
+   "total": 30975,
    "bandCounts": {
-    "A": 220,
+    "A": 229,
     "B": 5472,
-    "C": 9093,
-    "D": 12225,
-    "E": 3267,
-    "F": 528,
-    "G": 107
+    "C": 9129,
+    "D": 12252,
+    "E": 3259,
+    "F": 526,
+    "G": 108
    },
-   "belowCPct": 52.17,
-   "urgentPct": 12.62,
-   "compliantPct": 47.83
+   "belowCPct": 52.12,
+   "urgentPct": 12.57,
+   "compliantPct": 47.88
+  },
+  {
+   "council": "Neath Port Talbot",
+   "code": "W06000012",
+   "region": "Wales",
+   "total": 45840,
+   "bandCounts": {
+    "A": 1151,
+    "B": 4730,
+    "C": 16077,
+    "D": 16528,
+    "E": 5756,
+    "F": 1276,
+    "G": 322
+   },
+   "belowCPct": 52.1,
+   "urgentPct": 16.04,
+   "compliantPct": 47.9
+  },
+  {
+   "council": "Solihull",
+   "code": "E08000029",
+   "region": "West Midlands",
+   "total": 67435,
+   "bandCounts": {
+    "A": 260,
+    "B": 7747,
+    "C": 24306,
+    "D": 26344,
+    "E": 7395,
+    "F": 1134,
+    "G": 249
+   },
+   "belowCPct": 52.08,
+   "urgentPct": 13.02,
+   "compliantPct": 47.92
   },
   {
    "council": "Oldham",
    "code": "E08000004",
    "region": "North West",
-   "total": 72803,
+   "total": 72938,
    "bandCounts": {
-    "A": 432,
-    "B": 6054,
-    "C": 28386,
-    "D": 28746,
-    "E": 7761,
-    "F": 1145,
-    "G": 279
+    "A": 438,
+    "B": 6079,
+    "C": 28510,
+    "D": 28765,
+    "E": 7723,
+    "F": 1147,
+    "G": 276
    },
-   "belowCPct": 52.1,
-   "urgentPct": 12.62,
-   "compliantPct": 47.9
-  },
-  {
-   "council": "Brighton and Hove",
-   "code": "E06000043",
-   "region": "South East",
-   "total": 106893,
-   "bandCounts": {
-    "A": 283,
-    "B": 8359,
-    "C": 42641,
-    "D": 41290,
-    "E": 12457,
-    "F": 1467,
-    "G": 396
-   },
-   "belowCPct": 52.02,
-   "urgentPct": 13.4,
-   "compliantPct": 47.98
+   "belowCPct": 51.98,
+   "urgentPct": 12.54,
+   "compliantPct": 48.02
   },
   {
    "council": "York",
    "code": "E06000014",
    "region": "Yorkshire and The Humber",
-   "total": 65883,
+   "total": 65959,
    "bandCounts": {
-    "A": 601,
-    "B": 6503,
-    "C": 24506,
-    "D": 27649,
-    "E": 5638,
+    "A": 605,
+    "B": 6514,
+    "C": 24578,
+    "D": 27654,
+    "E": 5622,
     "F": 789,
     "G": 197
    },
-   "belowCPct": 52.02,
-   "urgentPct": 10.05,
-   "compliantPct": 47.98
+   "belowCPct": 51.94,
+   "urgentPct": 10.02,
+   "compliantPct": 48.06
+  },
+  {
+   "council": "Brighton and Hove",
+   "code": "E06000043",
+   "region": "South East",
+   "total": 107067,
+   "bandCounts": {
+    "A": 284,
+    "B": 8369,
+    "C": 42832,
+    "D": 41291,
+    "E": 12432,
+    "F": 1468,
+    "G": 391
+   },
+   "belowCPct": 51.91,
+   "urgentPct": 13.35,
+   "compliantPct": 48.09
   },
   {
    "council": "Breckland",
    "code": "E07000143",
    "region": "East of England",
-   "total": 49682,
+   "total": 49765,
    "bandCounts": {
-    "A": 1199,
-    "B": 7764,
-    "C": 14924,
-    "D": 16605,
-    "E": 7147,
-    "F": 1688,
-    "G": 355
+    "A": 1219,
+    "B": 7787,
+    "C": 14972,
+    "D": 16618,
+    "E": 7129,
+    "F": 1686,
+    "G": 354
    },
-   "belowCPct": 51.92,
-   "urgentPct": 18.5,
-   "compliantPct": 48.08
+   "belowCPct": 51.82,
+   "urgentPct": 18.42,
+   "compliantPct": 48.18
   },
   {
    "council": "Cannock Chase",
    "code": "E07000192",
    "region": "West Midlands",
-   "total": 33245,
+   "total": 33282,
    "bandCounts": {
-    "A": 181,
-    "B": 4678,
-    "C": 11152,
-    "D": 13412,
-    "E": 3294,
-    "F": 438,
-    "G": 90
+    "A": 182,
+    "B": 4668,
+    "C": 11200,
+    "D": 13413,
+    "E": 3295,
+    "F": 435,
+    "G": 89
    },
-   "belowCPct": 51.84,
-   "urgentPct": 11.5,
-   "compliantPct": 48.16
-  },
-  {
-   "council": "Mansfield",
-   "code": "E07000174",
-   "region": "East Midlands",
-   "total": 38529,
-   "bandCounts": {
-    "A": 291,
-    "B": 3978,
-    "C": 14296,
-    "D": 15731,
-    "E": 3673,
-    "F": 484,
-    "G": 76
-   },
-   "belowCPct": 51.82,
-   "urgentPct": 10.99,
-   "compliantPct": 48.18
+   "belowCPct": 51.78,
+   "urgentPct": 11.47,
+   "compliantPct": 48.22
   },
   {
    "council": "Babergh",
    "code": "E07000200",
    "region": "East of England",
-   "total": 31902,
+   "total": 31971,
    "bandCounts": {
-    "A": 403,
-    "B": 5581,
-    "C": 9394,
-    "D": 10236,
-    "E": 4651,
-    "F": 1355,
-    "G": 282
+    "A": 405,
+    "B": 5607,
+    "C": 9416,
+    "D": 10242,
+    "E": 4665,
+    "F": 1350,
+    "G": 286
    },
-   "belowCPct": 51.8,
+   "belowCPct": 51.74,
    "urgentPct": 19.71,
-   "compliantPct": 48.2
+   "compliantPct": 48.26
+  },
+  {
+   "council": "Mansfield",
+   "code": "E07000174",
+   "region": "East Midlands",
+   "total": 38590,
+   "bandCounts": {
+    "A": 295,
+    "B": 3989,
+    "C": 14365,
+    "D": 15725,
+    "E": 3660,
+    "F": 482,
+    "G": 74
+   },
+   "belowCPct": 51.67,
+   "urgentPct": 10.93,
+   "compliantPct": 48.33
   },
   {
    "council": "Spelthorne",
    "code": "E07000213",
    "region": "South East",
-   "total": 33308,
+   "total": 33382,
    "bandCounts": {
     "A": 101,
-    "B": 3512,
-    "C": 12515,
-    "D": 12754,
-    "E": 3749,
-    "F": 554,
+    "B": 3515,
+    "C": 12592,
+    "D": 12762,
+    "E": 3737,
+    "F": 552,
     "G": 123
    },
-   "belowCPct": 51.58,
-   "urgentPct": 13.29,
-   "compliantPct": 48.42
+   "belowCPct": 51.45,
+   "urgentPct": 13.22,
+   "compliantPct": 48.55
   },
   {
    "council": "Caerphilly",
    "code": "W06000018",
    "region": "Wales",
-   "total": 55351,
+   "total": 55431,
    "bandCounts": {
-    "A": 596,
-    "B": 4345,
-    "C": 21899,
-    "D": 21433,
-    "E": 5943,
-    "F": 940,
-    "G": 195
+    "A": 601,
+    "B": 4344,
+    "C": 22008,
+    "D": 21426,
+    "E": 5921,
+    "F": 937,
+    "G": 194
    },
-   "belowCPct": 51.51,
-   "urgentPct": 12.79,
-   "compliantPct": 48.49
+   "belowCPct": 51.38,
+   "urgentPct": 12.72,
+   "compliantPct": 48.62
   },
   {
    "council": "Croydon",
    "code": "E09000008",
    "region": "London",
-   "total": 127015,
+   "total": 127215,
    "bandCounts": {
-    "A": 402,
-    "B": 17862,
-    "C": 43335,
-    "D": 48237,
-    "E": 14910,
-    "F": 1849,
-    "G": 420
+    "A": 417,
+    "B": 17845,
+    "C": 43620,
+    "D": 48231,
+    "E": 14834,
+    "F": 1846,
+    "G": 422
    },
-   "belowCPct": 51.5,
-   "urgentPct": 13.53,
-   "compliantPct": 48.5
+   "belowCPct": 51.36,
+   "urgentPct": 13.44,
+   "compliantPct": 48.64
   },
   {
    "council": "Harrow",
    "code": "E09000015",
    "region": "London",
-   "total": 70821,
+   "total": 70887,
    "bandCounts": {
-    "A": 186,
-    "B": 9569,
-    "C": 24633,
-    "D": 27333,
-    "E": 7810,
-    "F": 1067,
+    "A": 185,
+    "B": 9570,
+    "C": 24742,
+    "D": 27321,
+    "E": 7777,
+    "F": 1069,
     "G": 223
    },
-   "belowCPct": 51.44,
-   "urgentPct": 12.85,
-   "compliantPct": 48.56
+   "belowCPct": 51.34,
+   "urgentPct": 12.79,
+   "compliantPct": 48.66
   },
   {
    "council": "Sutton",
    "code": "E09000029",
    "region": "London",
-   "total": 63840,
+   "total": 63955,
    "bandCounts": {
-    "A": 208,
-    "B": 6174,
-    "C": 24631,
-    "D": 23276,
-    "E": 8136,
-    "F": 1187,
-    "G": 228
+    "A": 216,
+    "B": 6199,
+    "C": 24705,
+    "D": 23298,
+    "E": 8121,
+    "F": 1185,
+    "G": 231
    },
-   "belowCPct": 51.42,
-   "urgentPct": 14.96,
-   "compliantPct": 48.58
+   "belowCPct": 51.34,
+   "urgentPct": 14.91,
+   "compliantPct": 48.66
   },
   {
    "council": "Bridgend",
    "code": "W06000013",
    "region": "Wales",
-   "total": 45537,
+   "total": 45645,
    "bandCounts": {
-    "A": 317,
-    "B": 5080,
-    "C": 16746,
-    "D": 17078,
-    "E": 5210,
-    "F": 868,
-    "G": 238
+    "A": 319,
+    "B": 5070,
+    "C": 16835,
+    "D": 17116,
+    "E": 5202,
+    "F": 866,
+    "G": 237
    },
-   "belowCPct": 51.37,
-   "urgentPct": 13.87,
-   "compliantPct": 48.63
+   "belowCPct": 51.31,
+   "urgentPct": 13.81,
+   "compliantPct": 48.69
   },
   {
    "council": "East Devon",
    "code": "E07000040",
    "region": "South West",
-   "total": 57959,
+   "total": 58017,
    "bandCounts": {
-    "A": 574,
-    "B": 10966,
-    "C": 16705,
-    "D": 19313,
-    "E": 7646,
-    "F": 2080,
-    "G": 675
+    "A": 576,
+    "B": 10963,
+    "C": 16754,
+    "D": 19325,
+    "E": 7639,
+    "F": 2079,
+    "G": 681
    },
-   "belowCPct": 51.27,
-   "urgentPct": 17.95,
-   "compliantPct": 48.73
+   "belowCPct": 51.23,
+   "urgentPct": 17.92,
+   "compliantPct": 48.77
   },
   {
    "council": "Hillingdon",
    "code": "E09000017",
    "region": "London",
-   "total": 87977,
+   "total": 88058,
    "bandCounts": {
-    "A": 152,
+    "A": 155,
     "B": 11868,
-    "C": 30871,
-    "D": 34358,
-    "E": 9336,
-    "F": 1060,
-    "G": 332
+    "C": 30974,
+    "D": 34359,
+    "E": 9312,
+    "F": 1056,
+    "G": 334
    },
-   "belowCPct": 51.25,
-   "urgentPct": 12.19,
-   "compliantPct": 48.75
-  },
-  {
-   "council": "Bassetlaw",
-   "code": "E07000171",
-   "region": "East Midlands",
-   "total": 43150,
-   "bandCounts": {
-    "A": 259,
-    "B": 7409,
-    "C": 13385,
-    "D": 15591,
-    "E": 4930,
-    "F": 1236,
-    "G": 340
-   },
-   "belowCPct": 51.21,
-   "urgentPct": 15.08,
-   "compliantPct": 48.79
+   "belowCPct": 51.17,
+   "urgentPct": 12.15,
+   "compliantPct": 48.83
   },
   {
    "council": "West Berkshire",
    "code": "E06000037",
    "region": "South East",
-   "total": 52408,
+   "total": 52462,
    "bandCounts": {
-    "A": 326,
-    "B": 6262,
-    "C": 18999,
-    "D": 18297,
-    "E": 6663,
-    "F": 1526,
+    "A": 327,
+    "B": 6256,
+    "C": 19063,
+    "D": 18299,
+    "E": 6659,
+    "F": 1523,
     "G": 335
    },
-   "belowCPct": 51.18,
-   "urgentPct": 16.26,
-   "compliantPct": 48.82
+   "belowCPct": 51.12,
+   "urgentPct": 16.23,
+   "compliantPct": 48.88
+  },
+  {
+   "council": "Bassetlaw",
+   "code": "E07000171",
+   "region": "East Midlands",
+   "total": 43214,
+   "bandCounts": {
+    "A": 268,
+    "B": 7438,
+    "C": 13444,
+    "D": 15557,
+    "E": 4930,
+    "F": 1235,
+    "G": 342
+   },
+   "belowCPct": 51.06,
+   "urgentPct": 15.06,
+   "compliantPct": 48.94
   },
   {
    "council": "Leeds",
    "code": "E08000035",
    "region": "Yorkshire and The Humber",
-   "total": 283768,
+   "total": 284062,
    "bandCounts": {
-    "A": 1621,
-    "B": 33572,
-    "C": 103643,
-    "D": 107834,
-    "E": 31003,
-    "F": 4617,
-    "G": 1478
+    "A": 1623,
+    "B": 33590,
+    "C": 104047,
+    "D": 107849,
+    "E": 30871,
+    "F": 4608,
+    "G": 1474
    },
-   "belowCPct": 51.07,
-   "urgentPct": 13.07,
-   "compliantPct": 48.93
-  },
-  {
-   "council": "Portsmouth",
-   "code": "E06000044",
-   "region": "South East",
-   "total": 73482,
-   "bandCounts": {
-    "A": 116,
-    "B": 4754,
-    "C": 31128,
-    "D": 29549,
-    "E": 6665,
-    "F": 955,
-    "G": 315
-   },
-   "belowCPct": 51.01,
-   "urgentPct": 10.8,
-   "compliantPct": 48.99
+   "belowCPct": 50.98,
+   "urgentPct": 13.01,
+   "compliantPct": 49.02
   },
   {
    "council": "Arun",
    "code": "E07000224",
    "region": "South East",
-   "total": 61135,
+   "total": 61216,
    "bandCounts": {
-    "A": 705,
-    "B": 9597,
-    "C": 19659,
-    "D": 22625,
-    "E": 7110,
+    "A": 714,
+    "B": 9607,
+    "C": 19721,
+    "D": 22621,
+    "E": 7114,
     "F": 1164,
     "G": 275
    },
-   "belowCPct": 50.99,
-   "urgentPct": 13.98,
-   "compliantPct": 49.01
+   "belowCPct": 50.92,
+   "urgentPct": 13.97,
+   "compliantPct": 49.08
+  },
+  {
+   "council": "Portsmouth",
+   "code": "E06000044",
+   "region": "South East",
+   "total": 73583,
+   "bandCounts": {
+    "A": 124,
+    "B": 4753,
+    "C": 31256,
+    "D": 29537,
+    "E": 6653,
+    "F": 948,
+    "G": 312
+   },
+   "belowCPct": 50.89,
+   "urgentPct": 10.75,
+   "compliantPct": 49.11
   },
   {
    "council": "Sheffield",
    "code": "E08000019",
    "region": "Yorkshire and The Humber",
-   "total": 188452,
+   "total": 188856,
    "bandCounts": {
-    "A": 876,
-    "B": 17902,
-    "C": 73638,
-    "D": 71934,
-    "E": 20511,
-    "F": 2944,
+    "A": 879,
+    "B": 17881,
+    "C": 74039,
+    "D": 72047,
+    "E": 20432,
+    "F": 2931,
     "G": 647
    },
-   "belowCPct": 50.96,
-   "urgentPct": 12.79,
-   "compliantPct": 49.04
+   "belowCPct": 50.86,
+   "urgentPct": 12.71,
+   "compliantPct": 49.14
   },
   {
    "council": "Rotherham",
    "code": "E08000018",
    "region": "Yorkshire and The Humber",
-   "total": 89367,
+   "total": 89596,
    "bandCounts": {
-    "A": 570,
-    "B": 9776,
-    "C": 33500,
-    "D": 35560,
-    "E": 8317,
-    "F": 1346,
-    "G": 298
+    "A": 584,
+    "B": 9794,
+    "C": 33715,
+    "D": 35573,
+    "E": 8290,
+    "F": 1343,
+    "G": 297
    },
-   "belowCPct": 50.94,
-   "urgentPct": 11.15,
-   "compliantPct": 49.06
+   "belowCPct": 50.79,
+   "urgentPct": 11.08,
+   "compliantPct": 49.21
   },
   {
    "council": "Flintshire",
    "code": "W06000005",
    "region": "Wales",
-   "total": 49293,
+   "total": 49364,
    "bandCounts": {
-    "A": 917,
-    "B": 7181,
-    "C": 16119,
-    "D": 17159,
-    "E": 5726,
-    "F": 1611,
-    "G": 580
+    "A": 938,
+    "B": 7203,
+    "C": 16165,
+    "D": 17148,
+    "E": 5713,
+    "F": 1613,
+    "G": 584
    },
-   "belowCPct": 50.87,
-   "urgentPct": 16.06,
-   "compliantPct": 49.13
+   "belowCPct": 50.76,
+   "urgentPct": 16.02,
+   "compliantPct": 49.24
   },
   {
    "council": "Merton",
    "code": "E09000024",
    "region": "London",
-   "total": 68602,
+   "total": 68667,
    "bandCounts": {
-    "A": 297,
-    "B": 6661,
-    "C": 26861,
-    "D": 26630,
-    "E": 6981,
-    "F": 914,
+    "A": 299,
+    "B": 6675,
+    "C": 26982,
+    "D": 26577,
+    "E": 6964,
+    "F": 912,
     "G": 258
    },
-   "belowCPct": 50.7,
-   "urgentPct": 11.88,
-   "compliantPct": 49.3
+   "belowCPct": 50.55,
+   "urgentPct": 11.85,
+   "compliantPct": 49.45
   },
   {
    "council": "Boston",
    "code": "E07000136",
    "region": "East Midlands",
-   "total": 25622,
+   "total": 25641,
    "bandCounts": {
-    "A": 288,
-    "B": 4073,
-    "C": 8284,
-    "D": 8797,
-    "E": 3212,
-    "F": 755,
+    "A": 290,
+    "B": 4090,
+    "C": 8306,
+    "D": 8783,
+    "E": 3206,
+    "F": 753,
     "G": 213
    },
-   "belowCPct": 50.65,
-   "urgentPct": 16.31,
-   "compliantPct": 49.35
-  },
-  {
-   "council": "Three Rivers",
-   "code": "E07000102",
-   "region": "East of England",
-   "total": 27967,
-   "bandCounts": {
-    "A": 107,
-    "B": 3209,
-    "C": 10489,
-    "D": 10024,
-    "E": 3522,
-    "F": 520,
-    "G": 96
-   },
-   "belowCPct": 50.64,
-   "urgentPct": 14.8,
-   "compliantPct": 49.36
+   "belowCPct": 50.52,
+   "urgentPct": 16.27,
+   "compliantPct": 49.48
   },
   {
    "council": "Bolton",
    "code": "E08000001",
    "region": "North West",
-   "total": 92588,
+   "total": 92781,
    "bandCounts": {
-    "A": 431,
-    "B": 8270,
-    "C": 37034,
-    "D": 35919,
-    "E": 9090,
-    "F": 1490,
-    "G": 354
+    "A": 440,
+    "B": 8267,
+    "C": 37210,
+    "D": 35951,
+    "E": 9065,
+    "F": 1492,
+    "G": 356
    },
-   "belowCPct": 50.6,
-   "urgentPct": 11.81,
-   "compliantPct": 49.4
+   "belowCPct": 50.51,
+   "urgentPct": 11.76,
+   "compliantPct": 49.49
   },
   {
    "council": "Cheltenham",
    "code": "E07000078",
    "region": "South West",
-   "total": 43741,
+   "total": 43843,
    "bandCounts": {
-    "A": 395,
-    "B": 4371,
-    "C": 16847,
-    "D": 16438,
-    "E": 4785,
+    "A": 413,
+    "B": 4376,
+    "C": 16907,
+    "D": 16466,
+    "E": 4777,
     "F": 740,
-    "G": 165
+    "G": 164
    },
-   "belowCPct": 50.59,
-   "urgentPct": 13.01,
-   "compliantPct": 49.41
+   "belowCPct": 50.51,
+   "urgentPct": 12.96,
+   "compliantPct": 49.49
   },
   {
-   "council": "Folkestone and Hythe",
-   "code": "E07000112",
-   "region": "South East",
-   "total": 41903,
+   "council": "Three Rivers",
+   "code": "E07000102",
+   "region": "East of England",
+   "total": 28044,
    "bandCounts": {
-    "A": 275,
-    "B": 5251,
-    "C": 15204,
-    "D": 14575,
-    "E": 5207,
-    "F": 1034,
-    "G": 357
-   },
-   "belowCPct": 50.53,
-   "urgentPct": 15.75,
-   "compliantPct": 49.47
-  },
-  {
-   "council": "Newark and Sherwood",
-   "code": "E07000175",
-   "region": "East Midlands",
-   "total": 43862,
-   "bandCounts": {
-    "A": 555,
-    "B": 7138,
-    "C": 14011,
-    "D": 15644,
-    "E": 5122,
-    "F": 1142,
-    "G": 250
-   },
-   "belowCPct": 50.52,
-   "urgentPct": 14.85,
-   "compliantPct": 49.48
-  },
-  {
-   "council": "Dover",
-   "code": "E07000108",
-   "region": "South East",
-   "total": 42524,
-   "bandCounts": {
-    "A": 248,
-    "B": 6305,
-    "C": 14503,
-    "D": 15439,
-    "E": 4653,
-    "F": 1066,
-    "G": 310
+    "A": 108,
+    "B": 3215,
+    "C": 10565,
+    "D": 10033,
+    "E": 3510,
+    "F": 517,
+    "G": 96
    },
    "belowCPct": 50.48,
-   "urgentPct": 14.18,
+   "urgentPct": 14.7,
    "compliantPct": 49.52
   },
   {
    "council": "Elmbridge",
    "code": "E07000207",
    "region": "South East",
-   "total": 45127,
+   "total": 45166,
    "bandCounts": {
-    "A": 140,
+    "A": 142,
     "B": 5768,
-    "C": 16444,
-    "D": 15995,
-    "E": 5664,
-    "F": 948,
+    "C": 16475,
+    "D": 16022,
+    "E": 5646,
+    "F": 945,
     "G": 168
    },
-   "belowCPct": 50.47,
-   "urgentPct": 15.02,
-   "compliantPct": 49.53
+   "belowCPct": 50.44,
+   "urgentPct": 14.96,
+   "compliantPct": 49.56
+  },
+  {
+   "council": "Newark and Sherwood",
+   "code": "E07000175",
+   "region": "East Midlands",
+   "total": 43904,
+   "bandCounts": {
+    "A": 563,
+    "B": 7145,
+    "C": 14050,
+    "D": 15647,
+    "E": 5109,
+    "F": 1140,
+    "G": 250
+   },
+   "belowCPct": 50.44,
+   "urgentPct": 14.8,
+   "compliantPct": 49.56
+  },
+  {
+   "council": "Folkestone and Hythe",
+   "code": "E07000112",
+   "region": "South East",
+   "total": 41944,
+   "bandCounts": {
+    "A": 280,
+    "B": 5267,
+    "C": 15261,
+    "D": 14551,
+    "E": 5194,
+    "F": 1033,
+    "G": 358
+   },
+   "belowCPct": 50.39,
+   "urgentPct": 15.7,
+   "compliantPct": 49.61
+  },
+  {
+   "council": "Dover",
+   "code": "E07000108",
+   "region": "South East",
+   "total": 42604,
+   "bandCounts": {
+    "A": 249,
+    "B": 6336,
+    "C": 14577,
+    "D": 15432,
+    "E": 4634,
+    "F": 1065,
+    "G": 311
+   },
+   "belowCPct": 50.33,
+   "urgentPct": 14.11,
+   "compliantPct": 49.67
   },
   {
    "council": "Nuneaton and Bedworth",
    "code": "E07000219",
    "region": "West Midlands",
-   "total": 45017,
+   "total": 45098,
    "bandCounts": {
-    "A": 758,
-    "B": 8228,
-    "C": 13337,
-    "D": 17164,
-    "E": 4768,
-    "F": 617,
-    "G": 145
+    "A": 767,
+    "B": 8235,
+    "C": 13402,
+    "D": 17177,
+    "E": 4759,
+    "F": 615,
+    "G": 143
    },
-   "belowCPct": 50.41,
-   "urgentPct": 12.28,
-   "compliantPct": 49.59
+   "belowCPct": 50.32,
+   "urgentPct": 12.23,
+   "compliantPct": 49.68
   },
   {
    "council": "Cheshire East",
    "code": "E06000049",
    "region": "North West",
-   "total": 140784,
+   "total": 140945,
    "bandCounts": {
-    "A": 1651,
-    "B": 25907,
-    "C": 42385,
-    "D": 51093,
-    "E": 15387,
-    "F": 3383,
-    "G": 978
+    "A": 1669,
+    "B": 25919,
+    "C": 42529,
+    "D": 51100,
+    "E": 15374,
+    "F": 3382,
+    "G": 972
    },
-   "belowCPct": 50.32,
-   "urgentPct": 14.03,
-   "compliantPct": 49.68
-  },
-  {
-   "council": "Guildford",
-   "code": "E07000209",
-   "region": "South East",
-   "total": 46094,
-   "bandCounts": {
-    "A": 456,
-    "B": 5342,
-    "C": 17130,
-    "D": 16570,
-    "E": 5483,
-    "F": 924,
-    "G": 189
-   },
-   "belowCPct": 50.26,
-   "urgentPct": 14.31,
-   "compliantPct": 49.74
+   "belowCPct": 50.25,
+   "urgentPct": 14.0,
+   "compliantPct": 49.75
   },
   {
    "council": "Somerset",
    "code": "E06000066",
    "region": "South West",
-   "total": 202393,
+   "total": 202634,
    "bandCounts": {
-    "A": 2284,
-    "B": 30682,
-    "C": 67697,
-    "D": 64447,
-    "E": 26915,
+    "A": 2304,
+    "B": 30671,
+    "C": 67911,
+    "D": 64494,
+    "E": 26895,
     "F": 8102,
-    "G": 2266
+    "G": 2257
    },
-   "belowCPct": 50.26,
-   "urgentPct": 18.42,
-   "compliantPct": 49.74
+   "belowCPct": 50.21,
+   "urgentPct": 18.38,
+   "compliantPct": 49.79
   },
   {
    "council": "Worcester",
    "code": "E07000237",
    "region": "West Midlands",
-   "total": 35964,
+   "total": 35999,
    "bandCounts": {
-    "A": 122,
-    "B": 4053,
-    "C": 13712,
-    "D": 13400,
-    "E": 3994,
-    "F": 546,
-    "G": 137
+    "A": 123,
+    "B": 4052,
+    "C": 13776,
+    "D": 13379,
+    "E": 3992,
+    "F": 543,
+    "G": 134
    },
-   "belowCPct": 50.26,
-   "urgentPct": 13.0,
-   "compliantPct": 49.74
+   "belowCPct": 50.13,
+   "urgentPct": 12.97,
+   "compliantPct": 49.87
   },
   {
-   "council": "Waltham Forest",
-   "code": "E09000031",
-   "region": "London",
-   "total": 88572,
+   "council": "Guildford",
+   "code": "E07000209",
+   "region": "South East",
+   "total": 46225,
    "bandCounts": {
-    "A": 129,
-    "B": 11466,
-    "C": 32542,
-    "D": 35084,
-    "E": 8057,
-    "F": 979,
-    "G": 315
+    "A": 458,
+    "B": 5401,
+    "C": 17203,
+    "D": 16582,
+    "E": 5476,
+    "F": 918,
+    "G": 187
    },
-   "belowCPct": 50.17,
-   "urgentPct": 10.56,
-   "compliantPct": 49.83
+   "belowCPct": 50.11,
+   "urgentPct": 14.24,
+   "compliantPct": 49.89
   },
   {
    "council": "Stafford",
    "code": "E07000197",
    "region": "West Midlands",
-   "total": 45939,
+   "total": 46007,
    "bandCounts": {
-    "A": 634,
-    "B": 8196,
-    "C": 14064,
-    "D": 16335,
-    "E": 5140,
-    "F": 1241,
+    "A": 641,
+    "B": 8204,
+    "C": 14129,
+    "D": 16336,
+    "E": 5130,
+    "F": 1238,
     "G": 329
    },
-   "belowCPct": 50.16,
-   "urgentPct": 14.61,
-   "compliantPct": 49.84
+   "belowCPct": 50.06,
+   "urgentPct": 14.56,
+   "compliantPct": 49.94
   },
   {
-   "council": "Wigan",
-   "code": "E08000010",
-   "region": "North West",
-   "total": 106962,
+   "council": "Waltham Forest",
+   "code": "E09000031",
+   "region": "London",
+   "total": 88682,
    "bandCounts": {
-    "A": 734,
-    "B": 14384,
-    "C": 38242,
-    "D": 41810,
-    "E": 9933,
-    "F": 1527,
-    "G": 332
+    "A": 128,
+    "B": 11457,
+    "C": 32716,
+    "D": 35051,
+    "E": 8040,
+    "F": 973,
+    "G": 317
    },
-   "belowCPct": 50.11,
-   "urgentPct": 11.02,
-   "compliantPct": 49.89
-  },
-  {
-   "council": "Bristol, City of",
-   "code": "E06000023",
-   "region": "South West",
-   "total": 161296,
-   "bandCounts": {
-    "A": 968,
-    "B": 18421,
-    "C": 61093,
-    "D": 59863,
-    "E": 17763,
-    "F": 2611,
-    "G": 577
-   },
-   "belowCPct": 50.1,
-   "urgentPct": 12.99,
-   "compliantPct": 49.9
-  },
-  {
-   "council": "Gravesham",
-   "code": "E07000109",
-   "region": "South East",
-   "total": 33376,
-   "bandCounts": {
-    "A": 193,
-    "B": 4132,
-    "C": 12340,
-    "D": 12243,
-    "E": 3751,
-    "F": 584,
-    "G": 133
-   },
-   "belowCPct": 50.07,
-   "urgentPct": 13.39,
-   "compliantPct": 49.93
+   "belowCPct": 50.05,
+   "urgentPct": 10.52,
+   "compliantPct": 49.95
   },
   {
    "council": "Chichester",
    "code": "E07000225",
    "region": "South East",
-   "total": 46071,
+   "total": 46146,
    "bandCounts": {
-    "A": 523,
-    "B": 8255,
-    "C": 14233,
-    "D": 13976,
-    "E": 6554,
-    "F": 1983,
-    "G": 547
+    "A": 530,
+    "B": 8260,
+    "C": 14269,
+    "D": 14010,
+    "E": 6550,
+    "F": 1976,
+    "G": 551
    },
-   "belowCPct": 50.05,
-   "urgentPct": 19.72,
-   "compliantPct": 49.95
+   "belowCPct": 50.03,
+   "urgentPct": 19.67,
+   "compliantPct": 49.97
+  },
+  {
+   "council": "Wigan",
+   "code": "E08000010",
+   "region": "North West",
+   "total": 107083,
+   "bandCounts": {
+    "A": 735,
+    "B": 14399,
+    "C": 38377,
+    "D": 41815,
+    "E": 9903,
+    "F": 1521,
+    "G": 333
+   },
+   "belowCPct": 50.03,
+   "urgentPct": 10.98,
+   "compliantPct": 49.97
+  },
+  {
+   "council": "Bristol, City of",
+   "code": "E06000023",
+   "region": "South West",
+   "total": 161451,
+   "bandCounts": {
+    "A": 978,
+    "B": 18425,
+    "C": 61290,
+    "D": 59845,
+    "E": 17724,
+    "F": 2616,
+    "G": 573
+   },
+   "belowCPct": 50.02,
+   "urgentPct": 12.95,
+   "compliantPct": 49.98
+  },
+  {
+   "council": "Gravesham",
+   "code": "E07000109",
+   "region": "South East",
+   "total": 33427,
+   "bandCounts": {
+    "A": 197,
+    "B": 4125,
+    "C": 12404,
+    "D": 12250,
+    "E": 3736,
+    "F": 583,
+    "G": 132
+   },
+   "belowCPct": 49.96,
+   "urgentPct": 13.32,
+   "compliantPct": 50.04
   },
   {
    "council": "Gateshead",
    "code": "E08000037",
    "region": "North East",
-   "total": 67069,
+   "total": 67160,
    "bandCounts": {
-    "A": 194,
-    "B": 5570,
-    "C": 27792,
-    "D": 27240,
-    "E": 5476,
-    "F": 664,
+    "A": 200,
+    "B": 5571,
+    "C": 27901,
+    "D": 27231,
+    "E": 5464,
+    "F": 660,
     "G": 133
    },
-   "belowCPct": 49.97,
-   "urgentPct": 9.35,
-   "compliantPct": 50.03
+   "belowCPct": 49.86,
+   "urgentPct": 9.32,
+   "compliantPct": 50.14
   },
   {
    "council": "South Ribble",
    "code": "E07000126",
    "region": "North West",
-   "total": 36480,
+   "total": 36530,
    "bandCounts": {
-    "A": 452,
-    "B": 5611,
-    "C": 12192,
-    "D": 14048,
-    "E": 3415,
-    "F": 611,
+    "A": 455,
+    "B": 5631,
+    "C": 12232,
+    "D": 14043,
+    "E": 3403,
+    "F": 615,
     "G": 151
    },
-   "belowCPct": 49.96,
-   "urgentPct": 11.45,
-   "compliantPct": 50.04
+   "belowCPct": 49.85,
+   "urgentPct": 11.41,
+   "compliantPct": 50.15
   },
   {
    "council": "Wakefield",
    "code": "E08000036",
    "region": "Yorkshire and The Humber",
-   "total": 123727,
+   "total": 123897,
    "bandCounts": {
-    "A": 1562,
-    "B": 17231,
-    "C": 43124,
-    "D": 49314,
-    "E": 10582,
-    "F": 1534,
-    "G": 380
+    "A": 1584,
+    "B": 17259,
+    "C": 43302,
+    "D": 49299,
+    "E": 10547,
+    "F": 1528,
+    "G": 378
    },
-   "belowCPct": 49.96,
-   "urgentPct": 10.1,
-   "compliantPct": 50.04
-  },
-  {
-   "council": "Haringey",
-   "code": "E09000014",
-   "region": "London",
-   "total": 98365,
-   "bandCounts": {
-    "A": 179,
-    "B": 11520,
-    "C": 37547,
-    "D": 38420,
-    "E": 9369,
-    "F": 1029,
-    "G": 301
-   },
-   "belowCPct": 49.94,
-   "urgentPct": 10.88,
-   "compliantPct": 50.06
+   "belowCPct": 49.84,
+   "urgentPct": 10.05,
+   "compliantPct": 50.16
   },
   {
    "council": "Kingston upon Hull, City of",
    "code": "E06000010",
    "region": "Yorkshire and The Humber",
-   "total": 99721,
+   "total": 99954,
    "bandCounts": {
-    "A": 668,
-    "B": 8053,
-    "C": 41247,
-    "D": 40796,
-    "E": 7662,
+    "A": 698,
+    "B": 8064,
+    "C": 41461,
+    "D": 40815,
+    "E": 7621,
     "F": 964,
     "G": 331
    },
-   "belowCPct": 49.89,
-   "urgentPct": 8.98,
-   "compliantPct": 50.11
+   "belowCPct": 49.75,
+   "urgentPct": 8.92,
+   "compliantPct": 50.25
+  },
+  {
+   "council": "Haringey",
+   "code": "E09000014",
+   "region": "London",
+   "total": 98724,
+   "bandCounts": {
+    "A": 178,
+    "B": 11780,
+    "C": 37713,
+    "D": 38387,
+    "E": 9340,
+    "F": 1025,
+    "G": 301
+   },
+   "belowCPct": 49.69,
+   "urgentPct": 10.8,
+   "compliantPct": 50.31
   },
   {
    "council": "Surrey Heath",
    "code": "E07000214",
    "region": "South East",
-   "total": 27485,
+   "total": 27513,
    "bandCounts": {
-    "A": 192,
-    "B": 3263,
-    "C": 10351,
-    "D": 10566,
-    "E": 2684,
-    "F": 353,
+    "A": 195,
+    "B": 3275,
+    "C": 10378,
+    "D": 10558,
+    "E": 2680,
+    "F": 351,
     "G": 76
    },
-   "belowCPct": 49.77,
-   "urgentPct": 11.33,
-   "compliantPct": 50.23
+   "belowCPct": 49.67,
+   "urgentPct": 11.29,
+   "compliantPct": 50.33
   },
   {
    "council": "Windsor and Maidenhead",
    "code": "E06000040",
    "region": "South East",
-   "total": 49754,
+   "total": 49839,
    "bandCounts": {
     "A": 188,
-    "B": 6661,
-    "C": 18168,
-    "D": 17309,
-    "E": 6168,
-    "F": 1071,
-    "G": 189
-   },
-   "belowCPct": 49.72,
-   "urgentPct": 14.93,
-   "compliantPct": 50.28
-  },
-  {
-   "council": "St. Helens",
-   "code": "E08000013",
-   "region": "North West",
-   "total": 61721,
-   "bandCounts": {
-    "A": 293,
-    "B": 6802,
-    "C": 23985,
-    "D": 23978,
-    "E": 5572,
-    "F": 842,
-    "G": 249
+    "B": 6712,
+    "C": 18199,
+    "D": 17325,
+    "E": 6156,
+    "F": 1073,
+    "G": 186
    },
    "belowCPct": 49.64,
-   "urgentPct": 10.8,
+   "urgentPct": 14.88,
    "compliantPct": 50.36
   },
   {
    "council": "Bournemouth, Christchurch and Poole",
    "code": "E06000058",
    "region": "South West",
-   "total": 144976,
+   "total": 145156,
    "bandCounts": {
-    "A": 736,
-    "B": 15612,
-    "C": 56689,
-    "D": 54000,
-    "E": 15314,
-    "F": 2146,
-    "G": 479
+    "A": 738,
+    "B": 15622,
+    "C": 56878,
+    "D": 54004,
+    "E": 15286,
+    "F": 2142,
+    "G": 486
    },
-   "belowCPct": 49.62,
-   "urgentPct": 12.37,
-   "compliantPct": 50.38
+   "belowCPct": 49.55,
+   "urgentPct": 12.34,
+   "compliantPct": 50.45
   },
   {
    "council": "Canterbury",
    "code": "E07000106",
    "region": "South East",
-   "total": 54446,
+   "total": 54521,
    "bandCounts": {
-    "A": 704,
-    "B": 7534,
-    "C": 19212,
-    "D": 19964,
-    "E": 5817,
-    "F": 940,
-    "G": 275
+    "A": 711,
+    "B": 7550,
+    "C": 19265,
+    "D": 19976,
+    "E": 5804,
+    "F": 939,
+    "G": 276
    },
-   "belowCPct": 49.58,
-   "urgentPct": 12.92,
-   "compliantPct": 50.42
+   "belowCPct": 49.51,
+   "urgentPct": 12.87,
+   "compliantPct": 50.49
   },
   {
-   "council": "Coventry",
-   "code": "E08000026",
-   "region": "West Midlands",
-   "total": 112487,
+   "council": "St. Helens",
+   "code": "E08000013",
+   "region": "North West",
+   "total": 61817,
    "bandCounts": {
-    "A": 846,
-    "B": 12034,
-    "C": 43874,
-    "D": 42872,
-    "E": 11075,
-    "F": 1441,
-    "G": 345
+    "A": 301,
+    "B": 6829,
+    "C": 24083,
+    "D": 23963,
+    "E": 5547,
+    "F": 847,
+    "G": 247
    },
-   "belowCPct": 49.55,
-   "urgentPct": 11.43,
-   "compliantPct": 50.45
-  },
-  {
-   "council": "Hinckley and Bosworth",
-   "code": "E07000132",
-   "region": "East Midlands",
-   "total": 38241,
-   "bandCounts": {
-    "A": 369,
-    "B": 6153,
-    "C": 12774,
-    "D": 13582,
-    "E": 4408,
-    "F": 805,
-    "G": 150
-   },
-   "belowCPct": 49.54,
-   "urgentPct": 14.02,
-   "compliantPct": 50.46
+   "belowCPct": 49.51,
+   "urgentPct": 10.74,
+   "compliantPct": 50.49
   },
   {
    "council": "Wiltshire",
    "code": "E06000054",
    "region": "South West",
-   "total": 169940,
+   "total": 170225,
    "bandCounts": {
-    "A": 1888,
-    "B": 27810,
-    "C": 56061,
-    "D": 55637,
-    "E": 22011,
-    "F": 5300,
-    "G": 1233
+    "A": 1912,
+    "B": 27845,
+    "C": 56240,
+    "D": 55710,
+    "E": 22000,
+    "F": 5288,
+    "G": 1230
    },
-   "belowCPct": 49.54,
-   "urgentPct": 16.8,
-   "compliantPct": 50.46
+   "belowCPct": 49.48,
+   "urgentPct": 16.75,
+   "compliantPct": 50.52
   },
   {
-   "council": "Thurrock",
-   "code": "E06000034",
-   "region": "East of England",
-   "total": 52208,
+   "council": "Hinckley and Bosworth",
+   "code": "E07000132",
+   "region": "East Midlands",
+   "total": 38309,
    "bandCounts": {
-    "A": 394,
-    "B": 6344,
-    "C": 19631,
-    "D": 20315,
-    "E": 4789,
-    "F": 597,
-    "G": 138
+    "A": 380,
+    "B": 6161,
+    "C": 12834,
+    "D": 13579,
+    "E": 4399,
+    "F": 805,
+    "G": 151
    },
-   "belowCPct": 49.49,
-   "urgentPct": 10.58,
-   "compliantPct": 50.51
+   "belowCPct": 49.42,
+   "urgentPct": 13.98,
+   "compliantPct": 50.58
   },
   {
    "council": "Lincoln",
    "code": "E07000138",
    "region": "East Midlands",
-   "total": 34683,
+   "total": 34733,
    "bandCounts": {
-    "A": 115,
-    "B": 2755,
-    "C": 14654,
-    "D": 13804,
-    "E": 2946,
-    "F": 332,
+    "A": 118,
+    "B": 2759,
+    "C": 14697,
+    "D": 13815,
+    "E": 2937,
+    "F": 330,
     "G": 77
    },
-   "belowCPct": 49.47,
-   "urgentPct": 9.67,
-   "compliantPct": 50.53
+   "belowCPct": 49.4,
+   "urgentPct": 9.63,
+   "compliantPct": 50.6
+  },
+  {
+   "council": "Coventry",
+   "code": "E08000026",
+   "region": "West Midlands",
+   "total": 112623,
+   "bandCounts": {
+    "A": 862,
+    "B": 12042,
+    "C": 44100,
+    "D": 42825,
+    "E": 11009,
+    "F": 1438,
+    "G": 347
+   },
+   "belowCPct": 49.39,
+   "urgentPct": 11.36,
+   "compliantPct": 50.61
+  },
+  {
+   "council": "Thurrock",
+   "code": "E06000034",
+   "region": "East of England",
+   "total": 52423,
+   "bandCounts": {
+    "A": 395,
+    "B": 6334,
+    "C": 19909,
+    "D": 20282,
+    "E": 4771,
+    "F": 597,
+    "G": 135
+   },
+   "belowCPct": 49.19,
+   "urgentPct": 10.5,
+   "compliantPct": 50.81
   },
   {
    "council": "Eastbourne",
    "code": "E07000061",
    "region": "South East",
-   "total": 38497,
+   "total": 38535,
    "bandCounts": {
-    "A": 75,
+    "A": 76,
     "B": 2768,
-    "C": 16706,
-    "D": 14448,
+    "C": 16752,
+    "D": 14441,
     "E": 3892,
-    "F": 470,
+    "F": 468,
     "G": 138
    },
-   "belowCPct": 49.22,
-   "urgentPct": 11.69,
-   "compliantPct": 50.78
+   "belowCPct": 49.15,
+   "urgentPct": 11.67,
+   "compliantPct": 50.85
   },
   {
    "council": "South Tyneside",
    "code": "E08000023",
    "region": "North East",
-   "total": 54050,
+   "total": 54117,
    "bandCounts": {
     "A": 168,
-    "B": 4727,
-    "C": 22597,
-    "D": 22185,
-    "E": 3884,
+    "B": 4730,
+    "C": 22681,
+    "D": 22178,
+    "E": 3871,
     "F": 410,
     "G": 79
    },
-   "belowCPct": 49.14,
-   "urgentPct": 8.09,
-   "compliantPct": 50.86
+   "belowCPct": 49.04,
+   "urgentPct": 8.06,
+   "compliantPct": 50.96
   },
   {
    "council": "Medway",
    "code": "E06000035",
    "region": "South East",
-   "total": 89677,
+   "total": 89810,
    "bandCounts": {
-    "A": 199,
-    "B": 11198,
-    "C": 34310,
-    "D": 34220,
-    "E": 8283,
-    "F": 1140,
-    "G": 327
+    "A": 218,
+    "B": 11201,
+    "C": 34456,
+    "D": 34223,
+    "E": 8246,
+    "F": 1138,
+    "G": 328
    },
-   "belowCPct": 49.03,
-   "urgentPct": 10.87,
-   "compliantPct": 50.97
+   "belowCPct": 48.92,
+   "urgentPct": 10.81,
+   "compliantPct": 51.08
   },
   {
    "council": "St Albans",
    "code": "E07000240",
    "region": "East of England",
-   "total": 46334,
+   "total": 46402,
    "bandCounts": {
-    "A": 199,
-    "B": 5297,
-    "C": 18122,
-    "D": 16745,
-    "E": 5211,
-    "F": 656,
-    "G": 104
+    "A": 202,
+    "B": 5300,
+    "C": 18201,
+    "D": 16744,
+    "E": 5195,
+    "F": 655,
+    "G": 105
    },
-   "belowCPct": 49.03,
-   "urgentPct": 12.89,
-   "compliantPct": 50.97
-  },
-  {
-   "council": "West Lancashire",
-   "code": "E07000127",
-   "region": "North West",
-   "total": 36860,
-   "bandCounts": {
-    "A": 258,
-    "B": 5180,
-    "C": 13348,
-    "D": 13117,
-    "E": 3708,
-    "F": 948,
-    "G": 301
-   },
-   "belowCPct": 49.03,
-   "urgentPct": 13.45,
-   "compliantPct": 50.97
+   "belowCPct": 48.92,
+   "urgentPct": 12.83,
+   "compliantPct": 51.08
   },
   {
    "council": "West Lindsey",
    "code": "E07000142",
    "region": "East Midlands",
-   "total": 35151,
+   "total": 35208,
    "bandCounts": {
-    "A": 607,
-    "B": 5615,
-    "C": 11717,
-    "D": 11574,
-    "E": 4295,
-    "F": 1047,
+    "A": 626,
+    "B": 5620,
+    "C": 11757,
+    "D": 11579,
+    "E": 4286,
+    "F": 1044,
     "G": 296
    },
-   "belowCPct": 48.97,
-   "urgentPct": 16.04,
-   "compliantPct": 51.03
+   "belowCPct": 48.87,
+   "urgentPct": 15.98,
+   "compliantPct": 51.13
+  },
+  {
+   "council": "West Lancashire",
+   "code": "E07000127",
+   "region": "North West",
+   "total": 36901,
+   "bandCounts": {
+    "A": 260,
+    "B": 5175,
+    "C": 13439,
+    "D": 13085,
+    "E": 3698,
+    "F": 947,
+    "G": 297
+   },
+   "belowCPct": 48.85,
+   "urgentPct": 13.39,
+   "compliantPct": 51.15
   },
   {
    "council": "Ashfield",
    "code": "E07000170",
    "region": "East Midlands",
-   "total": 42870,
+   "total": 42927,
    "bandCounts": {
-    "A": 347,
-    "B": 5261,
-    "C": 16273,
-    "D": 15341,
-    "E": 4697,
-    "F": 782,
-    "G": 169
+    "A": 352,
+    "B": 5266,
+    "C": 16354,
+    "D": 15327,
+    "E": 4678,
+    "F": 780,
+    "G": 170
    },
-   "belowCPct": 48.96,
-   "urgentPct": 13.17,
-   "compliantPct": 51.04
+   "belowCPct": 48.82,
+   "urgentPct": 13.11,
+   "compliantPct": 51.18
   },
   {
    "council": "East Staffordshire",
    "code": "E07000193",
    "region": "West Midlands",
-   "total": 42603,
+   "total": 42736,
    "bandCounts": {
-    "A": 546,
-    "B": 7391,
-    "C": 13823,
-    "D": 14208,
-    "E": 5112,
-    "F": 1166,
-    "G": 357
+    "A": 562,
+    "B": 7406,
+    "C": 13940,
+    "D": 14201,
+    "E": 5113,
+    "F": 1159,
+    "G": 355
    },
-   "belowCPct": 48.92,
-   "urgentPct": 15.57,
-   "compliantPct": 51.08
+   "belowCPct": 48.74,
+   "urgentPct": 15.51,
+   "compliantPct": 51.26
   },
   {
    "council": "Horsham",
    "code": "E07000227",
    "region": "South East",
-   "total": 47900,
+   "total": 47961,
    "bandCounts": {
-    "A": 231,
-    "B": 9361,
-    "C": 14937,
-    "D": 15888,
-    "E": 5731,
-    "F": 1435,
-    "G": 317
+    "A": 235,
+    "B": 9362,
+    "C": 15006,
+    "D": 15895,
+    "E": 5728,
+    "F": 1422,
+    "G": 313
    },
-   "belowCPct": 48.79,
-   "urgentPct": 15.62,
-   "compliantPct": 51.21
+   "belowCPct": 48.7,
+   "urgentPct": 15.56,
+   "compliantPct": 51.3
   },
   {
    "council": "Ipswich",
    "code": "E07000202",
    "region": "East of England",
-   "total": 48873,
+   "total": 48913,
    "bandCounts": {
-    "A": 251,
-    "B": 4540,
-    "C": 20324,
-    "D": 17965,
-    "E": 4887,
-    "F": 698,
+    "A": 253,
+    "B": 4545,
+    "C": 20355,
+    "D": 17980,
+    "E": 4876,
+    "F": 696,
     "G": 208
    },
-   "belowCPct": 48.61,
-   "urgentPct": 11.85,
-   "compliantPct": 51.39
-  },
-  {
-   "council": "South Kesteven",
-   "code": "E07000141",
-   "region": "East Midlands",
-   "total": 51074,
-   "bandCounts": {
-    "A": 454,
-    "B": 7800,
-    "C": 18041,
-    "D": 17154,
-    "E": 5896,
-    "F": 1399,
-    "G": 330
-   },
-   "belowCPct": 48.52,
-   "urgentPct": 14.93,
-   "compliantPct": 51.48
+   "belowCPct": 48.58,
+   "urgentPct": 11.82,
+   "compliantPct": 51.42
   },
   {
    "council": "Plymouth",
    "code": "E06000026",
    "region": "South West",
-   "total": 95123,
+   "total": 95195,
    "bandCounts": {
-    "A": 594,
-    "B": 10664,
-    "C": 37730,
-    "D": 36006,
-    "E": 8372,
-    "F": 1308,
-    "G": 449
+    "A": 588,
+    "B": 10602,
+    "C": 37891,
+    "D": 35999,
+    "E": 8356,
+    "F": 1311,
+    "G": 448
    },
-   "belowCPct": 48.5,
-   "urgentPct": 10.65,
-   "compliantPct": 51.5
+   "belowCPct": 48.44,
+   "urgentPct": 10.63,
+   "compliantPct": 51.56
+  },
+  {
+   "council": "South Kesteven",
+   "code": "E07000141",
+   "region": "East Midlands",
+   "total": 51143,
+   "bandCounts": {
+    "A": 464,
+    "B": 7825,
+    "C": 18095,
+    "D": 17142,
+    "E": 5888,
+    "F": 1401,
+    "G": 328
+   },
+   "belowCPct": 48.41,
+   "urgentPct": 14.89,
+   "compliantPct": 51.59
   },
   {
    "council": "Fenland",
    "code": "E07000010",
    "region": "East of England",
-   "total": 36864,
+   "total": 36919,
    "bandCounts": {
     "A": 641,
-    "B": 5348,
-    "C": 13027,
-    "D": 12399,
-    "E": 4201,
-    "F": 959,
+    "B": 5359,
+    "C": 13073,
+    "D": 12401,
+    "E": 4192,
+    "F": 964,
     "G": 289
    },
-   "belowCPct": 48.42,
-   "urgentPct": 14.78,
-   "compliantPct": 51.58
-  },
-  {
-   "council": "Northumberland",
-   "code": "E06000057",
-   "region": "North East",
-   "total": 119396,
-   "bandCounts": {
-    "A": 1479,
-    "B": 16185,
-    "C": 43922,
-    "D": 38523,
-    "E": 14071,
-    "F": 3977,
-    "G": 1239
-   },
-   "belowCPct": 48.42,
-   "urgentPct": 16.15,
-   "compliantPct": 51.58
+   "belowCPct": 48.34,
+   "urgentPct": 14.75,
+   "compliantPct": 51.66
   },
   {
    "council": "Southampton",
    "code": "E06000045",
    "region": "South East",
-   "total": 86721,
+   "total": 86826,
    "bandCounts": {
-    "A": 244,
-    "B": 9442,
-    "C": 35082,
-    "D": 31752,
-    "E": 8581,
-    "F": 1333,
+    "A": 245,
+    "B": 9441,
+    "C": 35180,
+    "D": 31771,
+    "E": 8568,
+    "F": 1334,
     "G": 287
    },
-   "belowCPct": 48.38,
-   "urgentPct": 11.76,
-   "compliantPct": 51.62
+   "belowCPct": 48.33,
+   "urgentPct": 11.73,
+   "compliantPct": 51.67
+  },
+  {
+   "council": "Northumberland",
+   "code": "E06000057",
+   "region": "North East",
+   "total": 119653,
+   "bandCounts": {
+    "A": 1532,
+    "B": 16277,
+    "C": 44058,
+    "D": 38510,
+    "E": 14062,
+    "F": 3980,
+    "G": 1234
+   },
+   "belowCPct": 48.29,
+   "urgentPct": 16.11,
+   "compliantPct": 51.71
   },
   {
    "council": "West Suffolk",
    "code": "E07000245",
    "region": "East of England",
-   "total": 63603,
+   "total": 63716,
    "bandCounts": {
-    "A": 474,
-    "B": 10167,
-    "C": 22196,
-    "D": 21049,
-    "E": 7726,
-    "F": 1628,
-    "G": 363
+    "A": 490,
+    "B": 10196,
+    "C": 22270,
+    "D": 21056,
+    "E": 7713,
+    "F": 1626,
+    "G": 365
    },
-   "belowCPct": 48.37,
-   "urgentPct": 15.28,
-   "compliantPct": 51.63
+   "belowCPct": 48.28,
+   "urgentPct": 15.23,
+   "compliantPct": 51.72
   },
   {
    "council": "Tamworth",
    "code": "E07000199",
    "region": "West Midlands",
-   "total": 24025,
+   "total": 24054,
    "bandCounts": {
     "A": 39,
-    "B": 3843,
-    "C": 8534,
-    "D": 9155,
-    "E": 2125,
+    "B": 3850,
+    "C": 8555,
+    "D": 9158,
+    "E": 2123,
     "F": 266,
     "G": 63
    },
-   "belowCPct": 48.32,
-   "urgentPct": 10.21,
-   "compliantPct": 51.68
+   "belowCPct": 48.27,
+   "urgentPct": 10.19,
+   "compliantPct": 51.73
   },
   {
    "council": "Vale of Glamorgan",
    "code": "W06000014",
    "region": "Wales",
-   "total": 45380,
+   "total": 45439,
    "bandCounts": {
-    "A": 615,
-    "B": 6969,
-    "C": 15914,
-    "D": 16077,
-    "E": 4597,
-    "F": 954,
-    "G": 254
+    "A": 622,
+    "B": 6980,
+    "C": 15961,
+    "D": 16088,
+    "E": 4585,
+    "F": 948,
+    "G": 255
    },
-   "belowCPct": 48.22,
-   "urgentPct": 12.79,
-   "compliantPct": 51.78
+   "belowCPct": 48.14,
+   "urgentPct": 12.74,
+   "compliantPct": 51.86
   },
   {
    "council": "Runnymede",
    "code": "E07000212",
    "region": "South East",
-   "total": 29387,
+   "total": 29488,
    "bandCounts": {
-    "A": 214,
-    "B": 4660,
-    "C": 10347,
-    "D": 10015,
-    "E": 3347,
-    "F": 621,
+    "A": 216,
+    "B": 4657,
+    "C": 10438,
+    "D": 10036,
+    "E": 3342,
+    "F": 616,
     "G": 183
    },
-   "belowCPct": 48.2,
-   "urgentPct": 14.13,
-   "compliantPct": 51.8
+   "belowCPct": 48.08,
+   "urgentPct": 14.04,
+   "compliantPct": 51.92
   },
   {
    "council": "Middlesbrough",
    "code": "E06000002",
    "region": "North East",
-   "total": 52875,
+   "total": 52920,
    "bandCounts": {
-    "A": 508,
-    "B": 6798,
-    "C": 20122,
-    "D": 19728,
-    "E": 4986,
-    "F": 569,
-    "G": 164
+    "A": 510,
+    "B": 6809,
+    "C": 20194,
+    "D": 19714,
+    "E": 4959,
+    "F": 571,
+    "G": 163
    },
-   "belowCPct": 48.13,
-   "urgentPct": 10.82,
-   "compliantPct": 51.87
-  },
-  {
-   "council": "Cheshire West and Chester",
-   "code": "E06000050",
-   "region": "North West",
-   "total": 119485,
-   "bandCounts": {
-    "A": 1025,
-    "B": 19584,
-    "C": 41646,
-    "D": 41828,
-    "E": 12104,
-    "F": 2588,
-    "G": 710
-   },
-   "belowCPct": 47.9,
-   "urgentPct": 12.89,
-   "compliantPct": 52.1
+   "belowCPct": 48.01,
+   "urgentPct": 10.76,
+   "compliantPct": 51.99
   },
   {
    "council": "Kensington and Chelsea",
    "code": "E09000020",
    "region": "London",
-   "total": 76434,
+   "total": 76507,
    "bandCounts": {
     "A": 21,
     "B": 5398,
-    "C": 34401,
-    "D": 27164,
-    "E": 8133,
-    "F": 1047,
+    "C": 34498,
+    "D": 27155,
+    "E": 8125,
+    "F": 1040,
     "G": 270
    },
-   "belowCPct": 47.9,
-   "urgentPct": 12.36,
-   "compliantPct": 52.1
+   "belowCPct": 47.83,
+   "urgentPct": 12.33,
+   "compliantPct": 52.17
+  },
+  {
+   "council": "Cheshire West and Chester",
+   "code": "E06000050",
+   "region": "North West",
+   "total": 119640,
+   "bandCounts": {
+    "A": 1035,
+    "B": 19600,
+    "C": 41796,
+    "D": 41830,
+    "E": 12082,
+    "F": 2585,
+    "G": 712
+   },
+   "belowCPct": 47.82,
+   "urgentPct": 12.85,
+   "compliantPct": 52.18
   },
   {
    "council": "Hertsmere",
    "code": "E07000098",
    "region": "East of England",
-   "total": 32522,
+   "total": 32576,
    "bandCounts": {
     "A": 50,
-    "B": 4236,
-    "C": 12679,
-    "D": 11723,
-    "E": 3327,
-    "F": 423,
+    "B": 4239,
+    "C": 12734,
+    "D": 11729,
+    "E": 3318,
+    "F": 422,
     "G": 84
    },
-   "belowCPct": 47.84,
-   "urgentPct": 11.79,
-   "compliantPct": 52.16
-  },
-  {
-   "council": "County Durham",
-   "code": "E06000047",
-   "region": "North East",
-   "total": 188532,
-   "bandCounts": {
-    "A": 2110,
-    "B": 21178,
-    "C": 75075,
-    "D": 69298,
-    "E": 16729,
-    "F": 3194,
-    "G": 948
-   },
-   "belowCPct": 47.83,
-   "urgentPct": 11.07,
-   "compliantPct": 52.17
-  },
-  {
-   "council": "Tameside",
-   "code": "E08000008",
-   "region": "North West",
-   "total": 76241,
-   "bandCounts": {
-    "A": 165,
-    "B": 6574,
-    "C": 33040,
-    "D": 28273,
-    "E": 6928,
-    "F": 1004,
-    "G": 257
-   },
-   "belowCPct": 47.82,
-   "urgentPct": 10.74,
-   "compliantPct": 52.18
-  },
-  {
-   "council": "Nottingham",
-   "code": "E06000018",
-   "region": "East Midlands",
-   "total": 119915,
-   "bandCounts": {
-    "A": 919,
-    "B": 11630,
-    "C": 50031,
-    "D": 42508,
-    "E": 12900,
-    "F": 1639,
-    "G": 288
-   },
-   "belowCPct": 47.81,
-   "urgentPct": 12.36,
-   "compliantPct": 52.19
+   "belowCPct": 47.74,
+   "urgentPct": 11.74,
+   "compliantPct": 52.26
   },
   {
    "council": "Fareham",
    "code": "E07000087",
    "region": "South East",
-   "total": 35153,
+   "total": 35199,
    "bandCounts": {
-    "A": 270,
-    "B": 4303,
-    "C": 13781,
-    "D": 13280,
-    "E": 2958,
-    "F": 443,
+    "A": 269,
+    "B": 4305,
+    "C": 13824,
+    "D": 13285,
+    "E": 2956,
+    "F": 442,
     "G": 118
    },
-   "belowCPct": 47.79,
-   "urgentPct": 10.01,
-   "compliantPct": 52.21
+   "belowCPct": 47.73,
+   "urgentPct": 9.99,
+   "compliantPct": 52.27
+  },
+  {
+   "council": "Tameside",
+   "code": "E08000008",
+   "region": "North West",
+   "total": 76334,
+   "bandCounts": {
+    "A": 165,
+    "B": 6576,
+    "C": 33159,
+    "D": 28261,
+    "E": 6915,
+    "F": 1002,
+    "G": 256
+   },
+   "belowCPct": 47.73,
+   "urgentPct": 10.71,
+   "compliantPct": 52.27
   },
   {
    "council": "Monmouthshire",
    "code": "W06000021",
    "region": "Wales",
-   "total": 31072,
+   "total": 31092,
    "bandCounts": {
     "A": 521,
-    "B": 4641,
-    "C": 11061,
-    "D": 9412,
-    "E": 3804,
-    "F": 1217,
-    "G": 416
-   },
-   "belowCPct": 47.79,
-   "urgentPct": 17.5,
-   "compliantPct": 52.21
-  },
-  {
-   "council": "North Kesteven",
-   "code": "E07000139",
-   "region": "East Midlands",
-   "total": 41622,
-   "bandCounts": {
-    "A": 736,
-    "B": 7960,
-    "C": 13077,
-    "D": 14211,
-    "E": 4288,
-    "F": 1073,
-    "G": 277
+    "B": 4643,
+    "C": 11100,
+    "D": 9403,
+    "E": 3796,
+    "F": 1216,
+    "G": 413
    },
    "belowCPct": 47.69,
-   "urgentPct": 13.55,
+   "urgentPct": 17.45,
    "compliantPct": 52.31
   },
   {
-   "council": "Merthyr Tydfil",
-   "code": "W06000024",
-   "region": "Wales",
-   "total": 19882,
+   "council": "County Durham",
+   "code": "E06000047",
+   "region": "North East",
+   "total": 188779,
    "bandCounts": {
-    "A": 248,
-    "B": 1445,
-    "C": 8712,
-    "D": 7064,
-    "E": 2006,
-    "F": 323,
-    "G": 84
+    "A": 2131,
+    "B": 21256,
+    "C": 75382,
+    "D": 69184,
+    "E": 16684,
+    "F": 3196,
+    "G": 946
    },
-   "belowCPct": 47.67,
-   "urgentPct": 12.14,
-   "compliantPct": 52.33
+   "belowCPct": 47.68,
+   "urgentPct": 11.03,
+   "compliantPct": 52.32
   },
   {
-   "council": "North Somerset",
-   "code": "E06000024",
-   "region": "South West",
-   "total": 76930,
+   "council": "Nottingham",
+   "code": "E06000018",
+   "region": "East Midlands",
+   "total": 120007,
    "bandCounts": {
-    "A": 1811,
-    "B": 11267,
-    "C": 27182,
-    "D": 25955,
-    "E": 8571,
-    "F": 1710,
-    "G": 434
+    "A": 935,
+    "B": 11655,
+    "C": 50194,
+    "D": 42438,
+    "E": 12867,
+    "F": 1629,
+    "G": 289
    },
-   "belowCPct": 47.67,
-   "urgentPct": 13.93,
-   "compliantPct": 52.33
+   "belowCPct": 47.68,
+   "urgentPct": 12.32,
+   "compliantPct": 52.32
   },
   {
    "council": "Gloucester",
    "code": "E07000081",
    "region": "South West",
-   "total": 44587,
+   "total": 44643,
    "bandCounts": {
-    "A": 279,
-    "B": 5586,
-    "C": 17482,
-    "D": 16254,
-    "E": 4303,
-    "F": 505,
-    "G": 178
+    "A": 283,
+    "B": 5585,
+    "C": 17520,
+    "D": 16271,
+    "E": 4294,
+    "F": 509,
+    "G": 181
    },
-   "belowCPct": 47.64,
-   "urgentPct": 11.18,
-   "compliantPct": 52.36
+   "belowCPct": 47.61,
+   "urgentPct": 11.16,
+   "compliantPct": 52.39
+  },
+  {
+   "council": "North Somerset",
+   "code": "E06000024",
+   "region": "South West",
+   "total": 77040,
+   "bandCounts": {
+    "A": 1819,
+    "B": 11283,
+    "C": 27265,
+    "D": 25954,
+    "E": 8579,
+    "F": 1705,
+    "G": 435
+   },
+   "belowCPct": 47.6,
+   "urgentPct": 13.91,
+   "compliantPct": 52.4
   },
   {
    "council": "Swale",
    "code": "E07000113",
    "region": "South East",
-   "total": 49652,
+   "total": 49713,
    "bandCounts": {
-    "A": 632,
-    "B": 7878,
-    "C": 17529,
-    "D": 17019,
-    "E": 5244,
-    "F": 1018,
-    "G": 332
+    "A": 635,
+    "B": 7874,
+    "C": 17577,
+    "D": 17040,
+    "E": 5243,
+    "F": 1014,
+    "G": 330
    },
-   "belowCPct": 47.56,
-   "urgentPct": 13.28,
-   "compliantPct": 52.44
+   "belowCPct": 47.53,
+   "urgentPct": 13.25,
+   "compliantPct": 52.47
+  },
+  {
+   "council": "North Kesteven",
+   "code": "E07000139",
+   "region": "East Midlands",
+   "total": 41693,
+   "bandCounts": {
+    "A": 758,
+    "B": 7989,
+    "C": 13147,
+    "D": 14168,
+    "E": 4280,
+    "F": 1073,
+    "G": 278
+   },
+   "belowCPct": 47.49,
+   "urgentPct": 13.51,
+   "compliantPct": 52.51
+  },
+  {
+   "council": "Merthyr Tydfil",
+   "code": "W06000024",
+   "region": "Wales",
+   "total": 19905,
+   "bandCounts": {
+    "A": 251,
+    "B": 1458,
+    "C": 8761,
+    "D": 7048,
+    "E": 1982,
+    "F": 322,
+    "G": 83
+   },
+   "belowCPct": 47.4,
+   "urgentPct": 11.99,
+   "compliantPct": 52.6
   },
   {
    "council": "Warwick",
    "code": "E07000222",
    "region": "West Midlands",
-   "total": 53943,
+   "total": 54021,
    "bandCounts": {
-    "A": 1049,
-    "B": 9472,
-    "C": 17803,
+    "A": 1073,
+    "B": 9478,
+    "C": 17866,
     "D": 18815,
-    "E": 5634,
-    "F": 964,
-    "G": 206
+    "E": 5625,
+    "F": 959,
+    "G": 205
    },
-   "belowCPct": 47.49,
-   "urgentPct": 12.61,
-   "compliantPct": 52.51
+   "belowCPct": 47.4,
+   "urgentPct": 12.57,
+   "compliantPct": 52.6
   },
   {
    "council": "Havant",
    "code": "E07000090",
    "region": "South East",
-   "total": 41588,
+   "total": 41672,
    "bandCounts": {
-    "A": 135,
-    "B": 5250,
-    "C": 16465,
-    "D": 15188,
-    "E": 3752,
+    "A": 139,
+    "B": 5253,
+    "C": 16549,
+    "D": 15187,
+    "E": 3748,
     "F": 647,
-    "G": 151
+    "G": 149
    },
-   "belowCPct": 47.46,
-   "urgentPct": 10.94,
-   "compliantPct": 52.54
+   "belowCPct": 47.35,
+   "urgentPct": 10.9,
+   "compliantPct": 52.65
   },
   {
    "council": "Wychavon",
    "code": "E07000238",
    "region": "West Midlands",
-   "total": 45800,
+   "total": 45849,
    "bandCounts": {
-    "A": 845,
-    "B": 9314,
-    "C": 13914,
-    "D": 14189,
-    "E": 5593,
+    "A": 855,
+    "B": 9329,
+    "C": 13969,
+    "D": 14169,
+    "E": 5580,
     "F": 1505,
-    "G": 440
+    "G": 442
    },
-   "belowCPct": 47.44,
-   "urgentPct": 16.46,
-   "compliantPct": 52.56
+   "belowCPct": 47.32,
+   "urgentPct": 16.42,
+   "compliantPct": 52.68
   },
   {
    "council": "Barking and Dagenham",
    "code": "E09000002",
    "region": "London",
-   "total": 66272,
+   "total": 66336,
    "bandCounts": {
-    "A": 402,
-    "B": 14076,
-    "C": 20371,
-    "D": 25375,
-    "E": 5374,
-    "F": 538,
-    "G": 136
+    "A": 404,
+    "B": 14082,
+    "C": 20475,
+    "D": 25351,
+    "E": 5357,
+    "F": 533,
+    "G": 134
    },
-   "belowCPct": 47.42,
-   "urgentPct": 9.13,
-   "compliantPct": 52.58
+   "belowCPct": 47.3,
+   "urgentPct": 9.08,
+   "compliantPct": 52.7
   },
   {
    "council": "Woking",
    "code": "E07000217",
    "region": "South East",
-   "total": 34483,
+   "total": 34521,
    "bandCounts": {
-    "A": 173,
-    "B": 4611,
-    "C": 13408,
-    "D": 12532,
-    "E": 3211,
-    "F": 471,
+    "A": 174,
+    "B": 4613,
+    "C": 13437,
+    "D": 12534,
+    "E": 3216,
+    "F": 470,
     "G": 77
    },
-   "belowCPct": 47.24,
+   "belowCPct": 47.21,
    "urgentPct": 10.9,
-   "compliantPct": 52.76
+   "compliantPct": 52.79
   },
   {
    "council": "Lichfield",
    "code": "E07000194",
    "region": "West Midlands",
-   "total": 35130,
+   "total": 35221,
    "bandCounts": {
-    "A": 270,
-    "B": 6720,
-    "C": 11566,
-    "D": 12013,
-    "E": 3622,
+    "A": 278,
+    "B": 6743,
+    "C": 11614,
+    "D": 12031,
+    "E": 3615,
     "F": 738,
-    "G": 201
+    "G": 202
    },
-   "belowCPct": 47.18,
-   "urgentPct": 12.98,
-   "compliantPct": 52.82
-  },
-  {
-   "council": "Reading",
-   "code": "E06000038",
-   "region": "South East",
-   "total": 59886,
-   "bandCounts": {
-    "A": 330,
-    "B": 8876,
-    "C": 22467,
-    "D": 21518,
-    "E": 5820,
-    "F": 690,
-    "G": 185
-   },
-   "belowCPct": 47.11,
-   "urgentPct": 11.18,
-   "compliantPct": 52.89
+   "belowCPct": 47.09,
+   "urgentPct": 12.93,
+   "compliantPct": 52.91
   },
   {
    "council": "Bolsover",
    "code": "E07000033",
    "region": "East Midlands",
-   "total": 29220,
+   "total": 29243,
    "bandCounts": {
-    "A": 332,
+    "A": 336,
     "B": 4680,
-    "C": 10450,
-    "D": 10203,
-    "E": 2898,
-    "F": 533,
+    "C": 10476,
+    "D": 10199,
+    "E": 2897,
+    "F": 531,
     "G": 124
    },
-   "belowCPct": 47.08,
-   "urgentPct": 12.17,
-   "compliantPct": 52.92
+   "belowCPct": 47.02,
+   "urgentPct": 12.15,
+   "compliantPct": 52.98
+  },
+  {
+   "council": "Reading",
+   "code": "E06000038",
+   "region": "South East",
+   "total": 59994,
+   "bandCounts": {
+    "A": 330,
+    "B": 8885,
+    "C": 22582,
+    "D": 21518,
+    "E": 5806,
+    "F": 690,
+    "G": 183
+   },
+   "belowCPct": 47.0,
+   "urgentPct": 11.13,
+   "compliantPct": 53.0
   },
   {
    "council": "Braintree",
    "code": "E07000067",
    "region": "East of England",
-   "total": 51230,
+   "total": 51310,
    "bandCounts": {
-    "A": 285,
+    "A": 298,
     "B": 9311,
-    "C": 17546,
-    "D": 16622,
-    "E": 5853,
-    "F": 1327,
-    "G": 286
+    "C": 17608,
+    "D": 16629,
+    "E": 5857,
+    "F": 1323,
+    "G": 284
    },
-   "belowCPct": 47.02,
-   "urgentPct": 14.57,
-   "compliantPct": 52.98
+   "belowCPct": 46.96,
+   "urgentPct": 14.55,
+   "compliantPct": 53.04
   },
   {
    "council": "Mid Suffolk",
    "code": "E07000203",
    "region": "East of England",
-   "total": 37781,
+   "total": 37849,
    "bandCounts": {
-    "A": 674,
-    "B": 9416,
-    "C": 9969,
-    "D": 10635,
-    "E": 5083,
-    "F": 1602,
-    "G": 402
+    "A": 681,
+    "B": 9431,
+    "C": 10010,
+    "D": 10633,
+    "E": 5090,
+    "F": 1603,
+    "G": 401
    },
-   "belowCPct": 46.91,
-   "urgentPct": 18.76,
-   "compliantPct": 53.09
-  },
-  {
-   "council": "Hartlepool",
-   "code": "E06000001",
-   "region": "North East",
-   "total": 36225,
-   "bandCounts": {
-    "A": 337,
-    "B": 5064,
-    "C": 13862,
-    "D": 13226,
-    "E": 3139,
-    "F": 486,
-    "G": 111
-   },
-   "belowCPct": 46.82,
-   "urgentPct": 10.31,
-   "compliantPct": 53.18
-  },
-  {
-   "council": "Stockton-on-Tees",
-   "code": "E06000004",
-   "region": "North East",
-   "total": 68816,
-   "bandCounts": {
-    "A": 780,
-    "B": 8804,
-    "C": 27022,
-    "D": 25657,
-    "E": 5628,
-    "F": 760,
-    "G": 165
-   },
-   "belowCPct": 46.81,
-   "urgentPct": 9.52,
-   "compliantPct": 53.19
-  },
-  {
-   "council": "Buckinghamshire",
-   "code": "E06000060",
-   "region": "South East",
-   "total": 177767,
-   "bandCounts": {
-    "A": 1128,
-    "B": 28473,
-    "C": 64963,
-    "D": 57866,
-    "E": 20276,
-    "F": 4174,
-    "G": 887
-   },
-   "belowCPct": 46.8,
-   "urgentPct": 14.25,
-   "compliantPct": 53.2
+   "belowCPct": 46.84,
+   "urgentPct": 18.74,
+   "compliantPct": 53.16
   },
   {
    "council": "Basildon",
    "code": "E07000066",
    "region": "East of England",
-   "total": 56474,
+   "total": 56551,
    "bandCounts": {
-    "A": 140,
-    "B": 5863,
-    "C": 24056,
-    "D": 20993,
-    "E": 4678,
-    "F": 633,
+    "A": 141,
+    "B": 5869,
+    "C": 24111,
+    "D": 21020,
+    "E": 4667,
+    "F": 632,
     "G": 111
    },
-   "belowCPct": 46.77,
-   "urgentPct": 9.6,
-   "compliantPct": 53.23
+   "belowCPct": 46.74,
+   "urgentPct": 9.57,
+   "compliantPct": 53.26
+  },
+  {
+   "council": "Buckinghamshire",
+   "code": "E06000060",
+   "region": "South East",
+   "total": 177976,
+   "bandCounts": {
+    "A": 1144,
+    "B": 28513,
+    "C": 65195,
+    "D": 57818,
+    "E": 20248,
+    "F": 4166,
+    "G": 892
+   },
+   "belowCPct": 46.71,
+   "urgentPct": 14.22,
+   "compliantPct": 53.29
+  },
+  {
+   "council": "Stockton-on-Tees",
+   "code": "E06000004",
+   "region": "North East",
+   "total": 68923,
+   "bandCounts": {
+    "A": 806,
+    "B": 8809,
+    "C": 27125,
+    "D": 25651,
+    "E": 5609,
+    "F": 758,
+    "G": 165
+   },
+   "belowCPct": 46.69,
+   "urgentPct": 9.48,
+   "compliantPct": 53.31
   },
   {
    "council": "South Oxfordshire",
    "code": "E07000179",
    "region": "South East",
-   "total": 50115,
+   "total": 50184,
    "bandCounts": {
-    "A": 495,
-    "B": 11616,
-    "C": 14590,
-    "D": 15807,
-    "E": 5910,
-    "F": 1371,
-    "G": 326
+    "A": 500,
+    "B": 11632,
+    "C": 14630,
+    "D": 15806,
+    "E": 5922,
+    "F": 1369,
+    "G": 325
    },
-   "belowCPct": 46.72,
+   "belowCPct": 46.67,
    "urgentPct": 15.18,
-   "compliantPct": 53.28
+   "compliantPct": 53.33
+  },
+  {
+   "council": "Hartlepool",
+   "code": "E06000001",
+   "region": "North East",
+   "total": 36259,
+   "bandCounts": {
+    "A": 342,
+    "B": 5068,
+    "C": 13939,
+    "D": 13193,
+    "E": 3124,
+    "F": 485,
+    "G": 108
+   },
+   "belowCPct": 46.64,
+   "urgentPct": 10.25,
+   "compliantPct": 53.36
   },
   {
    "council": "South Norfolk",
    "code": "E07000149",
    "region": "East of England",
-   "total": 50602,
+   "total": 50673,
    "bandCounts": {
-    "A": 1255,
-    "B": 11469,
-    "C": 14280,
-    "D": 14763,
-    "E": 6702,
-    "F": 1726,
-    "G": 407
+    "A": 1264,
+    "B": 11481,
+    "C": 14325,
+    "D": 14777,
+    "E": 6699,
+    "F": 1718,
+    "G": 409
    },
-   "belowCPct": 46.63,
-   "urgentPct": 17.46,
-   "compliantPct": 53.37
+   "belowCPct": 46.58,
+   "urgentPct": 17.42,
+   "compliantPct": 53.42
   },
   {
    "council": "Warrington",
    "code": "E06000007",
    "region": "North West",
-   "total": 69934,
+   "total": 69999,
    "bandCounts": {
-    "A": 376,
-    "B": 8884,
-    "C": 28128,
-    "D": 25935,
-    "E": 5590,
-    "F": 837,
-    "G": 184
+    "A": 382,
+    "B": 8897,
+    "C": 28189,
+    "D": 25938,
+    "E": 5578,
+    "F": 832,
+    "G": 183
    },
-   "belowCPct": 46.54,
-   "urgentPct": 9.45,
-   "compliantPct": 53.46
+   "belowCPct": 46.47,
+   "urgentPct": 9.42,
+   "compliantPct": 53.53
   },
   {
    "council": "Charnwood",
    "code": "E07000130",
    "region": "East Midlands",
-   "total": 58548,
+   "total": 58656,
    "bandCounts": {
-    "A": 583,
-    "B": 10398,
-    "C": 20350,
-    "D": 19659,
-    "E": 6244,
-    "F": 1113,
-    "G": 201
+    "A": 608,
+    "B": 10417,
+    "C": 20409,
+    "D": 19677,
+    "E": 6232,
+    "F": 1114,
+    "G": 199
    },
-   "belowCPct": 46.49,
-   "urgentPct": 12.91,
-   "compliantPct": 53.51
+   "belowCPct": 46.41,
+   "urgentPct": 12.86,
+   "compliantPct": 53.59
   },
   {
    "council": "Rushcliffe",
    "code": "E07000176",
    "region": "East Midlands",
-   "total": 42173,
+   "total": 42233,
    "bandCounts": {
-    "A": 775,
-    "B": 9188,
-    "C": 12606,
-    "D": 13646,
-    "E": 4795,
-    "F": 981,
-    "G": 182
+    "A": 786,
+    "B": 9205,
+    "C": 12642,
+    "D": 13654,
+    "E": 4789,
+    "F": 977,
+    "G": 180
    },
-   "belowCPct": 46.48,
-   "urgentPct": 14.13,
-   "compliantPct": 53.52
+   "belowCPct": 46.41,
+   "urgentPct": 14.08,
+   "compliantPct": 53.59
   },
   {
    "council": "Sunderland",
    "code": "E08000024",
    "region": "North East",
-   "total": 101182,
+   "total": 101282,
    "bandCounts": {
-    "A": 1316,
-    "B": 12587,
-    "C": 40326,
-    "D": 37296,
-    "E": 8548,
+    "A": 1327,
+    "B": 12598,
+    "C": 40523,
+    "D": 37202,
+    "E": 8526,
     "F": 903,
-    "G": 206
+    "G": 203
    },
-   "belowCPct": 46.4,
-   "urgentPct": 9.54,
-   "compliantPct": 53.6
+   "belowCPct": 46.24,
+   "urgentPct": 9.51,
+   "compliantPct": 53.76
   },
   {
    "council": "North Hertfordshire",
    "code": "E07000099",
    "region": "East of England",
-   "total": 44549,
+   "total": 44606,
    "bandCounts": {
-    "A": 279,
-    "B": 5407,
-    "C": 18242,
-    "D": 14906,
-    "E": 4667,
-    "F": 879,
-    "G": 169
+    "A": 282,
+    "B": 5414,
+    "C": 18299,
+    "D": 14908,
+    "E": 4661,
+    "F": 874,
+    "G": 168
    },
-   "belowCPct": 46.29,
-   "urgentPct": 12.83,
-   "compliantPct": 53.71
-  },
-  {
-   "council": "Gosport",
-   "code": "E07000088",
-   "region": "South East",
-   "total": 27801,
-   "bandCounts": {
-    "A": 105,
-    "B": 2445,
-    "C": 12419,
-    "D": 10290,
-    "E": 2088,
-    "F": 378,
-    "G": 76
-   },
-   "belowCPct": 46.16,
-   "urgentPct": 9.14,
-   "compliantPct": 53.84
-  },
-  {
-   "council": "Redditch",
-   "code": "E07000236",
-   "region": "West Midlands",
-   "total": 26525,
-   "bandCounts": {
-    "A": 77,
-    "B": 2862,
-    "C": 11344,
-    "D": 9771,
-    "E": 2129,
-    "F": 278,
-    "G": 64
-   },
-   "belowCPct": 46.15,
-   "urgentPct": 9.32,
-   "compliantPct": 53.85
-  },
-  {
-   "council": "Rochdale",
-   "code": "E08000005",
-   "region": "North West",
-   "total": 72985,
-   "bandCounts": {
-    "A": 197,
-    "B": 8195,
-    "C": 30907,
-    "D": 26053,
-    "E": 6351,
-    "F": 1002,
-    "G": 280
-   },
-   "belowCPct": 46.15,
-   "urgentPct": 10.46,
-   "compliantPct": 53.85
+   "belowCPct": 46.21,
+   "urgentPct": 12.79,
+   "compliantPct": 53.79
   },
   {
    "council": "Chelmsford",
    "code": "E07000070",
    "region": "East of England",
-   "total": 58509,
+   "total": 58591,
    "bandCounts": {
-    "A": 357,
-    "B": 9915,
-    "C": 21240,
-    "D": 19470,
-    "E": 5976,
-    "F": 1248,
-    "G": 303
+    "A": 358,
+    "B": 9918,
+    "C": 21310,
+    "D": 19474,
+    "E": 5986,
+    "F": 1241,
+    "G": 304
    },
-   "belowCPct": 46.14,
-   "urgentPct": 12.86,
-   "compliantPct": 53.86
+   "belowCPct": 46.09,
+   "urgentPct": 12.85,
+   "compliantPct": 53.91
   },
   {
-   "council": "Watford",
-   "code": "E07000103",
-   "region": "East of England",
-   "total": 33393,
+   "council": "Rochdale",
+   "code": "E08000005",
+   "region": "North West",
+   "total": 73125,
    "bandCounts": {
-    "A": 45,
-    "B": 6537,
-    "C": 11439,
-    "D": 11684,
-    "E": 3230,
-    "F": 382,
-    "G": 76
+    "A": 202,
+    "B": 8187,
+    "C": 31062,
+    "D": 26068,
+    "E": 6328,
+    "F": 1000,
+    "G": 278
    },
-   "belowCPct": 46.03,
-   "urgentPct": 11.04,
-   "compliantPct": 53.97
+   "belowCPct": 46.05,
+   "urgentPct": 10.4,
+   "compliantPct": 53.95
+  },
+  {
+   "council": "Redditch",
+   "code": "E07000236",
+   "region": "West Midlands",
+   "total": 26665,
+   "bandCounts": {
+    "A": 84,
+    "B": 2923,
+    "C": 11420,
+    "D": 9779,
+    "E": 2119,
+    "F": 277,
+    "G": 63
+   },
+   "belowCPct": 45.9,
+   "urgentPct": 9.22,
+   "compliantPct": 54.1
   },
   {
    "council": "Barnet",
    "code": "E09000003",
    "region": "London",
-   "total": 131961,
+   "total": 132107,
    "bandCounts": {
-    "A": 580,
-    "B": 24676,
-    "C": 46102,
-    "D": 44872,
-    "E": 13544,
-    "F": 1855,
-    "G": 332
+    "A": 581,
+    "B": 24685,
+    "C": 46285,
+    "D": 44863,
+    "E": 13511,
+    "F": 1852,
+    "G": 330
    },
-   "belowCPct": 45.92,
-   "urgentPct": 11.92,
-   "compliantPct": 54.08
+   "belowCPct": 45.84,
+   "urgentPct": 11.88,
+   "compliantPct": 54.16
   },
   {
    "council": "Reigate and Banstead",
    "code": "E07000211",
    "region": "South East",
-   "total": 48897,
+   "total": 48957,
    "bandCounts": {
     "A": 223,
-    "B": 7484,
-    "C": 18759,
-    "D": 15801,
-    "E": 5582,
+    "B": 7517,
+    "C": 18819,
+    "D": 15806,
+    "E": 5542,
     "F": 911,
-    "G": 137
+    "G": 139
    },
-   "belowCPct": 45.87,
-   "urgentPct": 13.56,
-   "compliantPct": 54.13
+   "belowCPct": 45.75,
+   "urgentPct": 13.46,
+   "compliantPct": 54.25
   },
   {
-   "council": "Ealing",
-   "code": "E09000009",
-   "region": "London",
-   "total": 117975,
+   "council": "Watford",
+   "code": "E07000103",
+   "region": "East of England",
+   "total": 33612,
    "bandCounts": {
-    "A": 203,
-    "B": 21973,
-    "C": 41870,
-    "D": 42051,
-    "E": 10333,
-    "F": 1200,
-    "G": 345
+    "A": 45,
+    "B": 6529,
+    "C": 11668,
+    "D": 11702,
+    "E": 3210,
+    "F": 381,
+    "G": 77
+   },
+   "belowCPct": 45.73,
+   "urgentPct": 10.91,
+   "compliantPct": 54.27
+  },
+  {
+   "council": "Gosport",
+   "code": "E07000088",
+   "region": "South East",
+   "total": 28019,
+   "bandCounts": {
+    "A": 105,
+    "B": 2435,
+    "C": 12672,
+    "D": 10279,
+    "E": 2077,
+    "F": 377,
+    "G": 74
    },
    "belowCPct": 45.71,
-   "urgentPct": 10.07,
+   "urgentPct": 9.02,
    "compliantPct": 54.29
-  },
-  {
-   "council": "Torfaen",
-   "code": "W06000020",
-   "region": "Wales",
-   "total": 29659,
-   "bandCounts": {
-    "A": 212,
-    "B": 3755,
-    "C": 12148,
-    "D": 10481,
-    "E": 2600,
-    "F": 376,
-    "G": 87
-   },
-   "belowCPct": 45.67,
-   "urgentPct": 10.33,
-   "compliantPct": 54.33
   },
   {
    "council": "East Hertfordshire",
    "code": "E07000242",
    "region": "East of England",
-   "total": 49622,
+   "total": 49690,
    "bandCounts": {
-    "A": 666,
-    "B": 10304,
-    "C": 16012,
-    "D": 15851,
-    "E": 5496,
+    "A": 676,
+    "B": 10312,
+    "C": 16058,
+    "D": 15859,
+    "E": 5494,
     "F": 1053,
-    "G": 240
+    "G": 238
    },
-   "belowCPct": 45.62,
-   "urgentPct": 13.68,
-   "compliantPct": 54.38
+   "belowCPct": 45.57,
+   "urgentPct": 13.65,
+   "compliantPct": 54.43
+  },
+  {
+   "council": "Torfaen",
+   "code": "W06000020",
+   "region": "Wales",
+   "total": 29744,
+   "bandCounts": {
+    "A": 215,
+    "B": 3774,
+    "C": 12207,
+    "D": 10484,
+    "E": 2601,
+    "F": 378,
+    "G": 85
+   },
+   "belowCPct": 45.55,
+   "urgentPct": 10.3,
+   "compliantPct": 54.45
+  },
+  {
+   "council": "Ealing",
+   "code": "E09000009",
+   "region": "London",
+   "total": 118249,
+   "bandCounts": {
+    "A": 204,
+    "B": 22020,
+    "C": 42171,
+    "D": 41993,
+    "E": 10321,
+    "F": 1195,
+    "G": 345
+   },
+   "belowCPct": 45.54,
+   "urgentPct": 10.03,
+   "compliantPct": 54.46
   },
   {
    "council": "West Northamptonshire",
    "code": "E06000062",
    "region": "East Midlands",
-   "total": 141577,
+   "total": 141782,
    "bandCounts": {
-    "A": 1561,
-    "B": 26194,
-    "C": 49821,
-    "D": 47120,
-    "E": 13622,
-    "F": 2651,
+    "A": 1576,
+    "B": 26240,
+    "C": 49975,
+    "D": 47117,
+    "E": 13617,
+    "F": 2649,
     "G": 608
    },
-   "belowCPct": 45.21,
-   "urgentPct": 11.92,
-   "compliantPct": 54.79
+   "belowCPct": 45.13,
+   "urgentPct": 11.9,
+   "compliantPct": 54.87
   },
   {
    "council": "East Hampshire",
    "code": "E07000085",
    "region": "South East",
-   "total": 41892,
+   "total": 41945,
    "bandCounts": {
-    "A": 722,
-    "B": 8117,
-    "C": 14139,
-    "D": 13283,
-    "E": 4315,
-    "F": 1034,
-    "G": 282
+    "A": 732,
+    "B": 8123,
+    "C": 14170,
+    "D": 13292,
+    "E": 4319,
+    "F": 1028,
+    "G": 281
    },
-   "belowCPct": 45.15,
-   "urgentPct": 13.44,
-   "compliantPct": 54.85
-  },
-  {
-   "council": "East Cambridgeshire",
-   "code": "E07000009",
-   "region": "East of England",
-   "total": 31710,
-   "bandCounts": {
-    "A": 789,
-    "B": 6015,
-    "C": 10647,
-    "D": 9451,
-    "E": 3772,
-    "F": 855,
-    "G": 181
-   },
-   "belowCPct": 44.97,
-   "urgentPct": 15.16,
-   "compliantPct": 55.03
-  },
-  {
-   "council": "Broxbourne",
-   "code": "E07000095",
-   "region": "East of England",
-   "total": 30655,
-   "bandCounts": {
-    "A": 140,
-    "B": 3889,
-    "C": 12843,
-    "D": 10290,
-    "E": 3029,
-    "F": 385,
-    "G": 79
-   },
-   "belowCPct": 44.96,
-   "urgentPct": 11.39,
-   "compliantPct": 55.04
+   "belowCPct": 45.11,
+   "urgentPct": 13.42,
+   "compliantPct": 54.89
   },
   {
    "council": "Tonbridge and Malling",
    "code": "E07000115",
    "region": "South East",
-   "total": 41479,
+   "total": 41521,
    "bandCounts": {
-    "A": 559,
-    "B": 8143,
-    "C": 14154,
-    "D": 13573,
+    "A": 566,
+    "B": 8142,
+    "C": 14190,
+    "D": 13574,
     "E": 4082,
-    "F": 744,
+    "F": 743,
     "G": 224
    },
-   "belowCPct": 44.9,
-   "urgentPct": 12.17,
-   "compliantPct": 55.1
+   "belowCPct": 44.85,
+   "urgentPct": 12.16,
+   "compliantPct": 55.15
   },
   {
-   "council": "Cardiff",
-   "code": "W06000015",
-   "region": "Wales",
-   "total": 129371,
+   "council": "Broxbourne",
+   "code": "E07000095",
+   "region": "East of England",
+   "total": 30719,
    "bandCounts": {
-    "A": 1850,
-    "B": 16845,
-    "C": 52765,
-    "D": 45377,
-    "E": 10959,
-    "F": 1245,
-    "G": 330
+    "A": 141,
+    "B": 3895,
+    "C": 12908,
+    "D": 10284,
+    "E": 3027,
+    "F": 385,
+    "G": 79
    },
-   "belowCPct": 44.76,
-   "urgentPct": 9.69,
-   "compliantPct": 55.24
+   "belowCPct": 44.84,
+   "urgentPct": 11.36,
+   "compliantPct": 55.16
+  },
+  {
+   "council": "East Cambridgeshire",
+   "code": "E07000009",
+   "region": "East of England",
+   "total": 31796,
+   "bandCounts": {
+    "A": 810,
+    "B": 6045,
+    "C": 10705,
+    "D": 9437,
+    "E": 3767,
+    "F": 853,
+    "G": 179
+   },
+   "belowCPct": 44.77,
+   "urgentPct": 15.09,
+   "compliantPct": 55.23
   },
   {
    "council": "Lewisham",
    "code": "E09000023",
    "region": "London",
-   "total": 111280,
+   "total": 111348,
    "bandCounts": {
     "A": 135,
-    "B": 15134,
-    "C": 46205,
-    "D": 39094,
-    "E": 9328,
+    "B": 15108,
+    "C": 46343,
+    "D": 39067,
+    "E": 9311,
     "F": 1037,
     "G": 347
    },
-   "belowCPct": 44.76,
-   "urgentPct": 9.63,
-   "compliantPct": 55.24
-  },
-  {
-   "council": "Chorley",
-   "code": "E07000118",
-   "region": "North West",
-   "total": 37876,
-   "bandCounts": {
-    "A": 549,
-    "B": 6447,
-    "C": 13934,
-    "D": 12873,
-    "E": 3243,
-    "F": 660,
-    "G": 170
-   },
-   "belowCPct": 44.74,
-   "urgentPct": 10.75,
-   "compliantPct": 55.26
+   "belowCPct": 44.69,
+   "urgentPct": 9.61,
+   "compliantPct": 55.31
   },
   {
    "council": "Preston",
    "code": "E07000123",
    "region": "North West",
-   "total": 55238,
+   "total": 55304,
    "bandCounts": {
-    "A": 863,
-    "B": 9460,
-    "C": 20200,
-    "D": 18443,
-    "E": 4999,
-    "F": 971,
-    "G": 302
+    "A": 865,
+    "B": 9472,
+    "C": 20260,
+    "D": 18452,
+    "E": 4992,
+    "F": 959,
+    "G": 304
    },
-   "belowCPct": 44.74,
-   "urgentPct": 11.35,
-   "compliantPct": 55.26
+   "belowCPct": 44.67,
+   "urgentPct": 11.31,
+   "compliantPct": 55.33
+  },
+  {
+   "council": "Chorley",
+   "code": "E07000118",
+   "region": "North West",
+   "total": 37946,
+   "bandCounts": {
+    "A": 562,
+    "B": 6454,
+    "C": 13988,
+    "D": 12877,
+    "E": 3241,
+    "F": 650,
+    "G": 174
+   },
+   "belowCPct": 44.65,
+   "urgentPct": 10.71,
+   "compliantPct": 55.35
+  },
+  {
+   "council": "Cardiff",
+   "code": "W06000015",
+   "region": "Wales",
+   "total": 129533,
+   "bandCounts": {
+    "A": 1873,
+    "B": 16878,
+    "C": 52953,
+    "D": 45341,
+    "E": 10915,
+    "F": 1240,
+    "G": 333
+   },
+   "belowCPct": 44.64,
+   "urgentPct": 9.64,
+   "compliantPct": 55.36
   },
   {
    "council": "Huntingdonshire",
    "code": "E07000011",
    "region": "East of England",
-   "total": 62791,
+   "total": 62925,
    "bandCounts": {
-    "A": 780,
-    "B": 11610,
-    "C": 22379,
-    "D": 20592,
-    "E": 5931,
-    "F": 1178,
+    "A": 821,
+    "B": 11632,
+    "C": 22445,
+    "D": 20602,
+    "E": 5929,
+    "F": 1175,
     "G": 321
    },
-   "belowCPct": 44.63,
-   "urgentPct": 11.83,
-   "compliantPct": 55.37
+   "belowCPct": 44.54,
+   "urgentPct": 11.8,
+   "compliantPct": 55.46
   },
   {
    "council": "Norwich",
    "code": "E07000148",
    "region": "East of England",
-   "total": 54249,
+   "total": 54306,
    "bandCounts": {
-    "A": 98,
-    "B": 4614,
-    "C": 25370,
-    "D": 19161,
-    "E": 4403,
-    "F": 490,
-    "G": 113
+    "A": 97,
+    "B": 4618,
+    "C": 25474,
+    "D": 19127,
+    "E": 4387,
+    "F": 489,
+    "G": 114
    },
-   "belowCPct": 44.55,
-   "urgentPct": 9.23,
-   "compliantPct": 55.45
+   "belowCPct": 44.41,
+   "urgentPct": 9.19,
+   "compliantPct": 55.59
   },
   {
    "council": "North West Leicestershire",
    "code": "E07000134",
    "region": "East Midlands",
-   "total": 37622,
+   "total": 37679,
    "bandCounts": {
-    "A": 484,
-    "B": 9211,
-    "C": 11273,
-    "D": 11739,
-    "E": 3860,
-    "F": 834,
-    "G": 221
+    "A": 488,
+    "B": 9215,
+    "C": 11314,
+    "D": 11754,
+    "E": 3851,
+    "F": 835,
+    "G": 222
    },
-   "belowCPct": 44.27,
-   "urgentPct": 13.06,
-   "compliantPct": 55.73
+   "belowCPct": 44.22,
+   "urgentPct": 13.03,
+   "compliantPct": 55.78
   },
   {
    "council": "South Gloucestershire",
    "code": "E06000025",
    "region": "South West",
-   "total": 91986,
+   "total": 92097,
    "bandCounts": {
-    "A": 2236,
-    "B": 17754,
-    "C": 31300,
-    "D": 29414,
-    "E": 9147,
-    "F": 1757,
-    "G": 378
+    "A": 2247,
+    "B": 17742,
+    "C": 31419,
+    "D": 29412,
+    "E": 9145,
+    "F": 1758,
+    "G": 374
    },
-   "belowCPct": 44.24,
-   "urgentPct": 12.26,
-   "compliantPct": 55.76
+   "belowCPct": 44.18,
+   "urgentPct": 12.24,
+   "compliantPct": 55.82
   },
   {
    "council": "Stratford-on-Avon",
    "code": "E07000221",
    "region": "West Midlands",
-   "total": 51798,
+   "total": 51872,
    "bandCounts": {
-    "A": 676,
-    "B": 12545,
-    "C": 15731,
-    "D": 14017,
-    "E": 6522,
-    "F": 1806,
-    "G": 501
+    "A": 683,
+    "B": 12576,
+    "C": 15766,
+    "D": 14027,
+    "E": 6513,
+    "F": 1804,
+    "G": 503
    },
-   "belowCPct": 44.11,
-   "urgentPct": 17.05,
-   "compliantPct": 55.89
+   "belowCPct": 44.04,
+   "urgentPct": 17.0,
+   "compliantPct": 55.96
   },
   {
    "council": "West Oxfordshire",
    "code": "E07000181",
    "region": "South East",
-   "total": 40149,
+   "total": 40215,
    "bandCounts": {
-    "A": 284,
-    "B": 8524,
-    "C": 13639,
-    "D": 11266,
-    "E": 4924,
-    "F": 1202,
-    "G": 310
+    "A": 285,
+    "B": 8536,
+    "C": 13696,
+    "D": 11268,
+    "E": 4920,
+    "F": 1201,
+    "G": 309
    },
-   "belowCPct": 44.09,
-   "urgentPct": 16.03,
-   "compliantPct": 55.91
+   "belowCPct": 44.01,
+   "urgentPct": 15.99,
+   "compliantPct": 55.99
   },
   {
    "council": "Dacorum",
    "code": "E07000096",
    "region": "East of England",
-   "total": 52019,
+   "total": 52100,
    "bandCounts": {
-    "A": 272,
-    "B": 6540,
-    "C": 22307,
-    "D": 17182,
-    "E": 4832,
-    "F": 735,
-    "G": 151
+    "A": 282,
+    "B": 6543,
+    "C": 22377,
+    "D": 17191,
+    "E": 4823,
+    "F": 736,
+    "G": 148
    },
-   "belowCPct": 44.02,
-   "urgentPct": 10.99,
-   "compliantPct": 55.98
+   "belowCPct": 43.95,
+   "urgentPct": 10.95,
+   "compliantPct": 56.05
   },
   {
    "council": "Mid Sussex",
    "code": "E07000228",
    "region": "South East",
-   "total": 52510,
+   "total": 52585,
    "bandCounts": {
-    "A": 677,
-    "B": 11557,
-    "C": 17183,
-    "D": 16541,
-    "E": 5277,
-    "F": 1035,
-    "G": 240
+    "A": 693,
+    "B": 11562,
+    "C": 17227,
+    "D": 16553,
+    "E": 5280,
+    "F": 1028,
+    "G": 242
    },
-   "belowCPct": 43.98,
-   "urgentPct": 12.48,
-   "compliantPct": 56.02
+   "belowCPct": 43.93,
+   "urgentPct": 12.46,
+   "compliantPct": 56.07
   },
   {
    "council": "Oxford",
    "code": "E07000178",
    "region": "South East",
-   "total": 50320,
+   "total": 50377,
    "bandCounts": {
     "A": 424,
-    "B": 4971,
-    "C": 22861,
-    "D": 16935,
-    "E": 4412,
-    "F": 573,
-    "G": 144
+    "B": 4984,
+    "C": 22900,
+    "D": 16952,
+    "E": 4398,
+    "F": 576,
+    "G": 143
    },
-   "belowCPct": 43.85,
-   "urgentPct": 10.19,
-   "compliantPct": 56.15
+   "belowCPct": 43.81,
+   "urgentPct": 10.16,
+   "compliantPct": 56.19
   },
   {
    "council": "Test Valley",
    "code": "E07000093",
    "region": "South East",
-   "total": 42736,
+   "total": 42778,
    "bandCounts": {
-    "A": 209,
-    "B": 8861,
-    "C": 14932,
-    "D": 12966,
+    "A": 211,
+    "B": 8856,
+    "C": 14990,
+    "D": 12951,
     "E": 4499,
-    "F": 1023,
-    "G": 246
+    "F": 1028,
+    "G": 243
    },
-   "belowCPct": 43.84,
-   "urgentPct": 13.5,
-   "compliantPct": 56.16
+   "belowCPct": 43.76,
+   "urgentPct": 13.49,
+   "compliantPct": 56.24
   },
   {
    "council": "Maidstone",
    "code": "E07000110",
    "region": "South East",
-   "total": 60383,
+   "total": 60443,
    "bandCounts": {
-    "A": 583,
-    "B": 12299,
-    "C": 21037,
-    "D": 19345,
-    "E": 5771,
-    "F": 1083,
-    "G": 265
+    "A": 593,
+    "B": 12290,
+    "C": 21122,
+    "D": 19321,
+    "E": 5769,
+    "F": 1082,
+    "G": 266
    },
-   "belowCPct": 43.83,
-   "urgentPct": 11.79,
-   "compliantPct": 56.17
+   "belowCPct": 43.74,
+   "urgentPct": 11.77,
+   "compliantPct": 56.26
   },
   {
    "council": "Newcastle upon Tyne",
    "code": "E08000021",
    "region": "North East",
-   "total": 102923,
+   "total": 103071,
    "bandCounts": {
-    "A": 1024,
-    "B": 14181,
-    "C": 42760,
-    "D": 36491,
-    "E": 7555,
-    "F": 776,
-    "G": 136
+    "A": 1066,
+    "B": 14189,
+    "C": 42926,
+    "D": 36461,
+    "E": 7529,
+    "F": 768,
+    "G": 132
    },
-   "belowCPct": 43.68,
-   "urgentPct": 8.23,
-   "compliantPct": 56.32
+   "belowCPct": 43.55,
+   "urgentPct": 8.18,
+   "compliantPct": 56.45
   },
   {
    "council": "Colchester",
    "code": "E07000071",
    "region": "East of England",
-   "total": 65704,
+   "total": 65816,
    "bandCounts": {
-    "A": 452,
-    "B": 11659,
-    "C": 24965,
-    "D": 20619,
-    "E": 6454,
-    "F": 1291,
-    "G": 264
+    "A": 454,
+    "B": 11645,
+    "C": 25098,
+    "D": 20618,
+    "E": 6443,
+    "F": 1292,
+    "G": 266
    },
-   "belowCPct": 43.57,
-   "urgentPct": 12.19,
-   "compliantPct": 56.43
+   "belowCPct": 43.48,
+   "urgentPct": 12.16,
+   "compliantPct": 56.52
   },
   {
    "council": "Harborough",
    "code": "E07000131",
    "region": "East Midlands",
-   "total": 33934,
+   "total": 33978,
    "bandCounts": {
-    "A": 349,
-    "B": 9020,
-    "C": 9780,
-    "D": 10283,
-    "E": 3464,
-    "F": 844,
+    "A": 351,
+    "B": 9044,
+    "C": 9819,
+    "D": 10265,
+    "E": 3467,
+    "F": 838,
     "G": 194
    },
-   "belowCPct": 43.57,
-   "urgentPct": 13.27,
-   "compliantPct": 56.43
+   "belowCPct": 43.45,
+   "urgentPct": 13.24,
+   "compliantPct": 56.55
   },
   {
    "council": "North Tyneside",
    "code": "E08000022",
    "region": "North East",
-   "total": 73626,
+   "total": 73752,
    "bandCounts": {
-    "A": 920,
-    "B": 8665,
-    "C": 31970,
-    "D": 26045,
-    "E": 5249,
-    "F": 663,
+    "A": 927,
+    "B": 8644,
+    "C": 32159,
+    "D": 26011,
+    "E": 5235,
+    "F": 662,
     "G": 114
    },
-   "belowCPct": 43.56,
-   "urgentPct": 8.18,
-   "compliantPct": 56.44
+   "belowCPct": 43.42,
+   "urgentPct": 8.15,
+   "compliantPct": 56.58
   },
   {
    "council": "Camden",
    "code": "E09000007",
    "region": "London",
-   "total": 90130,
+   "total": 90269,
    "bandCounts": {
     "A": 79,
-    "B": 10990,
-    "C": 39840,
-    "D": 30387,
-    "E": 7647,
-    "F": 934,
-    "G": 253
+    "B": 10977,
+    "C": 40041,
+    "D": 30371,
+    "E": 7622,
+    "F": 928,
+    "G": 251
    },
-   "belowCPct": 43.52,
-   "urgentPct": 9.8,
-   "compliantPct": 56.48
+   "belowCPct": 43.39,
+   "urgentPct": 9.75,
+   "compliantPct": 56.61
   },
   {
    "council": "North Northamptonshire",
    "code": "E06000061",
    "region": "East Midlands",
-   "total": 120889,
+   "total": 121089,
    "bandCounts": {
-    "A": 1923,
-    "B": 22980,
-    "C": 43471,
-    "D": 39294,
-    "E": 10934,
-    "F": 1844,
+    "A": 1957,
+    "B": 23012,
+    "C": 43662,
+    "D": 39286,
+    "E": 10886,
+    "F": 1843,
     "G": 443
    },
-   "belowCPct": 43.44,
-   "urgentPct": 10.94,
-   "compliantPct": 56.56
+   "belowCPct": 43.32,
+   "urgentPct": 10.88,
+   "compliantPct": 56.68
   },
   {
    "council": "Lambeth",
    "code": "E09000022",
    "region": "London",
-   "total": 128749,
+   "total": 128884,
    "bandCounts": {
     "A": 149,
-    "B": 16291,
-    "C": 56465,
-    "D": 43911,
-    "E": 10427,
-    "F": 1115,
-    "G": 391
+    "B": 16288,
+    "C": 56662,
+    "D": 43889,
+    "E": 10392,
+    "F": 1112,
+    "G": 392
    },
-   "belowCPct": 43.37,
-   "urgentPct": 9.27,
-   "compliantPct": 56.63
+   "belowCPct": 43.28,
+   "urgentPct": 9.23,
+   "compliantPct": 56.72
   },
   {
    "council": "Rugby",
    "code": "E07000220",
    "region": "West Midlands",
-   "total": 39028,
+   "total": 39089,
    "bandCounts": {
-    "A": 602,
-    "B": 8708,
-    "C": 12836,
-    "D": 12548,
-    "E": 3569,
-    "F": 615,
-    "G": 150
+    "A": 605,
+    "B": 8705,
+    "C": 12909,
+    "D": 12549,
+    "E": 3558,
+    "F": 614,
+    "G": 149
    },
-   "belowCPct": 43.26,
-   "urgentPct": 11.1,
-   "compliantPct": 56.74
+   "belowCPct": 43.16,
+   "urgentPct": 11.05,
+   "compliantPct": 56.84
   },
   {
    "council": "Hounslow",
    "code": "E09000018",
    "region": "London",
-   "total": 83217,
+   "total": 83349,
    "bandCounts": {
-    "A": 271,
-    "B": 15059,
-    "C": 31901,
-    "D": 27954,
-    "E": 6999,
-    "F": 783,
-    "G": 250
+    "A": 272,
+    "B": 15050,
+    "C": 32063,
+    "D": 27945,
+    "E": 6985,
+    "F": 785,
+    "G": 249
    },
-   "belowCPct": 43.24,
-   "urgentPct": 9.65,
-   "compliantPct": 56.76
+   "belowCPct": 43.15,
+   "urgentPct": 9.62,
+   "compliantPct": 56.85
   },
   {
    "council": "Liverpool",
    "code": "E08000012",
    "region": "North West",
-   "total": 186897,
+   "total": 187266,
    "bandCounts": {
-    "A": 679,
-    "B": 22524,
-    "C": 82922,
-    "D": 59982,
-    "E": 16717,
-    "F": 2939,
-    "G": 1134
+    "A": 753,
+    "B": 22505,
+    "C": 83321,
+    "D": 59967,
+    "E": 16656,
+    "F": 2934,
+    "G": 1130
    },
-   "belowCPct": 43.22,
-   "urgentPct": 11.12,
-   "compliantPct": 56.78
+   "belowCPct": 43.09,
+   "urgentPct": 11.06,
+   "compliantPct": 56.91
   },
   {
    "council": "Ashford",
    "code": "E07000105",
    "region": "South East",
-   "total": 43779,
+   "total": 43837,
    "bandCounts": {
-    "A": 226,
-    "B": 8523,
-    "C": 16194,
-    "D": 13080,
-    "E": 4422,
-    "F": 1035,
-    "G": 299
+    "A": 227,
+    "B": 8521,
+    "C": 16241,
+    "D": 13089,
+    "E": 4425,
+    "F": 1037,
+    "G": 297
    },
-   "belowCPct": 43.03,
-   "urgentPct": 13.15,
-   "compliantPct": 56.97
+   "belowCPct": 43.0,
+   "urgentPct": 13.14,
+   "compliantPct": 57.0
   },
   {
    "council": "Wokingham",
    "code": "E06000041",
    "region": "South East",
-   "total": 54265,
+   "total": 54331,
    "bandCounts": {
-    "A": 469,
-    "B": 11903,
-    "C": 18603,
-    "D": 18146,
-    "E": 4418,
-    "F": 607,
-    "G": 119
+    "A": 473,
+    "B": 11923,
+    "C": 18676,
+    "D": 18128,
+    "E": 4409,
+    "F": 604,
+    "G": 118
    },
-   "belowCPct": 42.92,
-   "urgentPct": 9.48,
-   "compliantPct": 57.08
+   "belowCPct": 42.81,
+   "urgentPct": 9.44,
+   "compliantPct": 57.19
   },
   {
    "council": "Hart",
    "code": "E07000089",
    "region": "South East",
-   "total": 31433,
+   "total": 31468,
    "bandCounts": {
-    "A": 271,
-    "B": 6067,
-    "C": 11660,
-    "D": 10320,
-    "E": 2580,
-    "F": 447,
+    "A": 270,
+    "B": 6063,
+    "C": 11696,
+    "D": 10328,
+    "E": 2577,
+    "F": 446,
     "G": 88
    },
-   "belowCPct": 42.74,
-   "urgentPct": 9.91,
-   "compliantPct": 57.26
+   "belowCPct": 42.71,
+   "urgentPct": 9.89,
+   "compliantPct": 57.29
   },
   {
    "council": "Uttlesford",
    "code": "E07000077",
    "region": "East of England",
-   "total": 31272,
+   "total": 31342,
    "bandCounts": {
-    "A": 513,
-    "B": 8355,
-    "C": 9070,
-    "D": 8370,
-    "E": 3657,
-    "F": 1070,
-    "G": 237
+    "A": 515,
+    "B": 8382,
+    "C": 9097,
+    "D": 8394,
+    "E": 3653,
+    "F": 1065,
+    "G": 236
    },
-   "belowCPct": 42.64,
-   "urgentPct": 15.87,
-   "compliantPct": 57.36
+   "belowCPct": 42.59,
+   "urgentPct": 15.81,
+   "compliantPct": 57.41
   },
   {
    "council": "Newport",
    "code": "W06000022",
    "region": "Wales",
-   "total": 54799,
+   "total": 54858,
    "bandCounts": {
-    "A": 808,
-    "B": 8812,
-    "C": 21890,
-    "D": 17811,
-    "E": 4688,
-    "F": 612,
-    "G": 178
+    "A": 821,
+    "B": 8813,
+    "C": 21957,
+    "D": 17808,
+    "E": 4673,
+    "F": 606,
+    "G": 180
    },
-   "belowCPct": 42.5,
-   "urgentPct": 10.0,
-   "compliantPct": 57.5
-  },
-  {
-   "council": "Hammersmith and Fulham",
-   "code": "E09000013",
-   "region": "London",
-   "total": 83043,
-   "bandCounts": {
-    "A": 30,
-    "B": 13106,
-    "C": 34726,
-    "D": 28006,
-    "E": 6260,
-    "F": 674,
-    "G": 241
-   },
-   "belowCPct": 42.36,
-   "urgentPct": 8.64,
-   "compliantPct": 57.64
+   "belowCPct": 42.41,
+   "urgentPct": 9.95,
+   "compliantPct": 57.59
   },
   {
    "council": "Rushmoor",
    "code": "E07000092",
    "region": "South East",
-   "total": 33652,
+   "total": 33681,
    "bandCounts": {
-    "A": 212,
-    "B": 5269,
-    "C": 13917,
-    "D": 10979,
-    "E": 2893,
-    "F": 328,
-    "G": 54
+    "A": 211,
+    "B": 5275,
+    "C": 13951,
+    "D": 10977,
+    "E": 2887,
+    "F": 327,
+    "G": 53
    },
-   "belowCPct": 42.36,
-   "urgentPct": 9.73,
-   "compliantPct": 57.64
+   "belowCPct": 42.29,
+   "urgentPct": 9.7,
+   "compliantPct": 57.71
+  },
+  {
+   "council": "Hammersmith and Fulham",
+   "code": "E09000013",
+   "region": "London",
+   "total": 83215,
+   "bandCounts": {
+    "A": 29,
+    "B": 13137,
+    "C": 34868,
+    "D": 28018,
+    "E": 6253,
+    "F": 671,
+    "G": 239
+   },
+   "belowCPct": 42.28,
+   "urgentPct": 8.61,
+   "compliantPct": 57.72
   },
   {
    "council": "Brent",
    "code": "E09000005",
    "region": "London",
-   "total": 104013,
+   "total": 104191,
    "bandCounts": {
-    "A": 96,
-    "B": 23620,
-    "C": 36408,
-    "D": 34447,
-    "E": 8259,
-    "F": 902,
-    "G": 281
+    "A": 95,
+    "B": 23648,
+    "C": 36651,
+    "D": 34398,
+    "E": 8217,
+    "F": 905,
+    "G": 277
    },
-   "belowCPct": 42.2,
-   "urgentPct": 9.08,
-   "compliantPct": 57.8
+   "belowCPct": 42.04,
+   "urgentPct": 9.02,
+   "compliantPct": 57.96
   },
   {
    "council": "Winchester",
    "code": "E07000094",
    "region": "South East",
-   "total": 44518,
+   "total": 44575,
    "bandCounts": {
-    "A": 868,
-    "B": 9825,
-    "C": 15312,
-    "D": 12804,
-    "E": 4349,
-    "F": 1102,
+    "A": 871,
+    "B": 9829,
+    "C": 15351,
+    "D": 12812,
+    "E": 4355,
+    "F": 1099,
     "G": 258
    },
-   "belowCPct": 41.59,
-   "urgentPct": 12.82,
-   "compliantPct": 58.41
+   "belowCPct": 41.56,
+   "urgentPct": 12.81,
+   "compliantPct": 58.44
   },
   {
    "council": "Bedford",
    "code": "E06000055",
    "region": "East of England",
-   "total": 61759,
+   "total": 61843,
    "bandCounts": {
-    "A": 550,
-    "B": 12647,
-    "C": 22886,
-    "D": 18341,
-    "E": 6042,
-    "F": 1057,
-    "G": 236
+    "A": 552,
+    "B": 12652,
+    "C": 22997,
+    "D": 18320,
+    "E": 6031,
+    "F": 1058,
+    "G": 233
    },
-   "belowCPct": 41.57,
-   "urgentPct": 11.88,
-   "compliantPct": 58.43
+   "belowCPct": 41.46,
+   "urgentPct": 11.84,
+   "compliantPct": 58.54
   },
   {
    "council": "Halton",
    "code": "E06000006",
    "region": "North West",
-   "total": 42183,
+   "total": 42242,
    "bandCounts": {
-    "A": 321,
-    "B": 5477,
-    "C": 18964,
-    "D": 13719,
-    "E": 3084,
-    "F": 497,
+    "A": 330,
+    "B": 5487,
+    "C": 19001,
+    "D": 13725,
+    "E": 3083,
+    "F": 495,
     "G": 121
    },
-   "belowCPct": 41.3,
-   "urgentPct": 8.78,
-   "compliantPct": 58.7
+   "belowCPct": 41.25,
+   "urgentPct": 8.76,
+   "compliantPct": 58.75
   },
   {
    "council": "Exeter",
    "code": "E07000041",
    "region": "South West",
-   "total": 45031,
+   "total": 45113,
    "bandCounts": {
-    "A": 1503,
-    "B": 7244,
-    "C": 17694,
-    "D": 14349,
-    "E": 3521,
-    "F": 566,
-    "G": 154
+    "A": 1505,
+    "B": 7258,
+    "C": 17777,
+    "D": 14342,
+    "E": 3508,
+    "F": 568,
+    "G": 155
    },
-   "belowCPct": 41.28,
-   "urgentPct": 9.42,
-   "compliantPct": 58.72
+   "belowCPct": 41.17,
+   "urgentPct": 9.38,
+   "compliantPct": 58.83
   },
   {
    "council": "Slough",
    "code": "E06000039",
    "region": "South East",
-   "total": 44223,
+   "total": 44306,
    "bandCounts": {
-    "A": 111,
-    "B": 5631,
-    "C": 20272,
-    "D": 14559,
-    "E": 3224,
-    "F": 334,
-    "G": 92
+    "A": 112,
+    "B": 5650,
+    "C": 20375,
+    "D": 14535,
+    "E": 3215,
+    "F": 329,
+    "G": 90
    },
-   "belowCPct": 41.18,
-   "urgentPct": 8.25,
-   "compliantPct": 58.82
+   "belowCPct": 41.01,
+   "urgentPct": 8.2,
+   "compliantPct": 58.99
   },
   {
    "council": "Swindon",
    "code": "E06000030",
    "region": "South West",
-   "total": 75340,
+   "total": 75442,
    "bandCounts": {
-    "A": 769,
-    "B": 12007,
-    "C": 31742,
-    "D": 24728,
-    "E": 5331,
+    "A": 791,
+    "B": 12013,
+    "C": 31848,
+    "D": 24709,
+    "E": 5317,
     "F": 605,
-    "G": 158
+    "G": 159
    },
-   "belowCPct": 40.91,
-   "urgentPct": 8.09,
-   "compliantPct": 59.09
+   "belowCPct": 40.81,
+   "urgentPct": 8.06,
+   "compliantPct": 59.19
   },
   {
    "council": "Cherwell",
    "code": "E07000177",
    "region": "South East",
-   "total": 55158,
+   "total": 55311,
    "bandCounts": {
-    "A": 975,
-    "B": 12552,
-    "C": 19173,
-    "D": 15701,
-    "E": 5274,
-    "F": 1202,
+    "A": 982,
+    "B": 12567,
+    "C": 19287,
+    "D": 15723,
+    "E": 5273,
+    "F": 1198,
     "G": 281
    },
-   "belowCPct": 40.72,
-   "urgentPct": 12.25,
-   "compliantPct": 59.28
+   "belowCPct": 40.63,
+   "urgentPct": 12.21,
+   "compliantPct": 59.37
   },
   {
    "council": "Wandsworth",
    "code": "E09000032",
    "region": "London",
-   "total": 134165,
+   "total": 134394,
    "bandCounts": {
-    "A": 137,
-    "B": 25011,
-    "C": 54840,
-    "D": 42310,
-    "E": 10326,
-    "F": 1184,
-    "G": 357
+    "A": 145,
+    "B": 25064,
+    "C": 55050,
+    "D": 42289,
+    "E": 10305,
+    "F": 1179,
+    "G": 362
    },
-   "belowCPct": 40.38,
-   "urgentPct": 8.85,
-   "compliantPct": 59.62
+   "belowCPct": 40.28,
+   "urgentPct": 8.81,
+   "compliantPct": 59.72
   },
   {
    "council": "Central Bedfordshire",
    "code": "E06000056",
    "region": "East of England",
-   "total": 102321,
+   "total": 102479,
    "bandCounts": {
-    "A": 1552,
-    "B": 25014,
-    "C": 34676,
-    "D": 30959,
-    "E": 8341,
-    "F": 1454,
+    "A": 1564,
+    "B": 25065,
+    "C": 34796,
+    "D": 30946,
+    "E": 8326,
+    "F": 1457,
     "G": 325
    },
-   "belowCPct": 40.15,
-   "urgentPct": 9.89,
-   "compliantPct": 59.85
+   "belowCPct": 40.06,
+   "urgentPct": 9.86,
+   "compliantPct": 59.94
   },
   {
    "council": "South Cambridgeshire",
    "code": "E07000012",
    "region": "East of England",
-   "total": 56920,
+   "total": 56988,
    "bandCounts": {
-    "A": 1920,
-    "B": 14257,
-    "C": 18012,
-    "D": 15562,
+    "A": 1923,
+    "B": 14274,
+    "C": 18072,
+    "D": 15547,
     "E": 5607,
-    "F": 1299,
-    "G": 263
+    "F": 1303,
+    "G": 262
    },
-   "belowCPct": 39.93,
+   "belowCPct": 39.87,
    "urgentPct": 12.59,
-   "compliantPct": 60.07
+   "compliantPct": 60.13
   },
   {
    "council": "Eastleigh",
    "code": "E07000086",
    "region": "South East",
-   "total": 45443,
+   "total": 45480,
    "bandCounts": {
-    "A": 603,
-    "B": 9639,
-    "C": 17135,
-    "D": 14760,
-    "E": 2862,
-    "F": 356,
-    "G": 88
+    "A": 610,
+    "B": 9637,
+    "C": 17178,
+    "D": 14759,
+    "E": 2854,
+    "F": 353,
+    "G": 89
    },
-   "belowCPct": 39.76,
-   "urgentPct": 7.28,
-   "compliantPct": 60.24
+   "belowCPct": 39.7,
+   "urgentPct": 7.25,
+   "compliantPct": 60.3
   },
   {
    "council": "Stevenage",
    "code": "E07000243",
    "region": "East of England",
-   "total": 29914,
+   "total": 30016,
    "bandCounts": {
     "A": 329,
-    "B": 3105,
-    "C": 14636,
-    "D": 9965,
-    "E": 1739,
+    "B": 3172,
+    "C": 14707,
+    "D": 9934,
+    "E": 1734,
     "F": 124,
     "G": 16
    },
-   "belowCPct": 39.59,
-   "urgentPct": 6.28,
-   "compliantPct": 60.41
+   "belowCPct": 39.34,
+   "urgentPct": 6.24,
+   "compliantPct": 60.66
   },
   {
    "council": "South Derbyshire",
    "code": "E07000039",
    "region": "East Midlands",
-   "total": 39025,
+   "total": 39070,
    "bandCounts": {
-    "A": 519,
-    "B": 11222,
-    "C": 11969,
-    "D": 11013,
-    "E": 3376,
-    "F": 761,
-    "G": 165
+    "A": 531,
+    "B": 11215,
+    "C": 12011,
+    "D": 11018,
+    "E": 3369,
+    "F": 762,
+    "G": 164
    },
-   "belowCPct": 39.24,
-   "urgentPct": 11.02,
-   "compliantPct": 60.76
+   "belowCPct": 39.19,
+   "urgentPct": 10.99,
+   "compliantPct": 60.81
   },
   {
    "council": "Tewkesbury",
    "code": "E07000083",
    "region": "South West",
-   "total": 35348,
+   "total": 35427,
    "bandCounts": {
-    "A": 1281,
-    "B": 9259,
-    "C": 10966,
-    "D": 9635,
-    "E": 3261,
-    "F": 742,
-    "G": 204
+    "A": 1300,
+    "B": 9274,
+    "C": 10988,
+    "D": 9659,
+    "E": 3262,
+    "F": 741,
+    "G": 203
    },
-   "belowCPct": 39.16,
-   "urgentPct": 11.9,
-   "compliantPct": 60.84
+   "belowCPct": 39.14,
+   "urgentPct": 11.87,
+   "compliantPct": 60.86
   },
   {
    "council": "Bracknell Forest",
    "code": "E06000036",
    "region": "South East",
-   "total": 42483,
+   "total": 42529,
    "bandCounts": {
     "A": 710,
-    "B": 7715,
-    "C": 17458,
-    "D": 13646,
-    "E": 2572,
+    "B": 7719,
+    "C": 17499,
+    "D": 13649,
+    "E": 2571,
     "F": 316,
-    "G": 66
+    "G": 65
    },
-   "belowCPct": 39.07,
-   "urgentPct": 6.95,
-   "compliantPct": 60.93
+   "belowCPct": 39.03,
+   "urgentPct": 6.94,
+   "compliantPct": 60.97
   },
   {
    "council": "Basingstoke and Deane",
    "code": "E07000084",
    "region": "South East",
-   "total": 61100,
+   "total": 61196,
    "bandCounts": {
-    "A": 453,
-    "B": 11105,
-    "C": 25725,
-    "D": 17980,
-    "E": 4719,
-    "F": 891,
-    "G": 227
+    "A": 461,
+    "B": 11136,
+    "C": 25814,
+    "D": 17964,
+    "E": 4709,
+    "F": 887,
+    "G": 225
    },
-   "belowCPct": 38.98,
-   "urgentPct": 9.55,
-   "compliantPct": 61.02
+   "belowCPct": 38.87,
+   "urgentPct": 9.51,
+   "compliantPct": 61.13
   },
   {
    "council": "Welwyn Hatfield",
    "code": "E07000241",
    "region": "East of England",
-   "total": 38971,
+   "total": 39015,
    "bandCounts": {
-    "A": 180,
-    "B": 4757,
-    "C": 18879,
-    "D": 12065,
-    "E": 2629,
+    "A": 181,
+    "B": 4762,
+    "C": 18928,
+    "D": 12061,
+    "E": 2623,
     "F": 410,
-    "G": 51
+    "G": 50
    },
-   "belowCPct": 38.89,
-   "urgentPct": 7.93,
-   "compliantPct": 61.11
+   "belowCPct": 38.82,
+   "urgentPct": 7.9,
+   "compliantPct": 61.18
   },
   {
    "council": "Vale of White Horse",
    "code": "E07000180",
    "region": "South East",
-   "total": 50732,
+   "total": 50831,
    "bandCounts": {
-    "A": 915,
-    "B": 14332,
-    "C": 15849,
-    "D": 14093,
-    "E": 4365,
-    "F": 959,
-    "G": 219
+    "A": 927,
+    "B": 14374,
+    "C": 15889,
+    "D": 14106,
+    "E": 4355,
+    "F": 962,
+    "G": 218
    },
-   "belowCPct": 38.71,
-   "urgentPct": 10.93,
-   "compliantPct": 61.29
-  },
-  {
-   "council": "Westminster",
-   "code": "E09000033",
-   "region": "London",
-   "total": 110263,
-   "bandCounts": {
-    "A": 102,
-    "B": 15071,
-    "C": 52794,
-    "D": 31961,
-    "E": 9004,
-    "F": 1012,
-    "G": 319
-   },
-   "belowCPct": 38.36,
-   "urgentPct": 9.37,
-   "compliantPct": 61.64
+   "belowCPct": 38.64,
+   "urgentPct": 10.89,
+   "compliantPct": 61.36
   },
   {
    "council": "Dartford",
    "code": "E07000107",
    "region": "South East",
-   "total": 39210,
+   "total": 39256,
    "bandCounts": {
     "A": 257,
-    "B": 11062,
-    "C": 12871,
-    "D": 11556,
-    "E": 3018,
-    "F": 368,
+    "B": 11066,
+    "C": 12917,
+    "D": 11567,
+    "E": 3004,
+    "F": 367,
     "G": 78
    },
-   "belowCPct": 38.31,
-   "urgentPct": 8.83,
-   "compliantPct": 61.69
+   "belowCPct": 38.25,
+   "urgentPct": 8.79,
+   "compliantPct": 61.75
+  },
+  {
+   "council": "Westminster",
+   "code": "E09000033",
+   "region": "London",
+   "total": 110386,
+   "bandCounts": {
+    "A": 102,
+    "B": 15066,
+    "C": 53027,
+    "D": 31872,
+    "E": 8990,
+    "F": 1007,
+    "G": 322
+   },
+   "belowCPct": 38.22,
+   "urgentPct": 9.35,
+   "compliantPct": 61.78
   },
   {
    "council": "Harlow",
    "code": "E07000073",
    "region": "East of England",
-   "total": 33004,
+   "total": 33060,
    "bandCounts": {
-    "A": 164,
-    "B": 4590,
-    "C": 15605,
-    "D": 10802,
-    "E": 1664,
+    "A": 178,
+    "B": 4608,
+    "C": 15648,
+    "D": 10784,
+    "E": 1663,
     "F": 153,
     "G": 26
    },
-   "belowCPct": 38.31,
-   "urgentPct": 5.58,
-   "compliantPct": 61.69
+   "belowCPct": 38.19,
+   "urgentPct": 5.57,
+   "compliantPct": 61.81
   },
   {
    "council": "Islington",
    "code": "E09000019",
    "region": "London",
-   "total": 90861,
+   "total": 91023,
    "bandCounts": {
-    "A": 94,
-    "B": 13316,
-    "C": 42791,
-    "D": 27975,
-    "E": 5846,
+    "A": 93,
+    "B": 13302,
+    "C": 42997,
+    "D": 27972,
+    "E": 5820,
     "F": 650,
     "G": 189
    },
-   "belowCPct": 38.15,
-   "urgentPct": 7.36,
-   "compliantPct": 61.85
+   "belowCPct": 38.05,
+   "urgentPct": 7.32,
+   "compliantPct": 61.95
   },
   {
    "council": "Crawley",
    "code": "E07000226",
    "region": "South East",
-   "total": 33372,
+   "total": 33414,
    "bandCounts": {
-    "A": 71,
-    "B": 4655,
-    "C": 16039,
-    "D": 10678,
-    "E": 1715,
-    "F": 174,
-    "G": 40
+    "A": 72,
+    "B": 4652,
+    "C": 16098,
+    "D": 10670,
+    "E": 1711,
+    "F": 173,
+    "G": 38
    },
-   "belowCPct": 37.78,
-   "urgentPct": 5.78,
-   "compliantPct": 62.22
+   "belowCPct": 37.68,
+   "urgentPct": 5.75,
+   "compliantPct": 62.32
   },
   {
    "council": "Manchester",
    "code": "E08000003",
    "region": "North West",
-   "total": 213721,
+   "total": 213880,
    "bandCounts": {
     "A": 764,
-    "B": 35223,
-    "C": 97717,
-    "D": 62094,
-    "E": 15531,
+    "B": 35204,
+    "C": 98033,
+    "D": 62046,
+    "E": 15449,
     "F": 1869,
-    "G": 523
+    "G": 515
    },
-   "belowCPct": 37.44,
-   "urgentPct": 8.39,
-   "compliantPct": 62.56
+   "belowCPct": 37.35,
+   "urgentPct": 8.34,
+   "compliantPct": 62.65
   },
   {
    "council": "Peterborough",
    "code": "E06000031",
    "region": "East of England",
-   "total": 75239,
+   "total": 75336,
    "bandCounts": {
-    "A": 708,
-    "B": 14814,
-    "C": 31598,
-    "D": 21175,
-    "E": 5993,
-    "F": 779,
-    "G": 172
+    "A": 709,
+    "B": 14855,
+    "C": 31674,
+    "D": 21161,
+    "E": 5984,
+    "F": 782,
+    "G": 171
    },
-   "belowCPct": 37.37,
-   "urgentPct": 9.23,
-   "compliantPct": 62.63
+   "belowCPct": 37.3,
+   "urgentPct": 9.21,
+   "compliantPct": 62.7
   },
   {
    "council": "Greenwich",
    "code": "E09000011",
    "region": "London",
-   "total": 101549,
+   "total": 101681,
    "bandCounts": {
-    "A": 362,
-    "B": 27015,
-    "C": 36295,
-    "D": 29659,
-    "E": 7155,
-    "F": 853,
-    "G": 210
+    "A": 366,
+    "B": 27018,
+    "C": 36453,
+    "D": 29646,
+    "E": 7136,
+    "F": 851,
+    "G": 211
    },
-   "belowCPct": 37.3,
-   "urgentPct": 8.09,
-   "compliantPct": 62.7
+   "belowCPct": 37.22,
+   "urgentPct": 8.06,
+   "compliantPct": 62.78
   },
   {
    "council": "Cambridge",
    "code": "E07000008",
    "region": "East of England",
-   "total": 46310,
+   "total": 46368,
    "bandCounts": {
-    "A": 782,
-    "B": 10339,
-    "C": 18051,
-    "D": 13086,
-    "E": 3515,
-    "F": 438,
-    "G": 99
+    "A": 785,
+    "B": 10326,
+    "C": 18125,
+    "D": 13090,
+    "E": 3505,
+    "F": 437,
+    "G": 100
    },
-   "belowCPct": 37.01,
-   "urgentPct": 8.75,
-   "compliantPct": 62.99
+   "belowCPct": 36.95,
+   "urgentPct": 8.72,
+   "compliantPct": 63.05
   },
   {
    "council": "Telford and Wrekin",
    "code": "E06000020",
    "region": "West Midlands",
-   "total": 66435,
+   "total": 66543,
    "bandCounts": {
-    "A": 1076,
-    "B": 15154,
-    "C": 25835,
-    "D": 19307,
-    "E": 4157,
+    "A": 1083,
+    "B": 15187,
+    "C": 25944,
+    "D": 19266,
+    "E": 4155,
     "F": 718,
-    "G": 188
+    "G": 190
    },
-   "belowCPct": 36.68,
-   "urgentPct": 7.62,
-   "compliantPct": 63.32
+   "belowCPct": 36.56,
+   "urgentPct": 7.61,
+   "compliantPct": 63.44
   },
   {
    "council": "Newham",
    "code": "E09000025",
    "region": "London",
-   "total": 113678,
+   "total": 113802,
    "bandCounts": {
-    "A": 100,
-    "B": 32173,
-    "C": 39869,
-    "D": 34846,
-    "E": 5993,
-    "F": 509,
-    "G": 188
+    "A": 96,
+    "B": 32135,
+    "C": 40126,
+    "D": 34781,
+    "E": 5968,
+    "F": 507,
+    "G": 189
    },
-   "belowCPct": 36.54,
-   "urgentPct": 5.89,
-   "compliantPct": 63.46
+   "belowCPct": 36.42,
+   "urgentPct": 5.86,
+   "compliantPct": 63.58
   },
   {
    "council": "Southwark",
    "code": "E09000028",
    "region": "London",
-   "total": 115772,
+   "total": 115926,
    "bandCounts": {
     "A": 180,
-    "B": 26252,
-    "C": 48589,
-    "D": 31671,
-    "E": 7885,
+    "B": 26318,
+    "C": 48716,
+    "D": 31655,
+    "E": 7863,
     "F": 951,
-    "G": 244
+    "G": 243
    },
-   "belowCPct": 35.2,
-   "urgentPct": 7.84,
-   "compliantPct": 64.8
+   "belowCPct": 35.12,
+   "urgentPct": 7.81,
+   "compliantPct": 64.88
   },
   {
    "council": "Hackney",
    "code": "E09000012",
    "region": "London",
-   "total": 96806,
+   "total": 97259,
    "bandCounts": {
-    "A": 165,
-    "B": 18242,
-    "C": 45126,
-    "D": 26414,
-    "E": 5775,
-    "F": 742,
-    "G": 342
+    "A": 164,
+    "B": 18245,
+    "C": 45516,
+    "D": 26496,
+    "E": 5762,
+    "F": 735,
+    "G": 341
    },
-   "belowCPct": 34.37,
-   "urgentPct": 7.09,
-   "compliantPct": 65.63
+   "belowCPct": 34.27,
+   "urgentPct": 7.03,
+   "compliantPct": 65.73
   },
   {
    "council": "City of London",
    "code": "E09000001",
    "region": "London",
-   "total": 6208,
+   "total": 6237,
    "bandCounts": {
     "A": 3,
     "B": 1449,
-    "C": 2656,
-    "D": 1469,
-    "E": 527,
+    "C": 2674,
+    "D": 1479,
+    "E": 528,
     "F": 66,
     "G": 38
    },
-   "belowCPct": 33.83,
-   "urgentPct": 10.16,
-   "compliantPct": 66.17
+   "belowCPct": 33.85,
+   "urgentPct": 10.13,
+   "compliantPct": 66.15
   },
   {
    "council": "Milton Keynes",
    "code": "E06000042",
    "region": "South East",
-   "total": 101224,
+   "total": 101339,
    "bandCounts": {
-    "A": 2002,
-    "B": 24238,
-    "C": 41786,
-    "D": 27491,
-    "E": 4924,
-    "F": 637,
+    "A": 2025,
+    "B": 24239,
+    "C": 41915,
+    "D": 27475,
+    "E": 4909,
+    "F": 630,
     "G": 146
    },
-   "belowCPct": 32.8,
-   "urgentPct": 5.64,
-   "compliantPct": 67.2
+   "belowCPct": 32.72,
+   "urgentPct": 5.61,
+   "compliantPct": 67.28
   },
   {
    "council": "Knowsley",
    "code": "E08000011",
    "region": "North West",
-   "total": 54615,
+   "total": 54681,
    "bandCounts": {
-    "A": 318,
-    "B": 9901,
-    "C": 26774,
-    "D": 13178,
-    "E": 3534,
-    "F": 678,
+    "A": 324,
+    "B": 9892,
+    "C": 26863,
+    "D": 13173,
+    "E": 3521,
+    "F": 676,
     "G": 232
    },
-   "belowCPct": 32.27,
-   "urgentPct": 8.14,
-   "compliantPct": 67.73
+   "belowCPct": 32.19,
+   "urgentPct": 8.1,
+   "compliantPct": 67.81
   },
   {
    "council": "Salford",
    "code": "E08000006",
    "region": "North West",
-   "total": 115657,
+   "total": 115734,
    "bandCounts": {
-    "A": 685,
-    "B": 27652,
-    "C": 51800,
-    "D": 27189,
-    "E": 7003,
-    "F": 941,
+    "A": 689,
+    "B": 27631,
+    "C": 51966,
+    "D": 27158,
+    "E": 6961,
+    "F": 942,
     "G": 387
    },
-   "belowCPct": 30.71,
-   "urgentPct": 7.2,
-   "compliantPct": 69.29
+   "belowCPct": 30.63,
+   "urgentPct": 7.16,
+   "compliantPct": 69.37
   },
   {
    "council": "Tower Hamlets",
    "code": "E09000030",
    "region": "London",
-   "total": 130932,
+   "total": 131466,
    "bandCounts": {
-    "A": 281,
-    "B": 48068,
-    "C": 55842,
-    "D": 21999,
-    "E": 4257,
+    "A": 280,
+    "B": 48381,
+    "C": 56085,
+    "D": 21978,
+    "E": 4259,
     "F": 386,
-    "G": 99
+    "G": 97
    },
-   "belowCPct": 20.42,
-   "urgentPct": 3.62,
-   "compliantPct": 79.58
+   "belowCPct": 20.32,
+   "urgentPct": 3.61,
+   "compliantPct": 79.68
   }
  ]
 }
