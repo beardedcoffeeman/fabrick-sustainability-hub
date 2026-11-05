@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-10-07T08:30:02.000Z",
+  "generatedAt": "2026-11-04T09:30:06.000Z",
   "source": {
     "name": "Building Materials and Components Statistics",
     "publisher": "Department for Business and Trade (DBT)",
-    "url": "https://www.gov.uk/government/statistics/building-materials-and-components-statistics-september-2026",
-    "releaseDate": "2026-10-07",
-    "dataPeriod": "Aug 2026",
+    "url": "https://www.gov.uk/government/statistics/building-materials-and-components-statistics-october-2026",
+    "releaseDate": "2026-11-04",
+    "dataPeriod": "Sep 2026",
     "indexBase": "2015 = 100",
-    "nextRelease": "Early November 2026",
+    "nextRelease": "Early December 2026",
     "note": "Auto-ingested from Table 2 (Monthly PPI of construction materials) of the DBT Excel attachment. Confidential indices ([c] in source) excluded."
   },
   "materials": [
@@ -15,336 +15,336 @@
       "id": "structural-steel",
       "name": "Fabricated structural steel",
       "category": "Metals",
-      "currentIndex": 171.9,
-      "previousMonthIndex": 170.5,
-      "yearAgoIndex": 141.8,
-      "momChange": 0.8,
-      "yoyChange": 21.2,
-      "trend": "stable",
+      "currentIndex": 168.9,
+      "previousMonthIndex": 171.9,
+      "yearAgoIndex": 140.9,
+      "momChange": -1.7,
+      "yoyChange": 19.9,
+      "trend": "down",
       "unit": "Index (2015=100)",
       "sparkline": [
-        162.7,
         168.1,
         170.1,
-        169.3,
+        171.3,
         170.5,
-        171.9
+        171.9,
+        168.9
       ],
       "sparklineLabels": [
-        "Mar",
         "Apr",
         "May",
         "Jun",
         "Jul",
-        "Aug"
+        "Aug",
+        "Sep"
       ]
     },
     {
       "id": "metal-doors-windows",
       "name": "Metal doors & windows",
       "category": "Metals",
-      "currentIndex": 188.5,
-      "previousMonthIndex": 188.7,
-      "yearAgoIndex": 181.1,
-      "momChange": -0.1,
-      "yoyChange": 4.1,
+      "currentIndex": 188.8,
+      "previousMonthIndex": 188.5,
+      "yearAgoIndex": 181,
+      "momChange": 0.2,
+      "yoyChange": 4.3,
       "trend": "stable",
       "unit": "Index (2015=100)",
       "sparkline": [
-        183.2,
         185.2,
         186.5,
         186.6,
         188.7,
-        188.5
+        188.5,
+        188.8
       ],
       "sparklineLabels": [
-        "Mar",
         "Apr",
         "May",
         "Jun",
         "Jul",
-        "Aug"
+        "Aug",
+        "Sep"
       ]
     },
     {
       "id": "taps-valves",
       "name": "Taps & valves (sanitaryware)",
       "category": "Metals",
-      "currentIndex": 170.8,
-      "previousMonthIndex": 171.7,
+      "currentIndex": 171.7,
+      "previousMonthIndex": 170.8,
       "yearAgoIndex": 158.6,
-      "momChange": -0.5,
-      "yoyChange": 7.7,
+      "momChange": 0.5,
+      "yoyChange": 8.3,
       "trend": "stable",
       "unit": "Index (2015=100)",
       "sparkline": [
         164.2,
-        164.2,
         166.4,
         166.4,
         171.7,
-        170.8
+        170.8,
+        171.7
       ],
       "sparklineLabels": [
-        "Mar",
         "Apr",
         "May",
         "Jun",
         "Jul",
-        "Aug"
+        "Aug",
+        "Sep"
       ]
     },
     {
       "id": "screws-fixings",
       "name": "Screws & fixings",
       "category": "Metals",
-      "currentIndex": 141.6,
-      "previousMonthIndex": 139.7,
-      "yearAgoIndex": 140.3,
-      "momChange": 1.4,
-      "yoyChange": 0.9,
-      "trend": "up",
+      "currentIndex": 141.4,
+      "previousMonthIndex": 141.4,
+      "yearAgoIndex": 140.4,
+      "momChange": 0,
+      "yoyChange": 0.7,
+      "trend": "stable",
       "unit": "Index (2015=100)",
       "sparkline": [
         140.8,
         140.8,
-        140.8,
         139.6,
         139.7,
-        141.6
+        141.4,
+        141.4
       ],
       "sparklineLabels": [
-        "Mar",
         "Apr",
         "May",
         "Jun",
         "Jul",
-        "Aug"
+        "Aug",
+        "Sep"
       ]
     },
     {
       "id": "central-heating-boilers",
       "name": "Central heating boilers",
       "category": "Metals",
-      "currentIndex": 156.6,
-      "previousMonthIndex": 148.8,
+      "currentIndex": 157.8,
+      "previousMonthIndex": 156.6,
       "yearAgoIndex": 148.2,
-      "momChange": 5.2,
-      "yoyChange": 5.7,
-      "trend": "up",
+      "momChange": 0.8,
+      "yoyChange": 6.5,
+      "trend": "stable",
       "unit": "Index (2015=100)",
       "sparkline": [
-        152.3,
         148.7,
         148.7,
         148.7,
         148.8,
-        156.6
+        156.6,
+        157.8
       ],
       "sparklineLabels": [
-        "Mar",
         "Apr",
         "May",
         "Jun",
         "Jul",
-        "Aug"
+        "Aug",
+        "Sep"
       ]
     },
     {
       "id": "metal-sanitaryware",
       "name": "Metal sanitaryware",
       "category": "Metals",
-      "currentIndex": 134.8,
-      "previousMonthIndex": 132.5,
+      "currentIndex": 134.9,
+      "previousMonthIndex": 134.9,
       "yearAgoIndex": 127.5,
-      "momChange": 1.7,
-      "yoyChange": 5.7,
-      "trend": "up",
+      "momChange": 0,
+      "yoyChange": 5.8,
+      "trend": "stable",
       "unit": "Index (2015=100)",
       "sparkline": [
-        128.1,
         129.3,
         129.1,
         130.5,
         132.5,
-        134.8
+        134.9,
+        134.9
       ],
       "sparklineLabels": [
-        "Mar",
         "Apr",
         "May",
         "Jun",
         "Jul",
-        "Aug"
+        "Aug",
+        "Sep"
       ]
     },
     {
       "id": "precast-concrete",
       "name": "Pre-cast concrete products",
       "category": "Cement & Concrete",
-      "currentIndex": 196.1,
-      "previousMonthIndex": 196.3,
-      "yearAgoIndex": 193.2,
-      "momChange": -0.1,
-      "yoyChange": 1.5,
+      "currentIndex": 197.7,
+      "previousMonthIndex": 196.5,
+      "yearAgoIndex": 191.2,
+      "momChange": 0.6,
+      "yoyChange": 3.4,
       "trend": "stable",
       "unit": "Index (2015=100)",
       "sparkline": [
-        189.3,
         189.9,
         194.8,
-        195.2,
-        196.3,
-        196.1
+        195.4,
+        196.4,
+        196.5,
+        197.7
       ],
       "sparklineLabels": [
-        "Mar",
         "Apr",
         "May",
         "Jun",
         "Jul",
-        "Aug"
+        "Aug",
+        "Sep"
       ]
     },
     {
       "id": "concrete-blocks-bricks",
       "name": "Concrete blocks, bricks & flagstones",
       "category": "Cement & Concrete",
-      "currentIndex": 180.5,
-      "previousMonthIndex": 180.7,
-      "yearAgoIndex": 179.5,
-      "momChange": -0.1,
-      "yoyChange": 0.6,
+      "currentIndex": 181.5,
+      "previousMonthIndex": 181.1,
+      "yearAgoIndex": 176.2,
+      "momChange": 0.2,
+      "yoyChange": 3,
       "trend": "stable",
       "unit": "Index (2015=100)",
       "sparkline": [
-        173.3,
         173.7,
         178.7,
-        179.2,
-        180.7,
-        180.5
+        179.6,
+        180.9,
+        181.1,
+        181.5
       ],
       "sparklineLabels": [
-        "Mar",
         "Apr",
         "May",
         "Jun",
         "Jul",
-        "Aug"
+        "Aug",
+        "Sep"
       ]
     },
     {
       "id": "readymix-concrete",
       "name": "Ready-mixed concrete",
       "category": "Cement & Concrete",
-      "currentIndex": 156.7,
-      "previousMonthIndex": 159.1,
-      "yearAgoIndex": 157.8,
-      "momChange": -1.5,
-      "yoyChange": -0.7,
-      "trend": "down",
+      "currentIndex": 156.9,
+      "previousMonthIndex": 156.9,
+      "yearAgoIndex": 157.7,
+      "momChange": 0,
+      "yoyChange": -0.5,
+      "trend": "stable",
       "unit": "Index (2015=100)",
       "sparkline": [
-        159.8,
         160.4,
         160.3,
         159.9,
         159.1,
-        156.7
+        156.9,
+        156.9
       ],
       "sparklineLabels": [
-        "Mar",
         "Apr",
         "May",
         "Jun",
         "Jul",
-        "Aug"
+        "Aug",
+        "Sep"
       ]
     },
     {
       "id": "cement",
       "name": "Cement",
       "category": "Cement & Concrete",
-      "currentIndex": 140.7,
+      "currentIndex": 142,
       "previousMonthIndex": 140.7,
-      "yearAgoIndex": 141.9,
-      "momChange": 0,
-      "yoyChange": -0.8,
+      "yearAgoIndex": 140.5,
+      "momChange": 0.9,
+      "yoyChange": 1.1,
       "trend": "stable",
       "unit": "Index (2015=100)",
       "sparkline": [
-        140.1,
         139.4,
         139.9,
         140.7,
         140.7,
-        140.7
+        140.7,
+        142
       ],
       "sparklineLabels": [
-        "Mar",
         "Apr",
         "May",
         "Jun",
         "Jul",
-        "Aug"
+        "Aug",
+        "Sep"
       ]
     },
     {
       "id": "rebar-steel",
       "name": "Reinforcing bar (rebar steel)",
       "category": "Cement & Concrete",
-      "currentIndex": 156,
-      "previousMonthIndex": 155,
-      "yearAgoIndex": 138.7,
-      "momChange": 0.6,
-      "yoyChange": 12.5,
-      "trend": "stable",
+      "currentIndex": 158.7,
+      "previousMonthIndex": 156,
+      "yearAgoIndex": 136.7,
+      "momChange": 1.7,
+      "yoyChange": 16.1,
+      "trend": "up",
       "unit": "Index (2015=100)",
       "sparkline": [
-        139.4,
         144.4,
         147.9,
-        149.4,
+        153.2,
         155,
-        156
+        156,
+        158.7
       ],
       "sparklineLabels": [
-        "Mar",
         "Apr",
         "May",
         "Jun",
         "Jul",
-        "Aug"
+        "Aug",
+        "Sep"
       ]
     },
     {
       "id": "sand-gravel-incl-levy",
       "name": "Sand & gravel (incl. aggregate levy)",
       "category": "Aggregates",
-      "currentIndex": 162.3,
-      "previousMonthIndex": 162.3,
-      "yearAgoIndex": 149,
-      "momChange": 0,
-      "yoyChange": 8.9,
+      "currentIndex": 161.8,
+      "previousMonthIndex": 161.7,
+      "yearAgoIndex": 150.9,
+      "momChange": 0.1,
+      "yoyChange": 7.2,
       "trend": "stable",
       "unit": "Index (2015=100)",
       "sparkline": [
-        157,
         156.9,
-        163.5,
-        162.3,
-        162.3,
-        162.3
+        162.7,
+        161.7,
+        161.7,
+        161.7,
+        161.8
       ],
       "sparklineLabels": [
-        "Mar",
         "Apr",
         "May",
         "Jun",
         "Jul",
-        "Aug"
+        "Aug",
+        "Sep"
       ]
     },
     {
@@ -352,167 +352,167 @@
       "name": "Sand & gravel (excl. aggregate levy)",
       "category": "Aggregates",
       "currentIndex": 151,
-      "previousMonthIndex": 150.7,
-      "yearAgoIndex": 147.3,
-      "momChange": 0.2,
-      "yoyChange": 2.5,
+      "previousMonthIndex": 151,
+      "yearAgoIndex": 148.7,
+      "momChange": 0,
+      "yoyChange": 1.5,
       "trend": "stable",
       "unit": "Index (2015=100)",
       "sparkline": [
-        152.1,
         149.9,
         151.8,
         151.1,
         150.7,
+        151,
         151
       ],
       "sparklineLabels": [
-        "Mar",
         "Apr",
         "May",
         "Jun",
         "Jul",
-        "Aug"
+        "Aug",
+        "Sep"
       ]
     },
     {
       "id": "asphalt-bituminous",
       "name": "Bituminous mixtures (asphalt)",
       "category": "Aggregates",
-      "currentIndex": 149.8,
-      "previousMonthIndex": 154,
-      "yearAgoIndex": 145.1,
-      "momChange": -2.7,
-      "yoyChange": 3.2,
-      "trend": "down",
+      "currentIndex": 149.9,
+      "previousMonthIndex": 149.8,
+      "yearAgoIndex": 144.1,
+      "momChange": 0.1,
+      "yoyChange": 4,
+      "trend": "stable",
       "unit": "Index (2015=100)",
       "sparkline": [
-        142.9,
         146.1,
         153.9,
         155,
         154,
-        149.8
+        149.8,
+        149.9
       ],
       "sparklineLabels": [
-        "Mar",
         "Apr",
         "May",
         "Jun",
         "Jul",
-        "Aug"
+        "Aug",
+        "Sep"
       ]
     },
     {
       "id": "softwood-imported",
       "name": "Imported sawn/planed timber",
       "category": "Timber",
-      "currentIndex": 173.8,
-      "previousMonthIndex": 176.9,
-      "yearAgoIndex": 176.7,
-      "momChange": -1.8,
-      "yoyChange": -1.6,
-      "trend": "down",
+      "currentIndex": 173.1,
+      "previousMonthIndex": 173.9,
+      "yearAgoIndex": 176.4,
+      "momChange": -0.5,
+      "yoyChange": -1.9,
+      "trend": "stable",
       "unit": "Index (2015=100)",
       "sparkline": [
-        172.1,
         173.2,
         178.5,
         179.4,
-        176.9,
-        173.8
+        177,
+        173.9,
+        173.1
       ],
       "sparklineLabels": [
-        "Mar",
         "Apr",
         "May",
         "Jun",
         "Jul",
-        "Aug"
+        "Aug",
+        "Sep"
       ]
     },
     {
       "id": "timber-doors-windows",
       "name": "Timber doors & windows",
       "category": "Timber",
-      "currentIndex": 140.6,
-      "previousMonthIndex": 140.6,
-      "yearAgoIndex": 135.7,
-      "momChange": 0,
-      "yoyChange": 3.6,
+      "currentIndex": 139,
+      "previousMonthIndex": 140.4,
+      "yearAgoIndex": 137.3,
+      "momChange": -1,
+      "yoyChange": 1.2,
       "trend": "stable",
       "unit": "Index (2015=100)",
       "sparkline": [
         140.2,
         140.2,
-        140.2,
         140.5,
         140.6,
-        140.6
+        140.4,
+        139
       ],
       "sparklineLabels": [
-        "Mar",
         "Apr",
         "May",
         "Jun",
         "Jul",
-        "Aug"
+        "Aug",
+        "Sep"
       ]
     },
     {
       "id": "builders-woodwork",
       "name": "Builders' woodwork",
       "category": "Timber",
-      "currentIndex": 169,
-      "previousMonthIndex": 167.9,
-      "yearAgoIndex": 162.3,
-      "momChange": 0.7,
-      "yoyChange": 4.1,
+      "currentIndex": 168.6,
+      "previousMonthIndex": 169,
+      "yearAgoIndex": 163.3,
+      "momChange": -0.2,
+      "yoyChange": 3.2,
       "trend": "stable",
       "unit": "Index (2015=100)",
       "sparkline": [
-        166.7,
         167.6,
         167.9,
         169,
         167.9,
-        169
+        169,
+        168.6
       ],
       "sparklineLabels": [
-        "Mar",
         "Apr",
         "May",
         "Jun",
         "Jul",
-        "Aug"
+        "Aug",
+        "Sep"
       ]
     },
     {
       "id": "plywood-imported",
       "name": "Imported plywood",
       "category": "Timber",
-      "currentIndex": 140.2,
-      "previousMonthIndex": 141.5,
-      "yearAgoIndex": 130.9,
-      "momChange": -0.9,
-      "yoyChange": 7.1,
-      "trend": "stable",
+      "currentIndex": 137.8,
+      "previousMonthIndex": 140.2,
+      "yearAgoIndex": 128.9,
+      "momChange": -1.7,
+      "yoyChange": 6.9,
+      "trend": "down",
       "unit": "Index (2015=100)",
       "sparkline": [
-        131.7,
         133.8,
         134.6,
         136.6,
         141.5,
-        140.2
+        140.2,
+        137.8
       ],
       "sparklineLabels": [
-        "Mar",
         "Apr",
         "May",
         "Jun",
         "Jul",
-        "Aug"
+        "Aug",
+        "Sep"
       ]
     },
     {
@@ -520,27 +520,27 @@
       "name": "Plastic doors & windows",
       "category": "Plastics",
       "currentIndex": 179.3,
-      "previousMonthIndex": 178.8,
+      "previousMonthIndex": 179.5,
       "yearAgoIndex": 170,
-      "momChange": 0.3,
+      "momChange": -0.1,
       "yoyChange": 5.5,
       "trend": "stable",
       "unit": "Index (2015=100)",
       "sparkline": [
-        173.5,
         174.1,
         175.9,
         178.2,
-        178.8,
+        178.7,
+        179.5,
         179.3
       ],
       "sparklineLabels": [
-        "Mar",
         "Apr",
         "May",
         "Jun",
         "Jul",
-        "Aug"
+        "Aug",
+        "Sep"
       ]
     },
     {
@@ -549,222 +549,222 @@
       "category": "Plastics",
       "currentIndex": 147,
       "previousMonthIndex": 147,
-      "yearAgoIndex": 146.5,
+      "yearAgoIndex": 147,
       "momChange": 0,
-      "yoyChange": 0.3,
+      "yoyChange": 0,
       "trend": "stable",
       "unit": "Index (2015=100)",
       "sparkline": [
         146.6,
         146.6,
         146.6,
-        146.6,
+        147,
         147,
         147
       ],
       "sparklineLabels": [
-        "Mar",
         "Apr",
         "May",
         "Jun",
         "Jul",
-        "Aug"
+        "Aug",
+        "Sep"
       ]
     },
     {
       "id": "plastic-pipes-flexible",
       "name": "Plastic pipes (flexible)",
       "category": "Plastics",
-      "currentIndex": 194.4,
+      "currentIndex": 195.1,
       "previousMonthIndex": 194.4,
-      "yearAgoIndex": 174.1,
-      "momChange": 0,
-      "yoyChange": 11.7,
+      "yearAgoIndex": 174.2,
+      "momChange": 0.4,
+      "yoyChange": 12,
       "trend": "stable",
       "unit": "Index (2015=100)",
       "sparkline": [
-        176.5,
         179.9,
         179.5,
         179.9,
         194.4,
-        194.4
+        194.4,
+        195.1
       ],
       "sparklineLabels": [
-        "Mar",
         "Apr",
         "May",
         "Jun",
         "Jul",
-        "Aug"
+        "Aug",
+        "Sep"
       ]
     },
     {
       "id": "plastic-pipes-rigid",
       "name": "Plastic pipes (rigid)",
       "category": "Plastics",
-      "currentIndex": 153.5,
-      "previousMonthIndex": 153.5,
+      "currentIndex": 155.3,
+      "previousMonthIndex": 155.3,
       "yearAgoIndex": 132.9,
       "momChange": 0,
-      "yoyChange": 15.5,
+      "yoyChange": 16.9,
       "trend": "stable",
       "unit": "Index (2015=100)",
       "sparkline": [
-        134.5,
         140.2,
         147.1,
         150,
         153.5,
-        153.5
+        155.3,
+        155.3
       ],
       "sparklineLabels": [
-        "Mar",
         "Apr",
         "May",
         "Jun",
         "Jul",
-        "Aug"
+        "Aug",
+        "Sep"
       ]
     },
     {
       "id": "electric-water-heaters",
       "name": "Electric water heaters",
       "category": "Other",
-      "currentIndex": 128.2,
+      "currentIndex": 128.8,
       "previousMonthIndex": 128.2,
-      "yearAgoIndex": 127.2,
-      "momChange": 0,
-      "yoyChange": 0.8,
+      "yearAgoIndex": 127.1,
+      "momChange": 0.5,
+      "yoyChange": 1.3,
       "trend": "stable",
       "unit": "Index (2015=100)",
       "sparkline": [
-        126.3,
         128.2,
         128.2,
         128.2,
         128.2,
-        128.2
+        128.2,
+        128.8
       ],
       "sparklineLabels": [
-        "Mar",
         "Apr",
         "May",
         "Jun",
         "Jul",
-        "Aug"
+        "Aug",
+        "Sep"
       ]
     },
     {
       "id": "paint-solvent",
       "name": "Paint (solvent-based)",
       "category": "Other",
-      "currentIndex": 150.4,
-      "previousMonthIndex": 150.5,
-      "yearAgoIndex": 143.6,
+      "currentIndex": 150.2,
+      "previousMonthIndex": 150.4,
+      "yearAgoIndex": 143.9,
       "momChange": -0.1,
-      "yoyChange": 4.7,
+      "yoyChange": 4.4,
       "trend": "stable",
       "unit": "Index (2015=100)",
       "sparkline": [
-        145.7,
         145.9,
         146.6,
         149.1,
         150.5,
-        150.4
+        150.4,
+        150.2
       ],
       "sparklineLabels": [
-        "Mar",
         "Apr",
         "May",
         "Jun",
         "Jul",
-        "Aug"
+        "Aug",
+        "Sep"
       ]
     },
     {
       "id": "paint-water",
       "name": "Paint (water-based)",
       "category": "Other",
-      "currentIndex": 158.6,
-      "previousMonthIndex": 158.2,
-      "yearAgoIndex": 147.6,
-      "momChange": 0.3,
-      "yoyChange": 7.5,
+      "currentIndex": 158.2,
+      "previousMonthIndex": 158.8,
+      "yearAgoIndex": 147.4,
+      "momChange": -0.4,
+      "yoyChange": 7.3,
       "trend": "stable",
       "unit": "Index (2015=100)",
       "sparkline": [
-        148.3,
         152.2,
         156.3,
         157.8,
-        158.2,
-        158.6
+        158.3,
+        158.8,
+        158.2
       ],
       "sparklineLabels": [
-        "Mar",
         "Apr",
         "May",
         "Jun",
         "Jul",
-        "Aug"
+        "Aug",
+        "Sep"
       ]
     },
     {
       "id": "insulation",
       "name": "Insulation (thermal & acoustic)",
       "category": "Other",
-      "currentIndex": 206.7,
-      "previousMonthIndex": 206.2,
+      "currentIndex": 207.1,
+      "previousMonthIndex": 206.7,
       "yearAgoIndex": 198.1,
       "momChange": 0.2,
-      "yoyChange": 4.3,
+      "yoyChange": 4.5,
       "trend": "stable",
       "unit": "Index (2015=100)",
       "sparkline": [
-        199.9,
         201.6,
         201.7,
         201.9,
         206.2,
-        206.7
+        206.7,
+        207.1
       ],
       "sparklineLabels": [
-        "Mar",
         "Apr",
         "May",
         "Jun",
         "Jul",
-        "Aug"
+        "Aug",
+        "Sep"
       ]
     },
     {
       "id": "kitchen-furniture",
       "name": "Kitchen furniture",
       "category": "Other",
-      "currentIndex": 166.9,
-      "previousMonthIndex": 166.9,
+      "currentIndex": 168.3,
+      "previousMonthIndex": 168.2,
       "yearAgoIndex": 165.6,
-      "momChange": 0,
-      "yoyChange": 0.8,
+      "momChange": 0.1,
+      "yoyChange": 1.6,
       "trend": "stable",
       "unit": "Index (2015=100)",
       "sparkline": [
-        167,
         167.3,
         167.3,
         166.8,
-        166.9,
-        166.9
+        168.3,
+        168.2,
+        168.3
       ],
       "sparklineLabels": [
-        "Mar",
         "Apr",
         "May",
         "Jun",
         "Jul",
-        "Aug"
+        "Aug",
+        "Sep"
       ]
     }
   ]
