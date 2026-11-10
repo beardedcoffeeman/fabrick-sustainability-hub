@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
 import { FabrickLogo } from "./FabrickLogo";
+import { PulseSkyline } from "@/components/home/PulseSkyline";
 
 const HUB_LINKS: Array<[string, string]> = [
   ["Live Dashboard", "/dashboard"],
@@ -46,6 +47,7 @@ const DATA_SOURCES = [
 export function Footer() {
   return (
     <footer className="bg-navy text-white">
+      <PulseSkyline className="pt-8" />
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         {/* Top band: Fabrick brand statement + agency CTA */}
         <div className="grid gap-10 py-14 md:grid-cols-3 md:gap-16 md:py-16 border-b border-white/10">
