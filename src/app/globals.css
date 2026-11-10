@@ -159,3 +159,16 @@ html {
 .animate-fade-in-delay-3 { animation: fadeInUp 0.6s ease-out 0.3s forwards; opacity: 0; }
 .animate-fade-in-delay-4 { animation: fadeInUp 0.6s ease-out 0.4s forwards; opacity: 0; }
 .animate-fade-in-delay-5 { animation: fadeInUp 0.6s ease-out 0.5s forwards; opacity: 0; }
+
+/* Heartbeat skyline (PulseSkyline.tsx): a bright sweep travels along the
+   trace. --sweep-len keeps the three dashes' leading edges together. */
+@keyframes pulse-skyline-sweep {
+  from { stroke-dashoffset: var(--sweep-len); }
+  to { stroke-dashoffset: calc(var(--sweep-len) - 1000px); }
+}
+.pulse-skyline-sweep {
+  animation: pulse-skyline-sweep 9s linear infinite;
+}
+@media (prefers-reduced-motion: reduce) {
+  .pulse-skyline-sweep { display: none; }
+}

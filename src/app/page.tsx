@@ -17,6 +17,7 @@ import {
   ScrollText,
 } from "lucide-react";
 import { BannerVideo } from "@/components/home/BannerVideo";
+import { PulseSkyline } from "@/components/home/PulseSkyline";
 import insightsSnapshot from "@/data/insights-snapshot.json";
 
 type BuiltKind = "dashboard" | "materials" | "regulations" | "knowledge" | "research";
@@ -635,7 +636,7 @@ export default function HomePage() {
           ============================================================ */}
       <section
         id="data-point"
-        className="bg-charcoal py-16 md:py-20 text-white scroll-mt-24"
+        className="bg-charcoal pt-16 md:pt-20 text-white scroll-mt-24"
       >
         <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8 text-center">
           <span className="text-xs font-semibold uppercase tracking-wider text-pink">
@@ -652,6 +653,7 @@ export default function HomePage() {
           </p>
           <DataPointSignup />
         </div>
+        <PulseSkyline className="mt-6 md:mt-2" />
       </section>
     </div>
   );
