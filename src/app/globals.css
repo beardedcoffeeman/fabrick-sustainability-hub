@@ -172,3 +172,16 @@ html {
 @media (prefers-reduced-motion: reduce) {
   .pulse-skyline-sweep { display: none; }
 }
+
+/* Ask Pulse (AskPulse.tsx): a teal trace runs along the signal line while an
+   answer is being worked out. The path is normalised to pathLength 1000. */
+@keyframes ask-signal-sweep {
+  from { stroke-dashoffset: 140; }
+  to { stroke-dashoffset: -860; }
+}
+.ask-signal-sweep {
+  animation: ask-signal-sweep 1.5s linear infinite;
+}
+@media (prefers-reduced-motion: reduce) {
+  .ask-signal-sweep { animation: none; stroke-dasharray: none; stroke-opacity: 0.7; }
+}

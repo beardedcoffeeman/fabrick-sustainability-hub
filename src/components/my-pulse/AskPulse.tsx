@@ -19,7 +19,7 @@ import {
   type KeyboardEvent as ReactKeyboardEvent,
   type ReactNode,
 } from "react";
-import { ArrowUp, Download, Loader2, RotateCcw, Square } from "lucide-react";
+import { ArrowUp, Download, RotateCcw, Square } from "lucide-react";
 import { track } from "@/lib/analytics";
 import { parseAnswerMarkdown, type MdBlock, type MdInline } from "@/lib/ask/markdown";
 import {
@@ -46,6 +46,37 @@ interface Exchange {
 
 const focusRing =
   "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-navy focus-visible:ring-offset-2";
+// The same ring for controls that sit on the dark panel.
+const focusRingDark =
+  "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-charcoal";
+
+// The Pulse signal line, edge to edge across the panel. Still at rest; a teal
+// trace runs along it while an answer is being worked out (globals.css
+// .ask-signal-sweep; held still for people who prefer reduced motion).
+// 1600 wide, a beat every 400: wider than any panel, so it is cropped (never
+// stretched) to fit and the beats keep their shape on a phone and a desktop.
+const SIGNAL_PATH =
+  "M0 22h150l7-9 11 20 12-31 9 20h211l7-9 11 20 12-31 9 20h361l7-9 11 20 12-31 9 20h211l7-9 11 20 12-31 9 20h461";
+
+function SignalLine({ active }: { active: boolean }) {
+  return (
+    <svg viewBox="0 0 1600 44" preserveAspectRatio="xMinYMid slice" className="block h-11 w-full" fill="none" aria-hidden>
+      <path d={SIGNAL_PATH} stroke="#00BFA5" strokeOpacity={active ? 0.3 : 0.75} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+      {active && (
+        <path
+          d={SIGNAL_PATH}
+          pathLength={1000}
+          strokeDasharray="140 860"
+          className="ask-signal-sweep"
+          stroke="#FF3D7F"
+          strokeWidth="3"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        />
+      )}
+    </svg>
+  );
+}
 
 let seq = 0;
 const newId = () => `${Date.now().toString(36)}-${(seq++).toString(36)}`;
@@ -184,25 +215,25 @@ export function AskPulse() {
   return (
     <section
       aria-labelledby="ask-pulse-title"
-      className="mb-10 rounded-2xl bg-white border border-charcoal/[0.06] p-5 sm:p-7"
+      className="mb-12 overflow-hidden rounded-3xl bg-charcoal px-5 py-7 text-white shadow-xl shadow-charcoal/15 sm:px-9 sm:py-9"
     >
       <div className="flex flex-wrap items-start justify-between gap-3">
         <div className="min-w-0">
           <h2
             id="ask-pulse-title"
-            className="font-[family-name:var(--font-playfair)] text-2xl font-bold text-navy"
+            className="font-[family-name:var(--font-playfair)] text-4xl font-bold text-white sm:text-5xl"
           >
             Ask Pulse
           </h2>
-          <p className="mt-1 text-sm text-navy/80">
-            Ask for the data you need and it is pulled from Pulse&apos;s own records.
+          <p className="mt-3 max-w-2xl text-base text-gray-200 sm:text-lg">
+            Ask for the data you need. Every figure is pulled from Pulse&apos;s own records.
           </p>
         </div>
         {hasThread && (
           <button
             type="button"
             onClick={clear}
-            className={`inline-flex items-center gap-1.5 rounded-full border border-charcoal/[0.12] px-3 py-1.5 text-xs font-semibold text-navy transition-colors hover:border-navy ${focusRing}`}
+            className={`inline-flex items-center gap-1.5 rounded-full border border-white/30 px-3.5 py-2 text-xs font-semibold text-white transition-colors hover:border-white ${focusRingDark}`}
           >
             <RotateCcw className="h-3.5 w-3.5" aria-hidden />
             New question
@@ -210,8 +241,12 @@ export function AskPulse() {
         )}
       </div>
 
+      <div className="-mx-5 mt-4 sm:-mx-9">
+        <SignalLine active={streaming} />
+      </div>
+
       {/* The thread */}
-      <div aria-live="polite" aria-busy={streaming} className={hasThread ? "mt-6 space-y-8" : ""}>
+      <div aria-live="polite" aria-busy={streaming} className={hasThread ? "mt-5 space-y-4" : ""}>
         {thread.map((ex, i) => (
           <ExchangeView
             key={ex.id}
@@ -224,7 +259,7 @@ export function AskPulse() {
 
       {/* The question box */}
       <form
-        className={hasThread ? "mt-8 border-t border-charcoal/[0.08] pt-6" : "mt-5"}
+        className="mt-5"
         onSubmit={(e) => {
           e.preventDefault();
           ask(input, "typed");
@@ -233,7 +268,7 @@ export function AskPulse() {
         <label htmlFor="ask-pulse-input" className="sr-only">
           {hasThread ? "Ask a follow-up question" : "Your question"}
         </label>
-        <div className="flex items-end gap-2 rounded-2xl border border-charcoal/[0.14] bg-cream/40 p-2 focus-within:border-navy">
+        <div className="flex items-end gap-2 rounded-2xl bg-white p-2 focus-within:ring-2 focus-within:ring-teal sm:p-2.5">
           <textarea
             id="ask-pulse-input"
             ref={inputRef}
@@ -242,18 +277,16 @@ export function AskPulse() {
             onKeyDown={onKey}
             rows={2}
             placeholder={
-              hasThread
-                ? "Ask a follow-up"
-                : "e.g. How has structural steel moved over the last year?"
+              hasThread ? "Ask a follow-up" : "What data do you need?"
             }
             aria-describedby="ask-pulse-note ask-pulse-keys"
-            className="min-h-[3rem] flex-1 resize-none bg-transparent px-2 py-1.5 text-[15px] text-navy outline-none placeholder:text-navy/70"
+            className="min-h-[3.25rem] flex-1 resize-none bg-transparent px-2.5 py-2 text-base text-navy outline-none placeholder:text-navy/70 sm:text-lg"
           />
           {streaming ? (
             <button
               type="button"
               onClick={stop}
-              className={`inline-flex h-10 shrink-0 items-center gap-1.5 rounded-full border border-navy px-4 text-sm font-semibold text-navy transition-colors hover:bg-navy hover:text-white ${focusRing}`}
+              className={`inline-flex h-12 shrink-0 items-center gap-1.5 rounded-full border border-navy px-5 text-sm font-semibold text-navy transition-colors hover:bg-navy hover:text-white ${focusRing}`}
             >
               <Square className="h-3.5 w-3.5 fill-current" aria-hidden />
               Stop
@@ -262,10 +295,10 @@ export function AskPulse() {
             <button
               type="submit"
               disabled={!input.trim() || tooLong}
-              className={`inline-flex h-10 shrink-0 items-center gap-1.5 rounded-full bg-navy px-4 text-sm font-semibold text-white transition-colors hover:bg-charcoal disabled:cursor-not-allowed disabled:opacity-40 ${focusRing}`}
+              className={`inline-flex h-12 shrink-0 items-center gap-1.5 rounded-full bg-pink px-5 text-[19px] font-bold text-white transition-colors hover:bg-pink-light disabled:cursor-not-allowed disabled:opacity-50 ${focusRing}`}
             >
               Ask
-              <ArrowUp className="h-4 w-4" aria-hidden />
+              <ArrowUp className="h-5 w-5" aria-hidden />
             </button>
           )}
         </div>
@@ -273,12 +306,12 @@ export function AskPulse() {
           Enter sends the question. Shift and Enter starts a new line.
         </p>
         {input.length > ASK_MAX_CHARS - 200 && (
-          <p className={`mt-1.5 text-xs ${tooLong ? "font-semibold text-navy" : "text-navy/75"}`}>
+          <p className={`mt-2 text-xs ${tooLong ? "font-semibold text-white" : "text-gray-300"}`}>
             {tooLong ? "Too long: " : ""}
             {input.length.toLocaleString("en-GB")} of {ASK_MAX_CHARS.toLocaleString("en-GB")} characters
           </p>
         )}
-        <p id="ask-pulse-note" className="mt-2 text-xs text-navy/75">
+        <p id="ask-pulse-note" className="mt-2.5 text-xs text-gray-300">
           Answers come from Pulse&apos;s data. Check the source before relying on a figure.
           {remaining !== null && remaining <= ASK_REMAINING_WARN && (
             <>
@@ -292,16 +325,15 @@ export function AskPulse() {
       </form>
 
       {!hasThread && (
-        <div className="mt-5">
-          <p className="text-xs font-semibold uppercase tracking-[0.14em] text-navy/75">Try asking</p>
-          <ul className="mt-2 flex flex-wrap gap-2" aria-label="Suggested questions">
+        <div className="mt-6">
+          <ul className="flex flex-wrap gap-2" aria-label="Suggested questions">
             {ASK_SUGGESTIONS.map((s) => (
               <li key={s}>
                 <button
                   type="button"
                   onClick={() => ask(s, "suggestion")}
                   disabled={streaming}
-                  className={`rounded-full border border-charcoal/[0.12] bg-white px-3 py-1.5 text-left text-sm text-navy transition-colors hover:border-navy disabled:opacity-50 ${focusRing}`}
+                  className={`rounded-full border border-white/25 px-3.5 py-2 text-left text-sm text-white transition-colors hover:border-teal hover:bg-white/[0.06] disabled:opacity-50 ${focusRingDark}`}
                 >
                   {s}
                 </button>
@@ -319,23 +351,23 @@ export function AskPulse() {
 function ExchangeView({ ex, live, onRetry }: { ex: Exchange; live: boolean; onRetry?: () => void }) {
   const waiting = live && !ex.answer && !ex.error;
   return (
-    <article>
-      <h3 className="text-base font-semibold text-navy">
+    <article className="rounded-2xl bg-white p-5 text-navy sm:p-7">
+      <h3 className="font-[family-name:var(--font-playfair)] text-xl font-bold text-navy sm:text-2xl">
         <span className="sr-only">You asked: </span>
         {ex.question}
       </h3>
-      <div className="mt-3 text-[15px] leading-relaxed text-navy">
+      <div className="mt-4 text-base leading-relaxed text-navy">
         <span className="sr-only">Pulse answered: </span>
         {ex.answer && <Answer text={ex.answer} />}
         {ex.status ? (
           <p className={`flex items-center gap-2 text-sm text-navy/75 ${ex.answer ? "mt-3" : ""}`}>
-            <Loader2 className="h-4 w-4 shrink-0 animate-spin" aria-hidden />
+            <span className="h-2 w-2 shrink-0 rounded-full bg-teal pulse-live" aria-hidden />
             {ex.status}
           </p>
         ) : (
           waiting && (
             <p className="flex items-center gap-2 text-sm text-navy/75">
-              <Loader2 className="h-4 w-4 shrink-0 animate-spin" aria-hidden />
+              <span className="h-2 w-2 shrink-0 rounded-full bg-teal pulse-live" aria-hidden />
               Reading the question
             </p>
           )
@@ -523,7 +555,7 @@ function inlines(nodes: MdInline[]): ReactNode {
         return <br key={i} />;
       case "strong":
         return (
-          <strong key={i} className="font-semibold">
+          <strong key={i} className="rounded-sm bg-teal/15 box-decoration-clone px-1 font-bold">
             {inlines(n.children)}
           </strong>
         );
