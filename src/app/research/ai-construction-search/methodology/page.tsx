@@ -92,6 +92,11 @@ export default function MethodologyPage() {
             yourself. Exact model versions, the scoring method, what we excluded, and where the
             study is weak.
           </p>
+
+          <p className="mt-6 max-w-2xl rounded-xl border border-teal/40 bg-teal/10 px-4 py-3 text-sm text-white">
+            <strong>We are updating this study.</strong> Revised results will be published here
+            shortly.
+          </p>
         </div>
       </section>
 
