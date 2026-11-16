@@ -1,13 +1,12 @@
 import { NextRequest, NextResponse } from "next/server";
+import { searchEpcByPostcode, type MHCLGRow } from "@/lib/epc-live";
 
 // In-memory cache: postcode -> { data, timestamp }
 const cache = new Map<string, { data: EPCResult; timestamp: number }>();
 const CACHE_TTL = 60 * 60 * 1000; // 1 hour
 
-// MHCLG "Get Energy Performance of Buildings Data" API
-// Docs: https://get-energy-performance-data.communities.gov.uk/api-technical-documentation
-const EPC_API_BASE =
-  "https://api.get-energy-performance-data.communities.gov.uk";
+// The MHCLG fetch itself lives in src/lib/epc-live.ts (shared with Ask Pulse,
+// which never uses the sample fallback below).
 
 interface EPCCertificate {
   address: string;
@@ -31,22 +30,6 @@ interface EPCResult {
   postcode: string;
   totalResults: number;
   isSampleData: boolean;
-}
-
-// New API response shape (lean - search endpoint)
-interface MHCLGRow {
-  certificateNumber: string;
-  addressLine1: string | null;
-  addressLine2: string | null;
-  addressLine3: string | null;
-  addressLine4: string | null;
-  postcode: string;
-  postTown: string | null;
-  council: string | null;
-  constituency: string | null;
-  currentEnergyEfficiencyBand: string;
-  registrationDate: string;
-  uprn: number | null;
 }
 
 function buildAddress(row: MHCLGRow): string {
@@ -139,62 +122,45 @@ export async function GET(request: NextRequest) {
     return NextResponse.json(sample);
   }
 
-  try {
-    // Page size 500 covers virtually any UK postcode (avg ~15 properties).
-    // Larger sample = better band-distribution stats for the retrofit-market
-    // headline metric (% below band C).
-    const url = `${EPC_API_BASE}/api/domestic/search?postcode=${encodeURIComponent(
-      postcode.trim()
-    )}&page_size=500`;
+  const found = await searchEpcByPostcode(postcode, token);
 
-    const res = await fetch(url, {
-      headers: {
-        Accept: "application/json",
-        Authorization: `Bearer ${token}`,
-      },
-      next: { revalidate: 3600 },
-    });
-
-    // The MHCLG API returns 404 "No certificates could be found for that query"
-    // for valid-but-empty postcodes. That is a real "no results" signal, not
-    // an error - render an empty result.
-    if (res.status === 404) {
-      const empty: EPCResult = {
-        certificates: [],
-        postcode: normalised,
-        totalResults: 0,
-        isSampleData: false,
-      };
-      cache.set(normalised, { data: empty, timestamp: Date.now() });
-      return NextResponse.json(empty);
-    }
-
-    if (!res.ok) {
-      console.error(`EPC API error ${res.status} ${res.statusText}`);
-      return NextResponse.json(
-        { error: "EPC service unavailable", status: res.status },
-        { status: 502 }
-      );
-    }
-
-    const json = await res.json();
-    const rows: MHCLGRow[] = Array.isArray(json.data) ? json.data : [];
-    const totalResults: number = json.pagination?.totalRecords ?? rows.length;
-
-    const result: EPCResult = {
-      certificates: mapAPIResponse(rows),
+  // The MHCLG API returns 404 "No certificates could be found for that query"
+  // for valid-but-empty postcodes. That is a real "no results" signal, not
+  // an error - render an empty result.
+  if (found.kind === "none") {
+    const empty: EPCResult = {
+      certificates: [],
       postcode: normalised,
-      totalResults,
+      totalResults: 0,
       isSampleData: false,
     };
+    cache.set(normalised, { data: empty, timestamp: Date.now() });
+    return NextResponse.json(empty);
+  }
 
-    cache.set(normalised, { data: result, timestamp: Date.now() });
-    return NextResponse.json(result);
-  } catch (error) {
-    console.error("EPC API fetch error:", error);
+  if (found.kind === "http-error") {
+    console.error(`EPC API error ${found.status} ${found.statusText}`);
+    return NextResponse.json(
+      { error: "EPC service unavailable", status: found.status },
+      { status: 502 }
+    );
+  }
+
+  if (found.kind === "fetch-error") {
+    console.error("EPC API fetch error:", found.error);
     return NextResponse.json(
       { error: "EPC service unavailable" },
       { status: 502 }
     );
   }
+
+  const result: EPCResult = {
+    certificates: mapAPIResponse(found.rows),
+    postcode: normalised,
+    totalResults: found.totalResults,
+    isSampleData: false,
+  };
+
+  cache.set(normalised, { data: result, timestamp: Date.now() });
+  return NextResponse.json(result);
 }
