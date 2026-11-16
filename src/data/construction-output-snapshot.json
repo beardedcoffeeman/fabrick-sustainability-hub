@@ -1,14 +1,14 @@
 {
-  "generatedAt": "2026-10-15T07:00:00.000Z",
+  "generatedAt": "2026-11-12T07:00:00.000Z",
   "source": {
     "name": "ONS - Output in the Construction Industry",
     "publisher": "Office for National Statistics",
     "url": "https://www.ons.gov.uk/businessindustryandtrade/constructionindustry/datasets/outputintheconstructionindustry",
     "workbook": "https://www.ons.gov.uk/file?uri=/businessindustryandtrade/constructionindustry/datasets/outputintheconstructionindustry/current/bulletindataset2.xlsx",
     "table": "Table 2a: volume, seasonally adjusted, by sector",
-    "releaseDate": "2026-10-15",
-    "nextRelease": "12 November 2026",
-    "dataPeriod": "Aug 2026",
+    "releaseDate": "2026-11-12",
+    "nextRelease": "11 December 2026",
+    "dataPeriod": "Sep 2026",
     "unit": "GBP million, chained volume measures, seasonally adjusted",
     "notes": "Great Britain. Chained volume measures (2023 prices), seasonally adjusted. Published monthly, roughly six weeks after the reference month. Contains public sector information licensed under the Open Government Licence v3.0."
   },
@@ -18,11 +18,6 @@
       "name": "All work",
       "cdid": "MV4A",
       "values": [
-        {
-          "period": "Sep 2023",
-          "periodKey": "2023-sep",
-          "value": 18629
-        },
         {
           "period": "Oct 2023",
           "periodKey": "2023-oct",
@@ -191,12 +186,17 @@
         {
           "period": "Jul 2026",
           "periodKey": "2026-jul",
-          "value": 18263
+          "value": 18307
         },
         {
           "period": "Aug 2026",
           "periodKey": "2026-aug",
-          "value": 18221
+          "value": 18208
+        },
+        {
+          "period": "Sep 2026",
+          "periodKey": "2026-sep",
+          "value": 18349
         }
       ]
     },
@@ -205,11 +205,6 @@
       "name": "All new work",
       "cdid": "MV44",
       "values": [
-        {
-          "period": "Sep 2023",
-          "periodKey": "2023-sep",
-          "value": 11415
-        },
         {
           "period": "Oct 2023",
           "periodKey": "2023-oct",
@@ -378,12 +373,17 @@
         {
           "period": "Jul 2026",
           "periodKey": "2026-jul",
-          "value": 10144
+          "value": 10184
         },
         {
           "period": "Aug 2026",
           "periodKey": "2026-aug",
-          "value": 10073
+          "value": 10036
+        },
+        {
+          "period": "Sep 2026",
+          "periodKey": "2026-sep",
+          "value": 10125
         }
       ]
     },
@@ -392,11 +392,6 @@
       "name": "All repair & maintenance",
       "cdid": "MV49",
       "values": [
-        {
-          "period": "Sep 2023",
-          "periodKey": "2023-sep",
-          "value": 7214
-        },
         {
           "period": "Oct 2023",
           "periodKey": "2023-oct",
@@ -565,12 +560,17 @@
         {
           "period": "Jul 2026",
           "periodKey": "2026-jul",
-          "value": 8119
+          "value": 8123
         },
         {
           "period": "Aug 2026",
           "periodKey": "2026-aug",
-          "value": 8148
+          "value": 8172
+        },
+        {
+          "period": "Sep 2026",
+          "periodKey": "2026-sep",
+          "value": 8224
         }
       ]
     },
@@ -579,11 +579,6 @@
       "name": "Total new housing",
       "cdid": "MVL9",
       "values": [
-        {
-          "period": "Sep 2023",
-          "periodKey": "2023-sep",
-          "value": 4168
-        },
         {
           "period": "Oct 2023",
           "periodKey": "2023-oct",
@@ -752,12 +747,17 @@
         {
           "period": "Jul 2026",
           "periodKey": "2026-jul",
-          "value": 3558
+          "value": 3587
         },
         {
           "period": "Aug 2026",
           "periodKey": "2026-aug",
-          "value": 3483
+          "value": 3476
+        },
+        {
+          "period": "Sep 2026",
+          "periodKey": "2026-sep",
+          "value": 3423
         }
       ]
     },
@@ -766,11 +766,6 @@
       "name": "Public Housing (New)",
       "cdid": "MV3W",
       "values": [
-        {
-          "period": "Sep 2023",
-          "periodKey": "2023-sep",
-          "value": 694
-        },
         {
           "period": "Oct 2023",
           "periodKey": "2023-oct",
@@ -939,12 +934,17 @@
         {
           "period": "Jul 2026",
           "periodKey": "2026-jul",
-          "value": 395
+          "value": 391
         },
         {
           "period": "Aug 2026",
           "periodKey": "2026-aug",
-          "value": 380
+          "value": 359
+        },
+        {
+          "period": "Sep 2026",
+          "periodKey": "2026-sep",
+          "value": 349
         }
       ]
     },
@@ -953,11 +953,6 @@
       "name": "Private Housing (New)",
       "cdid": "MV3X",
       "values": [
-        {
-          "period": "Sep 2023",
-          "periodKey": "2023-sep",
-          "value": 3474
-        },
         {
           "period": "Oct 2023",
           "periodKey": "2023-oct",
@@ -1126,12 +1121,17 @@
         {
           "period": "Jul 2026",
           "periodKey": "2026-jul",
-          "value": 3163
+          "value": 3196
         },
         {
           "period": "Aug 2026",
           "periodKey": "2026-aug",
-          "value": 3103
+          "value": 3116
+        },
+        {
+          "period": "Sep 2026",
+          "periodKey": "2026-sep",
+          "value": 3074
         }
       ]
     },
@@ -1140,11 +1140,6 @@
       "name": "Infrastructure",
       "cdid": "MV3Y",
       "values": [
-        {
-          "period": "Sep 2023",
-          "periodKey": "2023-sep",
-          "value": 3255
-        },
         {
           "period": "Oct 2023",
           "periodKey": "2023-oct",
@@ -1313,12 +1308,17 @@
         {
           "period": "Jul 2026",
           "periodKey": "2026-jul",
-          "value": 2900
+          "value": 2905
         },
         {
           "period": "Aug 2026",
           "periodKey": "2026-aug",
-          "value": 2901
+          "value": 2871
+        },
+        {
+          "period": "Sep 2026",
+          "periodKey": "2026-sep",
+          "value": 2964
         }
       ]
     },
@@ -1327,11 +1327,6 @@
       "name": "Public Other",
       "cdid": "MV3Z",
       "values": [
-        {
-          "period": "Sep 2023",
-          "periodKey": "2023-sep",
-          "value": 921
-        },
         {
           "period": "Oct 2023",
           "periodKey": "2023-oct",
@@ -1500,12 +1495,17 @@
         {
           "period": "Jul 2026",
           "periodKey": "2026-jul",
-          "value": 991
+          "value": 997
         },
         {
           "period": "Aug 2026",
           "periodKey": "2026-aug",
-          "value": 993
+          "value": 983
+        },
+        {
+          "period": "Sep 2026",
+          "periodKey": "2026-sep",
+          "value": 989
         }
       ]
     },
@@ -1514,11 +1514,6 @@
       "name": "Industrial",
       "cdid": "MV42",
       "values": [
-        {
-          "period": "Sep 2023",
-          "periodKey": "2023-sep",
-          "value": 671
-        },
         {
           "period": "Oct 2023",
           "periodKey": "2023-oct",
@@ -1687,12 +1682,17 @@
         {
           "period": "Jul 2026",
           "periodKey": "2026-jul",
-          "value": 687
+          "value": 698
         },
         {
           "period": "Aug 2026",
           "periodKey": "2026-aug",
-          "value": 675
+          "value": 690
+        },
+        {
+          "period": "Sep 2026",
+          "periodKey": "2026-sep",
+          "value": 717
         }
       ]
     },
@@ -1701,11 +1701,6 @@
       "name": "Commercial",
       "cdid": "MV43",
       "values": [
-        {
-          "period": "Sep 2023",
-          "periodKey": "2023-sep",
-          "value": 2400
-        },
         {
           "period": "Oct 2023",
           "periodKey": "2023-oct",
@@ -1874,12 +1869,17 @@
         {
           "period": "Jul 2026",
           "periodKey": "2026-jul",
-          "value": 2008
+          "value": 1997
         },
         {
           "period": "Aug 2026",
           "periodKey": "2026-aug",
-          "value": 2021
+          "value": 2017
+        },
+        {
+          "period": "Sep 2026",
+          "periodKey": "2026-sep",
+          "value": 2031
         }
       ]
     },
@@ -1888,11 +1888,6 @@
       "name": "Housing repair & maintenance",
       "cdid": "MV47",
       "values": [
-        {
-          "period": "Sep 2023",
-          "periodKey": "2023-sep",
-          "value": 3734
-        },
         {
           "period": "Oct 2023",
           "periodKey": "2023-oct",
@@ -2061,12 +2056,17 @@
         {
           "period": "Jul 2026",
           "periodKey": "2026-jul",
-          "value": 4339
+          "value": 4320
         },
         {
           "period": "Aug 2026",
           "periodKey": "2026-aug",
-          "value": 4366
+          "value": 4367
+        },
+        {
+          "period": "Sep 2026",
+          "periodKey": "2026-sep",
+          "value": 4417
         }
       ]
     },
@@ -2075,11 +2075,6 @@
       "name": "Non-housing repair & maintenance",
       "cdid": "MV48",
       "values": [
-        {
-          "period": "Sep 2023",
-          "periodKey": "2023-sep",
-          "value": 3479
-        },
         {
           "period": "Oct 2023",
           "periodKey": "2023-oct",
@@ -2248,12 +2243,17 @@
         {
           "period": "Jul 2026",
           "periodKey": "2026-jul",
-          "value": 3780
+          "value": 3803
         },
         {
           "period": "Aug 2026",
           "periodKey": "2026-aug",
-          "value": 3782
+          "value": 3805
+        },
+        {
+          "period": "Sep 2026",
+          "periodKey": "2026-sep",
+          "value": 3807
         }
       ]
     }
