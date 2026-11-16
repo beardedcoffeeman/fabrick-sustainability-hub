@@ -7,6 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
+    "test:ask": "tsx scripts/tests/ask-tools.test.ts",
     "ingest:planning": "tsx scripts/ingest-planning-data.ts",
     "extract:pdfs": "tsx scripts/extract-pdfs.ts",
     "scrape:lpa": "tsx scripts/scrape-lpa.ts",
