@@ -18,6 +18,7 @@ import {
   type WidgetType,
 } from "@/lib/widgets";
 import { WidgetHost } from "./WidgetHost";
+import { AskPulse } from "./AskPulse";
 import { track } from "@/lib/analytics";
 
 // ---------------------------------------------------------------------------
@@ -42,6 +43,11 @@ function SignedOutPitch() {
         output, EPC data. It is saved to your account, so it is there waiting
         every time you sign in, on any device.
       </p>
+      <p className="mt-3 text-warm-gray leading-relaxed max-w-xl mx-auto">
+        Your account also unlocks Ask Pulse: type a question, such as how
+        steel prices have moved or the embodied carbon of glulam, and get the
+        figures straight from Pulse&apos;s own records, with the source.
+      </p>
       <div className="mt-8 flex items-center justify-center gap-4">
         <Link
           href="/account?mode=signup&next=/my-pulse"
@@ -58,6 +64,16 @@ function SignedOutPitch() {
         </Link>
       </div>
       <div className="mt-14 grid gap-4 sm:grid-cols-2 lg:grid-cols-3 text-left">
+        <div className="rounded-2xl bg-white border border-navy/20 p-5">
+          <h3 className="text-sm font-semibold text-navy">Ask Pulse</h3>
+          <p className="mt-1 text-xs text-warm-gray leading-relaxed">
+            Ask for the data you need: material price indices, construction
+            output, EPC ratings by council, planning applications and
+            conditions, grid carbon, embodied carbon factors and upcoming
+            regulations. Answers come from Pulse&apos;s records, with the
+            source and a CSV download.
+          </p>
+        </div>
         {WIDGET_CATALOGUE.map((meta) => (
           <div
             key={meta.type}
@@ -155,6 +171,8 @@ export function MyPulseDashboard() {
           Manage account
         </Link>
       </div>
+
+      <AskPulse />
 
       {saveError && (
         <div className="mb-6 rounded-xl border border-pink/30 bg-pink/5 px-4 py-3 text-sm text-navy">

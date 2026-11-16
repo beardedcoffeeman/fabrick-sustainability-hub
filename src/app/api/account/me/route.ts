@@ -79,7 +79,7 @@ export async function DELETE() {
     return NextResponse.json({ error: "Not signed in." }, { status: 401 });
   }
   try {
-    // Sessions cascade via FK.
+    // Sessions and the Ask Pulse question log (pulse_ask_log) cascade via FK.
     await sql`DELETE FROM pulse_users WHERE id = ${user.id}`;
     const store = await cookies();
     store.delete(SESSION_COOKIE);
