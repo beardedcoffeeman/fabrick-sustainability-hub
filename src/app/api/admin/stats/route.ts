@@ -2,6 +2,7 @@ import { NextRequest, NextResponse } from "next/server";
 import { timingSafeEqual } from "node:crypto";
 import { sql } from "@/lib/db";
 import { ensureSchema } from "@/lib/account";
+import { askAdminStats, type AskAdminStats } from "@/lib/ask/store";
 
 export const runtime = "nodejs";
 
@@ -116,6 +117,16 @@ export async function POST(req: NextRequest) {
       // Poll table is created lazily on first response; absent means zero.
     }
 
+    // Ask Pulse usage (src/lib/ask/store.ts): counts and the latest questions,
+    // with no emails and no answers. Null if the log can't be read, so the
+    // rest of the stats still come back.
+    let ask: AskAdminStats | null = null;
+    try {
+      ask = await askAdminStats();
+    } catch (err) {
+      console.warn("admin/stats: ask stats failed", err);
+    }
+
     return NextResponse.json({
       generatedAt: new Date().toISOString(),
       accounts: {
@@ -134,6 +145,19 @@ export async function POST(req: NextRequest) {
         total: pollTotal,
         new7d: pollNew7d,
       },
+      ask: ask
+        ? {
+            questions30d: ask.questions30d,
+            askers30d: ask.askers30d,
+            couldNotAnswer30d: ask.couldNotAnswer30d,
+            recent: ask.recent.map((r) => ({
+              askedAt: r.asked_at,
+              question: r.question,
+              tools: r.tools,
+              couldNotAnswer: r.could_not_answer,
+            })),
+          }
+        : null,
     });
   } catch (err) {
     console.error("admin/stats failed", err);
